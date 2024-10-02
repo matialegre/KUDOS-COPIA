@@ -1,0 +1,74 @@
+{
+
+    "header-layout.mobile": {
+
+        "children": ["sticky-layout#stickyHeaderMobile"]
+
+    },
+
+    "sticky-layout#stickyHeaderMobile": {
+
+        "props": {
+            "blockClass": "sticky-header-mobile"
+        },
+
+        "children": ["flex-layout.row#wrapperRowHeaderMobile"]
+
+    },
+
+    "flex-layout.row#wrapperRowHeaderMobile": {
+
+        "props": {
+            "blockClass": "wrapper-row-header-mobile",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": ["flex-layout.col#containerColHeaderMobile"]
+
+    },
+
+    "flex-layout.col#containerColHeaderMobile": {
+
+        "props": {
+            "blockClass": "container-col-header-mobile",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "flex-layout.row#containerRowHeaderMobile",
+            "rich-text#postHeader"
+        ]
+
+    },
+
+    "flex-layout.row#containerRowHeaderMobile": {
+
+        "props": {
+            "blockClass": "container-row-header-mobile",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            // "menu-kudos-control",
+            "rich-text#menu",
+            "logo",
+            "login"
+        ]
+
+    },
+
+    "search-bar-custom": {
+
+        "props": {
+            "SearchBar": "search-bar"
+        }
+
+    }
+
+}

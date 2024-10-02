@@ -1,0 +1,43 @@
+.trigger--triger-dropdown-footer-mobile{
+    margin-top: 20px;
+    background: var(--background-footer);
+}
+
+.trigger--triger-dropdown-footer-mobile :global(.vtex-rich-text-0-x-container--text-triger-dropdown-footer-mobile){
+    box-sizing: border-box;
+    margin: auto;
+    padding-bottom: 12px;
+    padding-right: 5px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width-content-mobile);
+    width: var(--max-width-content-mobile);
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.trigger--triger-dropdown-footer-mobile :global(.vtex-rich-text-0-x-container--text-triger-dropdown-footer-mobile)::after{
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M6.2315 12.6663C6.05608 12.6663 5.8846 12.6116 5.73875 12.5092C5.5929 12.4067 5.47923 12.2612 5.4121 12.0909C5.34498 11.9205 5.32741 11.7331 5.36162 11.5523C5.39584 11.3715 5.48029 11.2055 5.60432 11.0751L8.52555 8.0054L5.60432 4.93571C5.51959 4.84972 5.45201 4.74685 5.40552 4.63312C5.35903 4.51939 5.33455 4.39707 5.33353 4.2733C5.33251 4.14952 5.35495 4.02677 5.39956 3.91221C5.44416 3.79765 5.51003 3.69356 5.59332 3.60604C5.67662 3.51851 5.77566 3.4493 5.88468 3.40242C5.99371 3.35555 6.11052 3.33197 6.22831 3.33304C6.3461 3.33412 6.4625 3.35983 6.57073 3.40869C6.67896 3.45754 6.77685 3.52856 6.85868 3.61759L10.4071 7.34635C10.5734 7.52116 10.6668 7.75822 10.6668 8.0054C10.6668 8.25258 10.5734 8.48965 10.4071 8.66446L6.85868 12.3932C6.69236 12.568 6.46676 12.6663 6.2315 12.6663Z' fill='%2309344D'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.trigger--triger-dropdown-footer-mobile--visible :global(.vtex-rich-text-0-x-container--text-triger-dropdown-footer-mobile){
+    padding-bottom: 0px;
+    border-bottom: none;
+}
+
+.trigger--triger-dropdown-footer-mobile--visible :global(.vtex-rich-text-0-x-container--text-triger-dropdown-footer-mobile)::after{
+    transform: rotate(90deg);
+}
+
+.trigger--triger-dropdown-footer-mobile :global(.vtex-rich-text-0-x-paragraph--text-triger-dropdown-footer-mobile){
+    font-family: 'Gotham';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--post-header-color);
+}

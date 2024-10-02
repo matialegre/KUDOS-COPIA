@@ -1,0 +1,19 @@
+/* TITLE FOOTER  */
+
+.paragraph--title-footer{
+    font-size: 14px;
+}
+
+/* FIN TITLE FOOTER  */
+
+/* TEXT FOOTER  */
+
+.paragraph--text-footer{
+    font-size: 14px;
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--section-contacto) :global(.vtex-store-link-0-x-link){
+    font-size: 14px;
+}
+
+/* FIN TEXT FOOTER  */

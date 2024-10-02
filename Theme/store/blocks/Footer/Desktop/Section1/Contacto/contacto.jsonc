@@ -1,0 +1,65 @@
+{
+
+    "flex-layout.col#contacto": {
+
+        "props": {
+            "blockClass": "columns-footer-container",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#title-contacto",
+            "flex-layout.row#itemsContacto"
+        ]
+    
+    },
+
+    "rich-text#title-contacto": {
+
+        "props": {
+            "blockClass": "title-footer",
+            "text": "Contacto"
+        }
+
+    },
+
+    "flex-layout.row#itemsContacto": {
+
+        "props": {
+            "blockClass": "items-columns-footer-container",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "link#whatsapp-footer",
+            "link#email-footer"
+        ]
+
+    },
+
+    "link#whatsapp-footer": {
+
+        "props": {
+            "blockClass": "text-footer",
+            "target": "_blank",
+            "href": "https://wa.me/12914147915",
+            "label": "Whatsapp: 2914147915"
+        }
+
+    },
+
+    "link#email-footer": {
+
+        "props": {
+            "blockClass": ["text-footer", "link-email-color"],
+          "href": "mailto:ventas@mundooutdoor.ar",
+          "label": "ventas@mundooutdoor.ar"
+        }
+
+    }
+
+}

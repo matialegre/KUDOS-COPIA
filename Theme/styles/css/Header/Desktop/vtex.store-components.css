@@ -1,0 +1,111 @@
+/* SEARCH BAR */
+
+.searchBarContainer{
+    margin: 0;
+    padding: 0;
+    margin-left: 50px;
+}
+
+.searchBarContainer :global(.vtex-input-prefix__group){
+    margin-top: 66px;
+    border: 0;
+    width: 640px;
+    height: 40px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid #E9EAED;
+}
+
+/* TEXTO BUSCAR */
+.searchBarContainer :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input){
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #676F79;
+}
+/* FIN TEXTO BUSCAR */
+
+/* ICONO LUPA */
+.searchBarIcon--search{
+    margin: 0;
+    padding: 0;
+}
+
+.searchBarIcon--search::after{
+    display: flex;
+    width: 15px;
+    height: 16px;
+    content: "";
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='16' viewBox='0 0 15 16' fill='none'%3E%3Cg clip-path='url(%23clip0_5336_6000)'%3E%3Cpath d='M14.4809 15.5352L9.71423 10.582' stroke='%23090A10' stroke-width='1.60672'/%3E%3Cpath d='M6.67065 11.9428C9.80253 11.9428 12.3414 9.4932 12.3414 6.47142C12.3414 3.44964 9.80253 1 6.67065 1C3.53877 1 0.999878 3.44964 0.999878 6.47142C0.999878 9.4932 3.53877 11.9428 6.67065 11.9428Z' stroke='%23090A10' stroke-width='1.60672'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_5336_6000'%3E%3Crect width='15' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.searchIcon{
+    display: none;
+}
+/* FIN ICONO LUPA */
+
+/* ICONO CERRAR BUSQUEDA */
+
+.searchBarIcon--clear{
+    margin: 0;
+    padding: 0;
+}
+
+/* FIN ICONO CERRAR BUSQUEDA */
+
+/* MODAL RESULTADO DE LA BUSQUEDA */
+.resultsList{
+    margin-top: 2px;
+    border: 1px solid #CCD5E0;
+}
+/* FIN MODAL RESULTADO DE LA BUSQUEDA */
+
+@media (max-width: 640px) {
+
+    .searchBarContainer{
+        width: 329px;
+        margin-left: 0px;
+        margin-top: 93px;
+    }
+
+    .searchBarContainer :global(.vtex-input-prefix__group){
+        width: 329px;
+        height: 56px;
+        border-radius: 0px;
+        border: none;
+    }
+
+    .searchBarContainer :global(.vtex-input-prefix__group) :global(.vtex-input__suffix){
+        border-radius: 0px;
+    }
+
+    /* TEXTO BUSCAR */
+    .searchBarContainer :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input){
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #090A10;
+    }
+    /* FIN TEXTO BUSCAR */
+
+    /* MODAL BUSCADOR */
+    .resultsList{
+        margin: 0;
+        padding: 0;
+        width: 329px;
+        margin: auto;
+        margin-top: 4px;
+        left: 0;
+        right: 0;
+        box-shadow: 0px 2px 4px -2px rgba(16, 24, 40, 0.06), 0px 4px 8px -2px rgba(16, 24, 40, 0.10);
+    }
+    /* FINAL MODAL BUSCADOR */
+
+}
+
+/* FIN SEARCH BAR */

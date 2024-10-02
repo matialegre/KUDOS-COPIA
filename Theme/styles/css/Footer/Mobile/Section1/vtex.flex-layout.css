@@ -1,0 +1,17 @@
+.flexRow--section-1-footer-mobile{
+    padding-top: 14px;
+    padding-bottom: 16px;
+    border-top: 1px solid var(--color-gray-1);
+    background: var(--background-footer);
+}
+
+.flexRow--section-1-footer-mobile :global(.vtex-store-components-3-x-container){
+    margin: 0;
+    padding: 0;
+}
+
+.flexRowContent--section-1-footer-mobile{
+    margin: auto;
+    max-width: var(--max-width-content-mobile);
+    width: var(--max-width-content-mobile);
+}

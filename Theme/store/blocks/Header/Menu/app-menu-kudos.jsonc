@@ -1,0 +1,35 @@
+{
+    "menu-kudos": {
+      
+        "props": {
+
+          "team_id": 14,
+
+          "ver_todo": {
+            "display": true
+          },
+
+          "customStyles": {
+            "backgroundColor": "#3E3E3E",
+            "textColor": "#ffffff",
+            "hoverColor": "#ffc81f"
+          },
+
+          "triggerMobile": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23.58' height='18.662' viewBox='0 0 23.58 18.662'%3E%3Cg id='menu-outline' transform='translate(-4.5 -9.125)'%3E%3Cpath id='Trazado_63052' data-name='Trazado 63052' d='M5.625,11.25h21.33' transform='translate(0 -1)' fill='none' stroke='%23000' stroke-linecap='round' stroke-width='2.25' style='&%2310; stroke: %23FFFFFF;&%2310;'/%3E%3Cpath id='Trazado_63053' data-name='Trazado 63053' d='M5.625,18h21.33' transform='translate(0 0.456)' fill='none' stroke='%23000' stroke-linecap='round' stroke-width='2.25' style='&%2310; stroke: %23FFFFFF;&%2310;'/%3E%3Cpath id='Trazado_63054' data-name='Trazado 63054' d='M5.625,24.75h21.33' transform='translate(0 1.912)' fill='%23FFFFFF' stroke='%23000' stroke-linecap='round' stroke-width='2.25' style='&%2310; stroke: %23FFFFFF;&%2310;'/%3E%3C/g%3E%3C/svg%3E",
+          
+          "myaccount": {
+            "display": true,
+            "text": "Ingresar",
+            "image": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='21' height='23' viewBox='0 0 21 23'%3E%3Cdefs%3E%3CclipPath id='clip-User'%3E%3Crect width='21' height='23'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='User' clip-path='url(%23clip-User)'%3E%3Cpath id='Trazado_63220' data-name='Trazado 63220' d='M140.627,56.407H122.861a.46.46,0,0,1-.46-.46V54.475c0-4.494,3.482-7.4,8.87-7.4h.946c5.388,0,8.87,2.9,8.87,7.4v1.472a.46.46,0,0,1-.46.46Zm-17.307-.92h16.847V54.475c0-4.777-4.107-6.479-7.95-6.479h-.946c-3.843,0-7.95,1.7-7.95,6.479ZM131.744,46a4.249,4.249,0,0,1-4.244-4.244v-1.1a4.244,4.244,0,1,1,8.489,0v1.1A4.249,4.249,0,0,1,131.744,46Zm0-8.673a3.329,3.329,0,0,0-3.325,3.325v1.1a3.325,3.325,0,0,0,6.65,0v-1.1A3.329,3.329,0,0,0,131.744,37.326Z' transform='translate(-121.401 -34.907)' fill='%23fff'/%3E%3Cpath id='Trazado_63220_-_Contorno' data-name='Trazado 63220 - Contorno' d='M140.627,56.557H122.861a.61.61,0,0,1-.61-.61V54.475c0-4.585,3.541-7.548,9.02-7.548h.946c5.479,0,9.02,2.963,9.02,7.548v1.472a.61.61,0,0,1-.61.61Zm-9.356-9.33c-5.3,0-8.72,2.845-8.72,7.248v1.472a.31.31,0,0,0,.31.31h17.767a.31.31,0,0,0,.31-.31V54.475c0-4.4-3.423-7.248-8.72-7.248Zm9.047,8.41H123.17V54.475c0-4.887,4.184-6.629,8.1-6.629h.946c3.916,0,8.1,1.741,8.1,6.629Zm-16.847-.3h16.547v-.862c0-4.666-4.029-6.329-7.8-6.329h-.946c-3.771,0-7.8,1.663-7.8,6.329Zm8.274-9.188a4.4,4.4,0,0,1-4.394-4.394v-1.1a4.394,4.394,0,1,1,8.789,0v1.1A4.4,4.4,0,0,1,131.744,46.15Zm0-9.593a4.1,4.1,0,0,0-4.094,4.094v1.1a4.094,4.094,0,1,0,8.189,0v-1.1A4.1,4.1,0,0,0,131.744,36.557Zm0,8.673a3.479,3.479,0,0,1-3.475-3.475v-1.1a3.475,3.475,0,1,1,6.95,0v1.1A3.479,3.479,0,0,1,131.744,45.23Zm0-7.754a3.178,3.178,0,0,0-3.175,3.175v1.1a3.175,3.175,0,0,0,6.35,0v-1.1A3.178,3.178,0,0,0,131.744,37.476Z' transform='translate(-121.401 -34.907)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E"
+          },
+
+          "categoryClick": false,
+          "desktopDepartmentHover": true,
+          "colorIconCloseMenuMobile": "#FFFFFF",
+          "colorArrowDepartmentMobile": "#FFFFFF"
+
+        }
+
+    }
+
+}

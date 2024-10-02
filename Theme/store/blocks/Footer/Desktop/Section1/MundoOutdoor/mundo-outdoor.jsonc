@@ -1,0 +1,99 @@
+{
+
+    "flex-layout.col#mundoOutdoor": {
+
+        "props": {
+            "blockClass": "columns-footer-container",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#title-mundo-outdoor",
+            "flex-layout.row#itemsMundoOutdoor"
+        ]
+    
+    },
+
+    "rich-text#title-mundo-outdoor": {
+
+        "props": {
+            "blockClass": "title-footer",
+            "text": "Mundo Outdoor"
+        }
+
+    },
+
+    "flex-layout.row#itemsMundoOutdoor": {
+
+        "props": {
+            "blockClass": "items-columns-footer-container",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "link#sobre-nosotros-footer",
+            "link#sucursales-footer",
+            "link#ventas-corporativas-footer",
+            "link#ticktok-footer",
+            "link#trabaja-con-nosotros-footer",
+            "link#boton-arrepentimiento"
+        ]
+
+    },
+
+    "link#sobre-nosotros-footer": {
+
+        "props": {
+            "blockClass": "text-footer",
+            "href": "/sobre-nosotros",
+            "label": "Sobre nosotros"
+        }
+
+    },
+
+    "link#sucursales-footer": {
+
+        "props": {
+            "blockClass": "text-footer",
+          "href": "/sucursales",
+          "label": "Sucursales"
+        }
+
+    },
+
+    "link#ventas-corporativas-footer": {
+
+        "props": {
+            "blockClass": "text-footer",
+          "href": "/ventas-corporativas",
+          "label": "Ventas corporativas"
+        }
+
+    },
+
+    "link#ticktok-footer": {
+
+        "props": {
+        "blockClass": "text-footer",
+        "target": "_blank",
+          "href": "/ticktok",
+          "label": "Ticktok"
+        }
+
+    },
+
+    "link#trabaja-con-nosotros-footer": {
+
+        "props": {
+        "blockClass": "text-footer",
+          "href": "/trabaja-con-nosotros",
+          "label": "Trabaja con nosotros"
+        }
+
+    }
+
+}

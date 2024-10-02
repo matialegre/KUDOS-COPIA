@@ -1,0 +1,75 @@
+{
+
+    "flex-layout.col#ayuda": {
+
+        "props": {
+            "blockClass": "columns-footer-container",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#title-ayuda",
+            "flex-layout.row#itemsAyuda"
+        ]
+    
+    },
+
+    "rich-text#title-ayuda": {
+
+        "props": {
+            "blockClass": "title-footer",
+            "text": "Ayuda"
+        }
+
+    },
+
+    "flex-layout.row#itemsAyuda": {
+
+        "props": {
+            "blockClass": "items-columns-footer-container",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "link#pagos-promociones-footer",
+            "link#cambios-devoluciones-footer",
+            "link#medir-talle-trabajo"
+        ]
+
+    },
+
+    "link#pagos-promociones-footer": {
+
+        "props": {
+            "blockClass": "text-footer",
+            "href": "/pagos-y-promociones",
+            "label": "Pagos y promociones"
+        }
+
+    },
+
+    "link#cambios-devoluciones-footer": {
+
+        "props": {
+            "blockClass": "text-footer",
+          "href": "/cambios-y-devoluciones",
+          "label": "Cambios y devoluciones"
+        }
+
+    },
+
+    "link#medir-talle-trabajo": {
+
+        "props": {
+            "blockClass": "text-footer",
+          "href": "/como-medir-tu-talle",
+          "label": "¿Cómo medir tu talle?"
+        }
+
+    }
+
+}

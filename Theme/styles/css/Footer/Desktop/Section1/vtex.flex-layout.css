@@ -1,0 +1,100 @@
+.flexRow--section-1-footer{
+    display: flex;
+    justify-content: center;
+    padding-top: 45px;
+    padding-bottom: 38px;
+    background: var(--background-footer);
+}
+
+.flexRow--section-1-footer :global(.vtex-store-components-3-x-container){
+    margin: 0;
+    padding: 0;
+}
+
+.flexRowContent--section-1-footer{
+    justify-content: space-between;
+    max-width: var(--max-width-content-desktop);
+    width: var(--max-width-content-desktop);
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--section-1-footer{
+        max-width: var(--max-width-content-mobile);
+        width: var(--max-width-content-mobile);
+    }
+
+}
+
+.flexRow--section-1-footer .flexCol--section-contacto{
+    width: 363px;
+    gap: 12px;
+}
+
+.flexRow--section-1-footer .flexCol--columns-footer-container{
+    width: 228px;
+    gap: 12px;
+}
+
+.flexColChild--section-contacto:nth-child(0n+1){
+    height: 24px !important;
+}
+
+.flexColChild--columns-footer-container:nth-child(0n+1){
+    height: 24px !important;
+}
+
+.flexRowContent--items-columns-footer-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px;
+    column-gap: 102px;
+    height: 221px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRow--items-columns-footer-container :global(.vtex-store-components-3-x-container){
+        margin: 0;
+        padding: 0;
+    }
+
+    .flexRowContent--items-columns-footer-container{
+        margin: auto;
+        margin-top: 16px;
+        padding-bottom: 12px;
+        gap: 8px;
+        max-width: var(--max-width-content-mobile);
+        width: var(--max-width-content-mobile);
+        height: auto;
+        border-bottom: 1px solid var(--border-gray);
+    }    
+
+}
+
+.flexRowContent--items-columns-footer-container .stretchChildrenWidth{
+    max-width: max-content;
+    justify-content: flex-start;
+}
+
+.flexRowContent--items-columns-footer-container .stretchChildrenWidth :global(.vtex-store-link-0-x-link--text-footer){
+    max-width: max-content;
+}
+
+.flexCol--section-redes{
+    gap: 16px;
+    min-width: 71px;
+}
+
+.flexColChild--section-redes:nth-child(0n+1){
+    height: 24px !important;
+}
+
+.flexRow--items-redes{
+    height: 36px;
+}
+
+.flexRowContent--items-redes{
+    justify-content: space-between;
+}

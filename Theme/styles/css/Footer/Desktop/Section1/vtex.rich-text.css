@@ -1,0 +1,84 @@
+/* TITLE FOOTER  */
+
+.paragraph--title-footer{
+    font-family: 'Gotham';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--post-header-color);
+}
+
+/* FIN TITLE FOOTER  */
+
+/* TEXT FOOTER  */
+
+.paragraph--text-footer{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--color-black-2);
+}
+
+.link--text-footer{
+    font-family: 'Gotham';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--color-black-1);
+    text-decoration: none;
+}
+
+:global(.vtex-store-link-0-x-link--text-footer){
+    font-family: 'Gotham';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--color-black-1);
+    text-decoration: none;
+}
+
+:global(.vtex-store-link-0-x-link--text-footer) :hover{
+    text-decoration: underline;
+    text-decoration-color: var(--color-black-1);
+}
+
+@media (max-width: 640px) {
+
+    :global(.vtex-store-link-0-x-link--text-footer) :hover{
+        text-decoration: none;
+    }
+
+}
+
+:global(.vtex-store-link-0-x-label--link-email-color){
+    color: var(--link-email-color);
+}
+
+:global(.vtex-store-link-0-x-label--link-email-color):hover{
+    text-decoration-color: var(--link-email-color);
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--section-contacto) :global(.vtex-store-link-0-x-link){
+    display: flex;
+    gap: 13px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--color-black-3);
+    text-decoration: none;
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--section-contacto) :global(.vtex-store-link-0-x-link)::before{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    content:"";
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' viewBox='0 0 24 25' fill='none'%3E%3Cpath d='M12.001 2.5C17.5238 2.5 22.001 6.97715 22.001 12.5C22.001 18.0228 17.5238 22.5 12.001 22.5C10.1671 22.5 8.44851 22.0064 6.97086 21.1447L2.00516 22.5L3.35712 17.5315C2.49494 16.0536 2.00098 14.3345 2.00098 12.5C2.00098 6.97715 6.47813 2.5 12.001 2.5ZM8.39232 7.80833C8.26293 7.81742 8.13607 7.84902 8.02057 7.90811C7.93392 7.95244 7.85348 8.01651 7.72709 8.13586C7.60774 8.24855 7.53857 8.34697 7.46569 8.44186C7.09599 8.9232 6.89729 9.51405 6.90098 10.121C6.90299 10.6116 7.03043 11.0884 7.23169 11.5336C7.63982 12.4364 8.31288 13.3908 9.20194 14.2759C9.4155 14.4885 9.62473 14.7034 9.85034 14.902C10.9538 15.8736 12.2688 16.5742 13.6907 16.9482C13.6907 16.9482 14.2507 17.0342 14.2589 17.0347C14.4444 17.0447 14.6296 17.0313 14.8153 17.0218C15.1066 17.0068 15.391 16.928 15.6484 16.7909C15.8139 16.7028 15.8922 16.659 16.0311 16.5714C16.0311 16.5714 16.0737 16.5426 16.1559 16.4814C16.2909 16.3808 16.3743 16.31 16.4866 16.1934C16.5694 16.1074 16.6406 16.0058 16.6956 15.8913C16.7738 15.7281 16.8525 15.4166 16.8838 15.1579C16.9077 14.9603 16.9005 14.8523 16.8979 14.7854C16.8936 14.6778 16.8047 14.5671 16.7073 14.5201L16.1258 14.2587C16.1258 14.2587 15.2563 13.8803 14.7245 13.6377C14.6691 13.6124 14.6085 13.6007 14.5476 13.597C14.4142 13.5888 14.2647 13.6236 14.1696 13.7238C14.1646 13.7218 14.0984 13.779 13.3749 14.6555C13.335 14.7032 13.2415 14.8069 13.0798 14.7972C13.0554 14.7955 13.0311 14.792 13.0074 14.7858C12.9419 14.7685 12.8781 14.7457 12.8157 14.7193C12.692 14.6668 12.6486 14.6469 12.5641 14.6105C11.9868 14.3583 11.457 14.0209 10.9887 13.608C10.8631 13.4974 10.7463 13.3783 10.6259 13.2616C10.2057 12.8543 9.86169 12.4211 9.60577 11.9938C9.5918 11.9705 9.57027 11.9368 9.54708 11.8991C9.50521 11.831 9.45903 11.75 9.44455 11.6944C9.40738 11.5473 9.50599 11.4291 9.50599 11.4291C9.50599 11.4291 9.74939 11.163 9.86248 11.0183C9.97128 10.879 10.0652 10.7428 10.125 10.6457C10.2428 10.4563 10.2801 10.2606 10.2182 10.1096C9.93764 9.42565 9.64818 8.74536 9.34986 8.06894C9.29098 7.93545 9.11585 7.83846 8.95659 7.82007C8.90265 7.81384 8.84875 7.80758 8.79459 7.80402C8.66053 7.79748 8.5262 7.79892 8.39232 7.80833Z' fill='%23434343'/%3E%3C/svg%3E");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* FIN TEXT FOOTER  */

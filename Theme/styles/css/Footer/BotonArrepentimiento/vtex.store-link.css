@@ -1,0 +1,36 @@
+.link--boton-arrepentimiento{
+    text-decoration: none;
+}
+
+.label--boton-arrepentimiento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 212px;
+    height: 40px;
+    font-family: 'Gotham';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: var(--post-header-color);
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid var(--post-header-color);
+    background: var(--color-white);
+}
+
+@media (max-width: 640px) {
+    
+    .link--boton-arrepentimiento{
+        margin: auto;
+        display: flex;
+        max-width: var(--max-width-content-mobile);
+        width: var(--max-width-content-mobile);
+    }
+
+    .label--boton-arrepentimiento{
+        margin-top: 20px;
+    }
+
+}

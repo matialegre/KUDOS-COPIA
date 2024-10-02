@@ -1,0 +1,18 @@
+{
+
+    "flex-layout.row#section1FooterMobile": {
+
+        "props": {
+            "blockClass": "section-1-footer-mobile",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "flex-layout.row#sectionRedesMobile"
+        ]
+    
+    }
+
+}

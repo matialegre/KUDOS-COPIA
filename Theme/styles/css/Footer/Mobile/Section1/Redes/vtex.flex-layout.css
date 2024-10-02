@@ -1,0 +1,12 @@
+.flexRowContent--section-redes-mobile{
+    align-items: center;
+    gap: 39px;
+}
+
+.flexRowContent--section-redes-mobile .flexRow--items-redes{
+    height: auto;
+}
+
+.flexRowContent--section-redes-mobile .flexRowContent--items-redes{
+    gap: 12px;
+}

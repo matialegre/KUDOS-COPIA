@@ -1,0 +1,11 @@
+/* Z-INDEX DE  HEADER  */
+
+.wrapper--sticky-header-desktop{
+    z-index: 1000;
+}
+
+.container--sticky-header-mobile{
+    z-index: 1000;   
+}
+
+/* FIN Z-INDEX DE  HEADER  */

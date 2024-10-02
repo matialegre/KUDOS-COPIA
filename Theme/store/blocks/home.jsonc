@@ -1,15 +1,9 @@
 {
+  
   "store.home": { 
-    "blocks": [
-      "rich-text"
-    ]
-  },
-  "rich-text": { 
-    "props": { 
-      "text": "INICIO DE PROYECTO",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
-    }
+
+    "blocks": []
+
   }
+
 }

@@ -1,0 +1,68 @@
+/* ICONO MINICART */
+
+.minicartWrapperContainer{
+    margin-left: 16px;
+}
+
+.openIconContainer{
+    margin: 0;
+    padding: 0;
+}
+
+.openIconContainer :global(.vtex-button){
+    border: 0;
+    border-radius: 0;
+    width: 24px;
+    min-height: auto;
+    height: 24px;
+}
+
+.openIconContainer :global(.vtex-button):hover{
+    background: transparent;
+}
+
+.openIconContainer :global(.vtex-button)::after{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M20.1874 7.62685C20.1689 7.38778 20.0604 7.16454 19.8836 7.00191C19.7069 6.83927 19.475 6.74929 19.2345 6.75H16.3757V5.8C16.3757 4.79218 15.9741 3.82563 15.2593 3.11299C14.5444 2.40036 13.5749 2 12.564 2C11.5531 2 10.5836 2.40036 9.86872 3.11299C9.15389 3.82563 8.7523 4.79218 8.7523 5.8V6.75H5.89352C5.65301 6.74929 5.42111 6.83927 5.24437 7.00191C5.06763 7.16454 4.95912 7.38778 4.9406 7.62685L4.06962 18.9537C4.0494 19.2148 4.08352 19.4772 4.16984 19.7245C4.25616 19.9717 4.39281 20.1986 4.57123 20.3907C4.74965 20.5829 4.96598 20.7362 5.20665 20.841C5.44731 20.9459 5.70712 21 5.96976 21H19.1582C19.4208 21 19.6805 20.9459 19.9211 20.8411C20.1617 20.7363 20.378 20.5831 20.5564 20.391C20.7348 20.199 20.8715 19.9723 20.9579 19.7251C21.0442 19.4779 21.0785 19.2156 21.0584 18.9546L20.1874 7.62685ZM10.6582 5.8C10.6582 5.29609 10.8589 4.81282 11.2164 4.4565C11.5738 4.10018 12.0585 3.9 12.564 3.9C13.0695 3.9 13.5542 4.10018 13.9116 4.4565C14.2691 4.81282 14.4699 5.29609 14.4699 5.8V6.75H10.6582V5.8ZM5.96976 19.1L6.77593 8.65H8.7523V10.55C8.7523 10.802 8.8527 11.0436 9.03141 11.2218C9.21011 11.3999 9.45249 11.5 9.70522 11.5C9.95796 11.5 10.2003 11.3999 10.379 11.2218C10.5578 11.0436 10.6582 10.802 10.6582 10.55V8.65H14.4699V10.55C14.4699 10.802 14.5703 11.0436 14.749 11.2218C14.9277 11.3999 15.17 11.5 15.4228 11.5C15.6755 11.5 15.9179 11.3999 16.0966 11.2218C16.2753 11.0436 16.3757 10.802 16.3757 10.55V8.65H18.3521L19.1592 19.1H5.96976Z' fill='%23434343'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.openIconContainer :global(.vtex-button__label){
+    position: absolute;
+}
+
+.openIconContainer .cartIcon{
+    display: none;
+}
+
+.openIconContainer .minicartQuantityBadge{
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-right: -17px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    background: var(--color-green-2);
+}
+
+@media (max-width: 640px){
+
+    .minicartWrapperContainer{
+        margin-left: 10.77px;
+    }
+
+    .openIconContainer .minicartQuantityBadge{
+        margin-right: -12px;
+    }
+
+}
+
+/* FIN ICONO MINICART */

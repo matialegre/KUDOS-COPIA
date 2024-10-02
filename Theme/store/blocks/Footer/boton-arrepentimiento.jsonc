@@ -1,0 +1,13 @@
+{
+
+    "link#boton-arrepentimiento": {
+
+        "props": {
+            "blockClass": "boton-arrepentimiento",
+            "href": "/arrepentimiento-de-compra",
+            "label": "Botón de arrepentimiento"
+        }
+
+    }
+
+}

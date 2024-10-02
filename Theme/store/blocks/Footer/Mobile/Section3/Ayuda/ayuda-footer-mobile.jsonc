@@ -1,0 +1,39 @@
+{
+
+    "disclosure-layout#ayuda-footer-mobile": {
+
+        "children": ["disclosure-trigger#ayuda-footer-mobile", "disclosure-content#ayuda-footer-mobile"]
+
+    },
+
+    "disclosure-trigger#ayuda-footer-mobile": {
+
+        "props": {
+            "blockClass": "triger-dropdown-footer-mobile",
+            "as": "div"
+        },
+
+        "children": ["rich-text#ayuda-title"]
+
+    },
+
+    "rich-text#ayuda-title": {
+        
+        "props": {
+            "blockClass": "text-triger-dropdown-footer-mobile",
+            "text": "Ayuda"
+        }
+
+    },
+
+    "disclosure-content#ayuda-footer-mobile": {
+
+        "props": {
+            "blockClass": "content-dropdown-footer-mobile"
+        },
+
+        "children": ["flex-layout.row#itemsAyuda"]
+
+    }
+
+}

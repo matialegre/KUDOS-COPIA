@@ -1,0 +1,123 @@
+.flexRow--section-3-footer{
+    box-sizing: border-box;
+    border-top: 1px solid var(--border-gray);
+    background: var(--color-white);
+}
+
+@media (max-width: 640px) {
+
+    .flexRow--section-3-footer{
+        background: var(--background-footer);
+    }
+
+}
+
+.flexRow--section-3-footer :global(.vtex-store-components-3-x-container){
+    margin: 0;
+    padding: 0;
+    margin: auto;
+}
+
+.flexRowContent--section-3-footer{
+    margin: auto;
+    max-width: var(--max-width-content-desktop);
+    width: var(--max-width-content-desktop);
+    height: 53px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--section-3-footer{
+        max-width: var(--max-width-content-mobile);
+        width: var(--max-width-content-mobile);
+        height: auto;
+    }
+
+}
+
+/* TEXT RIGHTS  */
+
+.flexRowContent--section-3-footer :global(.vtex-rich-text-0-x-container--text-rights){
+    align-items: center;
+}
+
+.flexRowContent--section-3-footer :global(.vtex-rich-text-0-x-paragraph--text-rights){
+    font-family: 'GothamBook';
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    color: var(--post-header-color);
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--section-3-footer :global(.vtex-rich-text-0-x-paragraph--text-rights){
+        font-family: 'Gotham';
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 16.5px;
+        text-align: center;
+    }
+
+}
+
+/* FIN TEXT RIGHTS  */
+
+/* LOGO KUDOS  */
+.flexRowContent--section-3-footer .stretchChildrenWidth:nth-child(0n+2){
+    margin-left: auto;
+    align-items: center;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--section-3-footer .stretchChildrenWidth:nth-child(0n+2){
+        margin: 0;
+    }
+
+}
+
+.flexRowContent--section-3-footer .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-imageElement){
+    width: 82px;
+    height: 24px;
+}
+/* FIN LOGO KUDOS  */
+
+/* LOGO VTEX  */
+.flexRowContent--section-3-footer .stretchChildrenWidth:nth-child(0n+3){
+    align-items: center;
+}
+
+.flexRowContent--section-3-footer .stretchChildrenWidth:nth-child(0n+3) :global(.vtex-store-components-3-x-imageElement){
+    margin-left: 37px;
+    width: 66px;
+    height: 24px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--section-3-footer .stretchChildrenWidth:nth-child(0n+3) :global(.vtex-store-components-3-x-imageElement){
+        margin-left: 0px;
+    }
+
+}
+/* FIN LOGO VTEX  */
+
+/* LOGO DATA FISCAL  */
+.flexRowContent--section-3-footer .stretchChildrenWidth:nth-child(0n+4){
+    align-items: center;
+}
+
+.flexRowContent--section-3-footer .stretchChildrenWidth:nth-child(0n+4) :global(.vtex-store-components-3-x-imageElement){
+    margin-left: 37px;
+    height: 26px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--section-3-footer .stretchChildrenWidth:nth-child(0n+4) :global(.vtex-store-components-3-x-imageElement){
+        margin-left: 0px;
+    }
+
+}
+/* FIN DATA FISCAL  */

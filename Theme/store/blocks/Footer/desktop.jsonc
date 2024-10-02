@@ -1,0 +1,14 @@
+{
+
+  "footer-layout.desktop": { 
+
+    "children": [
+      "flex-layout.row#section1Footer",
+      "flex-layout.row#section3Footer"
+    ]
+
+  }
+  
+
+
+}

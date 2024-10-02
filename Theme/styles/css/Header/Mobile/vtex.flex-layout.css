@@ -1,0 +1,76 @@
+.flexRow--wrapper-row-header-mobile{
+    margin: 0;
+    padding: 0;
+}
+
+.flexRow--wrapper-row-header-mobile :global(.vtex-store-components-3-x-container){
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+.flexRowContent--wrapper-row-header-mobile .stretchChildrenWidth:not(.flexRow--container-row-header-mobile .stretchChildrenWidth){
+    width: 100% !important;
+}
+
+/* PRE HEADER */
+
+.flexColChild--container-col-header-mobile :global(.vtex-rich-text-0-x-container--post-header){
+    justify-content: center;
+    align-items: center;
+    height: 31px;
+    background: var(--post-header-color);
+}
+
+.flexColChild--container-col-header-mobile :global(.vtex-rich-text-0-x-container--post-header) :global(.vtex-rich-text-0-x-paragraph--post-header){
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15.96px;
+    color: var(--color-white);
+}
+
+/* FIN PRE HEADER */
+
+/* HEADER BOTTOM */
+
+.flexRow--container-row-header-mobile{
+    display: flex;
+    align-items: center;
+    height: 62px;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06), 0px 1px 3px 0px rgba(16, 24, 40, 0.10);
+    background: var(--color-white);
+}
+
+.flexRowContent--container-row-header-mobile{
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width-content-mobile);
+    width: var(--max-width-content-mobile);
+}
+
+    /* LOGO */
+
+    .flexRowContent--container-row-header-mobile .stretchChildrenWidth:nth-child(0n+2){
+        margin-top: 0px;
+        margin-left: 0px;
+        min-width: 81px;
+        width: 81px !important;
+        height: 40.5px;
+    }
+
+    .flexRowContent--container-row-header-mobile :global(.vtex-store-components-3-x-logoLink) :global(.vtex-store-components-3-x-sizemobile){
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .flexRowContent--container-row-header-mobile :global(.vtex-store-components-3-x-logoLink) :global(.vtex-store-components-3-x-sizemobile) :global(.vtex-store-components-3-x-logoImage){
+        width: 100%;
+        height: 100%;
+    }
+
+    /* FIN LOGO */
+
+/* FIN HEADER BOTTOM */

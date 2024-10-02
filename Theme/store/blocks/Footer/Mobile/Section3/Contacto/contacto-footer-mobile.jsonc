@@ -1,0 +1,39 @@
+{
+
+    "disclosure-layout#contacto-footer-mobile": {
+
+        "children": ["disclosure-trigger#contacto-footer-mobile", "disclosure-content#contacto-footer-mobile"]
+
+    },
+
+    "disclosure-trigger#contacto-footer-mobile": {
+
+        "props": {
+            "blockClass": "triger-dropdown-footer-mobile",
+            "as": "div"
+        },
+
+        "children": ["rich-text#contacto-title"]
+
+    },
+
+    "rich-text#contacto-title": {
+        
+        "props": {
+            "blockClass": "text-triger-dropdown-footer-mobile",
+            "text": "Contacto"
+        }
+
+    },
+
+    "disclosure-content#contacto-footer-mobile": {
+
+        "props": {
+            "blockClass": "content-dropdown-footer-mobile"
+        },
+
+        "children": ["flex-layout.row#itemsContacto"]
+
+    }
+
+}

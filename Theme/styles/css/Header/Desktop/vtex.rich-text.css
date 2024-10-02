@@ -1,0 +1,16 @@
+.paragraph--aqui-menu{
+    width: 784px;
+    height: 30px;
+    background: lightgray;
+}
+
+@media (max-width: 640px) {
+
+    .paragraph--aqui-menu{
+        overflow: hidden;
+        width: 24px;
+        height: 24px;
+        background: lightgray;
+    }
+
+}
