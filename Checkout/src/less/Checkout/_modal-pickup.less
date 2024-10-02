@@ -1,0 +1,203 @@
+.pkpmodal {
+
+  .pkpmodal-header {
+    border: none;
+
+    .pkpmodal-title {
+      font-size: 0;
+      line-height: initial;
+
+      &::before {
+        content: "Elija un punto de retiro";
+        font-size: 16px;
+        font-family: var(--font-1);
+      }
+    }
+  }
+
+  .pkpmodal-search {
+    padding-left: 18px;
+    padding-right: 49px;
+    border: none;
+
+    .pac-target-input {
+      border: 1px solid #E9EAED;
+      box-shadow: none;
+      border-radius: 4px;
+      padding: 8px 12px 8px 34px !important;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #96A3B6;
+      font-family: var(--font-1);
+    }
+    .pkpmodal-search-icon {
+      left: 28px;
+      top: 12px;
+    }
+    .pkp-modal-ask-geolocation-btn {
+      padding: 0 19px 0 10px;
+      display: flex;
+      align-items: center;
+      border: none;
+    }
+  }
+
+  .pkpmodal-details-top {
+    align-items: end;
+
+    button {
+      font-family: "Plus Jakarta Sans";
+      font-size: 0;
+      font-weight: 600;
+      letter-spacing: 0.1px;
+      padding: 16px;
+
+      &::before {
+        content: "Ver todos los puntos de retiro";
+        font-size: 16px;
+      }
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  .pkpmodal-points-list {
+    margin-top: 25px;
+    padding: 0 18px;
+  }
+    
+  .vtex-pickup-points-modal-3-x-pickupListTitle {
+    display: none;
+  }
+
+  .pkpmodal-points-item,
+  .pkpmodal-details-store {
+    border-color: #CCD5E0;
+
+    .pkpmodal-pickup-point {
+      border-color: #CCD5E0;
+    }
+    .pkpmodal-pickup-point-main {
+      padding: 20px 20px 14px 16px;
+    }
+
+    .pkpmodal-pickup-point-marker {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-right: 20px;
+      width: auto;
+
+      &::before {
+        content: "";
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M12.4998 2C11.0413 1.99858 9.61027 2.39629 8.36166 3.15005C7.11306 3.9038 6.09452 4.98486 5.4164 6.27611C4.73827 7.56735 4.42642 9.01954 4.51463 10.4754C4.60284 11.9312 5.08774 13.3351 5.91681 14.535C5.94999 14.6002 5.99023 14.6616 6.03681 14.718L6.15681 14.864C6.26881 15.009 6.38381 15.149 6.48281 15.264L11.7278 21.638C11.8219 21.7515 11.9398 21.8428 12.0733 21.9054C12.2068 21.968 12.3524 22.0003 12.4998 22C12.6476 22.0001 12.7936 21.9674 12.9273 21.9043C13.0609 21.8412 13.1789 21.7492 13.2728 21.635L18.3648 15.43C18.5711 15.2082 18.7641 14.9745 18.9428 14.73L19.0698 14.575C19.1182 14.5162 19.1592 14.4518 19.1918 14.383C19.9821 13.1763 20.4314 11.7785 20.4922 10.3374C20.553 8.89624 20.2231 7.46549 19.5373 6.19653C18.8516 4.92758 17.8355 3.86763 16.5966 3.12889C15.3578 2.39015 13.9422 2.00009 12.4998 2ZM12.4998 7C13.0932 7 13.6732 7.17595 14.1665 7.5056C14.6599 7.83524 15.0444 8.30378 15.2714 8.85195C15.4985 9.40013 15.5579 10.0033 15.4422 10.5853C15.3264 11.1672 15.0407 11.7018 14.6211 12.1213C14.2016 12.5409 13.667 12.8266 13.0851 12.9424C12.5031 13.0581 11.8999 12.9987 11.3518 12.7716C10.8036 12.5446 10.335 12.1601 10.0054 11.6667C9.67576 11.1734 9.49981 10.5933 9.49981 10C9.49981 9.20435 9.81588 8.44129 10.3785 7.87868C10.9411 7.31607 11.7042 7 12.4998 7Z' fill='%232680EB'/%3E%3C/svg%3E") no-repeat center center / contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
+      .pkpmodal-pickup-point-best-marker-image,
+      .pkpmodal-pickup-point-marker-image {
+        display: none;
+      }
+      .pkpmodal-pickup-point-distance {
+        color: var(--black-color);
+        font-size: 14.5px;
+        font-family: var(--font-1);
+        margin-top: 10px;
+      }
+    }
+
+    .pkpmodal-pickup-point-info {
+
+      .pkpmodal-pickup-point-name {
+        color: var(--black-color);
+        font-family: var(--font-1);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        margin-bottom: 5px;
+      }
+      .address-summary {
+        font-family: var(--font-1);
+        color: #676F79;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 5px;
+      }
+      .pkpmodal-pickup-point-available {
+        font-family: var(--font-1);
+        color: #676F79;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+
+    .pkpmodal-pickup-point-sla-availability {
+      border-color: #CCD5E0;
+      padding-left: 82px;
+
+      .pkpmodal-pickup-point-price,
+      .pkpmodal-pickup-point-sla {
+        font-family: var(--font-1);
+        color: #676F79;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .pkpmodal-show-list-btn {
+    color: var(--link-color);
+    border: 1px solid var(--link-color);
+    text-transform: initial;
+    font-family: var(--font-1);
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .pkpmodal-details-confirm-btn {
+    width: 100%;
+    font-size: 0;
+    background: var(--principal-color);
+    border: none;
+    border-radius: 4px;
+    padding: 16px 20px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      content: "Retirar en este punto";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      text-shadow: none;
+    }
+  }
+
+  @media (max-width: 980px) {
+
+    .pkpmodal-info-bar-container {
+      background: #fff;
+
+      .pkpmodal-pickup-view-mode {
+        display: flex;
+        gap: 20px;
+        padding: 12px 20px 8px;
+
+        button {
+          border-radius: 4px;
+          font-family: var(--font-1);
+          padding: 8px;
+        }
+      }
+    }
+
+  }
+}

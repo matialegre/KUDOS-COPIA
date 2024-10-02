@@ -1,0 +1,1 @@
+export const modulo2 = "Modulo2";

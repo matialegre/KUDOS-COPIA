@@ -1,0 +1,83 @@
+.cart-links.cart-links-bottom {
+  grid-column: 2;
+  grid-row: 2 / 4;
+  margin: 0;
+  display: flex !important;
+  flex-flow: column-reverse;
+  align-items: center;
+  justify-content: left;
+
+  .btn-place-order-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 0 0 4px 4px;
+
+    #cart-to-orderform {
+      margin: 32px 24px;
+      width: 100%;
+      font-size: 0;
+      background: var(--principal-color);
+      border: none;
+      border-radius: 4px;
+      padding: 16px 20px 12px;
+
+      &::before {
+        content: "";
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='18' viewBox='0 0 14 18' fill='none'%3E%3Cpath d='M13.0565 5.21026H10.7985V3.57226C10.7517 2.62369 10.3419 1.72946 9.65399 1.07467C8.96608 0.419881 8.05273 0.0546875 7.10301 0.0546875C6.15329 0.0546875 5.23994 0.419881 4.55203 1.07467C3.86412 1.72946 3.45433 2.62369 3.4075 3.57226V5.21426H0.943512C0.780139 5.21426 0.623457 5.27916 0.507935 5.39468C0.392412 5.5102 0.327515 5.66688 0.327515 5.83026V17.3303C0.327515 17.4936 0.392412 17.6503 0.507935 17.7658C0.623457 17.8814 0.780139 17.9463 0.943512 17.9463H13.0565C13.2199 17.9463 13.3766 17.8814 13.4921 17.7658C13.6076 17.6503 13.6725 17.4936 13.6725 17.3303V5.83026C13.6725 5.66688 13.6076 5.5102 13.4921 5.39468C13.3766 5.27916 13.2199 5.21426 13.0565 5.21426V5.21026ZM9.56651 5.21026H4.63951V3.57226C4.6525 2.92749 4.91776 2.31352 5.37834 1.86212C5.83892 1.41073 6.45812 1.15789 7.10301 1.15789C7.74791 1.15789 8.3671 1.41073 8.82768 1.86212C9.28826 2.31352 9.55352 2.92749 9.56651 3.57226V5.21026Z' fill='white'/%3E%3C/svg%3E") no-repeat center center / contain;
+        display: inline-block;
+        margin-right: 8px;
+        height: 17px;
+        width: 13px;
+      }
+      &::after {
+        content: "Proceder al pago";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        text-shadow: none;
+      }
+    }
+
+    @media(max-width:768px) {
+      width: calc(100% - 20px);
+    }
+  }
+
+  .link-choose-more-products-wrapper {
+    margin-top: 38px;
+
+    a {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      font-size: 0;
+
+      &::before {
+        content: "";
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E%3Cpath d='M10.2687 12.6673C10.0334 12.6673 9.80785 12.569 9.64152 12.3942L6.09311 8.66544C5.9268 8.49062 5.83337 8.25356 5.83337 8.00638C5.83337 7.7592 5.9268 7.52213 6.09311 7.34732L9.64152 3.61857C9.72335 3.52954 9.82124 3.45852 9.92947 3.40967C10.0377 3.36081 10.1541 3.3351 10.2719 3.33402C10.3897 3.33294 10.5065 3.35653 10.6155 3.4034C10.7245 3.45027 10.8236 3.51949 10.9069 3.60702C10.9902 3.69454 11.056 3.79862 11.1006 3.91318C11.1453 4.02775 11.1677 4.1505 11.1667 4.27427C11.1657 4.39805 11.1412 4.52037 11.0947 4.6341C11.0482 4.74783 10.9806 4.85069 10.8959 4.93668L7.97465 8.00638L10.8959 11.0761C11.0199 11.2064 11.1044 11.3725 11.1386 11.5533C11.1728 11.7341 11.1552 11.9215 11.0881 12.0918C11.021 12.2621 10.9073 12.4077 10.7615 12.5102C10.6156 12.6126 10.4441 12.6673 10.2687 12.6673Z' fill='%232680EB'/%3E%3C/svg%3E") no-repeat center center / contain;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+      }
+
+      &::after {
+        content: "Continuar comprando";
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--link-color);
+      }
+
+    }
+
+  }
+
+  @media (max-width:768px) {
+    
+    grid-column: initial;
+    grid-row: initial;
+
+  }
+
+}

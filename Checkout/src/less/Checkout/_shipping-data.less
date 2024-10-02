@@ -1,0 +1,542 @@
+.shipping-data {
+
+  margin: 0;
+
+  .shipping-data {
+
+    .accordion-heading {
+
+      .accordion-toggle {
+        padding: 0;
+        font-size: 18px;
+        color: var(--black-color);
+        margin-left: 3px;
+
+        .icon-home { display: none; }
+
+        &::before {
+          content: "2";
+          border: 1px solid var(--black-color);
+          border-radius: 100%;
+          padding: 0 6px;
+          font-size: 16px;
+          color: var(--black-color);
+          margin-right: 6px;
+        }
+      }
+    }
+
+    .shipping-container {
+      padding: 0;
+
+      .box-step {
+        margin-top: 28px;
+        display: grid;
+
+        .vtex-omnishipping-1-x-deliveryChannelsWrapper {
+          display: flex;
+          border: none;
+          box-shadow: none;
+          gap: 10px;
+          width: 50%;
+
+          .vtex-omnishipping-1-x-deliveryChannelsToggle {
+            display: none;
+          }
+          .vtex-omnishipping-1-x-deliveryChannelsOption {
+            display: flex;
+            width: max-content;
+            padding: 12px 20px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            border: 1px solid #CCD5E0;
+
+            &#shipping-option-delivery {
+
+              &::before {
+                content: "";
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M21.9 10.6844C21.9 10.6753 21.9 10.6651 21.894 10.657L19.894 6.59352C19.811 6.42481 19.6834 6.28289 19.5255 6.18367C19.3676 6.08445 19.1857 6.03185 19 6.03175H15C15 5.49289 14.7893 4.97611 14.4142 4.59508C14.0391 4.21406 13.5304 4 13 4H4C3.46957 4 2.96086 4.21406 2.58579 4.59508C2.21071 4.97611 2 5.49289 2 6.03175V15.1746C2 15.444 2.10536 15.7024 2.29289 15.8929C2.48043 16.0834 2.73478 16.1905 3 16.1905H3.3C3.26981 16.3582 3.25275 16.528 3.249 16.6984C3.249 17.574 3.59141 18.4138 4.2009 19.033C4.8104 19.6522 5.63705 20 6.499 20C7.36095 20 8.1876 19.6522 8.7971 19.033C9.40659 18.4138 9.749 17.574 9.749 16.6984C9.74591 16.5281 9.72952 16.3582 9.7 16.1905H14.3C14.2698 16.3582 14.2528 16.528 14.249 16.6984C14.249 17.574 14.5914 18.4138 15.2009 19.033C15.8104 19.6522 16.637 20 17.499 20C18.361 20 19.1876 19.6522 19.7971 19.033C20.4066 18.4138 20.749 17.574 20.749 16.6984C20.7459 16.5281 20.7295 16.3582 20.7 16.1905H21C21.2652 16.1905 21.5196 16.0834 21.7071 15.8929C21.8946 15.7024 22 15.444 22 15.1746V11.1111C21.998 10.9631 21.9638 10.8175 21.9 10.6844ZM17.5 13.3968C16.7499 13.4004 16.0245 13.6699 15.449 14.1587H15V12.127H20V14.1587H19.551C18.9755 13.6699 18.2501 13.4004 17.5 13.3968ZM18.382 8.06349L19.382 10.0952H15V8.06349H18.382ZM4 6.03175H13V14.1587H8.551C7.97751 13.6672 7.25135 13.3976 6.501 13.3976C5.75065 13.3976 5.02449 13.6672 4.451 14.1587H4V6.03175ZM6.5 17.9683C6.25277 17.9683 6.0111 17.8938 5.80554 17.7542C5.59998 17.6147 5.43976 17.4164 5.34515 17.1844C5.25054 16.9523 5.22579 16.697 5.27402 16.4507C5.32225 16.2044 5.4413 15.9781 5.61612 15.8005C5.79093 15.6229 6.01366 15.502 6.25614 15.453C6.49861 15.404 6.74995 15.4291 6.97835 15.5252C7.20676 15.6213 7.40199 15.7841 7.53934 15.9929C7.67669 16.2018 7.75 16.4473 7.75 16.6984C7.74947 17.035 7.61761 17.3577 7.3833 17.5957C7.14899 17.8338 6.83136 17.9677 6.5 17.9683ZM17.5 17.9683C17.2528 17.9683 17.0111 17.8938 16.8055 17.7542C16.6 17.6147 16.4398 17.4164 16.3451 17.1844C16.2505 16.9523 16.2258 16.697 16.274 16.4507C16.3223 16.2044 16.4413 15.9781 16.6161 15.8005C16.7909 15.6229 17.0137 15.502 17.2561 15.453C17.4986 15.404 17.7499 15.4291 17.9784 15.5252C18.2068 15.6213 18.402 15.7841 18.5393 15.9929C18.6767 16.2018 18.75 16.4473 18.75 16.6984C18.7495 17.035 18.6176 17.3577 18.3833 17.5957C18.149 17.8338 17.8314 17.9677 17.5 17.9683Z' fill='%23090A10'/%3E%3C/svg%3E") no-repeat center center / contain;
+                display: block;
+                width: 24px;
+                height: 24px;
+                margin-right: 10px;
+              }
+              .shp-method-option-text {
+                font-size: 0;
+
+                &::before {
+                  content: "A domicilio";
+                  font-size: 14px;
+                }
+              }
+            }
+            &#shipping-option-pickup-in-point {
+
+              &::before {
+                content: "";
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M21.5 8.44737C21.5 7.23189 20.0366 4.34526 19.5884 3.48979C19.5106 3.34138 19.3965 3.21764 19.2578 3.13149C19.1191 3.04535 18.961 2.99994 18.8 3H6.2C6.04055 2.99993 5.88394 3.04446 5.74621 3.12902C5.60847 3.21358 5.49455 3.33514 5.4161 3.48126C4.967 4.31968 3.5 7.15421 3.5 8.44737C3.50039 8.86109 3.58033 9.27044 3.73501 9.65077C3.88968 10.0311 4.11589 10.3746 4.4 10.6604V20.0526C4.4 20.3039 4.49482 20.5449 4.6636 20.7225C4.83239 20.9002 5.06131 21 5.3 21H8C8.23869 21 8.46761 20.9002 8.6364 20.7225C8.80518 20.5449 8.9 20.3039 8.9 20.0526V14.3684H10.7V20.0526C10.7 20.3039 10.7948 20.5449 10.9636 20.7225C11.1324 20.9002 11.3613 21 11.6 21H19.7C19.9387 21 20.1676 20.9002 20.3364 20.7225C20.5052 20.5449 20.6 20.3039 20.6 20.0526V10.6206C20.8793 10.3392 21.1027 10.0022 21.2572 9.62909C21.4117 9.25601 21.4943 8.85432 21.5 8.44737ZM6.7319 4.89474H18.26C18.8814 6.00974 19.3653 7.20357 19.7 8.44737C19.6815 8.75507 19.5571 9.0451 19.35 9.26311C19.1428 9.48112 18.8673 9.61213 18.575 9.63158C18.2768 9.63108 17.9909 9.50615 17.78 9.28418C17.5692 9.0622 17.4505 8.76129 17.45 8.44737C17.45 8.19611 17.3552 7.95514 17.1864 7.77748C17.0176 7.59981 16.7887 7.5 16.55 7.5C16.3113 7.5 16.0824 7.59981 15.9136 7.77748C15.7448 7.95514 15.65 8.19611 15.65 8.44737C15.65 8.76144 15.5315 9.06265 15.3205 9.28473C15.1095 9.50681 14.8234 9.63158 14.525 9.63158C14.2266 9.63158 13.9405 9.50681 13.7295 9.28473C13.5185 9.06265 13.4 8.76144 13.4 8.44737C13.4 8.19611 13.3052 7.95514 13.1364 7.77748C12.9676 7.59981 12.7387 7.5 12.5 7.5C12.2613 7.5 12.0324 7.59981 11.8636 7.77748C11.6948 7.95514 11.6 8.19611 11.6 8.44737C11.6 8.76144 11.4815 9.06265 11.2705 9.28473C11.0595 9.50681 10.7734 9.63158 10.475 9.63158C10.1766 9.63158 9.89048 9.50681 9.6795 9.28473C9.46853 9.06265 9.35 8.76144 9.35 8.44737C9.35 8.19611 9.25518 7.95514 9.0864 7.77748C8.91761 7.59981 8.68869 7.5 8.45 7.5C8.21131 7.5 7.98239 7.59981 7.8136 7.77748C7.64482 7.95514 7.55 8.19611 7.55 8.44737C7.54952 8.76129 7.43084 9.0622 7.21997 9.28418C7.00909 9.50615 6.72322 9.63108 6.425 9.63158C6.12779 9.62765 5.84381 9.50162 5.63363 9.28039C5.42346 9.05915 5.30373 8.76022 5.3 8.44737C5.61883 7.19912 6.10073 6.0035 6.7319 4.89474ZM18.8 19.1053H12.5V13.4211C12.5 13.1698 12.4052 12.9288 12.2364 12.7512C12.0676 12.5735 11.8387 12.4737 11.6 12.4737H8C7.76131 12.4737 7.53239 12.5735 7.3636 12.7512C7.19482 12.9288 7.1 13.1698 7.1 13.4211V19.1053H6.2V11.5026C6.2756 11.5083 6.3476 11.5263 6.425 11.5263C7.18022 11.5266 7.90613 11.2186 8.45 10.6671C8.99401 11.2184 9.71982 11.5264 10.475 11.5264C11.2302 11.5264 11.956 11.2184 12.5 10.6671C13.044 11.2184 13.7698 11.5264 14.525 11.5264C15.2802 11.5264 16.006 11.2184 16.55 10.6671C17.0939 11.2186 17.8198 11.5266 18.575 11.5263C18.6515 11.5263 18.7244 11.5074 18.8 11.5007V19.1053Z' fill='%23434343'/%3E%3Cpath d='M17 12.4737H14.3C14.0613 12.4737 13.8324 12.5735 13.6636 12.7512C13.4948 12.9288 13.4 13.1698 13.4 13.4211V16.2632C13.4 16.5144 13.4948 16.7554 13.6636 16.933C13.8324 17.1107 14.0613 17.2105 14.3 17.2105H17C17.2387 17.2105 17.4676 17.1107 17.6364 16.933C17.8052 16.7554 17.9 16.5144 17.9 16.2632V13.4211C17.9 13.1698 17.8052 12.9288 17.6364 12.7512C17.4676 12.5735 17.2387 12.4737 17 12.4737ZM16.1 15.3158H15.2V14.3684H16.1V15.3158Z' fill='%23434343'/%3E%3C/svg%3E") no-repeat center center / contain;
+                display: block;
+                width: 24px;
+                height: 24px;
+                margin-right: 10px;
+              }
+
+              .shp-method-option-text {
+                font-size: 0;
+
+                &::before {
+                  content: "Retirar";
+                  font-size: 14px;
+                }
+              }
+            }
+
+            &.vtex-omnishipping-1-x-deliveryOptionActive {
+              border: 1px solid #EB0055;
+
+              &#shipping-option-delivery::before {
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25' fill='none'%3E%3Cpath d='M22.4 11.0814C22.4 11.0723 22.4 11.0621 22.394 11.054L20.394 6.9905C20.311 6.82178 20.1834 6.67986 20.0255 6.58065C19.8676 6.48143 19.6857 6.42882 19.5 6.42872H15.5C15.5 5.88987 15.2893 5.37308 14.9142 4.99206C14.5391 4.61103 14.0304 4.39697 13.5 4.39697H4.5C3.96957 4.39697 3.46086 4.61103 3.08579 4.99206C2.71071 5.37308 2.5 5.88987 2.5 6.42872V15.5716C2.5 15.841 2.60536 16.0994 2.79289 16.2899C2.98043 16.4804 3.23478 16.5875 3.5 16.5875H3.8C3.76981 16.7551 3.75275 16.925 3.749 17.0954C3.749 17.971 4.09141 18.8108 4.7009 19.43C5.3104 20.0491 6.13705 20.397 6.999 20.397C7.86095 20.397 8.6876 20.0491 9.2971 19.43C9.90659 18.8108 10.249 17.971 10.249 17.0954C10.2459 16.925 10.2295 16.7552 10.2 16.5875H14.8C14.7698 16.7551 14.7528 16.925 14.749 17.0954C14.749 17.971 15.0914 18.8108 15.7009 19.43C16.3104 20.0491 17.137 20.397 17.999 20.397C18.861 20.397 19.6876 20.0491 20.2971 19.43C20.9066 18.8108 21.249 17.971 21.249 17.0954C21.2459 16.925 21.2295 16.7552 21.2 16.5875H21.5C21.7652 16.5875 22.0196 16.4804 22.2071 16.2899C22.3946 16.0994 22.5 15.841 22.5 15.5716V11.5081C22.498 11.3601 22.4638 11.2144 22.4 11.0814ZM18 13.7938C17.2499 13.7974 16.5245 14.0669 15.949 14.5557H15.5V12.524H20.5V14.5557H20.051C19.4755 14.0669 18.7501 13.7974 18 13.7938ZM18.882 8.46046L19.882 10.4922H15.5V8.46046H18.882ZM4.5 6.42872H13.5V14.5557H9.051C8.47751 14.0642 7.75135 13.7945 7.001 13.7945C6.25065 13.7945 5.52449 14.0642 4.951 14.5557H4.5V6.42872ZM7 18.3652C6.75277 18.3652 6.5111 18.2908 6.30554 18.1512C6.09998 18.0117 5.93976 17.8134 5.84515 17.5813C5.75054 17.3493 5.72579 17.094 5.77402 16.8477C5.82225 16.6013 5.9413 16.3751 6.11612 16.1975C6.29093 16.0199 6.51366 15.8989 6.75614 15.8499C6.99861 15.8009 7.24995 15.8261 7.47835 15.9222C7.70676 16.0183 7.90199 16.1811 8.03934 16.3899C8.17669 16.5987 8.25 16.8442 8.25 17.0954C8.24947 17.432 8.11761 17.7547 7.8833 17.9927C7.64899 18.2307 7.33136 18.3647 7 18.3652ZM18 18.3652C17.7528 18.3652 17.5111 18.2908 17.3055 18.1512C17.1 18.0117 16.9398 17.8134 16.8451 17.5813C16.7505 17.3493 16.7258 17.094 16.774 16.8477C16.8223 16.6013 16.9413 16.3751 17.1161 16.1975C17.2909 16.0199 17.5137 15.8989 17.7561 15.8499C17.9986 15.8009 18.2499 15.8261 18.4784 15.9222C18.7068 16.0183 18.902 16.1811 19.0393 16.3899C19.1767 16.5987 19.25 16.8442 19.25 17.0954C19.2495 17.432 19.1176 17.7547 18.8833 17.9927C18.649 18.2307 18.3314 18.3647 18 18.3652Z' fill='%23EB0055'/%3E%3C/svg%3E") no-repeat center center / contain;
+              }
+              &#shipping-option-pickup-in-point::before {
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M21.5 8.44737C21.5 7.23189 20.0366 4.34526 19.5884 3.48979C19.5106 3.34138 19.3965 3.21764 19.2578 3.13149C19.1191 3.04535 18.961 2.99994 18.8 3H6.2C6.04055 2.99993 5.88394 3.04446 5.74621 3.12902C5.60847 3.21358 5.49455 3.33514 5.4161 3.48126C4.967 4.31968 3.5 7.15421 3.5 8.44737C3.50039 8.86109 3.58033 9.27044 3.73501 9.65077C3.88968 10.0311 4.11589 10.3746 4.4 10.6604V20.0526C4.4 20.3039 4.49482 20.5449 4.6636 20.7225C4.83239 20.9002 5.06131 21 5.3 21H8C8.23869 21 8.46761 20.9002 8.6364 20.7225C8.80518 20.5449 8.9 20.3039 8.9 20.0526V14.3684H10.7V20.0526C10.7 20.3039 10.7948 20.5449 10.9636 20.7225C11.1324 20.9002 11.3613 21 11.6 21H19.7C19.9387 21 20.1676 20.9002 20.3364 20.7225C20.5052 20.5449 20.6 20.3039 20.6 20.0526V10.6206C20.8793 10.3392 21.1027 10.0022 21.2572 9.62909C21.4117 9.25601 21.4943 8.85432 21.5 8.44737ZM6.7319 4.89474H18.26C18.8814 6.00974 19.3653 7.20357 19.7 8.44737C19.6815 8.75507 19.5571 9.0451 19.35 9.26311C19.1428 9.48112 18.8673 9.61213 18.575 9.63158C18.2768 9.63108 17.9909 9.50615 17.78 9.28418C17.5692 9.0622 17.4505 8.76129 17.45 8.44737C17.45 8.19611 17.3552 7.95514 17.1864 7.77748C17.0176 7.59981 16.7887 7.5 16.55 7.5C16.3113 7.5 16.0824 7.59981 15.9136 7.77748C15.7448 7.95514 15.65 8.19611 15.65 8.44737C15.65 8.76144 15.5315 9.06265 15.3205 9.28473C15.1095 9.50681 14.8234 9.63158 14.525 9.63158C14.2266 9.63158 13.9405 9.50681 13.7295 9.28473C13.5185 9.06265 13.4 8.76144 13.4 8.44737C13.4 8.19611 13.3052 7.95514 13.1364 7.77748C12.9676 7.59981 12.7387 7.5 12.5 7.5C12.2613 7.5 12.0324 7.59981 11.8636 7.77748C11.6948 7.95514 11.6 8.19611 11.6 8.44737C11.6 8.76144 11.4815 9.06265 11.2705 9.28473C11.0595 9.50681 10.7734 9.63158 10.475 9.63158C10.1766 9.63158 9.89048 9.50681 9.6795 9.28473C9.46853 9.06265 9.35 8.76144 9.35 8.44737C9.35 8.19611 9.25518 7.95514 9.0864 7.77748C8.91761 7.59981 8.68869 7.5 8.45 7.5C8.21131 7.5 7.98239 7.59981 7.8136 7.77748C7.64482 7.95514 7.55 8.19611 7.55 8.44737C7.54952 8.76129 7.43084 9.0622 7.21997 9.28418C7.00909 9.50615 6.72322 9.63108 6.425 9.63158C6.12779 9.62765 5.84381 9.50162 5.63363 9.28039C5.42346 9.05915 5.30373 8.76022 5.3 8.44737C5.61883 7.19912 6.10073 6.0035 6.7319 4.89474ZM18.8 19.1053H12.5V13.4211C12.5 13.1698 12.4052 12.9288 12.2364 12.7512C12.0676 12.5735 11.8387 12.4737 11.6 12.4737H8C7.76131 12.4737 7.53239 12.5735 7.3636 12.7512C7.19482 12.9288 7.1 13.1698 7.1 13.4211V19.1053H6.2V11.5026C6.2756 11.5083 6.3476 11.5263 6.425 11.5263C7.18022 11.5266 7.90613 11.2186 8.45 10.6671C8.99401 11.2184 9.71982 11.5264 10.475 11.5264C11.2302 11.5264 11.956 11.2184 12.5 10.6671C13.044 11.2184 13.7698 11.5264 14.525 11.5264C15.2802 11.5264 16.006 11.2184 16.55 10.6671C17.0939 11.2186 17.8198 11.5266 18.575 11.5263C18.6515 11.5263 18.7244 11.5074 18.8 11.5007V19.1053Z' fill='%23EB0055'/%3E%3Cpath d='M17 12.4737H14.3C14.0613 12.4737 13.8324 12.5735 13.6636 12.7512C13.4948 12.9288 13.4 13.1698 13.4 13.4211V16.2632C13.4 16.5144 13.4948 16.7554 13.6636 16.933C13.8324 17.1107 14.0613 17.2105 14.3 17.2105H17C17.2387 17.2105 17.4676 17.1107 17.6364 16.933C17.8052 16.7554 17.9 16.5144 17.9 16.2632V13.4211C17.9 13.1698 17.8052 12.9288 17.6364 12.7512C17.4676 12.5735 17.2387 12.4737 17 12.4737ZM16.1 15.3158H15.2V14.3684H16.1V15.3158Z' fill='%23EB0055'/%3E%3C/svg%3E") no-repeat center center / contain;
+              }
+              
+              .shp-method-option-text {
+                color: #EB0055;
+              }
+            }
+
+            .shp-method-option-text {
+              color: #3D3F43;
+              font-weight: 500;
+            }
+            .vtex-omnishipping-1-x-deliveryChannelsComplement {
+              display: none;
+            }
+          }
+          
+          @media (max-width: 980px) {
+            width: 100%;
+          }
+        }
+
+        .ship-postalCode {
+          display: flex;
+          flex-flow: column;
+
+          label {
+            font-size: 14px;
+            color: var(--gray-color);
+            margin-bottom: 5px;
+
+            &::after {
+              content: "*";
+              color: #EA3829;
+              margin-left: 5px;
+            }
+          }
+
+          input {
+            width: auto;
+            max-width: none;
+            border-color: #CCD5E0;
+            min-height: 20px;
+            padding: 10px 12px;
+            color: #96A3B6;
+            font-size: 14px;
+
+            &:focus {
+              box-shadow: none;
+            }
+
+            &.success:not([invalid="true"]) {
+              background-position: 98% center;
+            }
+
+            @media (max-width: 980px) {
+              width: auto !important;
+              height: auto;
+            }
+          }
+
+          small {
+            margin-left: 0;
+
+            a {
+              font-size: 14px;
+              display: block;
+              font-weight: 600;
+              margin-top: 8px;
+            }
+          }
+
+          .help.error {
+            width: 100%;
+          }
+        }
+
+        .vtex-omnishipping-1-x-addressForm {
+          margin-top: 28px;
+          
+          .delivery-address-title {
+            font-size: 15px;
+            font-weight: 400;
+            color: var(--black-color);
+            margin-bottom: 15px;
+          }
+
+          .address-summary {
+            padding: 0 0 0 30px;
+            font-size: 15px;
+            line-height: 24px;
+            border: none;
+            padding: 0;
+            background: none;
+
+            &::before {
+              content: "";
+              background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='14' viewBox='0 0 13 14' fill='none'%3E%3Cpath d='M11.7641 6.58687L10.6794 5.42019L6.8831 1.33681C6.7814 1.22745 6.64348 1.16602 6.49967 1.16602C6.35587 1.16602 6.21795 1.22745 6.11625 1.33681L2.31991 5.42019L1.23525 6.58687C1.13646 6.69688 1.08179 6.84424 1.08303 6.99719C1.08426 7.15014 1.1413 7.29645 1.24185 7.4046C1.34241 7.51276 1.47843 7.57411 1.62063 7.57544C1.76283 7.57676 1.89982 7.51797 2.00211 7.41171L2.16101 7.24079V11.666C2.16101 11.9754 2.27529 12.2722 2.4787 12.491C2.68212 12.7098 2.958 12.8327 3.24568 12.8327H4.87268C5.01651 12.8327 5.15446 12.7712 5.25616 12.6618C5.35787 12.5524 5.41501 12.4041 5.41501 12.2493V9.91598C5.41501 9.76127 5.47215 9.6129 5.57385 9.5035C5.67556 9.3941 5.81351 9.33264 5.95734 9.33264H7.04201C7.18584 9.33264 7.32379 9.3941 7.4255 9.5035C7.5272 9.6129 7.58434 9.76127 7.58434 9.91598V12.2493C7.58434 12.4041 7.64148 12.5524 7.74319 12.6618C7.84489 12.7712 7.98284 12.8327 8.12667 12.8327H9.75367C10.0413 12.8327 10.3172 12.7098 10.5206 12.491C10.7241 12.2722 10.8383 11.9754 10.8383 11.666V7.24079L10.9972 7.41171C11.0995 7.51797 11.2365 7.57676 11.3787 7.57544C11.5209 7.57411 11.6569 7.51276 11.7575 7.4046C11.858 7.29645 11.9151 7.15014 11.9163 6.99719C11.9176 6.84424 11.8629 6.69688 11.7641 6.58687Z' fill='%23434343'/%3E%3C/svg%3E") no-repeat center center / contain;
+              display: inline-block;
+              width: 13px;
+              height: 14px;
+              margin-right: 5px;
+            }
+
+            .link-edit {
+              color: var(--link-color);
+              text-decoration: underline;
+              margin-left: 10px;
+            }
+
+            span:nth-child(3) {
+              display: none;
+            }
+          }
+
+          .vtex-omnishipping-1-x-address {
+            
+            > div {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-column-gap: 34px;
+              grid-row-gap: 24px;
+
+              p {
+                display: flex;
+                flex-flow: column;
+                margin-right: 0;
+
+                label {
+                  font-size: 14px;
+                  color: var(--gray-color);
+                  margin-bottom: 5px;
+                }
+
+                &.required {
+                  label::after {
+                    content: "*";
+                    color: #EA3829;
+                    margin-left: 5px;
+                  }
+                }
+
+                input,
+                select {
+                  width: auto;
+                  border-color: #CCD5E0;
+                  min-height: 20px;
+                  padding: 10px 12px;
+                  height: 100%;
+                  font-size: 14px;
+                  box-shadow: none;
+
+                  &:focus {
+                    box-shadow: none;
+                  }
+
+                  @media (max-width: 980px) {
+                    width: auto !important;
+                    height: auto;
+                  }
+                }
+
+                .error {
+                  width: 100%;
+                }
+              }
+
+              @media(max-width: 980px) {
+                grid-template-columns: 1fr;
+                grid-row-gap: 12px;
+              }
+            }
+
+            @media(max-width:980px) {
+              margin-bottom: 12px;
+            }
+          }
+        }
+
+        .vtex-omnishipping-1-x-deliveryGroup {
+          grid-row: 4;
+          width: calc(50% - 12px);
+          margin-top: 0;
+          margin-top: 8px;
+
+          .vtex-omnishipping-1-x-shippingSectionTitle { display: none; }
+
+          .vtex-omnishipping-1-x-leanShippingGroupList {
+            margin-bottom: 0;
+            border: none;
+
+            .vtex-omnishipping-1-x-leanShippingOption {
+              background: transparent;
+              box-shadow: none;
+              border: 1px solid #CCD5E0;
+              border-radius: 4px;
+
+              .vtex-omnishipping-1-x-leanShippingText {
+                border-color: #CCD5E0;
+
+                .vtex-omnishipping-1-x-leanShippingTextLabelSingle {
+                  font-size: 14px;
+                  color: var(--gray-color);
+                }
+  
+                .vtex-omnishipping-1-x-optionPrice {
+                  text-transform: uppercase;
+                  color: var(--gray-color);
+                }
+              }
+            }
+          }
+
+          @media (max-width: 980px) {
+            width: 100%;
+          }
+        }
+
+        .vtex-omnishipping-1-x-submitPaymentButton {
+          grid-row: 5;
+
+          .submit {
+            background: var(--principal-color);
+            border: none;
+            border-radius: 4px;
+            font-size: 0;
+            margin-top: -68px;
+            padding: 16px 20px 12px;
+            width: calc(50% - 12px);
+            line-height: normal;
+
+            &::after {
+              content: "Ir para el pago";
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 600;
+              text-shadow: none;
+            }
+
+            @media(max-width: 980px) {
+              width: 100%;
+              margin-top: 15px;
+            }
+          }
+        }
+
+        .shp-summary-group {
+          padding: 0;
+
+          .shp-summary-group-price { 
+            display: none;
+            
+            @media (max-width: 980px) {
+              display: block;
+              margin-top: auto;
+              margin-bottom: 23px;
+              font-size: 16px;
+              color: #676F79;
+            }
+          }
+
+          .shp-summary-group-info {
+            padding: 0;
+            border: none;
+
+            .address-summary {
+              font-size: 16px;
+              line-height: 24px;
+              color: var(--gray-color);
+            }
+
+            .shp-summary-package {
+              margin-top: 32px;
+              margin-bottom: 20px;
+
+              .shp-summary-package-time {
+                font-size: 14px;
+                color: #676F79;
+
+                @media (max-width: 980px) {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+
+        .link-change-shipping {
+          max-width: 275px;
+          background: #E9F1FB;
+          border: none;
+          padding: 12px;
+          color: var(--link-color);
+          font-size: 14px;
+          font-weight: 600;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        .ask-for-geolocation {
+
+          .ask-for-geolocation-title {
+            font-size: 0;
+
+            &::before {
+              content: "Ingrese su ubicación para seleccionar el punto de retiro más cercano";
+              font-size: 16px;
+            }
+          }
+          .btn-ask-for-geolocation-cta {
+            background: var(--principal-color);
+            border: none;
+            border-radius: 4px;
+            padding: 16px 20px 12px;
+            width: auto;
+            font-size: 16px;
+            font-weight: 600;
+            text-shadow: none;
+          }
+
+        }
+
+        .shp-alert {
+          margin-top: 24px;
+        }
+
+        .pickup-point {
+          width: 50%;
+
+          .pickup-point-info {
+            border: 1px solid #CCD5E0;
+
+            .pickup-point-name,
+            .address-summary {
+              color: #090A10;
+              font-family: var(--font-1);
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+            }
+
+            .button-details-pickup-point {
+              padding-top: 16px;
+              color: var(--link-color);
+              font-size: 16px;
+              font-weight: 600;
+            }
+          }
+
+          .button-change-pickup-point {
+            margin-top: 16px;
+            margin-bottom: 32px;
+            border: none;
+            background: #E9F1FB;
+            padding: 12px;
+            font-family: var(--font-1);
+            font-size: 0;
+            line-height: 15px;
+            color: var(--link-color);
+            font-weight: 600;
+            text-shadow: none;
+
+            &::before {
+              content: "Ver todos los puntos de retiro";
+              font-size: 14px;
+            }
+          }
+          
+          @media (max-width: 980px) {
+            width: 100%;
+          }
+        }
+
+        .pickup-packages {
+          margin-top: 0;
+
+          .vtex-omnishipping-1-x-shippingSectionTitle {
+            font-family: var(--font-1);
+            color: var(--black-color);
+            text-transform: uppercase;
+            font-size: 0;
+            font-weight: 400;
+            margin-bottom: 16px;
+
+            &::before {
+              content: "Opción de retiro";
+              font-size: 15px;
+            }
+          }
+
+          .vtex-omnishipping-1-x-leanShippingGroupList {
+            margin-bottom: 0;
+            border: none;
+            width: 50%;
+
+            .vtex-omnishipping-1-x-leanShippingOption {
+              background: transparent;
+              box-shadow: none;
+              border: 1px solid #CCD5E0;
+              border-radius: 4px;
+
+              .vtex-omnishipping-1-x-leanShippingText {
+                border-color: #CCD5E0;
+
+                .vtex-omnishipping-1-x-leanShippingTextLabelSingle {
+                  font-size: 14px;
+                  color: var(--gray-color);
+                }
+  
+                .vtex-omnishipping-1-x-optionPrice {
+                  text-transform: uppercase;
+                  color: var(--gray-color);
+                }
+              }
+            }
+
+            @media (max-width: 980px) {
+              width: 100%;
+            }
+          }
+        }
+
+        .shp-pickup-receiver + .vtex-omnishipping-1-x-submitPaymentButton {
+          text-align: initial;
+          display: flex;
+          margin-top: 32px;
+
+          .submit {
+            margin-top: 0;
+            margin-left: auto;
+          }
+        }
+
+        @import url('./_modal-pickup.less');
+      }
+    }
+  }
+
+}

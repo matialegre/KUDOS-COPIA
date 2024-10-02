@@ -1,0 +1,153 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{_accountInfo.TradingName}}</title>
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+</head>
+<body>
+  <table cellspacing="0" cellpading="0" style="width: 100%; max-width: 600px; margin: 0 auto; font-family: 'Helvetica', Montserrat, Arial, sans-serif; border: 1px solid #E4E4E4;">
+    <thead>
+        <tr style:"width: 300px; height: 40px;">
+            <td style=" background: #FFFFFF; padding: 26px; text-align: center;  width: 300px; height: 40px;">
+    
+              <a href="https://www.onena.mx/" target="_blank">
+                <img src="https://onenamx.myvtex.com/arquivos/logo-onena.png" alt="Onena"
+                  style=" width: 142px; height: 35px;">
+              </a>
+            </td>
+          </tr>
+      <tr>
+        <td style="text-align: center; background: #F1F2F5; padding: 40px 20px;">
+          <h3 style="color: #1D1D1D; margin: 10px 0; text-transform: uppercase; font-weight: 700; font-size: 22px; line-height: normal; ">
+            ¡No dejes pasar esta oportunidad!
+          </h3>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center;">
+          <p style="font-size: 21px; color: #1D1D1D; margin-top: 35px; margin-bottom: 30px;">Hacé click y completá tu compra</p>
+          <button style="background-color: #00A650; margin: 10px 0 40px; padding: 17px 36px; border: none; border-radius: 4px;">
+            <a href="http://www.onena.mx/checkout/cart/{{addToCartURL}}" target="_blank" style="color: #fff; text-decoration: none; font-weight: 700; font-size: 17px; letter-spacing: 0.1px; line-height: 16px; text-transform: uppercase;">
+              Finalizar compra
+            </a>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 30px 43px 45px;">
+          <h4 style="color: #000; text-transform: uppercase; font-size: 17px; line-height: 33px; font-weight: 600; letter-spacing: .85px; margin-bottom: 16px;">
+            Tu pedido
+          </h4>
+          <table style="border-top: 1px solid #E0E0E0; width: 100%;" cellpadding="0" cellspacing="0">
+              <tbody>
+                  {{#each items}}
+                  <tr style="display: block !important; border-bottom: 1px solid #E0E0E0; border-width: 1px 0; color: #444548; padding: 20px 0;">
+                    <td style="border: 1px solid #E2E3E4;">
+                        <img src="{{image}}" alt="" height="auto" width="86">
+                    </td>
+                    <td style="padding-left: 20px; width: 100%;">
+                      <div style="font-size: 17px; color: #1D1D1D; line-height: 24px; font-weight: 400; min-height: 38px">{{productName}}</div>
+                      <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                        <tbody>
+                          <tr>
+                            <td style="vertical-align: bottom; font-size: 14px; line-height: 20px; color: #4E4E4E;">
+                                <p style="margin: 8px 0 0;">Cod: {{id}}</p>
+                                <p style="margin: 8px 0 0;">Cantidad: {{quantity}}</p>
+                            </td>
+                            <td style="text-align: right; vertical-align: bottom;">
+                              {{#if price}}
+                                  {{#compare price '!=' sellingPrice}}
+                                    <h3 style="font-size: 14px; font-weight: 400; color: #707070; margin: 0; text-decoration: line-through;">$ {{price}}</h3>
+                                  {{/compare}}
+                              {{/if}}
+                              <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1D; margin: 0;">$ {{sellingPrice}}</h3>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  {{/each}}
+              </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">
+          <button style="background-color: #2680EB; margin: 10px 0 40px; padding: 17px 36px; border: none; border-radius: 4px;">
+            <a href="http://www.onena.mx/checkout/cart/{{addToCartURL}}" target="_blank" style="color: #fff; text-decoration: none; font-weight: 700; font-size: 17px; letter-spacing: 0.1px; line-height: 16px; text-transform: uppercase;">
+                Comprar ahora
+            </a>
+        </button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+          <td style="background: #FFFFFF; text-align: center; padding: 1px; border-top: 1px solid #E9EAED;">
+            <table cellpadding="0" cellspacing="10" align="center" style="color: #fff;">
+              <tr>
+                <td>
+  
+                  <a href="https://www.facebook.com/CalzadoOnena/" target="_blank"
+                    style="display: inline-block; padding-right: 10px">
+  
+                    <img src="https://onenamx.myvtex.com/arquivos/facebook-icon.png" alt="facebook">
+                  </a>
+                </td>
+                <td>
+                  <a href="https://www.instagram.com/calzado_onena/" target="_blank"
+                    style="display: inline-block; padding-right: 10px">
+                    <img src="https://onenamx.myvtex.com/arquivos/instagram-icon.png" alt="instagram">
+                  </a>
+                </td>
+                <td>
+                  <a href="https://api.whatsapp.com/send/?phone=527224927150&text&type=phone_number&app_absent=0" target="_blank">
+                    <img src="https://onenamx.myvtex.com/arquivos/whtasaap.png" alt="whatsapp">
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td
+            style="text-align: center; background: #E9EAED; padding: 2px; font-size: 12px; line-height: 28px; letter-spacing: 0.12px;font-weight: 500; color: #090A10;">
+            Onena © 2024 - Todos los derechos reservados
+          </td>
+        </tr>
+        <table cellpadding="0" cellspacing="10" align="center" style="color: #fff;">
+          <tr>
+            <td>
+              <a href="https://www.kudoscommerce.com/" target="_blank" style="display: inline-block; padding-right: 10px">
+  
+                <img src="https://onenamx.myvtex.com/arquivos/kudos-logo.png" alt="kudos" style="width: 62.155px;
+  height: 18.64px;">
+              </a>
+            </td>
+            <td>
+              <a href="https://vtex.com/es-ar/" target="_blank" style="display: inline-block; padding-right: 10px;">
+                <img src="https://onenamx.myvtex.com/arquivos/vtex-logo.png" alt="vtex"
+                  style="width: 44.821px; height: 16.074px;">
+              </a>
+            </td>
+          </tr>
+        </table>
+  
+      </tfoot>
+  </table>
+</body>

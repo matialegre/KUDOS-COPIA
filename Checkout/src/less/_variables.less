@@ -1,0 +1,37 @@
+:root {
+
+  --principal-color: #00A650;
+  --gray-color: #3D3F43;
+  --black-color: #090A10;
+  --link-color: #2680EB;
+
+  --font-1: "Plus Jakarta Sans", sans-serif;
+
+}
+
+// General
+* {
+  font-family: var(--font-1);
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: #E9EAED;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  width: 100%!important;
+  max-width: 69.875rem!important;
+
+  @media screen and (max-content: 1024px) {
+    width: auto!important;
+  }
+}

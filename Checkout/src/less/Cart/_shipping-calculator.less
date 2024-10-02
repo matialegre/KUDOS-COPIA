@@ -1,0 +1,184 @@
+#shipping-preview-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  max-width: none;
+  width: calc(100% - 385px);
+
+  .srp-content {
+    width: 100%;
+    margin-right: 30px;
+    padding: 24px 25px;
+    background: #fff;
+    border-radius: 4px;
+
+    .srp-main-title {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--gray-color);
+    }
+
+    .srp-description {
+      max-width: none;
+      font-size: 14px;
+      color: var(--gray-color);
+
+      @media (max-width:768px) {
+        max-width: none;
+        margin: 5px 0 10px;
+      }
+    }
+
+    #shipping-calculate-link {
+      background: #ffffff;
+      border: 1px solid var(--principal-color);
+      font-size: 16px;
+      text-transform: none;
+      color: var(--gray-color);
+      padding: 16px 12px;
+      min-width: 136px;
+
+      @media(max-width:768px) {
+        padding: 10px;
+        width: 100%;
+      }
+    }
+
+    .srp-toggle {
+      display: none;
+    }
+
+    .srp-data {
+      margin: 0;
+
+      .ship-postalCode {
+        width: auto;
+
+        label {
+          font-size: 14px;
+          line-height: 24px;
+
+          @media (max-width: 768px) {
+            text-align: left;
+            margin-bottom: 5px;
+          }
+        }
+
+        input.input-small {
+          padding: 10px 12px;
+          height: auto;
+          width: 188px;
+          border: 1px solid #CCD5E0;
+
+          @media (max-width:768px) {
+            grid-column: 1;
+            grid-row: 2;
+            width: auto;
+            position: initial;
+          }
+        }
+
+        small {
+          display: block;
+          
+          a {
+            color: var(--link-color);
+
+            @media (max-width: 768px) {
+              font-size: 13px;
+              margin-left: 10px;
+            }
+          }
+
+          @media (max-width: 768px) {
+            grid-row: 2;
+            grid-column: 2;
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .error {
+          @media (max-width: 768px) {
+            position: absolute;
+            left: 0;
+            bottom: -20px;
+          }
+        }
+
+        @media (max-width:768px) {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 45% 55%;
+          margin-bottom: 32px;
+          position: relative;
+        }
+      }
+
+      .srp-postal-code {
+        
+        button {
+          padding: 12px 16px;
+          height: auto;
+          margin-left: 10px;
+          color: var(--gray-color);
+          border-color: var(--principal-color);
+          font-size: 16px;
+          font-weight: 600;
+
+          @media (max-width:768px) {
+            margin: 0;
+            width: 100%;
+            text-transform: uppercase;
+            font-size: 14px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          
+          .srp-postal-code__form {
+            width: 100%;
+
+            .vtex-shipping-preview-0-x-postalCodeForgotten {
+              flex-flow: column;           
+            }
+          }
+
+        }
+      }
+
+      .srp-result {
+
+        .srp-items strong {
+          font-weight: 400;
+        }
+        .srp-address-title {
+          color: #EB0055;
+        }
+
+        .srp-shipping-current-single {
+          border: 1px solid #CCD5E0;
+
+          .gray {
+            color: var(--gray-color);
+          }
+        }
+
+      }
+    }
+
+    @media (max-width:768px) {
+      margin: 0 15px;
+      border-radius: 0 0 4px 4px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+
+  @media(max-width: 768px) {
+    position: relative;
+    width: 100%;
+  }
+}

@@ -1,0 +1,25 @@
+#cart-title {
+  display: none!important;
+}
+.cart-template {
+  display: grid !important;
+  grid-template-columns: auto 385px;
+  margin-top: 60px;
+
+  @media (max-width:768px) {
+    grid-template-columns: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 979px) {
+  body.body-cart {
+    padding-bottom: 0;
+  }
+}
+
+@import './_empty.less';
+@import './_product-box.less';
+@import './_summary.less';
+@import './_cart-buttons.less';
+@import './_shipping-calculator.less';

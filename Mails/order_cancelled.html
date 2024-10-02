@@ -1,0 +1,189 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{_accountInfo.TradingName}}</title>
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+</head>
+<body>
+  <table cellspacing="0" cellpading="0" style="width: 100%; max-width: 600px; margin: 0 auto; font-family: 'Helvetica', Montserrat, Arial, sans-serif; border: 1px solid #E4E4E4;">
+    <thead>
+      <tr style:"width: 300px; height: 40px;">
+        <td style=" background: #FFFFFF; padding: 26px; text-align: center;  width: 300px; height: 40px;">
+
+          <a href="https://www.onena.mx/" target="_blank">
+            <img src="https://onenamx.myvtex.com/arquivos/logo-onena.png" alt="Onena"
+              style=" width: 142px; height: 35px;">
+          </a>
+        </td>
+      </tr>
+        <td style="text-align: center; background: #F1F2F5; padding: 25px 20px;">
+          <p style="color: #090A10; margin: 0; font-size: 16px; line-height: 33px; font-weight: 400;">Hola
+            {{clientProfileData.firstName}},</p>
+          <h3
+            style="color: #090A10; margin: 10px 0; text-transform: uppercase; font-weight: 600; font-size: 22px; line-height: 33px; letter-spacing: 0.36px;">
+
+            TU PEDIDO FUE CANCELADO
+
+          </h3>
+          <p style="color: #090A10; margin: 0; font-size: 16px; line-height: 33px; font-weight: 400;">Pedido N°:
+            {{orderId}}</p>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 0 43px;">
+          <h4 style="font-size: 17px; line-height: 33px; font-weight: 600;letter-spacing: 0.36px; margin: 56px 0 17px; color: #090A10; text-transform: uppercase;">
+            Total productos
+          </h4>
+          <table cellpadding="0" cellspacing="0" style="width: 100%;">
+            {{#each totals}}
+              {{#eq id "Items"}}
+                <tr style="font-size: 18px; line-height: 22px; letter-spacing: .18px; color: #1D1D1D;">
+                  <td style="padding-bottom: 17px;">
+                    Subtotal
+                  </td>
+                  <td style="text-align: right !important; padding-bottom: 17px;" align="right">
+                    ${{formatCurrency value}}
+                  </td>
+                </tr>
+                {{/eq}}
+                {{#eq id "Shipping"}}
+                  {{#compare value '!=' 0}}
+                    <tr style="font-size: 18px; line-height: 22px; letter-spacing: .18px; color: #1D1D1D;">
+                      <td style="padding-bottom: 17px;">
+                        Envío
+                      </td>
+                      <td style="text-align: right !important; padding-bottom: 17px;" align="right">
+                        ${{formatCurrency value}}
+                      </td>
+                    </tr>
+                  {{/compare}}
+                {{/eq}}
+                {{#eq id "Discounts"}}
+                <tr style="font-size: 18px; line-height: 22px; letter-spacing: .18px; color: #1D1D1D;">
+                  <td style="padding-bottom: 17px;">
+                    Descuento
+                  </td>
+                  <td style="text-align: right !important; padding-bottom: 17px;" align="right">
+                    ${{formatCurrency value}}
+                  </td>
+                </tr>
+              {{/eq}}
+            {{/each}}
+            <tr style="font-weight: 700; font-size: 18px; line-height: 20px; letter-spacing: .28px;">
+              <td>
+                Total
+              </td>
+              <td style="text-align: right !important;" align="right">
+                ${{formatCurrency value}}
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 70px 43px 124px;">
+          <h4 style="color: #090A10; text-transform: uppercase; font-size: 17px; line-height: 33px; font-weight: 600; letter-spacing: .85px; margin-bottom: 16px;">
+            Tu pedido
+          </h4>
+          <table style="border-top: 1px solid #E0E0E0; width: 100%;" cellpadding="0" cellspacing="0">
+              <tbody>
+                  {{#each items}}
+                  <tr style="display: block !important; border-bottom: 1px solid #E0E0E0; border-width: 1px 0; color: #090A10; padding: 20px 0;">
+                    <td style="border: 1px solid #E2E3E4;">
+                        <img src="{{imageUrl}}" alt="" height="auto" width="86">
+                    </td>
+                    <td style="padding-left: 20px; width: 100%;">
+                      <div style="font-size: 17px; color: #1D1D1D; line-height: 24px; font-weight: 400; min-height: 38px">{{name}}</div>
+                      <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                        <tbody>
+                          <tr>
+                            <td style="vertical-align: bottom; font-size: 14px; line-height: 20px; color: #090A10;">
+                                <p style="margin: 8px 0 0;">Cod: {{productRefId}}</p>
+                                <p style="margin: 8px 0 0;">Cantidad: {{quantity}}</p>
+                            </td>
+                            <td style="text-align: right; vertical-align: bottom;">
+                              {{#compare price '!=' sellingPrice}}
+                                <h3 style="font-size: 14px; font-weight: 400; color: #090A10; margin: 0; text-decoration: line-through;">${{formatCurrency price}}</h3>
+                              {{/compare}}
+                              <h3 style="font-size: 18px; font-weight: 600; color: #090A10; margin: 0;">${{formatCurrency sellingPrice}}</h3>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  {{/each}}
+              </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td style="background: #FFFFFF; text-align: center; padding: 1px; border-top: 1px solid #E9EAED;">
+          <table cellpadding="0" cellspacing="10" align="center" style="color: #fff;">
+            <tr>
+              <td>
+
+                <a href="https://www.facebook.com/CalzadoOnena/" target="_blank"
+                  style="display: inline-block; padding-right: 10px">
+
+                  <img src="https://onenamx.myvtex.com/arquivos/facebook-icon.png" alt="facebook">
+                </a>
+              </td>
+              <td>
+                <a href="https://www.instagram.com/calzado_onena/" target="_blank"
+                  style="display: inline-block; padding-right: 10px">
+                  <img src="https://onenamx.myvtex.com/arquivos/instagram-icon.png" alt="instagram">
+                </a>
+              </td>
+              <td>
+                <a href="https://api.whatsapp.com/send/?phone=527224927150&text&type=phone_number&app_absent=0" target="_blank">
+                  <img src="https://onenamx.myvtex.com/arquivos/whtasaap.png" alt="whatsapp">
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td
+          style="text-align: center; background: #E9EAED; padding: 2px; font-size: 12px; line-height: 28px; letter-spacing: 0.12px;font-weight: 500; color: #090A10;">
+          Onena © 2024 - Todos los derechos reservados
+        </td>
+      </tr>
+      <table cellpadding="0" cellspacing="10" align="center" style="color: #fff;">
+        <tr>
+          <td>
+            <a href="https://www.kudoscommerce.com/" target="_blank" style="display: inline-block; padding-right: 10px">
+
+              <img src="https://onenamx.myvtex.com/arquivos/kudos-logo.png" alt="kudos" style="width: 62.155px;
+height: 18.64px;">
+            </a>
+          </td>
+          <td>
+            <a href="https://vtex.com/es-ar/" target="_blank" style="display: inline-block; padding-right: 10px;">
+              <img src="https://onenamx.myvtex.com/arquivos/vtex-logo.png" alt="vtex"
+                style="width: 44.821px; height: 16.074px;">
+            </a>
+          </td>
+        </tr>
+      </table>
+
+    </tfoot>
+  </table>
+</body>
