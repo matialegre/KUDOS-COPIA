@@ -18,7 +18,7 @@
 .flexColChild--container-col-header-mobile :global(.vtex-rich-text-0-x-container--post-header){
     justify-content: center;
     align-items: center;
-    height: 31px;
+    height: 35px;
     background: var(--post-header-color);
 }
 
