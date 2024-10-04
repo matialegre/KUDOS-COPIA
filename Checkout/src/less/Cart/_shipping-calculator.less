@@ -1,44 +1,30 @@
 #shipping-preview-container {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: flex;
   max-width: none;
-  width: calc(100% - 385px);
 
   .srp-content {
-    width: 100%;
-    margin-right: 30px;
-    padding: 24px 25px;
     background: #fff;
-    border-radius: 4px;
+    margin-right: 30px;
+    padding: 12px 25px 0;
+    width: calc(100% - 50px);
 
-    .srp-main-title {
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: var(--gray-color);
-    }
-
+    .srp-main-title,
     .srp-description {
-      max-width: none;
-      font-size: 14px;
-      color: var(--gray-color);
-
-      @media (max-width:768px) {
-        max-width: none;
-        margin: 5px 0 10px;
-      }
+      display: none;
     }
 
     #shipping-calculate-link {
       background: #ffffff;
       border: 1px solid var(--principal-color);
-      font-size: 16px;
+      font-size: 0;
       text-transform: none;
       color: var(--gray-color);
       padding: 16px 12px;
-      min-width: 136px;
+      width: 100%;
+
+      &::before {
+        content: "Calcular envío";
+        font-size: 16px;
+      }
 
       @media(max-width:768px) {
         padding: 10px;

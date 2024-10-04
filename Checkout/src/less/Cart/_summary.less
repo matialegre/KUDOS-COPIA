@@ -2,9 +2,14 @@
   display: flex;
   align-items: flex-end;
 
+  .summary {
+    display: grid!important;
+  }
+
   .cart-more-options {
-    height: 0;
-    min-height: 0;
+    width: auto!important;
+    margin: 0;
+    grid-row: 3;
 
     .cart-select-gift-placeholder {
       display: none;
@@ -24,9 +29,8 @@
 
     &::before {
       content: "Resumen de compra";
-      padding: 14px 24px;
+      padding: 16px 24px;
       display: flex;
-      justify-content: center;
       font-size: 1rem;
       font-weight: 500;
       color: var(--black-color);
@@ -76,11 +80,18 @@
           }
 
           button {
-            background: #ffffff;
-            border: 1px solid var(--principal-color);
-            font-size: 14px;
+            background: var(--principal-color);
+            border: none;
+            font-size: 0;
             font-weight: 600;
-            color: var(--principal-color);
+            color: #fff;
+            padding-top: 8px;
+            text-shadow: none;
+
+            &::before {
+              content: "Sumar";
+              font-size: 14px;
+            }
           }
         }
 
@@ -121,6 +132,7 @@
       }
 
       tfoot {
+        border-top: 1px solid #E9EAED;
 
         .info {
           width: 50%;
@@ -128,6 +140,7 @@
           font-size: 16px;
           font-weight: 500;
           line-height: 24px;
+          padding-top: 16px;
         }
         .monetary {
           width: 50%;
@@ -135,6 +148,7 @@
           font-size: 16px;
           font-weight: 500;
           line-height: 24px;
+          padding-top: 16px;
         }
 
       }
