@@ -14,7 +14,7 @@
 
     #shipping-calculate-link {
       background: #ffffff;
-      border: 1px solid var(--principal-color);
+      border: 1px solid #CCD5E0;
       font-size: 0;
       text-transform: none;
       color: var(--gray-color);
@@ -153,13 +153,22 @@
         }
 
       }
+
+      .srp-delivery-info {
+        margin-bottom: 0;
+      }
+
+      @media (max-width:768px) {
+        padding: 10px 20px 30px;
+      }
     }
 
     @media (max-width:768px) {
-      margin: 0 15px;
       border-radius: 0 0 4px 4px;
-      margin-bottom: 40px;
+      margin: 0 10px 40px;
       text-align: center;
+      padding: 0;
+      width: calc(100% - 20px);
     }
   }
 
