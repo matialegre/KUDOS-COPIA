@@ -55,8 +55,8 @@
         },
 
         "children": [
-            // "menu-kudos-control",
-            "rich-text#menu",
+            "menu-kudos",
+            // "rich-text#menu",
             "logo",
             "login"
         ]

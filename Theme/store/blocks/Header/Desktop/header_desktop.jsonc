@@ -67,9 +67,9 @@
 
         "children": [
             "logo",
-            // "menu-kudos-control",
+            "menu-kudos",
             // "search-bar",
-            "rich-text#menu",
+            // "rich-text#menu",
             "search-bar-custom",
             "login",
             "minicart.v2"
