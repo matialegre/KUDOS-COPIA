@@ -1,0 +1,66 @@
+{
+
+    "flex-layout.row#bannerColeccion2": {
+
+        "props": {
+            "blockClass": "banner-colecccion",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "image#bannerColeccion2",
+            "flex-layout.col#bannerColeccionTextContainer2"        
+        ]
+    
+    },
+
+    "image#bannerColeccion2":{
+
+        "props": {
+            "blockClass": "image-banner-coleccion",
+            "src": "/arquivos/banner-coleccion-2.png",
+            "link":{
+                "url": "/hombre",
+                "newTab": false
+            }
+        }
+
+    },
+
+    "flex-layout.col#bannerColeccionTextContainer2": {
+
+        "props": {
+            "blockClass": "banner-coleccion-text-container",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#bannerColeccionTitle2",
+            "rich-text#bannerColeccionLink2"   
+        ]
+    
+    },
+
+    "rich-text#bannerColeccionTitle2": {
+
+        "props": {
+            "blockClass": "banner-coleccion-title",
+            "text": "Hombre"
+        }
+
+    },
+
+    "rich-text#bannerColeccionLink2": {
+
+        "props": {
+            "blockClass": "banner-coleccion-link",
+            "text": "ver colección"
+        }
+
+    }
+
+}

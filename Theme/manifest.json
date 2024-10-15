@@ -49,7 +49,12 @@
     "vtex.add-to-cart-button": "0.x",
     "kudosio.menu": "0.x",
     "vtex.store-link": "0.x",
-    "vtex.disclosure-layout": "1.x"
+    "vtex.disclosure-layout": "1.x",
+    "vtex.store-image": "0.x",
+    "vtex.product-context": "0.x",
+    "vtex.product-highlights": "2.x",
+    "vtex.product-price": "1.x",
+    "vtex.store-form": "0.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

@@ -1,0 +1,62 @@
+.paragraph--other-banner-title{
+    font-family: "Uni sans";
+    font-size: 30px;
+    line-height: 31.8px;
+    letter-spacing: 2px;
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+
+    .paragraph--other-banner-title{
+        font-size: 17px;
+        line-height: 18.02px;
+    }
+
+}
+
+.wrapper--other-banner-link{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.paragraph--other-banner-link{
+    font-family: 'GothamBook';
+    font-size: 14.5px;
+    line-height: 21.75px;
+    letter-spacing: 0.1px;
+    color: var(--color-white);
+}
+
+@media (max-width: 640px) {
+
+    .paragraph--other-banner-link{
+        font-family: 'Gotham';
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+    }
+
+}
+
+.wrapper--other-banner-link::after{
+    content: "";
+    display: flex;
+    width: 9px;
+    height: 16px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='15' viewBox='0 0 10 15' fill='none'%3E%3Cpath d='M7.10203 7.06305L2.82628 3.51238C2.52403 3.26171 2.04853 3.27504 1.76653 3.54438C1.48378 3.81371 1.49953 4.23571 1.80178 4.48704L6.03253 7.99971L1.80178 11.5124C1.49953 11.7637 1.48303 12.1857 1.76578 12.455C1.91353 12.5957 2.11303 12.6664 2.31403 12.6664C2.49778 12.6664 2.68153 12.607 2.82628 12.487L7.10203 8.93638C7.39978 8.68838 7.56403 8.35638 7.56403 7.99971C7.56403 7.64305 7.39978 7.31105 7.10203 7.06305Z' fill='white'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 640px) {
+
+    .wrapper--other-banner-link::after{
+        width: 6px;
+        height: 9px;
+    }
+
+}

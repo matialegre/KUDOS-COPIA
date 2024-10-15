@@ -1,0 +1,20 @@
+{
+
+    "flex-layout.row#bannersColecciones": {
+
+        "props": {
+            "blockClass": "banners-coleccciones",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "flex-layout.row#bannerColeccion1",
+            "flex-layout.row#bannerColeccion2",
+            "flex-layout.row#bannerColeccion3"
+        ]
+    
+    }
+
+}

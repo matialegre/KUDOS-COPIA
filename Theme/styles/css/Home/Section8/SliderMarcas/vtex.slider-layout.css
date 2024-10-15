@@ -1,0 +1,45 @@
+.sliderLayoutContainer--slider-marcas-solo-imagenes{
+    overflow: hidden;
+    margin: auto;
+    margin-top: 57px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: var(--max-width-content-desktop);
+    width: var(--max-width-content-desktop);
+    height: 109px;
+}
+
+.sliderTrackContainer--slider-marcas-solo-imagenes{
+    min-width: calc( var(--max-width-content-desktop) + 83.3333px );
+    width: calc( var(--max-width-content-desktop) + 83.3333px );
+}
+
+@media (max-width: 640px) {
+
+    .sliderLayoutContainer--slider-marcas-solo-imagenes{
+        margin-top: 32px;
+        max-width: var(--max-width-content-mobile);
+        width: var(--max-width-content-mobile);
+        height: 89px;
+    }
+
+    .sliderTrackContainer--slider-marcas-solo-imagenes{
+        min-width: calc( var(--max-width-content-mobile) + 25px );
+        width: calc( var(--max-width-content-mobile) + 25px );
+    }
+
+}
+
+.slide--slider-marcas-solo-imagenes{
+    justify-content: center;
+}
+
+.slideChildrenContainer--slider-marcas-solo-imagenes{
+    max-width: fit-content;
+}
+
+
+.imageElement--slider-marcas-solo-imagenes{
+    max-width: 100px;
+    height: 50px;
+}

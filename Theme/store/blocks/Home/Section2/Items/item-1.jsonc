@@ -1,0 +1,62 @@
+{
+
+    "flex-layout.row#itemSquare1": {
+
+        "props": {
+            "blockClass": "item-square",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "image#imageItemSquare1",
+            "flex-layout.col#itemSquareContainerCol1"
+        ]
+    
+    },
+
+    "image#imageItemSquare1":{
+
+        "props": {
+            "blockClass": "image-item-square",
+            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M6.06396 17H5.06396C3.9594 17 3.06396 16.1046 3.06396 15V8C3.06396 6.34315 4.40711 5 6.06396 5H13.064C14.7208 5 16.064 6.34315 16.064 8V9M6.06396 17C6.06396 16.1716 6.73554 15.5 7.56396 15.5C8.39239 15.5 9.06396 16.1716 9.06396 17M6.06396 17V17.5C6.06396 18.3284 6.73554 19 7.56396 19C8.39239 19 9.06396 18.3284 9.06396 17.5V17M14.564 17H9.06396M16.064 9H17.6574C19.0635 9 20.281 9.9766 20.586 11.3492L20.9925 13.1785C21.04 13.3922 21.064 13.6104 21.064 13.8293V15C21.064 16.1046 20.1685 17 19.064 17H18.064M16.064 9V15M18.064 17C18.064 16.1716 17.3924 15.5 16.564 15.5C15.7355 15.5 15.064 16.1716 15.064 17V17.5C15.064 18.3284 15.7355 19 16.564 19C17.3924 19 18.064 18.3284 18.064 17.5V17Z' stroke='%232D5566' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+        }
+
+    },
+
+    "flex-layout.col#itemSquareContainerCol1": {
+
+        "props": {
+            "blockClass": "item-square-container-col",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#item-title-1",
+            "rich-text#item-text-1"
+        ]
+    
+    },
+
+    "rich-text#item-title-1":{
+
+        "props": {
+            "blockClass": "item-title",
+            "text": "ENVIAMOS TU COMPRA"
+        }
+
+    },
+
+    "rich-text#item-text-1":{
+
+        "props": {
+            "blockClass": "item-text",
+            "text": "Entregas a todo el país"
+        }
+
+    }
+
+}

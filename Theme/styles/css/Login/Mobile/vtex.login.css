@@ -1,0 +1,274 @@
+@media (max-width: 640px) {
+
+    /* MODAL SELECCIONAR TIPO DE LOGUEO  */
+
+    .emailAndPasswordForm {
+        background: transparent;
+    }
+
+    .content--emailAndPassword{
+        padding: 0;
+        margin: 0;
+    }
+
+    .emailAndPasswordForm .formTitle{
+        margin-top: 5px;
+        font-size: 0 !important;
+    }
+
+    .content--emailAndPassword .formTitle{
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+    }
+
+    .content--emailAndPassword .formTitle::after{
+        margin: 0;
+        padding: 0;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21.28px;
+    }
+
+    .content--emailAndPassword .contentForm{
+        margin: 0;
+        padding: 0;
+        min-width: auto;
+        width: 264px;
+    }
+
+    .content--emailAndPassword form .inputContainerEmail{  
+        margin-top: 24px;
+    }
+
+    .content--emailAndPassword form .inputContainerPassword{
+        padding: 0;
+        margin-top: 12px;
+    }
+
+    .content--emailAndPassword form :global(.vtex-input-prefix__group){  
+        border: 1px solid #CCD5E0;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #090A10;
+    }
+    
+    .content--emailAndPassword form :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input){  
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #090A10;
+    }
+    
+    .content--emailAndPassword form :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input)::placeholder{  
+        color: #676F79;
+    }
+
+    .content--emailAndPassword form .formLinkContainer{  
+        margin: 0;
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    .content--emailAndPassword form .forgotPasswordLink{  
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 16px;
+        color: #2680EB;
+    }
+
+    .content--emailAndPassword form .formFooter{  
+        margin: 0;
+        padding: 0;
+        margin-top: 35px;
+    }
+
+    .content--emailAndPassword form .sendButton{  
+        height: 40px;
+    }
+
+    .content--emailAndPassword form .sendButton :global(.vtex-button){  
+        margin: 0;
+        padding: 0;
+        height: 40px;
+        border-radius: 4px;
+        background: #2680EB;
+    }
+    
+    .content--emailAndPassword form .sendButton :global(.vtex-button) :global(.vtex-button__label) span{  
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0.2px;
+        color: #FFFFFF;
+    }
+
+    .loginOptionsContainer{
+        margin-top: 53px;
+        margin-bottom: 80px;
+    }
+
+    .loginOptionsContainer .formTitle{
+        font-size: 0px;
+    }
+
+    .loginOptionsContainer .formTitle::before{
+        content: "Elegir una opción de ingreso";
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21.28px;
+    }
+
+    .loginOptionsContainer .optionsList{
+        margin-top: 20px;
+    }
+
+    .loginOptionsContainer .optionsList .optionsListItem{
+        margin: 0;
+        padding: 0;
+    }
+
+    .loginOptionsContainer .optionsList .optionsListItem button{
+        width: 100%;
+    }
+
+    .loginOptionsContainer .optionsList .optionsListItem button :global(.vtex-button__label){
+        text-transform: none;
+    }
+
+    .loginOptionsContainer .optionsList .buttonSocial{
+        margin-top: 12px;
+    }
+
+    /* ESCRIBIR EMAIL PARA RECIBIR CODIGO DE ACCESO  */
+
+    .content--emailVerification{
+        margin: 0;
+        padding: 0;
+        margin: auto;
+        margin-top: 37px;
+        width: 320px;
+    }
+
+    .content--emailVerification form .sendButton :global(.vtex-button){
+        background: #2680EB;
+    }
+
+    .content--emailVerification .contentFormVisible{
+        min-width: auto;
+        width: 100%;
+    }
+
+    .emailPasswordOptionBtn{
+        margin-top: 12px;
+    }
+    
+    .content--emailVerification  .contentFormVisible .formTitle{
+        margin: 0 !important;
+        padding: 0;
+    }
+
+    .content--emailVerification  .contentFormVisible form{
+        height: auto;
+    }
+
+    .content--codeConfirmation{
+        margin: 0;
+        padding: 0;
+        margin: auto;
+        margin-top: 37px;
+        width: 320px;
+    }
+
+    .content--codeConfirmation .contentFormVisible{
+        /* position: absolute; */
+        margin: 0;
+        padding: 0;
+        margin: auto;
+        max-width: 320px !important;
+        width: 320px;
+        background: #FFFFFF;
+    }
+
+    /* FIN ESCRIBIR EMAIL PARA RECIBIR CODIGO DE ACCESO  */
+
+    /* FIN MODAL SELECCIONAR TIPO DE LOGUEO  */
+
+    /* RECUPERAR CONTRASEÑA */
+
+    .content--recoveryPassword{
+        margin: 0;
+        padding: 0;
+        margin: auto;
+        margin-top: 37px;
+        width: 320px;
+    }
+
+    .content--recoveryPassword .contentFormVisible{
+        margin: 0;
+        padding: 0;
+    }
+
+    .content--recoveryPassword .formTitle{
+        margin: 0;
+        padding: 0;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21.28px;
+        color: #090A10;
+    }
+
+    .content--recoveryPassword .formTitle .formSubtitle{
+        margin: 0;
+        padding: 0;
+        margin-top: 12px;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.56px;
+        color: #96A3B6;
+    }
+
+    .content--recoveryPassword .inputContainer{
+        margin: 0;
+        padding: 0;
+        margin-top: 12px;
+    }
+
+    .content--recoveryPassword .inputContainer :global(.vtex-input-prefix__group){
+        border: 1px solid #CCD5E0;
+    }
+
+    .content--recoveryPassword .inputContainer :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input)::placeholder{
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 19px;
+        color: #96A3B6;
+    }
+
+    .content--recoveryPassword .formFooter .sendButton :global(.vtex-button){
+        color: #FFFFFF;
+        border-radius: 4px;
+        background: #2680EB;
+    }
+
+    .content--recoveryPassword .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label){
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16px;
+        color: #FFFFFF;
+    }
+
+    /* FIN RECUPERAR CONTRASEÑA */
+
+}

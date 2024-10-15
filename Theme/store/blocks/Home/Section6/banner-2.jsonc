@@ -1,0 +1,66 @@
+{
+
+    "flex-layout.row#otherBanner2": {
+
+        "props": {
+            "blockClass": "other-banner",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "image#otherBanner2",
+            "flex-layout.col#otherBannerTextContainer2"
+        ]
+    
+    },
+
+    "image#otherBanner2":{
+
+        "props": {
+            "blockClass": "image-other-banner",
+            "src": "/arquivos/other-banner-2.png",
+            "link":{
+                "url": "/promociones",
+                "newTab": false
+            }
+        }
+
+    },
+
+    "flex-layout.col#otherBannerTextContainer2": {
+
+        "props": {
+            "blockClass": "other-banner-text-container",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#otherBannerTitle2"
+            // "rich-text#otherBannerLink2"
+        ]
+    
+    },
+
+    "rich-text#otherBannerTitle2": {
+
+        "props": {
+            "blockClass": "other-banner-title",
+            "text": "PROMOCIONES"
+        }
+
+    },
+
+    "rich-text#otherBannerLink2": {
+
+        "props": {
+            "blockClass": "other-banner-link",
+            "text": "ver colección"
+        }
+
+    }
+
+}

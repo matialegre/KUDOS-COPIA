@@ -1,0 +1,66 @@
+{
+
+    "flex-layout.row#bannerColeccion1": {
+
+        "props": {
+            "blockClass": "banner-colecccion",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "image#bannerColeccion1",
+            "flex-layout.col#bannerColeccionTextContainer1"        
+        ]
+    
+    },
+
+    "image#bannerColeccion1":{
+
+        "props": {
+            "blockClass": "image-banner-coleccion",
+            "src": "/arquivos/banner-coleccion-1.png",
+            "link":{
+                "url": "/mujer",
+                "newTab": false
+            }
+        }
+
+    },
+
+    "flex-layout.col#bannerColeccionTextContainer1": {
+
+        "props": {
+            "blockClass": "banner-coleccion-text-container",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#bannerColeccionTitle1",
+            "rich-text#bannerColeccionLink1"   
+        ]
+    
+    },
+
+    "rich-text#bannerColeccionTitle1": {
+
+        "props": {
+            "blockClass": "banner-coleccion-title",
+            "text": "Mujer"
+        }
+
+    },
+
+    "rich-text#bannerColeccionLink1": {
+
+        "props": {
+            "blockClass": "banner-coleccion-link",
+            "text": "ver colección"
+        }
+
+    }
+
+}

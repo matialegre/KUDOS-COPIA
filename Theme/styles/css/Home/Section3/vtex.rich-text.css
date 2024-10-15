@@ -1,0 +1,23 @@
+/* TITLE SLIDER  */
+
+.paragraph--title-product-slider{
+    font-family: 'Uni sans';
+    font-size: 30px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--title-slider-product-boxs);
+}
+
+@media (max-width: 640px) {
+
+    .paragraph--title-product-slider{
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0.2px;
+        color: var(--title-slider-product-boxs);
+    }
+
+}
+
+/* FIN TITLE SLIDER  */

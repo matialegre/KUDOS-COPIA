@@ -1,0 +1,112 @@
+{
+
+  "product-summary.shelf#product-box": {
+
+      "props":{
+        "blockclass": "product-summary-container"
+      },
+  
+      "children": [
+          "flex-layout.row#cucardasContainer",
+          "flex-layout.row#customSkuSliderContainer",
+          "product-summary-image",
+          "product-summary-brand",
+          "product-summary-name",
+          "product-rating-inline",
+          "product-summary-price",
+          "rich-text#envio-gratis",
+          "product-summary-sku-selector#product-box-colors"
+      ]
+      
+  },
+
+  "flex-layout.row#cucardasContainer": {
+
+      "props": {
+          "blockClass": "cucardas-container",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+      },
+
+      "children": [
+          "product-price-savings"
+      ]
+  
+  },
+
+  "product-price-savings": {
+
+    "props": {
+      "percentageStyle": "compact",
+      "message": "{savingsPercentage}"
+    }
+        
+  },
+
+  "product-summary-image": {
+
+    "props": {
+      "showBadge": false
+      // "showCollections": true,
+      // "hoverImage":{
+      //   "criteria":"index",
+      //   "index": 1
+      // }
+    }
+
+  },
+
+  "rich-text#envio-gratis": {
+
+    "props": {
+      "blockClass": "envio-gratis-product-box",
+      "text": "Envío Gratis"
+    }
+
+  },
+
+  "flex-layout.row#customSkuSliderContainer": {
+
+    "props": {
+      "blockClass": "custom-sku-slider-container"
+    },
+
+    "children": [ 
+      "product-summary-sku-selector#product-box-for-custom",
+      "custom-sku-slider" 
+    ]
+
+  },
+
+  "product-summary-sku-selector#product-box-for-custom": {
+
+    "props": {
+      "blockClass": "skuSelector-product-box",
+      "disableUnavailableSelectOptions": true,
+      "hideImpossibleCombinations": true,
+      "sortVariationsByLabel": true,
+      "initialSelection": "empty",
+      "showVariationsLabels": "none",
+      "visibility": "always",
+      "visibleVariations": ["Talle"]
+    }
+
+  },
+
+  "product-summary-sku-selector#product-box-colors": {
+
+    "props": {
+      "blockClass": "skuSelector-product-box",
+      "disableUnavailableSelectOptions": true,
+      "hideImpossibleCombinations": true,
+      "sortVariationsByLabel": true,
+      "initialSelection": "empty",
+      "showVariationsLabels": "none",
+      "visibility": "always",
+      "visibleVariations": ["Color"]
+    }
+
+  }
+
+}

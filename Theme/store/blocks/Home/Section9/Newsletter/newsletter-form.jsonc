@@ -1,0 +1,79 @@
+// "vtex.store-form": "0.x" <- Dependencia necesaria
+{
+    /* ----- FORM NEWSLETTER ----- */
+     "form#newsletter": {
+       "props": {
+         "entity": "NS", //Data Entity > Acronym,
+         "schema": "Newsletter_Suscription" //Data Entity > Name
+       },
+       "children": [
+         "flex-layout.row#field-newsletter"
+       ],
+       "blocks": ["form-success#newsletter"]
+     },
+   
+     /*-*/
+     "flex-layout.row#field-newsletter": {
+       "props": {
+         "blockClass": "field-newsletter"
+       },
+       "children": [
+         "form-input.text#newsletter-email",
+         "form-submit#newsletter"
+       ]
+     },
+   
+     "form-input.text#newsletter-email": {
+       "props": {
+         "pointer": "#/properties/email",
+         "placeholder": "Ingresa tu e-mail"
+       }
+     },
+   
+     "form-submit#newsletter": {
+       "props": {
+         "label": "Suscribirme"
+       }
+     },
+   
+     /*-*/
+     "form-success#newsletter": {
+       "children": [
+         "rich-text#success-newsletter"
+       ]
+     },
+   
+     "rich-text#success-newsletter": {
+       "props": {
+         "text": "Gracias por suscribirte a nuestro newsletter!",
+         "blockClass": "form-success-ns"
+       }  
+     }
+   }
+   
+     /* ----- SCHEMA NEWSLETTER ----- */
+   
+   // {
+   //   "title": "Form_Newsletter",
+   //   "type": "object",
+   //   "properties": {
+   
+   //     "email": {
+   //       "type": "string",
+   //       "format": "email"
+   //     }
+       
+   //   },
+     
+   //   "required": [
+   //     "email"
+   //   ],
+   
+   //   "v-security": {
+   //     "publicWrite": [
+   //       "publicForWrite"
+   //     ],
+   //     "publicJsonSchema": true
+   //   }
+   // }
+   

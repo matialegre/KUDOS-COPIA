@@ -1,0 +1,19 @@
+{
+
+    "flex-layout.row#otherBanners": {
+
+        "props": {
+            "blockClass": "other-banners",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "flex-layout.row#otherBanner1",
+            "flex-layout.row#otherBanner2"
+        ]
+    
+    }
+
+}

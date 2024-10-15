@@ -1,0 +1,171 @@
+.flexRow--newsletter-container :global(.vtex-store-components-3-x-container){
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+.flexRowContent--newsletter-container{
+    margin: auto;
+    margin-top: 79px;
+    margin-bottom: 139px;
+    max-width: var(--max-width-content-desktop);
+    width: var(--max-width-content-desktop);
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--newsletter-container{
+        margin-top: 59px;
+        margin-bottom: 45px;
+        flex-direction: column;
+        max-width: var(--max-width-content-mobile);
+        width: var(--max-width-content-mobile);
+    }
+
+}
+
+/* COLUMN LEFT NEWSLETTER FORM  */
+
+.flexRowContent--newsletter-container .stretchChildrenWidth:nth-child(0n+1):not(.flexCol--newsletter-container-col .stretchChildrenWidth){
+    min-width: 342px;
+    max-width: 342px;
+    height: 338px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--newsletter-container .stretchChildrenWidth:nth-child(0n+1):not(.flexCol--newsletter-container-col .stretchChildrenWidth){
+        min-width: 100%;
+        max-width: 342px;
+        height: 338px;
+    }
+
+}
+
+/* IMAGEN MOBILE  */
+.flexRowContent--newsletter-container .stretchChildrenWidth:nth-child(0n+3):not(.flexCol--newsletter-container-col .stretchChildrenWidth){
+    display: none;
+}
+/* FIN IMAGEN MOBILE  */
+
+.flexCol--newsletter-container-col{
+    box-sizing: border-box;
+    padding: 48px 72px;
+    padding-bottom: 67px;
+    align-items: center;
+    background: var(--post-header-color);
+}
+
+.flexColChild--newsletter-container-col:nth-child(0n+1){
+    width: 84px;
+    max-height: 55px;
+}
+
+.flexColChild--newsletter-container-col:nth-child(0n+2){
+    height: fit-content !important;
+}
+
+.flexCol--newsletter-container-col :global(.vtex-store-components-3-x-imageElement--imagen-banner-newsletter){
+    width: 100%;
+    height: 100%;
+}
+
+.flexRowContent--field-newsletter{
+    flex-direction: column;
+}
+
+.flexRowContent--field-newsletter :global(.vtex-input__label){
+    display: none;
+}
+
+.flexRowContent--field-newsletter .stretchChildrenWidth{
+    min-width: 100%;
+}
+
+.flexRowContent--field-newsletter{
+    margin-top: 23px;
+}
+
+.flexRowContent--field-newsletter :global(.vtex-input-prefix__group){
+    border: none;
+}
+
+.flexRowContent--field-newsletter :global(.vtex-input-prefix__group){
+    height: 46px;
+    border-radius: 0px;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--color-white);
+}
+
+.flexRowContent--field-newsletter :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input){
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    border-radius: 0px;
+    font-family: 'GothamBook';
+    font-size: 14.5px;
+    line-height: 21.75px;
+    letter-spacing: 0.1px;
+    color: var(--color-white);
+    text-align: center;
+    background: transparent;
+}
+
+.flexRowContent--field-newsletter :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input)::placeholder{
+    color: var(--color-white);
+}
+
+.flexRowContent--field-newsletter :global(.vtex-store-form-0-x-formSubmitContainer){
+    margin-top: 19px;
+}
+
+.flexRowContent--field-newsletter :global(.vtex-store-form-0-x-formSubmitContainer) :global(.vtex-button){
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 134px;
+    min-height: 32px;
+    border-radius: 4px;
+    background: var(--color-red-1);
+}
+
+.flexRowContent--field-newsletter :global(.vtex-store-form-0-x-formSubmitContainer) :global(.vtex-button) :global(.vtex-button__label){
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: "Gotham";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: var(--color-white);
+    text-transform: none;
+}
+
+/* FIN COLUMN LEFT NEWSLETTER FORM  */
+
+/* COLUM RIGHT BANNER  */
+
+.flexRowContent--newsletter-container :global(.vtex-store-components-3-x-imageElement--imagen-banner-newsletter){
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FIN COLUM RIGHT BANNER  */
+
+@media (max-width: 640px) {
+
+    /* IMAGEN MOBILE  */
+    .flexRowContent--newsletter-container .stretchChildrenWidth:nth-child(0n+2):not(.flexCol--newsletter-container-col .stretchChildrenWidth){
+        display: none;
+    }
+
+    .flexRowContent--newsletter-container .stretchChildrenWidth:nth-child(0n+3):not(.flexCol--newsletter-container-col .stretchChildrenWidth){
+        display: flex;
+        height: 338px;
+    }
+    /* FIN IMAGEN MOBILE  */
+
+}

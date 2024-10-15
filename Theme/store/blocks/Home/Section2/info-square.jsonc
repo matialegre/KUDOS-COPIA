@@ -1,0 +1,21 @@
+{
+
+    "flex-layout.row#infoSquareContainer": {
+
+        "props": {
+            "blockClass": "info-square-container",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "flex-layout.row#itemSquare1",
+            "flex-layout.row#itemSquare2",
+            "flex-layout.row#itemSquare3",
+            "flex-layout.row#itemSquare4"
+        ]
+    
+    }
+
+}

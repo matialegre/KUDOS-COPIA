@@ -1,0 +1,23 @@
+.flexRow--nuestras-marcas :global(.vtex-store-components-3-x-container){
+    margin: 0;
+    padding: 0;
+    margin: auto;
+}
+
+.flexRowContent--nuestras-marcas{
+    margin: auto;
+    margin-top: 76px;
+    justify-content: center;
+    max-width: var(--max-width-content-desktop);
+    width: var(--max-width-content-desktop);
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--nuestras-marcas{
+        margin-top: 59px;
+        max-width: var(--max-width-content-mobile);
+        width: var(--max-width-content-mobile);
+    }
+
+}

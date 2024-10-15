@@ -1,0 +1,922 @@
+.arrowUp{
+    display: none;
+}
+
+.box .contentContainer{
+    box-shadow: none;
+}
+
+.content--loginOptions{
+    position: relative;
+    margin-top: 66px;
+    margin-right: -85px;
+    /* margin-right: -29px; */
+    width: 368px;
+    height: 242px;
+}
+
+.content--loginOptions::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -11px;
+    margin-right: 31px;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='11' viewBox='0 0 13 11' fill='none'%3E%3Cpath d='M5.52473 0.799999C5.98662 -1.07288e-06 7.14132 -5.96046e-08 7.6032 0.8L12.0199 8.45C12.4818 9.25 11.9045 10.25 10.9807 10.25H2.14723C1.22347 10.25 0.646124 9.25 1.108 8.45L5.52473 0.799999Z' fill='white'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content--loginOptions.contentInitialScreen {
+    margin-right: auto;
+}
+
+@media (max-width: 640px) {
+    
+    .content--loginOptions{
+        margin: 0;
+        padding: 0;
+        margin: auto;
+        width: 320px;
+        height: auto;
+    }
+
+}
+
+
+.content--loginOptions .contentForm{
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    box-shadow: -1px -1px 4px 0px rgba(0, 0, 0, 0.05), 2px 6px 8px 0px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 640px) {
+
+    .content--loginOptions .contentForm{
+        box-shadow: none;
+    }
+
+}
+
+/* FORMULARIO RECIBIR CODIGO POR EMAIL*/
+.content--emailVerification{
+    padding: 0;
+    margin-top: 66px;
+    margin-right: -85px;
+    /* margin-right: -29px; */
+    width: 368px;
+    background: #FFFFFF;
+}
+
+.content--emailVerification  .contentFormVisible{
+    margin: 0;
+    padding: 0;
+    max-width: 296px;
+}
+
+.content--emailVerification  .contentFormVisible .formTitle{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.content--emailVerification  .contentFormVisible .formTitle::after{  
+    padding-top: 12px;
+    content: "Te enviaremos un código de ingreso rápido para esta sesión.";
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+} 
+
+.content--emailVerification form{  
+    padding: 0;
+    margin-top: 20px;
+    height: 242px;
+    background-color: #FFFFFF;
+} 
+
+.content--emailVerification form::before{  
+    content: "Email";
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.content--emailVerification form :global(.vtex-input-prefix__group){  
+    border: 1px solid #CCD5E0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.content--emailVerification form :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input){  
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.content--emailVerification form :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input)::placeholder{  
+    color: #676F79;
+}
+
+.content--emailVerification form .sendButton :global(.vtex-button){  
+    background: #09344D;
+}
+
+.content--emailVerification form .sendButton :global(.vtex-button) :global(.vtex-button__label){  
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.content--emailVerification form .backButton{  
+    margin-top: 3px;
+}
+
+.content--emailVerification form .backButton :global(.vtex-button):hover{  
+    background: #D4E8F7;
+}
+
+.content--emailVerification form .backButton :global(.vtex-button) div span{  
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #2680EB;
+}
+
+.content--emailVerification form .backButton .arrowBackIcon{  
+    color: #2680EB;
+}
+/* FIN FORMULARIO RECIBIR CODIGO POR EMAIL*/
+
+/* FORMULARIO CONFIRMAR CODIGO EMAIL*/
+
+.content--codeConfirmation{
+    padding: 0;
+    margin-top: 66px;
+    margin-right: -85px;
+    /* margin-right: -29px; */
+    width: 368px;
+    background: #FFFFFF;
+}
+
+.content--codeConfirmation .contentFormVisible{
+    padding: 0;
+    width: 296px;
+}
+
+.content--codeConfirmation .contentFormVisible .formTitle{
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.content--codeConfirmation form .inputContainer{
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.content--codeConfirmation form :global(.vtex-input-prefix__group){  
+    border: 1px solid #CCD5E0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.content--codeConfirmation form :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input){  
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.content--codeConfirmation form :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input)::placeholder{  
+    color: #676F79;
+}
+
+.content--codeConfirmation form .formFooter{
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
+    margin-bottom: 30px;
+    align-items: center;
+    border: 0;
+}
+
+.content--codeConfirmation form .sendButton :global(.vtex-button){  
+    background: #09344D;
+}
+
+.content--codeConfirmation form .sendButton :global(.vtex-button) :global(.vtex-button__label){  
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.content--codeConfirmation form .backButton{  
+    margin-right: 3px;
+}
+
+.content--codeConfirmation form .backButton :global(.vtex-button):hover{  
+    background: #D4E8F7;
+}
+
+.content--codeConfirmation form .backButton :global(.vtex-button) div span{  
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #2680EB;
+}
+
+.content--codeConfirmation form .backButton .arrowBackIcon{  
+    color: #2680EB;
+}
+
+/* FIN FORMULARIO CONFIRMAR CODIGO EMAIL*/
+
+/* LOGUEADO: CONTENEDOR DE MI CUENTA Y SALIR  */
+
+.content--accountOptions{
+    position: relative;
+    padding: 0;
+    padding: 24px;
+    margin-top: 49px;
+    align-items: center;
+    width: 314px;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 17px -13px;
+    box-shadow: -1px -1px 4px 0px rgba(0, 0, 0, 0.05), 2px 6px 8px 0px rgba(0, 0, 0, 0.18);
+}
+
+.content--accountOptions::before{
+    z-index: -1;
+    position: absolute;
+    right: 31.4px;
+    top: -8px;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: #FFFFFF;
+    box-shadow: -1px -1px 4px 0px rgba(0, 0, 0, 0.05), 2px 6px 8px 0px rgba(0, 0, 0, 0.18);
+    transform: rotate(45deg);
+    /* position: absolute;
+    right: 31.4px;
+    top: -15px;
+    content: "";
+    width: 19.92px;
+    height: 15px;
+    background: red;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='15' viewBox='0 0 21 15' fill='none'%3E%3Cpath d='M10.5003 0L20.4596 15H0.541016L10.5003 0Z' fill='white'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: -1px -1px 4px 0px rgba(0, 0, 0, 0.05), 2px 6px 8px 0px rgba(0, 0, 0, 0.18); */
+}
+
+.content--accountOptions .contentForm{
+    margin: 0;
+    padding: 0;
+    min-width: auto;
+    width: 266px;
+    height: auto;
+}
+
+.content--accountOptions .contentForm div:not(.accountOptions div){
+    height: 100%;
+}
+
+.content--accountOptions .contentForm .accountOptions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.content--accountOptions .contentForm .accountOptions hr{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 1px;
+    opacity: 1;
+    background: #CCD5E0;
+    border-style: solid;
+    border-width: inherit;
+}
+
+.content--accountOptions .contentForm .accountOptions div button{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    min-height: auto;
+    height: 20px;
+    color: #3D3F43;
+    background: transparent;
+}
+
+.content--accountOptions .contentForm .accountOptions div button span{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.content--accountOptions .contentForm .accountOptions div button :global(.vtex-button__label){
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.content--accountOptions .contentForm .accountOptions div button span{
+    margin: 0;
+    padding: 0;
+}
+
+/* LOGIN CUSTOM */
+.content--accountOptions .contentForm .accountOptions .accountOptionsSectionTitle {
+    margin-bottom: 8px;
+    color: var(--color-black-4);
+
+}
+.loginAccountItem {
+    color: var(--color-gray-3);
+    padding: 8px 0;
+}
+.logoutButton {
+    color: var(--color-black-1);
+}
+
+/* FIN LOGUEADO: CONTENEDOR DE MI CUENTA Y SALIR  */
+
+/* FORMULARIO ENTRAR CON USUARIO Y CONTRASEÑA*/
+.content--emailAndPassword{
+    padding: 0;
+    margin-top: 66px;
+    margin-right: -85px;
+    /* margin-right: -29px; */
+    width: 368px;
+    background: #FFFFFF;
+}
+
+.content--emailAndPassword  .contentFormVisible{
+    margin: 0;
+    padding: 0;
+    max-width: 296px;
+}
+
+.content--emailAndPassword  .contentFormVisible .formTitle{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.content--emailAndPassword form{  
+    padding: 0;
+    margin-top: 20px;
+    height: 242px;
+    background-color: #FFFFFF;
+} 
+
+.content--emailAndPassword form::before{  
+    content: "Email";
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+}
+
+@media (max-width: 640px) {
+
+    .content--emailAndPassword form::before{  
+        display: none;
+    }
+
+}
+
+.content--emailAndPassword form :global(.vtex-input-prefix__group){  
+    border: 1px solid #CCD5E0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.content--emailAndPassword form :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input){  
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.content--emailAndPassword form :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input)::placeholder{  
+    color: #676F79;
+}
+
+.content--emailAndPassword form .sendButton :global(.vtex-button){  
+    background: #09344D;
+}
+
+.content--emailAndPassword form .sendButton :global(.vtex-button) :global(.vtex-button__label){  
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.content--emailAndPassword form .backButton{  
+    margin-top: 3px;
+}
+
+.content--emailAndPassword form .backButton :global(.vtex-button):hover{  
+    background: #D4E8F7;
+}
+
+.content--emailAndPassword form .backButton :global(.vtex-button) div span{  
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #2680EB;
+}
+
+.content--emailAndPassword form .backButton .arrowBackIcon{  
+    color: #2680EB;
+}
+
+.content--emailAndPassword .dontHaveAccount{  
+    visibility: visible;
+    margin-bottom: 28px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: #2680EB;
+}
+/* FIN FORMULARIO ENTRAR CON USUARIO Y CONTRASEÑA*/
+
+/* OLVIDE MI CONTRASEÑA */
+.content--beginCreatePass{
+    padding: 0;
+    margin-top: 66px;
+    margin-right: -85px;
+    /* margin-right: -29px; */
+    width: 368px;
+    background: #FFFFFF;
+}
+
+@media (max-width: 640px) {
+
+    .content--beginCreatePass{
+        padding: 0;
+        margin: 0;
+        margin: auto;
+        margin-top: 32px;
+        width: 320px;
+        background: #FFFFFF;
+    }
+
+    .content--beginCreatePass form .formFooter .sendButton :global(.vtex-button){
+        background: #2680EB;
+    }
+
+    .content--beginCreatePass .contentFormVisible{
+        min-width: auto;
+        width: 320px;
+    }
+
+}
+
+
+.content--beginCreatePass  .contentFormVisible{
+    margin: 0;
+    padding: 0;
+    max-width: 296px;
+}
+
+.content--beginCreatePass  .contentFormVisible .formTitle{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.content--beginCreatePass form{  
+    padding: 0;
+    margin-top: 20px;
+    height: 242px;
+    background-color: #FFFFFF;
+} 
+
+.content--beginCreatePass form::before{  
+    content: "Email";
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.content--beginCreatePass form :global(.vtex-input-prefix__group){  
+    border: 1px solid #CCD5E0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.content--beginCreatePass form :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input){  
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.content--beginCreatePass form :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input)::placeholder{  
+    color: #676F79;
+}
+
+.content--beginCreatePass form .sendButton :global(.vtex-button){  
+    background: #09344D;
+}
+
+.content--beginCreatePass form .sendButton :global(.vtex-button) :global(.vtex-button__label){  
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.content--beginCreatePass form .backButton{  
+    margin-top: 3px;
+}
+
+.content--beginCreatePass form .backButton :global(.vtex-button):hover{  
+    background: #D4E8F7;
+}
+
+.content--beginCreatePass form .backButton :global(.vtex-button) div span{  
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #2680EB;
+}
+
+.content--beginCreatePass form .backButton .arrowBackIcon{  
+    color: #2680EB;
+}
+
+.content--beginCreatePass .dontHaveAccount{  
+    visibility: visible;
+    margin-bottom: 28px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: #2680EB;
+}
+/* FIN OLVIDE MI CONTRASEÑA */
+
+:global(.vtex-flex-layout-0-x-flexColChild--header-login-cart) .label {
+    display:none;
+    text-transform: none !important;
+    text-align: center;
+    font: normal normal normal 13px/16px NouvelR;
+    letter-spacing: 0.65px;
+    color: #D9D9D6;
+    opacity: 1;
+
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--header-login-cart) .container :global(.vtex-button)::before {
+    
+    background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.316' height='17.031' viewBox='0 0 15.316 17.031'%3E%3Cpath id='asset_13' data-name='asset 13' d='M14.451,17.085A2.772,2.772,0,0,0,11.387,14.1a2.772,2.772,0,0,0-3.063,2.981,2.819,2.819,0,0,0,3.063,3.145A2.819,2.819,0,0,0,14.451,17.085ZM5.425,29.5H3.75v-.858c0-4.37,1.552-6.944,4.738-7.923a4.111,4.111,0,0,1-1.8-3.635,4.332,4.332,0,0,1,4.7-4.615,4.332,4.332,0,0,1,4.7,4.615,4.225,4.225,0,0,1-1.756,3.635c3.186.979,4.738,3.553,4.738,7.923V29.5H17.391v-.858c0-4.574-1.92-6.78-6-6.78-4,0-5.963,2.246-5.963,6.78Z' transform='translate(-3.75 -12.471)' fill='%23fafafa' fill-rule='evenodd'/%3E%3C/svg%3E") no-repeat center center / cover;
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 17px;
+    margin-bottom: 4px;
+    background-size: 15px;
+    padding-top: 0px;
+
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--header-login-cart) .container :global(.vtex-button)::after {
+  
+    content: 'mi cuenta';
+    display: inline-block;
+    background-size: 26px;
+    text-align: center;
+    font: normal normal normal 13px/16px NouvelR;
+    letter-spacing: 0.65px;
+    color: #D9D9D6;
+    opacity: 1;
+    text-transform: lowercase;
+}
+
+.container :global(.vtex-button__label){
+    padding: 0;
+}
+
+.label{
+    display: none;
+}
+
+
+/* -----Login inital screen-----  */
+.contentInitialScreen{
+    padding: 0;
+}
+
+.contentInitialScreen .formTitle{
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--color-black-4);
+}
+
+.contentInitialScreen .optionsList{
+    margin: auto;
+    margin-top: 20px;
+    width: 296px;
+    background-color: #FFFFFF;
+    /* padding: 18px 16px 1px 16px; */
+    border-radius: 5px;
+}
+
+.contentInitialScreen .optionsListItem{
+    background-color: #FAFAFA;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+.contentInitialScreen .optionsListItem:nth-child(0n+4){
+    display: none;
+}
+
+.contentInitialScreen .optionsListItem:last-child{
+    display: none;
+}
+
+.contentInitialScreen .optionsListItem .button button{
+    text-transform: none;
+}
+
+.emailPasswordOptionBtn button{
+    background: #FFFFFF;
+}
+
+.emailPasswordOptionBtn button :global(.vtex-button__label){
+    color: #3D3F43;
+}
+
+.button button div span{
+    width: 100%;
+    font-size: 14px;
+} 
+
+.optionsListItem div button div span{
+    font-family: "Gotham";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+.optionsListItem :global(.vtex-button__label) svg{
+    position: absolute;
+    left: 3rem;
+}
+
+.oauthLabel{
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    width: 145px !important;
+    font-size: 0;
+}
+
+.googleOptionBtn .oauthProvider{
+    display: flex;
+}
+
+.oauthLabel,
+.oauthProvider{
+    text-transform: none;
+    width: 100%;
+}
+.oauthLabel:not(.oauthProvider){
+    visibility: hidden;
+    position: relative;
+}
+
+.oauthProvider::before{
+    width: 93px;
+    visibility: visible;
+    content: "Ingresar con ";
+}
+
+.oauthProvider{
+    margin: 0;
+    margin-left: -69px;
+    max-width: 220px;
+    width: 142px;
+    visibility: visible;
+    font-weight: 400;
+    text-align: left;
+    /* position: absolute; */
+    /* left: 3.5rem; */
+    font-family: "NouvelR", sans-serif;
+    color: #4E4E4E;
+}
+
+
+
+/* -----!Login inital screen-----  */
+
+/*  -----Email verification-----   */
+.contentContainer{
+    margin: 0;
+    padding: 0;
+}
+
+.emailVerification .formTitle{  
+    font-size: 16px;
+    font-weight: bold;
+} 
+
+.inputContainer{
+    margin-top: .5rem;
+}
+
+.profile{
+    visibility: hidden;
+}
+
+.emailVerification .formFooter {
+    padding-top: 1rem;
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+    border: none;
+}
+.formFooter .sendButton{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 50px;
+}
+.formFooter .sendButton button{
+    width: 100%;
+    border: 0;
+    background-color: #000000;
+    content: "ingresar";
+}
+.formFooter .backButton button div span{
+    display: flex;
+    color: #2680EB;
+}
+/*  -----!Email verification-----   */
+
+@media (max-width: 640px){
+
+    .emailAndPasswordForm .formTitle::after{
+        content: "Ingresar con correo y contraseña";
+        font-weight: 500;
+        display: block;
+        padding-top: .5rem;
+    }
+
+}
+
+/* .inputContainerPassword::before{
+    content: "Contraseña";
+    padding-bottom: .5rem;
+} */
+
+.inputContainerPassword{
+    margin-top: .5rem;
+}
+
+.formLinkContainer .forgotPasswordLink{
+    color: #2680EB;
+}
+
+.inputContainerPassword div div{
+    font-size: 8px;
+}
+
+.emailAndPasswordForm{
+    background-color: #FFFFFF;
+}
+
+.emailAndPasswordForm form{
+    height: fit-content;
+}
+
+.dontHaveAccount{
+    visibility: hidden;
+    padding-top: 1rem;
+}
+
+/* .dontHaveAccount::before{
+    visibility: visible;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    content: "¿No tenés cuenta? Suscribite";
+} */
+
+.accessCodeOptionBtn :global(.vtex-button){
+    width: 296px;
+    background-color: #E9F1FB;
+    border: none;
+    color: #2680EB;
+}
+
+.accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label){
+    padding: 0;
+}
+
+.buttonSocial :global(.vtex-button) :global(.vtex-button__label) svg{
+    position: relative;
+    left: 0;
+    margin-right: 8px;
+}
+
+.accessCodeOptionBtn:hover :global(.vtex-button){
+    background-color: #D4E8F7;
+}
+
+.accessCodeOptionBtn:hover :global(.vtex-button) :global(.vtex-button__label){
+    padding: 0;
+}
+
+.googleOptionBtn :global(.vtex-button){
+    border: 1px solid #CCD5E0;
+    color: #3D3F43;
+    background-color: #FFFFFF;
+}
+
+.googleOptionBtn :global(.vtex-button) :global(.vtex-button__label){
+    padding: 0;
+}

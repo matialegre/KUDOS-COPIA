@@ -29,3 +29,8 @@
     font-family: 'GothamBook';
     src: url(assets/Fonts/GothamBook.ttf);
   }
+
+  @font-face {
+    font-family: 'Uni sans';
+    src: url(assets/Fonts/uni-sans-semi-bold.ttf);
+  }

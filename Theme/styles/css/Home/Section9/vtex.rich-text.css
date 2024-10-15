@@ -1,0 +1,13 @@
+/* TEXT NEWSLETTER FORM  */
+
+.paragraph--title-newsletter{
+    margin-top: 11px;
+    font-family: "Gotham";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--color-white);
+    text-align: center;
+}
+
+/* FIN TEXT NEWSLETTER FORM  */

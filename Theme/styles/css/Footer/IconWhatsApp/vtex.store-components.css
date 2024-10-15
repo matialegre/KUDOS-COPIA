@@ -1,0 +1,20 @@
+.imageElementLink--icon-whatsapp-footer{
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    margin-right: 33px;
+    margin-bottom: 67px;
+    display: flex;
+    max-width: 41px;
+    height: 41px;
+}
+
+@media (max-width: 640px) {
+
+    .imageElementLink--icon-whatsapp-footer{
+        right: 0;
+        margin-right: 4px;
+        margin-bottom: 100px;
+    }
+
+}

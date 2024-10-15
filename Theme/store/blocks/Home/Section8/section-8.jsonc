@@ -1,0 +1,51 @@
+{
+
+    "flex-layout.row#nuestrasMarcas": {
+
+        "props": {
+            "blockClass": "nuestras-marcas",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [ "flex-layout.col#nuestrasMarcasCol" ]
+
+    },
+
+    "flex-layout.col#nuestrasMarcasCol": {
+
+        "props": {
+            "blockClass": "nuestras-marcas-col",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#title-nuestras-marcas",
+            "link#verTodonuestrasMarcas"
+        ]
+    
+    },
+
+    "rich-text#title-nuestras-marcas": {
+
+        "props": {
+            "blockClass": "title-product-slider",
+            "text": " NUESTRAS MARCAS"
+        }
+
+    },
+
+    "link#verTodonuestrasMarcas": {
+
+        "props": {
+            "blockClass": "ver-todo-product-slider",
+            "href": "/nuestras-marcas",
+            "label": "Ver todos"
+        }
+
+    }
+
+}

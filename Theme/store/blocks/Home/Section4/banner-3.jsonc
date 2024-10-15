@@ -1,0 +1,66 @@
+{
+
+    "flex-layout.row#bannerColeccion3": {
+
+        "props": {
+            "blockClass": "banner-colecccion",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "image#bannerColeccion3",
+            "flex-layout.col#bannerColeccionTextContainer3"        
+        ]
+    
+    },
+
+    "image#bannerColeccion3":{
+
+        "props": {
+            "blockClass": "image-banner-coleccion",
+            "src": "/arquivos/banner-coleccion-3.png",
+            "link":{
+                "url": "/niños",
+                "newTab": false
+            }
+        }
+
+    },
+
+    "flex-layout.col#bannerColeccionTextContainer3": {
+
+        "props": {
+            "blockClass": "banner-coleccion-text-container",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#bannerColeccionTitle3",
+            "rich-text#bannerColeccionLink3"   
+        ]
+    
+    },
+
+    "rich-text#bannerColeccionTitle3": {
+
+        "props": {
+            "blockClass": "banner-coleccion-title",
+            "text": "Niños"
+        }
+
+    },
+
+    "rich-text#bannerColeccionLink3": {
+
+        "props": {
+            "blockClass": "banner-coleccion-link",
+            "text": "ver colección"
+        }
+
+    }
+
+}

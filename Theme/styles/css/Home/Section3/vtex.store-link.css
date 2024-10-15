@@ -1,0 +1,48 @@
+/* SUB TITLE SLIDER  */
+
+:global(.vtex-flex-layout-0-x-flexColChild--nuevos-lanzamientos-col){
+    display: flex;
+    justify-content: center;
+}
+
+.link--ver-todo-product-slider{
+    margin-top: 22.5px;
+    display: flex;
+    gap: 4px;
+    text-decoration: none;
+}
+
+.link--ver-todo-product-slider::after{
+    content: "";
+    display: flex;
+    width: 16px;
+    height: 16px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E%3Cpath d='M6.79534 12.6663C6.61992 12.6663 6.44844 12.6116 6.30259 12.5092C6.15675 12.4067 6.04307 12.2612 5.97595 12.0909C5.90882 11.9205 5.89125 11.7331 5.92546 11.5523C5.95968 11.3715 6.04414 11.2055 6.16816 11.0751L9.08939 8.0054L6.16816 4.93571C6.08343 4.84972 6.01585 4.74685 5.96936 4.63312C5.92287 4.51939 5.8984 4.39707 5.89737 4.2733C5.89635 4.14952 5.91879 4.02677 5.9634 3.91221C6.008 3.79765 6.07387 3.69356 6.15717 3.60604C6.24046 3.51851 6.33951 3.4493 6.44853 3.40242C6.55755 3.35555 6.67436 3.33197 6.79215 3.33304C6.90994 3.33412 7.02635 3.35983 7.13458 3.40869C7.24281 3.45754 7.34069 3.52856 7.42253 3.61759L10.9709 7.34635C11.1372 7.52116 11.2307 7.75822 11.2307 8.0054C11.2307 8.25258 11.1372 8.48965 10.9709 8.66446L7.42253 12.3932C7.2562 12.568 7.0306 12.6663 6.79534 12.6663Z' fill='%232680EB'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.label--ver-todo-product-slider{
+    font-family: "Gotham";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    color: var(--sub-title-slider-product-boxs);
+}
+
+@media (max-width: 640px) {
+
+    .link--ver-todo-product-slider{
+        margin-top: 16px;
+    }
+
+    .label--ver-todo-product-slider{
+        font-size: 12px;
+        letter-spacing: 0.2px;
+    }
+
+}
+
+/* FIN SUB TITLE SLIDER  */

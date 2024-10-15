@@ -1,0 +1,66 @@
+{
+
+    "flex-layout.row#otherBanner1": {
+
+        "props": {
+            "blockClass": "other-banner",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "image#otherBanner1",
+            "flex-layout.col#otherBannerTextContainer1"
+        ]
+    
+    },
+
+    "image#otherBanner1":{
+
+        "props": {
+            "blockClass": "image-other-banner",
+            "src": "/arquivos/other-banner-1.png",
+            "link":{
+                "url": "/trekking",
+                "newTab": false
+            }
+        }
+
+    },
+
+    "flex-layout.col#otherBannerTextContainer1": {
+
+        "props": {
+            "blockClass": "other-banner-text-container",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#otherBannerTitle1",
+            "rich-text#otherBannerLink1"
+        ]
+    
+    },
+
+    "rich-text#otherBannerTitle1": {
+
+        "props": {
+            "blockClass": "other-banner-title",
+            "text": "TREKKING"
+        }
+
+    },
+
+    "rich-text#otherBannerLink1": {
+
+        "props": {
+            "blockClass": "other-banner-link",
+            "text": "ver colección"
+        }
+
+    }
+
+}

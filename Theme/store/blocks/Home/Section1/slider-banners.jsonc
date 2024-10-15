@@ -1,0 +1,52 @@
+/*dependencia "vtex.store-image": "0.x"*/
+{
+    
+    "list-context.image-list#slider-banner-solo-imagenes": {
+
+        "props": {
+
+            "height": "auto",
+
+            "images": [
+
+                {
+                    "image": "/arquivos/slider-banner-1-desktop-1.png",
+                    "mobileImage": "/arquivos/slider-banner-1-mobile.png"
+                },
+
+                {
+                    "image": "/arquivos/slider-banner-1-desktop-1.png",
+                    "mobileImage": "/arquivos/slider-banner-1-mobile.png"
+                }
+                
+            ]
+
+        },
+
+        "children": ["slider-layout#slider-banner-solo-imagenes"]
+        
+    },
+    
+    "slider-layout#slider-banner-solo-imagenes": {
+        
+        "props": {
+            
+            "blockClass": "slider-banner-solo-imagenes",
+            "itemsPerPage": {
+                "desktop": 1,
+                "tablet": 1,
+                "phone": 1
+            },
+            // "infinite": true,
+            // "autoplay": {
+            //     "timeout": 5000,
+            //     "stopOnHover": true
+            // },
+            "showPaginationDots": "always", // desktopOnly | mobileOnly | always | never
+            "showNavigationArrows": "desktopOnly" // desktopOnly | mobileOnly | always | never
+            
+        }
+
+    }
+
+}

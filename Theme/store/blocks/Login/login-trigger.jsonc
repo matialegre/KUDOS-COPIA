@@ -1,0 +1,43 @@
+{
+    
+    "login": {
+
+        "props": {
+            "iconLabel": "Mi Cuenta",
+            "showIconProfile": false,
+            "optionsTitle": "Elija una opción de ingreso",
+            "emailAndPasswordTitle": "Ingresa con e-mail y contraseña",
+            "accessCodeTitle": "Recibir código de acceso por e-mail",
+            "passwordPlaceholder": "Ingrese su contraseña",
+            "hasGoogleOneTap": true,
+            "accountOptionLinks": [
+                {
+                    "label": "Perfil",
+                    "path": "/account#/profile",
+                    "cssClass": "loginAccountItem"
+                },
+                {
+                    "label": "Direcciones",
+                    "path": "/account#/addresses",
+                    "cssClass": "loginAccountItem"
+                },
+                {
+                    "label": "Pedidos",
+                    "path": "/account#/orders",
+                    "cssClass": "loginAccountItem"
+                },
+                {
+                    "label": "Tarjetas de crédito",
+                    "path": "/account#/cards",
+                    "cssClass": "loginAccountItem"
+                },
+                {
+                    "label": "Mi crédito",
+                    "path": "/account#/authentication",
+                    "cssClass": "loginAccountItem"
+                }
+            ]
+        }
+    }
+
+}

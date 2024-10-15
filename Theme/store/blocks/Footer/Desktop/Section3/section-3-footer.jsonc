@@ -13,7 +13,8 @@
             "rich-text#textRights",
             "image#imageKudos",
             "image#imageVtex",
-            "image#imageDataFiscal"
+            "image#imageDataFiscal",
+            "image#iconWhatsAppFooter"
         ]
     
     },

@@ -1,0 +1,28 @@
+.flexRow--nuevos-lanzamientos{
+    background: lightcyan;
+}
+
+.flexRow--nuevos-lanzamientos :global(.vtex-store-components-3-x-container){
+    margin: 0;
+    padding: 0;
+    margin: auto;
+}
+
+.flexRowContent--nuevos-lanzamientos{
+    margin: auto;
+    margin-top: 73px;
+    justify-content: center;
+    max-width: var(--max-width-content-desktop);
+    width: var(--max-width-content-desktop);
+    background: lightpink;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--nuevos-lanzamientos{
+        margin-top: 12.5px;
+        max-width: var(--max-width-content-mobile);
+        width: var(--max-width-content-mobile);
+    }
+
+}

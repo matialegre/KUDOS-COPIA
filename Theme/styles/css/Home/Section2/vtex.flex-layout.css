@@ -1,0 +1,87 @@
+.flexRow--info-square-container{
+    position: relative;
+    z-index: 1;
+}
+
+.flexRow--info-square-container :global(.vtex-store-components-3-x-container){
+    margin: 0;
+    padding: 0;
+    margin: auto;
+}
+
+.flexRowContent--info-square-container{
+    margin: auto;
+    margin-top: -14px;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1167px;
+    width: 1167px;
+    height: 91px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    border: 0.5px solid var(--color-gray-1);
+    background: var(--color-gray-2);
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--info-square-container{
+        margin-top: 0px;
+        max-width: var(--max-width-content-mobile);
+        width: var(--max-width-content-mobile);
+        border: none;
+        background: transparent;
+    }
+
+    .flexRowContent--info-square-container .stretchChildrenWidth:nth-child(0n+2):not(.flexRow--item-square .stretchChildrenWidth){
+        display: none;
+    }
+
+    .flexRowContent--info-square-container .stretchChildrenWidth:nth-child(0n+3):not(.flexRow--item-square .stretchChildrenWidth){
+        display: none;
+    }
+
+    .flexRowContent--info-square-container .stretchChildrenWidth:nth-child(0n+4):not(.flexRow--item-square .stretchChildrenWidth){
+        display: none;
+    }
+
+}
+
+/* ICONOS  */
+
+.flexRowContent--item-square{
+    align-items: center;
+    gap: 16px;
+}
+
+.flexRowContent--item-square :global(.vtex-store-components-3-x-imageElement--image-item-square){
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    object-fit: none;
+    background: rgba(204, 213, 224, 0.50);
+}
+
+/* FIN ICONOS  */
+
+/* TITLES  */
+
+.flexRowContent--item-square :global(.vtex-rich-text-0-x-paragraph--item-title){
+    font-family: 'GothamBook';
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    color: var(--post-header-color);
+    text-transform: uppercase;
+}
+
+.flexRowContent--item-square :global(.vtex-rich-text-0-x-paragraph--item-text){
+    font-family: 'GothamBook';
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    color: #595959;
+}
+
+/* FIN TITLES  */

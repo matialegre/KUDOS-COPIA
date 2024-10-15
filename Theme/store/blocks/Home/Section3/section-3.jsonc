@@ -1,0 +1,51 @@
+{
+
+    "flex-layout.row#nuevosLanzamientos": {
+
+        "props": {
+            "blockClass": "nuevos-lanzamientos",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [ "flex-layout.col#nuevosLanzamientosCol" ]
+
+    },
+
+    "flex-layout.col#nuevosLanzamientosCol": {
+
+        "props": {
+            "blockClass": "nuevos-lanzamientos-col",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#title-nuevos-lanzamientos",
+            "link#verTodoNuevosLanzamientos"
+        ]
+    
+    },
+
+    "rich-text#title-nuevos-lanzamientos": {
+
+        "props": {
+            "blockClass": "title-product-slider",
+            "text": "NUEVOS LANZAMIENTOS"
+        }
+
+    },
+
+    "link#verTodoNuevosLanzamientos": {
+
+        "props": {
+            "blockClass": "ver-todo-product-slider",
+            "href": "/nuevos-lanzamientos",
+            "label": "Ver todos"
+        }
+
+    }
+
+}

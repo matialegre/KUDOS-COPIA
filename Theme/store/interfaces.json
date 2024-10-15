@@ -2,6 +2,10 @@
 
     "search-bar-custom": {
         "component": "SearchBarCustom"
+    },
+
+    "custom-sku-slider": {
+        "component": "CustomSkuSlider"
     }
 
 }

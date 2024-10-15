@@ -1,0 +1,16 @@
+{
+
+    "image#iconWhatsAppFooter":{
+
+        "props": {
+            "blockClass": "icon-whatsapp-footer",
+            "src": "/arquivos/whatsapp-logo.png",
+            "link":{
+                "url": "https://api.whatsapp.com/send?phone=542914147915",
+                "newTab": true
+            }
+        }
+
+    }
+
+}
