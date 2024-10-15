@@ -45,21 +45,56 @@
 
   .pkpmodal-details-top {
     align-items: end;
+    height: auto;
+
+    .pkpmodal-details-header.pkpmodal-details-header-title {
+      font-size: 0;
+
+      &::before {
+        content: "Detalles del punto de retiro";
+        font-size: 16px;
+        color: var(--gray-color);
+      }
+    }
 
     button {
       font-family: "Gotham";
       font-size: 0;
-      font-weight: 600;
+      font-weight: 500;
       letter-spacing: 0.1px;
       padding: 16px;
 
       &::before {
+        content: "";
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M9.76736 12.6663C9.5321 12.6663 9.3065 12.568 9.14018 12.3932L5.59176 8.66446C5.42546 8.48965 5.33203 8.25258 5.33203 8.0054C5.33203 7.75822 5.42546 7.52116 5.59176 7.34635L9.14018 3.61759C9.22201 3.52856 9.3199 3.45754 9.42813 3.40869C9.53636 3.35983 9.65276 3.33412 9.77055 3.33304C9.88834 3.33197 10.0052 3.35555 10.1142 3.40242C10.2232 3.4493 10.3222 3.51851 10.4055 3.60604C10.4888 3.69356 10.5547 3.79765 10.5993 3.91221C10.6439 4.02677 10.6664 4.14952 10.6653 4.2733C10.6643 4.39707 10.6398 4.51939 10.5933 4.63312C10.5469 4.74685 10.4793 4.84972 10.3945 4.93571L7.47331 8.0054L10.3945 11.0751C10.5186 11.2055 10.603 11.3715 10.6372 11.5523C10.6715 11.7331 10.6539 11.9205 10.5868 12.0909C10.5196 12.2612 10.406 12.4067 10.2601 12.5092C10.1143 12.6116 9.94278 12.6663 9.76736 12.6663Z' fill='%232680EB'/%3E%3C/svg%3E") no-repeat center center / contain;
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+      }
+      &::after {
         content: "Ver todos los puntos de retiro";
-        font-size: 16px;
+        font-size: 12px;
       }
       svg {
         display: none;
       }
+    }
+  }
+
+  .pkpmodal-details-header {
+
+    .pkpmodal-details-header-title {
+      font-size: 0;
+      color: #3D3F43;
+
+      &::before {
+        content: "Detalles del punto de retiro";
+        font-size: 16px;
+      }
+    }
+
+    .pkpmodal-details-header-buttons svg {
+      color: var(--link-color);
     }
   }
 
@@ -70,6 +105,14 @@
     
   .vtex-pickup-points-modal-3-x-pickupListTitle {
     display: none;
+
+    @media (max-width:980px) {
+      display: block;
+      margin-top: 0;
+      color: var(--black-color);
+      font-size: 16px;
+      font-weight: 500;
+    }
   }
 
   .pkpmodal-points-item,
@@ -139,7 +182,8 @@
 
     .pkpmodal-pickup-point-sla-availability {
       border-color: #CCD5E0;
-      padding-left: 82px;
+      padding-left: 60px;
+      display: grid;
 
       .pkpmodal-pickup-point-price,
       .pkpmodal-pickup-point-sla {
@@ -176,8 +220,10 @@
       content: "Retirar en este punto";
       font-size: 14px;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 500;
       text-shadow: none;
+      text-transform: initial;
+      font-family: var(--font-1);
     }
   }
 
