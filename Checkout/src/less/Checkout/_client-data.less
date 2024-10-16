@@ -125,13 +125,18 @@
                     margin-right: 5px;
                   }
 
-                  .client-phone-mobile label {
-                    display: flex;
-                    align-items: flex-end;
-                    justify-content: left;
+                  .client-phone-mobile {
+                    display: none;
 
-                    span {
-                      margin: 0 5px;
+                    label {
+                      display: flex;
+                      align-items: flex-end;
+                      justify-content: left;
+                      margin-bottom: 8px;
+  
+                      span {
+                        margin: 0 5px;
+                      }
                     }
                   }
 
@@ -195,6 +200,14 @@
                   .error {
                     width: 100%;
                   }
+
+                  &.client-document {
+                    margin-right: 0;
+
+                    @media (max-width:980px) {
+                      width: 100%;
+                    }
+                  }
                 }
 
                 @media (max-width: 980px) {
@@ -212,6 +225,7 @@
                   text-transform: inital;
 
                   @media (max-width:980px) {
+                    display: none;
                     margin-bottom: 16px;
                   }
                 }
@@ -232,6 +246,10 @@
                     &#is-corporate-client::before {
                       content: "Quiero factura A";
                       font-size: 15px;
+
+                      @media(max-width: 980px) {
+                        font-size: 14px;
+                      }
                     }
 
                     &#not-corporate-client {
@@ -241,9 +259,27 @@
                         content: "No sumar";
                         font-size: 15px;
                       }
+
+                      @media (max-width: 980px) {
+                        margin-bottom: 16px;
+                      }
+                    }
+
+                    @media(max-width: 980px) {
+                      display: flex;
+                      width: auto;
+                      justify-content: center;
+                      padding: 12px;
+                      border: 1px solid var(--link-color);
+                      border-radius: 4px;
+                      color: var(--link-color);
+                      font-weight: 500;
                     }
                   }
                   
+                  @media(max-width: 980px) {
+                    width: 100%;
+                  }
                 }
 
                 .corporate-info-box[style="display: block;"] {
@@ -316,8 +352,8 @@
                 }
 
                 @media (max-width:980px) {
-                  margin-top: 24px;
-                  margin-bottom: 28px;
+                  margin-top: 0;
+                  margin-bottom: 16px;
                 }
               }
             

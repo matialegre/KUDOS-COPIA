@@ -1015,10 +1015,14 @@ p {
 .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pf .client-phone .client-phone-suffix {
   margin-right: 5px;
 }
+.orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pf .client-phone .client-phone-mobile {
+  display: none;
+}
 .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pf .client-phone .client-phone-mobile label {
   display: flex;
   align-items: flex-end;
   justify-content: left;
+  margin-bottom: 8px;
 }
 .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pf .client-phone .client-phone-mobile label span {
   margin: 0 5px;
@@ -1077,6 +1081,14 @@ p {
 .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pf p .error {
   width: 100%;
 }
+.orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pf p.client-document {
+  margin-right: 0;
+}
+@media (max-width: 980px) {
+  .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pf p.client-document {
+    width: 100%;
+  }
+}
 @media (max-width: 980px) {
   .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pf {
     grid-template-columns: 100%;
@@ -1093,6 +1105,7 @@ p {
 }
 @media (max-width: 980px) {
   .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pj .corporate-title {
+    display: none;
     margin-bottom: 16px;
   }
 }
@@ -1112,12 +1125,39 @@ p {
   content: "Quiero factura A";
   font-size: 15px;
 }
+@media (max-width: 980px) {
+  .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pj .links a#is-corporate-client::before {
+    font-size: 14px;
+  }
+}
 .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pj .links a#not-corporate-client {
   text-transform: initial;
 }
 .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pj .links a#not-corporate-client::after {
   content: "No sumar";
   font-size: 15px;
+}
+@media (max-width: 980px) {
+  .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pj .links a#not-corporate-client {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 980px) {
+  .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pj .links a {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    padding: 12px;
+    border: 1px solid var(--link-color);
+    border-radius: 4px;
+    color: var(--link-color);
+    font-weight: 500;
+  }
+}
+@media (max-width: 980px) {
+  .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pj .links {
+    width: 100%;
+  }
 }
 .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pj .corporate-info-box[style="display: block;"] {
   display: grid!important;
@@ -1186,8 +1226,8 @@ p {
 }
 @media (max-width: 980px) {
   .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .box-client-info-pj {
-    margin-top: 24px;
-    margin-bottom: 28px;
+    margin-top: 0;
+    margin-bottom: 16px;
   }
 }
 .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .box-client-info .newsletter {
@@ -1531,21 +1571,49 @@ p {
   border: none;
 }
 .shipping-data .shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-leanShippingOption {
-  background: transparent;
+  background: #F8FAFC;
   box-shadow: none;
-  border: 1px solid #CCD5E0;
   border-radius: 4px;
 }
+@media (min-width: 980px) {
+  .shipping-data .shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-leanShippingOption .shp-option-icon {
+    display: none;
+  }
+}
 .shipping-data .shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-leanShippingOption .vtex-omnishipping-1-x-leanShippingText {
-  border-color: #CCD5E0;
+  border: none;
 }
 .shipping-data .shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-leanShippingOption .vtex-omnishipping-1-x-leanShippingText .vtex-omnishipping-1-x-leanShippingTextLabelSingle {
+  color: #676F79;
   font-size: 14px;
+  font-weight: 400;
+}
+@media (min-width: 980px) {
+  .shipping-data .shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-leanShippingOption .vtex-omnishipping-1-x-leanShippingText .vtex-omnishipping-1-x-leanShippingTextLabelSingle {
+    margin-bottom: 10px;
+    border: none;
+  }
+}
+.shipping-data .shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-leanShippingOption .shp-option-text-price {
+  font-size: 18px;
+  font-weight: 500;
   color: var(--gray-color);
 }
-.shipping-data .shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-leanShippingOption .vtex-omnishipping-1-x-leanShippingText .vtex-omnishipping-1-x-optionPrice {
-  text-transform: uppercase;
-  color: var(--gray-color);
+@media (min-width: 980px) {
+  .shipping-data .shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-leanShippingOption .shp-option-text-price {
+    padding: 0;
+    margin-right: auto;
+    margin-left: 0;
+    text-align: left;
+  }
+}
+@media (min-width: 980px) {
+  .shipping-data .shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-leanShippingOption {
+    background: transparent;
+    display: grid;
+    border: 1px solid #676F79;
+    border-left-width: 6px;
+  }
 }
 @media (max-width: 980px) {
   .shipping-data .shipping-data .shipping-container .box-step .vtex-omnishipping-1-x-deliveryGroup {
@@ -2147,20 +2215,9 @@ p {
   display: flex;
   align-items: center;
 }
-#payment-data .accordion-group .accordion-inner .box-step .form-step .payment-group .payment-group-item::before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M10.0003 1.6665C5.40033 1.6665 1.66699 5.39984 1.66699 9.99984C1.66699 14.5998 5.40033 18.3332 10.0003 18.3332C14.6003 18.3332 18.3337 14.5998 18.3337 9.99984C18.3337 5.39984 14.6003 1.6665 10.0003 1.6665ZM10.0003 16.6665C6.31699 16.6665 3.33366 13.6832 3.33366 9.99984C3.33366 6.3165 6.31699 3.33317 10.0003 3.33317C13.6837 3.33317 16.667 6.3165 16.667 9.99984C16.667 13.6832 13.6837 16.6665 10.0003 16.6665Z' fill='%2396A3B6'/%3E%3Cpath d='M9.99967 14.1668C12.3009 14.1668 14.1663 12.3013 14.1663 10.0002C14.1663 7.69898 12.3009 5.8335 9.99967 5.8335C7.69849 5.8335 5.83301 7.69898 5.83301 10.0002C5.83301 12.3013 7.69849 14.1668 9.99967 14.1668Z' fill='%2396A3B6'/%3E%3C/svg%3E") no-repeat center center / contain;
-}
 #payment-data .accordion-group .accordion-inner .box-step .form-step .payment-group .payment-group-item.active {
   background: #E9EAED;
   border-color: #09344D;
-}
-#payment-data .accordion-group .accordion-inner .box-step .form-step .payment-group .payment-group-item.active::before {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M10.0003 1.6665C5.40033 1.6665 1.66699 5.39984 1.66699 9.99984C1.66699 14.5998 5.40033 18.3332 10.0003 18.3332C14.6003 18.3332 18.3337 14.5998 18.3337 9.99984C18.3337 5.39984 14.6003 1.6665 10.0003 1.6665ZM10.0003 16.6665C6.31699 16.6665 3.33366 13.6832 3.33366 9.99984C3.33366 6.3165 6.31699 3.33317 10.0003 3.33317C13.6837 3.33317 16.667 6.3165 16.667 9.99984C16.667 13.6832 13.6837 16.6665 10.0003 16.6665Z' fill='%232680EB'/%3E%3Cpath d='M9.99967 14.1668C12.3009 14.1668 14.1663 12.3013 14.1663 10.0002C14.1663 7.69898 12.3009 5.8335 9.99967 5.8335C7.69849 5.8335 5.83301 7.69898 5.83301 10.0002C5.83301 12.3013 7.69849 14.1668 9.99967 14.1668Z' fill='%232680EB'/%3E%3C/svg%3E") no-repeat center center / contain;
 }
 #payment-data .accordion-group .accordion-inner .box-step .form-step .payment-group .payment-group-item .payment-group-item-text {
   padding: 0;

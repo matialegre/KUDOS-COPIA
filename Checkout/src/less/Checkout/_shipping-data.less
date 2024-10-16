@@ -311,23 +311,49 @@
             border: none;
 
             .vtex-omnishipping-1-x-leanShippingOption {
-              background: transparent;
+              background: #F8FAFC;
               box-shadow: none;
-              border: 1px solid #CCD5E0;
               border-radius: 4px;
 
+              .shp-option-icon {
+                @media(min-width:980px) {
+                  display: none;
+                }
+              }
+
               .vtex-omnishipping-1-x-leanShippingText {
-                border-color: #CCD5E0;
+                border: none;
 
                 .vtex-omnishipping-1-x-leanShippingTextLabelSingle {
+                  color: #676F79;
                   font-size: 14px;
-                  color: var(--gray-color);
+                  font-weight: 400;
+
+                  @media(min-width:980px) {
+                    margin-bottom: 10px;
+                    border: none;
+                  }
                 }
-  
-                .vtex-omnishipping-1-x-optionPrice {
-                  text-transform: uppercase;
-                  color: var(--gray-color);
+              }
+
+              .shp-option-text-price {
+                font-size: 18px;
+                font-weight: 500;
+                color: var(--gray-color);
+                
+                @media(min-width:980px) {
+                  padding: 0;
+                  margin-right: auto;
+                  margin-left: 0;
+                  text-align: left;
                 }
+              }
+
+              @media(min-width:980px) {
+                background: transparent;
+                display: grid;
+                border: 1px solid #676F79;
+                border-left-width: 6px;
               }
             }
           }
