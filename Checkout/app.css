@@ -435,6 +435,7 @@ p {
     border-bottom: none;
     padding: 12px;
     border-top: none;
+    overflow: auto;
   }
 }
 @media (max-width: 768px) {
