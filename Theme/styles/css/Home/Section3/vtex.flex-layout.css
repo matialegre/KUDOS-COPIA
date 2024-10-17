@@ -1,5 +1,5 @@
 .flexRow--nuevos-lanzamientos{
-    background: lightcyan;
+    /* background: lightcyan; */
 }
 
 .flexRow--nuevos-lanzamientos :global(.vtex-store-components-3-x-container){
@@ -14,7 +14,7 @@
     justify-content: center;
     max-width: var(--max-width-content-desktop);
     width: var(--max-width-content-desktop);
-    background: lightpink;
+    /* background: lightpink; */
 }
 
 @media (max-width: 640px) {

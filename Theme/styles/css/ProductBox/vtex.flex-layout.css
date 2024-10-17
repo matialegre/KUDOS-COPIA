@@ -1,35 +1,14 @@
-/* CONTENEDOR SLIDER TALLES  */
+.flexRow--section-image-and-cucardas-container{
+    position: relative;
+}
 
-.flexRow--custom-sku-slider-container{
+.flexRowContent--section-image-and-cucardas-container{
+    max-height: 285px;
+}
+
+.flexRow--sku-selector-talles-container{
     z-index: 1;
     position: absolute;
-    top: 0;
     left: 0;
-    width: 285px;
-    height: 285px;
-    background: lightcyan;
+    bottom: 0;
 }
-
-.flexRowContent--custom-sku-slider-container{
-    justify-content: center;
-    align-items: flex-end;
-    height: 100%;
-}
-
-.flexRowContent--custom-sku-slider-container .stretchChildrenWidth:nth-child(0n+1){
-    transition: .1s;
-    opacity: 0;
-    visibility: hidden;
-    min-width: 100%;
-}
-
-.flexRowContent--custom-sku-slider-container:hover .stretchChildrenWidth:nth-child(0n+1){
-    opacity: 1;
-    visibility: visible;
-}
-
-.flexRowContent--custom-sku-slider-container .stretchChildrenWidth:nth-child(0n+2){
-    display: none;
-}
-  
-/* FIN CONTENEDOR SLIDER TALLES  */

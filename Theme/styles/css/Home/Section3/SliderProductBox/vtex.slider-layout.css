@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /*alto de los product boxs en desktop*/
 /*alto de los product boxs en mobile*/
+/*ancho maximo de slider en desktop*/
+/*ancho maximo de slider en mobile*/
 /*ancho de los product boxs en desktop*/
 /*ancho de los product boxs en mobile*/
 /*cantidad de product boxs que se muestran en este slider en desktop*/
@@ -8,24 +10,14 @@
 /*separacion gap entre los product boxs desktop*/
 /*separacion gap entre los product boxs mobile*/
 /**/
+/*OPERACIONES MATEMATICAS*/
+/*FIN OPERACIONES MATEMATICAS*/
 :global(.vtex-flex-layout-0-x-flexRow--product-summary-container) {
-  overflow: hidden;
   margin: auto;
-  margin-top: 34.5px;
+  overflow: hidden;
   display: flex;
   justify-content: center;
-  max-width: var(--max-width-content-desktop);
-  width: var(--max-width-content-desktop);
-}
-
-@media (max-width: 640px) {
-  
-  :global(.vtex-flex-layout-0-x-flexRow--product-summary-container) {
-    margin-top: 29px;
-    max-width: var(--max-width-content-mobile);
-    width: var(--max-width-content-mobile);
-  }
-
+  max-width: 1200px;
 }
 
 :global(.vtex-flex-layout-0-x-flexRow--product-summary-container) :global(.vtex-store-components-3-x-container) {
@@ -34,45 +26,54 @@
 }
 
 :global(.vtex-flex-layout-0-x-flexRowContent--product-summary-container) {
-  max-width: 1220.23px;
-  width: 1220.23px;
+  margin-top: 34px;
+  max-width: 1220px;
+  width: 1220px;
   background: pink;
 }
 
 .sliderLayoutContainer--product-summary-slider {
-  align-items: flex-start;
-  height: 517px;
   background: orange;
 }
-
-@media (max-width: 640px) {
-
-  .sliderLayoutContainer--product-summary-slider {
-    height: 387px;
-  }
-
-}
 .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider {
-  height: 486px;
+  height: 518px;
 }
-.sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-store-components-3-x-imageElement--product-summary-slider) {
-  height: 486px;
-  object-fit: cover;
+.sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-product-summary-2-x-containerNormal) {
+  align-items: center;
+  display: flex;
+}
+.sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-product-summary-2-x-containerNormal) :global(.vtex-product-summary-2-x-clearLink) {
+  min-width: 285px;
+  max-width: 285px;
+  width: 285px;
+  background: red;
+}
+.sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-product-summary-2-x-containerNormal) :global(.vtex-product-summary-2-x-clearLink) :global(.vtex-product-summary-2-x-element){
+  cursor: auto;
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: 640px) {
-
+  :global(.vtex-flex-layout-0-x-flexRow--product-summary-container) {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 350px;
+  }
   :global(.vtex-flex-layout-0-x-flexRowContent--product-summary-container) {
-    max-width: 349px;
-    width: 349px;
+    max-width: 360px;
+    width: 360px;
     background: pink;
   }
-
   .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider {
-    height: 346px;
+    height: 387px;
   }
-  .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-store-components-3-x-imageElement--product-summary-slider) {
-    height: 346px;
+  .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-product-summary-2-x-containerNormal) :global(.vtex-product-summary-2-x-clearLink) {
+    min-width: 170px;
+    max-width: 170px;
+    width: 170px;
+    background: red;
   }
 }
 /*ancho de los dots desktop*/
@@ -87,6 +88,7 @@
 /*color del dot seleccionado*/
 .paginationDotsContainer--product-summary-slider {
   gap: 8px;
+  margin-bottom: 49px;
 }
 
 .paginationDot--product-summary-slider {
@@ -105,7 +107,7 @@
 @media (max-width: 640px) {
   .paginationDotsContainer--product-summary-slider {
     gap: 8px;
-    margin-bottom: 0px;
+    margin-bottom: 23px;
   }
   .paginationDot--product-summary-slider {
     border: 0;
@@ -129,6 +131,8 @@
 /*margen de separacion que el boton derecho para pasar de product boxs debe tener con respecto al borde del slider en desktop*/
 /*margen de separacion que el boton derecho para pasar de product boxs debe tener con respecto al borde del slider en mobile*/
 /*image del boton derecho para pasar de product boxs*/
+/*ancho maximo de slider en desktop*/
+/*ancho maximo de slider en mobile*/
 /*ancho de los product boxs en desktop*/
 /*ancho de los product boxs en mobile*/
 /*cantidad de product boxs que se muestran en este slider en desktop*/
@@ -152,9 +156,9 @@
 
 .sliderLeftArrow--product-summary-slider::after {
   content: "";
-  width: 15px;
-  height: 24px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Capa_1' x='0px' y='0px' width='auto' height='auto' viewBox='0 0 306 306' style='enable-background:new 0 0 306 306;' xml:space='preserve'%3E%3Cpolygon points='247.35,35.7 211.65,0 58.65,153 211.65,306 247.35,270.3 130.05,153 '/%3E%3C/svg%3E");
+  width: 35px;
+  height: 42px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none'%3E%3Cpath d='M10.77 16.7562L17.8963 23.4137C18.4 23.8837 19.1925 23.8587 19.6625 23.3537C20.1338 22.8487 20.1075 22.0574 19.6038 21.5862L12.5525 14.9999L19.6038 8.41368C20.1075 7.94243 20.135 7.15118 19.6638 6.64618C19.4175 6.38243 19.085 6.24993 18.75 6.24993C18.4438 6.24993 18.1375 6.36118 17.8963 6.58618L10.77 13.2437C10.2738 13.7087 10 14.3312 10 14.9999C10 15.6687 10.2738 16.2912 10.77 16.7562Z' fill='%23676F79'/%3E%3C/svg%3E");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -166,9 +170,9 @@
 
 .sliderRightArrow--product-summary-slider::after {
   content: "";
-  width: 15px;
-  height: 24px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Capa_1' x='0px' y='0px' width='auto' height='auto' viewBox='0 0 306 306' style='enable-background:new 0 0 306 306;' xml:space='preserve'%3E%3Cpolygon points='58.65,267.75 175.95,153 58.65,35.7 94.35,0 247.35,153 94.35,306 '/%3E%3C/svg%3E");
+  width: 35px;
+  height: 42px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none'%3E%3Cpath d='M19.2301 13.2438L12.1039 6.58632C11.6001 6.11632 10.8076 6.14132 10.3376 6.64632C9.86636 7.15132 9.89261 7.94257 10.3964 8.41382L17.4476 15.0001L10.3964 21.5863C9.89261 22.0576 9.86511 22.8488 10.3364 23.3538C10.5826 23.6176 10.9151 23.7501 11.2501 23.7501C11.5564 23.7501 11.8626 23.6388 12.1039 23.4138L19.2301 16.7563C19.7264 16.2913 20.0001 15.6688 20.0001 15.0001C20.0001 14.3313 19.7264 13.7088 19.2301 13.2438Z' fill='%2396A3B6'/%3E%3C/svg%3E");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -180,15 +184,15 @@
   }
   .sliderLeftArrow--product-summary-slider::after {
     content: "";
-    width: 10px;
-    height: 20px;
+    width: 0px;
+    height: 0px;
   }
   .sliderRightArrow--product-summary-slider {
     margin-right: 4.5px;
   }
   .sliderRightArrow--product-summary-slider::after {
     content: "";
-    width: 10px;
-    height: 20px;
+    width: 0px;
+    height: 0px;
   }
 }

@@ -4,8 +4,8 @@
         "component": "SearchBarCustom"
     },
 
-    "custom-sku-slider": {
-        "component": "CustomSkuSlider"
+    "select-sku-in-product-box": {
+        "component": "SelectSkuInProductBox"
     }
 
 }

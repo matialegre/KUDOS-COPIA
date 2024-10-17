@@ -3,21 +3,38 @@
   "product-summary.shelf#product-box": {
 
       "props":{
-        "blockclass": "product-summary-container"
+        // "blockclass": "product-summary-container"
+        "blockclass": "product-box"
       },
   
       "children": [
-          "flex-layout.row#cucardasContainer",
-          "flex-layout.row#customSkuSliderContainer",
-          "product-summary-image",
+          "flex-layout.row#sectionImageAndCucardasContainer",
           "product-summary-brand",
           "product-summary-name",
           "product-rating-inline",
           "product-summary-price",
           "rich-text#envio-gratis",
-          "product-summary-sku-selector#product-box-colors"
+          "flex-layout.row#skuSelectorColorContainer",
+          "select-sku-in-product-box"
       ]
       
+  },
+
+  "flex-layout.row#sectionImageAndCucardasContainer": {
+
+      "props": {
+          "blockClass": "section-image-and-cucardas-container",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+      },
+
+      "children": [
+          "flex-layout.row#cucardasContainer",
+          "flex-layout.row#skuSelectorTallesContainer",
+          "product-summary-image"
+      ]
+  
   },
 
   "flex-layout.row#cucardasContainer": {
@@ -66,45 +83,34 @@
 
   },
 
-  "flex-layout.row#customSkuSliderContainer": {
+  "flex-layout.row#skuSelectorTallesContainer": {
 
     "props": {
-      "blockClass": "custom-sku-slider-container"
+      "blockClass": "sku-selector-talles-container"
     },
 
     "children": [ 
-      "product-summary-sku-selector#product-box-for-custom",
-      "custom-sku-slider" 
+      
     ]
 
   },
 
-  "product-summary-sku-selector#product-box-for-custom": {
+  "flex-layout.row#skuSelectorColorContainer": {
 
     "props": {
-      "blockClass": "skuSelector-product-box",
-      "disableUnavailableSelectOptions": true,
-      "hideImpossibleCombinations": true,
-      "sortVariationsByLabel": true,
-      "initialSelection": "empty",
-      "showVariationsLabels": "none",
-      "visibility": "always",
-      "visibleVariations": ["Talle"]
-    }
+      "blockClass": "sku-selector-color-container"
+    },
+
+    "children": [ 
+      
+    ]
 
   },
 
-  "product-summary-sku-selector#product-box-colors": {
+  "select-sku-in-product-box": {
 
     "props": {
-      "blockClass": "skuSelector-product-box",
-      "disableUnavailableSelectOptions": true,
-      "hideImpossibleCombinations": true,
-      "sortVariationsByLabel": true,
-      "initialSelection": "empty",
-      "showVariationsLabels": "none",
-      "visibility": "always",
-      "visibleVariations": ["Color"]
+      "AddToCartButton": "add-to-cart-button"
     }
 
   }
