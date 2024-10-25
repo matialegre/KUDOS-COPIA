@@ -13,6 +13,17 @@ import ListaColores from './ListaColores/ListaColores';
 // STYLE 
 import style from './index.css';
 
+const Modal = ( { component, nodeDOM, context, set, hints } ) => {
+
+  return ReactDOM.createPortal(
+
+    React.createElement( component, { productContext: context, set: set, hints: hints } ),
+    nodeDOM
+
+  );
+
+};
+
 const SelectSkuInProductBox = ( { AddToCartButton } ) => {
 
   const productContext = useProduct();
@@ -139,33 +150,23 @@ const SelectSkuInProductBox = ( { AddToCartButton } ) => {
       // ingresar nombre de la clase del contenedor padre de este componente
       const contenedorTalles = ".vtex-flex-layout-0-x-flexRowContent--sku-selector-talles-container";
       
-      // ingresar nombre de la clase del contenedor padre de este componente
+      // // ingresar nombre de la clase del contenedor padre de este componente
       const contenedorColores = ".vtex-flex-layout-0-x-flexRowContent--sku-selector-color-container";
       
-      const tallesContainer = myRef.current.parentElement.querySelector( contenedorTalles );
-      const coloresContainer = myRef.current.parentElement.querySelector( contenedorColores );
+      const tallesContainer2 = myRef.current.parentElement.querySelector( contenedorTalles );
+      const coloresContainer2 = myRef.current.parentElement.querySelector( contenedorColores );
 
-      //ESTA CLASE NO SE DEBE MODIFICAR, REPLICA LA NOTIFICACION NATIVA DE VTEX QUE DA AVISO DE PRODUCTO AGREGADO AL CARRITO
-      const searchFooter = setInterval(() => {
-        
-        const footerContainer = document.querySelector(".vtex-store-footer-2-x-footerLayout");
-        
-        if ( footerContainer ) {
-          
-          setFooterContainer( footerContainer );
-          clearInterval( searchFooter );
-
-        }
-
-      }, 200);
+      // //ESTA CLASE NO SE DEBE MODIFICAR, REPLICA LA NOTIFICACION NATIVA DE VTEX QUE DA AVISO DE PRODUCTO AGREGADO AL CARRITO
+      const footerContainer2 = document.querySelector(".vtex-store-footer-2-x-footerLayout");
 
       myRef.current.classList.add("vtex-button-add-to-cart-custom");
-
-      if( tallesContainer && coloresContainer ) {
-
-        setTallesContainer( tallesContainer );
-        setColoresContainer( coloresContainer );
       
+      if( tallesContainer2 && coloresContainer2 ) {
+        
+        setTallesContainer( tallesContainer2 );
+        setColoresContainer( coloresContainer2 );
+        // setFooterContainer( footerContainer2 );
+
       }
 
     }
@@ -173,42 +174,71 @@ const SelectSkuInProductBox = ( { AddToCartButton } ) => {
   })
   
   const customAddToCart = productContext?.product?.items?.length > 1;
+
+  const array = [
+    { "component": ListaTalles, "nodeDOM": tallesContainer, "context": productContext, "set": setTalleSeleccionado  },
+    { "component": ListaColores, "nodeDOM": coloresContainer, "context": productContext, "set": setColorSeleccionado  }
+  ]
   
   if ( customAddToCart ) {
+    
+    if ( tallesContainer && coloresContainer ) {
 
-    if ( tallesContainer && coloresContainer && footerContainer ) {
-      
       return (
 
         <>
 
-          {ReactDOM.createPortal(
+          {/* {
+          
+            canUseDOM ?
+
+              ReactDOM.createPortal(
     
-            <ListaTalles productContext={productContext} setTalleSeleccionado={setTalleSeleccionado} hints={hints}/>,
-            tallesContainer
+                <ListaTalles productContext={productContext} setTalleSeleccionado={setTalleSeleccionado} hints={hints}/>,
+                tallesContainer
               
-          )}
-  
-          {ReactDOM.createPortal(
+              )
+
+              // ReactDOM.createPortal(
       
-            <ListaColores productContext={productContext} setColorSeleccionado={setColorSeleccionado} hints={hints}/>,
-            coloresContainer
+              //   <ListaColores productContext={productContext} setColorSeleccionado={setColorSeleccionado} hints={hints}/>,
+              //   coloresContainer
+    
+              // ) &&
 
-          )}
-
-          {ReactDOM.createPortal(
+              // ReactDOM.createPortal(
       
-            <div className={ activeNotifyAddToCart ? `${style.notifyAddToCartContainer} ${style.show}` : style.notifyAddToCartContainer }>
+              //   <div className={ activeNotifyAddToCart ? `${style.notifyAddToCartContainer} ${style.show}` : style.notifyAddToCartContainer }>
 
-              <p>{nootifyAddToCartText}</p>
+              //     <p>{nootifyAddToCartText}</p>
 
-            </div>,
+              //   </div>,
 
-            footerContainer
+              //   footerContainer
+      
+              // )
+
+            :
+
+              <></>
+
+          } */}
+
+          {
+          
+            array.map( item => {
+
+              return (
+
+                React.createElement( Modal, { component: item.component, nodeDOM: item.nodeDOM, context: item.context, set: item.set, hints: hints } )
+
+              )
+
+            })
+            
+          }
   
-          )}
-  
-          <button className={style.buttonAddToCartCustom} ref={myRef} onClick={ e => addToCart( e ) }>Comprar</button>
+          <button className={style.buttonAddToCartCustom} ref={myRef} onClick={ e => addToCart( e ) }>Comprar 2</button>
   
         </>
     
@@ -216,7 +246,7 @@ const SelectSkuInProductBox = ( { AddToCartButton } ) => {
 
     }
 
-    return <button className={style.buttonAddToCartCustom} ref={myRef} onClick={ e => addToCart( e ) }>Comprar</button>
+    return <button className={style.buttonAddToCartCustom} ref={myRef} onClick={ e => addToCart( e ) }>Comprar 1</button>
 
   }
 

@@ -7,13 +7,23 @@ import { nextSize } from './SliderEffect/nextSize';
 // STYLES 
 const style = require('./ListaTalles.css');
 
-const ListaTalles = ( { productContext, setTalleSeleccionado } ) => {
+const ListaTalles = ( { productContext, setTalleSeleccionado, hints } ) => {
 
     // FUNCTIONS 
-    const clickInSize = ( e, size ) => {
-
+    const clickInSize = ( e, size, classNameItem ) => {
+        
         e.preventDefault();
         e.stopPropagation();
+        
+        let items = document.querySelectorAll( `.${classNameItem}` );
+        
+        for ( let index = 0; index < items.length; index++ ) {
+
+            items[index].classList.remove( style.active );
+            
+        }
+
+        e.target.classList.add( style.active );
 
         setTalleSeleccionado( size );
 
@@ -21,6 +31,8 @@ const ListaTalles = ( { productContext, setTalleSeleccionado } ) => {
     // FIN FUNCTIONS 
 
     const contSliderRef = useRef();
+    const btnMoveItemLeftRef = useRef();
+    const btnMoveItemRightRef = useRef();
 
     let allSizes = [];
     
@@ -39,9 +51,21 @@ const ListaTalles = ( { productContext, setTalleSeleccionado } ) => {
     
     return (
 
-        <div className={style.contGralSlider}>
+        <div className={`${style.contGralSlider} vtex-contGralSlider`}>
 
-            { allSizes.length > 4 ? <div className={`${style.btn_move_item} ${style.left}`} onClick={ e => previousSize( e, contSliderRef.current ) }>+</div> : <></> }
+            { 
+            
+                allSizes.length > 5 ? 
+                
+                    <div className={`${style.btn_move_item} ${style.left}`} onClick={ e => { e.preventDefault(); e.stopPropagation(); } }>
+                        <div onClick={ e => previousSize( e, contSliderRef.current, btnMoveItemLeftRef.current, btnMoveItemRightRef.current, hints ) } ref={btnMoveItemLeftRef}></div>
+                    </div> 
+                
+                : 
+                
+                    <></> 
+                        
+            }
             
             <div className={style.wrapperSlider}>
 
@@ -53,11 +77,7 @@ const ListaTalles = ( { productContext, setTalleSeleccionado } ) => {
 
                             return (
 
-                                <div className={style.item} onClick={ e => clickInSize( e, size ) }>
-
-                                    <div className={style.productBox}>{size}</div>
-
-                                </div>
+                                <div className={style.item} onClick={ e => clickInSize( e, size, style.item ) }>{size}</div>
 
                             )
 
@@ -69,7 +89,19 @@ const ListaTalles = ( { productContext, setTalleSeleccionado } ) => {
 
             </div>
 
-            { allSizes.length > 4 ? <div className={`${style.btn_move_item} ${style.right}`} onClick={ e => nextSize( e, contSliderRef.current ) }>+</div> : <></> }
+            { 
+            
+                allSizes.length > 5 ? 
+                
+                    <div className={`${style.btn_move_item} ${style.right}`} onClick={ e => { e.preventDefault(); e.stopPropagation(); } }>
+                        <div onClick={ e => nextSize( e, contSliderRef.current, btnMoveItemLeftRef.current, btnMoveItemRightRef.current, hints ) } ref={btnMoveItemRightRef}></div>
+                    </div> 
+                
+                : 
+                
+                    <></> 
+                    
+            }
 
         </div>
 

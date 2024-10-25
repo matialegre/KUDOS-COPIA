@@ -26,9 +26,10 @@
 @media (max-width: 640px) {
 
     .flexRowContent--info-square-container{
-        margin-top: 0px;
+        margin-top: 27px;
         max-width: var(--max-width-content-mobile);
         width: var(--max-width-content-mobile);
+        height: 33px;
         border: none;
         background: transparent;
     }

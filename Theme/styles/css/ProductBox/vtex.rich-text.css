@@ -1,0 +1,21 @@
+.container--envio-gratis-product-box{
+    margin-top: 12px;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+
+    .container--envio-gratis-product-box{
+        margin-top: 8px;
+    }
+
+}
+
+.paragraph--envio-gratis-product-box{
+    font-family: "Gotham";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: #008042;
+}

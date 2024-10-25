@@ -1,0 +1,61 @@
+.buttonAddToCartCustom{
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -1px;
+    margin-left: -1px;
+    width: 285px;
+    height: 32px;
+    font-family: 'Gotham';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    border: none;
+    background: #CD4F4F;
+}
+
+@media (max-width: 640px) {
+
+    .buttonAddToCartCustom{
+        visibility: visible;
+        opacity: 1;
+        width: 170px;
+    }
+
+}
+
+.buttonAddToCartCustom:hover{
+    background: #b54545;
+}
+
+.notifyAddToCartContainer{
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 16px;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    bottom: 0;
+    margin-left: 32px;
+    margin-bottom: 32px;
+    width: 288px;
+    height: 56px;
+    border-radius: 4px;
+    background: #000000;
+    transition: .2s;
+}
+
+.notifyAddToCartContainer.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.notifyAddToCartContainer p{
+    font-size: 18px;
+    color: #FFFFFF;
+}

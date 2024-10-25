@@ -6,9 +6,73 @@
     max-height: 285px;
 }
 
+@media (max-width: 640px) {
+
+    .flexRowContent--section-image-and-cucardas-container{
+        max-height: 170px;
+    }
+
+}
+
 .flexRow--sku-selector-talles-container{
     z-index: 1;
     position: absolute;
     left: 0;
     bottom: 0;
+    visibility: hidden;
+    opacity: 0;
 }
+
+@media (max-width: 640px) {
+
+    .flexRow--sku-selector-talles-container{
+        visibility: visible;
+        opacity: 1;
+    }
+
+}
+
+.flexRowContent--sku-selector-color-container{
+    margin-top: 14px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--sku-selector-color-container{
+        margin-top: 11px;
+    }
+
+}
+
+/* CONTENEDOR DE CUCARDAS  */
+.flexRow--cucardas-container{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 285px;
+}
+
+.flexRowContent--cucardas-container{
+    height: 100%;
+}
+
+.flexRowContent--cucardas-container .stretchChildrenWidth{
+    min-width: 100%;
+    height: 100%;
+}
+
+.flexRowContent--cucardas-container :global(.vtex-product-price-1-x-savingsPercentage){
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 14px;
+    margin-left: 20px;
+    font-family: "Gotham";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    color: var(--color-red-1);
+}
+/* FIN CONTENEDOR DE CUCARDAS  */

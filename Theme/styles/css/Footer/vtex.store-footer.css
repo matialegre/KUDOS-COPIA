@@ -1,3 +1,4 @@
 .footerLayout{
+    position: relative;
     background: var(--background-footer);
 }

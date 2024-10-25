@@ -1,0 +1,51 @@
+{
+
+    "flex-layout.row#ofertas": {
+
+        "props": {
+            "blockClass": "nuevos-lanzamientos",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [ "flex-layout.col#ofertasCol" ]
+
+    },
+
+    "flex-layout.col#ofertasCol": {
+
+        "props": {
+            "blockClass": "nuevos-lanzamientos-col",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#title-ofertas",
+            "link#verTodoofertas"
+        ]
+    
+    },
+
+    "rich-text#title-ofertas": {
+
+        "props": {
+            "blockClass": "title-product-slider",
+            "text": "OFERTAS"
+        }
+
+    },
+
+    "link#verTodoofertas": {
+
+        "props": {
+            "blockClass": "ver-todo-product-slider",
+            "href": "/ofertas",
+            "label": "Ver todos"
+        }
+
+    }
+
+}

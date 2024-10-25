@@ -27,18 +27,32 @@
 
 :global(.vtex-flex-layout-0-x-flexRowContent--product-summary-container) {
   margin-top: 34px;
-  max-width: 1220px;
-  width: 1220px;
-  background: pink;
+  max-width: 1214px;
+  width: 1214px;
 }
 
 .sliderLayoutContainer--product-summary-slider {
-  background: orange;
+  align-items: flex-start;
 }
 .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider {
-  height: 518px;
+  height: 578px;
+}
+
+.sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider .sliderTrack--product-summary-slider{
+  max-height: 521px;
+  height: 521px;
+}
+
+@media (max-width: 640px) {
+
+  .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider .sliderTrack--product-summary-slider{
+    max-height: 390px;
+    height: 390px;
+  }
+
 }
 .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-product-summary-2-x-containerNormal) {
+  overflow: unset;
   align-items: center;
   display: flex;
 }
@@ -46,10 +60,10 @@
   min-width: 285px;
   max-width: 285px;
   width: 285px;
-  background: red;
+  background: var(--color-white);
 }
 .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-product-summary-2-x-containerNormal) :global(.vtex-product-summary-2-x-clearLink) :global(.vtex-product-summary-2-x-element){
-  cursor: auto;
+  cursor: pointer;
   margin: 0;
   padding: 0;
 }
@@ -64,16 +78,14 @@
   :global(.vtex-flex-layout-0-x-flexRowContent--product-summary-container) {
     max-width: 360px;
     width: 360px;
-    background: pink;
   }
   .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider {
-    height: 387px;
+    height: 418px;
   }
   .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-product-summary-2-x-containerNormal) :global(.vtex-product-summary-2-x-clearLink) {
     min-width: 170px;
     max-width: 170px;
     width: 170px;
-    background: red;
   }
 }
 /*ancho de los dots desktop*/
@@ -88,7 +100,6 @@
 /*color del dot seleccionado*/
 .paginationDotsContainer--product-summary-slider {
   gap: 8px;
-  margin-bottom: 49px;
 }
 
 .paginationDot--product-summary-slider {
@@ -107,7 +118,6 @@
 @media (max-width: 640px) {
   .paginationDotsContainer--product-summary-slider {
     gap: 8px;
-    margin-bottom: 23px;
   }
   .paginationDot--product-summary-slider {
     border: 0;
@@ -144,6 +154,7 @@
   border: 0;
   margin: 0;
   padding: 0;
+  margin-top: 118px;
 }
 
 .caretIcon--product-summary-slider {

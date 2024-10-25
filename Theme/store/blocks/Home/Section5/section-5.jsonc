@@ -1,0 +1,51 @@
+{
+
+    "flex-layout.row#productosDestacados": {
+
+        "props": {
+            "blockClass": "nuevos-lanzamientos",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [ "flex-layout.col#productosDestacadosCol" ]
+
+    },
+
+    "flex-layout.col#productosDestacadosCol": {
+
+        "props": {
+            "blockClass": "nuevos-lanzamientos-col",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#title-productos-destacados",
+            "link#verTodoproductosDestacados"
+        ]
+    
+    },
+
+    "rich-text#title-productos-destacados": {
+
+        "props": {
+            "blockClass": "title-product-slider",
+            "text": "PRODUCTOS DESTACADOS"
+        }
+
+    },
+
+    "link#verTodoproductosDestacados": {
+
+        "props": {
+            "blockClass": "ver-todo-product-slider",
+            "href": "/productos-destacados",
+            "label": "Ver todos"
+        }
+
+    }
+
+}
