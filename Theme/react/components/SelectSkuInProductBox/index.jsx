@@ -4,7 +4,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useProduct } from "vtex.product-context";
 import { useOrderItems } from "vtex.order-items/OrderItems";
-import { useRuntime, canUseDOM } from 'vtex.render-runtime';
+import { useRuntime } from 'vtex.render-runtime';
 
 // COMPONENTS 
 import ListaTalles from './ListaTalles/ListaTalles';

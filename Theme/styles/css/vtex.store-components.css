@@ -1,5 +1,6 @@
 /* VARIABLES */
 :global(.vtex-store__template) {
+    overflow: hidden;
     --max-width-content-desktop: 1200px;
     --max-width-content-mobile: 350px;
     /* --max-width-content-mobile-2: 360px; */

@@ -9,7 +9,7 @@
 .content--loginOptions{
     position: relative;
     margin-top: 66px;
-    margin-right: -85px;
+    /* margin-right: -85px; */
     /* margin-right: -29px; */
     width: 368px;
     height: 242px;
@@ -66,7 +66,7 @@
 .content--emailVerification{
     padding: 0;
     margin-top: 66px;
-    margin-right: -85px;
+    /* margin-right: -85px; */
     /* margin-right: -29px; */
     width: 368px;
     background: #FFFFFF;
@@ -176,7 +176,7 @@
 .content--codeConfirmation{
     padding: 0;
     margin-top: 66px;
-    margin-right: -85px;
+    /* margin-right: -85px; */
     /* margin-right: -29px; */
     width: 368px;
     background: #FFFFFF;
@@ -385,7 +385,7 @@
 .content--emailAndPassword{
     padding: 0;
     margin-top: 66px;
-    margin-right: -85px;
+    /* margin-right: -85px; */
     /* margin-right: -29px; */
     width: 368px;
     background: #FFFFFF;
@@ -503,7 +503,7 @@
 .content--beginCreatePass{
     padding: 0;
     margin-top: 66px;
-    margin-right: -85px;
+    /* margin-right: -85px; */
     /* margin-right: -29px; */
     width: 368px;
     background: #FFFFFF;
@@ -919,4 +919,9 @@
 
 .googleOptionBtn :global(.vtex-button) :global(.vtex-button__label){
     padding: 0;
+}
+
+/* CREAR NUEVA CUENTA*/
+.content--recoveryPassword{
+    margin-top: 66px;
 }
