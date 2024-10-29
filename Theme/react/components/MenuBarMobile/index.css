@@ -43,6 +43,15 @@
     height: 24px;
 }
 
+.iconMenuBar .containerSearchBar{
+    margin: 0;
+    padding: 0;
+}
+
+.iconMenuBar .containerSearchBar .modalSearchBar{
+    position: fixed;
+}
+
 .iconMenuBar.active{
     border-bottom: 3px solid #09344D;
 }

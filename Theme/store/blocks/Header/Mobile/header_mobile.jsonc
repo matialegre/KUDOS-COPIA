@@ -12,7 +12,19 @@
             "blockClass": "sticky-header-mobile"
         },
 
-        "children": ["flex-layout.row#wrapperRowHeaderMobile", "menu-bar-mobile"]
+        "children": [
+            "flex-layout.row#wrapperRowHeaderMobile", 
+            "menu-bar-mobile"
+        ]
+
+    },
+
+    "menu-bar-mobile": {
+
+        "props": {
+            "SearchBar": "search-bar-custom",
+            "MiniCart": "minicart.v2"
+        }
 
     },
 
