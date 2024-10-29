@@ -71,7 +71,7 @@
     letter-spacing: 0.1px;
     color: #000000;
     border: 1px solid #CCD5E0;
-    background: rgb( 255, 255, 255, 0.5 );
+    background: #FFFFFF;
 }
 
 @media (max-width: 640px) {
