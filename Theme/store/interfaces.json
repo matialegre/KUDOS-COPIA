@@ -6,6 +6,10 @@
 
     "select-sku-in-product-box": {
         "component": "SelectSkuInProductBox"
+    },
+
+    "menu-bar-mobile": {
+        "component": "MenuBarMobile"
     }
 
 }

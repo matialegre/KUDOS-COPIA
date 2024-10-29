@@ -1,0 +1,48 @@
+.wrapperMenuBar{
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: .3s;
+    background: #FFF;
+    box-shadow: 0px -4px 10px -4px rgba(0, 0, 0, 0.20);
+}
+
+.wrapperMenuBar.show{
+    visibility: visible;
+    opacity: 1;
+    height: 61px;
+}
+
+.wrapperMenuBar.hidden{
+    visibility: hidden;
+    opacity: 0;
+    height: 0px;
+}
+
+.containerMenuBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 276px;
+}
+
+.iconMenuBar{
+    display: flex;
+    align-items: flex-start;
+    width: 24px;
+    height: 37px;
+    border-bottom: 3px solid transparent;
+}
+
+.iconMenuBar img{
+    width: 24px;
+    height: 24px;
+}
+
+.iconMenuBar.active{
+    border-bottom: 3px solid #09344D;
+}

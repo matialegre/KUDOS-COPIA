@@ -12,7 +12,7 @@
             "blockClass": "sticky-header-mobile"
         },
 
-        "children": ["flex-layout.row#wrapperRowHeaderMobile"]
+        "children": ["flex-layout.row#wrapperRowHeaderMobile", "menu-bar-mobile"]
 
     },
 
