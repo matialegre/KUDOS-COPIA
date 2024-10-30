@@ -17,10 +17,18 @@ const MiniCartCustom = ( { MiniCart } ) => {
             
             const intervalContainer = setInterval( () => {
 
+                const isCartEmpty = document.querySelector( `.vtex-minicart-2-x-minicartEmptyStateContainer` );
+
+                if ( isCartEmpty ) {
+                    
+                    clearInterval( intervalContainer );
+
+                }
+
                 const buttonsContainer = document.querySelector( ".vtex-minicart-2-x-minicartCheckoutButton" );
 
                 if ( buttonsContainer ) {
-
+                    
                     clearInterval( intervalContainer );
 
                     const buttonSeguirComprando = document.createElement( "div" );
@@ -28,7 +36,7 @@ const MiniCartCustom = ( { MiniCart } ) => {
                     buttonSeguirComprando.innerText = "Seguir comprando";
 
                     buttonsContainer.append( buttonSeguirComprando );
-
+                    
                     buttonsContainer.addEventListener( "click", () => {
 
                         const closeButton = document.querySelector( ".vtex-minicart-2-x-closeIconButton" );
