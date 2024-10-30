@@ -1,0 +1,33 @@
+.flexRowContent--order-placed-order,
+.flexRowContent--order-placed-total {
+  max-width: 1200px;
+  margin: auto;
+}
+.flexRowContent--order-placed-order {
+  border-bottom: 1px solid #E9EAED;
+}
+.flexRowContent--order-placed-mobile {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 1024px) {
+
+  .flexColChild--order-date {
+    padding: 0 24px;
+  }
+
+  .flexRowContent--order-placed-order {
+    margin-bottom: 0;
+    padding-bottom: 24px;
+    border-bottom: none;
+  }
+  .flexRowContent--order-buttons {
+    display: none;
+  }
+  .flexRowContent--order-placed-mobile {
+    display: block;
+    padding: 0 10px;
+  }
+
+}

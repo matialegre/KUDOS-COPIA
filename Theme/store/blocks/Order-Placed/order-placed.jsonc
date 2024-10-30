@@ -1,0 +1,133 @@
+{
+  "order-placed": {
+    "blocks": [
+      "op-header", "op-order"
+    ]
+  },
+
+  "op-header": {
+    "children": [
+      "flex-layout.row#order-placed-header"
+    ]
+  },
+
+  "flex-layout.row#order-placed-header": {
+    "props": {
+      "blockClass": "order-placed-header"
+    },
+    "children": [
+      "op-section#confirmation"
+    ]
+  },
+
+
+  "op-section#confirmation": {
+    "props": {
+      "name": "confirmation",
+      "marginBottom": 9,
+      "borderless": true
+    },
+    "children": [
+      "op-confirmation-icon",
+      "op-confirmation-title",
+      "op-confirmation-message",
+      "op-print-button"
+      // "flex-layout.row#confirmation-buttons"
+    ]
+  },
+
+  // each order section
+  "op-order": {
+    "children": [
+      "op-section#notices",
+      "flex-layout.row#order-placed-order",
+      "flex-layout.row#order-placed-shipping",
+      "flex-layout.row#order-placed-total",
+      "flex-layout.row#order-placed-mobile"
+    ]
+  },
+
+  "op-section#notices": {
+    "props": {
+      "name": "notices",
+      "marginBottom": 9,
+      "borderless": true
+    },
+    "children": ["op-notices"]
+  },
+
+  "flex-layout.row#order-placed-order": {
+    "props": {
+      "blockClass": "order-placed-order"
+    },
+    "children": [
+      "flex-layout.col#order-date",
+      "flex-layout.row#order-header"
+    ]
+  },
+
+
+  /* DATE */
+  "flex-layout.col#order-date": {
+    "props": {
+      "blockClass": "order-date"
+    },
+    "children": [
+      "op-order-number",
+      "op-order-datetime",
+      "op-order-seller",
+      "op-order-customer",
+      "op-order-payment"
+    ]
+  },
+  
+  // each order header
+  "flex-layout.row#order-header": {
+    "props": {
+      "blockClass": "order-buttons"
+    },
+    "children": [
+      "op-order-options"
+    ]
+  },
+
+
+  // --
+  "flex-layout.row#order-placed-shipping": {
+    "props": {
+      "blockClass": "order-placed-order"
+    },
+    "children": [
+      "op-order-delivery-packages"
+    ]
+  },
+
+  // --
+  "flex-layout.row#order-placed-total": {
+    "props": {
+      "blockClass": "order-placed-total"
+    },
+    "children": [
+      "op-order-total"
+    ]
+  },
+
+  "flex-layout.row#order-placed-mobile": {
+    "props": {
+      "blockClass": "order-placed-mobile"
+    },
+    "children": [
+      "op-order-options",
+      "link#op-order-buy"
+    ]
+  },
+
+  "link#op-order-buy": {
+    "props": {
+      "label": "Hacer nuevas compras",
+      "href": "/",
+      "blockClass": "goToBuyMoreButton"
+    }
+  }
+
+}

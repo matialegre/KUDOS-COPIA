@@ -1,0 +1,409 @@
+
+.orderPlacedWrapper {
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 120px;
+}
+
+
+/* Header */
+.section--confirmation {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+}
+.confirmationIconWrapper {
+  display: flex;
+  justify-content: center;
+}
+.confirmationIconWrapper::after {
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='43' height='42' viewBox='0 0 43 42' fill='none'%3E%3Cpath d='M21.5 36.75C18.3849 36.75 15.3398 35.8263 12.7498 34.0956C10.1597 32.365 8.14098 29.9052 6.9489 27.0273C5.75682 24.1493 5.44492 20.9825 6.05264 17.9273C6.66036 14.8721 8.1604 12.0658 10.3631 9.86307C12.5658 7.6604 15.3721 6.16036 18.4273 5.55264C21.4825 4.94492 24.6493 5.25682 27.5273 6.4489C30.4052 7.64098 32.865 9.6597 34.5956 12.2498C36.3263 14.8398 37.25 17.8849 37.25 21C37.2454 25.1758 35.5846 29.1792 32.6319 32.1319C29.6792 35.0846 25.6758 36.7454 21.5 36.75ZM21.5 8.40001C19.008 8.40001 16.5719 9.13898 14.4998 10.5235C12.4278 11.908 10.8128 13.8758 9.85912 16.1782C8.90546 18.4805 8.65594 21.014 9.14211 23.4581C9.62829 25.9023 10.8283 28.1474 12.5905 29.9095C14.3526 31.6717 16.5977 32.8717 19.0419 33.3579C21.486 33.8441 24.0195 33.5945 26.3218 32.6409C28.6242 31.6872 30.592 30.0722 31.9765 28.0002C33.361 25.9281 34.1 23.492 34.1 21C34.0962 17.6594 32.7675 14.4567 30.4054 12.0946C28.0433 9.73246 24.8406 8.40376 21.5 8.40001Z' fill='%231DC96A'/%3E%3Cpath d='M19.925 25.725C19.5073 25.7249 19.1068 25.5589 18.8115 25.2635L15.6615 22.1135C15.3746 21.8165 15.2158 21.4186 15.2194 21.0057C15.223 20.5927 15.3886 20.1977 15.6807 19.9057C15.9727 19.6136 16.3677 19.448 16.7807 19.4444C17.1936 19.4408 17.5915 19.5996 17.8885 19.8865L19.925 21.923L25.1115 16.7365C25.4085 16.4496 25.8064 16.2908 26.2193 16.2944C26.6323 16.298 27.0273 16.4636 27.3193 16.7557C27.6114 17.0477 27.777 17.4427 27.7806 17.8557C27.7842 18.2686 27.6254 18.6665 27.3385 18.9635L21.0385 25.2635C20.7432 25.5589 20.3427 25.7249 19.925 25.725Z' fill='%231DC96A'/%3E%3C/svg%3E") no-repeat center center / contain;
+  width: 42px;
+  height: 42px;
+  display: block;
+}
+.confirmationIconWrapper :first-child {
+  display: none;
+}
+
+.confirmationTitle {
+  font-family: "Gotham";
+  margin-top: 35px;
+  margin-bottom: 35px;
+  font-size: 0;
+  color: #000000;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.confirmationTitle::before {
+  content: "Gracias por su compra!";
+  font-size: 30px;
+}
+.confirmationMessage {
+  margin-top: 20px;
+  font-family: "GothamBook";
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.section--confirmation :global(.vtex-button) {
+  min-height: auto;
+  margin-top: 32px;
+  background: #E9F1FB;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+.section--confirmation :global(.vtex-button__label) {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Gotham";
+  color: #2680EB;
+  text-transform: initial;
+  letter-spacing: 0.2px;
+  padding: 0 !important;
+}
+
+/* OP SECTION */
+.orderPlacedMainWrapper {
+  width: 100%;
+  margin-top: 0;
+}
+
+/* Notices */
+.noticesList {
+  max-width: 875px;
+  margin: auto;
+  width: 100%;
+}
+.noticeListItem {
+  font-family: "Gotham";
+  margin: 0;
+  width: 100%;
+  border-bottom: 1px solid #CCD5E0;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+  color: #000;
+}
+
+/* Orden */
+.orderNumber {
+  font-size: 26px;
+  font-family: "Gotham";
+  color: #1F1F1F;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: -0.2px;
+  margin-bottom: 32px;
+}
+
+.orderDatetime,
+.orderSoldBy,
+.customerInfoListName,
+.customerInfoListEmail,
+.paymentGroup,
+.orderPaymentItem,
+.orderPaymentItem :first-child :first-child :nth-child(0n+2),
+.paymentValue,
+.paymentInstallments {
+  font-family: "Gotham";
+  font-size: 16px;
+  font-weight: 400;
+  color: #3D3F43;
+}
+.orderSoldBy {
+  margin-bottom: 32px;
+  display: block;
+}
+.orderSeller {
+  color: #2680EB;
+}
+.customerInfoListDocument,
+.customerInfoListPhone,
+.paymentValue :global(.vtex__icon-info) {
+  display: none;
+}
+.customerInfoListName {
+  padding: 0;
+}
+.customerInfoListName,
+.paymentGroup {
+  color: #090A10;
+  margin: 0;
+  margin-bottom: 5px;
+  line-height: 1;
+  font-weight: 500;
+}
+.customerInfoListContainer {
+  margin-bottom: 32px;
+}
+.orderPaymentItem :first-child :first-child :nth-child(0n+2) {
+  margin: 0;
+}
+
+/* Order Customer Buttons */
+.updateOrderButton {
+  display: none;
+}
+.orderOptionsWrapper {
+  justify-content: right;
+}
+.myOrdersButton :global(.vtex-button) {
+  min-height: auto;
+  margin-top: 32px;
+  background: #E9F1FB;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+.myOrdersButton :global(.vtex-button__label) {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Gotham";
+  color: #2680EB;
+  text-transform: initial;
+  letter-spacing: 0.2px;
+  padding: 0 !important;
+}
+.cancelOrderButton :global(.vtex-button) {
+  min-height: auto;
+  margin-top: 32px;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+.cancelOrderButton :global(.vtex-button__label) {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Gotham";
+  color: #EA3829;
+  text-transform: initial;
+  letter-spacing: 0.2px;
+  padding: 0 !important;
+}
+
+/* Shipping */
+.package {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.productList {
+  max-width: 50%;
+}
+.productListItem {
+  padding: 0;
+  border: none;
+}
+
+.packageDeliveryTitle {
+  display: block;
+  font-size: 25px;
+  font-weight: 500;
+  color: #000;
+  font-family: "Gotham";
+}
+.packageShippingEstimate,
+.packageSLA,
+.addressContainer {
+  font-family: "Gotham";
+  font-size: 16px;
+  color: #3D3F43;
+}
+.productImageWrapper {
+  max-width: 94px;
+  max-height: 94px;
+  border: 1px solid #E9EAED;
+}
+.productName,
+.productQuantity,
+.productPrice {
+  font-family: "Gotham";
+  color: #3D3F43;
+  font-size: 14px;
+  font-weight: 400;
+}
+.productPrice {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.productQuantity {
+  margin-bottom: auto;
+}
+
+/* Total */
+.totalList {
+  max-width: 50%;
+}
+
+.totalListItem {
+  padding: 10px 0;
+}
+.totalListItem:last-child {
+  margin-top: 12px;
+}
+
+.totalListItem--Items .totalListItemLabel,
+.totalListItem--Items .totalListItemValue,
+.totalListItem--Discounts .totalListItemLabel,
+.totalListItem--Discounts .totalListItemValue,
+.totalListItem--Shipping .totalListItemLabel,
+.totalListItem--Shipping .totalListItemValue {
+  font-family: "Gotham";
+  font-size: 15px;
+  color: #3D3F43;
+}
+
+.totalListItemLabel,
+.totalListItemValue {
+  font-size: 25px;
+  color: #3D3F43;
+}
+
+/* Mobile */
+@media(max-width: 1024px) {
+
+  .confirmationIconWrapper::after {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='31' height='31' viewBox='0 0 31 31' fill='none'%3E%3Cpath d='M30.833 15.333C30.833 18.3655 29.9338 21.33 28.249 23.8515C26.5642 26.3729 24.1696 28.3382 21.3679 29.4987C18.5662 30.6593 15.4833 30.963 12.509 30.3715C9.53476 29.7799 6.80268 28.3197 4.65829 26.1754C2.51389 24.0312 1.05348 21.2992 0.46174 18.3249C-0.13 15.3507 0.173502 12.2678 1.33387 9.46601C2.49423 6.66425 4.45935 4.26949 6.98071 2.58456C9.50208 0.89963 12.4665 0.000197811 15.499 3.26124e-08C17.5126 -0.000131295 19.5066 0.396372 21.367 1.16687C23.2274 1.93736 24.9178 3.06676 26.3417 4.49058C27.7656 5.91439 28.8951 7.60473 29.6657 9.46508C30.4364 11.3254 30.833 13.3194 30.833 15.333ZM24.733 12.573C24.9008 12.4052 25.034 12.2059 25.1248 11.9866C25.2156 11.7674 25.2624 11.5323 25.2624 11.295C25.2624 11.0577 25.2156 10.8226 25.1248 10.6034C25.034 10.3841 24.9008 10.1848 24.733 10.017C24.5652 9.84917 24.3659 9.71604 24.1466 9.62521C23.9274 9.53438 23.6923 9.48763 23.455 9.48763C23.2177 9.48763 22.9826 9.53438 22.7633 9.62521C22.5441 9.71604 22.3448 9.84917 22.177 10.017L13.526 18.668L9.111 14.26C8.77205 13.9211 8.31234 13.7306 7.833 13.7306C7.35366 13.7306 6.89395 13.9211 6.555 14.26C6.21605 14.5989 6.02563 15.0587 6.02563 15.538C6.02563 16.0173 6.21605 16.4771 6.555 16.816L13.519 23.78L24.733 12.573Z' fill='%2300A650'/%3E%3C/svg%3E") no-repeat center center / contain;
+  }
+
+  .orderPlacedWrapper {
+    margin-bottom: 50px;
+  }
+  
+  .section--confirmation {
+    margin-bottom: 35pxpx;
+  }
+  .section--confirmation :global(.vtex-button) {
+    margin-top: 35px;
+  }
+  .confirmationTitle::before {
+    font-size: 19px;
+  }
+  .confirmationMessage {
+    color: #3D3F43;
+    text-align: left;
+    padding: 0 8px;
+    margin: 0;
+  }
+  .section--notices {
+    margin: 0 16px 24px;
+  }
+  .noticesList {
+    padding: 0;
+    background: #fff;
+  }
+  .noticeListItem {
+    padding: 0;
+    border-bottom: none;
+    margin-bottom: 15px;
+    color: #3D3F43;
+  }
+  .orderNumber {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+  }
+  .orderSoldBy,
+  .customerInfoListContainer {
+    margin-bottom: 24px;
+  }
+  .orderPaymentItem {
+    padding-bottom: 0;
+  }
+
+  /* */
+  .orderOptionsWrapper {
+    flex-flow: row;
+    padding: 0;
+  }
+
+  /* */
+  .packageHeaderColumn {
+    padding: 0 24px;
+  }
+
+  /*  */
+  .productList {
+    max-width: none;
+  }
+  .productListItem {
+    margin-top: 12px;
+    padding: 0 8px;
+  }
+  .packageDeliveryTitle {
+    border-bottom: 1px solid #CCD5E0;
+    padding-bottom: 16px;
+  }
+  .productWrapper {
+    display: flex;
+  }
+  .productImageColumn {
+    margin: 0;
+  }
+  .productImageWrapper {
+    max-width: 66px;
+    max-height: 66px;
+  }
+  .productInfoColumn {
+    display: grid;
+    text-align: left;
+    padding: 0 16px;
+  }
+  .productName,
+  .productQuantity,
+  .productPrice {
+    font-size: 13px;
+  }
+  .productPrice {
+    font-size: 16px;
+    margin-top: 2px;
+  }
+
+  /* */
+  .totalList {
+    max-width: none;
+    padding: 0 12px;
+    margin-top: 15px;
+  }
+  .totalListItem--Items {
+    margin-bottom: 24px;
+  }
+  .totalListItem {
+    padding: 0;
+  }
+  .totalListItemLabel,
+  .totalListItemValue {
+    font-size: 24px;
+  }
+  .cancelOrderButton {
+    display: none;
+  }
+
+  .package {
+    margin-bottom: 0;
+  }
+
+  .myOrdersButton :global(.vtex-button) {
+    width: 100%;
+    border: 1px solid #09344D;
+    background: #fff;
+    padding: 16px 12px;
+  }
+  .myOrdersButton :global(.vtex-button__label) {
+    font-size: 0;
+  }
+  .myOrdersButton :global(.vtex-button__label)::before {
+    content: "Ir a mis pedidos";
+    font-size: 16px;
+    font-family: "Gotham";
+    color: #09344D;
+  }
+
+}

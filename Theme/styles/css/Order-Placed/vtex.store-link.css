@@ -1,0 +1,11 @@
+.link--goToBuyMoreButton {
+  padding: 16px 12px;
+  text-align: center;
+  background: #09344D;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Gotham";
+  font-weight: 500;
+}
