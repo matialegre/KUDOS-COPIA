@@ -1,0 +1,33 @@
+.flexRow--minicart-footer{
+    box-shadow: 0px -3px 7px -4px rgba(0, 0, 0, 0.15);
+}
+/*nico*/
+.flexRowContent--minicart-footer{
+    display: flex;
+    flex-direction: column;
+    background: #FAFAFA;
+}
+
+.flexRowContent--minicart-footer::after{
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 16px;
+    width: 360px;
+    content: "Las promociones y costo de envío lo verás aplicado en el carrito";
+    font-family: 'GothamBook';
+    font-size: 14px;
+    line-height: 21px;
+    color: #3D3F43;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--minicart-footer::after{
+        width: 288px;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.1px;
+    }
+
+}

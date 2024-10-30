@@ -23,7 +23,8 @@
 
         "props": {
             "SearchBar": "search-bar-custom",
-            "MiniCart": "minicart.v2"
+            "MiniCart": "mini-cart-custom"
+            // "MiniCart": "minicart.v2"
         }
 
     },

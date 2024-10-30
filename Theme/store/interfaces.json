@@ -10,6 +10,10 @@
 
     "menu-bar-mobile": {
         "component": "MenuBarMobile"
+    },
+
+    "mini-cart-custom": {
+        "component": "MiniCartCustom"
     }
 
 }

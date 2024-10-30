@@ -1,0 +1,17 @@
+.buttonSeguirComprando{
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid #09344D;
+    border-radius: 4px;
+    font-family: 'Gotham';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: #09344D;
+}

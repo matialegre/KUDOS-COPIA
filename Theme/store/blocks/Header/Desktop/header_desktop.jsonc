@@ -72,8 +72,17 @@
             // "rich-text#menu",
             "search-bar-custom",
             "login",
-            "minicart.v2"
+            // "minicart.v2"
+            "mini-cart-custom"
         ]
+
+    },
+
+    "mini-cart-custom": {
+
+        "props": {
+            "MiniCart": "minicart.v2"
+        }
 
     },
 
