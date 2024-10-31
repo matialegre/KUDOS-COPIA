@@ -1,0 +1,45 @@
+.totalProducts--layout{
+    margin: 0;
+    padding: 0;
+    font-family: 'GothamBook';
+    font-size: 14px;
+    line-height: 21px;
+    color: #3D3F43;
+}
+
+.totalProductsMessage{
+    font-family: 'GothamBook';
+    font-size: 14px;
+    line-height: 21px;
+    color: #3D3F43;
+    text-transform: none;
+}
+
+.orderByDropdown{
+    margin: 0;
+    padding: 0;
+}
+
+/* MODAL OPCIONES ORDENAR POR  */
+
+.orderByOptionsContainer{
+    z-index: 999;
+    border: 0;
+    width: 190px;
+    margin-top: 40px;
+    box-shadow: 0px 3px 8px 0 rgba(0, 0, 0, .2);
+}
+
+.orderByOptionItem{
+    font-family: 'GothamBook';
+    font-size: 14px;
+    line-height: 21px;
+    color: #676F79;
+}
+
+.orderByOptionItem--selected{
+    color: #09344D;
+    background: transparent;
+}
+
+/* FIN MODAL OPCIONES ORDENAR POR  */

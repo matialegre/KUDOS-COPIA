@@ -1,0 +1,85 @@
+{
+
+    "search-result-layout.mobile": {
+
+        "children": [
+            // "search-banner#one",
+            "flex-layout.row#searchinfomobile",
+            // "flex-layout.row#productCountMobile",
+            // "flex-layout.row#fetchprevious",
+            "flex-layout.row#contentmobile",
+            "flex-layout.row#fetchmoreContainer"
+        ],
+
+        "props": {
+            "blockClass": "container",
+            "pagination": "show-more",
+            "mobileLayout": {
+                "mode1": "small",
+                "mode2": "normal"
+            }
+        }
+    },
+
+    "flex-layout.row#contentmobile": {
+        "children": ["search-content"],
+        "props": {
+        "blockClass": "searchMobile",
+        "preserveLayoutOnMobile": false
+        }
+    },
+    
+    "flex-layout.row#searchinfomobile": {
+        "children": [
+            "flex-layout.col#filterMobile",
+            "flex-layout.col#orderByMobile"
+        ],
+        "props": {
+        "blockClass": "filterOrderMobile",
+        "preserveLayoutOnMobile": true,
+        "colSizing": "equal",
+        "colJustify": "around",
+        "marginBottom": 0,
+        "marginTop": 0
+        }
+    },
+    
+    "flex-layout.col#orderByMobile": {
+        "children": ["order-by.v2"],
+        "props": {
+        "blockClass": "orderByMobileCol",
+        "paddingBottom": 0,
+        "paddingTop": 0
+        }
+    },
+    
+    // "flex-layout.row#productCountMobile": {
+    //     "children": ["total-products.v2"],
+    //     "props": {
+    //     "blockClass": "productCountMobileRow"
+    //     }
+    // },
+    
+    "flex-layout.col#filterMobile": {
+        "children": ["filter-navigator.v3"],
+        "props": {
+        "blockClass": "filterMobileCol"
+        }
+    },
+    
+    "filter-navigator.v3": {
+        "blocks": ["sidebar-close-button"],
+        "props": {
+            "initiallyCollapsed": false,
+            "navigationTypeOnMobile": "collapsible"
+        }
+    },
+    
+    "flex-layout.col#switcherMobile": {
+        "children": ["search-layout-switcher"],
+        "props": {
+        "blockClass": "switcherMobileCol"
+        }
+    }
+
+}

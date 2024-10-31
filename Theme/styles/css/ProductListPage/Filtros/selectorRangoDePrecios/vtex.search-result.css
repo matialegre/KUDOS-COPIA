@@ -1,0 +1,173 @@
+/*importo aqui porque mobile no me toma variables globales*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+.filter__container--priceRange .filterTemplateOverflow{
+    padding-top: 30px;
+}
+
+.filterTemplateOverflow :global(.vtex-slider){
+    width: calc(100% - 12px);
+    margin: auto;
+}
+
+/*barra desplazamiento de rango*/
+.filterTemplateOverflow :global(.vtex-slider__base){
+    top: 10px;
+    height: 4px !important;
+    background: #dbd7d7;
+}
+
+/*barra de rango*/
+.filterTemplateOverflow :global(.vtex-slider__base-internal){
+    background: #EB5757;
+}
+
+/*top de los dots*/
+.filterTemplateOverflow :global(.vtex-slider__selector-container){
+    top: 0px !important;
+    margin-top: 6px;
+}
+
+/*dots*/
+.filterTemplateOverflow :global(.vtex-slider__selector){
+    background: #EB5757;
+}
+
+/*label de precios de rango*/
+.filter__container--priceRange .filterTemplateOverflow :global(.vtex-slider__values-container){
+    padding-top: 16px;
+    justify-content: space-between;
+}
+
+/*label precio izquierda*/
+.filter__container--priceRange .filterTemplateOverflow :global(.vtex-slider__left-value){
+    font-family: 'GothamBook';
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--color-gray-3);
+}
+
+/*label precio derecha*/
+.filter__container--priceRange .filterTemplateOverflow :global(.vtex-slider__right-value){
+    font-family: 'GothamBook';
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--color-gray-3);
+}
+
+/*quito guion que Vtex trae por defecto*/
+.filter__container--priceRange .filterTemplateOverflow :global(.vtex-slider__right-value) :global(.vtex-slider__dash){
+    display: none;
+}    
+
+/* @media (max-width: 480px) { */
+@media (max-width: 640px) {
+
+    .filterAvailable{
+        display: none;
+    }
+
+    .filterTemplateOverflow{
+        padding: 0 !important;
+    }
+
+    .filterTemplateOverflow :global(.vtex-slider__base){
+        height: 4px !important;
+        background: #E4E4E4;
+    }
+
+    .filterTemplateOverflow :global(.vtex-slider__base-internal){
+        height: 4px !important;
+        background: #EB5757;
+    }
+
+    .filterTemplateOverflow :global(.vtex-slider__selector){
+        background: #EB5757;
+    }
+
+    .filterTemplateOverflow :global(.vtex-slider__left-value){
+        font-family: 'GothamBook';
+        font-size: 14px;
+        line-height: 21px;
+        color: #676F79 !important;
+    }
+
+    .filterTemplateOverflow :global(.vtex-slider__right-value){
+        font-family: 'GothamBook';
+        font-size: 14px;
+        line-height: 21px;
+        color: #676F79 !important;
+    }
+
+    .filterButtonsBox{
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: row-reverse;
+        height: 80px;
+    }
+
+    .filterClearButtonWrapper{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .filterClearButtonWrapper :global(.vtex-button){
+        width: 136px;
+        height: 40px;
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 1px solid #CCD5E0;
+        text-transform: none;
+    }
+
+    .filterClearButtonWrapper :global(.vtex-button__label){
+        font-size: 0px;
+    }
+
+    .filterClearButtonWrapper :global(.vtex-button__label)::after{
+        content: "Borrar";
+        font-family: 'Gotham';
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0.2px;
+        color: #3D3F43;
+    }
+
+    .filterApplyButtonWrapper{
+        margin: 0;
+        padding: 0;
+    }
+
+    .filterApplyButtonWrapper :global(.vtex-button){
+        width: 136px;
+        height: 40px;
+        padding: 0;
+        border-width: 0px;
+        border-radius: 4px;
+        background: #EB5757;
+        text-transform: none;
+    }
+
+    .filterApplyButtonWrapper :global(.vtex-button__label){
+        padding: 0;
+        font-size: 0px;
+    }
+
+    .filterApplyButtonWrapper :global(.vtex-button__label)::after{
+        content: "Aplicar filtro";
+        font-family: 'Gotham';
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0.2px;
+        color: #FFFFFF;
+    }
+
+}
+
+

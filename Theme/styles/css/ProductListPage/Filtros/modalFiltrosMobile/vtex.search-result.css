@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+/*modal no toma los valores globales*/
+
+.sidebar{
+    width: 328px;
+}
+
+/*titulo filtros*/
+.filterAccordionBreadcrumbs{
+    padding: 0;
+    padding-top: 19px;
+    padding-bottom: 17px;
+    padding-left: 18px;
+    border-bottom-width: 0px;
+    background: #09344D;
+}
+
+.filterAccordionBreadcrumbs .filterBreadcrumbsText{
+    font-family: 'Gotham';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+/*boton close*/
+.closeIcon{
+    color: white;;
+}
+
+@media (max-width: 640px) {
+
+    .filterAccordionItemBox--gama-de-precios{
+        /* display: none !important; */
+    }
+
+    .closeIconButton{
+        margin: 0;
+        padding: 0;
+        left: 0;
+        right: auto;
+        margin-left: -28px;
+        margin-top: 16px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .closeIconButton .closeIcon{
+        width: 24px;
+        height: 24px;
+    }
+
+}
+/*item modal*/
+/* @media (max-width: 480px) { */
+@media (max-width: 640px) {
+
+    .accordionFilter{
+        padding-bottom: 93.66px;
+    }
+
+    .accordionFilterContainer{
+        padding: 0;
+        height: 55px;
+    }
+
+    .accordionFilterItem{
+        padding: 0;
+        min-height: 0px;
+        height: 55px;
+        box-sizing: border-box;
+        padding-top: 16px;
+        padding-left: 17px;
+        padding-right: 19px;
+        padding-bottom: 18px;
+        display: flex;
+        align-items: center;
+        border-color: #EBEEF1;
+        background: white;
+    }
+
+    .accordionFilterContent{
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .accordionFilterItemTitle{
+        font-family: 'Gotham';
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #090A10;
+    }
+
+    .caretIcon{
+        display: none;
+    }
+
+    .accordionFilterItemIcon::after{
+        display: flex;
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M7.99987 10.6664C7.64853 10.6664 7.3072 10.5164 7.06387 10.2557L3.5132 6.45504C3.26187 6.18571 3.27587 5.76371 3.54453 5.51238C3.8132 5.26238 4.23587 5.27571 4.48653 5.54438L7.99987 9.30438L11.5132 5.54438C11.7639 5.27505 12.1872 5.26171 12.4552 5.51238C12.7239 5.76371 12.7385 6.18571 12.4872 6.45504L8.93653 10.2557C8.69253 10.5164 8.3512 10.6664 7.99987 10.6664Z' fill='%23090A10'/%3E%3C/svg%3E");
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    /*contenedor ReactCollapse*/
+    .accordionFilterItemOptions::-webkit-scrollbar {
+        background-color: #E4E4E4;
+        border-radius: 4px;
+        display: block !important;
+        height: 2px;
+        opacity: 1 !important;
+        position: absolute;
+        width: 5px;
+        padding-right: 20px;
+    }
+
+    .accordionFilterItemOptions::-webkit-scrollbar-thumb {
+        width: 3px;
+        background-color: #707070;
+        border-radius: 4px;
+        display: block !important;
+        opacity: 1 !important;
+    }
+
+    .accordionFilterItemOptions::-webkit-scrollbar-track {
+        width: 3px;
+        display: block !important;
+        opacity: 1 !important;
+        border-radius: 4px;
+    }
+
+    .accordionFilterItemOptions{
+        margin: 0;
+        padding: 0;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        /* margin-left: -3rem; */
+        padding-left: 16px;
+        /* max-height: 182px; */
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .accordionFilterItemOptions:first-child{
+        padding-top: 16px;
+    }
+
+    .accordionFilterItemOptions:last-child{
+        padding-bottom: 16px;
+    }
+
+    .accordionFilterOpen .filterAccordionItemBox{
+        padding: 0;
+        min-height: 0px;
+        min-height: 19px;
+        border-bottom-width: 0px;
+    }
+
+    .accordionFilterOpen :global(.vtex-checkbox__container ){
+        margin: 0;
+        padding: 0;
+    }
+
+    .accordionFilterOpen :global(.vtex-checkbox__line-container){
+        width: 100%;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .accordionFilterOpen :global(.vtex-checkbox__inner-container){
+        border-width: 1px;
+        border-color: #E4E4E4;
+    }
+
+    .accordionFilterOpen :global(.vtex-checkbox__label){
+        height: 14px;
+        font-family: 'GothamBook';
+        font-size: 14px;
+        line-height: 16px;
+        color: #3D3F43;
+    }
+
+    .accordionFilter :global(.vtex-slider__selector-tooltip){
+        display: none;
+        left: -85% !important;
+    }
+
+}

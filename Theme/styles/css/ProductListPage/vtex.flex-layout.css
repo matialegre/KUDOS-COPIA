@@ -1,0 +1,16 @@
+/*poner todos los stretchChildrenWidth del PLP en width auto*/
+.flexRowContent--list-product-cont .stretchChildrenWidth{
+    width: auto !important;
+}
+/*fin poner todos los stretchChildrenWidth del PLP en width auto*/
+
+@media (max-width: 640px){
+
+    .flexRowContent--searchMobile{
+        margin: auto;
+        display: grid;
+        width: 328px;
+        justify-content: center;
+    }
+
+}

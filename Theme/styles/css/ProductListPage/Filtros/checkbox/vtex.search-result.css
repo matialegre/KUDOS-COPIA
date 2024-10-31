@@ -1,0 +1,37 @@
+.filterItem :global(.vtex-checkbox__line-container){
+    align-items: center;
+}
+
+.filterItem :global(.vtex-checkbox__container){
+    /* display: flex; */
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+}
+
+.filterItem :global(.vtex-checkbox__inner-container){
+    width: 16px;
+    height: 16px;
+    margin-right: 9px;
+    border-width: 0.7px;
+    border-color: var(--color-gray-2);
+    border-radius: 0px;
+}
+
+.filterItem :global(.vtex-checkbox__box-wrapper){
+    width: 16px;
+    height: 16px;
+    /* background: var(--color-green-1); */
+}
+
+.filterItem :global(.vtex-checkbox__box){
+    width: 16px;
+    height: 16px;
+}
+
+.filterItem :global(.vtex-checkbox__input){
+    width: 16px;
+    height: 16px;
+}
+
+

@@ -925,3 +925,10 @@
 .content--recoveryPassword{
     margin-top: 66px;
 }
+
+/* QUITAR PADDING Y MARGIN DE PL8 FILTROS */
+:global(.vtex-search-result-3-x-accordionFilter .ReactCollapse--collapse .pl8){
+    margin: 0;
+    padding: 0;
+}
+/* FIN QUITAR PADDING Y MARGIN DE PL8 FILTROS */

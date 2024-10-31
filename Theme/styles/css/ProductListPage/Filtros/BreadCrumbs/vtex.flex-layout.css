@@ -1,0 +1,38 @@
+.flexColChild--filterCol :global(.vtex-breadcrumb-1-x-container--list-prod-breadcrumb){
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.flexColChild--filterCol :global(.vtex-breadcrumb-1-x-container--list-prod-breadcrumb) :global(.vtex-breadcrumb-1-x-homeLink--list-prod-breadcrumb){
+    display: none;
+}
+
+.flexColChild--filterCol :global(.vtex-breadcrumb-1-x-container--list-prod-breadcrumb) :global(.vtex-breadcrumb-1-x-arrow--list-prod-breadcrumb){
+    margin: 0;
+    padding: 0;
+}
+
+.flexColChild--filterCol :global(.vtex-breadcrumb-1-x-container--list-prod-breadcrumb) :global(.vtex-breadcrumb-1-x-arrow--list-prod-breadcrumb) :global(.vtex-breadcrumb-1-x-link--list-prod-breadcrumb){
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-cooper-light);
+    font-size: 13px;
+    letter-spacing: 0.13px;
+    color: var(--green-3-color);
+}
+
+.flexColChild--filterCol :global(.vtex-breadcrumb-1-x-container--list-prod-breadcrumb) :global(.vtex-breadcrumb-1-x-arrow--list-prod-breadcrumb) :global(.vtex-breadcrumb-1-x-link--list-prod-breadcrumb)::after{
+    content: '/';
+    margin-left: 5px;
+}
+
+.flexColChild--filterCol :global(.vtex-breadcrumb-1-x-container--list-prod-breadcrumb) :global(.vtex-breadcrumb-1-x-arrow--list-prod-breadcrumb):last-child :global(.vtex-breadcrumb-1-x-link--list-prod-breadcrumb)::after{
+    display: none;
+}
+
+.flexColChild--filterCol :global(.vtex-breadcrumb-1-x-container--list-prod-breadcrumb) :global(.vtex-breadcrumb-1-x-arrow--list-prod-breadcrumb) :global(.vtex-breadcrumb-1-x-caretIcon--list-prod-breadcrumb){
+    display: none;
+}

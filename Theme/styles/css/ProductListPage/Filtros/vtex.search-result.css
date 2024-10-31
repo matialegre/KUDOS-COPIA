@@ -1,0 +1,133 @@
+
+
+.filtersWrapper .filter__container--selectedFilters{
+    display: none;
+}
+
+.filter__container--priceRange{
+    /* display: none; */
+}
+
+/*Filtros*/
+.filterMessage{
+    display: none;
+}
+
+/*Año, Cantidad de puertas, etc.*/
+.filter{
+    height: 56px;
+    border-top: 1px solid #CCD5E0;
+    border-bottom: 1px solid #CCD5E0;
+}
+
+.filtersWrapper .filter__container:nth-child(0n+2) .filter{
+    border-top: none;
+}
+
+.filterTitleSpan{
+    font-family: 'Gotham';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--color-black-1);
+    text-transform: none;
+}
+
+.filter__container{
+    border: none;
+}
+
+@media (max-width: 640px) {
+
+    .filter__container{
+        width: 245px;
+    }
+
+}
+
+.filterTemplateOverflow{
+    padding: 15px 0px;
+}
+
+/*icono expandir filtros*/
+.filterIcon{
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    transition: 0.3s;
+}
+
+.filterIcon .caretIcon{
+    display: none;
+}
+
+.filterIcon::after{
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E%3Cpath d='M7.37165 10.0282L7.37174 10.0282C7.55327 10.2227 7.80692 10.333 8.06408 10.333C8.32106 10.333 8.57482 10.2228 8.75719 10.0281C8.75725 10.0281 8.75732 10.028 8.75739 10.0279L12.3077 6.22763L7.37165 10.0282ZM7.37165 10.0282L3.82111 6.22763C3.8211 6.22761 3.82108 6.22759 3.82106 6.22757C3.69506 6.09249 3.70246 5.88149 3.83614 5.7561C3.97114 5.63081 4.18282 5.63866 4.30702 5.77177L4.30719 5.77196M7.37165 10.0282L4.30719 5.77196M4.30719 5.77196L7.82052 9.53196L8.06408 9.79261M4.30719 5.77196L8.06408 9.79261M8.06408 9.79261L8.30763 9.53196M8.06408 9.79261L8.30763 9.53196M8.30763 9.53196L11.821 5.77196L11.8214 5.77147M8.30763 9.53196L11.8214 5.77147M11.8214 5.77147C11.9458 5.63781 12.1577 5.6305 12.2917 5.75582M11.8214 5.77147L12.2917 5.75582M12.2917 5.75582C12.4261 5.88156 12.4334 6.09275 12.3078 6.22749L12.2917 5.75582Z' fill='%23090A10' stroke='%23090A10' stroke-width='0.666667'/%3E%3C/svg%3E");
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.filterIsOpen .filterIcon{
+    transform: rotate(180deg);
+}
+
+/*contenedor que produce el scroll*/
+.filterContent{
+    max-height: 148px;
+    overflow-y: auto;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+.filterContent::-webkit-scrollbar{
+    width: 4px;
+    /* border-radius: 12px; */
+    background: #E8E8E8;
+}
+
+.filterContent::-webkit-scrollbar-track-piece{
+    width: 4px;
+    box-sizing: border-box;
+}
+
+.filterContent::-webkit-scrollbar-thumb{
+    width: 4px;
+    
+    border-radius: 12px;
+    background: #EB5757;
+}
+
+/*ocultar opcion sin dato de los filtros "-s/d-" */
+.filterItem---s-d-{
+    display: none;
+}
+
+.filterAccordionItemBox---s-d-{
+    display: none;
+}
+/*ocultar opcion sin dato de los filtros "-s/d-" */
+
+@media (max-width: 640px) {
+
+    .orderByButton .filterPopupArrowIcon{
+        margin: 0;
+        padding: 0;
+        padding-left: 8px;
+    }
+
+    .orderByButton .filterPopupArrowIcon::before{
+        width: 16px;
+        height: 16px;
+        content: "";
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E%3Cpath d='M8.49987 10.6664C8.14853 10.6664 7.8072 10.5164 7.56387 10.2557L4.0132 6.45504C3.76187 6.18571 3.77587 5.76371 4.04453 5.51238C4.3132 5.26238 4.73587 5.27571 4.98653 5.54438L8.49987 9.30438L12.0132 5.54438C12.2639 5.27505 12.6872 5.26171 12.9552 5.51238C13.2239 5.76371 13.2385 6.18571 12.9872 6.45504L9.43653 10.2557C9.19253 10.5164 8.8512 10.6664 8.49987 10.6664Z' fill='%23090A10'/%3E%3C/svg%3E");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
