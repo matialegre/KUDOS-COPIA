@@ -34,7 +34,7 @@
 }
 
 .notifyAddToCartContainer{
-    z-index: 1;
+    z-index: 1000;
     box-sizing: border-box;
     padding: 16px;
     opacity: 0;
