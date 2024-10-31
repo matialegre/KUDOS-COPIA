@@ -40,7 +40,7 @@ los productos box tenga un ancho mas grande que el espacio maximo que
 debe ocupar el listado. Entonces lo que hago es centrar el contenedor
 de esos product boxs*/
 .flexRowContent--product-list{
-    justify-content: center;
+    /* justify-content: center; */
 }
 /*fin para que los product box toque...*/
 
@@ -69,6 +69,7 @@ del maximo del contenedor del listado
     padding: 0;
     display: flex;
     justify-content: center;
+    min-width: 235px;
     max-width: 235px !important;
     height: 481px;
 }
@@ -76,8 +77,8 @@ del maximo del contenedor del listado
 @media (max-width: 640px) {
 
     :global(.vtex-search-result-3-x-galleryItem){
+        min-width: 170px;
         max-width: 170px !important;
-        width: 170px !important;
         height: 400px;
     }
 
@@ -344,7 +345,7 @@ del maximo del contenedor del listado
     .flexRowContent--filterOrderMobile{
         flex-direction: row-reverse;
         max-width: none;
-        width: 342px;
+        width: 326px;
     }
 
     .flexRowContent--filterOrderMobile :global(.vtex-search-result-3-x-filterPopupTitle){
