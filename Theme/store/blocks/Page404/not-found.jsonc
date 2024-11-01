@@ -1,0 +1,97 @@
+{
+    
+    "search-not-found-layout": {
+
+        "children": [
+            "flex-layout.row#container-row-page-not-found",
+            "rich-text#title-slider-404",
+            "flex-layout.row#product-summary-container-404"
+        ]
+        
+    },
+
+    "rich-text#title-slider-404": {
+
+        "props": {
+        "blockClass": [ "title-slider-pdp", "title-slider-404" ],
+        "text": "También te puede interesar"
+        }
+
+    },
+
+    "flex-layout.row#container-row-page-not-found": {
+
+        "props": {
+            "blockClass": "container-row-page-not-found",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        }, 
+
+        "children": [ "flex-layout.col#container-col-page-not-found" ]
+        
+    },
+
+    "flex-layout.col#container-col-page-not-found": {
+
+        "props": {
+            "blockClass": "container-col-page-not-found",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        }, 
+
+        "children": [
+            "rich-text#title-not-found",
+            "link#button-not-found",
+            "rich-text#title-what-do-not-found",
+            "flex-layout.col#container-what-do-not-found"
+        ]
+        
+    },
+
+    "rich-text#title-not-found": {
+
+        "props": {
+            "blockClass": "title-not-found",
+            "text": "NO ENCONTRAMOS LO QUE BUSCABAS"
+        }
+
+    },
+
+    "link#button-not-found": {
+        "props": {
+          "href": "/",
+          "label": "Volver a la pagina de inicio",
+          "blockClass": "button-not-found"
+        }
+    },
+
+    "flex-layout.col#container-what-do-not-found": {
+
+        "props": {
+            "blockClass": "container-what-do-not-found",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        }, 
+
+        "children": [
+            "flex-layout.row#container-items-what-do-not-found-1",
+            "flex-layout.row#container-items-what-do-not-found-2",
+            "flex-layout.row#container-items-what-do-not-found-3",
+            "flex-layout.row#container-items-what-do-not-found-4"
+        ]
+        
+    },
+
+    "rich-text#title-what-do-not-found": {
+
+        "props": {
+            "blockClass": "title-what-do-not-found",
+            "text": "¿Qué podés hacer?"
+        }
+
+    }
+
+}

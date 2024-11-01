@@ -1,0 +1,15 @@
+.notFound--layout :global(.vtex-rich-text-0-x-container--title-slider-pdp){
+    margin-top: 55px;
+}
+
+.notFound--layout :global(.vtex-rich-text-0-x-wrapper--title-slider-pdp){
+    margin: auto;    
+}
+
+@media (max-width: 640px) {
+
+    .notFound--layout :global(.vtex-rich-text-0-x-container--title-slider-pdp){
+        margin-top: 0px;
+    }
+
+}

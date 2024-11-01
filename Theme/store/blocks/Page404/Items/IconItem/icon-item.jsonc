@@ -1,0 +1,12 @@
+{
+
+    "image#item-icon-what-do-not-found": {
+
+        "props": {
+            "blockClass": "item-icon-what-do-not-found",
+            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Ccircle id='Elipse_3411' data-name='Elipse 3411' cx='5' cy='5' r='5' fill='%23EB2A4D'/%3E%3C/svg%3E%0A"
+        }
+
+    }
+
+}

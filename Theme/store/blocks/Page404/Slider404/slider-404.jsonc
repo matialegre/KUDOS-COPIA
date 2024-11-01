@@ -1,0 +1,44 @@
+{
+
+    "flex-layout.row#product-summary-container-404": {
+
+        "props": {
+          "blockClass": "product-summary-container-404"
+        },
+
+        "children": [
+          "list-context.product-list#list-product-summary-slider-404"
+        ]
+
+    },
+
+    "list-context.product-list#list-product-summary-slider-404": {
+
+        "blocks": ["product-summary.shelf#product-box"],
+
+        "children": ["slider-layout#product-summary-slider-404"],
+        
+        "props": {
+          "orderBy": "OrderByPriceASC"
+        }
+
+    },
+
+    "slider-layout#product-summary-slider-404": {
+
+        "props": {
+            "blockClass": "product-summary-slider",
+            "itemsPerPage": {
+                "desktop": 4,
+                "tablet": 2,
+                "phone": 2
+            },
+            "showPaginationDots": "always",
+            "infinite": true,
+            "fullWidth": true,
+            "showNavigationArrows": "desktopOnly"
+        }
+        
+    }
+
+}

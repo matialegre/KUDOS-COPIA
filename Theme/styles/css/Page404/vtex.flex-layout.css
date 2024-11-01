@@ -1,0 +1,178 @@
+.flexRow--container-row-page-not-found {
+  padding-top: 77px;
+  padding-bottom: 135px;
+}
+
+.flexRowContent--container-row-page-not-found {
+  max-width: 487px;
+  margin: auto;
+}
+
+.flexCol--container-col-page-not-found {
+  width: 487px !important;
+}
+
+@media (max-width: 640px) {
+
+  .flexCol--container-col-page-not-found {
+    width: 320px !important;
+  }
+
+}
+
+/*Imagen principal*/
+.flexRowContent--container-row-page-not-found .flexColChild--container-col-page-not-found:nth-child(0n+1) {
+  margin: auto;
+}
+
+.flexRowContent--container-row-page-not-found :global(.vtex-store-components-3-x-imageElement--image-main-not-found) {
+  width: 135.57px;
+  height: 88px;
+}
+
+/*Fin Imagen principal*/
+/*title*/
+.flexRowContent--container-row-page-not-found :global(.vtex-rich-text-0-x-wrapper--title-not-found) {
+  margin: auto;
+}
+
+.flexRowContent--container-row-page-not-found :global(.vtex-rich-text-0-x-paragraph--title-not-found) {
+  font-size: 0px;
+}
+
+.flexRowContent--container-row-page-not-found :global(.vtex-rich-text-0-x-paragraph--title-not-found)::after {
+  content: "No encontramos lo que buscabas";
+  width: 100%;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 31.2px;
+  text-align: center;
+  color: #090A10;
+}
+
+@media (max-width: 640px) {
+
+  .flexRowContent--container-row-page-not-found :global(.vtex-rich-text-0-x-paragraph--title-not-found) {
+    width: 220px;
+    text-align: center;
+  }
+
+  .flexRowContent--container-row-page-not-found :global(.vtex-rich-text-0-x-paragraph--title-not-found)::after {
+    font-size: 20px;
+  }
+
+}
+
+/*fin title*/
+/*button redirection*/
+.flexRowContent--container-row-page-not-found :global(.vtex-store-link-0-x-link--button-not-found) {
+  width: 318px;
+  height: 48px;
+  margin: auto;
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 4px;
+  background: #EB5757;
+}
+
+@media (max-width: 640px) {
+
+  .flexRowContent--container-row-page-not-found :global(.vtex-store-link-0-x-link--button-not-found) {
+    margin-top: 41px;
+    width: 263px;
+    height: 48px;
+  }
+
+}
+
+.flexRowContent--container-row-page-not-found :global(.vtex-store-link-0-x-link--button-not-found):hover{
+  background: #CD4F4F;
+}
+
+.flexRowContent--container-row-page-not-found :global(.vtex-store-link-0-x-link--button-not-found) :global(.vtex-store-link-0-x-label--button-not-found) {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16.2px;
+  line-height: 16.2px;
+  letter-spacing: 0.1px;
+  color: #FFFFFF;
+}
+
+/*fin button redirection*/
+/*title container items what do*/
+.flexRowContent--container-row-page-not-found :global(.vtex-rich-text-0-x-paragraph--title-what-do-not-found) {
+  padding-top: 75px;
+  padding-left: 0px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+}
+
+@media (max-width: 640px) {
+
+  .flexRowContent--container-row-page-not-found :global(.vtex-rich-text-0-x-paragraph--title-what-do-not-found) {
+    padding-top: 51px;
+  }
+
+}
+
+/*fin title container items what do*/
+/*container items what do*/
+.flexRowContent--container-row-page-not-found :global(.vtex-flex-layout-0-x-flexCol--container-what-do-not-found) {
+  margin-top: 28px;
+  gap: 25px;
+  height: auto;
+}
+
+@media (max-width: 640px) {
+
+  .flexRowContent--container-row-page-not-found :global(.vtex-flex-layout-0-x-flexCol--container-what-do-not-found) {
+    margin-top: 21px;
+  }
+
+}
+
+.flexRowContent--container-row-not-found {
+  gap: 10px;
+}
+
+.flexRowContent--container-row-not-found :global(.vtex-rich-text-0-x-paragraph--item-text-what-do-not-found) {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 11px;
+  color: #000000;
+}
+
+@media (max-width: 640px) {
+
+  .flexRowContent--container-row-not-found :global(.vtex-rich-text-0-x-paragraph--item-text-what-do-not-found) {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: -6px;
+  }
+
+}
+
+/*fin container items what do*/
+/*image icon item what do*/
+.flexRowContent--container-row-not-found .stretchChildrenWidth:nth-child(0n+1) {
+  min-width: 10px;
+  align-items: flex-start;
+}
+
+/*fin image icon item what do*/
+@media (max-width: 640px) {
+  .flexRow--container-row-page-not-found {
+    padding-top: 45px;
+    padding-bottom: 70px;
+  }
+  .flexRowContent--container-row-page-not-found {
+    max-width: 320px;
+  }
+}

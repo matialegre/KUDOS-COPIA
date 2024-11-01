@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/*alto de los product boxs en desktop*/
+/*alto de los product boxs en mobile*/
+/*ancho de los product boxs en desktop*/
+/*ancho de los product boxs en mobile*/
+/*cantidad de product boxs que se muestran en este slider en desktop*/
+/*cantidad de product boxs que se muestran en este slider en mobile*/
+/*separacion gap entre los product boxs desktop*/
+/*separacion gap entre los product boxs mobile*/
+/**/
+:global(.vtex-flex-layout-0-x-flexRow--product-summary-container-404) {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 36px;
+  padding-bottom: 96px;
+}
+
+@media (max-width: 640px) {
+
+  :global(.vtex-flex-layout-0-x-flexRow--product-summary-container-404) {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 17px;
+    padding-bottom: 139.5px;
+  }
+
+}
+
+:global(.vtex-flex-layout-0-x-flexRow--product-summary-container-404) :global(.vtex-store-components-3-x-container) {
+  margin: 0;
+  padding: 0;
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--product-summary-container-404) {
+  max-width: 1176px;
+  width: 1176px;
+}
+
+:global(.vtex-flex-layout-0-x-flexRow--product-summary-container-404) .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider {
+  height: 526px;
+  margin-top: 0px;
+}
+.sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-store-components-3-x-imageElement--product-summary-slider) {
+  height: 433px;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--product-summary-container-404) {
+    max-width: 349px;
+    width: 349px;
+  }
+  :global(.vtex-flex-layout-0-x-flexRow--product-summary-container-404) .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider {
+    height: 395px;
+    margin-top: 0px;
+  }
+  .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-store-components-3-x-imageElement--product-summary-slider) {
+    height: 301px;
+  }
+}
+/*ancho de los dots desktop*/
+/*alto de los dots desktop*/
+/*ancho de los dots mobile*/
+/*alto de los dots mobile*/
+/*separacion que debe haber entre los dots desktop*/
+/*separacion que debe haber entre los dots mobile*/
+/*margen inferior de los dots para ubicarlos segun indique el diseño desktop*/
+/*margen inferior de los dots para ubicarlos segun indique el diseño mobile*/
+/*color de los dots*/
+/*color del dot seleccionado*/
+.paginationDotsContainer--product-summary-slider {
+  gap: 8px;
+  margin-bottom: -48px;
+}
+
+.paginationDot--product-summary-slider {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 8px !important;
+  height: 8px !important;
+  box-sizing: border-box;
+  border: 1px solid var(--color-gray-2);
+  background: var(--color-white);
+}
+
+.paginationDot--product-summary-slider--isActive {
+  border: none;
+  background: var(--color-black-2);
+}
+
+@media (max-width: 640px) {
+  .paginationDotsContainer--product-summary-slider {
+    gap: 8px;
+    margin-bottom: -39.5px;
+  }
+}
+/*ancho del contenedor de los botones para pasar de product boxs desktop*/
+/*alto del contenedor de los botones para pasar de product boxs desktop*/
+/*ancho del contenedor de los botones para pasar de product boxs mobile*/
+/*alto del contenedor de los botones para pasar de product boxs mobile*/
+/*margen de separacion que el boton izquerdo para pasar de product boxs debe tener con respecto al borde del slider en desktop*/
+/*margen de separacion que el boton izquerdo para pasar de product boxs debe tener con respecto al borde del slider en mobile*/
+/*image del boton izquerdo para pasar de product boxs*/
+/*margen de separacion que el boton derecho para pasar de product boxs debe tener con respecto al borde del slider en desktop*/
+/*margen de separacion que el boton derecho para pasar de product boxs debe tener con respecto al borde del slider en mobile*/
+/*image del boton derecho para pasar de product boxs*/
+/*ancho de los product boxs en desktop*/
+/*ancho de los product boxs en mobile*/
+/*cantidad de product boxs que se muestran en este slider en desktop*/
+/*cantidad de product boxs que se muestran en este slider en mobile*/
+/*separacion gap entre los product boxs desktop*/
+/*separacion gap entre los product boxs mobile*/
+/**/
+.sliderArrows--product-summary-slider {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  /* width: 52px;
+  height: 56px; */
+  /* box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06), 0px 1px 3px 0px rgba(16, 24, 40, 0.10); */
+  /* background: var(--color-white) !important; */
+}
+
+@media (max-width: 640px) {
+
+  .sliderArrows--product-summary-slider {
+    width: auto;
+    height: auto;
+  }
+
+}
+
+.caretIcon--product-summary-slider {
+  display: none;
+}
+
+.sliderLeftArrow--product-summary-slider {
+  margin-left: -16px;
+}
+
+.sliderLeftArrow--product-summary-slider::after {
+  content: "";
+  width: 18px;
+  height: 30px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='30' viewBox='0 0 18 30' fill='none'%3E%3Cg clip-path='url(%23clip0_5520_6814)'%3E%3Cpath d='M17.9998 1.81865L16.0598 -1.69606e-07L0.000163436 14.9996L16.0597 30L17.9998 28.1917L3.89063 14.9996L17.9998 1.81865Z' fill='black'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_5520_6814'%3E%3Crect width='17.9997' height='30' fill='white' transform='translate(17.9998 30) rotate(-180)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sliderRightArrow--product-summary-slider {
+  margin-right: -16px;
+}
+
+.sliderRightArrow--product-summary-slider::after {
+  content: "";
+  width: 18px;
+  height: 30px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='30' viewBox='0 0 18 30' fill='none'%3E%3Cg clip-path='url(%23clip0_5520_6468)'%3E%3Cpath d='M0.00012207 28.1813L1.94019 30L17.9998 15.0004L1.94019 0L0.00012207 1.80832L14.1093 15.0004L0.00012207 28.1813Z' fill='black'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_5520_6468'%3E%3Crect width='17.9997' height='30' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 640px) {
+  .sliderLeftArrow--product-summary-slider {
+    margin-left: -6.5px;
+  }
+  .sliderLeftArrow--product-summary-slider::after {
+    content: "";
+    width: 13px;
+    height: 13px;
+  }
+  .sliderRightArrow--product-summary-slider {
+    margin-right: -6.5px;
+  }
+  .sliderRightArrow--product-summary-slider::after {
+    content: "";
+    width: 13px;
+    height: 13px;
+  }
+}

@@ -1,0 +1,25 @@
+{
+
+    "flex-layout.row#container-items-what-do-not-found-4": {
+
+        "props": {
+            "blockClass": "container-row-not-found",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        }, 
+
+        "children": [ "image#item-icon-what-do-not-found", "rich-text#item-text-what-do-not-found-4" ]
+        
+    },
+
+    "rich-text#item-text-what-do-not-found-4": {
+
+        "props": {
+            "blockClass": "item-text-what-do-not-found",
+            "text": "Si no sabes cómo llegaste aquí, visitá nuestra home"
+        }
+
+    }
+
+}
