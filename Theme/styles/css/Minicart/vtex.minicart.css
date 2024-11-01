@@ -40,14 +40,13 @@
 }
 
 .opened .drawerContent .childrenContainer .minicartSideBarContentWrapper{
-    min-height: 615px;
-    height: calc( 100% - 16px ) !important;
+    height: calc( 100dvh - 16px ) !important;
 }
 
 @media (max-width: 640px) {
 
     .opened .drawerContent .childrenContainer .minicartSideBarContentWrapper{
-        min-height: 506px;
+        
     }
 
 }
@@ -129,7 +128,6 @@
     margin: auto;
     padding-right: 5px;
     width: 375px;
-    max-height: 330px;
 }
 
 .minicartProductListContainer :global(.vtex-flex-layout-0-x-flexRow):not( :global(.vtex-flex-layout-0-x-flexColChild) :global(.vtex-flex-layout-0-x-flexRow) ){
@@ -145,7 +143,6 @@
         padding-right: 5px;
         min-width: 298px;
         width: 298px;
-        max-height: 227px;
     }
 
 }
