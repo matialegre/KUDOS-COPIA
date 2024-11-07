@@ -1,13 +1,9 @@
 .overlay{
-    z-index: 1000;
-}
-
-.overlay--visible{
-    background-color: rgba( 0, 0, 0, 0.8 );
+    z-index: 1000 !important;
 }
 
 .drawer{
-    z-index: 1001;
+    z-index: 1000 !important;
 }
 
 .drawer.opened .closeIconContainer{

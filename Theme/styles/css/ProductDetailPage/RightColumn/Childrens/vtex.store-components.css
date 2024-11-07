@@ -1,0 +1,15 @@
+/* PRECIO TACHADO  */
+
+.price_listPriceContainer .price_listPriceLabel{
+    display: none;
+}
+
+/* FIN PRECIO TACHADO  */
+
+/* PRECIO VENTA  */
+
+.price_sellingPriceContainer .price_sellingPriceLabel{
+    display: none;
+}
+
+/* FIN PRECIO VENTA  */

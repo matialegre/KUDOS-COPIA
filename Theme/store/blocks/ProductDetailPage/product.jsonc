@@ -1,0 +1,103 @@
+/*
+
+ dependencias necesarias:
+ "vtex.product-price": "1.x"
+
+ "peerDependencies":
+ "vtex.availability-notify": "1.x"
+
+ */
+ 
+{
+
+  "store.product": {
+
+    "children": [
+      "breadcrumb#breadcrumb-pdp",
+      "flex-layout.row#mobileData",
+      "flex-layout.row#columnsPdpContainer",
+      "flex-layout.row#containerSpecificationMobile",
+      "rich-text#title-slider-pdp",
+      "flex-layout.row#product-summary-container-pdp"
+      // "flex-layout.row#stickyBuyPdp"
+      
+    ]
+  },
+
+  "breadcrumb#breadcrumb-pdp": {
+
+      "props": {
+          "blockClass": "breadcrumb-pdp",
+          "showOnMobile": true
+      }
+
+  },
+
+  "flex-layout.row#mobileData": {
+
+    "props": {
+      "blockClass": "row-mobile-data",
+      "preserveLayoutOnMobile": true,
+      "horizontalAlign": "left",
+      "colSizing": "auto"
+    },
+
+    "children": [
+      "flex-layout.col#mobileData"
+    ]
+
+  },
+
+  "flex-layout.col#mobileData": {
+
+    "props": {
+      "blockClass": "col-mobile-data",
+      "preserveLayoutOnMobile": true,
+      "horizontalAlign": "left",
+      "colSizing": "auto"
+    },
+
+    "children": [
+      "vtex.store-components:product-name"
+    ]
+
+  },
+
+  "flex-layout.row#columnsPdpContainer": {
+
+    "props": {
+      "blockClass": "columns-pdp-container"
+    },
+
+    "children": [
+      "flex-layout.col#columnLeftPdp",
+      "flex-layout.col#columnRightPdp"
+    ]
+
+  },
+
+  "flex-layout.row#containerSpecificationMobile": {
+    
+    "props": {
+      "blockClass": "container-specification-mobile",
+      "preserveLayoutOnMobile": true,
+      "horizontalAlign": "left",
+      "colSizing": "auto"
+    },
+
+    "children": [
+      "especificaciones-pdp"
+    ]
+
+  },
+  
+  "rich-text#title-slider-pdp": {
+
+    "props": {
+      "blockClass": "title-slider-pdp",
+      "text": "TE PUEDE INTERESAR"
+    }
+
+  }
+
+}

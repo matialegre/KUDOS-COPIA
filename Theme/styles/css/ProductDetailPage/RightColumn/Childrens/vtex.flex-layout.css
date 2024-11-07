@@ -1,0 +1,933 @@
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-productBrandName){
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--color-black);
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-productNameContainer) :global(.vtex-store-components-3-x-productBrand){
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.2px;
+    color: var(--color-black);
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) .flexCol--column-right-pdp .flexColChild--column-right-pdp{
+    height: auto !important;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) .flexCol--column-right-pdp .flexColChild--column-right-pdp:nth-child(0n+3){
+    margin-top: 8px;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-identifier-0-x-product-identifier--productReference){
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    color: var(--color-gray-3);
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) .flexCol--column-right-pdp .flexColChild--column-right-pdp:nth-child(0n+4){
+    margin-top: 28px;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) .flexCol--column-right-pdp .flexColChild--column-right-pdp:nth-child(0n+4) .flexCol--availability-no{
+    margin-top: 35px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) .flexCol--column-right-pdp .flexColChild--column-right-pdp:nth-child(0n+4) .flexCol--availability-no{
+        margin-top: 3px;
+    }
+ 
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) .flexCol--column-right-pdp .flexColChild--column-right-pdp:nth-child(0n+4){
+        margin-top: 38px;
+    }
+
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-price_sellingPrice){
+    font-family: 'Gotham';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: normal;
+    color: #090A10;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-price_sellingPrice){
+        font-family: 'Gotham';
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 26.4px;
+        color: #090A10;
+    }
+
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer){
+    margin-top: 35px;
+}
+
+/* CONTENEDOR PRECIOS Y CUCARDA  */
+
+.flexRowContent--price-and-discount-pdp{
+    display: grid;
+    grid-template-areas: "a b c";
+    align-items: flex-end;
+    /* display: flex; */
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 12px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--price-and-discount-pdp{
+        display: flex;
+        flex-wrap: unset;
+    }
+
+}
+
+.flexRowContent--price-and-discount-pdp .stretchChildrenWidth:nth-child(0n+1){
+    width: auto !important;
+    grid-area: a;
+}
+
+.flexRowContent--price-and-discount-pdp .stretchChildrenWidth:nth-child(0n+2){
+    width: auto !important;
+    grid-area: b;
+}
+
+.flexRowContent--price-and-discount-pdp .stretchChildrenWidth:nth-child(0n+3){
+    width: auto !important;
+    grid-area: c;
+}
+
+    /* CONTENEDOR PRECIO  */
+
+    .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className){
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className) :global(.vtex-store-components-3-x-price_listPriceContainer){
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className) :global(.vtex-store-components-3-x-price_listPriceContainer) :global(.vtex-store-components-3-x-price_listPrice){
+        margin: 0;
+        padding: 0;
+        text-decoration-color: var(--color-gray-3);
+    }
+
+    .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className) :global(.vtex-store-components-3-x-price_listPriceContainer) :global(.vtex-store-components-3-x-price_listPrice) :global(.vtex-store-components-3-x-currencyContainer){
+        display: flex;
+        font-family: 'Gotham';
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration-line: strikethrough;
+        color: #3D3F43;
+    }
+
+    .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className) :global(.vtex-store-components-3-x-price_sellingPriceContainer){
+        margin: 0;
+        padding: 0;
+    }
+
+    @media (max-width: 640px) {
+
+        .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className) :global(.vtex-store-components-3-x-price_sellingPriceContainer){
+            margin-top: 10px;
+        }
+
+    }
+
+    .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className) :global(.vtex-store-components-3-x-price_sellingPriceContainer) :global(.vtex-store-components-3-x-price_sellingPrice){
+        margin: 0;
+        padding: 0;
+    }
+
+    /* FIN CONTENEDOR PRECIO  */
+
+/* FIN CONTENEDOR PRECIOS Y CUCARDA  */
+
+/* ENVIO GRATIS  */
+
+:global(.vtex-rich-text-0-x-container--envio-gratis-pdp){
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    width: 98px;
+    height: 10px;
+    font-family: 'Gotham';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: #008042;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--cucardas-container-pdp :global(.vtex-product-highlights-2-x-productHighlightText--nuevo-text){
+        width: 67px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+}
+
+/* FIN ENVIO GRATIS  */
+
+/* TALLES  */
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle){
+    margin: 0;
+    padding: 0;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorTextContainer){
+    margin-bottom: 12px;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorTextContainer)::before{
+    content: "Talles";
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--color-black-4);
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorTextContainer)::before{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: var(--color-black-4);
+    }
+
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorName){
+    display: none;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorOptionsList){
+    margin: 0;
+    padding: 0;
+    width: 465px;
+    column-gap: 20px;
+    row-gap: 12px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorOptionsList){
+        width: 320px;
+    }
+
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorOptionsList) :global(.vtex-store-components-3-x-skuSelectorItem){
+    margin: 0;
+    padding: 0;
+    width: 46px;
+    height: 34px;
+    user-select: none;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorOptionsList) :global(.vtex-store-components-3-x-unavailable){
+    pointer-events: none;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorOptionsList) :global(.vtex-store-components-3-x-skuSelectorItem) :global(.vtex-store-components-3-x-skuSelectorInternalBox){
+    border: 1px solid var(--color-gray-2);
+    border-radius: 0px;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorOptionsList) :global(.vtex-store-components-3-x-skuSelectorItem) :global(.vtex-store-components-3-x-skuSelectorInternalBox):hover{
+    border: 1px solid #676F79;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorOptionsList) :global(.vtex-store-components-3-x-skuSelectorItem--selected) :global(.vtex-store-components-3-x-skuSelectorInternalBox){
+    color: #FFFFFF;
+    background: #09344D;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorOptionsList) :global(.vtex-store-components-3-x-skuSelectorItem--selected) :global(.vtex-store-components-3-x-frameAround){
+    display: none;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorOptionsList) :global(.vtex-store-components-3-x-skuSelectorItem) :global(.vtex-store-components-3-x-skuSelectorItemTextValue){
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    font-family: 'GothamBook';
+    font-size: 14.22px;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorOptionsList) :global(.vtex-store-components-3-x-skuSelectorItem--selected) :global(.vtex-store-components-3-x-skuSelectorItemTextValue){
+    margin: 0;
+    padding: 0; 
+    margin: auto;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14.22px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--color-white);
+}
+
+/* FIN TALLES  */
+
+/* COLORES  */
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color){
+    margin: 0;
+    padding: 0;
+    margin-top: 28px;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color) :global(.vtex-store-components-3-x-skuSelectorTextContainer){
+    margin-bottom: 12px;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color) :global(.vtex-store-components-3-x-skuSelectorTextContainer)::before{
+    content: "Colores disponibles";
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--color-black-4);
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color) :global(.vtex-store-components-3-x-skuSelectorTextContainer)::before{
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color) :global(.vtex-store-components-3-x-skuSelectorName){
+    display: none;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color) :global(.vtex-store-components-3-x-skuSelectorOptionsList){
+    margin: 0;
+    padding: 0;
+    width: 465px;
+    column-gap: 12px;
+    row-gap: 12px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color) :global(.vtex-store-components-3-x-skuSelectorOptionsList){
+        width: 328px;
+    }
+
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color) :global(.vtex-store-components-3-x-skuSelectorOptionsList) :global(.vtex-store-components-3-x-skuSelectorItem){
+    margin: 0;
+    padding: 0;
+    width: 53px;
+    height: 53px;
+    user-select: none;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color) :global(.vtex-store-components-3-x-skuSelectorOptionsList) :global(.vtex-store-components-3-x-skuSelectorItem) :global(.vtex-store-components-3-x-skuSelectorInternalBox){
+    border: 2px solid transparent;
+    border-radius: 0px;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color) :global(.vtex-store-components-3-x-skuSelectorOptionsList) :global(.vtex-store-components-3-x-skuSelectorItem--selected) :global(.vtex-store-components-3-x-skuSelectorInternalBox){
+    border: 1px solid #09344D;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color) :global(.vtex-store-components-3-x-skuSelectorOptionsList) :global(.vtex-store-components-3-x-skuSelectorItem) :global(.vtex-store-components-3-x-skuSelectorInternalBox) :global(.vtex-store-components-3-x-valueWrapper){
+    display: flex;
+    align-items: center;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color) :global(.vtex-store-components-3-x-skuSelectorOptionsList) :global(.vtex-store-components-3-x-skuSelectorItem--selected) :global(.vtex-store-components-3-x-frameAround){
+    display: none;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color) :global(.vtex-store-components-3-x-skuSelectorOptionsList) :global(.vtex-store-components-3-x-skuSelectorItem) :global(.vtex-store-components-3-x-skuSelectorItemTextValue){
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14.22px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--color-black-4);
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color) :global(.vtex-store-components-3-x-skuSelectorOptionsList) :global(.vtex-store-components-3-x-skuSelectorItem--selected) :global(.vtex-store-components-3-x-skuSelectorItemTextValue){
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14.22px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--color-white);
+}
+
+/* FIN COLORES  */
+
+/* SELECCIONAR DE CANTIDAD  */
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer){
+    margin: 0;
+    padding: 0;
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer) :global(.vtex-product-quantity-1-x-quantitySelectorTitle){
+    margin: 0;
+    padding: 0;
+    font-family: 'GothamBook';
+    font-size: 15px;
+    line-height: 24px;
+    color: #3D3F43;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer) :global(.vtex-product-quantity-1-x-quantitySelectorDropdownContainer) :global(.vtex-styleguide-9-x-container){
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    width: 59px;
+    height: 50px;
+    border-radius: 0;
+    border: 1px solid var(--color-gray-2);
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer) :global(.vtex-product-quantity-1-x-quantitySelectorDropdownMobileContainer) :global(.vtex-styleguide-9-x-container){
+        margin: 0;
+        padding: 0;
+        margin-left: 20px;
+        width: 59px;
+        height: 50px;
+        border-radius: 0;
+        border: 1px solid var(--color-gray-2);
+    }
+
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer) :global(.vtex-product-quantity-1-x-quantitySelectorDropdownContainer) :global(.vtex-styleguide-9-x-container) :global(.vtex-dropdown__button){
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer) :global(.vtex-product-quantity-1-x-quantitySelectorDropdownMobileContainer) :global(.vtex-styleguide-9-x-container) :global(.vtex-dropdown__button){
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer) :global(.vtex-product-quantity-1-x-quantitySelectorDropdownContainer) :global(.vtex-styleguide-9-x-container) :global(.vtex-dropdown__caption){
+    font-family: 'GothamBook';
+    font-size: 15px;
+    line-height: 24px;
+    color: #090A10;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer) :global(.vtex-product-quantity-1-x-quantitySelectorDropdownMobileContainer) :global(.vtex-styleguide-9-x-container) :global(.vtex-dropdown__caption){
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: var(--color-black-4);
+    }
+
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer) :global(.vtex-product-quantity-1-x-quantitySelectorDropdownContainer) :global(.vtex-styleguide-9-x-container) :global(.vtex-dropdown__arrow){
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    margin-left: 14px;
+    width: 18px;
+    height: 18px;
+    color: var(--color-black);
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer) :global(.vtex-product-quantity-1-x-quantitySelectorDropdownMobileContainer) :global(.vtex-styleguide-9-x-container) :global(.vtex-dropdown__arrow){
+        margin: 0;
+        padding: 0;
+        margin: auto;
+        margin-left: 14px;
+        width: 18px;
+        height: 18px;
+        color: var(--color-black);
+    }
+
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer) :global(.vtex-product-quantity-1-x-quantitySelectorInputContainer){
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    width: 59px;
+    height: 50px;
+    border-radius: 0;
+    border: 1px solid var(--color-gray-2);
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer) :global(.vtex-product-quantity-1-x-quantitySelectorInputMobileContainer){
+        margin: 0;
+        padding: 0;
+        margin-left: 20px;
+        width: 59px;
+        height: 50px;
+        border-radius: 0;
+        border: 1px solid var(--color-gray-2);
+    }
+
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer) :global(.vtex-product-quantity-1-x-quantitySelectorInputContainer) :global(.vtex-input-prefix__group){
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    border-radius: 0;
+    border: 0;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer) :global(.vtex-product-quantity-1-x-quantitySelectorInputMobileContainer) :global(.vtex-input-prefix__group){
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        border-radius: 0;
+        border: 0;
+    }
+
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer) :global(.vtex-product-quantity-1-x-quantitySelectorInputContainer) :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input){
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    border-radius: 0;
+    border: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--color-black-4);
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-quantity-1-x-quantitySelectorContainer) :global(.vtex-product-quantity-1-x-quantitySelectorInputMobileContainer) :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input){
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        border-radius: 0;
+        border: 0;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: var(--color-black-4);
+        text-align: center;
+    }
+
+}
+
+/* FIN SELECCIONAR DE CANTIDAD  */
+
+/* BOTON COMPRAR AHORA  */
+
+.flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+6) :global(.vtex-button){
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    width: 465px;
+    height: 48px;
+    border-radius: 4px;
+    font-family: 'Gotham';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    text-transform: none;
+    color: var(--color-white);
+    border: none;
+    background: #EB5757;
+}
+
+@media (max-width: 640px) {
+
+    .flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+6) :global(.vtex-button){
+        width: 328px;
+    }
+
+}
+
+.flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+6) :global(.vtex-button):hover{
+    background: #CD4F4F;
+}
+
+/* FIN BOTON COMPRAR AHORA  */
+
+/* BOTON AÑADIR AL CARRITO  */
+
+.flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+7) :global(.vtex-button){
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    width: 465px;
+    height: 48px;
+    border-radius: 4px;
+    font-family: 'Gotham';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    text-transform: none;
+    color: #3D3F43;
+    box-sizing: border-box;
+    border: 1px solid #CCD5E0;
+    background: var(--color-white);
+}
+
+@media (max-width: 640px) {
+
+    .flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+7) :global(.vtex-button){
+        width: 328px;
+    }
+
+}
+
+.flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+7) :global(.vtex-button):hover{
+    
+}
+
+/* FIN BOTON AÑADIR AL CARRITO  */
+
+/* CALCULAR ENVIO  */
+.flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+8) :global(.vtex-store-components-3-x-shippingContainer){
+    margin-top: 32px;
+}
+
+.flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+8) :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-address-form__postalCode){
+    padding-bottom: 16px;
+    display: flex;
+}
+
+@media (max-width: 640px) {
+
+    .flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+8) :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-address-form__postalCode){
+        padding-bottom: 32px;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+.flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+8) :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-input){
+    width: fit-content;
+}
+
+.flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+8) :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-input__label){
+    margin-bottom: 12px;
+    font-family: 'GothamBook';
+    font-size: 15px;
+    line-height: 24px;
+    color: #090A10;
+}
+
+.flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+8) :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-input-prefix__group){
+    width: 228.5px;
+    height: 45px;
+    border: 1px solid #CCD5E0;
+}
+
+.flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+8) :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-input-prefix__group) :global(.vtex-address-form-4-x-input){
+    box-sizing: border-box;
+    padding-left: 12px;
+    font-family: 'GothamBook';
+    font-size: 16px;
+    line-height: 25px;
+    color: #676F79;
+}
+
+.flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+8) :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-address-form__postalCode-forgottenURL){
+    padding: 0;
+    margin: 0;
+    margin-top: 51.5px;
+    margin-left: 8px;
+    height: 14px;
+    font-family: 'Gotham';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: #2680EB;
+}
+
+@media (max-width: 640px) {
+
+    .flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+8) :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-address-form__postalCode-forgottenURL){
+        margin-top: 15px;
+        margin-left: 0px;
+    }
+
+}
+
+.flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+8) :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-address-form__postalCode-forgottenURL) :global(.vtex__icon-external-link){
+    display: none;
+}
+
+.flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+8) :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-button){
+    margin: 0;
+    padding: 0;
+    width: 239px;
+    height: 48px;
+    font-family: 'Gotham';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    text-transform: none;
+    color: #09344D;
+    border-radius: 4px;
+    border: 1px solid #09344D;
+    background: transparent;
+}
+
+.flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+8) :global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-button):hover{
+    color: #FFFFFF;
+    background: #09344D;
+}
+/* FIN CALCULAR ENVIO  */
+
+/* FORMULARIO PRODUCTO NO DISPOBLE  */
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-notiferContainer){
+    margin-top: 32px;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-title){
+    font-size: 0;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-title)::before{
+    content: "Sin stock";
+    font-family: 'Gotham';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #EB5757;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-notifyLabel){
+    font-size: 0;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-notifyLabel)::before{
+    content: "Te avisaremos cuando este disponible";
+    font-family: 'Gotham';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #3D3F43;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form) :global(.vtex-availability-notify-1-x-content){
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form) :global(.vtex-availability-notify-1-x-success){
+    margin-top: 10px;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form) :global(.vtex-availability-notify-1-x-content) :global(.vtex-availability-notify-1-x-success){
+    margin-top: 5px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--color-black-1);
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form) :global(.vtex-availability-notify-1-x-content) :global(.vtex-availability-notify-1-x-input){
+    margin: 0;
+    padding: 0;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form) :global(.vtex-availability-notify-1-x-content) :global(.vtex-availability-notify-1-x-input):nth-child(0n+2){
+    margin-top: -12px;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form) :global(.vtex-availability-notify-1-x-content) :global(.vtex-input-prefix__group){
+    margin-top: 8px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-gray-2);
+    border-radius: 4px;
+    width: 465px;
+    height: 44px;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form) :global(.vtex-availability-notify-1-x-content) :global(.vtex-availability-notify-1-x-inputName)::before{
+    content: "Nombre";
+    font-family: 'GothamBook';
+    font-size: 14px;
+    line-height: 21px;
+    color: #3D3F43;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form) :global(.vtex-availability-notify-1-x-content) :global(.vtex-availability-notify-1-x-inputEmail)::before{
+    content: "Nombre";
+    font-family: 'GothamBook';
+    font-size: 14px;
+    line-height: 21px;
+    color: #3D3F43;
+}
+
+@media (max-width: 640px) {
+
+    .flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form) :global(.vtex-availability-notify-1-x-content) :global(.vtex-input-prefix__group){
+        width: 328px;
+    }
+
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form) :global(.vtex-availability-notify-1-x-content) :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input){
+    font-family: 'GothamBook';
+    font-size: 16px;
+    line-height: 25px;
+    color: #676F79;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form) :global(.vtex-availability-notify-1-x-content) :global(.vtex-availability-notify-1-x-submit){
+    margin: 0;
+    padding: 0;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form) :global(.vtex-availability-notify-1-x-content) :global(.vtex-availability-notify-1-x-submit) :global(.vtex-button){
+    margin-top: 16px;
+    width: 465px;
+    height: 48px;
+    font-family: 'Gotham';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    color: var(--color-white);
+    border: 0;
+    background: #EB5757;
+    text-transform: none; 
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form){
+    margin: 0;
+    padding: 0;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form) :global(.vtex-availability-notify-1-x-content) :global(.vtex-availability-notify-1-x-submit) :global(.vtex-button):hover{
+    background: #CD4F4F;
+}
+
+/* FIN FORMULARIO PRODUCTO NO DISPOBLE  */
+
+/* BOTON AÑADIR AL CARRITO CUANDO EL PRODUCTO NO ESTA DISPONIBLE  */
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+2) :global(.vtex-button){
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    width: 465px;
+    height: 48px;
+    border-radius: 4px;
+    font-family: 'Gotham';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    text-transform: none;
+    color: #A3A3A3;
+    border: none;
+    background: #E5E5E5;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+2) :global(.vtex-button) :global(.vtex-button__label){
+    display: none;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+2) :global(.vtex-button)::before{
+    content: "No disponible";
+    font-size: 16.2px;
+}
+
+@media (max-width: 640px) {
+
+    .flexCol--availability-no .flexColChild--availability-no:nth-child(0n+2) :global(.vtex-button){
+        width: 328px;
+    }
+
+}
+
+/* FIN BOTON AÑADIR AL CARRITO CUANDO EL PRODUCTO NO ESTA DISPONIBLE  */
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) .flexCol--column-right-pdp .flexColChild--column-right-pdp :global(.vtex-store-components-3-x-skuSelectorName){
+    font-family: 'Gotham';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #090A10;
+}

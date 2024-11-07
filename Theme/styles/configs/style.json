@@ -79,7 +79,7 @@
   "semanticColors": {
     "background": {
       "base": "#ffffff",
-      "base--inverted": "#03044e",
+      "base--inverted": "rgba( 0, 0, 0, 0.8 )",
       "action-primary": "#0F3E99",
       "action-secondary": "#eef3f7",
       "emphasis": "#f71963",
@@ -131,7 +131,7 @@
     "text": {
       "action-primary": "#0F3E99",
       "action-secondary": "#eef3f7",
-      "link": "#0F3E99",
+      "link": "#2680EB",
       "emphasis": "#f71963",
       "disabled": "#979899",
       "success": "#8bc34a",
@@ -224,7 +224,7 @@
       "base": "#3f3f40",
       "base--inverted": "#ffffff",
       "action-primary": "#ffffff",
-      "action-secondary": "#0F3E99",
+      "action-secondary": "#2680EB",
       "emphasis": "#ffffff",
       "disabled": "#979899",
       "success": "#ffffff",

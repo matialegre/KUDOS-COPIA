@@ -8,7 +8,7 @@
 /*separacion gap entre los product boxs desktop*/
 /*separacion gap entre los product boxs mobile*/
 /**/
-:global(.vtex-flex-layout-0-x-flexRow--product-summary-container-404) {
+:global(.vtex-flex-layout-0-x-flexRow--product-summary-container-pdp) {
   margin: auto;
   display: flex;
   justify-content: center;
@@ -18,27 +18,27 @@
 
 @media (max-width: 640px) {
 
-  :global(.vtex-flex-layout-0-x-flexRow--product-summary-container-404) {
+  :global(.vtex-flex-layout-0-x-flexRow--product-summary-container-pdp) {
     margin: auto;
     display: flex;
     justify-content: center;
     padding-top: 17px;
-    padding-bottom: 139.5px;
+    padding-bottom: 122px;
   }
 
 }
 
-:global(.vtex-flex-layout-0-x-flexRow--product-summary-container-404) :global(.vtex-store-components-3-x-container) {
+:global(.vtex-flex-layout-0-x-flexRow--product-summary-container-pdp) :global(.vtex-store-components-3-x-container) {
   margin: 0;
   padding: 0;
 }
 
-:global(.vtex-flex-layout-0-x-flexRowContent--product-summary-container-404) {
-  max-width: 1176px;
-  width: 1176px;
+:global(.vtex-flex-layout-0-x-flexRowContent--product-summary-container-pdp) {
+  max-width: 1214px;
+  width: 1214px;
 }
 
-:global(.vtex-flex-layout-0-x-flexRow--product-summary-container-404) .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider {
+:global(.vtex-flex-layout-0-x-flexRow--product-summary-container-pdp) .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider {
   height: 560px;
   margin-top: 0px;
 }
@@ -48,16 +48,16 @@
 }
 
 @media (max-width: 640px) {
-  :global(.vtex-flex-layout-0-x-flexRowContent--product-summary-container-404) {
-    max-width: 349px;
-    width: 349px;
+  :global(.vtex-flex-layout-0-x-flexRowContent--product-summary-container-pdp) {
+    max-width: 360px;
+    width: 360px;
   }
-  :global(.vtex-flex-layout-0-x-flexRow--product-summary-container-404) .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider {
-    height: 395px;
+  :global(.vtex-flex-layout-0-x-flexRow--product-summary-container-pdp) .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider {
+    height: 433px;
     margin-top: 0px;
   }
   .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-store-components-3-x-imageElement--product-summary-slider) {
-    height: 301px;
+    height: 433px;
   }
 }
 /*ancho de los dots desktop*/
@@ -120,7 +120,8 @@
   padding: 0;
   /* width: 52px;
   height: 56px; */
-  /* box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06), 0px 1px 3px 0px rgba(16, 24, 40, 0.10); */
+  /* box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06), 0px 1px 3px 0px rgba(16, 24, 40, 0.10);
+  background: var(--color-white) !important; */
 }
 
 @media (max-width: 640px) {
@@ -128,6 +129,7 @@
   .sliderArrows--product-summary-slider {
     width: auto;
     height: auto;
+    box-shadow: none;
   }
 
 }

@@ -1,0 +1,129 @@
+.triggerContainer{
+    display: flex;
+}
+
+.triggerContainer :global(.vtex-flex-layout-0-x-flexRowContent--container-trigger-promociones-bancarias){
+    cursor: pointer;
+    margin-top: 25px;
+    max-width: 194px;
+    height: 16px;
+    gap: 6px;
+}
+
+.triggerContainer :global(.vtex-flex-layout-0-x-flexRowContent--container-trigger-promociones-bancarias) :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(0n+1){
+    display: flex;
+    width: 16px !important;
+    height: 16px;
+}
+
+.triggerContainer :global(.vtex-flex-layout-0-x-flexRowContent--container-trigger-promociones-bancarias) :global(.vtex-rich-text-0-x-paragraph--trigger-promociones-bancarias){
+    font-family: 'Gotham';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #2680EB;
+}
+
+/* MODAL  */
+
+.headerContainer--container-header-modal-promociones-bancarias{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+}
+
+.headerContainer--container-header-modal-promociones-bancarias .closeButtonContainer--container-header-modal-promociones-bancarias{
+    width: 28px;
+    height: 28px;
+}
+
+.headerContainer--container-header-modal-promociones-bancarias .closeButton--container-header-modal-promociones-bancarias{
+    margin: 0;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+}
+
+.headerContainer--container-header-modal-promociones-bancarias .closeButton--container-header-modal-promociones-bancarias .closeIcon--container-header-modal-promociones-bancarias{
+    display: none;
+}
+.headerContainer--container-header-modal-promociones-bancarias .closeButton--container-header-modal-promociones-bancarias::before{
+    content: "";
+    display: flex;
+    width: 28px;
+    height: 28px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='28' viewBox='0 0 29 28' fill='none'%3E%3Crect width='28' height='28' transform='translate(0.0644531)' fill='%2309344D'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.6393 8.43466C19.2942 8.08957 18.7368 8.08957 18.3917 8.43466L14.0648 12.7527L9.73789 8.42581C9.3928 8.08072 8.83535 8.08072 8.49026 8.42581C8.14517 8.7709 8.14517 9.32835 8.49026 9.67344L12.8171 14.0003L8.49026 18.3272C8.14517 18.6723 8.14517 19.2298 8.49026 19.5748C8.83535 19.9199 9.3928 19.9199 9.73789 19.5748L14.0648 15.248L18.3917 19.5748C18.7368 19.9199 19.2942 19.9199 19.6393 19.5748C19.9844 19.2298 19.9844 18.6723 19.6393 18.3272L15.3124 14.0003L19.6393 9.67344C19.9755 9.3372 19.9755 8.7709 19.6393 8.43466Z' fill='white'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.paper--cotainer-modal-promociones-bancarias{
+    margin: 0;
+    padding: 33px;
+    width: 570px;
+    height: 365px;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+@media (max-width: 640px) {
+
+    .paper--cotainer-modal-promociones-bancarias{
+        width: 321px;
+        height: 485px;
+    }
+
+}
+
+.paper--cotainer-modal-promociones-bancarias :global(.vtex-rich-text-0-x-paragraph--title-modal-promociones-bancarias){
+    margin-top: 16px;
+    font-family: 'Gotham';
+    font-size: 20.65px;
+    font-weight: 500;
+    line-height: 21.889px;
+}
+
+.paper--cotainer-modal-promociones-bancarias :global(.vtex-rich-text-0-x-paragraph--sub-title-modal-promociones-bancarias){
+    margin-top: 8px;
+    font-family: 'GothamBook';
+    font-size: 14.22px;
+    line-height: 20px;
+    color: #3D3F43;
+}
+
+.paper--cotainer-modal-promociones-bancarias :global(.vtex-flex-layout-0-x-flexRow--container-medios-pago){
+    margin-top: 33px;
+}
+
+.paper--cotainer-modal-promociones-bancarias :global(.vtex-flex-layout-0-x-flexRow--container-medios-pago) :global(.vtex-flex-layout-0-x-flexRowContent--container-medios-pago){
+    flex-wrap: wrap;
+    column-gap: 82px;
+    row-gap: 35px;
+}
+
+.paper--cotainer-modal-promociones-bancarias :global(.vtex-flex-layout-0-x-flexRow--container-medios-pago) :global(.vtex-flex-layout-0-x-flexRowContent--container-medios-pago) :global(.vtex-rich-text-0-x-container--title-medio-pago){
+    font-family: 'Gotham';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #090A10;
+}
+
+.paper--cotainer-modal-promociones-bancarias :global(.vtex-flex-layout-0-x-flexRow--container-medios-pago) :global(.vtex-flex-layout-0-x-flexRowContent--container-medios-pago) :global(.vtex-rich-text-0-x-paragraph--sub-title-medio-pago){
+    font-family: 'Gotham';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #3D3F43;
+}
+
+.paper--cotainer-modal-promociones-bancarias :global(.vtex-flex-layout-0-x-flexRow--container-medios-images-pago){
+    margin-top: 15.82px;
+}
+
+.paper--cotainer-modal-promociones-bancarias :global(.vtex-flex-layout-0-x-flexRowContent--container-medios-images-pago){
+    column-gap: 21px;
+}

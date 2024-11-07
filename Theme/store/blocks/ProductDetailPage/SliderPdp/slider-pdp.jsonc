@@ -1,0 +1,27 @@
+{
+
+    "flex-layout.row#product-summary-container-pdp": {
+
+        "props": {
+          "blockClass": "product-summary-container-pdp"
+        },
+
+        "children": [
+          "list-context.product-list#list-product-summary-slider-pdp"
+        ]
+
+    },
+
+    "list-context.product-list#list-product-summary-slider-pdp": {
+
+        "blocks": ["product-summary.shelf#product-box"],
+
+        "children": ["slider-layout#product-summary-slider"],
+        
+        "props": {
+          "orderBy": "OrderByPriceASC"
+        }
+
+    }
+
+}

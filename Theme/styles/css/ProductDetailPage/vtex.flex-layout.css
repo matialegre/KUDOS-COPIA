@@ -1,0 +1,48 @@
+.flexRow--container-specification-mobile{
+    display: none;
+}
+
+@media (max-width: 640px) {
+
+    .flexRow--container-specification-mobile{
+        margin: auto;
+        display: block;
+        max-width: 328px;
+        width: 328px;
+    }
+
+    .flexRow--container-specification-mobile :global(.vtex-store-components-3-x-container){
+        margin: 0;
+        padding: 0;
+    }
+
+}
+/* AJUSTAR TAMAÑO DE CONTENEDOR DE COLUMNAS  */
+
+.flexRow--columns-pdp-container{
+    margin: auto;
+    margin-top: 27px;
+    max-width: var(--max-width-content-desktop);
+    width: var(--max-width-content-desktop);
+}
+
+@media (max-width: 640px) {
+
+    .flexRow--columns-pdp-container{
+        margin-top: 16px;
+        max-width: 328px;
+        width: 328px;
+    }
+
+}
+
+.flexRow--columns-pdp-container :global(.vtex-store-components-3-x-container){
+    margin: 0;
+    padding: 0;
+}
+
+.flexRowContent--columns-pdp-container{
+    justify-content: space-between;
+}
+
+/* FIN AJUSTAR TAMAÑO DE CONTENEDOR DE COLUMNAS  */

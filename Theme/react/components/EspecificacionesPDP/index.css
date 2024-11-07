@@ -1,0 +1,209 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* use font
+font-family: "Plus Jakarta Sans", sans-serif;
+*/
+
+.propertiresContainer{
+    margin-top: 62px;
+}
+
+@media (max-width: 640px) {
+
+    .propertiresContainer{
+        margin-top: 32px;
+    }
+
+}
+
+.descriptionContainer h2{
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #090A10;
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+
+    .descriptionContainer h2{
+        font-size: 19.35px;
+        line-height: 20.51px;
+        text-decoration: none;
+    }
+
+}
+
+.productName{
+    margin-top: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #090A10;
+}
+
+@media (max-width: 640px) {
+
+    .productName{
+        margin-top: 16px;
+    }
+
+}
+
+.productDescription{
+    margin-top: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #676F79;
+}
+
+.specificationContainer{
+    contain: content;
+    margin-top: 62px;
+    width: 641px;
+    height: 27px;
+    transition: .3s;
+}
+
+@media (max-width: 640px) {
+
+    .specificationContainer{
+        margin-top: 35px;
+        width: 328px;
+    }
+
+}
+
+.drawerColumContainer{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    height: 27px;
+}
+
+.drawerColumContainer p{
+    pointer-events: none;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 27.3px;
+    color: #090A10;
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+
+    .drawerColumContainer{
+        margin-top: 3.25px;
+    }
+
+    .drawerColumContainer p{
+        font-size: 19.35px;
+        line-height: 20.51px;
+        text-decoration: none;
+    }
+
+}
+
+.drawerColumContainer img{
+    pointer-events: none;
+    width: 15px;
+    height: 15px;
+    transition: .3s;
+}
+
+.columnContainer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E9EAED;
+    background: #EBEBEB;
+}
+
+.rowContainer{
+    display: flex;
+}
+
+.rowContainer:nth-child(even){
+    background: #FFFFFF;
+}
+
+.rowContainer p{
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    width: 50%;
+    box-sizing: border-box;
+    min-height: 48px;
+    word-break: break-all;
+}
+
+/* .leftColumnContainer{
+    width: 50%;
+}
+
+.leftColumnContainer p{
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #3D3F43;
+    background: #EBEBEB;
+} */
+
+@media (max-width: 640px) {
+
+    /* .leftColumnContainer p{
+        padding-left: 12px;
+        font-size: 14px;
+    } */
+
+}
+
+/* .leftColumnContainer p:nth-child(even){
+    background: #FFFFFF;
+}
+
+.rightColumnContainer{
+    width: 50%;
+}
+
+.rightColumnContainer p{
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #3D3F43;
+    background: #EBEBEB;
+} */
+
+@media (max-width: 640px) {
+
+    /* .rightColumnContainer p{
+        padding-left: 12px;
+        font-size: 14px;
+        text-transform: lowercase;
+    } */
+
+}
+
+/* .rightColumnContainer p:nth-child(even){
+    background: #FFFFFF;
+} */

@@ -1,0 +1,33 @@
+.container--title-slider-pdp{
+    margin: auto;
+    margin-top: 80px;
+    max-width: var(--max-width-content-desktop);
+    width: var(--max-width-content-desktop);
+}
+
+.paragraph--title-slider-pdp{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 29.12px;
+    color: #090A10;
+}
+
+@media (max-width: 640px) {
+
+    .container--title-slider-pdp{
+        margin-top: 57px;
+        max-width: 328px;
+        width: 328px;
+    }
+    
+    .paragraph--title-slider-pdp{
+        font-family: 'Uni sans';
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+    }
+
+}

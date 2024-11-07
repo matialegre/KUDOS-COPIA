@@ -1,0 +1,257 @@
+{
+ 
+    "flex-layout.col#columnRightPdp": {
+
+        "props": {
+          "blockClass": "column-right-pdp",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+          "vtex.store-components:product-name",
+          "condition-layout.product#availability"
+        ]
+    
+    },
+
+    "flex-layout.row#priceAndDiscountPdp": {
+
+        "props": {
+          "blockClass": "price-and-discount-pdp",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+        "children": [
+          "vtex.store-components:product-price",
+          "product-price-savings"
+        ]
+    
+    },
+
+    // AVAILABILITY
+    "condition-layout.product#availability": {
+
+      "props": {
+        "conditions": [
+          {
+            "subject": "isProductAvailable",
+            "arguments": {
+              "value": "true"
+            }
+          }
+        ],
+        "Then": "flex-layout.col#availability-yes",
+        "Else": "flex-layout.col#availability-no"
+      }
+
+    },
+
+    "flex-layout.col#availability-yes": {
+
+      "props": {
+        "blockClass": "availability-yes",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+
+      "children": [
+        "flex-layout.row#priceAndDiscountPdp",
+        "rich-text#cucardaEnvioGratis",
+        "modal-trigger#example",
+        "sku-selector",
+        "product-quantity",
+        "add-to-cart-button#comprar-ahora-pdp",
+        "add-to-cart-button#add-to-cart-pdp",
+        "shipping-simulator"
+      ]
+
+    },
+
+    "flex-layout.col#availability-no": {
+
+      "props": {
+        "blockClass": "availability-no",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+    
+      "children": [
+        "availability-notify", //VTEX ya no ofrece mantenimiento a esta aplicacion
+        "add-to-cart-button#add-to-cart-pdp"
+      ]
+
+    },
+    // FIN AVAILABILITY 
+
+    "rich-text#cucardaEnvioGratis": {
+
+      "props": {
+        "blockClass": "envio-gratis-pdp",
+        "text": "Envío Gratis"
+      }
+
+    },
+
+    "modal-trigger#example": {
+
+      "children": [
+        "flex-layout.row#containerTriggerPromocionesBancarias",
+        "modal-layout#containerModalPromocionesBancarias"
+      ]
+
+    },
+
+    "flex-layout.row#containerTriggerPromocionesBancarias": {
+
+      "props": {
+        "blockClass": "container-trigger-promociones-bancarias",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+
+      "children": [
+        "image#iconTriggerPromocionesBancarias",
+        "rich-text#triggerPromocionesBancarias"
+      ]
+
+    },
+
+    "image#iconTriggerPromocionesBancarias":{
+
+        "props": {
+            "blockClass": "icon-trigger-promociones-bancarias",
+            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E%3Cpath d='M13.3975 12.6663H2.73079C2.37717 12.6663 2.03803 12.5259 1.78799 12.2758C1.53794 12.0258 1.39746 11.6866 1.39746 11.333V4.66634C1.39746 4.31272 1.53794 3.97358 1.78799 3.72353C2.03803 3.47348 2.37717 3.33301 2.73079 3.33301H13.3975C13.7511 3.33301 14.0902 3.47348 14.3403 3.72353C14.5903 3.97358 14.7308 4.31272 14.7308 4.66634V11.333C14.7308 11.6866 14.5903 12.0258 14.3403 12.2758C14.0902 12.5259 13.7511 12.6663 13.3975 12.6663ZM2.73079 4.66634V11.333H13.3975V4.66634H2.73079Z' fill='%232680EB'/%3E%3Cpath d='M5.39746 9.99967H4.06413C3.88732 9.99967 3.71775 9.92944 3.59272 9.80441C3.4677 9.67939 3.39746 9.50982 3.39746 9.33301C3.39746 9.1562 3.4677 8.98663 3.59272 8.8616C3.71775 8.73658 3.88732 8.66634 4.06413 8.66634H5.39746C5.57427 8.66634 5.74384 8.73658 5.86887 8.8616C5.99389 8.98663 6.06413 9.1562 6.06413 9.33301C6.06413 9.50982 5.99389 9.67939 5.86887 9.80441C5.74384 9.92944 5.57427 9.99967 5.39746 9.99967Z' fill='%232680EB'/%3E%3Cpath d='M10.7308 9.99967H7.39746C7.22065 9.99967 7.05108 9.92944 6.92606 9.80441C6.80103 9.67939 6.73079 9.50982 6.73079 9.33301C6.73079 9.1562 6.80103 8.98663 6.92606 8.8616C7.05108 8.73658 7.22065 8.66634 7.39746 8.66634H10.7308C10.9076 8.66634 11.0772 8.73658 11.2022 8.8616C11.3272 8.98663 11.3975 9.1562 11.3975 9.33301C11.3975 9.50982 11.3272 9.67939 11.2022 9.80441C11.0772 9.92944 10.9076 9.99967 10.7308 9.99967Z' fill='%232680EB'/%3E%3Cpath d='M14.0641 7.33301H2.06413C1.88732 7.33301 1.71775 7.26277 1.59272 7.13775C1.4677 7.01272 1.39746 6.84315 1.39746 6.66634C1.39746 6.48953 1.4677 6.31996 1.59272 6.19494C1.71775 6.06991 1.88732 5.99967 2.06413 5.99967H14.0641C14.2409 5.99967 14.4105 6.06991 14.5355 6.19494C14.6606 6.31996 14.7308 6.48953 14.7308 6.66634C14.7308 6.84315 14.6606 7.01272 14.5355 7.13775C14.4105 7.26277 14.2409 7.33301 14.0641 7.33301Z' fill='%232680EB'/%3E%3C/svg%3E"
+        }
+
+    },
+
+    "rich-text#triggerPromocionesBancarias": {
+
+      "props": {
+        "blockClass": "trigger-promociones-bancarias",
+        "text": "Promociones bancarias"
+      }
+
+    },
+
+    "modal-header#containerHeaderModalPromocionesBancarias": {
+
+      "props": {
+        "blockClass": "container-header-modal-promociones-bancarias",
+        "showCloseButton": true,
+        "iconCloseSize": 28
+      }
+
+    },
+
+    "modal-layout#containerModalPromocionesBancarias": {
+
+      "props": {
+        "blockClass": "cotainer-modal-promociones-bancarias"
+      },
+
+      "children": [
+        "modal-header#containerHeaderModalPromocionesBancarias",
+        "rich-text#titleModalPromocionesBancarias",
+        "rich-text#subTitleModalPromocionesBancarias",
+        "flex-layout.row#containerMediosPago"
+      ]
+
+    },
+
+    "rich-text#titleModalPromocionesBancarias": {
+
+      "props": {
+        "blockClass": "title-modal-promociones-bancarias",
+        "text": "Promociones bancarias"
+      }
+
+    },
+
+    "rich-text#subTitleModalPromocionesBancarias": {
+
+      "props": {
+        "blockClass": "sub-title-modal-promociones-bancarias",
+        "text": "Podés pagar a través de cualquiera de estos medios de pago"
+      }
+
+    },
+
+    "flex-layout.row#containerMediosPago": {
+
+      "props": {
+        "blockClass": "container-medios-pago",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+
+      "children": [
+        "flex-layout.col#containerMediosPago1",
+        "flex-layout.col#containerMediosPago2",
+        "flex-layout.col#containerMediosPago3"
+      ]
+
+    },
+
+    "product-quantity": {
+
+      "props": {
+        "selectorType": "dropdown"
+      }
+
+    },
+
+    "flex-layout.row#sku-selector": {
+      
+      "props": {
+        "blockClass": "wrapper-row-header-desktop",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+
+      "children": [
+        "sku-selector"
+      ]
+
+    },
+
+    "sku-selector": {
+
+      "props": {
+        "hideImpossibleCombinations": true,
+        "disableUnavailableSelectOptions": true,
+        "maxItems": 20
+      }
+
+    },
+
+    "add-to-cart-button#comprar-ahora-pdp": {
+
+        "props": {
+            "blockClass": "comprar-ahora-pdp",
+            "isOneClickBuy": true,
+            "text": "Comprar ahora"
+        }
+
+    },
+
+    "add-to-cart-button#add-to-cart-pdp":{
+
+      "props": {
+        "blockClass": "add-to-cart-pdp",
+        "isOneClickBuy": false,
+        "text": "Añadir al carrito",
+        "unavailableText": "Añadir al carrito"
+      }
+
+    }
+
+}

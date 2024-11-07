@@ -1,0 +1,52 @@
+{
+
+    "flex-layout.col#columnLeftPdp": {
+
+        "props": {
+          "width": "811px",
+          "blockClass": "column-left-pdp",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+          // "cucarda-pdp",
+          "product-images",
+          "product-identifier.product",
+          "especificaciones-pdp"
+        ]
+    
+    },
+
+    "flex-layout.row#cucardasContainerPDP": {
+
+        "props": {
+            "blockClass": "cucardas-container-pdp",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        }
+    
+    },
+
+    // "cucarda-pdp": {
+
+    //   "props": {
+    //     "CucardasContainer": "flex-layout.row#cucardasContainerPDP",
+    //     "CucardaDiscount": "product-price-savings"
+    //   }
+
+    // },
+
+    "product-images": {
+
+        "props": {
+          "displayThumbnailsArrows": true,
+          "showNavigationArrows": true,
+          "showPaginationDots": true
+        }
+        
+    }
+
+}

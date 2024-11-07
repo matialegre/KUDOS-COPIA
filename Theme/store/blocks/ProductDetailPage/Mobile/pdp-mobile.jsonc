@@ -1,0 +1,16 @@
+{
+
+    "flex-layout.row#stickyBuyPdp": {
+
+        "props": {
+            "blockClass": "sticky-buy-pdp"
+        },
+
+        "children": [
+            "product-quantity",
+            "vtex.store-components:buy-button"
+        ]
+
+    }
+
+}

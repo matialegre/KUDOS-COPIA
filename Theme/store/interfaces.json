@@ -14,6 +14,14 @@
 
     "mini-cart-custom": {
         "component": "MiniCartCustom"
+    },
+
+    "cucarda-pdp": {
+        "component": "CucardaPDP"
+    },
+
+    "especificaciones-pdp": {
+        "component": "EspecificacionesPDP"
     }
 
 }

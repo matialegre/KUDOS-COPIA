@@ -9,7 +9,7 @@
     "props": {
 
       "context":{
-        "maxItemsPerPage": 8
+        "maxItemsPerPage": 18
       }
       
     }

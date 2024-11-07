@@ -1,0 +1,29 @@
+/* TAMAÑO DE LA COLUMNA DERECHA*/
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2):not(.flexRowContent--columns-pdp-container .flexRowContent--container-trigger-promociones-bancarias .stretchChildrenWidth:nth-child(0n+2) ){
+    width: 465px !important;
+    max-height: auto;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2){
+        width: 328px !important;
+        max-height: auto;
+    }
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) .flexCol--column-right-pdp .flexColChild--column-right-pdp:nth-child(0n+1){
+        display: none;
+    }
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) .flexCol--column-right-pdp .flexColChild--column-right-pdp:nth-child(0n+2){
+        /* display: none; */
+    }
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) .flexCol--column-right-pdp .flexColChild--column-right-pdp:nth-child(0n+3){
+        display: none;
+    }
+
+}
+
+/* FIN TAMAÑO DE LA COLUMNA DERECHA */

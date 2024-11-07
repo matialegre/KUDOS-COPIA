@@ -55,7 +55,12 @@
     "vtex.product-highlights": "2.x",
     "vtex.product-price": "1.x",
     "vtex.store-form": "0.x",
-    "vtex.order-items": "0.x"
+    "vtex.order-items": "0.x",
+    "vtex.condition-layout": "2.x",
+    "vtex.modal-layout": "0.x"
+  },
+  "peerDependencies": {
+    "vtex.availability-notify": "1.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

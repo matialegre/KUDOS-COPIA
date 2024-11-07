@@ -1,0 +1,51 @@
+.flexRow--row-mobile-data{
+    display: none;
+}
+
+@media (max-width: 640px) {
+ 
+    .flexRow--row-mobile-data{
+        margin-top: 12px;
+        display: flex;
+    }
+    
+    .flexRow--row-mobile-data :global(.vtex-store-components-3-x-container){
+        margin: 0;
+        padding: 0;
+        margin: auto;
+    }
+    
+    .flexRowContent--row-mobile-data{
+        display: flex;
+        max-width: 328px;
+    }
+
+    .flexRowContent--row-mobile-data :global(.vtex-store-components-3-x-productBrand){
+        font-family: 'Gotham';
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: -0.08px;
+    }
+
+}
+
+/* TAMAÑO DE LA COLUMNA IZQUIERDA*/
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+1){
+    width: 689px !important;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+1){
+        width: 328px !important;
+    }
+
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+1) .flexCol--column-left-pdp .flexColChild--column-left-pdp:nth-child(0n+3){
+        display: none;
+    }
+    
+}
+
+/* FIN TAMAÑO DE LA COLUMNA IZQUIERDA */
