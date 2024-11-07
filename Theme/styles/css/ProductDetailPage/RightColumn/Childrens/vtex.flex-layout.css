@@ -910,7 +910,7 @@
 }
 
 .flexCol--availability-no .flexColChild--availability-no:nth-child(0n+2) :global(.vtex-button)::before{
-    content: "No disponible";
+    content: "Sin stock";
     font-size: 16.2px;
 }
 

@@ -7,6 +7,11 @@
 
 @media (max-width: 640px) {
 
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2):not(.flexRowContent--columns-pdp-container .flexRowContent--container-trigger-promociones-bancarias .stretchChildrenWidth:nth-child(0n+2) ){
+        width: 100% !important;
+        max-height: auto;
+    }
+
     .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2){
         width: 328px !important;
         max-height: auto;
