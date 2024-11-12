@@ -1,0 +1,19 @@
+.triggerTallesContainer{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 24px;
+}
+
+.triggerTallesContainer p{
+    font-family: 'Gotham';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    color: #2680EB; 
+}

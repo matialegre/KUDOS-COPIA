@@ -62,7 +62,9 @@
         "flex-layout.row#priceAndDiscountPdp",
         "rich-text#cucardaEnvioGratis",
         "modal-trigger#example",
-        "sku-selector",
+        "flex-layout.row#containerTalles",
+        // "sku-selector",
+        // "guia-talles",
         "product-quantity",
         "add-to-cart-button#comprar-ahora-pdp",
         "add-to-cart-button#add-to-cart-pdp",
@@ -102,6 +104,22 @@
       "children": [
         "flex-layout.row#containerTriggerPromocionesBancarias",
         "modal-layout#containerModalPromocionesBancarias"
+      ]
+
+    },
+
+    "flex-layout.row#containerTalles": {
+
+      "props": {
+        "blockClass": "container-talles",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+
+      "children": [
+        "sku-selector"
+        // "guia-talles"
       ]
 
     },

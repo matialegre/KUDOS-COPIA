@@ -199,6 +199,12 @@
     padding: 0;
 }
 
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorNameContainer){
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
 .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorTextContainer){
     margin-bottom: 12px;
 }

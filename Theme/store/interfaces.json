@@ -22,6 +22,10 @@
 
     "especificaciones-pdp": {
         "component": "EspecificacionesPDP"
+    },
+
+    "guia-talles": {
+        "component": "GuiaTalles"
     }
 
 }

@@ -75,8 +75,6 @@ const EspecificacionesPDP = () => {
 
     } else {
 
-        console.log(productData.product?.description)
-
         return (
             
             <div className={style.propertiresContainer}>

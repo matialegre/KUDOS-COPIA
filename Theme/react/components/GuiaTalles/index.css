@@ -1,0 +1,19 @@
+.modalTalleWrapper{
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: lightgray;
+}
+
+.modalTalleWrapper.active{
+    opacity: 1;
+    visibility: visible;
+}
