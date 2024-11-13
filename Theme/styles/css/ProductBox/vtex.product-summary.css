@@ -62,17 +62,17 @@
     font-family: 'GothamBook';
     font-size: 14px;
     line-height: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 @media (max-width: 640px) {
 
     .brandName{
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        line-clamp: 3;
-        -webkit-box-orient: vertical;
     }
 
 }

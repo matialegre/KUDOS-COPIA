@@ -40,6 +40,7 @@
 @media (max-width: 640px) {
 
     .filter__container{
+        margin-top: 10px;
         width: 245px;
     }
 

@@ -5,6 +5,15 @@
     background: #FFFFFF;
 }
 
+@media (max-width: 640px) {
+
+    .modalTalleContainer{
+        width: 324px;
+        height: 520px;
+    }
+
+}
+
 .closeModal{
     cursor: pointer;
     position: absolute;
@@ -26,6 +35,16 @@
     border-bottom: 1px solid #E9EAED;
 }
 
+@media (max-width: 640px) {
+
+    .titleModalTalle{
+        font-family: 'Gotham';
+        font-size: 18.14px;
+        line-height: 19.22px;
+    }
+
+}
+
 .subTitleModalTalle{
     box-sizing: border-box;
     margin-top: 12px;
@@ -35,4 +54,41 @@
     font-weight: 500;
     line-height: 21.28px;
     color: #090A10;
+}
+
+@media (max-width: 640px) {
+
+    .subTitleModalTalle{
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+}
+
+.alertNotify{
+    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    font-family: 'Gotham';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #9c130a;
+    border-top: 3px solid #C9190B;
+    background: #FFFFFF;
+}
+
+@media (max-width: 640px) {
+
+    .alertNotify{
+        width: 284px;
+    }
+
+}
+
+.alertNotify .closeModal{
+    margin-top: 5px;
 }

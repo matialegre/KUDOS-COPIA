@@ -193,8 +193,8 @@
     }
 
     .accordionFilter :global(.vtex-slider__selector-tooltip){
-        display: none;
-        left: -85% !important;
+        top: 9px;
+        left: 0% !important;
     }
 
 }

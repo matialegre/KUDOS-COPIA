@@ -2,7 +2,7 @@
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -10,7 +10,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    background: lightgray;
+    background: rgba( 0, 0, 0, 0.35);
 }
 
 .modalTalleWrapper.active{

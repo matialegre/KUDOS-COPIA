@@ -118,8 +118,8 @@
       },
 
       "children": [
-        "sku-selector"
-        // "guia-talles"
+        "sku-selector",
+        "guia-talles"
       ]
 
     },

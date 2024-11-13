@@ -880,6 +880,15 @@
     text-transform: none; 
 }
 
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form) :global(.vtex-availability-notify-1-x-content) :global(.vtex-availability-notify-1-x-submit) :global(.vtex-button) :global(.vtex-button__label){
+    font-size: 0px;
+}
+
+.flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form) :global(.vtex-availability-notify-1-x-content) :global(.vtex-availability-notify-1-x-submit) :global(.vtex-button) :global(.vtex-button__label)::before{
+    content: "Enviar datos";
+    font-size: 16px;
+}
+
 .flexCol--availability-no .flexColChild--availability-no:nth-child(0n+1) :global(.vtex-availability-notify-1-x-form){
     margin: 0;
     padding: 0;

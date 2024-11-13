@@ -1,14 +1,29 @@
 import React from 'react';
 
+// COMPONENTS 
+import DescriptionShowTalle from './DescriptionShowTalle';
+import TableTalle from './TableTalle';
+
 const ShowTalleOf = ( { data } ) => {
+    
+    if ( data ) {
 
-    console.log( "DATA SHOWTALLEOF", data );
+        return (
 
-    return (
+            <div>
+                {/* <DescriptionShowTalle productType={data[0].attribute.product_type.name}/> */}
+                <TableTalle data={data}/>
+            </div>
+    
+        )
 
-        <div>ShowTalleOf</div>
+    } else {
 
-    )
+        console.error("No se obtienen datos desde KC, revisar url de peticion");
+
+        return <></>
+
+    }
 
 }
 

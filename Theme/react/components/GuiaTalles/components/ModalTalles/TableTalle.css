@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*
+ font-family: "Inter", sans-serif;
+*/
+
+.wrapperTable::-webkit-scrollbar{
+    height: 8px;
+    background: #EBEBEB;
+}
+
+.wrapperTable::-webkit-scrollbar-thumb{
+    height: 8px;
+    border-radius: 50vw;
+    background: #09344D;
+}
+
+.wrapperTable{
+    margin: auto;
+    margin-top: 24px;
+    display: flex;
+    width: 579px;
+    max-height: 294px;
+    overflow: auto;
+}
+
+@media (max-width: 640px) {
+
+    .wrapperTable{
+        width: 280px;
+    }
+
+}
+
+.columnFixed{
+    position: sticky;
+    left: 0;
+}
+
+.columnFixed .cellNameStaticHeader{
+    width: 120px;
+    min-height: 40px;
+}
+
+.cellNameStaticHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    border-right: 1px solid #FFFFFF;
+    background: #09344D;
+}
+
+.columnFixed .cellDinamic{
+    width: 120px;
+    min-height: 40px;
+    background: #FFFFFF;
+}
+
+.columnFixed .cellDinamic:nth-child(even){
+    background: #EBEBEB;
+}
+
+.cellDinamic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    min-height: 40px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #090A10;
+    box-sizing: border-box;
+    border-right: 1px solid #FFFFFF;
+}
+
+.cellDinamic.gray{
+    background: #EBEBEB;
+}
+
+.cellDinamic.white{
+    background: #FFFFFF;
+}
+
+.rightContainerCells{
+    display: flex;
+    flex-direction: column;
+}
+
+.cellNameDinamicHeader{
+    display: flex;
+    min-width: 150px;
+    min-height: 40px;
+}
+
+.cellDinamicHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 160px;
+    min-height: 40px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    border-right: 1px solid #FFFFFF;
+    background: #09344D;
+}
+
+.containerCellsDinamics{
+    display: flex;
+    flex-wrap: wrap;
+}

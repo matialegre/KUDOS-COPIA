@@ -16,31 +16,20 @@ export const getUrl = searchData => {
     /**Definir gener */
     let switchGener = {
 
+        'masculino': 'Masculino',
         'caballero': 'Masculino',
-        'caballeros': 'Masculino',
         'hombre': 'Masculino',
-        'hombres': 'Masculino',
 
+        'femenino': 'Femenino',
         'dama': 'Femenino',
-        'damas': 'Femenino',
         'mujer': 'Femenino',
-        'mujeres': 'Femenino',
 
-        'chica': 'Niño',
-        'chicas': 'Niño',
-        'chico': 'Niño',
-        'chicos': 'Niño',
-        'niña': 'Niño',
-        'niñas': 'Niño',
         'niño': 'Niño',
-        'niños': 'Niño',
+        'chica': 'Niño',
+        'chico': 'Niño',
+        'niña': 'Niño',
 
-        'bebé': 'Bebé',
-        'bebe': 'Bebé',
-        'bebes': 'Bebé',
-
-        'unisex': 'Unisex',
-        'unisexs': 'Unisex',
+        'unisex': 'Unisex'
 
     }
 
@@ -63,7 +52,8 @@ export const getUrl = searchData => {
     }
     /**Fin Definir brand */
 
-    return `https://control.kudosestudio.com/api/tool/29/team/14?brand=${brand}&gener=${gener}&productType=${productType}`;
+    return `https://control.kudosestudio.com/api/tool/29/team/54?brand=${brand}&gener=${gener}&productType=${productType}`;
+    // return `https://control.kudosestudio.com/api/tool/29/team/54?brand=ANSILTA&gener=femenino&productType=pluma`;
             
     
     /**Fin Crear url para hacer el fetch */
