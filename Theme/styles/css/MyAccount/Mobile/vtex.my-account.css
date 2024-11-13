@@ -1,0 +1,79 @@
+@media (max-width: 640px) {
+
+  /* MENU */
+
+  .menu {
+    margin: 50px auto 0;
+    padding: 0;
+    width: max-content;
+  }
+
+  /**/
+  .menu .menuLinks :global(.vtex-account_menu-link),
+  .menu .menuLink {
+    padding-left: 0;
+    color: var(--color-black-4);
+  }
+
+  /* FIN MENU */
+
+  /* PROFILE */
+  .profile__header :global(.vtex-pageHeader__container) {
+    padding-bottom: 24px;
+  }
+  .profile__header :global(.vtex-pageHeader__title) {
+    font-weight: 800;
+  }
+  .profileBoxContainer > :global(.pb5.pr5-ns.flex-auto) {
+    padding-right: 0;
+  }
+  .firstNameSubContainer {
+    margin-bottom: 2rem;
+  }
+  .newsletterContainerMessage {
+    padding: 1rem 0 1.5rem;
+  }
+  /* FIN PROFILE */
+
+  /* ADDRESS */
+  :global(.vtex-pageHeader__container .flex) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  :global(.vtex-pageHeader__children .vtex-button) {
+    width: max-content;
+  }
+
+  .addressBox {
+    display: grid;
+  }
+  /* FIN ADDRESS */
+
+  /* PEDIDOS */
+  :global(.myo-order-header) {
+    padding: 12px 20px;
+  }
+
+  :global(.vtex-account__order-details .bg-warning) {
+    width: 12rem;
+    margin-left: 0px;
+  }
+  /* FIN PEDIDOS */
+
+  /* WISHLIST */
+  :global(.vtex-account__page-body.wish-list .vtex-slider-layout-0-x-sliderTrack) {
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    transform: none!important;
+  }
+  :global(.vtex-account__page-body.wish-list .vtex-slider-layout-0-x-sliderTrack .vtex-slider-layout-0-x-slide) {
+    width: 100%!important;
+  }
+  :global(.vtex-account__page-body.wish-list .vtex-slider-layout-0-x-paginationDotsContainer) {
+    display: none!important;
+  }
+  /* FIN WISHLIST */
+
+}

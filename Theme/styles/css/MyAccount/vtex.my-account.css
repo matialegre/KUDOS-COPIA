@@ -1,0 +1,574 @@
+
+:global(.vtex-account) {
+  max-width: 1200px;
+  margin: auto;
+}
+:global(.vtex-account *) {
+  font-family: 'Gotham';
+}
+
+/* BUTTONS */
+.boxContainerBody :global(.vtex-button[type="submit"]),
+:global(.vtex-pageHeader__children .vtex-button),
+.boxContainerBody :global(.vtex-button.b--action-primary),
+:global(.vtex-button.bg-action-primary.b--action-primary) {
+  border: none;
+  background: var(--sub-title-slider-product-boxs, #2680EB);
+  text-transform: initial;
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 0;
+  padding: 12px;
+}
+.boxContainerBody :global(.vtex-button[type="submit"] .vtex-button__label),
+:global(.vtex-pageHeader__children .vtex-button .vtex-button__label),
+.boxContainerBody :global(.vtex-button.b--action-primary .vtex-button__label),
+:global(.vtex-button.bg-action-primary.b--action-primary .vtex-button__label) {
+  padding: 0 !important;
+}
+.boxContainerBody :global(.vtex-button.bg-danger) {
+  border: none;
+  text-transform: initial;
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 0;
+  padding: 12px;
+}
+.boxContainerBody :global(.vtex-button.bg-danger .vtex-button__label) {
+  padding: 0 !important;
+}
+/* FIN BUTTONS */
+
+/* MENU */
+.menu {
+  padding: 0 30px;
+}
+
+/* User logo */
+
+.userInfo {
+  align-items: center;
+}
+.userGreeting,
+.userName {
+  color: var(--color-black-4);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/*Links*/
+.menuLinks :global(.vtex-account_menu-link) {
+  font-size: 14.22px;
+  font-weight: 400;
+  line-height: 28px;
+  margin: 0;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+.menuLinks :global(.vtex-account_menu-link.b--action-primary) {
+  border-left: 4px solid #EB5757;
+  color: var(--color-black-1);
+  font-weight: 500;
+}
+/* FIN MENU */
+
+/* PERFIL */
+:global(.vtex-pageHeader__container) {
+  padding-bottom: 37px;
+}
+:global(.vtex-pageHeader__title) {
+  font-family: "Uni Sans";
+  font-weight: 500;
+  color: #000;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+/* */
+:global(.vtex-pageHeader__container .vtex-pageHeader-link__container) {
+  margin-bottom: 12px;
+}
+:global(.vtex-pageHeader__container .vtex-pageHeader-link__container .vtex-button):hover {
+  background: transparent;
+}
+:global(.vtex-pageHeader__container .vtex-pageHeader-link__container .vtex-button .items-center)::before {
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M13.1429 7.07706H4.9268L6.89211 4.93736C6.97398 4.85128 7.03927 4.74831 7.08419 4.63446C7.12911 4.52061 7.15275 4.39817 7.15374 4.27426C7.15473 4.15036 7.13305 4.02748 7.08995 3.9128C7.04685 3.79812 6.98321 3.69394 6.90274 3.60632C6.82226 3.5187 6.72657 3.44942 6.62123 3.4025C6.5159 3.35558 6.40304 3.33197 6.28923 3.33304C6.17543 3.33412 6.06296 3.35986 5.95839 3.40877C5.85382 3.45767 5.75925 3.52876 5.68018 3.61789L2.2518 7.35047C2.17199 7.43715 2.10866 7.54013 2.06545 7.6535C2.02224 7.76687 2 7.8884 2 8.01114C2 8.13388 2.02224 8.25542 2.06545 8.36879C2.10866 8.48215 2.17199 8.58513 2.2518 8.67181L5.68018 12.4044C5.84183 12.5744 6.05834 12.6684 6.28306 12.6663C6.50779 12.6642 6.72276 12.566 6.88167 12.393C7.04059 12.22 7.13073 11.986 7.13268 11.7413C7.13463 11.4966 7.04824 11.2609 6.89211 11.0849L4.9268 8.94336H13.1429C13.3702 8.94336 13.5882 8.84504 13.749 8.67004C13.9097 8.49504 14 8.25769 14 8.01021C14 7.76272 13.9097 7.52537 13.749 7.35037C13.5882 7.17537 13.3702 7.07706 13.1429 7.07706Z' fill='%232680EB'/%3E%3C/svg%3E");
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+:global(.vtex-pageHeader__container .vtex-pageHeader-link__container .vtex-button .vtex__icon-arrow-back) {
+  display: none;
+}
+:global(.vtex-pageHeader__container .vtex-pageHeader-link__container .vtex-button .t-action--small) {
+  color: var(--sub-title-slider-product-boxs);
+  font-size: 0;
+  font-weight: 500;
+  text-transform: initial;
+}
+:global(.vtex-pageHeader__container .vtex-pageHeader-link__container .vtex-button .t-action--small)::before {
+  content: "Volver";
+  font-size: 14px;
+}
+
+/*Profile Box*/
+:global(.vtex-account__page-body) {
+  padding-top: 0;
+}
+.boxContainer {
+  border: 1px solid #CCD5E0;
+  padding: 2rem;
+}
+.profileBoxContainer > :global(.pb5.pr5-ns.flex-auto) {
+  padding-right: 24px;
+}
+.boxContainerBody {
+  padding: 0;
+}
+.dataEntryLabel,
+.newsletterContainerTitle,
+.passwordBox :global(.vtex-checkbox__label) {
+  color: #000;
+}
+.dataEntryChildren,
+.newsletterContainerMessage {
+  color: var(--color-gray-3);
+}
+
+.boxContainerFooter {
+  padding: 0;
+}
+.boxContainerFooter :global(.vtex-button):hover {
+  background: transparent;
+}
+.boxContainerFooter :global(.vtex-button__label) {
+  font-size: 16px;
+  color: var(--sub-title-slider-product-boxs);
+  text-transform: initial;
+  font-weight: 500;
+}
+
+/* */
+.newsletterBoxContainer > :global(.pb5.pr5-ns.flex-auto) {
+  padding-right: 0;
+}
+.newsletterContainerMessage {
+  padding-top: 10px;
+  padding-bottom: 16px;
+}
+.passwordBox :global(.vtex-checkbox__inner-container.b--action-primary) {
+  border: none;
+  background: var(--sub-title-slider-product-boxs);
+}
+
+/* Edit */
+.profileEdit__header :global(.vtex-pageHeader__container) {
+  padding-left: .75rem;
+}
+.boxContainerBody :global(.vtex-input__label),
+.boxContainerBody :global(.vtex-dropdown__label) {
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-black-4);
+}
+:global(.vtex-profile-form-3-x-styleguideInput .vtex-input-prefix__group .border-box),
+:global(.vtex-profile-form-3-x-styleguideInput .vtex-dropdown .b--light-gray) {
+  border: 1px solid #CCD5E0;
+  color: var(--color-gray-3);
+  font-size: 14.22px;
+  line-height: 20px; 
+}
+:global(.vtex-profile-form-3-x-styleguideInput .vtex-dropdown .vtex-dropdown__button) {
+  color: var(--color-gray-3);
+  font-size: 14.22px;
+}
+
+:global(.vtex-profile-form-3-x-toggleBusinessButtonWrapper) {
+  margin-bottom: 20px;
+}
+:global(.vtex-profile-form-3-x-toggleBusinessButtonWrapper .vtex-button) {
+    background: #E9F1FB;
+    text-transform: initial;
+    border: none;
+    padding: 12px;
+    font-size: 0;
+    color: var(--sub-title-slider-product-boxs);
+    font-weight: 500;
+}
+:global(.vtex-profile-form-3-x-toggleBusinessButtonWrapper .vtex-button)::before {
+  content: "Incluir campos comerciales";
+  font-size: 14px;
+}
+:global(.vtex-profile-form-3-x-toggleBusinessButtonWrapper .vtex-button):hover {
+  background: #E9F1FB;
+}
+/* FIN PERFIL */
+
+/* ADDRESS */
+.addressBox .boxContainerBody :global(.h4) {
+  height: auto;
+}
+.addressBox :global(.address-summary span) {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.addressBox :global(.address-summary .street),
+.addressBox :global(.address-summary .number) {
+  color: var(--color-black-4);
+}
+
+.boxContainerBody :global(.c-link),
+.boxContainerBody :global(.address-summary span.c-link) {
+  color: var(--sub-title-slider-product-boxs);
+}
+
+.boxContainerBody :global(.address-summary span) {
+  font-size: 16px;
+  color: var(--color-gray-3);
+}
+
+@media (min-width: 640px) {
+  .addressBox {
+    padding-right: 60px;
+  }
+  .addressBox :global(.flex-none) {
+    width: 50%;
+  }
+}
+/* FIN ADDRESS */
+
+/* PEDIDOS */
+:global(.vtex-account__page.w-80-m) {
+  width: 100%;
+}
+
+:global(.myo-order-card) {
+  margin-top: 0;
+}
+:global(.myo-order-header) {
+  background: #E9EAED;
+  padding: 16px 32px;
+}
+
+:global(.vtex-my-orders-app-3-x-orderHeaderLabel),
+:global(.myo-order-id) {
+  color: var(--color-black-1);
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 24px;
+}
+:global(.vtex-my-orders-app-3-x-orderHeaderValue) {
+  font-size: 16px;
+  color: var(--color-black-4);
+  margin-top: 5px;
+}
+:global(.vtex-my-orders-app-3-x-orderHeaderValue.c-muted-1) {
+  color: var(--color-black-1);
+  font-weight: 500;
+}
+
+/* */
+:global(.vtex-my-orders-app-3-x-orderHeader .fl-ns .vtex-my-orders-app-3-x-orderHeaderLabel),
+:global(.vtex-my-orders-app-3-x-orderHeader .fl-ns .vtex-my-orders-app-3-x-orderHeaderValue) {
+  padding-left: 2rem;
+}
+:global(.vtex-my-orders-app-3-x-orderHeader .tr-ns .dib),
+:global(.vtex-my-orders-app-3-x-collapsedOrder .tr-ns .dib) {
+  width: auto;
+  padding: 4px 8px;
+  margin: 0;
+}
+:global(.vtex-my-orders-app-3-x-orderHeader .tr-ns span),
+:global(.vtex-my-orders-app-3-x-collapsedOrder .tr-ns span) {
+  font-size: 12px;
+}
+:global(.vtex-my-orders-app-3-x-orderHeader .tr-ns .bg-muted-1) {
+  background: #676F79;
+}
+:global(.vtex-my-orders-app-3-x-orderHeader .tr-ns .c-on-muted-1) {
+  color: #FFFFFF;
+}
+:global(.vtex-my-orders-app-3-x-orderHeader .tr-ns .bg-danger) {
+  background: #EA3829;
+}
+:global(.vtex-my-orders-app-3-x-orderHeader .tr-ns .c-on-danger) {
+  color: #FFFFFF;
+}
+
+/* */
+:global(.vtex-my-orders-app-3-x-orderProduct) {
+  padding-bottom: 20px;
+}
+:global(.vtex-my-orders-app-3-x-orderProductName) {
+  color: #1E55AF;
+  font-family: "Inter";
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: initial;
+}
+:global(.vtex-my-orders-app-3-x-orderProductShipping),
+:global(.vtex-my-orders-app-3-x-orderProductQuantityValue) {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+:global(.vtex-my-orders-app-3-x-orderProductQuantityValue) {
+  color: #090A10;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+:global(.vtex-my-orders-app-3-x-reorderBtn .vtex-my-orders-app-3-x-font) {
+  font-size: 0;
+}
+:global(.vtex-my-orders-app-3-x-reorderBtn svg) {
+  fill: var(--sub-title-slider-product-boxs);
+}
+:global(.vtex-my-orders-app-3-x-reorderBtn .vtex-my-orders-app-3-x-font)::before {
+  content: "Ordenar nuevamente";
+  font-family: "Gotham";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  color: var(--sub-title-slider-product-boxs);
+
+}
+:global(.vtex-my-orders-app-3-x-reorderBtn) svg {
+  visibility: hidden;
+  width: 0;
+}
+:global(.vtex-my-orders-app-3-x-reorderBtn)::before {
+  visibility: visible;
+  content: '';
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M12.6665 8.66683C12.2985 8.66683 11.9998 8.9655 11.9998 9.3335V10.6668H3.60915L4.47115 9.80483C4.73182 9.54417 4.73182 9.12283 4.47115 8.86217C4.21048 8.6015 3.78915 8.6015 3.52848 8.86217L1.52848 10.8622C1.46715 10.9235 1.41848 10.9975 1.38448 11.0788C1.31715 11.2422 1.31715 11.4255 1.38448 11.5882C1.41848 11.6695 1.46715 11.7435 1.52848 11.8048L3.52848 13.8048C3.65848 13.9348 3.82915 14.0002 3.99982 14.0002C4.17048 14.0002 4.34115 13.9348 4.47115 13.8048C4.73182 13.5442 4.73182 13.1228 4.47115 12.8622L3.60915 12.0002H12.6665C13.0345 12.0002 13.3332 11.7015 13.3332 11.3335V9.3335C13.3332 8.9655 13.0345 8.66683 12.6665 8.66683Z' fill='%232680EB'/%3E%3Cpath d='M14.6152 4.41217C14.5812 4.33083 14.5325 4.25683 14.4712 4.1955L12.4712 2.1955C12.2105 1.93483 11.7892 1.93483 11.5285 2.1955C11.2678 2.45617 11.2678 2.8775 11.5285 3.13817L12.3905 4.00017H3.33315C2.96515 4.00017 2.66648 4.29883 2.66648 4.66683V6.66683C2.66648 7.03483 2.96515 7.3335 3.33315 7.3335C3.70115 7.3335 3.99982 7.03483 3.99982 6.66683V5.3335H12.3905L11.5285 6.1955C11.2678 6.45617 11.2678 6.8775 11.5285 7.13817C11.6585 7.26817 11.8292 7.3335 11.9998 7.3335C12.1705 7.3335 12.3412 7.26817 12.4712 7.13817L14.4712 5.13817C14.5325 5.07683 14.5812 5.00283 14.6152 4.9215C14.6825 4.75883 14.6825 4.57483 14.6152 4.41217Z' fill='%232680EB'/%3E%3C/svg%3E") no-repeat center center / contain;
+  width: 15px;
+  height: 15px;
+}
+:global(.vtex-my-orders-app-3-x-cancelBtn) {
+  color: #EA3829;
+}
+
+:global(.vtex-my-orders-app-3-x-detailsBtn) {
+  background: #E9F1FB;
+  color: var(--sub-title-slider-product-boxs);
+}
+
+/* Detalles de pedido */
+:global(.vtex-account__order-details .mr2.mv2) {
+  display: flex;
+  align-items: center;
+}
+
+:global(.vtex-account__order-details .bg-warning) {
+  width: 10rem;
+  padding: 0.5rem 0;
+  margin-left: 15px;
+}
+
+:global(.vtex-account__order-details .bg-warning .c-on-base) {
+  color: #FFB100;
+  font-size: 0.9375rem;
+}
+
+:global(.vtex-account__order-details .w-100.fl.w-60-ns.pv3-ns.pr0 .no-underline span) {
+  display: flex;
+  align-items: center;
+  color: #D42323;
+}
+
+:global(.vtex-account__order-details .w-100.fl.w-60-ns.pv3-ns.pr0 .no-underline span)::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='15' viewBox='0 0 16 15' fill='none'%3E%3Cpath d='M7.75548 1.25C4.18151 1.25 1.2926 4.04375 1.2926 7.5C1.2926 10.9563 4.18151 13.75 7.75548 13.75C11.3294 13.75 14.2183 10.9563 14.2183 7.5C14.2183 4.04375 11.3294 1.25 7.75548 1.25ZM10.5345 10.1875C10.4747 10.2454 10.4037 10.2914 10.3255 10.3228C10.2473 10.3541 10.1635 10.3703 10.0789 10.3703C9.99424 10.3703 9.91042 10.3541 9.83224 10.3228C9.75406 10.2914 9.68304 10.2454 9.62325 10.1875L7.75548 8.38125L5.88771 10.1875C5.76686 10.3044 5.60297 10.37 5.43207 10.37C5.26118 10.37 5.09728 10.3044 4.97644 10.1875C4.8556 10.0706 4.78771 9.91214 4.78771 9.74687C4.78771 9.66504 4.80438 9.58401 4.83676 9.50841C4.86914 9.43281 4.91661 9.36411 4.97644 9.30625L6.84421 7.5L4.97644 5.69375C4.8556 5.57689 4.78771 5.41839 4.78771 5.25312C4.78771 5.08786 4.8556 4.92936 4.97644 4.8125C5.09728 4.69564 5.26118 4.62999 5.43207 4.62999C5.60297 4.62999 5.76686 4.69564 5.88771 4.8125L7.75548 6.61875L9.62325 4.8125C9.68308 4.75464 9.75412 4.70874 9.83229 4.67742C9.91047 4.64611 9.99426 4.62999 10.0789 4.62999C10.1635 4.62999 10.2473 4.64611 10.3255 4.67742C10.4036 4.70874 10.4747 4.75464 10.5345 4.8125C10.5943 4.87036 10.6418 4.93906 10.6742 5.01466C10.7066 5.09026 10.7232 5.17129 10.7232 5.25312C10.7232 5.33496 10.7066 5.41599 10.6742 5.49159C10.6418 5.56719 10.5943 5.63589 10.5345 5.69375L8.66674 7.5L10.5345 9.30625C10.7801 9.54375 10.7801 9.94375 10.5345 10.1875Z' fill='%23D42323'/%3E%3C/svg%3E");
+  display: block;
+  height: 15px;
+  margin-right: 5px;
+}
+
+:global(.vtex-my-orders-app-3-x-orderHeaderLabel),
+:global(.vtex-my-orders-app-3-x-orderHeaderValue) {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: initial;
+}
+:global(.vtex-my-orders-app-3-x-orderHeaderLabel) {
+  font-weight: 400;
+  color: var(--color-black-4);
+}
+:global(.vtex-my-orders-app-3-x-orderHeaderValue) {
+  color: var(--color-black-1);
+}
+
+:global(.vtex-my-orders-app-3-x-orderHeaderValue .absolute.dn.dib-ns.ml3.mt2) {
+  display: none;
+}
+
+:global(.vtex-account__order-details .db.dib-ns.mr7-ns.mb5.mb0-ns .underline svg) {
+  fill: var(--sub-title-slider-product-boxs);
+  position: relative;
+}
+
+:global(.vtex-account__order-details .db.dib-ns.mr7-ns.mb5.mb0-ns .underline) {
+  font-size: 0;
+  text-decoration: none;
+  display: flex;
+}
+
+:global(.vtex-account__order-details .db.dib-ns.mr7-ns.mb5.mb0-ns .underline span) {
+  margin-left: 0 !important;
+}
+
+:global(.vtex-account__order-details .db.dib-ns.mr7-ns.mb5.mb0-ns .underline)::after {
+  content: "Repetir este pedido";
+  font-size: 0.9375rem;
+  color: var(--sub-title-slider-product-boxs);
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+:global(.vtex-account__order-details section.w-100.fl.mt5.mb2-l.mb2-xl article section) {
+  overflow: auto;
+}
+
+:global(.vtex-account__order-details .w-100.pv7.fl .flex-row-l .c-on-muted-1) {
+  color: var(--sub-title-slider-product-boxs);
+  background: #F2F2F2;
+  width: 12rem;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+:global(.vtex-account__order-details .w-100.pv7.fl .myo-margin-right h2),
+:global(.vtex-account__order-details .vtex-my-orders-app-3-x-productTable thead th) {
+  font-size: 15px;
+}
+
+:global(.vtex-account__order-details .vtex-my-orders-app-3-x-productTable .vtex-my-orders-app-3-x-productName) {
+  color: #000;
+  text-decoration: none;
+}
+/* FIN PEDIDOS */
+
+/* TARJETAS */
+:global(.vtex-account__cards-list .t-heading-4 .c-on-base) {
+  margin-top: 40px;
+  display: block;
+  color: #676F79;
+  font-weight: 500;
+}
+
+/* Agregar tarjeta */
+:global(.vtex-radioGroup__radioContainer .vtex-radio__fakeRadio) {
+  border: 1px solid #2680EB;
+}
+:global(.vtex-radioGroup__radioContainer .vtex-radio__fakeRadioInner) {
+  background: #2680EB;
+}
+:global(.vtex-button.t-action.bg-transparent.b--transparent.c-action-primary .vtex-button__label) {
+  color: #2680EB;
+  font-size: 16.2px;
+  text-transform: initial;
+  font-weight: 600;
+}
+:global(.vtex-button.c-danger.hover-bg-danger--faded.hover-b--danger--faded .vtex-button__label) {
+  color: #EA3829;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: initial;
+}
+
+/* FIN TARJETAS */
+
+/* AUTENTICACION */
+:global(.vtex_my-authentication_box_container) {
+  padding: 32px 32px 20px;
+  gap: 24px;
+}
+:global(.vtex_my-authentication_box_content),
+:global(.vtex_my-authentication_box_footer) {
+  padding: 0;
+}
+:global(.vtex_my-authentication_box_footer .vtex-button__label) {
+  padding: 0 1rem;
+}
+:global(.vtex_my-authentication_box_footer .vtex-button__label),
+:global(.vtex_my-authentication_resendCodeButton_container .vtex-button__label),
+:global(.vtex_my-authentication_savePassButton_container .vtex-button__label) {
+  color: var(--sub-title-slider-product-boxs);
+  text-transform: initial;
+  font-size: 16px;
+}
+:global(.vtex_my-authentication_box_footer .vtex-button):hover,
+:global(.vtex_my-authentication_resendCodeButton_container .vtex-button),
+:global(.vtex_my-authentication_savePassButton_container .vtex-button) {
+  background: transparent;
+}
+:global(.vtex_my-authentication_box_footer .vtex_my-authentication_savePassButton_container .vtex-button) {
+  border: none;
+  background: transparent;
+}
+/* FIN AUTENTICACION */
+
+/* WISHLIST */
+:global(.wish-list__header .vtex-pageHeader__title) {
+  font-size: 0;
+}
+:global(.wish-list__header .vtex-pageHeader__title)::before {
+  content: "Favoritos";
+  font-size: 26px;
+}
+
+@media (min-width: 640px) {
+  :global(.vtex-account__page-body.wish-list .vtex-slider-layout-0-x-sliderTrack) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  :global(.vtex-account__page-body.wish-list .vtex-slider-layout-0-x-slide) {
+    width: 100%!important;
+  }
+  :global(.vtex-account__page-body.wish-list .vtex-slider-layout-0-x-slide .vtex-product-summary-2-x-spacer) {
+    display: none;
+  }
+}
+/* FIN WISHLIST  */
+
+/* SALIR */
+  :global(.styles_modal__gNwvD) {
+    max-width: 460px;
+  }
+  :global(.styles_modal__gNwvD .ph8-ns) {
+    padding: 24px;
+  }
+  :global(.styles_modal__gNwvD .ph8-ns .t-heading-5) {
+    font-size: 0;
+  }
+  :global(.styles_modal__gNwvD .ph8-ns .t-heading-5)::before {
+    font-family: "Gotham";
+    content: "¿Quieres cerrar sesión?";
+    font-size: 16px;
+    font-weight: 400;
+  }
+  :global(.styles_modal__gNwvD .ph8-ns .vtex-modal__confirmation) {
+    margin-top: 76px;
+    align-items: center;
+  }
+  :global(.styles_modal__gNwvD .ph8-ns .vtex-modal__confirmation .mr4 .vtex-button):hover {
+    background: transparent;
+  }
+  :global(.styles_modal__gNwvD .ph8-ns .vtex-modal__confirmation .mr4 .vtex-button__label) {
+    color: var(--sub-title-slider-product-boxs, #2680EB);
+  }
+  :global(.styles_modal__gNwvD .ph8-ns .vtex-modal__confirmation .vtex-button) {
+    max-width: 96px;
+    width: 100%;
+  }
+  :global(.styles_modal__gNwvD .ph8-ns .vtex-modal__confirmation .vtex-button__label) {
+    line-height: initial;
+  }
+/* FIN SALIR */
