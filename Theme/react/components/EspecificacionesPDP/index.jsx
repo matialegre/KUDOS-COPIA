@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 
 import { useProduct } from 'vtex.product-context';
 
@@ -6,119 +6,142 @@ import style from './index.css';
 
 const EspecificacionesPDP = () => {
 
-    const refColumnContainer = useRef();
-    const [description, setDescription] = useState(null);
+    const containerDescriptionPDP = useRef();
+    const containerSpecificationPDP = useRef();
 
     const productData = useProduct();
-    
-    //ARMAR ARRAY PARA COLUMNA IZQUIERDA DE ESPECIFICACIONES
-    let desc = productData.product?.description;
-    desc = desc.replaceAll("<p>", "");
-    desc = desc.replaceAll("</p>", "");
-    desc = desc.replaceAll("/\n/g", "");
-    const string = desc;
-    const regex = /<strong>(.*?)<\/strong>/g;
-    const matches = string.match(regex);
-    let leftColumn;
-    
-    if ( matches ) {
+    let description = productData.product?.description;
+    let specifications = productData.product?.properties;
 
-        leftColumn = matches.map(match => match.replace(/<strong>|<\/strong>/g, ""));
-        leftColumn.shift();
+    // FUNCIONES 
+    const expandDescription = () => {
+
+        const divExpand = containerDescriptionPDP.current;
+        const heightDivHidden = divExpand.querySelector(`.${style.descriptionExpandableModal}`);
+        const iconExpand = divExpand.querySelector(`.${style.descriptionExpandableHeader} img`);
         
-    }
-    //FIN ARMAR ARRAY PARA COLUMNA IZQUIERDA DE ESPECIFICACIONES
+        if ( parseInt( getComputedStyle( divExpand ).height ) > 48 ) {
 
-    //ARAMAR ARRAY PARA COLUMNA DERECHA DE ESPECIFICACIONES
-    const string2 = desc;
-    const regex2 = /<strong>.*?<\/strong>/g;
-    let newString = string2.replace(regex2, "");
-    newString = newString.replaceAll( "\n", "" );
-    const string3 = newString;
-    const separator1 = "<br />";
-    const separator2 = "<br /><br />";
-    const regex3 = new RegExp(`${separator1}|${separator2}`, "g");
-    const result2 = string3.split(regex3);
-    const arr = result2;
-    let rightColumn = arr.filter( item => item !== "" );
-    rightColumn.shift();
-    //ARAMAR ARRAY PARA COLUMNA DERECHA DE ESPECIFICACIONES
-
-    // FUNCION ABRIR CERRAR ESPECIFICACIONES
-    const openSpecification = event => {
-        
-        let containerSpecification = event.target.parentElement;
-        
-        if ( containerSpecification.style.height && containerSpecification.style.height !== "27px" ) {
-
-            containerSpecification.style.height = "27px";
-            containerSpecification.children[0].children[1].style.transform = "rotate(0deg)";
+            divExpand.style.height = "48px";
+            iconExpand.style.transform = "rotate(0deg)";
 
         } else {
 
-            containerSpecification.style.height = refColumnContainer.current.clientHeight + 49 + "px";
-            containerSpecification.children[0].children[1].style.transform = "rotate(90deg)";
+            const newHeight = parseFloat( getComputedStyle( heightDivHidden ).height );
+            
+            divExpand.style.height = 48 + newHeight + "px";
+            iconExpand.style.transform = "rotate(-180deg)";
 
         }
+        
 
     }
-    // FIN FUNCION ABRIR CERRAR ESPECIFICACIONES
 
-    if ( !productData || !leftColumn || !rightColumn ) {
+    const expandSpecification = () => {
+
+        const divExpand = containerSpecificationPDP.current;
+        const heightDivHidden = divExpand.querySelector(`.${style.specificationExpandableModal}`);
+        const iconExpand = divExpand.querySelector(`.${style.specificationExpandableHeader} img`);
         
-        return (
-    
-            // <div className={`${style.contSpecification}`}>Cargando especificaciones...</div>
-            <></>
-    
-        )
+        if ( parseInt( getComputedStyle( divExpand ).height ) > 48 ) {
 
-    } else {
+            divExpand.style.height = "48px";
+            iconExpand.style.transform = "rotate(0deg)";
 
-        return (
+        } else {
+
+            const newHeight = parseFloat( getComputedStyle( heightDivHidden ).height );
             
-            <div className={style.propertiresContainer}>
+            divExpand.style.height = 48 + newHeight + "px";
+            iconExpand.style.transform = "rotate(-180deg)";
 
-                <div className={style.descriptionContainer}>
-                    <h2>Descripción</h2>
-                    <div className={style.productDescription} dangerouslySetInnerHTML={{__html: productData.product?.description}}></div>
+        }
+        
+
+    }
+    // FIN FUNCIONES 
+
+    if ( description && specifications ) {
+
+        return (
+
+            <div className={style.wrapperDescriptionSpecification}>
+
+                <div className={style.containerDescriptionPDP} ref={containerDescriptionPDP}>
+
+                    <div className={style.descriptionExpandableHeader} onClick={ expandDescription }>
+
+                        <p>Descripción</p>
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='18' viewBox='0 0 19 18' fill='none'%3E%3Cpath d='M8.37662 11.1968L8.37648 11.1967L4.38218 6.92116C4.38216 6.92115 4.38215 6.92113 4.38213 6.92112C4.28735 6.81949 4.29318 6.66122 4.39296 6.56738C4.49472 6.47319 4.65373 6.47996 4.74603 6.57889L4.74629 6.57916L8.69879 10.8092L9.06412 11.2001L9.42945 10.8092L13.382 6.57916L13.3826 6.57843C13.4752 6.47894 13.6343 6.47298 13.7348 6.56693C13.8357 6.66135 13.8412 6.82005 13.7468 6.92116L9.75284 11.1964C9.75275 11.1965 9.75265 11.1965 9.75256 11.1966C9.75254 11.1967 9.75252 11.1967 9.7525 11.1967C9.57046 11.391 9.31783 11.5 9.06412 11.5C8.81014 11.5 8.55766 11.3908 8.37662 11.1968Z' fill='%23676F79' stroke='%23676F79'/%3E%3C/svg%3E"/>
+
+                    </div>
+
+                    <div className={style.descriptionExpandableModal}>
+
+                        <p>{description}</p>
+
+                    </div>
+
                 </div>
 
-                {/* <div className={style.specificationContainer}>
+                <div className={style.containerSpecificationPDP} ref={containerSpecificationPDP}>
 
-                    <div className={style.drawerColumContainer} onClick={ event => openSpecification( event ) }>
+                    <div className={style.specificationExpandableHeader} onClick={ expandSpecification }>
+
                         <p>Especificaciones</p>
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 15 15' fill='none'%3E%3Cg clip-path='url(%23clip0_6357_17289)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.41724 15L3.375 13.946L9.57092 7.49016L8.91028 6.8016L8.91357 6.80539L3.40833 1.06991L4.43555 -8.57334e-08C5.95713 1.5852 10.2051 6.0109 11.625 7.49016C10.5704 8.58959 11.5989 7.51816 4.41724 15Z' fill='black'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_6357_17289'%3E%3Crect width='15' height='15' fill='white' transform='matrix(1.19249e-08 -1 -1 -1.19249e-08 15 15)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E"/>
-                    </div>
-
-                    <div className={style.columnContainer} ref={refColumnContainer}>
-
-                        {
-
-                            leftColumn.map( ( item, index ) => {
-
-                                return (
-                                    
-                                    <div className={style.rowContainer}>
-                                        <p>{item}</p>
-                                        <p>{rightColumn[index]}</p>
-                                    </div>
-
-                                )
-
-                            })
-
-                        }
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='18' viewBox='0 0 19 18' fill='none'%3E%3Cpath d='M8.37662 11.1968L8.37648 11.1967L4.38218 6.92116C4.38216 6.92115 4.38215 6.92113 4.38213 6.92112C4.28735 6.81949 4.29318 6.66122 4.39296 6.56738C4.49472 6.47319 4.65373 6.47996 4.74603 6.57889L4.74629 6.57916L8.69879 10.8092L9.06412 11.2001L9.42945 10.8092L13.382 6.57916L13.3826 6.57843C13.4752 6.47894 13.6343 6.47298 13.7348 6.56693C13.8357 6.66135 13.8412 6.82005 13.7468 6.92116L9.75284 11.1964C9.75275 11.1965 9.75265 11.1965 9.75256 11.1966C9.75254 11.1967 9.75252 11.1967 9.7525 11.1967C9.57046 11.391 9.31783 11.5 9.06412 11.5C8.81014 11.5 8.55766 11.3908 8.37662 11.1968Z' fill='%23676F79' stroke='%23676F79'/%3E%3C/svg%3E"/>
 
                     </div>
-                    
-                </div> */}
+
+                    <div className={style.specificationExpandableModal}>
+                        
+                        <div className={style.specificationColumnLeft}>
+
+                            {
+
+                                specifications.map( item => {
+
+                                    return (
+
+                                        <div>{item.name}</div>
+
+                                    )
+
+                                })
+
+                            }
+
+                        </div>
+
+                        <div className={style.specificationColumnRight}>
+
+                            {
+
+                                specifications.map( item => {
+
+                                    return (
+
+                                        <div>{item.values[0]}</div>
+
+                                    )
+
+                                })
+
+                            }
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
-        
+
         )
 
     }
+    
+    return <></>
 
 }
 
