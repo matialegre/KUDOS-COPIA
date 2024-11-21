@@ -1,0 +1,12 @@
+{
+
+    "image#image-talle-8":{
+
+        "props": {
+            "blockClass": "image-talle",
+            "src": "/arquivos/talle7.png"
+        }
+
+    }
+
+}

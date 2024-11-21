@@ -1,0 +1,29 @@
+{
+
+    "flex-layout.col#group-tarjetas-credito-col": {
+
+        "props": {
+          "blockClass": "group-tarjetas-credito-col",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "disclosure-layout-group#group-tarjetas-credito"
+        ]
+    
+    },
+
+    "disclosure-layout-group#group-tarjetas-credito": {
+
+        "children": [
+            "disclosure-layout#item-tarjetas-credito-1",
+            "disclosure-layout#item-tarjetas-credito-2",
+            "disclosure-layout#item-tarjetas-credito-3",
+            "disclosure-layout#item-tarjetas-credito-4"
+        ]
+
+    }
+
+}

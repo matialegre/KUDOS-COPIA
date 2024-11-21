@@ -1,0 +1,77 @@
+.flexCol--form-venta-corporativa-column-left{
+    float: left;
+    margin-right: 23px;
+    max-width: calc( 50% - 11.5px );
+    width: calc( 50% - 11.5px );
+}
+
+@media (max-width: 640px) {
+
+    .flexCol--form-venta-corporativa-column-left{
+        float: none;
+        margin-right: 23px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+}
+
+.flexCol--form-venta-corporativa-column-right{
+    max-width: calc( 50% - 11.5px );
+    width: calc( 50% - 11.5px );
+}
+
+@media (max-width: 640px) {
+
+    .flexCol--form-venta-corporativa-column-right{
+        max-width: 100%;
+        width: 100%;
+    }
+
+}
+
+.flexCol--form-venta-corporativa-column-order{
+    margin-top: 11.5px;
+}
+
+.flexCol--form-venta-corporativa-column-order :global(.vtex-input-prefix__group){
+    height: 125px;
+}
+
+@media (max-width: 640px) {
+
+    .flexCol--form-venta-corporativa-column-order :global(.vtex-input-prefix__group){
+        height: 159px;
+    }
+
+}
+
+/* BANNERS  */
+.flexRow--venta-corporativa-banners-container{
+    margin-bottom: 134px;
+}
+
+.flexRowContent--venta-corporativa-banners-container{
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 32px;
+    max-width: 1204px;
+    width: 1204px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRow--venta-corporativa-banners-container{
+        margin-top: -97px;
+        margin-bottom: 95px;
+    }
+
+    .flexRowContent--venta-corporativa-banners-container{
+        gap: 22px;
+        max-width: 329px;
+        width: 329px;
+    }
+    
+
+}
+/* FIN BANNERS  */

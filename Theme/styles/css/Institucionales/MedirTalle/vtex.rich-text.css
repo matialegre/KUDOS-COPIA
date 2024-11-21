@@ -1,0 +1,16 @@
+.paragraph--text-bold-talle{
+    margin-top: 20px;
+    font-family: 'Gotham';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21.28px;
+    color: #090A10;
+}
+
+.paragraph--text-plain-talle{
+    margin-top: 4px;
+    font-family: 'GothamBook';
+    font-size: 15px;
+    line-height: 24px;
+    color: #3D3F43;
+}

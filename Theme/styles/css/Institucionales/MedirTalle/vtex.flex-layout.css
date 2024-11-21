@@ -1,0 +1,24 @@
+.flexRow--container-images-talle{
+    margin-top: 27px;
+}
+
+.flexRowContent--container-images-talle{
+    gap: 43px;
+}
+
+.flexRowContent--container-images-talle .stretchChildrenWidth{
+    min-width: auto !important;
+}
+
+.flexCol--talle-product-type-list-col{
+    margin-top: 44px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--container-images-talle{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}

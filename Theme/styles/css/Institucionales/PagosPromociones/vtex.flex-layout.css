@@ -1,0 +1,11 @@
+.flexRowContent--image-card-container{
+    width: 115px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--image-card-container{
+        width: 99.76px;
+    }
+
+}

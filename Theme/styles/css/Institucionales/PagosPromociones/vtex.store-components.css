@@ -1,0 +1,13 @@
+.imageElement--arrow-question-pagos-promociones{
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 640px) {
+
+    .imageElement--arrow-question-pagos-promociones{
+        grid-area: b;
+    }
+
+}

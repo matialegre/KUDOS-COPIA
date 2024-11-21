@@ -1,0 +1,14 @@
+.imageElement--venta-corporativa-banner{
+    width: 277px;
+    height: 277px;
+    object-fit: cover;
+}
+
+@media (max-width: 640px) {
+
+    .imageElement--venta-corporativa-banner{
+        width: 153px;
+        height: 153px;
+    }
+
+}

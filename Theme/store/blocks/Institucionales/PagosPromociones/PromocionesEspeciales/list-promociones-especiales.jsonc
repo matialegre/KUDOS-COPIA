@@ -1,0 +1,40 @@
+{
+
+    "flex-layout.col#group-promociones-especiales-col": {
+
+        "props": {
+          "blockClass": "group-promociones-especiales-col",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "disclosure-layout-group#group-promociones-especiales"
+        ]
+    
+    },
+
+    "disclosure-layout-group#group-promociones-especiales": {
+
+        "children": [ 
+            "disclosure-layout#item-promociones-especiales-1",
+            "disclosure-layout#item-promociones-especiales-2",
+            "disclosure-layout#item-promociones-especiales-3",
+            "disclosure-layout#item-promociones-especiales-4",
+            "disclosure-layout#item-promociones-especiales-5",
+            "disclosure-layout#item-promociones-especiales-6"
+        ]
+
+    },
+
+    "image#arrow-question": {
+
+        "props": {
+            "blockClass": "arrow-question-pagos-promociones",
+            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M6.06445 9L12.0645 15L18.0645 9' stroke='%23303030' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+        }
+
+    }
+
+}

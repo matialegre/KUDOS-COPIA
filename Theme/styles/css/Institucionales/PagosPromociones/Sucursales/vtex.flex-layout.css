@@ -1,0 +1,24 @@
+.flexRow--sucursales-container-constitucionales{
+    padding-top: 36px;
+    padding-bottom: 147px;
+}
+
+.flexRow--sucursales-container-constitucionales :global(.vtex-store-components-3-x-container){
+    margin: 0;
+    padding: 0;
+}
+
+.flexRowContent--sucursales-container-constitucionales{
+    margin: auto;
+    max-width: 900px;
+    width: 900px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--sucursales-container-constitucionales{
+        max-width: 320px;
+        width: 320px;
+    }
+
+}

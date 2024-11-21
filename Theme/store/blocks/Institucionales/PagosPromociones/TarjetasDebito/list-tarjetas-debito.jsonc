@@ -1,0 +1,28 @@
+{
+
+    "flex-layout.col#group-tarjetas-debito-col": {
+
+        "props": {
+          "blockClass": "group-tarjetas-debito-col",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "disclosure-layout-group#group-tarjetas-debito"
+        ]
+    
+    },
+
+    "disclosure-layout-group#group-tarjetas-debito": {
+
+        "children": [
+            "disclosure-layout#item-tarjetas-debito-1",
+            "disclosure-layout#item-tarjetas-debito-2",
+            "disclosure-layout#item-tarjetas-debito-3"
+        ]
+
+    }
+
+}

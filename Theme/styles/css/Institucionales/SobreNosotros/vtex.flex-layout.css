@@ -1,0 +1,15 @@
+.flexCol--shared-container-constitucionales-col{
+    height: fit-content;
+}
+
+.flexCol--item-sucursales-sobre-nosotros  {
+    margin-top: 21px;
+}
+
+.flexColChild--item-sucursales-sobre-nosotros:nth-child(2n){
+    margin-bottom: 23px;
+}
+
+.flexColChild--item-sucursales-sobre-nosotros:last-child{
+    margin-bottom: 0px;
+}

@@ -1,0 +1,104 @@
+{
+
+    "flex-layout.col#container-item-talle-product-type-list-col-1": {
+
+        "props": {
+          "blockClass": "container-item-talle-product-type-list-col",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "rich-text#text-bold-talle-1",
+            "rich-text#text-bold-talle-2",
+            "rich-text#text-plain-talle-1",
+            "rich-text#text-bold-talle-3",
+            "rich-text#text-plain-talle-2",
+            "rich-text#text-bold-talle-4",
+            "rich-text#text-plain-talle-3",
+            "flex-layout.row#container-images-talle-1"
+        ]
+    
+    },
+
+    "rich-text#text-bold-talle-1": {
+
+        "props": {
+            "blockClass": "text-bold-talle",
+            "text": "Calzado"
+        }
+
+    },
+
+    "rich-text#text-bold-talle-2": {
+
+        "props": {
+            "blockClass": "text-bold-talle",
+            "text": "Paso 1:"
+        }
+
+    },
+
+    "rich-text#text-plain-talle-1": {
+
+        "props": {
+            "blockClass": "text-plain-talle",
+            "text": "Tomá las medidas de tus pies antes de elegir tus zapatillas, ojotas o calzado en general. Acordate de hacerlo al final de la jornada, ya que con el paso del día los pies pueden hincharse y así aumentar su tamaño. Distribuí el peso por igual en ambos pies y ponete unas medias que uses regularmente. Recordá medirte ambos pies. La medida entre ellos puede variar y tené en cuenta que siempre se toma como referencia el pie que tenga el mayor tamaño."
+        }
+
+    },
+
+    "rich-text#text-bold-talle-3": {
+
+        "props": {
+            "blockClass": "text-bold-talle",
+            "text": "Paso 2:"
+        }
+
+    },
+
+    "rich-text#text-plain-talle-2": {
+
+        "props": {
+            "blockClass": "text-plain-talle",
+            "text": "Con un lápiz o lapicera marcá sobre el papel el contorno entero del pie, el cual debe estar relajado, sin contraer los dedos. Acordate de repetir el proceso con el otro pie."
+        }
+
+    },
+
+    "rich-text#text-bold-talle-4": {
+
+        "props": {
+            "blockClass": "text-bold-talle",
+            "text": "Paso 3:"
+        }
+
+    },
+
+    "rich-text#text-plain-talle-3": {
+
+        "props": {
+            "blockClass": "text-plain-talle",
+            "text": "Tomá la cinta métrica y medí la longitud que va desde el talón hasta dedo más largo que tengas. Repetí este paso con el otro pie. La medida más extensa, será el tamaño de referencia en centímetros."
+        }
+
+    },
+
+    "flex-layout.row#container-images-talle-1": {
+
+        "props": {
+          "blockClass": "container-images-talle",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "image#image-talle-1",
+            "image#image-talle-2"
+        ]
+    
+    }
+
+}

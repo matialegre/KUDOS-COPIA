@@ -1,0 +1,43 @@
+.trigger--triger-dropdown-tarjetas-debito{
+    padding-right: 10px;
+    max-height: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #E9EAED;
+}
+
+@media (max-width: 640px) {
+
+    .trigger--triger-dropdown-tarjetas-debito{
+        display: grid;
+        grid-template-areas: 
+            "a b"
+            "c d";
+        max-height: 109px;
+        height: 109px;
+    }
+
+    .trigger--triger-dropdown-tarjetas-debito :global(.vtex-flex-layout-0-x-flexRow--image-card-container){
+        grid: a;
+    }
+
+    .trigger--triger-dropdown-tarjetas-debito :global(.vtex-rich-text-0-x-container--text-triger-dropdown-tarjetas-debito){
+        grid: c;
+    }
+
+}
+
+.trigger--triger-dropdown-tarjetas-debito--visible{
+    border-bottom: none;
+}
+
+.content--content-dropdown-tarjetas-debito{
+    margin-top: 18px;
+    padding-bottom: 20px;
+    border-bottom: none;
+}
+
+.content--content-dropdown-tarjetas-debito--visible{
+    border-bottom: 1px solid #E9EAED;
+}

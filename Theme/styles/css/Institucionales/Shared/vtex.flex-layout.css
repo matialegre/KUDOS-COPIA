@@ -1,0 +1,28 @@
+.flexRowContent--shared-container-constitucionales{
+    margin: auto;
+    margin-top: 36px;
+    margin-bottom: 74px;
+    max-width: 800px;
+    width: 800px;
+    /* background: lightpink; */
+}
+
+@media (max-width: 640px) {
+ 
+    .flexRowContent--shared-container-constitucionales{
+        margin-top: 23.5px;
+        margin-bottom: 155px;
+        max-width: 326px;
+        width: 326px;
+    }
+
+}
+
+.flexRowContent--shared-container-constitucionales :global(.vtex-store-components-3-x-container){
+    margin: 0;
+    padding: 0;
+}
+
+.flexRowContent--shared-container-constitucionales .stretchChildrenWidth{
+    min-width: 100%;
+}

@@ -1,0 +1,27 @@
+{
+    
+    "flex-layout.col#group-otros-medio-pago-col": {
+
+        "props": {
+          "blockClass": "group-otros-medio-pago-col",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "disclosure-layout-group#group-otros-medio-pago"
+        ]
+    
+    },
+
+    "disclosure-layout-group#group-otros-medio-pago": {
+
+        "children": [
+            "disclosure-layout#item-otros-medio-pago-1",
+            "disclosure-layout#item-otros-medio-pago-2"
+        ]
+
+    }
+
+}

@@ -1,0 +1,128 @@
+.flexCol--form-institucionales{
+    margin-top: 43px;
+}
+
+.flexColChild--form-institucionales{
+    box-sizing: border-box;
+    padding-top: 16px;
+    padding-right: 48px;
+    padding-bottom: 32px;
+    padding-left: 48px;
+    border-radius: 4px;
+    border: 1px solid #CCD5E0;
+}
+
+@media (max-width: 640px) {
+
+    .flexColChild--form-institucionales{
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        border-radius: 4px;
+        border: none;
+    }
+
+}
+
+/* ESTILOS PARA <form>  */
+
+    /* contenedores de inputs  */
+    .flexColChild--form-institucionales :global(.vtex-input){
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .flexColChild--form-institucionales :global(.vtex-styleguide-9-x-dropdown){
+        margin-top: 16px;
+    }
+    /* fin contenedores de inputs  */
+
+    /* labels  */
+    .flexColChild--form-institucionales :global(.vtex-input__label){
+        margin: 0;
+        padding: 0;
+        font-family: 'GothamBook';
+        font-size: 14px;
+        line-height: 21px;
+        color: #3D3F43;
+    }
+
+    .flexColChild--form-institucionales :global(.vtex-dropdown__label){
+        margin: 0;
+        padding: 0;
+        margin-bottom: 5px;
+        font-family: 'GothamBook';
+        font-size: 14px;
+        line-height: 21px;
+        color: #3D3F43;
+    }
+    /* labels  */
+
+    /* inputs  */
+    .flexColChild--form-institucionales :global(.vtex-input-prefix__group){
+        border-radius: 4px;
+        border: 1px solid #CCD5E0;
+    }
+
+    .flexColChild--form-institucionales :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input){
+        font-family: 'GothamBook';
+        font-size: 15px;
+        line-height: 24px;
+        color: #3D3F43;
+    }
+
+    .flexColChild--form-institucionales :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input)::placeholder{
+        font-size: 0px;
+    }
+
+    .flexColChild--form-institucionales :global(.vtex-styleguide-9-x-container){
+        border-radius: 4px;
+        border: 1px solid #CCD5E0;
+    }
+
+    .flexColChild--form-institucionales :global(.vtex-styleguide-9-x-container) :global(.vtex-dropdown__caption){
+        font-family: 'GothamBook';
+        font-size: 15px;
+        line-height: 24px;
+        color: #3D3F43;
+    }
+    /* fin inputs  */
+
+    /* button submit  */
+    .flexColChild--form-institucionales :global(.vtex-store-form-0-x-formSubmitContainer){
+        margin-top: 30px;
+    
+    }
+
+    .flexColChild--form-institucionales :global(.vtex-store-form-0-x-formSubmitContainer) :global(.vtex-button){
+        border-radius: 4px;
+        border: 0;
+        background: #09344D;
+    }
+
+    .flexColChild--form-institucionales :global(.vtex-store-form-0-x-formSubmitContainer) :global(.vtex-button) :global(.vtex-button__label){
+        font-family: 'Gotham';
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0.1px;
+        text-transform: none;
+    }
+    /* fin button submit  */
+
+    /* texto de solicitud enviada*/
+    .flexColChild--form-institucionales :global(.vtex-rich-text-0-x-paragraph){
+        margin-top: 16px;
+        font-family: 'Gotham';
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0.1px;
+        text-transform: none;
+    }
+    /* fin texto de solicitud enviada*/
+
+/* FIN ESTILOS PARA <form>  */

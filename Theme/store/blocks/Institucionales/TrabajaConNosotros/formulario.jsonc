@@ -1,0 +1,202 @@
+{
+
+  "flex-layout.col#form-trabaja-con-nosotros-container": {
+
+      "props": {
+        "blockClass": "form-institucionales",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+  
+      "children": [
+          "form#ft"
+      ]
+  
+  },
+
+  "form#ft": {
+
+    "props": {
+      "entity": "FT", //Data Entity,
+      "schema": "Trabaja_con_nosotros" //Form Schema
+    },
+
+    "children": [
+      "form-input.text#ft-name",
+      "form-input.text#ft-last-name",
+      "form-input.text#ft-dni",
+      "form-input.text#ft-email",
+      "form-input.text#ft-phone",
+      "form-input.text#ft-cp",
+      "form-input.text#ft-city",
+      "form-input.dropdown#ft-job",
+      "form-input.text#ft-cv",
+      "form-submit#ft"
+    ],
+
+    "blocks": [
+      "form-success#ft"
+    ]
+
+  },
+
+  /* - NAME - */
+  "form-input.text#ft-name": {
+    "props": {
+      "pointer": "#/properties/name",
+      "placeholder": "Nombre"
+    }
+  },
+
+  /* - LAST NAME - */
+  "form-input.text#ft-last-name": {
+    "props": {
+      "pointer": "#/properties/lastName",
+      "placeholder": "Apellido"
+    }
+  },
+
+  /* - DNI - */
+  "form-input.text#ft-dni": {
+    "props": {
+      "pointer": "#/properties/dni",
+      "placeholder": "DNI"
+    }
+  },
+
+  /* - EMAIL - */
+  "form-input.text#ft-email": {
+    "props": {
+      "pointer": "#/properties/email",
+      "placeholder": "Correo electrónico"
+    }
+  },
+
+  /* - PHONE - */
+  "form-input.text#ft-phone": {
+    "props": {
+      "pointer": "#/properties/phone",
+      "placeholder": "Número de teléfono"
+    }
+  },
+
+  /* - POSTAL CODE - */
+  "form-input.text#ft-cp": {
+    "props": {
+      "pointer": "#/properties/cp",
+      "placeholder": "Código postal"
+    }
+  },
+
+  /* - CITY - */
+  "form-input.text#ft-city": {
+    "props": {
+      "pointer": "#/properties/city",
+      "placeholder": "Ciudad"
+    }
+  },
+
+  /* - JOB - */
+  "form-input.dropdown#ft-job": {
+    "props": {
+      "pointer": "#/properties/job",
+      "placeholder": "Seleccionar"
+    }
+  },
+
+  /* - CV CURRICULUM - */
+  "form-input.text#ft-cv": {
+    "props": {
+      "pointer": "#/properties/cv",
+      "placeholder": "Url de tu curriculum"
+    }
+  },
+  
+  /* - SUBMIT - */
+  "form-submit#ft": {
+    "props": {
+      "label": "Enviar"
+    }
+  },
+
+  /* - SUCCESS - */
+  "form-success#ft": {
+    "children": [
+      "rich-text#ft-successSubmit"
+    ]
+  },
+
+  "rich-text#ft-successSubmit": {
+    "props": {
+      "text": "Tu solicitud se envio correctamente!"
+    }
+  }
+
+}
+/* ----- SCHEMA JSONC ----- */
+// {
+//   "title": "Trabaja_con_nosotros",
+//   "type": "object",
+//   "properties": {
+//     "name": {
+//         "title": "Nombre", //este es el label que tendra el input
+//       "type": "string"
+//     },
+//     "lastName": {
+//         "title": "Apellido",
+//       "type": "string"
+//     },
+//     "dni": {
+//         "title": "DNI",
+//       "type": "string"
+//     },
+//     "email": {
+//         "title": "Correo electrónico",
+//       "type": "string",
+//       "format": "email"
+//     },
+//     "phone": {
+//         "title": "Número de Teléfono",
+//       "type": "string"
+//     },
+//     "cp": {
+//         "title": "Codigo postal",
+//       "type": "string"
+//     },
+//     "city": {
+//         "title": "Ciudad",
+//       "type": "string"
+//     },
+//     "job": {
+//       "title": "Área",
+//       "type": "string",
+//       "enum": [
+//         "example1",
+//         "example2",
+//         "example3"
+//       ]
+//     },
+//     "cv": {
+//         "title": "Url de tu curriculum",
+//       "type": "string"
+//     }
+//   },
+//   "required": [
+//     "name",
+//     "lastName",
+//     "dni",
+//     "email",
+//     "phone",
+//     "cp",
+//     "city",
+//     "job",
+//     "cv"
+//   ],
+//   "v-security": {
+//       "publicWrite": [
+//         "publicForWrite"
+//       ],
+//       "publicJsonSchema": true
+//   }
+// }

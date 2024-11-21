@@ -1,0 +1,131 @@
+{
+
+    "disclosure-layout#item-tarjetas-credito-3": {
+
+        "children": [
+            "disclosure-trigger#item-tarjetas-credito-3", 
+            "disclosure-content#item-tarjetas-credito-3"
+        ]
+
+    },
+
+    "disclosure-trigger#item-tarjetas-credito-3": {
+
+        "props": {
+            "blockClass": "triger-dropdown-tarjetas-credito",
+            "as": "div"
+        },
+
+        "children": [
+            "flex-layout.row#image-card-container-tarjetas-credito-3",
+            "rich-text#tarjetas-credito-outstanding-question-3",
+            "rich-text#tarjetas-credito-question-3",
+            "image#arrow-question"
+        ]
+
+    },
+
+    "flex-layout.row#image-card-container-tarjetas-credito-3": {
+
+        "props": {
+          "blockClass": "image-card-container",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "image#tarjetas-credito-image-3"
+        ]
+    
+    },
+
+    "image#tarjetas-credito-image-3": {
+
+        "props": {
+            "blockClass": "image-tarjetas-credito",
+            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='32' viewBox='0 0 46 32' fill='none'%3E%3Cpath d='M0.0644531 0H44.9527V17.2745L42.7309 19.7494L44.9527 21.952V32H0.0644531V15.7154L1.45311 14.5769L0.0644531 13.488V0Z' fill='%23016FD0'/%3E%3Cpath d='M8.77832 22.2974V17.2734H16.2402L17.0408 18.0174L17.8679 17.2734H44.9528V21.9509C44.9528 21.9509 44.2445 22.2924 43.4252 22.2974H28.4278L27.5252 21.5055V22.2974H24.5673V20.9455C24.5673 20.9455 24.1633 21.1342 23.2898 21.1342H22.283V22.2974H17.8046L17.0051 21.5375L16.1934 22.2974H8.77832Z' fill='white'/%3E%3Cpath d='M0.0644531 13.488L1.74714 10.6914H4.65718L5.61213 12.2579V10.6914H9.22957L9.79805 11.8237L10.3492 10.6914H26.5878V11.2606C26.5878 11.2606 27.4414 10.6914 28.8443 10.6914L34.1131 10.7045L35.0516 12.2506V10.6914H38.0789L38.9121 11.5795V10.6914H41.9671V15.7154H38.9121L38.1136 14.8244V15.7154H33.6659L33.2186 14.9234H32.0229L31.5829 15.7154H28.5666C27.3594 15.7154 26.5878 15.1578 26.5878 15.1578V15.7154H22.0399L21.1373 14.9234V15.7154H4.22608L3.7791 14.9234H2.58722L2.1434 15.7154H0.0644531V13.488Z' fill='white'/%3E%3Cpath d='M2.34282 11.3105L0.0732422 15.0723H1.55086L1.96962 14.3191H4.40411L4.82071 15.0723H6.33087L4.06345 11.3105H2.34282ZM3.18253 12.186L3.92459 13.5024H2.43829L3.18253 12.186Z' fill='%23016FD0'/%3E%3Cpath d='M6.4873 15.0723V11.3105L8.58708 11.3161L9.80838 13.7415L11.0004 11.3105H13.0834V15.0723H11.7642V12.3005L10.3658 15.0723H9.20883L7.80653 12.3005V15.0723H6.4873Z' fill='%23016FD0'/%3E%3Cpath d='M13.9854 15.0723V11.3105H18.2902V12.152H15.3185V12.7955H18.2207V13.5874H15.3185V14.2556H18.2902V15.0723H13.9854Z' fill='%23016FD0'/%3E%3Cpath d='M19.0547 11.3105V15.0723H20.3739V13.7359H20.9294L22.5111 15.0723H24.1233L22.3875 13.6864C23.0998 13.6436 23.8347 13.2077 23.8347 12.531C23.8347 11.7394 22.9631 11.3105 21.9904 11.3105H19.0547ZM20.3739 12.152H21.8819C22.2436 12.152 22.5068 12.3537 22.5068 12.548C22.5068 12.7979 22.1658 12.944 21.9014 12.944H20.3739V12.152Z' fill='%23016FD0'/%3E%3Cpath d='M25.72 15.0723H24.373V11.3105H25.72V15.0723Z' fill='%23016FD0'/%3E%3Cpath d='M28.914 15.0723H28.6232C27.2164 15.0723 26.3623 14.2822 26.3623 13.2069C26.3623 12.105 27.2069 11.3105 28.9834 11.3105H30.4415V12.2015H28.9301C28.2089 12.2015 27.6989 12.6027 27.6989 13.2162C27.6989 13.9447 28.2821 14.2507 29.1223 14.2507H29.4694L28.914 15.0723Z' fill='%23016FD0'/%3E%3Cpath d='M31.7842 11.3105L29.5146 15.0723H30.9923L31.411 14.3191H33.8455L34.2621 15.0723H35.7723L33.5049 11.3105H31.7842ZM32.6239 12.186L33.366 13.5024H31.8797L32.6239 12.186Z' fill='%23016FD0'/%3E%3Cpath d='M35.9268 15.0723V11.3105H37.604L39.7456 13.674V11.3105H41.0648V15.0723H39.4418L37.246 12.647V15.0723H35.9268Z' fill='%23016FD0'/%3E%3Cpath d='M9.68066 21.6544V17.8926H13.9855V18.734H11.0138V19.3775H13.9161V20.1695H11.0138V20.8377H13.9855V21.6544H9.68066Z' fill='%23016FD0'/%3E%3Cpath d='M30.7744 21.6544V17.8926H35.0792V18.734H32.1075V19.3775H34.9959V20.1695H32.1075V20.8377H35.0792V21.6544H30.7744Z' fill='%23016FD0'/%3E%3Cpath d='M14.1524 21.6544L16.2484 19.7967L14.1025 17.8926H15.7646L17.0426 19.0697L18.3249 17.8926H19.9219L17.8042 19.7735L19.904 21.6544H18.2422L17.0014 20.4958L15.7906 21.6544H14.1524Z' fill='%23016FD0'/%3E%3Cpath d='M20.0615 17.8945V21.6563H21.4155V20.4684H22.8041C23.9791 20.4684 24.8697 20.024 24.8697 19.1598C24.8697 18.4439 24.1712 17.8945 22.9755 17.8945H20.0615ZM21.4155 18.7453H22.8779C23.2575 18.7453 23.5288 18.9111 23.5288 19.1784C23.5288 19.4294 23.2589 19.6115 22.8735 19.6115H21.4155V18.7453Z' fill='%23016FD0'/%3E%3Cpath d='M25.4424 17.8926V21.6544H26.7616V20.3179H27.3171L28.8988 21.6544H30.511L28.7752 20.2684C29.4875 20.2256 30.2224 19.7897 30.2224 19.113C30.2224 18.3214 29.3508 17.8926 28.3781 17.8926H25.4424ZM26.7616 18.734H28.2696C28.6313 18.734 28.8945 18.9358 28.8945 19.13C28.8945 19.3799 28.5535 19.526 28.2891 19.526H26.7616V18.734Z' fill='%23016FD0'/%3E%3Cpath d='M35.69 21.6544V20.8377H38.3301C38.7208 20.8377 38.89 20.6872 38.89 20.5221C38.89 20.364 38.7213 20.2041 38.3301 20.2041H37.1371C36.1 20.2041 35.5225 19.7537 35.5225 19.0774C35.5225 18.4743 36.0514 17.8926 37.5924 17.8926H40.1614L39.606 18.739H37.3841C36.9594 18.739 36.8287 18.8979 36.8287 19.0496C36.8287 19.2055 36.9902 19.3775 37.3147 19.3775H38.5645C39.7205 19.3775 40.2222 19.845 40.2222 20.4572C40.2222 21.1153 39.6632 21.6544 38.5016 21.6544H35.69Z' fill='%23016FD0'/%3E%3Cpath d='M40.5318 21.6544V20.8377H43.1719C43.5626 20.8377 43.7317 20.6872 43.7317 20.5221C43.7317 20.364 43.5631 20.2041 43.1719 20.2041H41.9789C40.9418 20.2041 40.3643 19.7537 40.3643 19.0774C40.3643 18.4743 40.8932 17.8926 42.4342 17.8926H45.0032L44.4478 18.739H42.2259C41.8012 18.739 41.6705 18.8979 41.6705 19.0496C41.6705 19.2055 41.832 19.3775 42.1565 19.3775H43.4063C44.5623 19.3775 45.064 19.845 45.064 20.4572C45.064 21.1153 44.505 21.6544 43.3433 21.6544H40.5318Z' fill='%23016FD0'/%3E%3C/svg%3E"
+        }
+
+    },
+
+    "rich-text#tarjetas-credito-outstanding-question-3": {
+        
+        "props": {
+            "blockClass": ["text-triger-dropdown-tarjetas-credito", "cuotas"],
+            "text": "9 cuotas sin interés"
+        }
+
+    },
+
+    "rich-text#tarjetas-credito-question-3": {
+        
+        "props": {
+            "blockClass": "text-triger-dropdown-tarjetas-credito",
+            "text": "Desde $150.000"
+        }
+
+    },
+
+    "disclosure-content#item-tarjetas-credito-3": {
+
+        "props": {
+            "blockClass": "content-dropdown-tarjetas-credito"
+        },
+
+        "children": [
+            "rich-text#tarjetas-credito-answer-3",
+            "rich-text#tarjetas-credito-answer-3a",
+            "rich-text#tarjetas-credito-answer-3b",
+            "rich-text#tarjetas-credito-answer-3c",
+            "rich-text#tarjetas-credito-answer-3d"
+        ]
+
+    },
+
+    "rich-text#tarjetas-credito-answer-3": {
+
+        "props": {
+            "blockClass": "text-content-dropdown-tarjetas-credito",
+            "text": "Visa / Master – Débito: 30% de descuento"
+        }
+
+    },
+
+    "rich-text#tarjetas-credito-answer-3a": {
+
+        "props": {
+            "blockClass": "text-content-dropdown-tarjetas-credito",
+            "text": "Visa / Master  – 1 cuota sin interés y 3 cuotas simples: 25% de descuento"
+        }
+
+    },
+
+    "rich-text#tarjetas-credito-answer-3b": {
+
+        "props": {
+            "blockClass": "text-content-dropdown-tarjetas-credito",
+            "text": "Visa / Master  – 6 cuotas simples: 20% de descuento"
+        }
+
+    },
+
+    "rich-text#tarjetas-credito-answer-3c": {
+
+        "props": {
+            "blockClass": "text-content-dropdown-tarjetas-credito",
+            "text": "Visa / Master  – 12 cuotas simples: 15% de descuento"
+        }
+
+    },
+
+    "rich-text#tarjetas-credito-answer-3d": {
+
+        "props": {
+            "blockClass": "text-content-dropdown-tarjetas-credito",
+            "text": "<span class=\"vtex-rich-text-0-x-outstanding--text-notify-pagos-promociones\">Promoción válida para los días Viernes y Sábados</span>"
+        }
+
+    }
+
+}

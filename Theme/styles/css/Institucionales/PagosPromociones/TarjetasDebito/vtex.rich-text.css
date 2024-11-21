@@ -1,0 +1,55 @@
+.container--text-triger-dropdown-tarjetas-debito{
+    margin-left: 12px;
+}
+
+.container--text-triger-dropdown-tarjetas-debito.container--cuotas{
+    margin-left: 40px;
+}
+
+@media (max-width: 640px) {
+
+    .container--text-triger-dropdown-tarjetas-debito.container--cuotas{
+        margin-left: 0px;
+    }
+
+}
+
+.paragraph--text-triger-dropdown-tarjetas-debito{
+    font-family: 'GothamBook';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #303030;
+}
+
+.paragraph--text-triger-dropdown-tarjetas-debito.paragraph--cuotas{
+    font-family: 'Gotham';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21.28px;
+    color: #EB5757;
+}
+
+@media (max-width: 640px) {
+
+    .paragraph--text-triger-dropdown-tarjetas-debito{
+        font-size: 15px;
+    }
+
+}
+
+.paragraph--text-content-dropdown-tarjetas-debito{
+    font-family: 'GothamBook';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #3D3F43;
+}
+
+@media (max-width: 640px) {
+
+    .paragraph--text-content-dropdown-tarjetas-debito{
+        font-size: 14.5px;
+    }
+
+}

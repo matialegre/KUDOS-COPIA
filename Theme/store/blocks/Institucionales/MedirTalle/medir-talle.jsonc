@@ -1,0 +1,68 @@
+{
+
+    "store.custom#medir-talle": {
+    
+        "children":[
+            "flex-layout.row#shared-container-medir-talle"
+        ]
+
+    },
+
+    "flex-layout.row#shared-container-medir-talle": {
+
+        "props": {
+          "blockClass": "shared-container-constitucionales",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "flex-layout.col#shared-container-medir-talle-col"
+        ]
+    
+    },
+
+    "flex-layout.col#shared-container-medir-talle-col": {
+
+        "props": {
+          "blockClass": "shared-container-constitucionales-col",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "breadcrumb-custom",
+            "rich-text#text-title-medir-talle",
+            "flex-layout.col#talle-product-type-list-col"
+        ]
+    
+    },
+
+    "rich-text#text-title-medir-talle": {
+
+        "props": {
+            "blockClass": "text-title-institucionales",
+            "text": "¿Cómo medir tu talle?"
+        }
+
+    },
+
+    "flex-layout.col#talle-product-type-list-col": {
+
+        "props": {
+          "blockClass": "talle-product-type-list-col",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "flex-layout.col#container-item-talle-product-type-list-col-1",
+            "flex-layout.col#container-item-talle-product-type-list-col-2"
+        ]
+    
+    }
+    
+}

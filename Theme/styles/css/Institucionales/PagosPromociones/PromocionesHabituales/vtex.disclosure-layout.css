@@ -1,0 +1,43 @@
+.trigger--triger-dropdown-promociones-habituales{
+    padding-right: 10px;
+    max-height: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #E9EAED;
+}
+
+@media (max-width: 640px) {
+
+    .trigger--triger-dropdown-promociones-habituales{
+        display: grid;
+        grid-template-areas: 
+            "a b"
+            "c d";
+        max-height: 109px;
+        height: 109px;
+    }
+
+    .trigger--triger-dropdown-promociones-habituales :global(.vtex-flex-layout-0-x-flexRow--image-card-container){
+        grid: a;
+    }
+
+    .trigger--triger-dropdown-promociones-habituales :global(.vtex-rich-text-0-x-container--text-triger-dropdown-promociones-habituales){
+        grid: c;
+    }
+    
+}
+
+.trigger--triger-dropdown-promociones-habituales--visible{
+    border-bottom: none;
+}
+
+.content--content-dropdown-promociones-habituales{
+    margin-top: 18px;
+    padding-bottom: 20px;
+    border-bottom: none;
+}
+
+.content--content-dropdown-promociones-habituales--visible{
+    border-bottom: 1px solid #E9EAED;
+}

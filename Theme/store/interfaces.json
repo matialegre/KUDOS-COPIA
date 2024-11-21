@@ -26,6 +26,14 @@
 
     "guia-talles": {
         "component": "GuiaTalles"
+    },
+
+    "breadcrumb-custom": {
+        "component": "BreadcrumbCustom"
+    },
+    
+    "sucursales": {
+        "component": "Sucursales"
     }
 
 }

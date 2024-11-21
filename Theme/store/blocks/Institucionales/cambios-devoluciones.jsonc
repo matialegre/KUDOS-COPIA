@@ -1,0 +1,112 @@
+{
+
+    "store.custom#cambios-devoluciones": {
+    
+        "children":[
+            "flex-layout.row#shared-container-cambios-devoluciones"
+        ]
+
+    },
+
+    "flex-layout.row#shared-container-cambios-devoluciones": {
+
+        "props": {
+          "blockClass": "shared-container-constitucionales",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "flex-layout.col#shared-container-cambios-devoluciones-col"
+        ]
+    
+    },
+
+    "flex-layout.col#shared-container-cambios-devoluciones-col": {
+
+        "props": {
+          "blockClass": "shared-container-constitucionales-col",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "breadcrumb-custom",
+            "rich-text#text-title-cambios-devoluciones",
+            "rich-text#question-cambios-devoluciones-1",
+            "rich-text#text-cambios-devoluciones-1",
+            "rich-text#question-cambios-devoluciones-2",
+            "rich-text#text-cambios-devoluciones-2",
+            "rich-text#question-cambios-devoluciones-3",
+            "rich-text#text-cambios-devoluciones-3"
+        ]
+    
+    },
+
+    "rich-text#text-title-cambios-devoluciones": {
+
+        "props": {
+            "blockClass": "text-title-institucionales",
+            "text": "Cambios y devoluciones"
+        }
+
+    },
+
+    
+    "rich-text#question-cambios-devoluciones-1": {
+        
+        "props": {
+            "blockClass": "question-cambios-devoluciones",
+            "text": "¿Cómo puedo cambiar mi producto por otro?"
+        }
+        
+    },
+
+    "rich-text#text-cambios-devoluciones-1": {
+
+        "props": {
+            "blockClass": "text-cambios-devoluciones",
+            "text": "Podés elegir cualquier otro producto para el cambio. Solo tenés que asegurarte de que el nuevo producto esté en stock en nuestra página al momento de hacer la solicitud. Si solo querés cambiar el talle, el precio del producto se mantendrá igual. En cambio, si preferís un producto diferente (ya sea otro modelo o el mismo modelo en otro color), el precio puede variar, y en ese caso, deberás abonar la diferencia. El valor del cambio siempre se basará en el precio del producto original que figura en la factura, excluyendo el costo del envío.<br>Los productos marcados como 'REBAJAS' solo podrán ser cambiados en caso de que presenten una falla. De lo contrario, no se aceptarán cambios. Recordá que no realizamos devoluciones de dinero en nuestras sucursales. Si te arrepentís de la compra, podés solicitar la devolución del dinero, que se hará al mismo medio de pago utilizado para la compra."
+        }
+
+    },
+
+    "rich-text#question-cambios-devoluciones-2": {
+        
+        "props": {
+            "blockClass": "question-cambios-devoluciones",
+            "text": "¿Cómo se realiza un cambio?"
+        }
+        
+    },
+
+    "rich-text#text-cambios-devoluciones-2": {
+
+        "props": {
+            "blockClass": "text-cambios-devoluciones",
+            "text": "Te ofrecemos dos opciones: 1. Podés acercarte a cualquiera de nuestras sucursales Mundo Outdoor con el producto, la factura de compra, y el packaging original para realizar el cambio en persona. Podés encontrar nuestras tiendas usando este enlace: www.mundooutdoor.com.ar/sucursales. 2. Podés solicitar que retiremos el producto por tu domicilio. Luego de retirarlo, lo llevaremos a nuestro depósito, y gestionaremos el cambio. Una vez que el nuevo producto esté listo, te lo enviaremos. El primer cambio es siempre sin costo. Si elegís esta opción, contactanos a través del chat online \"Cambios\" en nuestra página web."
+        }
+
+    },
+
+    "rich-text#question-cambios-devoluciones-3": {
+        
+        "props": {
+            "blockClass": "question-cambios-devoluciones",
+            "text": "¿Cuánto tiempo tengo para hacer un cambio?"
+        }
+        
+    },
+
+    "rich-text#text-cambios-devoluciones-3": {
+
+        "props": {
+            "blockClass": "text-cambios-devoluciones",
+            "text": "Tenés hasta 30 días corridos desde que recibís el producto para realizar el cambio. El producto debe estar en perfectas condiciones, sin uso, con etiqueta y envoltorio original. Además, es obligatorio presentar la factura de compra, ya sea impresa o en un dispositivo móvil. Si el cambio es por una falla, tenés hasta 180 días corridos desde la recepción del producto para realizar el reclamo. En estos casos, siempre es importante tener la factura de compra y asegurarse de que el plazo de la garantía esté vigente. ¿Cómo puedo ver el estado de mi cambio? Podés seguir el estado de tu pedido desde tu perfil en nuestra página web. El estado cambiará de \"Aprobación pendiente\" a \"En preparación\" a medida que el proceso avance. Así estarás al tanto de todo el proceso. Consideraciones importantes:<br>● Mundo Outdoor se reserva el derecho de tener diferentes precios, promociones y descuentos en sus tiendas físicas y online.<br>● Si recibiste un producto con falla o distinto al que compraste, contactanos a través del chat online \"Cambios\". Nos pondremos en contacto para indicarte los pasos a seguir.<br>● Si realizás el cambio a través de nuestras tiendas online, podrás abonar cualquier diferencia con Mercado Pago. Si la diferencia es a tu favor, el reintegro se hará al mismo medio de pago que usaste para la compra. ● En las sucursales, solo se puede cambiar por el mismo producto que compraste originalmente. Si ya realizaste un cambio en tienda física, no podrás gestionarlo en línea."
+        }
+
+    }
+
+}

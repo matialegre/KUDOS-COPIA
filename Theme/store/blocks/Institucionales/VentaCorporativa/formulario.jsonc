@@ -1,0 +1,247 @@
+{
+
+  "flex-layout.col#form-venta-corporativa-container": {
+
+      "props": {
+        "blockClass": "form-institucionales",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+  
+      "children": [
+          "form#vc"
+      ]
+  
+  },
+
+  "form#vc": {
+
+    "props": {
+      "entity": "VC", //Data Entity,
+      "schema": "venta_corporativa" //Form Schema
+    },
+
+    "children": [
+      "flex-layout.col#form-venta-corporativa-column-left",
+      "flex-layout.col#form-venta-corporativa-column-right",
+      "flex-layout.col#form-venta-corporativa-column-order",
+      "form-submit#vc"
+    ],
+
+    "blocks": [
+      "form-success#vc"
+    ]
+
+  },
+
+  // AGRUPADORES  
+
+  "flex-layout.col#form-venta-corporativa-column-left": {
+
+      "props": {
+        "blockClass": "form-venta-corporativa-column-left",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+  
+      "children": [
+        "form-input.text#vc-name-lastname",
+        "form-input.text#vc-companyName",
+        "form-input.text#vc-cuit",
+        "form-input.text#vc-locality"
+      ]
+  
+  },
+  
+  "flex-layout.col#form-venta-corporativa-column-right": {
+
+      "props": {
+        "blockClass": "form-venta-corporativa-column-right",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+  
+      "children": [
+        "form-input.text#vc-address",
+        "form-input.text#vc-cp",
+        "form-input.text#vc-email",
+        "form-input.text#vc-phone"
+      ]
+  
+  },
+
+  "flex-layout.col#form-venta-corporativa-column-order": {
+
+      "props": {
+        "blockClass": "form-venta-corporativa-column-order",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+  
+      "children": [
+        "form-input.text#vc-order"
+      ]
+  
+  },
+
+  // FIN AGRUPADORES  
+
+  /* - NAME LASTNAME- */
+  "form-input.text#vc-name-lastname": {
+    "props": {
+      "pointer": "#/properties/nameAndLastName",
+      "placeholder": ""
+    }
+  },
+
+  /* - LAST ADDRESS - */
+  "form-input.text#vc-address": {
+    "props": {
+      "pointer": "#/properties/address",
+      "placeholder": ""
+    }
+  },
+
+  /* - COMPANY NAME - */
+  "form-input.text#vc-companyName": {
+    "props": {
+      "pointer": "#/properties/companyName",
+      "placeholder": ""
+    }
+  },
+
+  /* - POSTAL CODE - */
+  "form-input.text#vc-cp": {
+    "props": {
+      "pointer": "#/properties/cp",
+      "placeholder": ""
+    }
+  },
+
+  /* - CUIT - */
+  "form-input.text#vc-cuit": {
+    "props": {
+      "pointer": "#/properties/cuit",
+      "placeholder": ""
+    }
+  },
+
+  /* - EMAIL - */
+  "form-input.text#vc-email": {
+    "props": {
+      "pointer": "#/properties/email",
+      "placeholder": ""
+    }
+  },
+
+  /* - LOCALITY - */
+  "form-input.text#vc-locality": {
+    "props": {
+      "pointer": "#/properties/locality",
+      "placeholder": ""
+    }
+  },
+
+  /* - PHONE - */
+  "form-input.text#vc-phone": {
+    "props": {
+      "pointer": "#/properties/phone",
+      "placeholder": ""
+    }
+  },
+
+  /* - ORDER - */
+  "form-input.text#vc-order": {
+    "props": {
+      "pointer": "#/properties/order",
+      "placeholder": ""
+    }
+  },
+  
+  /* - SUBMIT - */
+  "form-submit#vc": {
+    "props": {
+      "label": "Enviar"
+    }
+  },
+
+  /* - SUCCESS - */
+  "form-success#vc": {
+    "children": [
+      "rich-text#vc-successSubmit"
+    ]
+  },
+
+  "rich-text#vc-successSubmit": {
+    "props": {
+      "text": "Tu solicitud se envio correctamente!"
+    }
+  }
+
+}
+/* ----- SCHEMA JSONC ----- */
+// {
+//   "title": "venta_corporativa",
+//   "type": "object",
+//   "properties": {
+//     "nameAndLastName": {
+//         "title": "Nombre y Apellido", //este es el label que tendra el input
+//       "type": "string"
+//     },
+//     "address": {
+//         "title": "Domicilio",
+//       "type": "string"
+//     },
+//     "companyName": {
+//         "title": "Razón social",
+//       "type": "string"
+//     },
+//     "cp": {
+//         "title": "CP",
+//       "type": "string",
+//       "format": "email"
+//     },
+//     "cuit": {
+//         "title": "CUIT",
+//       "type": "string"
+//     },
+//     "email": {
+//         "title": "Mail",
+//       "type": "string",
+//       "format": "email"
+//     },
+//     "locality": {
+//         "title": "Localidad",
+//       "type": "string"
+//     },
+//     "phone": {
+//       "title": "Teléfono",
+//       "type": "string"
+//     },
+//     "order": {
+//       "title": "Por favor, detalla los artículos que necesitas, incluyendo cantidades, talles, especificaciones o cualquier otra información relevante.",
+//       "type": "string"
+//     }
+//   },
+//   "required": [
+//     "nameAndLastName",
+//     "address",
+//     "companyName",
+//     "cp",
+//     "cuit",
+//     "email",
+//     "locality",
+//     "phone",
+//     "order",
+//   ],
+//   "v-security": {
+//       "publicWrite": [
+//         "publicForWrite"
+//       ],
+//       "publicJsonSchema": true
+//   }
+// }

@@ -1,0 +1,55 @@
+.container--text-triger-dropdown-tarjetas-credito{
+    margin-left: 12px;
+}
+
+.container--text-triger-dropdown-tarjetas-credito.container--cuotas{
+    margin-left: 40px;
+}
+
+@media (max-width: 640px) {
+
+    .container--text-triger-dropdown-tarjetas-credito.container--cuotas{
+        margin-left: 0px;
+    }
+
+}
+
+.paragraph--text-triger-dropdown-tarjetas-credito{
+    font-family: 'GothamBook';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #303030;
+}
+
+@media (max-width: 640px) {
+
+    .paragraph--text-triger-dropdown-tarjetas-credito{
+        font-size: 14.5px;
+    }
+
+}
+
+.paragraph--text-triger-dropdown-tarjetas-credito.paragraph--cuotas{
+    font-family: 'Gotham';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21.28px;
+    color: #EB5757;
+}
+
+.paragraph--text-content-dropdown-tarjetas-credito{
+    font-family: 'GothamBook';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #3D3F43;
+}
+
+@media (max-width: 640px) {
+
+    .paragraph--text-content-dropdown-tarjetas-credito{
+        font-size: 14.5px;
+    }
+
+}

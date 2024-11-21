@@ -1,0 +1,32 @@
+.paragraph--title-sucursales-sobre-nosotros{
+    margin-top: 43px;
+    font-family: 'Gotham';
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    color: #090A10;
+}
+
+@media (max-width: 640px) {
+
+    .paragraph--title-sucursales-sobre-nosotros{
+        margin-top: 24px;
+        font-size: 18px;
+    }
+
+}
+
+.paragraph--title-item-sucursales-sobre-nosotros{
+    font-family: 'Gotham';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #090A10;
+}
+
+.paragraph--text-item-sucursales-sobre-nosotros{
+    font-family: 'GothamBook';
+    font-size: 15px;
+    line-height: 24px;
+    color: #3D3F43;
+}

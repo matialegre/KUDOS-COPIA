@@ -1,0 +1,131 @@
+{
+
+    "disclosure-layout#item-tarjetas-credito-1": {
+
+        "children": [
+            "disclosure-trigger#item-tarjetas-credito-1", 
+            "disclosure-content#item-tarjetas-credito-1"
+        ]
+
+    },
+
+    "disclosure-trigger#item-tarjetas-credito-1": {
+
+        "props": {
+            "blockClass": "triger-dropdown-tarjetas-credito",
+            "as": "div"
+        },
+
+        "children": [
+            "flex-layout.row#image-card-container-tarjetas-credito-1",
+            "rich-text#tarjetas-credito-outstanding-question-1",
+            "rich-text#tarjetas-credito-question-1",
+            "image#arrow-question"
+        ]
+
+    },
+
+    "flex-layout.row#image-card-container-tarjetas-credito-1": {
+
+        "props": {
+          "blockClass": "image-card-container",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "image#tarjetas-credito-image-1"
+        ]
+    
+    },
+
+    "image#tarjetas-credito-image-1": {
+
+        "props": {
+            "blockClass": "image-tarjetas-credito",
+            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='116' height='32' viewBox='0 0 116 32' fill='none'%3E%3Cpath d='M42.0967 31.1599L47.9187 1.00391H57.0135L51.3718 31.1599H42.0967Z' fill='%233C58BF'/%3E%3Cpath d='M42.0967 31.1599L49.5573 1.00391H57.0135L51.3718 31.1599H42.0967Z' fill='%23293688'/%3E%3Cpath d='M84.3026 1.33939C81.6353 0.421298 78.7931 -0.0335252 75.9313 -0.000250873C66.8343 -0.000250873 60.282 4.18813 60.282 10.2185C60.282 14.7497 64.8306 17.0882 68.4707 18.5953C72.1109 20.1024 73.2018 21.1091 73.2018 22.4488C73.2018 24.4583 70.2897 25.465 67.7427 25.465C64.7227 25.5249 61.7296 24.9511 59.0085 23.7904L57.735 23.2881L56.4727 30.1557C59.7824 31.28 63.3002 31.8479 66.8454 31.8303C76.4902 31.8303 82.8577 27.6419 82.8577 21.2746C82.8577 17.7561 80.4933 15.0768 75.0341 12.8979C71.7591 11.3907 69.7575 10.5515 69.7575 9.04436C69.7575 7.70471 71.3962 6.3631 75.0341 6.3631C77.4095 6.30144 79.7708 6.70506 81.9493 7.54513L82.8599 7.88007L84.316 1.34531L84.3026 1.33939Z' fill='%233C58BF'/%3E%3Cpath d='M84.3026 1.33939C81.6353 0.421298 78.7931 -0.0335252 75.9313 -0.000250873C66.8343 -0.000250873 61.9207 4.18813 61.9207 10.2185C61.8841 12.0458 62.4965 13.8371 63.6717 15.34C64.8468 16.8429 66.5254 17.9815 68.4707 18.5953C72.1109 20.1024 73.2018 21.1091 73.2018 22.4488C73.2018 24.4583 70.2897 25.465 67.7427 25.465C64.7227 25.5249 61.7296 24.9511 59.0085 23.7904L57.735 23.2881L56.4727 30.1557C59.7824 31.28 63.3002 31.8479 66.8454 31.8303C76.4902 31.8303 82.8577 27.6419 82.8577 21.2746C82.8577 17.7561 80.4933 15.0768 75.0341 12.8979C71.7591 11.3907 69.7575 10.5515 69.7575 9.04436C69.7575 7.70471 71.3962 6.3631 75.0341 6.3631C77.4095 6.30144 79.7708 6.70506 81.9493 7.54513L82.8599 7.88007L84.316 1.34531L84.3026 1.33939Z' fill='%23293688'/%3E%3Cpath d='M99.9629 1.00391C97.7788 1.00391 96.1424 1.17138 95.2318 3.18087L81.584 31.156H91.4091L93.2281 26.1303H104.874L105.965 31.156H114.699L107.058 1.00391H99.9629ZM95.7773 21.0987C96.3227 19.5916 99.4174 12.2196 99.4174 12.2196C99.4174 12.2196 100.145 10.3775 100.691 9.20338L101.236 12.0521C101.236 12.0521 103.055 19.5916 103.421 21.2662H95.7795L95.7773 21.0987Z' fill='%233C58BF'/%3E%3Cpath d='M102.145 1.00391C99.9607 1.00391 98.3243 1.17138 97.4137 3.18087L81.584 31.156H91.4091L93.2281 26.1303H104.874L105.965 31.156H114.699L107.058 1.00391H102.145ZM95.7773 21.0987C96.5053 19.4242 99.4174 12.2196 99.4174 12.2196C99.4174 12.2196 100.145 10.3775 100.691 9.20338L101.236 12.0521C101.236 12.0521 103.055 19.5916 103.421 21.2662H95.7795L95.7773 21.0987Z' fill='%23293688'/%3E%3Cpath d='M25.3587 22.1138L24.4481 17.758C22.2202 12.0926 17.6763 7.37043 11.7109 4.521L19.8996 31.3259H29.7247L44.4634 1.16992H34.6428L25.3587 22.1138Z' fill='%233C58BF'/%3E%3Cpath d='M25.3587 22.1138L24.4481 17.758C22.2202 12.0926 17.6763 7.37043 11.7109 4.521L19.8996 31.3259H29.7247L44.4634 1.16992H36.4484L25.3587 22.1138Z' fill='%23293688'/%3E%3Cpath d='M0.0644531 1.00391L1.70308 1.33885C13.3494 3.85267 21.3555 10.218 24.4479 17.7575L21.1729 3.51773C20.6252 1.50628 18.9888 1.00391 16.9851 1.00391H0.0644531Z' fill='%23FFBC00'/%3E%3Cpath d='M0.0644531 1.00391C11.7107 3.51773 21.3532 10.0505 24.4479 17.59L21.3555 5.69469C21.1525 4.79995 20.6068 3.99458 19.8106 3.41456C19.0144 2.83455 18.0164 2.51539 16.9851 2.51102L0.0644531 1.00391Z' fill='%23F7981D'/%3E%3Cpath d='M0.0644531 1.00391C11.7107 3.51773 21.3532 10.0505 24.4479 17.59L22.2638 11.0513C22.1672 10.0155 21.763 9.02061 21.0921 8.16748C20.4212 7.31434 19.5074 6.63323 18.4433 6.1931L0.0644531 1.00391Z' fill='%23ED7C00'/%3E%3Cpath d='M34.8181 21.1011L28.631 15.4057L25.7189 21.7729L24.9908 17.5846C22.7617 11.9224 18.2188 7.20322 12.2559 4.35547L20.4445 31.1604H30.2696L34.8181 21.1011Z' fill='%23051244'/%3E%3Cpath d='M51.7406 31.163L43.917 23.791L42.4609 31.163H51.7406Z' fill='%23051244'/%3E%3Cpath d='M72.6666 20.7734C73.3946 21.4433 73.7575 21.9555 73.5772 22.6155C73.5772 24.6269 70.6651 25.6317 68.1181 25.6317C65.0981 25.6917 62.105 25.1178 59.3839 23.9571L58.1104 23.4548L56.8369 30.3224C60.1467 31.4467 63.6645 32.0146 67.2097 31.997C73.0317 31.997 77.7628 30.4899 80.4924 27.8086L72.6666 20.7734Z' fill='%23051244'/%3E%3Cpath d='M83.2197 31.1596H91.7713L93.5903 26.1339H105.237L106.327 31.1596H115.057L111.965 18.9293L101.055 9.21289L101.601 11.8942C101.601 11.8942 103.42 19.4337 103.785 21.1082H96.1328C96.8608 19.4337 99.773 12.2291 99.773 12.2291C99.773 12.2291 100.501 10.3871 101.046 9.21289' fill='%23051244'/%3E%3C/svg%3E"
+        }
+
+    },
+
+    "rich-text#tarjetas-credito-outstanding-question-1": {
+        
+        "props": {
+            "blockClass": ["text-triger-dropdown-tarjetas-credito", "cuotas"],
+            "text": "3 cuotas sin interés"
+        }
+
+    },
+
+    "rich-text#tarjetas-credito-question-1": {
+        
+        "props": {
+            "blockClass": "text-triger-dropdown-tarjetas-credito",
+            "text": "Lorem ipsum dolor sit"
+        }
+
+    },
+
+    "disclosure-content#item-tarjetas-credito-1": {
+
+        "props": {
+            "blockClass": "content-dropdown-tarjetas-credito"
+        },
+
+        "children": [
+            "rich-text#tarjetas-credito-answer-1",
+            "rich-text#tarjetas-credito-answer-1a",
+            "rich-text#tarjetas-credito-answer-1b",
+            "rich-text#tarjetas-credito-answer-1c",
+            "rich-text#tarjetas-credito-answer-1d"
+        ]
+
+    },
+
+    "rich-text#tarjetas-credito-answer-1": {
+
+        "props": {
+            "blockClass": "text-content-dropdown-tarjetas-credito",
+            "text": "Visa / Master – Débito: 30% de descuento"
+        }
+
+    },
+
+    "rich-text#tarjetas-credito-answer-1a": {
+
+        "props": {
+            "blockClass": "text-content-dropdown-tarjetas-credito",
+            "text": "Visa / Master  – 1 cuota sin interés y 3 cuotas simples: 25% de descuento"
+        }
+
+    },
+
+    "rich-text#tarjetas-credito-answer-1b": {
+
+        "props": {
+            "blockClass": "text-content-dropdown-tarjetas-credito",
+            "text": "Visa / Master  – 6 cuotas simples: 20% de descuento"
+        }
+
+    },
+
+    "rich-text#tarjetas-credito-answer-1c": {
+
+        "props": {
+            "blockClass": "text-content-dropdown-tarjetas-credito",
+            "text": "Visa / Master  – 12 cuotas simples: 15% de descuento"
+        }
+
+    },
+
+    "rich-text#tarjetas-credito-answer-1d": {
+
+        "props": {
+            "blockClass": "text-content-dropdown-tarjetas-credito",
+            "text": "<span class=\"vtex-rich-text-0-x-outstanding--text-notify-pagos-promociones\">Promoción válida para los días Viernes y Sábados</span>"
+        }
+
+    }
+
+}

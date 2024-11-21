@@ -1,0 +1,30 @@
+{
+
+    "flex-layout.col#group-promociones-habituales-col": {
+
+        "props": {
+          "blockClass": "group-promociones-habituales-col",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "disclosure-layout-group#group-promociones-habituales"
+        ]
+    
+    },
+
+    "disclosure-layout-group#group-promociones-habituales": {
+
+        "children": [
+            "disclosure-layout#item-promociones-habituales-1",
+            "disclosure-layout#item-promociones-habituales-2",
+            "disclosure-layout#item-promociones-habituales-3",
+            "disclosure-layout#item-promociones-habituales-4",
+            "disclosure-layout#item-promociones-habituales-5"
+        ]
+
+    }
+
+}

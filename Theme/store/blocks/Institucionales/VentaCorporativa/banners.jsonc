@@ -1,0 +1,97 @@
+{
+
+    "flex-layout.row#venta-corporativa-banners-container": {
+
+        "props": {
+          "blockClass": "venta-corporativa-banners-container",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "image#venta-corporativa-banner-1",
+            "image#venta-corporativa-banner-2",
+            "image#venta-corporativa-banner-3",
+            "image#venta-corporativa-banner-4",
+            "image#venta-corporativa-banner-5",
+            "image#venta-corporativa-banner-6",
+            "image#venta-corporativa-banner-7",
+            "image#venta-corporativa-banner-8"
+        ]
+    
+    },
+
+    "image#venta-corporativa-banner-1": {
+
+        "props": {
+            "blockClass": "venta-corporativa-banner",
+            "src": "/arquivos/vc-banner-1.png"
+        }
+
+    },
+
+    "image#venta-corporativa-banner-2": {
+
+        "props": {
+            "blockClass": "venta-corporativa-banner",
+            "src": "/arquivos/vc-banner-2.png"
+        }
+
+    },
+
+    "image#venta-corporativa-banner-3": {
+
+        "props": {
+            "blockClass": "venta-corporativa-banner",
+            "src": "/arquivos/vc-banner-3.png"
+        }
+
+    },
+
+    "image#venta-corporativa-banner-4": {
+
+        "props": {
+            "blockClass": "venta-corporativa-banner",
+            "src": "/arquivos/vc-banner-4.png"
+        }
+
+    },
+
+    "image#venta-corporativa-banner-5": {
+
+        "props": {
+            "blockClass": "venta-corporativa-banner",
+            "src": "/arquivos/vc-banner-5.png"
+        }
+
+    },
+
+    "image#venta-corporativa-banner-6": {
+
+        "props": {
+            "blockClass": "venta-corporativa-banner",
+            "src": "/arquivos/vc-banner-6.png"
+        }
+
+    },
+
+    "image#venta-corporativa-banner-7": {
+
+        "props": {
+            "blockClass": "venta-corporativa-banner",
+            "src": "/arquivos/vc-banner-7.png"
+        }
+
+    },
+
+    "image#venta-corporativa-banner-8": {
+
+        "props": {
+            "blockClass": "venta-corporativa-banner",
+            "src": "/arquivos/vc-banner-8.png"
+        }
+
+    }
+
+}

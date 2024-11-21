@@ -1,0 +1,53 @@
+{
+
+    "store.custom#venta-corporativa": {
+    
+        "children":[
+            "flex-layout.row#shared-container-venta-corporativa",
+            "flex-layout.row#venta-corporativa-banners-container"
+        ]
+
+    },
+
+    "flex-layout.row#shared-container-venta-corporativa": {
+
+        "props": {
+          "blockClass": "shared-container-constitucionales",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "flex-layout.col#shared-container-venta-corporativa-col"
+        ]
+    
+    },
+
+    "flex-layout.col#shared-container-venta-corporativa-col": {
+
+        "props": {
+          "blockClass": "shared-container-constitucionales-col",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "breadcrumb-custom",
+            "rich-text#text-title-venta-corporativa",
+            "flex-layout.col#form-venta-corporativa-container"
+        ]
+    
+    },
+
+    "rich-text#text-title-venta-corporativa": {
+
+        "props": {
+            "blockClass": "text-title-institucionales",
+            "text": "Navegá nuestro catálogo y hacé tu pedido de cotización"
+        }
+
+    }
+
+}

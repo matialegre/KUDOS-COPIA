@@ -1,0 +1,147 @@
+{
+
+    "store.custom#sobre-nosotros": {
+    
+        "children":[
+            "flex-layout.row#shared-container-sobre-nosotros"
+        ]
+
+    },
+
+    "flex-layout.row#shared-container-sobre-nosotros": {
+
+        "props": {
+          "blockClass": "shared-container-constitucionales",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "flex-layout.col#shared-container-sobre-nosotros-col"
+        ]
+    
+    },
+
+    "flex-layout.col#shared-container-sobre-nosotros-col": {
+
+        "props": {
+          "blockClass": "shared-container-constitucionales-col",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "breadcrumb-custom",
+            "rich-text#text-title-sobre-nosotros",
+            "rich-text#text-sobre-nosotros-1",
+            "rich-text#title-sucursales-sobre-nosotros",
+            "flex-layout.col#item-sucursales-sobre-nosotros"
+        ]
+    
+    },
+
+    "rich-text#text-title-sobre-nosotros": {
+
+        "props": {
+            "blockClass": "text-title-institucionales",
+            "text": "Sobre Nosotros"
+        }
+
+    },
+
+    
+    "rich-text#text-sobre-nosotros-1": {
+        
+        "props": {
+            "blockClass": "text-institucionales",
+            "text": "En Mundo Outdoor, llevamos más de 20 años acompañando a quienes eligen la aventura como su estilo de vida. Desde nuestros inicios, hemos sido una empresa familiar que cree en la conexión con la naturaleza y el poder de explorar nuevos horizontes. Nuestra misión es equiparte para que disfrutes cada experiencia al aire libre, con productos que combinan funcionalidad, tecnología y diseño. A lo largo de los años, hemos crecido y evolucionado, pero seguimos manteniendo nuestro compromiso: Brindarle calidad y confianza a cada persona que nos elige. En Mundo Outdoor, valoramos la transparencia, la honestidad y el respeto por la naturaleza. Estos valores nos guían día a día, y los transmitimos en cada interacción con nuestros clientes. Creemos que cada aventura es única, y queremos ser parte de la tuya. Gracias por elegirnos y confiar en nosotros para acompañarte en cada paso de tu viaje"
+        }
+        
+    },
+
+    "rich-text#title-sucursales-sobre-nosotros": {
+
+        "props": {
+            "blockClass": "title-sucursales-sobre-nosotros",
+            "text": "Sucursales"
+        }
+
+    },
+
+    "flex-layout.col#item-sucursales-sobre-nosotros": {
+
+        "props": {
+          "blockClass": "item-sucursales-sobre-nosotros",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#title-item-1-sucursales-sobre-nosotros",
+            "rich-text#text-item-1-sucursales-sobre-nosotros",
+            "rich-text#title-item-2-sucursales-sobre-nosotros",
+            "rich-text#text-item-2-sucursales-sobre-nosotros",
+            "rich-text#title-item-3-sucursales-sobre-nosotros",
+            "rich-text#text-item-3-sucursales-sobre-nosotros"
+        ]
+
+    },
+
+    "rich-text#title-item-1-sucursales-sobre-nosotros": {
+
+        "props": {
+            "blockClass": "title-item-sucursales-sobre-nosotros",
+            "text": "MUNDO OUTDOOR"
+        }
+
+    },
+
+    "rich-text#text-item-1-sucursales-sobre-nosotros": {
+
+        "props": {
+            "blockClass": "text-item-sucursales-sobre-nosotros",
+            "text": "Alsina 288, Bahía Blanca, Provincia de Buenos Aires - 8000"
+        }
+
+    },
+
+    "rich-text#title-item-2-sucursales-sobre-nosotros": {
+
+        "props": {
+            "blockClass": "title-item-sucursales-sobre-nosotros",
+            "text": "MUNDO OUTDOOR"
+        }
+
+    },
+
+    "rich-text#text-item-2-sucursales-sobre-nosotros": {
+
+        "props": {
+            "blockClass": "text-item-sucursales-sobre-nosotros",
+            "text": "San Martín 126, Bahía Blanca, Provincia de Buenos Aires - 8000"
+        }
+
+    },
+
+    "rich-text#title-item-3-sucursales-sobre-nosotros": {
+
+        "props": {
+            "blockClass": "title-item-sucursales-sobre-nosotros",
+            "text": "Próximamente:"
+        }
+
+    },
+
+    "rich-text#text-item-3-sucursales-sobre-nosotros": {
+
+        "props": {
+            "blockClass": "text-item-sucursales-sobre-nosotros",
+            "text": "Avenida Santa Fe 4830, Buenos Aires"
+        }
+
+    }
+
+}

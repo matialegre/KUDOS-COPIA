@@ -1,0 +1,52 @@
+{
+
+  "store.custom#sucursales": {
+  
+      "children":[
+          "flex-layout.row#shared-container-sucursales"
+      ]
+
+  },
+
+  "flex-layout.row#shared-container-sucursales": {
+
+      "props": {
+        "blockClass": "sucursales-container-constitucionales",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+  
+      "children": [
+          "flex-layout.col#shared-container-sucursales-col"
+      ]
+  
+  },
+
+  "flex-layout.col#shared-container-sucursales-col": {
+
+      "props": {
+        "blockClass": "sucursales-container-constitucionales-col",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+  
+      "children": [
+          "breadcrumb-custom",
+          "rich-text#text-title-sucursales",
+          "sucursales"
+      ]
+  
+  },
+
+  "rich-text#text-title-sucursales": {
+
+      "props": {
+          "blockClass": "text-title-institucionales",
+          "text": "Sucursales"
+      }
+
+  }
+
+}

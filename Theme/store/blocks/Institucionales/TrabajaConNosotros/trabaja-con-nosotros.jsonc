@@ -1,0 +1,52 @@
+{
+
+    "store.custom#trabaja-con-nosotros": {
+    
+        "children":[
+            "flex-layout.row#shared-container-trabaja-con-nosotros"
+        ]
+
+    },
+
+    "flex-layout.row#shared-container-trabaja-con-nosotros": {
+
+        "props": {
+          "blockClass": "shared-container-constitucionales",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "flex-layout.col#shared-container-trabaja-con-nosotros-col"
+        ]
+    
+    },
+
+    "flex-layout.col#shared-container-trabaja-con-nosotros-col": {
+
+        "props": {
+          "blockClass": "shared-container-constitucionales-col",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "breadcrumb-custom",
+            "rich-text#text-title-trabaja-con-nosotros",
+            "flex-layout.col#form-trabaja-con-nosotros-container"
+        ]
+    
+    },
+
+    "rich-text#text-title-trabaja-con-nosotros": {
+
+        "props": {
+            "blockClass": "text-title-institucionales",
+            "text": "Trabaja con nosotros"
+        }
+
+    }
+
+}

@@ -1,0 +1,273 @@
+{
+
+    "flex-layout.col#container-item-talle-product-type-list-col-2": {
+
+        "props": {
+          "blockClass": "container-item-talle-product-type-list-col",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "rich-text#text-bold-talle-5",
+            "rich-text#text-bold-talle-6",
+            "rich-text#text-plain-talle-4",
+            "rich-text#text-bold-talle-7",
+            "rich-text#text-plain-talle-5",
+            "rich-text#text-bold-talle-8",
+            "rich-text#text-plain-talle-6",
+            "flex-layout.row#container-images-talle-2",
+            "rich-text#text-bold-talle-9",
+            "rich-text#text-plain-talle-7",
+            "rich-text#text-bold-talle-10",
+            "rich-text#text-plain-talle-8",
+            "rich-text#text-bold-talle-11",
+            "rich-text#text-plain-talle-9",
+            "flex-layout.row#container-images-talle-3",
+            "rich-text#text-bold-talle-12",
+            "rich-text#text-plain-talle-10",
+            "rich-text#text-bold-talle-13",
+            "rich-text#text-plain-talle-11",
+            "flex-layout.row#container-images-talle-4",
+            "rich-text#text-bold-talle-14",
+            "rich-text#text-plain-talle-12",
+            "flex-layout.row#container-images-talle-5"
+        ]
+    
+    },
+
+    "rich-text#text-bold-talle-5": {
+
+        "props": {
+            "blockClass": "text-bold-talle",
+            "text": "Indumentaria"
+        }
+
+    },
+
+    "rich-text#text-bold-talle-6": {
+
+        "props": {
+            "blockClass": "text-bold-talle",
+            "text": "Parte de arriba"
+        }
+
+    },
+
+    "rich-text#text-plain-talle-4": {
+
+        "props": {
+            "blockClass": "text-plain-talle",
+            "text": "A continuación te indicaremos cómo tomar las medidas de tu busto y cintura para que puedas elegir mejor tu parte de arriba. A lo largo del proceso, asegurate de que la cinta no quede ni demasiado floja ni demasiado apretada. Comodidad ante todo."
+        }
+
+    },
+
+    "rich-text#text-bold-talle-7": {
+
+        "props": {
+            "blockClass": "text-bold-talle",
+            "text": "Busto"
+        }
+
+    },
+
+    "rich-text#text-plain-talle-5": {
+
+        "props": {
+            "blockClass": "text-plain-talle",
+            "text": "Colócate delante de un espejo para confirmar que lo estés haciendo bien. Ponete la cinta métrica flexible por la espalda a la altura del contorno en posición horizontal, pasala por debajo de los brazos y cubrí toda la parte de adelante que tenga mayor superficie. Continuá hasta que los dedos que sostienen una punta de la cinta se encuentren con los que sostienen la otra. Esa va a ser tu medida. Cintura: Ponete la cinta métrica de forma horizontal por la espalda y medí el contorno de la cintura, justo encima de las caderas. Por lo general, la parte más estrecha coincide con la región lumbar y los músculos laterales. Cuando unos dedos se encuentren con los otros, esa va a ser tu medida. Partes de Abajo: A continuación te indicaremos cómo tomar las medidas de tu cintura, cadera y tiro de entrepierna para que puedas elegir mejor tu parte de abajo. A lo largo del proceso, asegurate de que la cinta no quede ni demasiado floja ni demasiado apretada, para que, una vez que tengas la prenda puesta, puedas moverte con comodidad."
+        }
+
+    },
+
+    "rich-text#text-bold-talle-8": {
+
+        "props": {
+            "blockClass": "text-bold-talle",
+            "text": "Cintura"
+        }
+
+    },
+
+    "rich-text#text-plain-talle-6": {
+
+        "props": {
+            "blockClass": "text-plain-talle",
+            "text": "Ponete la cinta métrica de forma horizontal por la espalda y medí el contorno de la cintura, justo encima de las caderas. Por lo general, la parte más estrecha coincide con la región lumbar y los músculos laterales. Cuando unos dedos se encuentren con los otros, esa va a ser tu medida."
+        }
+
+    },
+
+    "flex-layout.row#container-images-talle-2": {
+
+        "props": {
+          "blockClass": "container-images-talle",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "image#image-talle-3",
+            "image#image-talle-4"
+        ]
+    
+    },
+
+    "rich-text#text-bold-talle-9": {
+
+        "props": {
+            "blockClass": "text-bold-talle",
+            "text": "Tiro de entrepierna"
+        }
+
+    },
+
+    "rich-text#text-plain-talle-7": {
+
+        "props": {
+            "blockClass": "text-plain-talle",
+            "text": "En este caso, nos referimos al largo de la prenda, desde la costura de la entrepierna hasta el dobladillo. Para calcularlo, tomá la medida desde tu entrepierna hasta el talón interno con la cinta en posición vertical."
+        }
+
+    },
+
+    "rich-text#text-bold-talle-10": {
+
+        "props": {
+            "blockClass": "text-bold-talle",
+            "text": "Altura"
+        }
+
+    },
+
+    "rich-text#text-plain-talle-8": {
+
+        "props": {
+            "blockClass": "text-plain-talle",
+            "text": "En el caso de que las prendas sean para bebés o nenes, es importante que sepas cuánto miden para definir el talle con mayor exactitud"
+        }
+
+    },
+
+    "rich-text#text-bold-talle-11": {
+
+        "props": {
+            "blockClass": "text-bold-talle",
+            "text": "Alto"
+        }
+
+    },
+
+    "rich-text#text-plain-talle-9": {
+
+        "props": {
+            "blockClass": "text-plain-talle",
+            "text": "Pará al nene descalzo contra una pared, lo más erguido posible, sin levantar demasiado la cabeza. Con un lápiz, hace una pequeña marca justo donde termina la coronilla. Medí con la cinta de manera vertical y derecha desde el piso hasta la marca de la cabeza"
+        }
+
+    },
+
+    "flex-layout.row#container-images-talle-3": {
+
+        "props": {
+          "blockClass": "container-images-talle",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "image#image-talle-5",
+            "image#image-talle-6"
+        ]
+    
+    },
+
+    "rich-text#text-bold-talle-12": {
+
+        "props": {
+            "blockClass": "text-bold-talle",
+            "text": "Accesorios"
+        }
+
+    },
+
+    "rich-text#text-plain-talle-10": {
+
+        "props": {
+            "blockClass": "text-plain-talle",
+            "text": "Para que los accesorios cumplan su función y puedas disfrutar de manera completa sus beneficios y confort, es fundamental que tengan un calce perfecto. Por eso, decidimos sumarlos en esta guía."
+        }
+
+    },
+
+    "rich-text#text-bold-talle-13": {
+
+        "props": {
+            "blockClass": "text-bold-talle",
+            "text": "Guantes"
+        }
+
+    },
+
+    "rich-text#text-plain-talle-11": {
+
+        "props": {
+            "blockClass": "text-plain-talle",
+            "text": "Para conocer el talle de los guantes, necesitás medir tu mano dominante, que es aquella con la que escribís y solés realizar la mayoría de las actividades manuales. Tomá la cinta de manera vertical (o en este caso podría ser una regla) y medí desde la base de la palma hasta la punta del dedo medio."
+        }
+
+    },
+
+    "flex-layout.row#container-images-talle-4": {
+
+        "props": {
+          "blockClass": "container-images-talle",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "image#image-talle-7"
+        ]
+    
+    },
+
+    "rich-text#text-bold-talle-14": {
+
+        "props": {
+            "blockClass": "text-bold-talle",
+            "text": "Gorra/Sombrero:"
+        }
+
+    },
+
+    "rich-text#text-plain-talle-12": {
+
+        "props": {
+            "blockClass": "text-plain-talle",
+            "text": "Para conocer el talle de la gorra o sombrero necesitás medir la circunferencia de tu cabeza. Tomá la cinta métrica y pasala alrededor de tu cabeza, teniendo en cuenta que debés cubrir la superficie de mayor longitud de esta. Si no tenés una cinta podés usar una cuerda y después medirla con una regla."
+        }
+
+    },
+
+    "flex-layout.row#container-images-talle-5": {
+
+        "props": {
+          "blockClass": "container-images-talle",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "image#image-talle-8"
+        ]
+    
+    }
+
+}
