@@ -43,7 +43,7 @@ const GuiaTalles = () => {
         
         if ( productData.product?.categoryTree ) {
 
-            productType = productData.product.categoryTree[1]?.name;
+            productType = productData.product.categoryTree[0]?.name;
 
         }
         

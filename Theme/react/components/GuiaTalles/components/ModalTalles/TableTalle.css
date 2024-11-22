@@ -5,14 +5,16 @@
 */
 
 .wrapperTable::-webkit-scrollbar{
+    width: 8px;
     height: 8px;
     background: #EBEBEB;
 }
 
 .wrapperTable::-webkit-scrollbar-thumb{
+    width: 8px;
     height: 8px;
     border-radius: 50vw;
-    background: #09344D;
+    background: #787878;
 }
 
 .wrapperTable{

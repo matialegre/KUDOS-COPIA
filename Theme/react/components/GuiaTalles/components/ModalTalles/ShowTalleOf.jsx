@@ -11,7 +11,7 @@ const ShowTalleOf = ( { data } ) => {
         return (
 
             <div>
-                {/* <DescriptionShowTalle productType={data[0].attribute.product_type.name}/> */}
+                <DescriptionShowTalle productType={data[0].attribute.product_type.name}/>
                 <TableTalle data={data}/>
             </div>
     

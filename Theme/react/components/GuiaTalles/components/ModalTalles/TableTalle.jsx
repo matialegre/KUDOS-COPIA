@@ -38,7 +38,7 @@ const TableTalle = ( { data } ) => {
         'Cuerpo inferior': "Talle",
         'Cuerpo superior': "Talle",
         'Guantes': "Talle",
-        'Gorro': "Talle"
+        'Sombreros': "Talle"
     }
 
     tallesGroup = Object.entries( tallesGroup );

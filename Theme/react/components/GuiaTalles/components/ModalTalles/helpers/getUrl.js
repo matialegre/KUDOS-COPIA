@@ -53,7 +53,6 @@ export const getUrl = searchData => {
     /**Fin Definir brand */
 
     return `https://control.kudosestudio.com/api/tool/29/team/54?brand=${brand}&gener=${gener}&productType=${productType}`;
-    // return `https://control.kudosestudio.com/api/tool/29/team/54?brand=ANSILTA&gener=femenino&productType=pluma`;
             
     
     /**Fin Crear url para hacer el fetch */
