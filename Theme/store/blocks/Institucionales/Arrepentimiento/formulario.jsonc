@@ -1,0 +1,191 @@
+{
+
+  "flex-layout.col#form-arrepentimiento-container": {
+
+      "props": {
+        "blockClass": "form-institucionales",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+  
+      "children": [
+          "form#ac"
+      ]
+  
+  },
+
+  "form#ac": {
+
+    "props": {
+      "entity": "AC", //Data Entity,
+      "schema": "Arrepentimiento_de_compra" //Form Schema
+    },
+
+    "children": [
+      "flex-layout.col#form-arrepentimiento-column-left",
+      "flex-layout.col#form-arrepentimiento-column-right",
+      "flex-layout.row#form-arrepentimiento-button-submit"
+    ],
+
+    "blocks": [
+      "form-success#ac"
+    ]
+
+  },
+
+  // AGRUPACIONES 
+
+  "flex-layout.col#form-arrepentimiento-column-left": {
+
+      "props": {
+        "blockClass": "form-arrepentimiento-column-left",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+  
+      "children": [
+        "form-input.text#ac-name",
+        "form-input.text#ac-orderid",
+        "form-input.text#ac-email",
+        "form-input.text#ac-phone"
+      ]
+  
+  },
+
+  "flex-layout.col#form-arrepentimiento-column-right": {
+
+      "props": {
+        "blockClass": "form-arrepentimiento-column-right",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+  
+      "children": [
+        "form-input.textarea#ac-motivo"
+      ]
+  
+  },
+
+  "flex-layout.row#form-arrepentimiento-button-submit": {
+
+      "props": {
+        "blockClass": "form-arrepentimiento-button-submit",
+        "preserveLayoutOnMobile": true,
+        "horizontalAlign": "left",
+        "colSizing": "auto"
+      },
+  
+      "children": [
+        "form-submit#ac"
+      ]
+  
+  },
+  // FIN AGRUPACIONES 
+
+  /* - NAME - */
+  "form-input.text#ac-name": {
+    "props": {
+      "pointer": "#/properties/name",
+      "placeholder": ""
+    }
+  },
+
+  /* - NUMERO DE ORDEN - */
+  "form-input.text#ac-orderid": {
+    "props": {
+      "pointer": "#/properties/orderid",
+      "placeholder": ""
+    }
+  },
+
+  /* - EMAIL - */
+  "form-input.text#ac-email": {
+    "props": {
+      "pointer": "#/properties/email",
+      "placeholder": ""
+    }
+  },
+
+  /* - PHONE - */
+  "form-input.text#ac-phone": {
+    "props": {
+      "pointer": "#/properties/phone",
+      "placeholder": ""
+    }
+  },
+
+  /* - MOTIVO - */
+  "form-input.textarea#ac-motivo": {
+
+    "props": {
+      "pointer": "#/properties/motivo",
+      "placeholder": ""
+    }
+      
+  },
+  
+  /* - SUBMIT - */
+  "form-submit#ac": {
+    "props": {
+      "label": "Enviar"
+    }
+  },
+
+  /* - SUCCESS - */
+  "form-success#ac": {
+    "children": [
+      "rich-text#ac-successSubmit"
+    ]
+  },
+
+  "rich-text#ac-successSubmit": {
+    "props": {
+      "text": "Tu solicitud se envio correctamente!"
+    }
+  }
+
+}
+/* ----- SCHEMA JSONC ----- */
+// {
+//   "title": "Arrepentimiento_de_compra",
+//   "type": "object",
+//   "properties": {
+//     "name": {
+//         "title": "Nombre", //este es el label que tendra el input
+//       "type": "string"
+//     },
+//     "orderid": {
+//         "title": "Número de orden",
+//       "type": "string"
+//     },
+//     "email": {
+//         "title": "Email",
+//       "type": "string",
+//       "format": "email"
+//     },
+//     "phone": {
+//         "title": "Teléfono",
+//       "type": "string"
+//     },
+//     "motivo": {
+//         "title": "Motivo de la cancelación",
+//       "type": "string"
+//     }
+//   },
+//   "required": [
+//     "name",
+//     "orderod",
+//     "email",
+//     "phone",
+//     "motivo",
+//   ],
+//   "v-security": {
+//       "publicWrite": [
+//         "publicForWrite"
+//       ],
+//       "publicJsonSchema": true
+//   }
+// }

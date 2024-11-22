@@ -83,7 +83,7 @@
       },
   
       "children": [
-        "form-input.text#vc-order"
+        "form-input.textarea#vc-order"
       ]
   
   },
@@ -155,7 +155,7 @@
   },
 
   /* - ORDER - */
-  "form-input.text#vc-order": {
+  "form-input.textarea#vc-order": {
     "props": {
       "pointer": "#/properties/order",
       "placeholder": ""
@@ -202,8 +202,7 @@
 //     },
 //     "cp": {
 //         "title": "CP",
-//       "type": "string",
-//       "format": "email"
+//       "type": "string"
 //     },
 //     "cuit": {
 //         "title": "CUIT",

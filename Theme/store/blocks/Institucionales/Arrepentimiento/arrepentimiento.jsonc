@@ -1,0 +1,52 @@
+{
+
+    "store.custom#arrepentimiento": {
+    
+        "children":[
+            "flex-layout.row#shared-container-arrepentimiento"
+        ]
+
+    },
+
+    "flex-layout.row#shared-container-arrepentimiento": {
+
+        "props": {
+          "blockClass": "shared-container-constitucionales",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "flex-layout.col#shared-container-arrepentimiento-col"
+        ]
+    
+    },
+
+    "flex-layout.col#shared-container-arrepentimiento-col": {
+
+        "props": {
+          "blockClass": "shared-container-constitucionales-col",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+        },
+    
+        "children": [
+            "breadcrumb-custom",
+            "rich-text#text-title-arrepentimiento",
+            "flex-layout.col#form-arrepentimiento-container"
+        ]
+    
+    },
+
+    "rich-text#text-title-arrepentimiento": {
+
+        "props": {
+            "blockClass": "text-title-institucionales",
+            "text": "Botón de arrepentimiento"
+        }
+
+    }
+
+}

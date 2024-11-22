@@ -75,3 +75,17 @@
 
 }
 /* FIN BANNERS  */
+
+/* TEXTAREA  */
+.flexCol--form-venta-corporativa-column-order :global(.vtex-textarea__input){
+    height: 125px;
+}
+
+@media (max-width: 640px) {
+
+    .flexCol--form-venta-corporativa-column-order :global(.vtex-textarea__input){
+        height: 159px;
+    }
+
+}
+/* FIN TEXTAREA  */
