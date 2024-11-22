@@ -2,6 +2,10 @@
     width: 115px;
 }
 
+.flexRowContent--image-card-container .stretchChildrenWidth{
+    justify-content: left;
+}
+
 @media (max-width: 640px) {
 
     .flexRowContent--image-card-container{

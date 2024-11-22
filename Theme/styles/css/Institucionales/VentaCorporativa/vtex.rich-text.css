@@ -1,0 +1,21 @@
+.paragraph--text-plain-venta-corporativa{
+    margin-top: 24px;
+    font-family: 'Gotham';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    color: #3D3F43;
+}
+
+@media (max-width: 640px) {
+
+    .paragraph--text-plain-venta-corporativa{
+        margin-top: 19px;
+        font-family: 'GothamBook';
+        font-size: 16px;
+        line-height: 25px;
+        text-align: left;
+    }
+
+}

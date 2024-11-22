@@ -36,6 +36,7 @@
         "children": [
             "breadcrumb-custom",
             "rich-text#text-title-venta-corporativa",
+            "rich-text#text-plain-venta-corporativa-1",
             "flex-layout.col#form-venta-corporativa-container"
         ]
     
@@ -46,6 +47,15 @@
         "props": {
             "blockClass": "text-title-institucionales",
             "text": "Navegá nuestro catálogo y hacé tu pedido de cotización"
+        }
+
+    },
+
+    "rich-text#text-plain-venta-corporativa-1": {
+
+        "props": {
+            "blockClass": "text-plain-venta-corporativa",
+            "text": "Si deseas realizar una compra para tu empresa, completa el siguiente formulario con los detalles de los artículos que necesitas, y nos pondremos en contacto contigo a la brevedad."
         }
 
     }
