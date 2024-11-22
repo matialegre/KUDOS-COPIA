@@ -41,9 +41,9 @@ const GuiaTalles = () => {
         
         /**asigno productType */
         
-        if ( productData.product?.categoryTree ) {
+        if ( productData.product?.categoryTree && productData.product?.categoryTree.length > 0 ) {
 
-            productType = productData.product.categoryTree[0]?.name;
+            productType = productData.product.categoryTree[ productData.product.categoryTree.length - 1 ]?.name;
 
         }
         
