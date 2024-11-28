@@ -5,6 +5,9 @@ import { useProduct } from 'vtex.product-context';
 import TriggerTalles from './components/TriggerTalles/TriggerTalles';
 import GetData from './components/ModalTalles/GetData';
 
+// HELPERS 
+import { getProductType } from './helpers/getProductType';
+
 // STYLES 
 import style from './index.css';
 
@@ -43,7 +46,8 @@ const GuiaTalles = () => {
         
         if ( productData.product?.categoryTree && productData.product?.categoryTree.length > 0 ) {
 
-            productType = productData.product.categoryTree[ productData.product.categoryTree.length - 1 ]?.name;
+            // productType = productData.product.categoryTree[ productData.product.categoryTree.length - 1 ]?.name;
+            productType = getProductType( productData.product?.categoryTree );
 
         }
         
