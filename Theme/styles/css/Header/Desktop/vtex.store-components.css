@@ -16,6 +16,10 @@
     border: 1px solid #E9EAED;
 }
 
+.searchBarContainer :global(.vtex-store-components-3-x-resultsList){
+    width: 640px;
+}
+
 /* TEXTO BUSCAR */
 .searchBarContainer :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input){
     font-family: "Plus Jakarta Sans", sans-serif;
@@ -73,10 +77,15 @@
     }
 
     .searchBarContainer :global(.vtex-input-prefix__group){
+        margin-top: 0px;
         width: 329px;
         height: 56px;
         border-radius: 0px;
         border: none;
+    }
+
+    .searchBarContainer :global(.vtex-store-components-3-x-resultsList){
+        width: 329px;
     }
 
     .searchBarContainer :global(.vtex-input-prefix__group) :global(.vtex-input__suffix){
