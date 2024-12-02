@@ -71,6 +71,10 @@
         border-bottom: 1px solid var(--border-gray);
     }    
 
+    .flexRow--mundooutdoor .flexRowContent--items-columns-footer-container .stretchChildrenWidth:last-child{
+        display: none;
+    }    
+
 }
 
 .flexRowContent--items-columns-footer-container .stretchChildrenWidth{
@@ -97,4 +101,5 @@
 
 .flexRowContent--items-redes{
     justify-content: space-between;
+    gap: 20px;
 }

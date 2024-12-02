@@ -28,7 +28,7 @@
     "flex-layout.row#itemsContacto": {
 
         "props": {
-            "blockClass": "items-columns-footer-container",
+            "blockClass": ["items-columns-footer-container"],
             "preserveLayoutOnMobile": true,
             "horizontalAlign": "left",
             "colSizing": "auto"

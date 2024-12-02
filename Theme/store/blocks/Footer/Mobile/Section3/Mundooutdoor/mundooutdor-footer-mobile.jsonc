@@ -1,0 +1,39 @@
+{
+
+    "disclosure-layout#mundooutdoor-footer-mobile": {
+
+        "children": ["disclosure-trigger#mundooutdoor-footer-mobile", "disclosure-content#mundooutdoor-footer-mobile"]
+
+    },
+
+    "disclosure-trigger#mundooutdoor-footer-mobile": {
+
+        "props": {
+            "blockClass": "triger-dropdown-footer-mobile",
+            "as": "div"
+        },
+
+        "children": ["rich-text#mundooutdoor-title"]
+
+    },
+
+    "rich-text#mundooutdoor-title": {
+        
+        "props": {
+            "blockClass": "text-triger-dropdown-footer-mobile",
+            "text": "Mundo Outdoor"
+        }
+
+    },
+
+    "disclosure-content#mundooutdoor-footer-mobile": {
+
+        "props": {
+            "blockClass": "content-dropdown-footer-mobile"
+        },
+
+        "children": ["flex-layout.row#itemsMundoOutdoor"]
+
+    }
+
+}

@@ -4,6 +4,7 @@
 
     "children": [
       "flex-layout.row#section1FooterMobile",
+      "disclosure-layout#mundooutdoor-footer-mobile",
       "disclosure-layout#ayuda-footer-mobile",
       "disclosure-layout#contacto-footer-mobile",
       "link#boton-arrepentimiento",

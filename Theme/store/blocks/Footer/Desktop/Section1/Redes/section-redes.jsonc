@@ -36,7 +36,8 @@
 
         "children": [
             "image#imageInstagram",
-            "image#imageFacebook"
+            "image#imageFacebook",
+            "image#imageTiktok"
         ]
     
     },
@@ -61,6 +62,19 @@
             "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='27' viewBox='0 0 28 27' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.0126 5.81426H18.564V2.25H15.651C14.3601 2.25157 13.1225 2.77054 12.2097 3.69308C11.2969 4.61562 10.7834 5.8664 10.7818 7.17106V9.37852H8.43896V12.9428H10.7901V24.75H14.3167V12.9428H17.868L18.564 9.37852H14.3167V6.51642C14.3194 6.33086 14.3937 6.15368 14.5236 6.02256C14.6536 5.89144 14.829 5.81672 15.0126 5.81426Z' fill='%2309344D'/%3E%3C/svg%3E",
             "link":{
                 "url": "https://www.facebook.com/",
+                "newTab": true
+            }
+        }
+
+    },
+
+    "image#imageTiktok": {
+
+        "props": {
+            "blockClass": "link-redes-footer",
+            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M17.6365 0H13.5918V16.3478C13.5918 18.2957 12.0362 19.8957 10.1002 19.8957C8.1643 19.8957 6.60865 18.2957 6.60865 16.3478C6.60865 14.4348 8.12973 12.8695 9.99654 12.8V8.69567C5.88268 8.7652 2.56396 12.1391 2.56396 16.3478C2.56396 20.5913 5.95182 24 10.1348 24C14.3177 24 17.7056 20.5565 17.7056 16.3478V7.9652C19.2267 9.07827 21.0935 9.73913 23.064 9.77393V5.66957C20.0218 5.56522 17.6365 3.06087 17.6365 0Z' fill='%2309344D'/%3E%3C/svg%3E",
+            "link":{
+                "url": "www.tiktok.com",
                 "newTab": true
             }
         }

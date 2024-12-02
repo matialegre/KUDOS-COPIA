@@ -28,7 +28,7 @@
     "flex-layout.row#itemsMundoOutdoor": {
 
         "props": {
-            "blockClass": "items-columns-footer-container",
+            "blockClass": ["items-columns-footer-container", "mundooutdoor"],
             "preserveLayoutOnMobile": true,
             "horizontalAlign": "left",
             "colSizing": "auto"
@@ -38,7 +38,7 @@
             "link#sobre-nosotros-footer",
             "link#sucursales-footer",
             "link#ventas-corporativas-footer",
-            "link#ticktok-footer",
+            // "link#ticktok-footer",
             "link#trabaja-con-nosotros-footer",
             "link#boton-arrepentimiento"
         ]
