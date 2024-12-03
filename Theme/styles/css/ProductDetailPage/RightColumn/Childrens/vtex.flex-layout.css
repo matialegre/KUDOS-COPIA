@@ -211,11 +211,11 @@
 
 .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorTextContainer)::before{
     content: "Talles";
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: 'Gotham';
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
-    color: var(--color-black-4);
+    color: var(--color-black-1);
 }
 
 @media (max-width: 640px) {
@@ -316,11 +316,11 @@
 
 .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color) :global(.vtex-store-components-3-x-skuSelectorTextContainer)::before{
     content: "Colores disponibles";
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: 'Gotham';
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
-    color: var(--color-black-4);
+    color: var(--color-black-1);
 }
 
 @media (max-width: 640px) {

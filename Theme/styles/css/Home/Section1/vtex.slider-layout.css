@@ -85,9 +85,10 @@
   display: none;
 }
 
-.sliderArrows {
-  /* width: 35px;
-  height: 90px; */
+.sliderLayoutContainer--slider-banner-solo-imagenes .sliderArrows {
+  width: 35px;
+  height: 90px;
+  background: rgba( 255, 255, 255, 0.35 ) !important;
 }
 
 .sliderLeftArrow--slider-banner-solo-imagenes {

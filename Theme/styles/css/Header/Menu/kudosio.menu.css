@@ -38,7 +38,7 @@
     padding: 55px 85px;
     padding-top: 35px;
     max-height: 522px;
-    justify-content: center;
+    justify-content: space-between;
     max-width: 100%;
 }
 

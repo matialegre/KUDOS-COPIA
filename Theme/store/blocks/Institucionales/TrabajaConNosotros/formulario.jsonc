@@ -172,9 +172,11 @@
 //       "title": "Área",
 //       "type": "string",
 //       "enum": [
-//         "example1",
-//         "example2",
-//         "example3"
+//         "Marketing",
+//         "Ventas y atención al cliente",
+//         "Administración y Finanzas",
+//         "Logística y stock",
+//         "E-commerce y tecnología"
 //       ]
 //     },
 //     "cv": {
