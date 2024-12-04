@@ -38,7 +38,7 @@
     padding: 55px 75px;
     padding-top: 35px;
     max-height: 522px;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 100%;
 }
 
@@ -129,7 +129,7 @@
     padding: 0;
     width: 404px;
     height: 272px;
-    margin-left: 49px;
+    margin-left: 128px;
 }
 
 .contBanner_t2v4 .bannerAnchor{
