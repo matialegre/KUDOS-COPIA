@@ -222,9 +222,7 @@
 
     .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle) :global(.vtex-store-components-3-x-skuSelectorTextContainer)::before{
         font-size: 16px;
-        font-weight: 400;
         line-height: 24px;
-        color: var(--color-black-4);
     }
 
 }
@@ -327,7 +325,6 @@
 
     .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer) :global(.vtex-store-components-3-x-skuSelectorSubcontainer--color) :global(.vtex-store-components-3-x-skuSelectorTextContainer)::before{
         font-size: 16px;
-        font-weight: 400;
     }
 
 }
