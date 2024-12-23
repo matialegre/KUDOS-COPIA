@@ -10,11 +10,23 @@
         },
 
         "children": [
+            "flex-layout.row#gradientSlider",
             "flex-layout.row#itemSquare1",
             "flex-layout.row#itemSquare2",
             "flex-layout.row#itemSquare3",
             "flex-layout.row#itemSquare4"
         ]
+    
+    },
+
+    "flex-layout.row#gradientSlider": {
+
+        "props": {
+            "blockClass": "gradient-slider",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        }
     
     }
 

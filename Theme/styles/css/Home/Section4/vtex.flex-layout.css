@@ -90,6 +90,13 @@
     object-fit: cover;
 }
 
+.flexRowContent--banner-colecccion :global(.vtex-store-components-3-x-imageElementLink--image-banner-coleccion):hover::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(18, 18, 18, 0.00) 0%, rgba(18, 18, 18, 0.75) 100%);
+}
 @media (max-width: 640px) {
 
     .flexRowContent--banner-colecccion :global(.vtex-store-components-3-x-imageElement--image-banner-coleccion){

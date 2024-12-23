@@ -28,7 +28,7 @@ const SucDescription = ( { sucursal, setPosition } ) => {
         <p className={styles.dates}>{sucursal.address.street} {sucursal.address.number}, {sucursal.address.city}</p>
         <p className={styles.dates}>{sucursal.address.state}, {sucursal.address.postalCode}</p>
         <p className={styles.dates}><b>Horarios:</b> {sucursal.horarios}</p>
-        {/* <p className={styles.dates}><b>Teléfono:</b> {sucursal.telefono}</p> */}
+        <p className={styles.dates}>{sucursal.telefono}</p>
       </div>
       
     </div>

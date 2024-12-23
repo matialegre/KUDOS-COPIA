@@ -2,7 +2,7 @@
     z-index: 2;
     position: fixed;
     bottom: 0;
-    margin-right: 13px;
+    /* margin-right: 13px; */
     margin-bottom: 67px;
     display: flex;
     max-width: 41px;
