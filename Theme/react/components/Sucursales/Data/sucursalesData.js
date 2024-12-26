@@ -83,20 +83,20 @@ const sucursalesData = [
                 "acronym": "54",
                 "name": "Argentina"
             },
-            "city": "Bahía Blanca",
+            "city": "CABA Palermo hollywood",
             "state": "Provincia de Buenos Aires",
             "neighborhood": "",
-            "street": "San Martín",
-            "number": "126",
+            "street": "Santa Fé",
+            "number": "4830",
             "complement": null,
             "reference": "",
             "location": {
-                "latitude": -38.71788495514766,
-                "longitude": -62.26308755398279
+                "latitude": -34.577935634140175,
+                "longitude": -58.42789134909232
             }
         },
         "horarios": "Lunes a Sábados de 09:00 a 20:30",
-        "telefono": "2914147915",
+        "telefono": "1158633575",
         "isActive": true,
         "distance": null,
         "seller": "mundooutdoorar",
