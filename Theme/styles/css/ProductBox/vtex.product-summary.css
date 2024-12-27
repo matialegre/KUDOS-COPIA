@@ -88,6 +88,8 @@
 }
 
 .brandName{
+    box-sizing: border-box;
+    padding: 0px 5px;
     font-family: 'GothamBook';
     font-size: 14px;
     line-height: 21px;

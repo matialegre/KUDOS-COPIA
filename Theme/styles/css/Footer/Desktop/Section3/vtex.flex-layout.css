@@ -19,6 +19,7 @@
 }
 
 .flexRowContent--section-3-footer{
+    position: relative;
     margin: auto;
     max-width: var(--max-width-content-desktop);
     width: var(--max-width-content-desktop);
@@ -121,3 +122,25 @@
 
 }
 /* FIN DATA FISCAL  */
+
+/* WHATSAPP  */
+.flexRowContent--section-3-footer .stretchChildrenWidth:last-child{
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 27px;
+    margin-left: 1225px;
+    display: flex;
+    width: 41px !important;
+    height: 41px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRowContent--section-3-footer .stretchChildrenWidth:last-child{
+        margin-bottom: 93px;
+        margin-left: 313px;
+    }
+
+}
+/* FIN WHATSAPP  */

@@ -47,6 +47,13 @@
     padding-bottom: 15px;
 }
 
+.descriptionExpandableModal div{
+    font-family: 'GothamBook';
+    font-size: 15px;
+    line-height: 21px;
+    color: #090A10;
+}
+
 .descriptionExpandableModal p{
     font-family: 'GothamBook';
     font-size: 15px;

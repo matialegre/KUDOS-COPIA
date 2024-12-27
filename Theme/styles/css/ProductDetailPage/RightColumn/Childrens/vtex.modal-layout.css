@@ -10,11 +10,21 @@
     gap: 6px;
 }
 
-.triggerContainer :global(.vtex-flex-layout-0-x-flexRowContent--container-trigger-promociones-bancarias) :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(0n+1){
+.triggerContainer :global(.vtex-flex-layout-0-x-flexRowContent--container-trigger-promociones-bancarias) :global(.vtex-flex-layout-0-x-stretchChildrenWidth){
+    width: auto !important;
+}
+
+.triggerContainer :global(.vtex-flex-layout-0-x-flexRowContent--container-trigger-promociones-bancarias) :global(.vtex-store-components-3-x-imageElement--icon-trigger-promociones-bancarias){
     display: flex;
     width: 16px !important;
     height: 16px;
 }
+
+/* .triggerContainer :global(.vtex-flex-layout-0-x-flexRowContent--container-trigger-promociones-bancarias) :global(.vtex-flex-layout-0-x-stretchChildrenWidth):nth-child(0n+1){
+    display: flex;
+    width: 16px !important;
+    height: 16px;
+} */
 
 .triggerContainer :global(.vtex-flex-layout-0-x-flexRowContent--container-trigger-promociones-bancarias) :global(.vtex-rich-text-0-x-paragraph--trigger-promociones-bancarias){
     font-family: 'Gotham';

@@ -87,7 +87,9 @@
 
 /* FIN TITLES  */
 
-.flexRow--gradient-slider{
+/* GRADIENT  */
+
+.flexRowContent--info-square-container .stretchChildrenWidth:nth-child(0n+1):not(.flexRow--item-square .stretchChildrenWidth:nth-child(0n+1)){
     z-index: -1;
     position: absolute;
     top: 0;
@@ -95,5 +97,18 @@
     margin-top: -152px;
     width: 100vw !important;
     height: 166px;
+}
+
+.flexRow--gradient-slider{
     background: linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, 0.73) 23.17%, rgba(255, 255, 255, 0.45) 53.4%, rgba(255, 255, 255, 0.00) 90.11%);
 }
+
+@media (max-width: 640px) {
+
+    .flexRowContent--info-square-container .stretchChildrenWidth:nth-child(0n+1):not(.flexRow--item-square .stretchChildrenWidth:nth-child(0n+1)){
+        margin-top: -193px;
+    }
+
+}
+
+/* FIN GRADIENT  */

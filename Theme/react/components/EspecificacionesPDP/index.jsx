@@ -78,7 +78,8 @@ const EspecificacionesPDP = () => {
 
                     <div className={style.descriptionExpandableModal}>
 
-                        <p>{description}</p>
+                    <div dangerouslySetInnerHTML={{__html: description}}></div>
+                        {/* <p>{description}</p> */}
 
                     </div>
 
