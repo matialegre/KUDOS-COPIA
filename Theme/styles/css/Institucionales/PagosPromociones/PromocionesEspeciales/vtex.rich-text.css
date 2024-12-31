@@ -25,6 +25,7 @@
 @media (max-width: 640px) {
     
     .paragraph--text-triger-dropdown-promociones-especiales{
+        min-height: 50px;
         font-size: 15px;
         overflow: hidden;
         text-overflow: ellipsis;
