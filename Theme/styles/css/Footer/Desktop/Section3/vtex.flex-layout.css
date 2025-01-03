@@ -128,8 +128,9 @@
     z-index: 2;
     position: fixed;
     bottom: 0;
-    margin-bottom: 27px;
-    margin-left: 1225px;
+    right: 0;
+    margin-bottom: 25px;
+    margin-right: 25px;
     display: flex;
     width: 41px !important;
     height: 41px;
@@ -138,8 +139,8 @@
 @media (max-width: 640px) {
 
     .flexRowContent--section-3-footer .stretchChildrenWidth:last-child{
-        margin-bottom: 93px;
-        margin-left: 313px;
+        margin-bottom: 12px;
+        margin-right: 12px;
     }
 
 }
