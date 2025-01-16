@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import { useProduct } from 'vtex.product-context';
 
@@ -12,30 +12,41 @@ const EspecificacionesPDP = () => {
     const productData = useProduct();
     let description = productData.product?.description;
     let specifications = productData.product?.properties;
-
+    
     // FUNCIONES 
     const expandDescription = () => {
 
         const divExpand = containerDescriptionPDP.current;
-        const heightDivHidden = divExpand.querySelector(`.${style.descriptionExpandableModal}`);
-        const iconExpand = divExpand.querySelector(`.${style.descriptionExpandableHeader} img`);
         
-        if ( parseInt( getComputedStyle( divExpand ).height ) > 48 ) {
+        if ( divExpand ) {
 
-            divExpand.style.height = "48px";
-            iconExpand.style.transform = "rotate(0deg)";
-
-        } else {
-
-            const newHeight = parseFloat( getComputedStyle( heightDivHidden ).height );
+            const heightDivHidden = divExpand.querySelector(`.${style.descriptionExpandableModal}`);
+            const iconExpand = divExpand.querySelector(`.${style.descriptionExpandableHeader} img`);
             
-            divExpand.style.height = 48 + newHeight + "px";
-            iconExpand.style.transform = "rotate(-180deg)";
+            if ( parseInt( getComputedStyle( divExpand ).height ) > 48 ) {
+
+                divExpand.style.height = "48px";
+                iconExpand.style.transform = "rotate(0deg)";
+
+            } else {
+
+                const newHeight = parseFloat( getComputedStyle( heightDivHidden ).height );
+                
+                divExpand.style.height = 48 + newHeight + "px";
+                iconExpand.style.transform = "rotate(-180deg)";
+
+            }
 
         }
         
-
     }
+
+    useEffect( () => {
+        
+        expandDescription();
+      
+    }, [containerDescriptionPDP.current] )
+    
 
     const expandSpecification = () => {
 
@@ -69,6 +80,7 @@ const EspecificacionesPDP = () => {
 
                 <div className={style.containerDescriptionPDP} ref={containerDescriptionPDP}>
 
+                    {/* <div className={style.descriptionExpandableHeader} onClick={ expandDescription }> */}
                     <div className={style.descriptionExpandableHeader} onClick={ expandDescription }>
 
                         <p>Descripción</p>

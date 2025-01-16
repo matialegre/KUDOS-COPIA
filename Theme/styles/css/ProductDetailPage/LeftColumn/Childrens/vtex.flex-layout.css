@@ -45,7 +45,7 @@
         }
 
         .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-carouselGaleryCursor) :global(.vtex-store-components-3-x-productImagesGallerySwiperContainer){
-            height: 328px;
+            height: 344px;
         }
 
     }
@@ -273,7 +273,8 @@
 
     .flexCol--column-left-pdp .flexColChild--column-left-pdp:nth-child(0n+2){
         z-index: 1;
-        margin-top: -28px;
+        /* margin-top: -28px; */
+        margin-top: -12px;
         margin-left: auto;
         width: fit-content;
     }
