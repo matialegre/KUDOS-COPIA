@@ -47,11 +47,73 @@
     padding-bottom: 15px;
 }
 
-.descriptionExpandableModal div{
-    font-family: 'GothamBook';
+.descriptionExpandableModal strong{
     font-size: 15px;
-    line-height: 21px;
-    color: #090A10;
+}
+
+.descriptionExpandableModal strong{
+    font-family: 'GothamBook';
+    font-size: 16px;
+}
+
+.descriptionExpandableModal p{
+    margin-top: 5px;
+}
+
+.descriptionExpandableModal h1{
+    margin-top: 10px;
+    font-family: 'GothamBook';
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.descriptionExpandableModal h2{
+    margin-top: 10px;
+    font-family: 'GothamBook';
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.descriptionExpandableModal h2 span{
+    margin-top: 10px;
+    font-family: 'GothamBook';
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.descriptionExpandableModal h3{
+    margin-top: 10px;
+    font-family: 'GothamBook';
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+
+    .descriptionExpandableModal strong{
+        font-size: 14px;
+    }
+    
+    .descriptionExpandableModal h1{
+        font-size: 14px;
+    }
+    
+    .descriptionExpandableModal h2{
+        font-size: 14px;
+    }
+
+    .descriptionExpandableModal h2 span{
+        font-size: 14px !important;
+    }
+    
+    .descriptionExpandableModal h3{
+        font-size: 14px;
+    }
+
+}
+
+.descriptionExpandableModal ul{
+    margin-top: 10px;
 }
 
 .descriptionExpandableModal p{
