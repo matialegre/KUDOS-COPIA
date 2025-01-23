@@ -1,4 +1,6 @@
 import React, { useRef } from 'react';
+import { useContext } from "react";
+import { context } from '../ContextSizeColor/SizeColorContext';
 
 // FUNCTIONS 
 import { previousSize } from './SliderEffect/previousSize';
@@ -7,57 +9,13 @@ import { nextSize } from './SliderEffect/nextSize';
 // STYLES 
 const style = require('./ListaColores.css');
 
-const ListaColores = ( { productContext, setColorSeleccionado, hints } ) => {
+const ListaColores = ( { hints } ) => {
 
-    // FUNCTIONS 
-    const clickInColor = ( e, color, classNameItem ) => {
-
-        e.preventDefault();
-        e.stopPropagation();
-
-        let items = document.querySelectorAll( `.${classNameItem}` );
-        
-        for ( let index = 0; index < items.length; index++ ) {
-
-            items[index].classList.remove( style.active );
-            
-        }
-
-        e.target.classList.add( style.active );
-
-        setColorSeleccionado( color );
-
-    }
-    // FIN FUNCTIONS 
+    const allContextExport = useContext(context);
 
     const contSliderRef = useRef();
     const btnMoveItemLeftRef = useRef();
     const btnMoveItemRightRef = useRef();
-
-    let allColors = [];
-    let allImageColors = [];
-    
-    productContext?.product?.items.forEach( item => {
-
-        let color = item.variations?.filter( item => item.name === "Color" )?.[0]?.values?.[0];
-
-        if ( !allColors.includes( color ) ) {
-            
-            allColors.push( color );
-
-        }
-        
-    } );
-
-    allColors.forEach( color => {
-
-        let objectImageContainer = productContext?.product?.items.find( item => item.variations?.find( item2 => item2.name === "Color" && item2.values?.[0] === color ) );
-        
-        let imageColorUrl = objectImageContainer.images?.[0]?.imageUrl;
-
-        allImageColors.push( imageColorUrl );
-            
-    })
     
     return (
 
@@ -65,7 +23,7 @@ const ListaColores = ( { productContext, setColorSeleccionado, hints } ) => {
 
             { 
             
-                allColors.length > 2 ? 
+                allContextExport.ShowThisColors.length > 2 ? 
                 
                     <div className={`${style.btn_move_item_color} ${style.left}`} onClick={ e => { e.preventDefault(); e.stopPropagation(); } }>
                         <div onClick={ e => previousSize( e, contSliderRef.current, btnMoveItemLeftRef.current, btnMoveItemRightRef.current, hints ) } ref={btnMoveItemLeftRef}></div>
@@ -83,15 +41,25 @@ const ListaColores = ( { productContext, setColorSeleccionado, hints } ) => {
 
                     {
 
-                        allColors.map( ( color, index ) => {
-
+                        allContextExport.ShowThisColors.map( color => {
+                            
                             return (
 
-                                <div className={style.itemColor} onClick={ e => clickInColor( e, color, style.itemColor ) }>
+                                color[0] === allContextExport.SizeColorObject[ "colorSelected" ] ?
 
-                                    <img src={ allImageColors[ index ] }/>
+                                    <div className={`${style.itemColor} ${style.active}`} onClick={ e => allContextExport.clickInColor( e, color[0] ) }>
 
-                                </div>
+                                        <img src={ color[1] }/>
+
+                                    </div>
+
+                                :
+
+                                    <div className={style.itemColor} onClick={ e => allContextExport.clickInColor( e, color[0] ) }>
+
+                                        <img src={ color[1] }/>
+
+                                    </div>
 
                             )
 
@@ -105,7 +73,7 @@ const ListaColores = ( { productContext, setColorSeleccionado, hints } ) => {
 
             { 
             
-                allColors.length > 2 ? 
+                allContextExport.ShowThisColors.length > 2 ? 
                 
                     <div className={`${style.btn_move_item_color} ${style.right}`} onClick={ e => { e.preventDefault(); e.stopPropagation(); } }>
                         <div onClick={ e => nextSize( e, contSliderRef.current, btnMoveItemLeftRef.current, btnMoveItemRightRef.current, hints ) } ref={btnMoveItemRightRef}></div>
