@@ -30,7 +30,7 @@
     font-weight: 500;
     line-height: 24px;
     color: var(--color-black-1);
-    text-transform: none;
+    text-transform: uppercase;
 }
 
 .filter__container{
