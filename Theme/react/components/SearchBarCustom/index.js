@@ -1,11 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useRuntime } from 'vtex.render-runtime';
 
 //STYLE
 const style = require('./index.css');
 
 const SearchBarCustom = ( { SearchBar } ) => {
 
+    const { route } = useRuntime();
+
     const [ showSearchBar, setShowSearchBar ] = useState( false );
+    
+    useEffect( () => {
+
+        setShowSearchBar( false );
+
+    }, [ route.path ] )
+    
 
     return (
 
