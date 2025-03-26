@@ -25,9 +25,9 @@ const SelectSkuInProductBox = ( { AddToCartButton } ) => {
   const [ activeNotifyAddToCart, setActiveNotifyAddToCart ] = useState( false );
   const [ nootifyAddToCartText, setNootifyAddToCartText ] = useState("");
 
-  const customAddToCart = productContext?.product?.items?.length > 1;
+  const customAddToCart = productContext?.product?.items?.length > 0;
   
-  if ( customAddToCart ) {
+  if ( customAddToCart && productContext?.product?.items?.[0]?.variations?.[0]?.values[0] != "ST" ) {
 
     if ( tallesContainer && coloresContainer && footerContainer ) {
       

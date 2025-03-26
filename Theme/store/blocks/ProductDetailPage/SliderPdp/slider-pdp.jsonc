@@ -1,27 +1,47 @@
 {
 
-    "flex-layout.row#product-summary-container-pdp": {
+    // "flex-layout.row#product-summary-container-pdp": {
 
-        "props": {
-          "blockClass": "product-summary-container-pdp"
-        },
+    //     "props": {
+    //       "blockClass": "product-summary-container-pdp"
+    //     },
 
-        "children": [
-          "list-context.product-list#list-product-summary-slider-pdp"
-        ]
+    //     "children": [
+    //       "list-context.product-list#list-product-summary-slider-pdp"
+    //     ]
 
-    },
+    // },
 
-    "list-context.product-list#list-product-summary-slider-pdp": {
+    // "list-context.product-list#list-product-summary-slider-pdp": {
 
-        "blocks": ["product-summary.shelf#product-box"],
+    //     "blocks": ["product-summary.shelf#product-box"],
 
-        "children": ["slider-layout#product-summary-slider"],
+    //     "children": ["slider-layout#product-summary-slider"],
         
-        "props": {
-          "orderBy": "OrderByPriceASC"
-        }
+    //     "props": {
+    //       "orderBy": "OrderByPriceASC"
+    //     }
 
+    // },
+
+   "shelf.relatedProducts": {
+    "blocks": ["product-summary.shelf#product-box"],
+    "props": {
+      "blockClass": [
+        "related",
+        "product-box"
+      ],
+      "recommendation": "view",
+      "isFullModeStyle": true,
+      "paginationDotsVisibility": "visible",
+      "productList": {
+        "minItemsPerPage": 2,
+        "itemsPerPage": 4,
+        "scroll": "ONE_BY_ONE",
+        "arrows": true,
+        "titleText": ""
+      }
     }
+  }
 
 }

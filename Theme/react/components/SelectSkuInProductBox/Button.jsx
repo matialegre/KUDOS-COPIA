@@ -39,7 +39,7 @@ const Button = ( { productContext, setFooterContainer, setTallesContainer, setCo
           }, 200);
     
           myRef.current.classList.add("vtex-button-add-to-cart-custom");
-    
+          
           if( tallesContainer && coloresContainer ) {
     
             setTallesContainer( tallesContainer );

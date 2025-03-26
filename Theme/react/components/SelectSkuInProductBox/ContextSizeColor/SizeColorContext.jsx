@@ -20,30 +20,38 @@ const SizeColorContext = ( { children, setActiveNotifyAddToCart, setNootifyAddTo
         let colors = [];
         
         data.product.items.forEach( item => {
+            
+            if ( item.variations?.length > 0 ) {
 
-            if ( !obj.hasOwnProperty( item.variations[0].values[0] ) ) {
+                if ( !obj.hasOwnProperty( item.variations[0].values[0] ) ) {
 
-                sizes.push( [ item.variations[0].values[0] ] );
-                obj[ item.variations[0].values[0] ] = [ [ item.variations[1].values[0], item.images[0].imageUrl ] ];
-
-            } else {
-
-                obj[ item.variations[0].values[0] ].push( [ item.variations[1].values[0], item.images[0].imageUrl ] );
+                    sizes.push( [ item.variations[0].values[0] ] );
+                    obj[ item.variations[0].values[0] ] = [ [ item.variations[1].values[0], item.images[0].imageUrl ] ];
+    
+                } else {
+    
+                    obj[ item.variations[0].values[0] ].push( [ item.variations[1].values[0], item.images[0].imageUrl ] );
+    
+                }
 
             }
-
+        
         })
 
         data.product.items.forEach( item => {
 
-            if ( !obj.hasOwnProperty( item.variations[1].values[0] ) ) {
+            if ( item.variations?.length > 0 ) { 
 
-                colors.push( [ item.variations[1].values[0], item.images[0].imageUrl ] );
-                obj[ item.variations[1].values[0] ] = [ [ item.variations[0].values[0] ] ];
+                if ( !obj.hasOwnProperty( item.variations[1].values[0] ) ) {
 
-            } else {
+                    colors.push( [ item.variations[1].values[0], item.images[0].imageUrl ] );
+                    obj[ item.variations[1].values[0] ] = [ [ item.variations[0].values[0] ] ];
 
-                obj[ item.variations[1].values[0] ].push( [ item.variations[0].values[0] ] );
+                } else {
+
+                    obj[ item.variations[1].values[0] ].push( [ item.variations[0].values[0] ] );
+
+                }
 
             }
 
