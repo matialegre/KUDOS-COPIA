@@ -13,7 +13,8 @@
           "product-summary-name",
           "product-rating-inline",
           "product-summary-price",
-          "rich-text#envio-gratis",
+          // "rich-text#envio-gratis",
+          "envio-gratis",
           "flex-layout.row#skuSelectorColorContainer",
           "select-sku-in-product-box"
       ]
