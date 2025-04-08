@@ -18,7 +18,7 @@ const SelectSkuInProductBox = ( { AddToCartButton } ) => {
 
   const productContext = useProduct();
   const { hints } = useRuntime();
-
+  
   const [ tallesContainer, setTallesContainer ] = useState();
   const [ coloresContainer, setColoresContainer ] = useState();
   const [ footerContainer, setFooterContainer ] = useState();
@@ -26,8 +26,9 @@ const SelectSkuInProductBox = ( { AddToCartButton } ) => {
   const [ nootifyAddToCartText, setNootifyAddToCartText ] = useState("");
 
   const customAddToCart = productContext?.product?.items?.length > 0;
+  const availableQuantity = productContext?.selectedItem?.sellers?.[0]?.commertialOffer?.AvailableQuantity;
   
-  if ( customAddToCart && productContext?.product?.items?.[0]?.variations?.[0]?.values[0] != "ST" ) {
+  if ( availableQuantity > 0 && customAddToCart && productContext?.product?.items?.[0]?.variations?.[0]?.values[0] != "ST" ) {
 
     if ( tallesContainer && coloresContainer && footerContainer ) {
       
