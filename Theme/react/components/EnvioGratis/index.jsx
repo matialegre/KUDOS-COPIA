@@ -31,7 +31,12 @@ const EnvioGratis = () => {
         
         // Ejecutar la expresión regular en el texto
         let resultado = textFreeShipping.match(regex);
-        resultado = cleanAmount(resultado[1]);
+
+        if ( resultado && resultado.length > 0 && resultado[1] ) {
+
+          resultado = cleanAmount(resultado[1]);
+          
+        }
         
         if (resultado) { 
           
@@ -49,7 +54,7 @@ const EnvioGratis = () => {
 
     let productPrice = parseInt( cleanAmount( productData?.selectedItem?.sellers?.[0]?.commertialOffer?.Price.toString() ) );
     
-    if ( productPrice >= priceFreeShipping ){
+    if ( priceFreeShipping && productPrice && productPrice >= priceFreeShipping ){
 
       return (
   

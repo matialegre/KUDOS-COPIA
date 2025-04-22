@@ -61,7 +61,7 @@
       "children": [
         "flex-layout.row#priceAndDiscountPdp",
         // "rich-text#cucardaEnvioGratis",
-        // "envio-gratis",
+        "envio-gratis",
         "modal-trigger#example",
         "flex-layout.row#containerTalles",
         // "sku-selector",
