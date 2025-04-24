@@ -60,6 +60,14 @@
     color: #090A10;
 }
 
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-currencyDecimal){
+    display: none;
+}
+
+.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-currencyFraction){
+    display: none;
+}
+
 @media (max-width: 640px) {
 
     .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-price_sellingPrice){
@@ -140,6 +148,14 @@
         font-weight: 500;
         text-decoration-line: strikethrough;
         color: #3D3F43;
+    }
+
+    .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className) :global(.vtex-store-components-3-x-price_listPriceContainer) :global(.vtex-store-components-3-x-price_listPrice) :global(.vtex-store-components-3-x-currencyDecimal){
+        display: none;
+    }
+
+    .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className) :global(.vtex-store-components-3-x-price_listPriceContainer) :global(.vtex-store-components-3-x-price_listPrice) :global(.vtex-store-components-3-x-currencyFraction){
+        display: none;
     }
 
     .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className) :global(.vtex-store-components-3-x-price_sellingPriceContainer){

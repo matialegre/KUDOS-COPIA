@@ -152,6 +152,14 @@
     color: var(--color-red-1);
 }
 
+.currencyDecimal{
+    display: none;
+}
+
+.currencyFraction{
+    display: none;
+}
+
 .clearLink .element{
     position: relative;
 }
