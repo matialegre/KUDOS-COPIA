@@ -32,6 +32,7 @@
     cursor: pointer;
     user-select: none;
     min-width: 37px;
+    width: 37px;
     height: 37px;
     font-family: 'Gotham';
     font-size: 12px;
