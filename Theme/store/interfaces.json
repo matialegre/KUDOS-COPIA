@@ -31,7 +31,11 @@
     "breadcrumb-custom": {
         "component": "BreadcrumbCustom"
     },
-    
+
+    "utility-bar-right": {
+        "component": "UtilityBarRight"
+    },
+
     "sucursales": {
         "component": "Sucursales"
     },

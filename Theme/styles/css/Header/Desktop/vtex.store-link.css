@@ -18,4 +18,34 @@
 
 }
 
+.link--utilityRightLabel:hover {
+    opacity: 0.85;
+}
+
+.link--utilityLinks,
+.link--utilityLinks:hover,
+.link--utilityLinks:focus,
+.link--utilityLinks:visited,
+.link--utilityLinks:active {
+    color: #6B6B6B !important;
+    font-family: 'Gotham', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none !important;
+}
+
+@media (max-width: 1199px) {
+    .link--utilityRightLabel,
+    .link--utilityRightLabel:hover,
+    .link--utilityRightLabel:focus,
+    .link--utilityRightLabel:visited,
+    .link--utilityRightLabel:active {
+        color: #6B6B6B !important;
+        font-family: 'Gotham', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none !important;
+    }
+}
+
 /* FIN ICONO FAVORITOS */

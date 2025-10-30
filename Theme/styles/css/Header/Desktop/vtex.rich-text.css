@@ -35,6 +35,29 @@
     background: lightgray;
 }
 
+.paragraph--utilityLinks {
+    font-family: 'Gotham', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6B6B6B !important;
+    margin: 0;
+    text-decoration: none !important;
+    display: inline-block;
+    line-height: 48px;
+}
+
+.paragraph--utilityLinks :global(.vtex-rich-text-0-x-link) {
+    color: #6B6B6B !important;
+    text-decoration: none !important;
+    margin-right: 18px;
+}
+
+.paragraph--utilityLinks :global(.vtex-rich-text-0-x-link):hover,
+.paragraph--utilityLinks :global(.vtex-rich-text-0-x-link):focus {
+    text-decoration: none !important;
+    color: #4f4f4f !important;
+}
+
 @media (max-width: 640px) {
 
     .paragraph--aqui-menu{

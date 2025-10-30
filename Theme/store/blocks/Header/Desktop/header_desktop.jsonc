@@ -4,9 +4,83 @@
 
         "children": [
             "slider-layout#announcementCarousel",
+            "flex-layout.row#utilityBar",
             "sticky-layout#stickyHeaderDesktop"
         ]
 
+    },
+
+    "flex-layout.row#utilityBar": {
+
+        "props": {
+            "blockClass": "utilityBar",
+            "horizontalAlign": "right",
+            "verticalAlign": "center",
+            "preserveLayoutOnMobile": false,
+            "fullWidth": true
+        },
+
+        "children": [
+            "flex-layout.row#utilityBarLeft",
+            "utility-bar-right#desktop"
+        ]
+
+    },
+
+    "flex-layout.row#utilityBarLeft": {
+
+        "props": {
+            "blockClass": "utilityLeft",
+            "horizontalAlign": "left",
+            "verticalAlign": "center"
+        },
+
+        "children": ["rich-text#utilityLinks"]
+
+    },
+
+    "rich-text#utilityLinks": {
+
+        "props": {
+            "blockClass": "utilityLinks",
+            "text": "[Entregas](/) [Cambios](/) [Sucursales](/) [Preguntas frecuentes](/) [Ayuda](/)"
+        }
+
+    },
+
+    "utility-bar-right#desktop": {
+        "props": {
+            "items": [
+                {
+                    "id": "stores",
+                    "label": "Ver sucursales",
+                    "href": "/sucursales",
+                    "icon": "https://mundooutdoorar.vteximg.com.br/arquivos/icono_ubicacion.png",
+                    "ariaLabel": "Ver sucursales"
+                },
+                {
+                    "id": "shipping",
+                    "label": "Envíos",
+                    "href": "/envios",
+                    "icon": "https://mundooutdoorar.vteximg.com.br/arquivos/icono_camion_negro.png",
+                    "ariaLabel": "Información de envíos"
+                },
+                {
+                    "id": "account",
+                    "label": "Mi cuenta",
+                    "href": "/account",
+                    "icon": "https://mundooutdoorar.vteximg.com.br/arquivos/icono_persona.png",
+                    "ariaLabel": "Acceder a Mi cuenta"
+                },
+                {
+                    "id": "cart",
+                    "label": "",
+                    "href": "/checkout/#/cart",
+                    "icon": "https://mundooutdoorar.vteximg.com.br/arquivos/icono_chango_negro.png",
+                    "ariaLabel": "Ver carrito"
+                }
+            ]
+        }
     },
 
     "slider-layout#announcementCarousel": {
@@ -27,16 +101,7 @@
             "showNavigationArrows": "never"
         },
 
-        "children": ["rich-text#announcement1", "rich-text#announcement2", "rich-text#announcement3"]
-
-    },
-
-    "rich-text#announcement1": {
-
-        "props": {
-            "blockClass": "announcement-message",
-            "text": "ENVÍO GRATIS EN COMPRAS MAYORES A $ 150.000"
-        }
+        "children": ["rich-text#announcement2", "rich-text#announcement3"]
 
     },
 
