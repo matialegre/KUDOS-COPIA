@@ -37,11 +37,11 @@
                 "tablet": 1,
                 "phone": 1
             },
-            // "infinite": true,
-            // "autoplay": {
-            //     "timeout": 5000,
-            //     "stopOnHover": true
-            // },
+            "infinite": true,
+            "autoplay": {
+                "timeout": 3000,
+                "stopOnHover": false
+            },
             "showPaginationDots": "always", // desktopOnly | mobileOnly | always | never
             "showNavigationArrows": "desktopOnly" // desktopOnly | mobileOnly | always | never
             

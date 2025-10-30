@@ -3,8 +3,58 @@
     "header-layout.desktop": {
 
         "children": [
+            "slider-layout#announcementCarousel",
             "sticky-layout#stickyHeaderDesktop"
         ]
+
+    },
+
+    "slider-layout#announcementCarousel": {
+        
+        "props": {
+            "blockClass": "announcement-carousel",
+            "itemsPerPage": {
+                "desktop": 1,
+                "tablet": 1,
+                "phone": 1
+            },
+            "infinite": true,
+            "autoplay": {
+                "timeout": 2000,
+                "stopOnHover": false
+            },
+            "showPaginationDots": "never",
+            "showNavigationArrows": "never"
+        },
+
+        "children": ["rich-text#announcement1", "rich-text#announcement2", "rich-text#announcement3"]
+
+    },
+
+    "rich-text#announcement1": {
+
+        "props": {
+            "blockClass": "announcement-message",
+            "text": "ENVÍO GRATIS EN COMPRAS MAYORES A $ 150.000"
+        }
+
+    },
+
+    "rich-text#announcement2": {
+
+        "props": {
+            "blockClass": "announcement-message-with-truck",
+            "text": "3 CUOTAS SIN INTERÉS + ENVÍO GRATIS DESDE $179.999"
+        }
+
+    },
+
+    "rich-text#announcement3": {
+
+        "props": {
+            "blockClass": "announcement-message",
+            "text": "HASTA 50% OFF EN PRODUCTOS SELECCIONADOS"
+        }
 
     },
 
