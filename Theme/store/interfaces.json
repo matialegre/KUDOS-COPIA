@@ -36,12 +36,20 @@
         "component": "UtilityBarRight"
     },
 
+    "main-header": {
+        "component": "MainHeader"
+    },
+
     "sucursales": {
         "component": "Sucursales"
     },
 
     "envio-gratis": {
         "component": "EnvioGratis"
+    },
+
+    "menu-editor": {
+        "component": "MenuEditor"
     }
 
 }

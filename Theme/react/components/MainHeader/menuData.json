@@ -1,0 +1,246 @@
+{
+  "departments": [
+    {
+      "id": "hombre",
+      "label": "HOMBRE",
+      "href": "/hombre",
+      "banner": "/arquivos/banner-menu-desplegable.png",
+      "columns": [
+        {
+          "title": "Calzado",
+          "items": [
+            { "label": "Zapatillas", "href": "/hombre/calzado/zapatillas" },
+            { "label": "Botas", "href": "/hombre/calzado/botas" },
+            { "label": "Sandalias", "href": "/hombre/calzado/sandalias" },
+            { "label": "Ojotas", "href": "/hombre/calzado/ojotas" },
+            { "label": "Ver todo", "href": "/hombre/calzado", "highlight": true }
+          ]
+        },
+        {
+          "title": "Indumentaria",
+          "items": [
+            { "label": "Camperas", "href": "/hombre/indumentaria/camperas" },
+            { "label": "Buzos", "href": "/hombre/indumentaria/buzos" },
+            { "label": "Interiores Térmicos", "href": "/hombre/indumentaria/interiores-termicos" },
+            { "label": "Rompevientos", "href": "/hombre/indumentaria/rompevientos" },
+            { "label": "Chalecos", "href": "/hombre/indumentaria/chalecos" },
+            { "label": "Camisas", "href": "/hombre/indumentaria/camisas" },
+            { "label": "Remeras", "href": "/hombre/indumentaria/remeras" },
+            { "label": "Chombas", "href": "/hombre/indumentaria/chombas" },
+            { "label": "Musculosas", "href": "/hombre/indumentaria/musculosas" },
+            { "label": "Sudaderas", "href": "/hombre/indumentaria/sudaderas" },
+            { "label": "Pantalones", "href": "/hombre/indumentaria/pantalones" },
+            { "label": "Jeans", "href": "/hombre/indumentaria/jeans" },
+            { "label": "Trajes de Baño", "href": "/hombre/indumentaria/trajes-de-bano" },
+            { "label": "Shorts", "href": "/hombre/indumentaria/shorts" },
+            { "label": "Bermudas", "href": "/hombre/indumentaria/bermudas" },
+            { "label": "Ver todo", "href": "/hombre/indumentaria", "highlight": true }
+          ]
+        },
+        {
+          "title": "Accesorios",
+          "items": [
+            { "label": "Antiparras", "href": "/hombre/accesorios/antiparras" },
+            { "label": "Anteojos", "href": "/hombre/accesorios/anteojos" },
+            { "label": "Guantes", "href": "/hombre/accesorios/guantes" },
+            { "label": "Cuellos", "href": "/hombre/accesorios/cuellos" },
+            { "label": "Medias", "href": "/hombre/accesorios/medias" },
+            { "label": "Gorras", "href": "/hombre/accesorios/gorras" },
+            { "label": "Gorros", "href": "/hombre/accesorios/gorros" },
+            { "label": "Sombreros", "href": "/hombre/accesorios/sombreros" },
+            { "label": "Pilusos", "href": "/hombre/accesorios/pilusos" },
+            { "label": "Mochilas", "href": "/hombre/accesorios/mochilas" },
+            { "label": "Valijas", "href": "/hombre/accesorios/valijas" },
+            { "label": "Riñoneras", "href": "/hombre/accesorios/rinoneras" },
+            { "label": "Bandoleras", "href": "/hombre/accesorios/bandoleras" },
+            { "label": "Cintos", "href": "/hombre/accesorios/cintos" },
+            { "label": "Boxers", "href": "/hombre/accesorios/boxers" },
+            { "label": "Billeteras", "href": "/hombre/accesorios/billeteras" },
+            { "label": "Ver todo", "href": "/hombre/accesorios", "highlight": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mujer",
+      "label": "MUJER",
+      "href": "/mujer",
+      "banner": "/arquivos/banner-menu-desplegable-3.png",
+      "columns": [
+        {
+          "title": "Calzado",
+          "items": [
+            { "label": "Zapatillas", "href": "/mujer/calzado/zapatillas" },
+            { "label": "Botas", "href": "/mujer/calzado/botas" },
+            { "label": "Sandalias", "href": "/mujer/calzado/sandalias" },
+            { "label": "Ojotas", "href": "/mujer/calzado/ojotas" },
+            { "label": "Ver todo", "href": "/mujer/calzado", "highlight": true }
+          ]
+        },
+        {
+          "title": "Indumentaria",
+          "items": [
+            { "label": "Camperas", "href": "/mujer/indumentaria/camperas" },
+            { "label": "Buzos", "href": "/mujer/indumentaria/buzos" },
+            { "label": "Interiores Térmicos", "href": "/mujer/indumentaria/interiores-termicos" },
+            { "label": "Rompevientos", "href": "/mujer/indumentaria/rompevientos" },
+            { "label": "Chalecos", "href": "/mujer/indumentaria/chalecos" },
+            { "label": "Camisas", "href": "/mujer/indumentaria/camisas" },
+            { "label": "Remeras", "href": "/mujer/indumentaria/remeras" },
+            { "label": "Chombas", "href": "/mujer/indumentaria/chombas" },
+            { "label": "Musculosas", "href": "/mujer/indumentaria/musculosas" },
+            { "label": "Sudaderas", "href": "/mujer/indumentaria/sudaderas" },
+            { "label": "Pantalones", "href": "/mujer/indumentaria/pantalones" },
+            { "label": "Jeans", "href": "/mujer/indumentaria/jeans" },
+            { "label": "Trajes de Baño", "href": "/mujer/indumentaria/trajes-de-bano" },
+            { "label": "Shorts", "href": "/mujer/indumentaria/shorts" },
+            { "label": "Bermudas", "href": "/mujer/indumentaria/bermudas" },
+            { "label": "Ver todo", "href": "/mujer/indumentaria", "highlight": true }
+          ]
+        },
+        {
+          "title": "Accesorios",
+          "items": [
+            { "label": "Antiparras", "href": "/mujer/accesorios/antiparras" },
+            { "label": "Anteojos", "href": "/mujer/accesorios/anteojos" },
+            { "label": "Guantes", "href": "/mujer/accesorios/guantes" },
+            { "label": "Cuellos", "href": "/mujer/accesorios/cuellos" },
+            { "label": "Medias", "href": "/mujer/accesorios/medias" },
+            { "label": "Gorras", "href": "/mujer/accesorios/gorras" },
+            { "label": "Gorros", "href": "/mujer/accesorios/gorros" },
+            { "label": "Sombreros", "href": "/mujer/accesorios/sombreros" },
+            { "label": "Pilusos", "href": "/mujer/accesorios/pilusos" },
+            { "label": "Mochilas", "href": "/mujer/accesorios/mochilas" },
+            { "label": "Valijas", "href": "/mujer/accesorios/valijas" },
+            { "label": "Riñoneras", "href": "/mujer/accesorios/rinoneras" },
+            { "label": "Bandoleras", "href": "/mujer/accesorios/bandoleras" },
+            { "label": "Cintos", "href": "/mujer/accesorios/cintos" },
+            { "label": "Boxers", "href": "/mujer/accesorios/boxers" },
+            { "label": "Billeteras", "href": "/mujer/accesorios/billeteras" },
+            { "label": "Ver todo", "href": "/mujer/accesorios", "highlight": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ninos",
+      "label": "NIÑOS",
+      "href": "/ninos",
+      "banner": "/arquivos/banner-menu-desplegable-2.png",
+      "columns": [
+        {
+          "title": "Calzado",
+          "items": [
+            { "label": "Zapatillas", "href": "/ninos/calzado/zapatillas" },
+            { "label": "Botas", "href": "/ninos/calzado/botas" },
+            { "label": "Sandalias", "href": "/ninos/calzado/sandalias" },
+            { "label": "Ojotas", "href": "/ninos/calzado/ojotas" },
+            { "label": "Ver todo", "href": "/ninos/calzado", "highlight": true }
+          ]
+        },
+        {
+          "title": "Niños Indumentaria",
+          "items": [
+            { "label": "Camperas", "href": "/ninos/ninos-indumentaria/camperas" },
+            { "label": "Rompevientos", "href": "/ninos/ninos-indumentaria/rompevientos" },
+            { "label": "Buzos", "href": "/ninos/ninos-indumentaria/buzos" },
+            { "label": "Camisetas", "href": "/ninos/ninos-indumentaria/camisetas" },
+            { "label": "Remeras", "href": "/ninos/ninos-indumentaria/remeras" },
+            { "label": "Pantalones", "href": "/ninos/ninos-indumentaria/pantalones" },
+            { "label": "Shorts", "href": "/ninos/ninos-indumentaria/shorts" },
+            { "label": "Trajes de Baño", "href": "/ninos/ninos-indumentaria/trajes-de-bano" },
+            { "label": "Ver todo", "href": "/ninos/ninos-indumentaria", "highlight": true }
+          ]
+        },
+        {
+          "title": "Niñas Indumentaria",
+          "items": [
+            { "label": "Camperas", "href": "/ninos/ninas-indumentaria/camperas" },
+            { "label": "Rompevientos", "href": "/ninos/ninas-indumentaria/rompevientos" },
+            { "label": "Buzos", "href": "/ninos/ninas-indumentaria/buzos" },
+            { "label": "Camisetas", "href": "/ninos/ninas-indumentaria/camisetas" },
+            { "label": "Remeras", "href": "/ninos/ninas-indumentaria/remeras" },
+            { "label": "Pantalones", "href": "/ninos/ninas-indumentaria/pantalones" },
+            { "label": "Shorts", "href": "/ninos/ninas-indumentaria/shorts" },
+            { "label": "Ver todo", "href": "/ninos/ninas-indumentaria", "highlight": true }
+          ]
+        },
+        {
+          "title": "Accesorios",
+          "items": [
+            { "label": "Antiparras", "href": "/ninos/accesorios/antiparras" },
+            { "label": "Anteojos", "href": "/ninos/accesorios/anteojos" },
+            { "label": "Guantes", "href": "/ninos/accesorios/guantes" },
+            { "label": "Medias", "href": "/ninos/accesorios/medias" },
+            { "label": "Gorras", "href": "/ninos/accesorios/gorras" },
+            { "label": "Gorros", "href": "/ninos/accesorios/gorros" },
+            { "label": "Pilusos", "href": "/ninos/accesorios/pilusos" },
+            { "label": "Mochilas", "href": "/ninos/accesorios/mochilas" },
+            { "label": "Ver todo", "href": "/ninos/accesorios", "highlight": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marcas",
+      "label": "MARCAS",
+      "href": "/marcas",
+      "banner": "",
+      "columns": [
+        {
+          "title": "Marcas",
+          "items": [
+            { "label": "DC", "href": "/marcas/dc" },
+            { "label": "Roxy", "href": "/marcas/roxy" },
+            { "label": "Quiksilver", "href": "/marcas/quiksilver" },
+            { "label": "Montagne", "href": "/marcas/montagne" },
+            { "label": "RVCA", "href": "/marcas/rvca" },
+            { "label": "Grizzly", "href": "/marcas/grizzly" },
+            { "label": "Ansilta", "href": "/marcas/ansilta" },
+            { "label": "Columbia", "href": "/marcas/columbia" },
+            { "label": "Salomon", "href": "/marcas/salomon" },
+            { "label": "Burton", "href": "/marcas/burton" },
+            { "label": "Contigo", "href": "/marcas/contigo" },
+            { "label": "Ombak", "href": "/marcas/ombak" },
+            { "label": "Nexxt", "href": "/marcas/nexxt" },
+            { "label": "Waterdog", "href": "/marcas/waterdog" },
+            { "label": "Timberland", "href": "/marcas/timberland" },
+            { "label": "Ver todo", "href": "/marcas", "highlight": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "camping",
+      "label": "CAMPING",
+      "href": "/camping",
+      "banner": "/arquivos/banner-menu-desplegable-5.png",
+      "columns": [
+        {
+          "title": "Camping",
+          "items": [
+            { "label": "Carpas", "href": "/camping/carpas" },
+            { "label": "Bolsas de Dormir", "href": "/camping/bolsas-de-dormir" }
+          ]
+        },
+        {
+          "title": "Accesorios",
+          "items": [
+            { "label": "Mochilas", "href": "/camping/accesorios/mochilas" },
+            { "label": "Bastones", "href": "/camping/accesorios/bastones" },
+            { "label": "Botellas", "href": "/camping/accesorios/botellas" },
+            { "label": "Termos", "href": "/camping/accesorios/termos" },
+            { "label": "Anafes", "href": "/camping/accesorios/anafes" },
+            { "label": "Marmitas", "href": "/camping/accesorios/marmitas" },
+            { "label": "Sillas y Mesas", "href": "/camping/accesorios/sillas-y-mesas" },
+            { "label": "Lámparas y Linternas", "href": "/camping/accesorios/lamparas-y-linternas" },
+            { "label": "Colchonetas e Inflables", "href": "/camping/accesorios/colchonetas-e-inflables" },
+            { "label": "Toallas", "href": "/camping/accesorios/toallas" },
+            { "label": "Gazebos", "href": "/camping/accesorios/gazebos" },
+            { "label": "Ver todo", "href": "/camping/accesorios", "highlight": true }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "store.custom#menu-editor": {
+    "blocks": ["menu-editor"]
+  }
+}
