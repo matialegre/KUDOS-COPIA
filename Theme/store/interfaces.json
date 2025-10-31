@@ -50,6 +50,14 @@
 
     "menu-editor": {
         "component": "MenuEditor"
+    },
+
+    "brand-bar": {
+        "component": "BrandBar"
+    },
+
+    "benefits-bar": {
+        "component": "BenefitsBar"
     }
 
 }

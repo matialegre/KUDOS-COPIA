@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel del Menú - Mundo Outdoor</title>
+    <link rel="stylesheet" href="../react/components/MainHeader/MenuEditor.css">
+    <style>
+      body {
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      .loading,
+      .error {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 16px;
+        padding: 32px;
+        text-align: center;
+      }
+
+      .error {
+        color: #d32f2f;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      const { useEffect, useState } = React
+
+      const MenuEditor = () => {
+        const [data, setData] = useState(null)
+        const [activeTab, setActiveTab] = useState(null)
+        const [copySuccess, setCopySuccess] = useState(false)
+        const [error, setError] = useState('')
+        const [loading, setLoading] = useState(true)
+
+        useEffect(() => {
+          const fetchMenu = async () => {
+            try {
+              const response = await fetch('../react/components/MainHeader/menuData.json', {
+                cache: 'no-store'
+              })
+
+              if (!response.ok) {
+                throw new Error('No se pudo cargar menuData.json')
+              }
+
+              const json = await response.json()
+              setData(json)
+              setActiveTab(json.departments?.[0]?.id ?? null)
+            } catch (err) {
+              console.error(err)
+              setError(err.message)
+            } finally {
+              setLoading(false)
+            }
+          }
+
+          fetchMenu()
+        }, [])
+
+        const updateDepartment = (deptId, updater) => {
+          setData((prev) => ({
+            ...prev,
+            departments: prev.departments.map((dept) =>
+              dept.id === deptId ? updater(dept) : dept
+            )
+          }))
+        }
+
+        const handleDepartmentField = (deptId, field, value) => {
+          updateDepartment(deptId, (dept) => ({ ...dept, [field]: value }))
+        }
+
+        const handleColumnField = (deptId, colIdx, field, value) => {
+          updateDepartment(deptId, (dept) => ({
+            ...dept,
+            columns: dept.columns.map((col, idx) =>
+              idx === colIdx ? { ...col, [field]: value } : col
+            )
+          }))
+        }
+
+        const handleItemField = (deptId, colIdx, itemIdx, field, value) => {
+          updateDepartment(deptId, (dept) => ({
+            ...dept,
+            columns: dept.columns.map((col, idx) =>
+              idx === colIdx
+                ? {
+                    ...col,
+                    items: col.items.map((item, index) =>
+                      index === itemIdx ? { ...item, [field]: value } : item
+                    )
+                  }
+                : col
+            )
+          }))
+        }
+
+        const addColumn = (deptId) => {
+          updateDepartment(deptId, (dept) => ({
+            ...dept,
+            columns: [
+              ...dept.columns,
+              {
+                title: 'Nueva Columna',
+                items: [
+                  { label: 'Nuevo Item', href: `/${dept.id}/nueva-columna/nuevo-item` }
+                ]
+              }
+            ]
+          }))
+        }
+
+        const addItem = (deptId, colIdx) => {
+          updateDepartment(deptId, (dept) => ({
+            ...dept,
+            columns: dept.columns.map((col, idx) =>
+              idx === colIdx
+                ? {
+                    ...col,
+                    items: [
+                      ...col.items,
+                      { label: 'Nuevo Item', href: `/${dept.id}/columna/nuevo-item` }
+                    ]
+                  }
+                : col
+            )
+          }))
+        }
+
+        const deleteColumn = (deptId, colIdx) => {
+          updateDepartment(deptId, (dept) => ({
+            ...dept,
+            columns: dept.columns.filter((_, idx) => idx !== colIdx)
+          }))
+        }
+
+        const deleteItem = (deptId, colIdx, itemIdx) => {
+          updateDepartment(deptId, (dept) => ({
+            ...dept,
+            columns: dept.columns.map((col, idx) =>
+              idx === colIdx
+                ? {
+                    ...col,
+                    items: col.items.filter((_, index) => index !== itemIdx)
+                  }
+                : col
+            )
+          }))
+        }
+
+        const copyJson = async () => {
+          try {
+            await navigator.clipboard.writeText(JSON.stringify(data, null, 2))
+            setCopySuccess(true)
+            setTimeout(() => setCopySuccess(false), 2000)
+          } catch (err) {
+            console.error('No se pudo copiar al portapapeles', err)
+            alert('No se pudo copiar. Copiá manualmente el texto del modal.')
+          }
+        }
+
+        const downloadJson = () => {
+          const blob = new Blob([JSON.stringify(data, null, 2)], {
+            type: 'application/json'
+          })
+          const url = URL.createObjectURL(blob)
+          const a = document.createElement('a')
+          a.href = url
+          a.download = 'menuData.json'
+          a.click()
+          URL.revokeObjectURL(url)
+        }
+
+        if (loading) {
+          return <div className="loading">Cargando menú...</div>
+        }
+
+        if (error) {
+          return <div className="error">{error}</div>
+        }
+
+        if (!data) {
+          return <div className="error">No se encontraron datos del menú.</div>
+        }
+
+        const activeDept = data.departments.find((dept) => dept.id === activeTab)
+
+        return (
+          <div className="editorContainer">
+            <div className="header">
+              <h1>Panel de Menú - Mundo Outdoor</h1>
+              <div style={{ display: 'flex', gap: '12px' }}>
+                <button onClick={downloadJson} className="copyButton" style={{ backgroundColor: '#2D9CDB' }}>
+                  ⬇️ Descargar JSON
+                </button>
+                <button onClick={copyJson} className="copyButton">
+                  {copySuccess ? '✓ Copiado!' : '📋 Copiar JSON'}
+                </button>
+              </div>
+            </div>
+
+            <div className="tabs">
+              {data.departments.map((dept) => (
+                <button
+                  key={dept.id}
+                  onClick={() => setActiveTab(dept.id)}
+                  className={activeTab === dept.id ? 'tabActive' : 'tab'}
+                >
+                  {dept.label}
+                </button>
+              ))}
+            </div>
+
+            {activeDept ? (
+              <div className="content">
+                <div className="section">
+                  <h2>Configuración General</h2>
+                  <div className="field">
+                    <label>Etiqueta del menú:</label>
+                    <input
+                      type="text"
+                      value={activeDept.label}
+                      onChange={(e) => handleDepartmentField(activeDept.id, 'label', e.target.value)}
+                    />
+                  </div>
+                  <div className="field">
+                    <label>URL principal:</label>
+                    <input
+                      type="text"
+                      value={activeDept.href}
+                      onChange={(e) => handleDepartmentField(activeDept.id, 'href', e.target.value)}
+                    />
+                  </div>
+                  <div className="field">
+                    <label>Banner (URL de imagen):</label>
+                    <input
+                      type="text"
+                      value={activeDept.banner}
+                      onChange={(e) => handleDepartmentField(activeDept.id, 'banner', e.target.value)}
+                      placeholder="/arquivos/banner-menu-desplegable.png"
+                    />
+                  </div>
+                </div>
+
+                <div className="section">
+                  <div className="sectionHeader">
+                    <h2>Columnas del Dropdown</h2>
+                    <button onClick={() => addColumn(activeDept.id)} className="addButton">
+                      + Agregar Columna
+                    </button>
+                  </div>
+
+                  {activeDept.columns.map((column, colIdx) => (
+                    <div key={colIdx} className="column">
+                      <div className="columnHeader">
+                        <input
+                          type="text"
+                          value={column.title}
+                          onChange={(e) => handleColumnField(activeDept.id, colIdx, 'title', e.target.value)}
+                          className="columnTitle"
+                        />
+                        <button
+                          onClick={() => deleteColumn(activeDept.id, colIdx)}
+                          className="deleteButton"
+                        >
+                          🗑️ Eliminar Columna
+                        </button>
+                      </div>
+
+                      <div className="items">
+                        {column.items.map((item, itemIdx) => (
+                          <div key={itemIdx} className="item">
+                            <input
+                              type="text"
+                              value={item.label}
+                              onChange={(e) =>
+                                handleItemField(activeDept.id, colIdx, itemIdx, 'label', e.target.value)
+                              }
+                              placeholder="Etiqueta"
+                              className="itemLabel"
+                            />
+                            <input
+                              type="text"
+                              value={item.href}
+                              onChange={(e) =>
+                                handleItemField(activeDept.id, colIdx, itemIdx, 'href', e.target.value)
+                              }
+                              placeholder="/categoria/subcategoria"
+                              className="itemHref"
+                            />
+                            <label className="checkbox">
+                              <input
+                                type="checkbox"
+                                checked={item.highlight || false}
+                                onChange={(e) =>
+                                  handleItemField(activeDept.id, colIdx, itemIdx, 'highlight', e.target.checked)
+                                }
+                              />
+                              Destacado
+                            </label>
+                            <button
+                              onClick={() => deleteItem(activeDept.id, colIdx, itemIdx)}
+                              className="deleteItemButton"
+                            >
+                              ✕
+                            </button>
+                          </div>
+                        ))}
+                        <button
+                          onClick={() => addItem(activeDept.id, colIdx)}
+                          className="addItemButton"
+                        >
+                          + Agregar Item
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="instructions">
+                  <h3>📝 Instrucciones</h3>
+                  <ol>
+                    <li>Editá los campos y guardá cuando estés conforme.</li>
+                    <li>Hacé clic en "📋 Copiar JSON" o en "Descargar JSON".</li>
+                    <li>Abrí <code>Theme/react/components/MainHeader/menuData.json</code>.</li>
+                    <li>Reemplazá el contenido con el JSON actualizado.</li>
+                    <li>Guardá el archivo y refrescá la tienda con <strong>Ctrl+F5</strong>.</li>
+                  </ol>
+                  <p>
+                    <strong>Tip:</strong> si levantás un servidor local (ej: <code>npx http-server .</code>)
+                    podés compartir la URL <code>http://TU_IP_LAN:8080/menu-editor-panel/</code> con tu equipo.
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div className="error">No se encontró la pestaña seleccionada.</div>
+            )}
+          </div>
+        )
+      }
+
+      ReactDOM.render(<MenuEditor />, document.getElementById('root'))
+    </script>
+  </body>
+</html>

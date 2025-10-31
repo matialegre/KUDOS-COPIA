@@ -5,7 +5,9 @@
         "children": [
             "slider-layout#announcementBar",
             "flex-layout.row#utilityBar",
-            "main-header#desktop"
+            "main-header#desktop",
+            "brand-bar",
+            "benefits-bar"
         ]
 
     },
