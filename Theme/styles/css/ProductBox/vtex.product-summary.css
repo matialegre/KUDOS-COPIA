@@ -96,9 +96,10 @@
 .brandName{
     box-sizing: border-box;
     padding: 0px 5px;
-    font-family: 'GothamBook';
-    font-size: 14px;
-    line-height: 21px;
+    font-family: 'Gotham Bold', 'Gotham';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -126,10 +127,41 @@
     flex-direction: row-reverse;
     align-items: center;
     gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .price_installmentContainer{
-    display: none;
+    display: block;
+    order: 3;
+    width: 100%;
+    margin: 8px 0 0;
+    padding: 0;
+    text-align: center;
+}
+
+.price_installmentContainer :global(.vtex-product-price-1-x-priceInstallationContainer),
+.price_installmentContainer :global(.vtex-store-components-3-x-installmentContainer){
+    margin: 0;
+    padding: 0;
+}
+
+.price_installmentContainer :global(.vtex-product-price-1-x-installments),
+.price_installmentContainer :global(.vtex-store-components-3-x-installment),
+.price_installmentContainer :global(.vtex-product-price-1-x-separator),
+.price_installmentContainer :global(.vtex-product-price-1-x-installmentsValue),
+.price_installmentContainer :global(.vtex-product-price-1-x-installmentsNumber),
+.price_installmentContainer :global(.vtex-product-price-1-x-installmentsPrefix),
+.price_installmentContainer :global(.vtex-product-price-1-x-installmentsSuffix),
+.price_installmentContainer :global(.vtex-product-price-1-x-installmentsText),
+.price_installmentContainer :global(.vtex-store-components-3-x-currencyInteger),
+.price_installmentContainer :global(.vtex-store-components-3-x-currencyDecimal),
+.price_installmentContainer :global(.vtex-store-components-3-x-currencyFraction){
+    font-family: 'Gotham';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #1F9D55 !important;
 }
 
 .price_sellingPriceContainer{
@@ -144,6 +176,34 @@
 .price_sellingPriceContainer :global(.vtex-store-components-3-x-sellingPriceValue){
     margin: 0;
     padding: 0;
+}
+
+.price_sellingPriceContainer :global(.vtex-product-price-1-x-currencyContainer){
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    font-family: 'Gotham';
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 28px;
+    color: #131313;
+}
+
+.price_sellingPriceContainer :global(.vtex-product-price-1-x-currencyInteger),
+.price_sellingPriceContainer .currencyContainer{
+    font-family: 'Gotham';
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 28px;
+    color: #131313;
+}
+
+.price_sellingPriceContainer :global(.vtex-product-price-1-x-currencyDecimal),
+.price_sellingPriceContainer .currencyDecimal{
+    display: inline;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
 }
 
 .currencyContainer{
@@ -227,9 +287,9 @@
     display: flex;
     align-items: center;
     font-family: 'Gotham';
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 13px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
     color: #676F79;
     text-decoration-color: #676F79;
 }
