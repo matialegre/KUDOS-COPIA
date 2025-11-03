@@ -30,10 +30,12 @@
 
 :global(.vtex-flex-layout-0-x-flexRowContent--product-summary-container) {
   margin-top: 34px;
-  max-width: 1360px;
+  max-width: 1520px;
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .sliderLayoutContainer--product-summary-slider {
@@ -49,14 +51,18 @@
 }
 
 .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider {
-  height: 578px;
-  max-width: 1360px;
+  height: 600px;
+  width: 100%;
+  max-width: 1520px;
+  padding: 0 12px;
+  box-sizing: border-box;
   margin: 0 auto;
 }
 
 .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider .sliderTrack--product-summary-slider{
-  max-height: 521px;
-  height: 521px;
+  max-height: 540px;
+  height: 540px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -72,11 +78,13 @@
   overflow: unset;
   align-items: center;
   display: flex;
+  padding: 0 12px;
+  box-sizing: border-box;
 }
 .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-product-summary-2-x-containerNormal) :global(.vtex-product-summary-2-x-clearLink) {
-  min-width: 340px;
-  max-width: 340px;
-  width: 340px;
+  min-width: 360px;
+  max-width: 360px;
+  width: 360px;
   background: var(--color-white);
 }
 .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-product-summary-2-x-containerNormal) :global(.vtex-product-summary-2-x-clearLink) :global(.vtex-product-summary-2-x-element){

@@ -1,9 +1,11 @@
+
 .flexRow--tendencias-container{
     position: relative;
     z-index: 1;
     margin: 48px auto 0;
-    max-width: 1396px;
-    padding: 0;
+    max-width: 1540px;
+    width: 100%;
+    padding: 0 24px;
     box-sizing: border-box;
 }
 
@@ -12,6 +14,13 @@
     flex-direction: column;
     gap: 24px;
     align-items: center;
+    width: 100%;
+}
+
+.flexRowContent--tendencias-col :global(.vtex-rich-text-0-x-container--title-tendencias){
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -27,22 +36,27 @@
     transform: translateY(-4px);
 }
 
+
+
 .flexRowContent--tendencias-images-row{
     display: flex;
     justify-content: center;
-    gap: 38px;
+    gap: 40px;
     width: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
+
 .flexRowContent--tendencias-images-row .stretchChildrenWidth{
-    flex: 0 0 440px;
+    flex: 0 0 480px;
+    max-width: 480px;
     display: flex;
     justify-content: center;
 }
 
 .flexRowContent--tendencias-images-row .stretchChildrenWidth :global(.vtex-store-components-3-x-imageElement--tendencias-image){
-    max-width: 440px;
+    width: 100%;
+    max-width: 100%;
 }
 
 @media (max-width: 640px) {

@@ -20,7 +20,7 @@
         "props": {
             "blockClass": "tendencias-col",
             "preserveLayoutOnMobile": true,
-            "horizontalAlign": "left",
+            "horizontalAlign": "center",
             "colSizing": "auto"
         },
 
@@ -45,7 +45,7 @@
         "props": {
             "blockClass": "tendencias-images-row",
             "preserveLayoutOnMobile": true,
-            "horizontalAlign": "left",
+            "horizontalAlign": "center",
             "colSizing": "auto"
         },
 
