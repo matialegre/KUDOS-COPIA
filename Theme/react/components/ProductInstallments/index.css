@@ -1,0 +1,16 @@
+.productInstallmentsContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.productInstallmentsText{
+  font-family: 'Gotham', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #1F9D55;
+  text-align: center;
+}

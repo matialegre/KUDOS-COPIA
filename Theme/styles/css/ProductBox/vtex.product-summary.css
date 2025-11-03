@@ -132,36 +132,7 @@
 }
 
 .price_installmentContainer{
-    display: block;
-    order: 3;
-    width: 100%;
-    margin: 8px 0 0;
-    padding: 0;
-    text-align: center;
-}
-
-.price_installmentContainer :global(.vtex-product-price-1-x-priceInstallationContainer),
-.price_installmentContainer :global(.vtex-store-components-3-x-installmentContainer){
-    margin: 0;
-    padding: 0;
-}
-
-.price_installmentContainer :global(.vtex-product-price-1-x-installments),
-.price_installmentContainer :global(.vtex-store-components-3-x-installment),
-.price_installmentContainer :global(.vtex-product-price-1-x-separator),
-.price_installmentContainer :global(.vtex-product-price-1-x-installmentsValue),
-.price_installmentContainer :global(.vtex-product-price-1-x-installmentsNumber),
-.price_installmentContainer :global(.vtex-product-price-1-x-installmentsPrefix),
-.price_installmentContainer :global(.vtex-product-price-1-x-installmentsSuffix),
-.price_installmentContainer :global(.vtex-product-price-1-x-installmentsText),
-.price_installmentContainer :global(.vtex-store-components-3-x-currencyInteger),
-.price_installmentContainer :global(.vtex-store-components-3-x-currencyDecimal),
-.price_installmentContainer :global(.vtex-store-components-3-x-currencyFraction){
-    font-family: 'Gotham';
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
-    color: #1F9D55 !important;
+    display: none;
 }
 
 .price_sellingPriceContainer{
@@ -228,11 +199,12 @@
 .clearLink :global(.vtex-button){
     visibility: hidden;
     opacity: 0;
-    margin-left: -1px;
-    margin-bottom: -1px;
+    margin-left: 0;
+    margin-bottom: 0;
     position: absolute;
     bottom: 0;
-    width: 360px;
+    left: 0;
+    width: 100%;
     min-height: auto;
     max-height: 32px;
     height: 32px;

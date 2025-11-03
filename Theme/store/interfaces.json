@@ -62,6 +62,10 @@
 
     "benefits-bar": {
         "component": "BenefitsBar"
+    },
+
+    "product-installments": {
+        "component": "ProductInstallments"
     }
 
 }

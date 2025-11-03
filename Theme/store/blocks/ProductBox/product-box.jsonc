@@ -12,7 +12,8 @@
           "product-summary-brand",
           "product-summary-name",
           "product-rating-inline",
-          "product-summary-price",
+          "product-summary-price#custom",
+          "product-installments",
           // "rich-text#envio-gratis",
           "envio-gratis",
           "flex-layout.row#skuSelectorColorContainer",
@@ -114,6 +115,18 @@
       "AddToCartButton": "add-to-cart-button"
     }
 
+  },
+
+  "product-summary-price#custom": {
+    "props": {
+      "showListPrice": true,
+      "showLabels": false,
+      "showInstallments": false,
+      "showSavings": false,
+      "installmentsCriteria": "max-quantity-without-interest",
+      "installmentMessage": "{installmentsNumber} cuotas sin interés de {installmentsValue}",
+      "markers": ["discount"]
+    }
   }
 
 }

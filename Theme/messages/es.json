@@ -1,0 +1,4 @@
+{
+  "store/product-price.installment": "{installmentsNumber} cuotas sin interés",
+  "store/product-installments.custom-message": "{installmentsNumber} cuotas sin interés de {installmentValue}"
+}
