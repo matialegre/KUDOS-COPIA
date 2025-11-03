@@ -5,6 +5,7 @@
     "blocks": [
       "list-context.image-list#slider-banner-solo-imagenes",
       "flex-layout.row#infoSquareContainer",
+      "flex-layout.row#tendenciasContainer",
       "flex-layout.row#nuevosLanzamientos",
       "flex-layout.row#product-summary-container",
       "flex-layout.row#bannersColecciones",

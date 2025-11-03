@@ -1,0 +1,67 @@
+{
+
+    "flex-layout.row#section3b": {
+
+        "props": {
+            "blockClass": "section-3b",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "flex-layout.row#nuevaTemporadaGrande",
+            "flex-layout.row#product-summary-container-grande"
+        ]
+
+    },
+
+    "flex-layout.row#nuevaTemporadaGrande": {
+
+        "props": {
+            "blockClass": "nueva-temporada-grande",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [ "flex-layout.col#nuevaTemporadaGrandeCol" ]
+
+    },
+
+    "flex-layout.col#nuevaTemporadaGrandeCol": {
+
+        "props": {
+            "blockClass": "nueva-temporada-grande-col",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#title-nueva-temporada-grande",
+            "link#verTodoNuevaTemporadaGrande"
+        ]
+    
+    },
+
+    "rich-text#title-nueva-temporada-grande": {
+
+        "props": {
+            "blockClass": "title-product-slider",
+            "text": "NUEVA TEMPORADA"
+        }
+
+    },
+
+    "link#verTodoNuevaTemporadaGrande": {
+
+        "props": {
+            "blockClass": "ver-todo-product-slider",
+            "href": "/nueva-temporada",
+            "label": "Ver todos"
+        }
+
+    }
+
+}

@@ -10,8 +10,7 @@
         },
 
         "children": [
-            "image#imageItemSquare3",
-            "flex-layout.col#itemSquareContainerCol3"
+            "image#imageItemSquare3"
         ]
     
     },
@@ -20,41 +19,10 @@
 
         "props": {
             "blockClass": "image-item-square",
-            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M17.064 11V8C17.064 5.23858 14.8254 3 12.064 3C9.30254 3 7.06396 5.23858 7.06396 8V11M17.064 11H7.06396M17.064 11C18.7208 11 20.064 12.3431 20.064 14V18C20.064 19.6569 18.7208 21 17.064 21H7.06396C5.40711 21 4.06396 19.6569 4.06396 18V14C4.06396 12.3431 5.40711 11 7.06396 11' stroke='%232D5566' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
-        }
-
-    },
-
-    "flex-layout.col#itemSquareContainerCol3": {
-
-        "props": {
-            "blockClass": "item-square-container-col",
-            "preserveLayoutOnMobile": true,
-            "horizontalAlign": "left",
-            "colSizing": "auto"
-        },
-
-        "children": [
-            "rich-text#item-title-3",
-            "rich-text#item-text-3"
-        ]
-    
-    },
-
-    "rich-text#item-title-3":{
-
-        "props": {
-            "blockClass": "item-title",
-            "text": "COMPRÁ CON SEGURIDAD"
-        }
-
-    },
-
-    "rich-text#item-text-3":{
-
-        "props": {
-            "blockClass": "item-text",
-            "text": "Tus datos siempre protegidos"
+            "src": "/arquivos/benefit-card-6cuotas-fijas.png",
+            "link": {
+                "url": "/institucional/medios-de-pago"
+            }
         }
 
     }

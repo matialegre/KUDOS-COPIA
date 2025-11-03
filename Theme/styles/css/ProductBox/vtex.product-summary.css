@@ -1,7 +1,7 @@
 /* imagen product box home */
 .imageNormal{
-    width: 285px;
-    height: 285px;
+    width: 340px;
+    height: 340px;
     object-fit: cover;
 }
 
@@ -110,6 +110,7 @@
 @media (max-width: 640px) {
 
     .brandName{
+        font-size: 14px;
     }
 
 }
@@ -171,7 +172,7 @@
     margin-bottom: -1px;
     position: absolute;
     bottom: 0;
-    width: 285px;
+    width: 340px;
     min-height: auto;
     max-height: 32px;
     height: 32px;

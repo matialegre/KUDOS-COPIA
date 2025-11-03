@@ -1,0 +1,27 @@
+.sliderLayoutContainer--tendencias-slider{
+    margin: 0 auto;
+    max-width: 1360px;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.sliderLayoutContainer--tendencias-slider .sliderTrackContainer--tendencias-slider{
+    width: 100%;
+}
+
+.slide--tendencias-slider{
+    padding: 0 28px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+
+    .sliderLayoutContainer--tendencias-slider{
+        padding: 0 12px;
+    }
+
+    .slide--tendencias-slider{
+        padding: 0 12px;
+    }
+
+}

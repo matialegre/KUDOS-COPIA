@@ -1,0 +1,96 @@
+{
+
+    "flex-layout.row#tendenciasContainer": {
+
+        "props": {
+            "blockClass": "tendencias-container",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "flex-layout.col#tendenciasCol"
+        ]
+
+    },
+
+    "flex-layout.col#tendenciasCol": {
+
+        "props": {
+            "blockClass": "tendencias-col",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "rich-text#title-tendencias",
+            "flex-layout.row#tendenciasImagesRow"
+        ]
+    
+    },
+
+    "rich-text#title-tendencias": {
+
+        "props": {
+            "blockClass": "title-tendencias",
+            "text": "TENDENCIAS"
+        }
+
+    },
+
+    "flex-layout.row#tendenciasImagesRow": {
+
+        "props": {
+            "blockClass": "tendencias-images-row",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+
+        "children": [
+            "image#tendenciasDC",
+            "image#tendenciasRoxy",
+            "image#tendenciasSalomon"
+        ]
+
+    },
+
+    "image#tendenciasDC": {
+
+        "props": {
+            "blockClass": "tendencias-image",
+            "src": "/arquivos/tendencias-dc.jpg",
+            "link": {
+                "url": "/dc"
+            }
+        }
+
+    },
+
+    "image#tendenciasRoxy": {
+
+        "props": {
+            "blockClass": "tendencias-image",
+            "src": "/arquivos/imagne_web_roxy_comprimido.jpg",
+            "link": {
+                "url": "/roxy"
+            }
+        }
+
+    },
+
+    "image#tendenciasSalomon": {
+
+        "props": {
+            "blockClass": "tendencias-image",
+            "src": "/arquivos/tendencias-salomon.jpg",
+            "link": {
+                "url": "/salomon"
+            }
+        }
+
+    }
+
+}

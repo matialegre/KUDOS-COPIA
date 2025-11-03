@@ -10,23 +10,22 @@
 }
 
 .flexRowContent--info-square-container{
-    margin: auto;
+    margin: 0;
     margin-top: -14px;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1167px;
-    width: 1167px;
-    height: 91px;
-    border-radius: 15px;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 0;
+    max-width: 100%;
+    width: 100%;
     box-sizing: border-box;
-    border: 0.5px solid var(--color-gray-1);
-    background: var(--color-gray-2);
 }
 
 @media (max-width: 640px) {
 
     .flexRowContent--info-square-container{
         margin-top: 27px;
+        padding: 0;
+        gap: 8px;
         max-width: var(--max-width-content-mobile);
         width: var(--max-width-content-mobile);
         height: 33px;
@@ -51,16 +50,36 @@
 /* ICONOS  */
 
 .flexRowContent--item-square{
-    align-items: center;
-    gap: 16px;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    min-width: 0;
+    border-radius: 16px;
+    border: none;
+    background: #f5f5f5;
+    box-shadow: none;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    transform: scale(0.8);
+    transform-origin: center;
+}
+
+.flexRowContent--item-square:hover{
+    transform: scale(0.8) translateY(-4px);
 }
 
 .flexRowContent--item-square :global(.vtex-store-components-3-x-imageElement--image-item-square){
-    width: 32px;
-    height: 32px;
-    border-radius: 4px;
-    object-fit: none;
-    background: rgba(204, 213, 224, 0.50);
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+.flexRowContent--info-square-container .stretchChildrenWidth{
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
 }
 
 /* FIN ICONOS  */
@@ -68,39 +87,42 @@
 /* TITLES  */
 
 .flexRowContent--item-square :global(.vtex-rich-text-0-x-paragraph--item-title){
-    font-family: 'GothamBook';
-    font-size: 13px;
-    font-weight: bold;
+    font-family: 'Gotham Bold', 'Gotham', sans-serif;
+    font-size: 14px;
     line-height: 18px;
-    letter-spacing: 0.1px;
-    color: var(--post-header-color);
+    letter-spacing: 0.4px;
+    color: #1F2933;
     text-transform: uppercase;
 }
 
-.flexRowContent--item-square :global(.vtex-rich-text-0-x-paragraph--item-text){
-    font-family: 'GothamBook';
+.flexRowContent--item-square :global(.vtex-rich-text-0-x-paragraph--item-subtitle){
+    font-family: 'GothamBook', 'Gotham', sans-serif;
     font-size: 13px;
     line-height: 18px;
-    letter-spacing: 0.1px;
-    color: #595959;
+    color: #3D4A5A;
+    margin-top: 4px;
+}
+
+.flexRowContent--item-square :global(.vtex-rich-text-0-x-paragraph--item-link){
+    font-family: 'GothamBook', 'Gotham', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2563EB;
+    margin-top: 6px;
+    text-decoration: underline;
+}
+
+.flexRowContent--item-square :global(.vtex-rich-text-0-x-paragraph--item-link):hover{
+    text-decoration: none;
 }
 
 /* FIN TITLES  */
 
 /* GRADIENT  */
 
-.flexRowContent--info-square-container .stretchChildrenWidth:nth-child(0n+1):not(.flexRow--item-square .stretchChildrenWidth:nth-child(0n+1)){
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: -152px;
-    width: 100vw !important;
-    height: 166px;
-}
 
-.flexRow--gradient-slider{
-    background: linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, 0.73) 23.17%, rgba(255, 255, 255, 0.45) 53.4%, rgba(255, 255, 255, 0.00) 90.11%);
+.flexRowContent--info-square-container .stretchChildrenWidth:nth-child(0n+1):not(.flexRow--item-square .stretchChildrenWidth:nth-child(0n+1)){
+    display: none;
 }
 
 @media (max-width: 640px) {

@@ -10,51 +10,19 @@
         },
 
         "children": [
-            "image#imageItemSquare4",
-            "flex-layout.col#itemSquareContainerCol4"
+            "image#imageItemSquare4"
         ]
-    
+
     },
 
-    "image#imageItemSquare4":{
+    "image#imageItemSquare4": {
 
         "props": {
             "blockClass": "image-item-square",
-            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M19.135 4.92855L16.0641 4.9285M19.135 4.92855L19.135 7.99963M19.135 4.92855L14.8924 9.17121M18.5902 18.8451C15.5555 19.9606 11.4363 18.8209 8.34294 15.7275C5.24955 12.6342 4.10988 8.51495 5.2254 5.48027C5.72142 4.13091 7.42063 4.05902 8.52422 4.98037L9.44641 5.75026C10.2042 6.38289 10.2557 7.52943 9.55765 8.22744C9.06316 8.72194 8.9258 9.47152 9.25459 10.0887C9.71427 10.9516 10.4264 12.1542 11.1714 12.8991C11.9163 13.6441 13.1188 14.3562 13.9818 14.8159C14.599 15.1447 15.3486 15.0073 15.843 14.5128C16.5411 13.8148 17.6876 13.8663 18.3202 14.6241L19.0901 15.5463C20.0115 16.6499 19.9396 18.3491 18.5902 18.8451Z' stroke='%232D5566' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
-        }
-
-    },
-
-    "flex-layout.col#itemSquareContainerCol4": {
-
-        "props": {
-            "blockClass": "item-square-container-col",
-            "preserveLayoutOnMobile": true,
-            "horizontalAlign": "left",
-            "colSizing": "auto"
-        },
-
-        "children": [
-            "rich-text#item-title-4",
-            "rich-text#item-text-4"
-        ]
-    
-    },
-
-    "rich-text#item-title-4":{
-
-        "props": {
-            "blockClass": "item-title",
-            "text": "ATENCIÓN AL CLIENTE"
-        }
-
-    },
-
-    "rich-text#item-text-4":{
-
-        "props": {
-            "blockClass": "item-text",
-            "text": "2914147915"
+            "src": "/arquivos/benefit-card-envio-gratis.png",
+            "link": {
+                "url": "/institucional/envios"
+            }
         }
 
     }

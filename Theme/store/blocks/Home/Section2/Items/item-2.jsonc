@@ -10,8 +10,7 @@
         },
 
         "children": [
-            "image#imageItemSquare2",
-            "flex-layout.col#itemSquareContainerCol2"
+            "image#imageItemSquare2"
         ]
     
     },
@@ -20,41 +19,10 @@
 
         "props": {
             "blockClass": "image-item-square",
-            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M11.064 5.00015H6.06396C4.40711 5.00015 3.06396 6.34329 3.06396 8.00015V16.0001C3.06396 17.657 4.40711 19.0001 6.06397 19.0001H18.064C19.7208 19.0001 21.064 17.657 21.064 16.0001V13.0001M6.06396 16.0001H13.064M18.064 16.0001H16.064M14.064 3.52092L14.1858 6.51408C14.2549 8.21218 15.2178 9.74678 16.7169 10.5476C17.2462 10.8304 17.8817 10.8304 18.4111 10.5476C19.9101 9.74678 20.8731 8.21218 20.9422 6.51408L21.064 3.52092C21.064 3.52092 20.447 3.66994 19.664 3.37134C18.3109 2.85539 16.817 2.85539 15.464 3.37134C14.6809 3.66994 14.064 3.52092 14.064 3.52092Z' stroke='%232D5566' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
-        }
-
-    },
-
-    "flex-layout.col#itemSquareContainerCol2": {
-
-        "props": {
-            "blockClass": "item-square-container-col",
-            "preserveLayoutOnMobile": true,
-            "horizontalAlign": "left",
-            "colSizing": "auto"
-        },
-
-        "children": [
-            "rich-text#item-title-2",
-            "rich-text#item-text-2"
-        ]
-    
-    },
-
-    "rich-text#item-title-2":{
-
-        "props": {
-            "blockClass": "item-title",
-            "text": "PAGÁ COMO QUIERAS"
-        }
-
-    },
-
-    "rich-text#item-text-2":{
-
-        "props": {
-            "blockClass": "item-text",
-            "text": "Todas las tarjetas"
+            "src": "/arquivos/benefit-card-3cuotas.png",
+            "link": {
+                "url": "/institucional/medios-de-pago"
+            }
         }
 
     }

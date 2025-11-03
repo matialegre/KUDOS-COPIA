@@ -1,0 +1,103 @@
+{
+
+  "product-summary.shelf#product-box-grande": {
+
+      "props":{
+        "blockclass": "product-box-grande"
+      },
+  
+      "children": [
+          "flex-layout.row#sectionImageAndCucardasContainerGrande",
+          "product-summary-brand",
+          "product-summary-name",
+          "product-rating-inline",
+          "product-summary-price",
+          "envio-gratis",
+          "flex-layout.row#skuSelectorColorContainerGrande",
+          "select-sku-in-product-box-grande"
+      ]
+      
+  },
+
+  "flex-layout.row#sectionImageAndCucardasContainerGrande": {
+
+      "props": {
+          "blockClass": "section-image-and-cucardas-container-grande",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+      },
+
+      "children": [
+          "flex-layout.row#cucardasContainerGrande",
+          "flex-layout.row#skuSelectorTallesContainerGrande",
+          "product-summary-image#grande"
+      ]
+  
+  },
+
+  "flex-layout.row#cucardasContainerGrande": {
+
+      "props": {
+          "blockClass": "cucardas-container-grande",
+          "preserveLayoutOnMobile": true,
+          "horizontalAlign": "left",
+          "colSizing": "auto"
+      },
+
+      "children": [
+          "product-price-savings#grande"
+      ]
+  
+  },
+
+  "product-price-savings#grande": {
+
+    "props": {
+      "percentageStyle": "compact",
+      "message": "{savingsPercentage}"
+    }
+        
+  },
+
+  "product-summary-image#grande": {
+
+    "props": {
+      "showBadge": false
+    }
+
+  },
+
+  "flex-layout.row#skuSelectorTallesContainerGrande": {
+
+    "props": {
+      "blockClass": "sku-selector-talles-container-grande"
+    },
+
+    "children": [ 
+      
+    ]
+
+  },
+
+  "flex-layout.row#skuSelectorColorContainerGrande": {
+
+    "props": {
+      "blockClass": "sku-selector-color-container-grande"
+    },
+
+    "children": [ 
+      
+    ]
+
+  },
+
+  "select-sku-in-product-box-grande": {
+
+    "props": {
+      "AddToCartButton": "add-to-cart-button"
+    }
+
+  }
+
+}

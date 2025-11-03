@@ -1,0 +1,70 @@
+.flexRow--tendencias-container{
+    position: relative;
+    z-index: 1;
+    margin: 48px auto 0;
+    max-width: 1396px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flexRowContent--tendencias-col{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+
+.flexRowContent--tendencias-col :global(.vtex-store-components-3-x-imageElement--tendencias-image){
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.flexRowContent--tendencias-col :global(.vtex-store-components-3-x-imageElement--tendencias-image):hover{
+    transform: translateY(-4px);
+}
+
+.flexRowContent--tendencias-images-row{
+    display: flex;
+    justify-content: center;
+    gap: 38px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.flexRowContent--tendencias-images-row .stretchChildrenWidth{
+    flex: 0 0 440px;
+    display: flex;
+    justify-content: center;
+}
+
+.flexRowContent--tendencias-images-row .stretchChildrenWidth :global(.vtex-store-components-3-x-imageElement--tendencias-image){
+    max-width: 440px;
+}
+
+@media (max-width: 640px) {
+
+    .flexRow--tendencias-container{
+        margin: 32px auto 0;
+        padding: 0 12px;
+        max-width: 100%;
+    }
+
+    .flexRowContent--tendencias-col{
+        gap: 16px;
+    }
+
+    .flexRowContent--tendencias-images-row{
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .flexRowContent--tendencias-images-row .stretchChildrenWidth{
+        flex: 1 1 auto;
+        max-width: 100%;
+    }
+
+}

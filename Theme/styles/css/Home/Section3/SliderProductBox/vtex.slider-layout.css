@@ -13,22 +13,27 @@
 /*OPERACIONES MATEMATICAS*/
 /*FIN OPERACIONES MATEMATICAS*/
 :global(.vtex-flex-layout-0-x-flexRow--product-summary-container) {
-  margin: auto;
+  margin: 0 auto;
   overflow: hidden;
   display: flex;
   justify-content: center;
-  max-width: 1200px;
+  max-width: 100%;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :global(.vtex-flex-layout-0-x-flexRow--product-summary-container) :global(.vtex-store-components-3-x-container) {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 :global(.vtex-flex-layout-0-x-flexRowContent--product-summary-container) {
   margin-top: 34px;
-  max-width: 1214px;
-  width: 1214px;
+  max-width: 1360px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .sliderLayoutContainer--product-summary-slider {
@@ -45,11 +50,14 @@
 
 .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider {
   height: 578px;
+  max-width: 1360px;
+  margin: 0 auto;
 }
 
 .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider .sliderTrack--product-summary-slider{
   max-height: 521px;
   height: 521px;
+  margin: 0 auto;
 }
 
 @media (max-width: 640px) {
@@ -66,9 +74,9 @@
   display: flex;
 }
 .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-product-summary-2-x-containerNormal) :global(.vtex-product-summary-2-x-clearLink) {
-  min-width: 285px;
-  max-width: 285px;
-  width: 285px;
+  min-width: 340px;
+  max-width: 340px;
+  width: 340px;
   background: var(--color-white);
 }
 .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider :global(.vtex-product-summary-2-x-containerNormal) :global(.vtex-product-summary-2-x-clearLink) :global(.vtex-product-summary-2-x-element){
@@ -79,14 +87,15 @@
 
 @media (max-width: 640px) {
   :global(.vtex-flex-layout-0-x-flexRow--product-summary-container) {
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     max-width: 350px;
+    padding: 0 12px;
   }
   :global(.vtex-flex-layout-0-x-flexRowContent--product-summary-container) {
     max-width: 360px;
-    width: 360px;
+    width: 100%;
   }
   .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider {
     height: 418px;

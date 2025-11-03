@@ -1,20 +1,20 @@
-.flexRow--section-image-and-cucardas-container{
+.flexRow--section-image-and-cucardas-container-grande{
     position: relative;
 }
 
-.flexRowContent--section-image-and-cucardas-container{
-    max-height: 340px;
+.flexRowContent--section-image-and-cucardas-container-grande{
+    max-height: 450px;
 }
 
 @media (max-width: 640px) {
 
-    .flexRowContent--section-image-and-cucardas-container{
+    .flexRowContent--section-image-and-cucardas-container-grande{
         max-height: 170px;
     }
 
 }
 
-.flexRow--sku-selector-talles-container{
+.flexRow--sku-selector-talles-container-grande{
     z-index: 1;
     position: absolute;
     left: 0;
@@ -25,49 +25,49 @@
 
 @media (max-width: 640px) {
 
-    .flexRow--sku-selector-talles-container{
+    .flexRow--sku-selector-talles-container-grande{
         visibility: visible;
         opacity: 1;
     }
 
 }
 
-.flexRowContent--sku-selector-color-container{
+.flexRowContent--sku-selector-color-container-grande{
     margin-top: 14px;
 }
 
 @media (max-width: 640px) {
 
-    .flexRowContent--sku-selector-color-container{
+    .flexRowContent--sku-selector-color-container-grande{
         margin-top: 11px;
     }
 
 }
 
-/* CONTENEDOR DE CUCARDAS  */
-.flexRow--cucardas-container{
+/* CONTENEDOR DE CUCARDAS GRANDE */
+.flexRow--cucardas-container-grande{
     z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
-    height: 340px;
+    height: 450px;
 }
 
-.flexRowContent--cucardas-container{
+.flexRowContent--cucardas-container-grande{
     height: 100%;
 }
 
-.flexRowContent--cucardas-container .stretchChildrenWidth{
+.flexRowContent--cucardas-container-grande .stretchChildrenWidth{
     min-width: 100%;
     height: 100%;
 }
 
-.flexRowContent--cucardas-container :global(.vtex-product-price-1-x-savingsPercentage){
+.flexRowContent--cucardas-container-grande :global(.vtex-product-price-1-x-savingsPercentage){
     position: absolute;
     top: 0;
     left: 0;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     margin: 0;
     display: flex;
     align-items: center;
@@ -79,8 +79,7 @@
     letter-spacing: 0.3px;
     color: #FFFFFF;
     background: #FF2D55;
-    border-bottom-right-radius: 50px;
-    box-sizing: border-box;
+    border-bottom-right-radius: 80px;
     text-transform: uppercase;
 }
-/* FIN CONTENEDOR DE CUCARDAS  */
+/* FIN CONTENEDOR DE CUCARDAS GRANDE */

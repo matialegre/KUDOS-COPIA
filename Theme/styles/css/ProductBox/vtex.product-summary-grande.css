@@ -1,0 +1,70 @@
+/* imagen product box grande */
+.imageNormal--product-box-grande{
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+}
+
+@media (max-width: 640px) {
+
+    .imageNormal--product-box-grande{
+        width: 170px;
+        height: 170px;
+    }
+
+}
+/* fin imagen product box grande */
+
+.element--product-box-grande{
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid var(--border-gray);
+}
+
+.element--product-box-grande:hover{
+    box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+.element--product-box-grande:hover :global(.vtex-flex-layout-0-x-flexRow--sku-selector-talles-container-grande){
+    visibility: visible;
+    opacity: 1;
+}
+
+.clearLink--product-box-grande .element--product-box-grande{
+    position: relative;
+}
+
+.clearLink--product-box-grande :global(.vtex-button){
+    visibility: hidden;
+    opacity: 0;
+    margin-left: -1px;
+    margin-bottom: -1px;
+    position: absolute;
+    bottom: 0;
+    width: 450px;
+    min-height: auto;
+    max-height: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 0px;
+    background: #CD4F4F;
+}
+
+@media (max-width: 640px) {
+
+    .clearLink--product-box-grande :global(.vtex-button){
+        visibility: visible;
+        opacity: 1;
+        width: 170px;
+    }
+
+}
+
+.clearLink--product-box-grande :global(.vtex-button):hover{
+    background: #b54545;
+}
+
+.clearLink--product-box-grande :global(.vtex-button) :global(.vtex-button__label){
+    margin: 0 !important;
+    padding: 0 !important;
+}

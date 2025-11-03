@@ -1,0 +1,19 @@
+.paragraph--title-tendencias{
+    font-family: 'Gotham Black', 'Gotham Bold', 'Gotham', sans-serif;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    color: #131313;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 640px) {
+
+    .paragraph--title-tendencias{
+        font-size: 26px;
+    }
+
+}

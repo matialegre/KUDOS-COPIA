@@ -1,9 +1,6 @@
 @charset "UTF-8";
 /*alto del slider en desktop*/
 /*alto del slider en mobile*/
-.sliderLayoutContainer--slider-banner-solo-imagenes {
-  
-}
 .sliderLayoutContainer--slider-banner-solo-imagenes .sliderTrackContainer--slider-banner-solo-imagenes {
   height: 614px;
 }
@@ -32,7 +29,7 @@
 /*color del dot seleccionado*/
 .paginationDotsContainer--slider-banner-solo-imagenes {
   z-index: 2;
-  gap: 8px;
+  gap: 12px;
   margin-bottom: 42px;
 }
 
@@ -40,30 +37,32 @@
   border: 0;
   margin: 0;
   padding: 0;
-  width: 8px !important;
-  height: 8px !important;
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 50%;
   background: #96A3B6;
 }
 
 .paginationDot--slider-banner-solo-imagenes--isActive {
-  background: #EB5757;
+  background: #000000;
 }
 
 @media (max-width: 640px) {
   .paginationDotsContainer--slider-banner-solo-imagenes {
-    gap: 8px;
+    gap: 12px;
     margin-bottom: 7px;
   }
   .paginationDot--slider-banner-solo-imagenes {
     border: 0;
     margin: 0;
     padding: 0;
-    width: 8px !important;
-    height: 8px !important;
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
     background: #96A3B6;
   }
   .paginationDot--slider-banner-solo-imagenes--isActive {
-    background: #EB5757;
+    background: #000000;
   }
 }
 /*ancho del contenedor de los botones para pasar de imagen desktop*/
