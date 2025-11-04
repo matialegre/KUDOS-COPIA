@@ -78,6 +78,10 @@
 
     "brands-slider-custom": {
         "component": "BrandsSliderCustom"
+    },
+
+    "announcement-bar": {
+        "component": "AnnouncementBar"
     }
 
 }

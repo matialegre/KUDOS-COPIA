@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './index.css'
 
-const BrandsSliderCustom = () => {
-  const brands = [
+const BrandsSliderCustom = ({ title, linkText, linkUrl, brands: customBrands }) => {
+  const defaultBrands = [
     { name: 'Salomon', image: '/arquivos/salomon_mundooutdoor.jpg', href: '/marcas/salomon' },
     { name: 'Burton', image: '/arquivos/burton_mundooutdoor.jpg', href: '/marcas/burton' },
     { name: 'Timberland', image: '/arquivos/timberland_mundooutdoor.jpg', href: '/marcas/timberland' },
@@ -19,10 +19,12 @@ const BrandsSliderCustom = () => {
     { name: 'Sorel', image: '/arquivos/sorel_mundooutdoor.jpg', href: '/marcas/sorel' }
   ]
 
+  const brands = customBrands && customBrands.length > 0 ? customBrands : defaultBrands
+
   return (
     <div className={styles.brandsContainer}>
-      <h2 className={styles.brandsTitle}>NUESTRAS MARCAS</h2>
-      <a href="/marcas" className={styles.brandsLink}>Ver todos &gt;</a>
+      <h2 className={styles.brandsTitle}>{title || 'NUESTRAS MARCAS'}</h2>
+      <a href={linkUrl || "/marcas"} className={styles.brandsLink}>{linkText || 'Ver todos'} &gt;</a>
       <div className={styles.brandsSlider}>
         <div className={styles.brandsTrack}>
           {brands.map((brand, index) => (
@@ -47,6 +49,32 @@ const BrandsSliderCustom = () => {
       </div>
     </div>
   )
+}
+
+BrandsSliderCustom.schema = {
+  title: 'Brands Slider',
+  description: 'Slider horizontal de marcas con scroll automático',
+  type: 'object',
+  properties: {
+    title: {
+      title: 'Título',
+      description: 'Título del slider de marcas',
+      type: 'string',
+      default: 'NUESTRAS MARCAS'
+    },
+    linkText: {
+      title: 'Texto del Link',
+      description: 'Texto del link "Ver todos"',
+      type: 'string',
+      default: 'Ver todos'
+    },
+    linkUrl: {
+      title: 'URL del Link',
+      description: 'URL a donde redirige el link',
+      type: 'string',
+      default: '/marcas'
+    }
+  }
 }
 
 export default BrandsSliderCustom

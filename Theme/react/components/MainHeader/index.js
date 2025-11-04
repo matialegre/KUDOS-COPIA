@@ -161,4 +161,27 @@ MainHeader.defaultProps = {
   searchPlaceholder: 'Buscar',
 }
 
+MainHeader.schema = {
+  title: 'Main Header',
+  description: 'Header principal con menú y búsqueda',
+  type: 'object',
+  properties: {
+    logo: {
+      title: 'Logo URL',
+      description: 'URL del logo del sitio',
+      type: 'string',
+      default: 'https://mundooutdoorar.vteximg.com.br/arquivos/logo_izq_arriba.png',
+      widget: {
+        'ui:widget': 'image-uploader'
+      }
+    },
+    searchPlaceholder: {
+      title: 'Placeholder de Búsqueda',
+      description: 'Texto placeholder del buscador',
+      type: 'string',
+      default: 'Buscar'
+    }
+  }
+}
+
 export default MainHeader

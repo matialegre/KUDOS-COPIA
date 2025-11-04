@@ -4,8 +4,8 @@ import styles from './index.css'
 const DISPLAY_INTERVAL = 5000
 const IMAGE_SWAP_DELAY = 180
 
-const BenefitsBar = () => {
-  const benefits = [
+const BenefitsBar = ({ benefits: customBenefits }) => {
+  const defaultBenefits = [
     {
       id: 'pago-blanco',
       image: '/arquivos/pago_blanco_2.png',
@@ -14,6 +14,8 @@ const BenefitsBar = () => {
       theme: 'dark'
     }
   ]
+
+  const benefits = customBenefits && customBenefits.length > 0 ? customBenefits : defaultBenefits
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [displayIndex, setDisplayIndex] = useState(0)
@@ -130,6 +132,62 @@ const BenefitsBar = () => {
       </div>
     </div>
   )
+}
+
+BenefitsBar.schema = {
+  title: 'Benefits Bar',
+  description: 'Barra de beneficios rotativa con imágenes',
+  type: 'object',
+  properties: {
+    benefits: {
+      title: 'Beneficios',
+      description: 'Lista de beneficios a mostrar',
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          id: {
+            title: 'ID',
+            type: 'string'
+          },
+          image: {
+            title: 'Imagen',
+            description: 'Ruta de la imagen del beneficio',
+            type: 'string',
+            widget: {
+              'ui:widget': 'image-uploader'
+            }
+          },
+          alt: {
+            title: 'Texto Alternativo',
+            description: 'Descripción de la imagen',
+            type: 'string'
+          },
+          href: {
+            title: 'Link',
+            description: 'URL a donde redirige',
+            type: 'string'
+          },
+          theme: {
+            title: 'Tema',
+            description: 'Tema de fondo (dark o light)',
+            type: 'string',
+            enum: ['dark', 'light'],
+            default: 'dark'
+          }
+        }
+      },
+      default: [
+        {
+          id: 'pago-blanco',
+          image: '/arquivos/pago_blanco_2.png',
+          alt: 'Medios de pago - logos en blanco',
+          href: '/institucional/medios-de-pago',
+          theme: 'dark'
+        }
+      ]
+    }
+  }
 }
 
 export default BenefitsBar

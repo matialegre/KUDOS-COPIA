@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './index.css'
 
-const BrandBar = () => {
-  const brands = [
+const BrandBar = ({ brands: customBrands }) => {
+  const defaultBrands = [
     { name: 'DC', logo: '/arquivos/banner-menu-dc.png', href: '/marcas/dc' },
     { name: 'Roxy', logo: '/arquivos/banner-menu-roxy.png', href: '/marcas/roxy' },
     { name: 'Columbia', logo: '/arquivos/banner-menu-columbia.png', href: '/marcas/columbia' },
@@ -15,6 +15,8 @@ const BrandBar = () => {
     { name: 'Sorel', logo: '/arquivos/banner-menu-sorel.png', href: '/marcas/sorel' },
     { name: 'Ansilta', logo: '/arquivos/banner-menu-ansilta.png', href: '/marcas/ansilta' }
   ]
+
+  const brands = customBrands && customBrands.length > 0 ? customBrands : defaultBrands
 
   return (
     <div className={styles.brandBarContainer}>
@@ -36,6 +38,41 @@ const BrandBar = () => {
       </div>
     </div>
   )
+}
+
+BrandBar.schema = {
+  title: 'Brand Bar',
+  description: 'Barra horizontal de logos de marcas',
+  type: 'object',
+  properties: {
+    brands: {
+      title: 'Marcas',
+      description: 'Lista de marcas a mostrar',
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          name: {
+            title: 'Nombre',
+            type: 'string'
+          },
+          logo: {
+            title: 'Logo',
+            description: 'URL del logo de la marca',
+            type: 'string',
+            widget: {
+              'ui:widget': 'image-uploader'
+            }
+          },
+          href: {
+            title: 'Link',
+            description: 'URL de la marca',
+            type: 'string'
+          }
+        }
+      }
+    }
+  }
 }
 
 export default BrandBar

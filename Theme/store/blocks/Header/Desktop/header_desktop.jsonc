@@ -59,6 +59,7 @@
 
     "utility-bar-right#desktop": {
         "props": {
+            "blockClass": "desktop-utility-bar",
             "items": [
                 {
                     "id": "stores",
@@ -70,7 +71,7 @@
                 {
                     "id": "shipping",
                     "label": "Envíos",
-                    "href": "/envios",
+                    "href": "/institucional/envios",
                     "icon": "https://mundooutdoorar.vteximg.com.br/arquivos/icono_camion_negro.png",
                     "ariaLabel": "Información de envíos"
                 },
@@ -115,7 +116,6 @@
         }
     },
     "slider-layout#announcementBar": {
-
         "props": {
             "blockClass": "announcement-carousel",
             "itemsPerPage": {
@@ -128,31 +128,26 @@
                 "timeout": 4000,
                 "stopOnHover": true
             },
-            "showPaginationDots": "never",
-            "showNavigationArrows": "never"
+            "showPaginationDots": "never"
         },
-
         "children": [
             "rich-text#announcementMessageTruck",
             "rich-text#announcementMessagePromo"
         ]
-
     },
-    "rich-text#announcementMessageTruck": {
 
+    "rich-text#announcementMessageTruck": {
         "props": {
             "blockClass": "announcement-message-with-truck",
             "text": "ENVÍO GRATIS EN COMPRAS MAYORES A $150.000"
         }
-
     },
-    "rich-text#announcementMessagePromo": {
 
+    "rich-text#announcementMessagePromo": {
         "props": {
             "blockClass": "announcement-message",
             "text": "3 Y 6 CUOTAS SIN INTERÉS / HASTA 50% OFF EN PRODUCTOS SELECCIONADOS"
         }
-
     },
 
     "rich-text#menu": {

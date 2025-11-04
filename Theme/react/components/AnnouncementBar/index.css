@@ -1,0 +1,109 @@
+.announcementBar {
+  width: 100%;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 48px;
+}
+
+.announcementContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.announcementIcon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.announcementText {
+  font-family: 'Gotham', 'Inter', -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.announcementDots {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(1.2);
+}
+
+.dotActive {
+  background: #fff;
+  width: 8px;
+  height: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .announcementBar {
+    padding: 10px 16px;
+    min-height: 44px;
+  }
+
+  .announcementText {
+    font-size: 12px;
+  }
+
+  .announcementIcon {
+    font-size: 16px;
+  }
+
+  .announcementDots {
+    right: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .announcementBar {
+    padding: 8px 12px;
+    min-height: 40px;
+  }
+
+  .announcementText {
+    font-size: 11px;
+    letter-spacing: 0.3px;
+  }
+
+  .announcementIcon {
+    font-size: 14px;
+  }
+
+  .dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .dotActive {
+    width: 7px;
+    height: 7px;
+  }
+}
