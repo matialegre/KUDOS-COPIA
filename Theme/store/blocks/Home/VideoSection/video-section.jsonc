@@ -1,0 +1,22 @@
+{
+    "flex-layout.row#videoSection": {
+        "props": {
+            "blockClass": "video-section",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "center",
+            "colSizing": "stretch",
+            "fullWidth": true
+        },
+        "children": ["flex-layout.col#videoContainer"]
+    },
+
+    "flex-layout.col#videoContainer": {
+        "props": {
+            "blockClass": "video-container",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "center",
+            "colSizing": "stretch"
+        },
+        "children": ["video-hero-custom"]
+    }
+}

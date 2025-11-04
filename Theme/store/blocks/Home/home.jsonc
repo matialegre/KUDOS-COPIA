@@ -1,24 +1,18 @@
 {
-  
-  "store.home": { 
-
+  "store.home": {
     "blocks": [
       "list-context.image-list#slider-banner-solo-imagenes",
       "flex-layout.row#infoSquareContainer",
       "flex-layout.row#tendenciasContainer",
       "flex-layout.row#nuevosLanzamientos",
       "flex-layout.row#product-summary-container",
-      "flex-layout.row#bannersColecciones",
+      "category-hero-custom",
       "flex-layout.row#productosDestacados",
       "flex-layout.row#product-summary-container-destacados",
-      "flex-layout.row#otherBanners",
       "flex-layout.row#ofertas",
       "flex-layout.row#product-summary-container-ofertas",
-      "flex-layout.row#nuestrasMarcas",
-      "list-context.image-list#slider-marcas-solo-imagenes",
-      "flex-layout.row#newsletterContainer"
+      "brands-slider-custom",
+      "flex-layout.row#videoSection"
     ]
-
   }
-
 }

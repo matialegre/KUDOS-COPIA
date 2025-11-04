@@ -1,0 +1,32 @@
+/* CATEGORY LINKS */
+.link--category-link-women,
+.link--category-link-men,
+.link--category-link-kids {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.link--category-link-women:hover,
+.link--category-link-men:hover,
+.link--category-link-kids:hover {
+  opacity: 0.95;
+}
+
+.link--category-link-women:hover .imageElement--category-image-women,
+.link--category-link-men:hover .imageElement--category-image-men,
+.link--category-link-kids:hover .imageElement--category-image-kids {
+  transform: scale(1.03);
+}
+
+.link--category-link-women:hover .container--category-label-women,
+.link--category-link-men:hover .container--category-label-men,
+.link--category-link-kids:hover .container--category-label-kids {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 14px 28px;
+}

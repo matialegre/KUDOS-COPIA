@@ -1,0 +1,89 @@
+/* TEST BLOCKS TEXT */
+.container--test-content-left,
+.container--test-content-top,
+.container--test-content-bottom {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paragraph--test-content-left,
+.paragraph--test-content-top,
+.paragraph--test-content-bottom {
+  font-family: 'Gotham', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
+}
+
+/* CATEGORY LABELS */
+.container--category-label-women,
+.container--category-label-men,
+.container--category-label-kids {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 24px;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper--category-label-women,
+.wrapper--category-label-men,
+.wrapper--category-label-kids {
+  margin: 0;
+  padding: 0;
+}
+
+.paragraph--category-label-women,
+.paragraph--category-label-men,
+.paragraph--category-label-kids {
+  font-family: 'Gotham', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+  line-height: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container--category-label-women,
+  .container--category-label-men,
+  .container--category-label-kids {
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 20px;
+  }
+  
+  .paragraph--category-label-women,
+  .paragraph--category-label-men,
+  .paragraph--category-label-kids {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container--category-label-women,
+  .container--category-label-men,
+  .container--category-label-kids {
+    bottom: 10px;
+    left: 10px;
+    padding: 8px 16px;
+  }
+  
+  .paragraph--category-label-women,
+  .paragraph--category-label-men,
+  .paragraph--category-label-kids {
+    font-size: 16px;
+  }
+}

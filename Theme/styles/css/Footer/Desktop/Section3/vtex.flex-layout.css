@@ -79,8 +79,8 @@
 }
 
 .flexRowContent--section-3-footer .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-imageElement){
-    width: 82px;
-    height: 24px;
+    width: 60px;
+    height: auto;
 }
 /* FIN LOGO KUDOS  */
 

@@ -66,6 +66,18 @@
 
     "product-installments": {
         "component": "ProductInstallments"
+    },
+
+    "category-hero-custom": {
+        "component": "CategoryHeroCustom"
+    },
+
+    "video-hero-custom": {
+        "component": "VideoHeroCustom"
+    },
+
+    "brands-slider-custom": {
+        "component": "BrandsSliderCustom"
     }
 
 }
