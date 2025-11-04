@@ -34,7 +34,7 @@ const VideoHeroCustom = () => {
         <video
           ref={videoRef}
           className={styles.videoElement}
-          src="https://res.cloudinary.com/dqeivjlr9/video/upload/v1762269622/video_para_parte_final_2_syy8vi.mp4"
+          src="https://res.cloudinary.com/dqeivjlr9/video/upload/v1762279359/video_para_parte_final_3_vw1pl4.mp4"
           muted
           loop
           playsInline

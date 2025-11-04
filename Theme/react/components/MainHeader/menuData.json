@@ -185,7 +185,7 @@
       "id": "marcas",
       "label": "MARCAS",
       "href": "/marcas",
-      "banner": "",
+      "banner": "/arquivos/marcas_mundooutdoor.jpg",
       "columns": [
         {
           "title": "Marcas",
@@ -202,6 +202,7 @@
             { "label": "Burton", "href": "/marcas/burton" },
             { "label": "Contigo", "href": "/marcas/contigo" },
             { "label": "Ombak", "href": "/marcas/ombak" },
+            { "label": "Öus", "href": "/marcas/ous" },
             { "label": "Nexxt", "href": "/marcas/nexxt" },
             { "label": "Waterdog", "href": "/marcas/waterdog" },
             { "label": "Timberland", "href": "/marcas/timberland" },

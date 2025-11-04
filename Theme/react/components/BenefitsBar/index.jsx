@@ -8,17 +8,10 @@ const BenefitsBar = () => {
   const benefits = [
     {
       id: 'pago-blanco',
-      image: '/arquivos/pago_blanco.png',
+      image: '/arquivos/pago_blanco_2.png',
       alt: 'Medios de pago - logos en blanco',
       href: '/institucional/medios-de-pago',
       theme: 'dark'
-    },
-    {
-      id: 'pago-negro',
-      image: '/arquivos/pago_negro.png',
-      alt: 'Medios de pago - logos en negro',
-      href: '/institucional/medios-de-pago',
-      theme: 'light'
     }
   ]
 

@@ -19,9 +19,9 @@
 
         "props": {
             "blockClass": "image-item-square",
-            "src": "/arquivos/benefit-card-envio-gratis.png",
+            "src": "/arquivos/promonaranja2.png",
             "link": {
-                "url": "/institucional/envios"
+                "url": "/institucional/medios-de-pago"
             }
         }
 

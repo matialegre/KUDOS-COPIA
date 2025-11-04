@@ -3,20 +3,20 @@ import styles from './index.css'
 
 const BrandsSliderCustom = () => {
   const brands = [
-    { name: 'Salomon', image: '/arquivos/salomon_mundooutdoor.jpg' },
-    { name: 'Burton', image: '/arquivos/burton_mundooutdoor.jpg' },
-    { name: 'Timberland', image: '/arquivos/timberland_mundooutdoor.jpg' },
-    { name: 'Roxy', image: '/arquivos/roxy_mundooutdoor.jpg' },
-    { name: 'DC', image: '/arquivos/dc_mundooutdoor.jpg' },
-    { name: 'Volcom', image: '/arquivos/volcom_mundooutdoor.jpg' },
-    { name: 'Montagne', image: '/arquivos/montagne_mundooutdoor.jpg' },
-    { name: 'Columbia', image: '/arquivos/columbia_mundooutdoor.jpg' },
-    { name: 'Ous', image: '/arquivos/ous_mundooutdoor.jpg' },
-    { name: 'RVCA', image: '/arquivos/rvca_mundooutdoor.jpg' },
-    { name: 'Quiksilver', image: '/arquivos/quiksilver_mundooutdoor.jpg' },
-    { name: 'Ansilta', image: '/arquivos/ansilta_mundooutdoor.jpg' },
-    { name: 'Ombak', image: '/arquivos/ombak_mundooutdoor.jpg' },
-    { name: 'Sorel', image: '/arquivos/sorel_mundooutdoor.jpg' }
+    { name: 'Salomon', image: '/arquivos/salomon_mundooutdoor.jpg', href: '/marcas/salomon' },
+    { name: 'Burton', image: '/arquivos/burton_mundooutdoor.jpg', href: '/marcas/burton' },
+    { name: 'Timberland', image: '/arquivos/timberland_mundooutdoor.jpg', href: '/marcas/timberland' },
+    { name: 'Roxy', image: '/arquivos/roxy_mundooutdoor.jpg', href: '/marcas/roxy' },
+    { name: 'DC', image: '/arquivos/dc_mundooutdoor.jpg', href: '/marcas/dc' },
+    { name: 'Volcom', image: '/arquivos/volcom_mundooutdoor.jpg', href: '/marcas/volcom' },
+    { name: 'Montagne', image: '/arquivos/montagne_mundooutdoor.jpg', href: '/marcas/montagne' },
+    { name: 'Columbia', image: '/arquivos/columbia_mundooutdoor.jpg', href: '/marcas/columbia' },
+    { name: 'Öus', image: '/arquivos/ous_mundooutdoor.jpg', href: '/marcas/ous' },
+    { name: 'RVCA', image: '/arquivos/rvca_mundooutdoor.jpg', href: '/marcas/rvca' },
+    { name: 'Quiksilver', image: '/arquivos/quiksilver_mundooutdoor.jpg', href: '/marcas/quiksilver' },
+    { name: 'Ansilta', image: '/arquivos/ansilta_mundooutdoor.jpg', href: '/marcas/ansilta' },
+    { name: 'Ombak', image: '/arquivos/ombak_mundooutdoor.jpg', href: '/marcas/ombak' },
+    { name: 'Sorel', image: '/arquivos/sorel_mundooutdoor.jpg', href: '/marcas/sorel' }
   ]
 
   return (
@@ -26,13 +26,18 @@ const BrandsSliderCustom = () => {
       <div className={styles.brandsSlider}>
         <div className={styles.brandsTrack}>
           {brands.map((brand, index) => (
-            <div key={index} className={styles.brandItem}>
-              <img 
-                src={brand.image} 
+            <a
+              key={index}
+              className={styles.brandItem}
+              href={brand.href}
+              aria-label={`Ver productos de ${brand.name}`}
+            >
+              <img
+                src={brand.image}
                 alt={brand.name}
                 className={styles.brandImage}
               />
-            </div>
+            </a>
           ))}
         </div>
       </div>

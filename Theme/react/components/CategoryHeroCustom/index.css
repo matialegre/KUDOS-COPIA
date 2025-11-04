@@ -58,19 +58,30 @@
 @media (max-width: 768px) {
   .heroContainer {
     grid-template-columns: 1fr;
-    grid-template-rows: 300px 300px;
     gap: 8px;
+    width: 100%;
+    padding: 0 16px;
   }
   
   .heroLeft {
-    height: 300px;
+    width: 100%;
+    height: 400px;
   }
   
   .heroRight {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    row-gap: 0;
+    width: 100%;
+    grid-template-rows: 200px 200px;
+    row-gap: 8px;
+  }
+
+  .heroRightTop {
+    width: 100%;
+    height: 200px;
+  }
+
+  .heroRightBottomRow {
+    width: 100%;
+    height: 200px;
     column-gap: 8px;
-    height: 300px;
   }
 }

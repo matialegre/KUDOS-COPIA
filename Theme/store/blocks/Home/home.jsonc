@@ -9,8 +9,6 @@
       "category-hero-custom",
       "flex-layout.row#productosDestacados",
       "flex-layout.row#product-summary-container-destacados",
-      "flex-layout.row#ofertas",
-      "flex-layout.row#product-summary-container-ofertas",
       "brands-slider-custom",
       "flex-layout.row#videoSection"
     ]
