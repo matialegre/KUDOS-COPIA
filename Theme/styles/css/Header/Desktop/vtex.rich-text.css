@@ -9,12 +9,15 @@
     text-align: center;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    line-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .paragraph--announcement-message-with-truck {
     margin: 0;
-    padding: 0 0 0 80px;
+    padding: 0 0 0 88px;
     font-family: 'Gotham', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 14px;
     font-weight: 700 !important;
@@ -22,11 +25,14 @@
     text-align: center;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    line-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     background-image: url('https://mundooutdoorar.vteximg.com.br/arquivos/icono_camion_blanco.png');
     background-repeat: no-repeat;
-    background-position: 18px center;
-    background-size: 59px 33px;
+    background-position: 20px center;
+    background-size: 60px 34px;
 }
 
 .paragraph--aqui-menu{
@@ -68,16 +74,24 @@
     }
 
     .paragraph--announcement-message {
-        font-size: 12px;
-        padding: 0;
+        font-size: 11px;
+        padding: 0 14px;
         font-weight: 700 !important;
         color: #FFFFFF !important;
+        line-height: 1.25;
+        letter-spacing: 0.3px;
     }
 
     .paragraph--announcement-message-with-truck {
-        font-size: 12px;
-        padding: 0 0 0 52px;
-        background-size: 48px 26px;
+        font-size: 10px;
+        padding: 0 12px 0 56px;
+        min-height: 28px;
+        display: flex;
+        align-items: center;
+        background-size: 38px auto;
+        background-position: 12px center;
+        line-height: 1.3;
+        letter-spacing: 0.3px;
     }
 
 }

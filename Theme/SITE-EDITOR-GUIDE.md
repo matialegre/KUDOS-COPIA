@@ -47,29 +47,22 @@ Todos estos componentes custom pueden editarse desde el **Site Editor de VTEX** 
 
 ### Dimensiones exactas:
 - **Total:** 1492px × 660px
-- **Newsletter (izquierda):** 530px × 660px
-- **Video (derecha):** 962px × 660px
+- **Imagen izquierda:** 530px × 660px
+- **Video derecha:** 962px × 660px
 
 ### Campos editables:
+- **Imagen Izquierda**: Imagen para el lado izquierdo (530px de ancho)
 - **URL del Video**: Link completo del video (962px de ancho)
-- **Logo**: Imagen del logo (opcional)
-- **Título**: Título principal del newsletter
-- **Subtítulo**: Texto sobre el input de email
-- **Placeholder del Input**: Texto placeholder del campo
-- **Texto del Botón**: Texto del botón de suscripción
 
 ### Valores por defecto:
+- Imagen: `suscribitenegro.jpg` (530×660px)
 - Video: `video_para_parte_final_5_zassmm.mp4` (962×660px)
-- Título: "Entérate de todas las novedades y ofertas"
-- Subtítulo: "Ingresa tu e-mail"
-- Botón: "SUSCRIBITE"
 
 ### Características:
-✅ **Formulario funcional** de newsletter  
-✅ **Validación de email** en tiempo real  
-✅ **Estados de carga** y mensajes de feedback  
+✅ **Layout 2 columnas** pegadas (imagen + video)  
 ✅ **100% responsive** (desktop, tablet, mobile)  
 ✅ **Autoplay** del video al hacer scroll  
+✅ **Image uploader** para cambiar la imagen fácilmente  
 
 ---
 

@@ -85,6 +85,15 @@
   display: none;
 }
 
+.sliderLayoutContainer--slider-banner-solo-imagenes .paginationDotsContainer {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
 .sliderLayoutContainer--slider-banner-solo-imagenes .sliderArrows {
   width: 35px;
   height: 90px;

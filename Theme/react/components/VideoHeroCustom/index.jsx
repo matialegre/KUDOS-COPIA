@@ -5,9 +5,6 @@ import styles from './index.css'
 const VideoHeroCustom = ({ 
   videoUrl, 
   leftImage,
-  logoImage,
-  title,
-  subtitle,
   inputPlaceholder,
   buttonText
 }) => {
@@ -16,6 +13,30 @@ const VideoHeroCustom = ({
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [message, setMessage] = useState('')
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    
+    if (!email || !email.includes('@')) {
+      setMessage('Por favor ingresá un email válido')
+      return
+    }
+
+    setIsSubmitting(true)
+    setMessage('')
+
+    try {
+      // Aquí se integraría con el sistema de newsletter de VTEX
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      
+      setMessage('¡Gracias por suscribirte!')
+      setEmail('')
+    } catch (error) {
+      setMessage('Hubo un error. Intentá de nuevo.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -40,75 +61,40 @@ const VideoHeroCustom = ({
     }
   }, [])
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    
-    if (!email || !email.includes('@')) {
-      setMessage('Por favor ingresá un email válido')
-      return
-    }
-
-    setIsSubmitting(true)
-    setMessage('')
-
-    try {
-      // Aquí se integraría con el sistema de newsletter de VTEX
-      // Por ahora simulamos el envío
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      setMessage('¡Gracias por suscribirte!')
-      setEmail('')
-    } catch (error) {
-      setMessage('Hubo un error. Intentá de nuevo.')
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-
   return (
     <div className={styles.videoHeroContainer} ref={containerRef}>
       <div className={styles.videoHeroContent}>
-        {/* Columna izquierda - Newsletter */}
-        <div className={styles.newsletterColumn}>
-          <div className={styles.newsletterContent}>
-            {logoImage && (
-              <img 
-                src={logoImage} 
-                alt="Logo" 
-                className={styles.newsletterLogo}
-              />
-            )}
-            
-            <h2 className={styles.newsletterTitle}>
-              {title || "Entérate de todas las novedades y ofertas"}
-            </h2>
-            
+        {/* Columna izquierda - Imagen con formulario */}
+        <div className={styles.imageColumn}>
+          <img 
+            src={leftImage || "https://mundooutdoorar.vteximg.com.br/arquivos/suscribitenegro.jpg"} 
+            alt="Suscribite" 
+            className={styles.leftImage}
+          />
+          
+          {/* Formulario overlay */}
+          <div className={styles.formOverlay}>
             <form onSubmit={handleSubmit} className={styles.newsletterForm}>
-              <label htmlFor="newsletter-email" className={styles.newsletterLabel}>
-                {subtitle || "Ingresa tu e-mail"}
-              </label>
-              
               <input
-                id="newsletter-email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={inputPlaceholder || "tu@email.com"}
-                className={styles.newsletterInput}
+                className={styles.emailInput}
                 disabled={isSubmitting}
                 required
               />
               
               <button 
                 type="submit" 
-                className={styles.newsletterButton}
+                className={styles.submitButton}
                 disabled={isSubmitting}
               >
                 {isSubmitting ? 'ENVIANDO...' : (buttonText || 'SUSCRIBITE')}
               </button>
               
               {message && (
-                <p className={styles.newsletterMessage}>{message}</p>
+                <p className={styles.formMessage}>{message}</p>
               )}
             </form>
           </div>
@@ -132,34 +118,23 @@ const VideoHeroCustom = ({
 
 VideoHeroCustom.schema = {
   title: 'Video Hero con Newsletter',
-  description: 'Hero con formulario de newsletter a la izquierda y video a la derecha',
+  description: 'Hero con imagen y formulario a la izquierda, video a la derecha',
   type: 'object',
   properties: {
+    leftImage: {
+      title: 'Imagen Izquierda',
+      description: 'Imagen para el lado izquierdo (530px de ancho)',
+      type: 'string',
+      widget: {
+        'ui:widget': 'image-uploader'
+      },
+      default: 'https://mundooutdoorar.vteximg.com.br/arquivos/suscribitenegro.jpg'
+    },
     videoUrl: {
       title: 'URL del Video',
       description: 'URL completa del video (962px de ancho)',
       type: 'string',
       default: 'https://res.cloudinary.com/dqeivjlr9/video/upload/v1762285025/video_para_parte_final_5_zassmm.mp4'
-    },
-    logoImage: {
-      title: 'Logo',
-      description: 'URL del logo (opcional)',
-      type: 'string',
-      widget: {
-        'ui:widget': 'image-uploader'
-      }
-    },
-    title: {
-      title: 'Título',
-      description: 'Título principal del newsletter',
-      type: 'string',
-      default: 'Entérate de todas las novedades y ofertas'
-    },
-    subtitle: {
-      title: 'Subtítulo',
-      description: 'Texto sobre el input de email',
-      type: 'string',
-      default: 'Ingresa tu e-mail'
     },
     inputPlaceholder: {
       title: 'Placeholder del Input',

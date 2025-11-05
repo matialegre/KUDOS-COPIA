@@ -72,8 +72,7 @@
     }
 
     .flexRowContent--tendencias-images-row{
-        flex-direction: column;
-        gap: 16px;
+        display: none;
     }
 
     .flexRowContent--tendencias-images-row .stretchChildrenWidth{

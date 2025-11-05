@@ -2,7 +2,8 @@
 .imageNormal{
     width: 360px;
     height: 360px;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
 }
 
 @media (max-width: 640px) {
@@ -10,6 +11,8 @@
     .imageNormal{
         width: 170px;
         height: 170px;
+        object-fit: contain;
+        object-position: center;
     }
 
 }
@@ -19,6 +22,8 @@
 :global(.vtex-search-result-3-x-searchResultContainer) .imageNormal{
     width: 235px;
     height: 235px;
+    object-fit: contain;
+    object-position: center;
 }
 
 @media (max-width: 640px) {
@@ -26,6 +31,8 @@
     :global(.vtex-search-result-3-x-searchResultContainer) .imageNormal{
         width: 170px;
         height: 170px;
+        object-fit: contain;
+        object-position: center;
     }
 
 }

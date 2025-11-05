@@ -83,5 +83,15 @@
     box-sizing: border-box;
     text-transform: uppercase;
     padding: 12px 0 0 4px;
+    z-index: 2;
+}
+
+@media (max-width: 640px) {
+    .flexRowContent--cucardas-container :global(.vtex-product-price-1-x-savingsPercentage){
+        width: 38px;
+        height: 38px;
+        font-size: 12px;
+        padding: 8px 0 0 3px;
+    }
 }
 /* FIN CONTENEDOR DE CUCARDAS  */

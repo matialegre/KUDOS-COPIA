@@ -14,3 +14,15 @@
   color: #1F9D55;
   text-align: center;
 }
+
+@media (max-width: 640px) {
+  .productInstallmentsContainer{
+    margin-top: 6px;
+    margin-bottom: 48px;
+  }
+
+  .productInstallmentsText{
+    font-size: 11px;
+    line-height: 14px;
+  }
+}

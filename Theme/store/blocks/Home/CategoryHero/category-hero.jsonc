@@ -1,1 +1,15 @@
-{}
+{
+  "category-hero-custom": {
+    "props": {
+      "mujerImage": "/arquivos/mujer_reducida2.jpg",
+      "mujerLink": "/mujer",
+      "hombreImage": "/arquivos/hombre_reducida.jpg",
+      "hombreLink": "/hombre",
+      "ninosImage": "/arquivos/nino_reducida.jpg",
+      "ninosLink": "/ninos",
+      "mujerImageMobile": "/arquivos/mujerseccionmobil.jpg",
+      "hombreImageMobile": "/arquivos/seccionhombremobil.jpg",
+      "ninosImageMobile": "/arquivos/seccionninomobil.jpg"
+    }
+  }
+}

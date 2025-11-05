@@ -1,33 +1,47 @@
 {
-
     "flex-layout.row#infoSquareContainer": {
-
         "props": {
             "blockClass": "info-square-container",
-            "preserveLayoutOnMobile": true,
+            "preserveLayoutOnMobile": false,
             "horizontalAlign": "left",
             "colSizing": "auto"
         },
-
         "children": [
             "flex-layout.row#gradientSlider",
-            "flex-layout.row#itemSquare1",
-            "flex-layout.row#itemSquare2",
-            "flex-layout.row#itemSquare3",
-            "flex-layout.row#itemSquare4"
+            "slider-layout#infoSquareSlider"
         ]
-    
     },
 
     "flex-layout.row#gradientSlider": {
-
         "props": {
             "blockClass": "gradient-slider",
             "preserveLayoutOnMobile": true,
             "horizontalAlign": "left",
             "colSizing": "auto"
         }
-    
-    }
+    },
 
+    "slider-layout#infoSquareSlider": {
+        "props": {
+            "blockClass": "info-square-slider",
+            "itemsPerPage": {
+                "desktop": 4,
+                "tablet": 2,
+                "phone": 1
+            },
+            "infinite": true,
+            "autoplay": {
+                "timeout": 4000,
+                "stopOnHover": true
+            },
+            "showNavigationArrows": "never",
+            "showPaginationDots": "never"
+        },
+        "children": [
+            "flex-layout.row#itemSquare1",
+            "flex-layout.row#itemSquare2",
+            "flex-layout.row#itemSquare3",
+            "flex-layout.row#itemSquare4"
+        ]
+    }
 }

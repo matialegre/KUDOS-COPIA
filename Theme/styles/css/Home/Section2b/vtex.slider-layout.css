@@ -25,3 +25,82 @@
     }
 
 }
+
+/* Mobile Tendencias Slider */
+.sliderLayoutContainer--tendencias-mobile-slider {
+    display: none;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0;
+}
+
+.sliderLayoutContainer--tendencias-mobile-slider :global(.vtex-store-components-3-x-imageElement--tendencias-mobile-image) {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.sliderLayoutContainer--tendencias-mobile-slider .paginationDotsContainer {
+    margin-top: 16px;
+    gap: 8px;
+}
+
+.sliderLayoutContainer--tendencias-mobile-slider .paginationDot {
+    width: 8px !important;
+    height: 8px !important;
+    background: #BDC9D6;
+    border-radius: 50%;
+}
+
+.sliderLayoutContainer--tendencias-mobile-slider .paginationDot--isActive {
+    background: #EB5757;
+}
+
+@media (max-width: 640px) {
+    .sliderLayoutContainer--tendencias-mobile-slider {
+        display: block;
+    }
+
+    .sliderLayoutContainer--tendencias-mobile-slider .sliderArrows {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .sliderLayoutContainer--tendencias-mobile-slider .sliderLeftArrow,
+    .sliderLayoutContainer--tendencias-mobile-slider .sliderRightArrow {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: auto;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        margin: 0 8px;
+    }
+
+    .sliderLayoutContainer--tendencias-mobile-slider .sliderRightArrow {
+        margin-left: auto; /* Ajustá este margen para mover el botón derecho */
+    }
+
+    .sliderLayoutContainer--tendencias-mobile-slider .sliderLeftArrow:hover,
+    .sliderLayoutContainer--tendencias-mobile-slider .sliderRightArrow:hover {
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .sliderLayoutContainer--tendencias-mobile-slider .caretIcon {
+        width: 16px;
+        height: 16px;
+        fill: #000000;
+    }
+}

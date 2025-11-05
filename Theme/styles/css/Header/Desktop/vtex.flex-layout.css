@@ -73,3 +73,14 @@
     /* FIN LOGO */
 
 /* FIN HEADER BOTTOM */
+
+/* UTILITY BAR */
+.flexRow--utilityBar {
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+.flexRowContent--utilityBar {
+    background-color: #FFFFFF;
+}
+/* FIN UTILITY BAR */

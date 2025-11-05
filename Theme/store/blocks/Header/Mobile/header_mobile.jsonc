@@ -1,9 +1,17 @@
 {
-
     "header-layout.mobile": {
+        "children": [
+            "sticky-layout#header-sticky-mobile"
+        ]
+    },
 
-        "children": ["main-header#desktop"]
-
+    "sticky-layout#header-sticky-mobile": {
+        "props": {
+            "blockClass": "sticky-header-mobile"
+        },
+        "children": [
+            "slider-layout#announcementBar",
+            "main-header#desktop"
+        ]
     }
-
 }

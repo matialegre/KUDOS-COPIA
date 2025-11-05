@@ -188,7 +188,7 @@
       "banner": "/arquivos/marcas_mundooutdoor.jpg",
       "columns": [
         {
-          "title": "Marcas",
+          "title": "Marcas A - L",
           "items": [
             { "label": "DC", "href": "/marcas/dc" },
             { "label": "Roxy", "href": "/marcas/roxy" },
@@ -197,7 +197,12 @@
             { "label": "RVCA", "href": "/marcas/rvca" },
             { "label": "Grizzly", "href": "/marcas/grizzly" },
             { "label": "Ansilta", "href": "/marcas/ansilta" },
-            { "label": "Columbia", "href": "/marcas/columbia" },
+            { "label": "Columbia", "href": "/marcas/columbia" }
+          ]
+        },
+        {
+          "title": "Marcas M - Z",
+          "items": [
             { "label": "Salomon", "href": "/marcas/salomon" },
             { "label": "Burton", "href": "/marcas/burton" },
             { "label": "Contigo", "href": "/marcas/contigo" },

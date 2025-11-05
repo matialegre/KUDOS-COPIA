@@ -16,61 +16,41 @@
   margin: 0 auto;
 }
 
-/* Columna izquierda - Newsletter */
-.newsletterColumn {
-  background: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 40px;
+/* Columna izquierda - Imagen */
+.imageColumn {
   width: 530px;
   height: 660px;
   flex-shrink: 0;
-  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
 }
 
-.newsletterContent {
+.leftImage {
   width: 100%;
-  max-width: 295px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.newsletterLogo {
-  width: 84px;
-  height: auto;
-  margin-bottom: 32px;
-}
-
-.newsletterTitle {
-  font-family: 'Gotham', 'Inter', -apple-system, sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #fff;
-  margin: 0 0 32px 0;
-  text-align: center;
+/* Formulario overlay */
+.formOverlay {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 80px);
+  max-width: 350px;
+  z-index: 10;
 }
 
 .newsletterForm {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
+  width: 100%;
 }
 
-.newsletterLabel {
-  font-family: 'Gotham', 'Inter', -apple-system, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #fff;
-  margin: 0;
-  text-align: center;
-}
-
-.newsletterInput {
+.emailInput {
   width: 100%;
   padding: 14px 16px;
   font-family: 'Gotham', 'Inter', -apple-system, sans-serif;
@@ -84,20 +64,20 @@
   transition: box-shadow 0.2s ease;
 }
 
-.newsletterInput:focus {
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+.emailInput:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
 }
 
-.newsletterInput::placeholder {
+.emailInput::placeholder {
   color: #999;
 }
 
-.newsletterInput:disabled {
+.emailInput:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-.newsletterButton {
+.submitButton {
   width: 100%;
   padding: 14px 24px;
   font-family: 'Gotham', 'Inter', -apple-system, sans-serif;
@@ -107,30 +87,34 @@
   letter-spacing: 1px;
   background: #fff;
   color: #000;
-  border: none;
+  border: 2px solid #000;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
   box-sizing: border-box;
 }
 
-.newsletterButton:hover:not(:disabled) {
-  background: #f0f0f0;
+.submitButton:hover:not(:disabled) {
+  background: #000;
+  color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.newsletterButton:disabled {
+.submitButton:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-.newsletterMessage {
+.formMessage {
   font-family: 'Gotham', 'Inter', -apple-system, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   color: #fff;
-  margin: 8px 0 0 0;
+  margin: 0;
   text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px 12px;
+  border-radius: 4px;
 }
 
 /* Columna derecha - Video */
@@ -158,11 +142,16 @@
     height: auto;
   }
 
-  .newsletterColumn {
+  .imageColumn {
     width: 35.52%;
     height: auto;
     min-height: 550px;
-    padding: 50px 35px;
+  }
+
+  .leftImage {
+    width: 100%;
+    height: 100%;
+    min-height: 550px;
   }
 
   .videoColumn {
@@ -176,10 +165,6 @@
     height: 100%;
     min-height: 550px;
   }
-
-  .newsletterTitle {
-    font-size: 24px;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -187,13 +172,12 @@
     height: auto;
   }
 
-  .newsletterColumn {
+  .imageColumn {
     min-height: 480px;
-    padding: 40px 30px;
   }
 
-  .newsletterTitle {
-    font-size: 22px;
+  .leftImage {
+    min-height: 480px;
   }
 
   .videoColumn {
@@ -212,25 +196,32 @@
     height: auto;
   }
 
-  .newsletterColumn {
-    padding: 48px 24px;
+  .imageColumn {
     width: 100%;
     height: auto;
-    min-height: auto;
+    min-height: 400px;
   }
 
-  .newsletterContent {
-    max-width: 100%;
+  .leftImage {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
   }
 
-  .newsletterTitle {
-    font-size: 22px;
-    margin-bottom: 24px;
+  .formOverlay {
+    bottom: 40px;
+    width: calc(100% - 40px);
+    max-width: 300px;
   }
 
-  .newsletterLogo {
-    width: 70px;
-    margin-bottom: 24px;
+  .emailInput {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .submitButton {
+    padding: 12px 20px;
+    font-size: 13px;
   }
 
   .videoColumn {
@@ -247,27 +238,30 @@
 }
 
 @media (max-width: 480px) {
-  .newsletterColumn {
-    padding: 40px 20px;
+  .imageColumn {
+    min-height: 280px;
   }
 
-  .newsletterTitle {
-    font-size: 20px;
-    margin-bottom: 20px;
+  .leftImage {
+    width: 100%;
+    height: auto;
+    min-height: 280px;
   }
 
-  .newsletterLabel {
-    font-size: 14px;
+  .formOverlay {
+    bottom: 30px;
+    width: calc(100% - 30px);
+    max-width: 260px;
   }
 
-  .newsletterInput {
-    padding: 12px 14px;
-    font-size: 13px;
+  .emailInput {
+    padding: 10px 12px;
+    font-size: 12px;
   }
 
-  .newsletterButton {
-    padding: 12px 20px;
-    font-size: 13px;
+  .submitButton {
+    padding: 10px 16px;
+    font-size: 12px;
   }
 
   .videoColumn {

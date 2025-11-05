@@ -82,39 +82,40 @@
 
 @media (max-width: 768px) {
   .heroContainer {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-areas: 
+      "hombre ninos"
+      "mujer mujer";
+    grid-template-columns: 1fr 1fr;
     gap: 12px;
     width: 100%;
-    max-width: 500px;
+    max-width: 350px;
     padding: 0 16px;
-    margin: 32px auto 0;
-  }
-  
-  .heroLeft {
-    width: 100%;
-    height: 0;
-    padding-bottom: 162%;
-    position: relative;
-  }
-
-  .heroLeft img {
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin: 45px auto 0;
   }
   
   .heroRight {
-    width: 100%;
-    grid-template-rows: auto auto;
-    row-gap: 12px;
+    display: contents;
   }
 
-  .heroRightTop,
-  .heroRightBottom {
+  .heroRightTop {
+    grid-area: hombre;
     width: 100%;
     height: 0;
-    padding-bottom: 66.67%;
+    padding-bottom: 100%;
     position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .heroRightBottom {
+    grid-area: ninos;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   .heroRightTop img,
@@ -122,6 +123,30 @@
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .heroLeft {
+    grid-area: mujer;
+    width: 100%;
+    height: 0;
+    padding-bottom: 49.65%;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .heroLeft img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 }
 
@@ -130,20 +155,5 @@
     gap: 10px;
     padding: 0 12px;
     margin: 24px auto 0;
-  }
-  
-  .heroLeft {
-    padding-bottom: 162%;
-    border-radius: 8px;
-  }
-
-  .heroRight {
-    row-gap: 10px;
-  }
-
-  .heroRightTop,
-  .heroRightBottom {
-    padding-bottom: 66.67%;
-    border-radius: 8px;
   }
 }

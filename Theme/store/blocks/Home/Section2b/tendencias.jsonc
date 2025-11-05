@@ -26,7 +26,8 @@
 
         "children": [
             "rich-text#title-tendencias",
-            "flex-layout.row#tendenciasImagesRow"
+            "flex-layout.row#tendenciasImagesRow",
+            "slider-layout#tendenciasMobile"
         ]
     
     },
@@ -91,6 +92,59 @@
             }
         }
 
+    },
+
+    "slider-layout#tendenciasMobile": {
+        "props": {
+            "blockClass": "tendencias-mobile-slider",
+            "itemsPerPage": {
+                "desktop": 1,
+                "tablet": 1,
+                "phone": 1
+            },
+            "infinite": true,
+            "autoplay": {
+                "timeout": 4000,
+                "stopOnHover": true
+            },
+            "showPaginationDots": "always",
+            "showNavigationArrows": "always"
+        },
+        "children": [
+            "image#tendenciasDCMobile",
+            "image#tendenciasRoxyMobile",
+            "image#tendenciasSalomonMobile"
+        ]
+    },
+
+    "image#tendenciasDCMobile": {
+        "props": {
+            "blockClass": "tendencias-mobile-image",
+            "src": "/arquivos/tendencia-12-1221.jpg",
+            "link": {
+                "url": "/dc"
+            }
+        }
+    },
+
+    "image#tendenciasRoxyMobile": {
+        "props": {
+            "blockClass": "tendencias-mobile-image",
+            "src": "/arquivos/tendencia-12-1331.jpg",
+            "link": {
+                "url": "/roxy"
+            }
+        }
+    },
+
+    "image#tendenciasSalomonMobile": {
+        "props": {
+            "blockClass": "tendencias-mobile-image",
+            "src": "/arquivos/tendencia-12-14-1441.jpg",
+            "link": {
+                "url": "/salomon"
+            }
+        }
     }
 
 }

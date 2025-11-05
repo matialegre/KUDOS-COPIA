@@ -4,6 +4,8 @@
     width: 100%;
     height: 44px;
     min-height: 44px;
+    position: relative;
+    z-index: 10;
 }
 
 .sliderLayoutContainer--announcement-carousel .sliderTrackContainer {
@@ -15,4 +17,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .sliderLayoutContainer--announcement-carousel {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .sliderLayoutContainer--announcement-carousel .sliderTrackContainer {
+        height: 40px;
+    }
+
+    .sliderLayoutContainer--announcement-carousel .slide {
+        height: 40px;
+    }
 }
