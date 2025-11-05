@@ -1,0 +1,42 @@
+.sliderContainer {
+  width: 100%;
+  max-width: 360px;
+  margin: 27px auto 0;
+  padding: 0 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sliderTrack {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slideOut {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slideItem {
+  flex: 0 0 calc(50% - 4px);
+  display: block;
+  text-decoration: none;
+}
+
+.slideImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: contain;
+}
+
+@media (min-width: 641px) {
+  .sliderContainer {
+    display: none;
+  }
+}

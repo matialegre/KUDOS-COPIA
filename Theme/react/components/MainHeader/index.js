@@ -128,12 +128,12 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
               <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </a>
-          <a href="/checkout/#/cart" className={styles.mobileIcon} aria-label="Carrito">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 2L7 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M17 6L15 2" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M2 6H22V20C22 20.5304 21.7893 21.0391 21.4142 21.4142C21.0391 21.7893 20.5304 22 20 22H4C3.46957 22 2.96086 21.7893 2.58579 21.4142C2.21071 21.0391 2 20.5304 2 20V6Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+          <a href="/checkout/#/cart" className={`${styles.mobileIcon} ${styles.cartIcon}`} aria-label="Carrito">
+            <img
+              src="https://mundooutdoorar.vtexassets.com/arquivos/icono_chango_negro.png"
+              alt="Carrito"
+              className={styles.cartIconImage}
+            />
           </a>
         </div>
 

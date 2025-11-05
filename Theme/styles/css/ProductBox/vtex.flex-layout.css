@@ -3,7 +3,7 @@
 }
 
 .flexRowContent--section-image-and-cucardas-container{
-    max-height: 340px;
+    max-height: 285px;
 }
 
 @media (max-width: 640px) {
@@ -15,12 +15,18 @@
 }
 
 .flexRow--sku-selector-talles-container{
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     visibility: hidden;
     opacity: 0;
+    gap: 4px;
+    padding: 0 12px;
+    box-sizing: border-box;
 }
 
 @media (max-width: 640px) {
@@ -28,18 +34,22 @@
     .flexRow--sku-selector-talles-container{
         visibility: visible;
         opacity: 1;
+        bottom: 48px;
     }
 
 }
 
 .flexRowContent--sku-selector-color-container{
-    margin-top: 14px;
+    margin-top: 6px;
+    padding-bottom: 4px;
 }
 
 @media (max-width: 640px) {
 
     .flexRowContent--sku-selector-color-container{
-        margin-top: 11px;
+        margin-top: 2px;
+        padding-bottom: 2px;
+        margin-bottom: 8px;
     }
 
 }
@@ -50,7 +60,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 340px;
+    height: 285px;
 }
 
 .flexRowContent--cucardas-container{

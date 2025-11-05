@@ -10,19 +10,18 @@
         },
 
         "children": [
-            "image#imageItemSquare3"
+            "benefit-card-image#itemSquare3"
         ]
     
     },
 
-    "image#imageItemSquare3":{
+    "benefit-card-image#itemSquare3":{
 
         "props": {
-            "blockClass": "image-item-square",
-            "src": "/arquivos/benefit-card-6cuotas-fijas.png",
-            "link": {
-                "url": "/institucional/medios-de-pago"
-            }
+            "srcDesktop": "/arquivos/PROMOS-23.png",
+            "srcMobile": "/arquivos/promos%20celu-29%20(1).png",
+            "alt": "Promoción 3",
+            "link": "/institucional/medios-de-pago"
         }
 
     }

@@ -39,9 +39,15 @@
 /* fin imagen product box PLP */
 
 .element{
-    padding: 0;
+    padding: 0 0 48px 0;
     box-sizing: border-box;
     border: 1px solid var(--border-gray);
+}
+
+@media (max-width: 640px) {
+    .element{
+        padding: 0 0 80px 0;
+    }
 }
 
 .element:hover{
@@ -75,7 +81,7 @@
 @media (max-width: 640px) {
 
     .productBrandContainer{
-        margin-top: 12px;
+        margin-top: 8px;
     }
 
     .imageStackContainer{
@@ -93,11 +99,25 @@
     color: #676F79;
 }
 
+@media (max-width: 640px) {
+    .productBrandName{
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
 .nameContainer{
     margin: 0;
     padding: 0;
     margin-top: 8px;
     min-height: 42px;
+}
+
+@media (max-width: 640px) {
+    .nameContainer{
+        margin-top: 4px;
+        min-height: 36px;
+    }
 }
 
 .brandName{
@@ -118,7 +138,8 @@
 @media (max-width: 640px) {
 
     .brandName{
-        font-size: 14px;
+        font-size: 13px;
+        line-height: 18px;
     }
 
 }
@@ -206,11 +227,10 @@
 .clearLink :global(.vtex-button){
     visibility: hidden;
     opacity: 0;
+    margin-top: 12px;
     margin-left: 0;
     margin-bottom: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     min-height: auto;
     max-height: 32px;
@@ -226,6 +246,7 @@
         visibility: visible;
         opacity: 1;
         width: 170px;
+        margin-top: 8px;
     }
 
 }

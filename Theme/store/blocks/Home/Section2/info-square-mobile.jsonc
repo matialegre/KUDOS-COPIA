@@ -1,0 +1,28 @@
+{
+    "benefit-slider-mobile#promos": {
+        "props": {
+            "benefits": [
+                {
+                    "image": "/arquivos/promos%20celu-27%20(1).png",
+                    "alt": "Promoción 1",
+                    "link": "/institucional/medios-de-pago"
+                },
+                {
+                    "image": "/arquivos/promos%20celu-30%20(1).png",
+                    "alt": "Promoción 2",
+                    "link": "/institucional/medios-de-pago"
+                },
+                {
+                    "image": "/arquivos/promos%20celu-29%20(1).png",
+                    "alt": "Promoción 3",
+                    "link": "/institucional/medios-de-pago"
+                },
+                {
+                    "image": "/arquivos/promos%20celu-28%20(1).png",
+                    "alt": "Promoción 4",
+                    "link": "/institucional/medios-de-pago"
+                }
+            ]
+        }
+    }
+}

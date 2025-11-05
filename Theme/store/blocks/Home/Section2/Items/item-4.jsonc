@@ -10,19 +10,18 @@
         },
 
         "children": [
-            "image#imageItemSquare4"
+            "benefit-card-image#itemSquare4"
         ]
 
     },
 
-    "image#imageItemSquare4": {
+    "benefit-card-image#itemSquare4": {
 
         "props": {
-            "blockClass": "image-item-square",
-            "src": "/arquivos/promonaranja2.png",
-            "link": {
-                "url": "/institucional/medios-de-pago"
-            }
+            "srcDesktop": "/arquivos/PROMOS-24.png",
+            "srcMobile": "/arquivos/promos%20celu-28%20(1).png",
+            "alt": "Promoción 4",
+            "link": "/institucional/medios-de-pago"
         }
 
     }

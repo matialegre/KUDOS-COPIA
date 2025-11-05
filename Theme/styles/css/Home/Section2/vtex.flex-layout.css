@@ -22,21 +22,12 @@
 
 @media (max-width: 640px) {
 
-    .flexRowContent--info-square-container{
-        margin-top: 27px;
-        padding: 0;
-        gap: 0;
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-        border: none;
-        background: transparent;
-        flex-direction: column;
+    .flexRow--info-square-container{
+        display: none;
     }
 
-    .flexRowContent--info-square-container .stretchChildrenWidth:nth-child(0n+2):not(.flexRow--item-square .stretchChildrenWidth){
-        display: block;
-        width: 100%;
+    .flexRowContent--info-square-container{
+        display: none;
     }
 
 }

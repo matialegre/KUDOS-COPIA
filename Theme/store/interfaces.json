@@ -82,6 +82,14 @@
 
     "announcement-bar": {
         "component": "AnnouncementBar"
+    },
+
+    "benefit-card-image": {
+        "component": "BenefitCardImage"
+    },
+
+    "benefit-slider-mobile": {
+        "component": "BenefitSliderMobile"
     }
 
 }
