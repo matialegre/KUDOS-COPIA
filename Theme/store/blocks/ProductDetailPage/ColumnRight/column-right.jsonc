@@ -60,6 +60,7 @@
 
       "children": [
         "flex-layout.row#priceAndDiscountPdp",
+        "product-installments",
         // "rich-text#cucardaEnvioGratis",
         "envio-gratis",
         "modal-trigger#example",
@@ -154,7 +155,7 @@
 
       "props": {
         "blockClass": "trigger-promociones-bancarias",
-        "text": "Promociones bancarias"
+        "text": "Ver promociones, cuotas y medios de pago"
       }
 
     },
@@ -257,7 +258,7 @@
         "props": {
             "blockClass": "comprar-ahora-pdp",
             "isOneClickBuy": true,
-            "text": "Comprar ahora"
+            "text": "COMPRAR AHORA!"
         }
 
     },
@@ -267,8 +268,8 @@
       "props": {
         "blockClass": "add-to-cart-pdp",
         "isOneClickBuy": false,
-        "text": "Añadir al carrito",
-        "unavailableText": "Añadir al carrito"
+        "text": "AÑADIR AL CARRITO",
+        "unavailableText": "AÑADIR AL CARRITO"
       }
 
     }

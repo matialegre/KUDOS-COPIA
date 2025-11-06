@@ -6,13 +6,14 @@
   margin-bottom: 6px;
 }
 
-.productInstallmentsText{
-  font-family: 'Gotham', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 16px;
-  color: #1F9D55;
-  text-align: center;
+.productInstallmentsText {
+  font-family: "Gotham";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+  color: #008042;
+  margin: 0;
 }
 
 @media (max-width: 640px) {

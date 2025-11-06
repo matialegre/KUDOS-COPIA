@@ -1,24 +1,29 @@
-/* QUITAR ESPACIO  */
-
+/* QUITAR ESPACIO - COMENTADO
 .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+1) .flexColChild--column-left-pdp:nth-child(0n+1){
-    /* display: none; */
+    display: none;
 }
-
-/* FIN QUITAR ESPACIO  */
+FIN QUITAR ESPACIO */
 
 /* TAMAÑO IMAGENES  */
 
     /* ancho de contenedor de thumbs*/
     .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-carouselGaleryThumbs){
-        width: 138px !important;
+        width: 100% !important;
+        max-width: 531px;
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        margin-top: 12px;
     }
     /* fin ancho de contenedor de thumbs*/
 
     /* tamaño de cada imagen del thumb  */
     .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-productImagesThumb){
-        margin-bottom: 25px;
-        width: 138px;
-        /*no necesita height, porque por defecto dibuja imagen 1:1 con width*/
+        margin-bottom: 0;
+        margin-right: 0;
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
     }
 
     .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-productImagesThumbActive){
