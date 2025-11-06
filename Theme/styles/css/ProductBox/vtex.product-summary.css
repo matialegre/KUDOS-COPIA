@@ -59,17 +59,9 @@
     opacity: 1;
 } */
 
-.element:hover :global(.vtex-flex-layout-0-x-flexRow--sku-selector-talles-container){
-    visibility: visible;
-    opacity: 1;
-}
-
-.element:hover :global(.vtex-button-add-to-cart-custom){
-    visibility: visible;
-    opacity: 1;
-}
-
-.element:hover :global(.vtex-button){
+.element :global(.vtex-flex-layout-0-x-flexRow--sku-selector-talles-container),
+.element :global(.vtex-button-add-to-cart-custom),
+.element :global(.vtex-button){
     visibility: visible;
     opacity: 1;
 }

@@ -47,7 +47,7 @@
     font-size: 13px;
     line-height: 18px;
     letter-spacing: 0.1px;
-    color: var(--post-header-color);
+    color: #000000;
 }
 
 @media (max-width: 640px) {

@@ -26,6 +26,10 @@
         visibility: visible;
         opacity: 1;
         width: 170px;
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin: 12px auto 0;
     }
 
 }
