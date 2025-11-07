@@ -90,6 +90,11 @@
 
     "benefit-slider-mobile": {
         "component": "BenefitSliderMobile"
+    },
+
+    "net-price": {
+        "component": "NetPrice",
+        "render": "client"
     }
 
 }

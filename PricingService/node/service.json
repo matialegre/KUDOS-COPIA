@@ -1,0 +1,16 @@
+{
+  "memory": 256,
+  "timeout": 10,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "routes": {
+    "sum": {
+      "path": "/_v/mundo/sum",
+      "public": true
+    },
+    "netPrice": {
+      "path": "/_v/mundo/pricing/net",
+      "public": true
+    }
+  }
+}

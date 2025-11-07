@@ -1,68 +1,66 @@
-/* QUITAR ESPACIO - COMENTADO
-.flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+1) .flexColChild--column-left-pdp:nth-child(0n+1){
-    display: none;
-}
-FIN QUITAR ESPACIO */
+/* QUITAR ESPACIO  */
+
+/* FIN QUITAR ESPACIO  */
 
 /* TAMAÑO IMAGENES  */
 
     /* ancho de contenedor de thumbs*/
-    .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-carouselGaleryThumbs){
-        width: 100% !important;
-        max-width: 531px;
+    .flexRowContent--columns-pdp-container .flexColChild--column-left-pdp :global(.vtex-store-components-3-x-carouselGaleryThumbs){
         display: flex;
         flex-direction: row;
-        gap: 12px;
-        margin-top: 12px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        width: 100% !important;
+        margin-top: 24px;
     }
     /* fin ancho de contenedor de thumbs*/
 
     /* tamaño de cada imagen del thumb  */
-    .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-productImagesThumb){
-        margin-bottom: 0;
-        margin-right: 0;
-        width: 100px;
-        height: 100px;
-        flex-shrink: 0;
+    .flexRowContent--columns-pdp-container .flexColChild--column-left-pdp :global(.vtex-store-components-3-x-productImagesThumb){
+        margin: 0;
+        width: 104px;
+        /*no necesita height, porque por defecto dibuja imagen 1:1 con width*/
     }
 
-    .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-productImagesThumbActive){
+    .flexRowContent--columns-pdp-container .flexColChild--column-left-pdp :global(.vtex-store-components-3-x-productImagesThumbActive){
         border: 1px solid #09344D;
     }
 
-    .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-productImagesThumb) :global(.vtex-store-components-3-x-thumbImg){
+    .flexRowContent--columns-pdp-container .flexColChild--column-left-pdp :global(.vtex-store-components-3-x-productImagesThumb) :global(.vtex-store-components-3-x-thumbImg){
         object-fit: cover;
     }
     /* fin tamaño de cada imagen del thumb  */
 
     /* tamaño imagenes grande */
-    .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-carouselGaleryCursor){
-        margin: 0;
+    .flexRowContent--columns-pdp-container .flexColChild--column-left-pdp :global(.vtex-store-components-3-x-carouselGaleryCursor){
+        margin: 0 auto;
         padding: 0;
-        width: 531px;
+        width: 640px;
     }
 
     @media (max-width: 640px) {
 
-        .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-carouselGaleryCursor){
+        .flexRowContent--columns-pdp-container .flexColChild--column-left-pdp :global(.vtex-store-components-3-x-carouselGaleryCursor){
             width: 328px;
             height: 344px;
         }
 
-        .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-carouselGaleryCursor) :global(.vtex-store-components-3-x-productImagesGallerySwiperContainer){
+        .flexRowContent--columns-pdp-container .flexColChild--column-left-pdp :global(.vtex-store-components-3-x-carouselGaleryCursor) :global(.vtex-store-components-3-x-productImagesGallerySwiperContainer){
             height: 344px;
         }
 
     }
 
-    .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-productImagesGallerySlide){
-        width: 531px !important;
-        height: 531px;
+    .flexRowContent--columns-pdp-container .flexColChild--column-left-pdp :global(.vtex-store-components-3-x-productImagesGallerySlide){
+        width: 640px !important;
+        height: 640px;
+        margin: 0 auto;
     }
 
     @media (max-width: 640px) {
 
-        .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-productImagesGallerySlide){
+        .flexRowContent--columns-pdp-container .flexColChild--column-left-pdp :global(.vtex-store-components-3-x-productImagesGallerySlide){
             margin: 0;
             padding: 0;
             width: 328px !important;
@@ -71,14 +69,14 @@ FIN QUITAR ESPACIO */
 
     }
 
-    .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-productImagesGallerySlide) :global(.vtex-store-components-3-x-productImageTag){
-        max-height: 531px !important;
-        height: 531px !important;
+    .flexRowContent--columns-pdp-container .flexColChild--column-left-pdp :global(.vtex-store-components-3-x-productImagesGallerySlide) :global(.vtex-store-components-3-x-productImageTag){
+        max-height: 640px !important;
+        height: 640px !important;
     }
 
     @media (max-width: 640px) {
 
-        .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-productImagesGallerySlide) :global(.vtex-store-components-3-x-productImageTag){
+        .flexRowContent--columns-pdp-container .flexColChild--column-left-pdp :global(.vtex-store-components-3-x-productImagesGallerySlide) :global(.vtex-store-components-3-x-productImageTag){
             width: 328px !important;
             max-height: 328px !important;
             height: 328px !important;
@@ -86,7 +84,7 @@ FIN QUITAR ESPACIO */
 
     }
 
-    .flexRowContent--columns-pdp-container :global(.vtex-store-components-3-x-productImagesGallerySlide) :global(.vtex-store-components-3-x-productImageTag--zoom){
+    .flexRowContent--columns-pdp-container .flexColChild--column-left-pdp :global(.vtex-store-components-3-x-productImagesGallerySlide) :global(.vtex-store-components-3-x-productImageTag--zoom){
         width: 200% !important;
         max-height: 200% !important;
         height: 200% !important;
@@ -195,8 +193,8 @@ FIN QUITAR ESPACIO */
     position: relative;
     flex-direction: column;
     gap: 8px;
-    width: 531px;
-    height: 531px;
+    width: 640px;
+    height: 640px;
     /* background: red; */
 }
 
@@ -287,18 +285,19 @@ FIN QUITAR ESPACIO */
 }
 
 .flexCol--column-left-pdp :global(.vtex-product-identifier-0-x-product-identifier){
-    margin-left: 158px;
+    margin: 16px auto 0;
     font-family: 'GothamBook';
     font-size: 13px;
     line-height: 18px;
     letter-spacing: 0.1px;
     color: #3D3F43;
+    text-align: center;
 }
 
 @media (max-width: 640px) {
 
     .flexCol--column-left-pdp :global(.vtex-product-identifier-0-x-product-identifier){
-        margin-left: 0px;
+        margin: 8px 0 0;
     }
 
 }

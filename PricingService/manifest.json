@@ -1,0 +1,44 @@
+{
+  "vendor": "mundooutdoorar",
+  "name": "pricing-service",
+  "version": "0.1.0",
+  "title": "Pricing Service",
+  "description": "Service for calculating net prices and tax-related operations",
+  "builders": {
+    "node": "7.x"
+  },
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/*"
+      }
+    }
+  ],
+  "settingsSchema": {
+    "title": "Pricing Service Configuration",
+    "type": "object",
+    "properties": {
+      "defaultVat": {
+        "type": "number",
+        "title": "Default VAT Rate",
+        "default": 0.21,
+        "description": "Default VAT rate for Argentina (21%)"
+      },
+      "defaultPostalCode": {
+        "type": "string",
+        "title": "Default Postal Code",
+        "default": "8000",
+        "description": "Default postal code for simulation"
+      },
+      "sellerId": {
+        "type": "string",
+        "title": "Seller ID",
+        "default": "1",
+        "description": "Default seller ID"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

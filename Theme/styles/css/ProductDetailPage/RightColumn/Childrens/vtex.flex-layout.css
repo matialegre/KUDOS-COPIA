@@ -120,6 +120,58 @@
     grid-area: c;
 }
 
+/* PRECIO SIN IMPUESTOS LABEL */
+
+.flexCol--availability-yes :global(.vtex-rich-text-0-x-container--precio-sin-impuestos){
+    margin-top: 12px;
+    font-family: 'GothamBook';
+    font-size: 14px;
+    line-height: 18px;
+    color: #4A4F55;
+}
+
+.flexCol--availability-yes :global(.vtex-rich-text-0-x-paragraph--precio-sin-impuestos){
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 640px) {
+
+    .flexCol--availability-yes :global(.vtex-rich-text-0-x-container--precio-sin-impuestos){
+        font-size: 13px;
+        line-height: 18px;
+        margin-top: 10px;
+    }
+
+}
+
+/* TITULO CUOTAS */
+
+.flexCol--availability-yes :global(.vtex-rich-text-0-x-container--titulo-cuotas){
+    margin-top: 16px;
+    font-family: 'Gotham';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #090A10;
+}
+
+.flexCol--availability-yes :global(.vtex-rich-text-0-x-paragraph--titulo-cuotas){
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 640px) {
+
+    .flexCol--availability-yes :global(.vtex-rich-text-0-x-container--titulo-cuotas){
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 14px;
+    }
+
+}
+
     /* CONTENEDOR PRECIO  */
 
     .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className){

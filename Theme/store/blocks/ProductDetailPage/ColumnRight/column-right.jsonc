@@ -60,7 +60,10 @@
 
       "children": [
         "flex-layout.row#priceAndDiscountPdp",
-        "product-installments",
+        "net-price",
+        "rich-text#tituloCuotas",
+        "product-installments#habituales-max",
+        "product-installments#habituales-min",
         // "rich-text#cucardaEnvioGratis",
         "envio-gratis",
         "modal-trigger#example",
@@ -91,6 +94,33 @@
 
     },
     // FIN AVAILABILITY 
+
+    "rich-text#tituloCuotas": {
+
+      "props": {
+        "blockClass": "titulo-cuotas",
+        "text": "cuotas habituales"
+      }
+
+    },
+
+    "product-installments#habituales-max": {
+
+      "props": {
+        "pickStrategy": "max",
+        "onlyInterestFree": true
+      }
+
+    },
+
+    "product-installments#habituales-min": {
+
+      "props": {
+        "pickStrategy": "min",
+        "onlyInterestFree": true
+      }
+
+    },
 
     "rich-text#cucardaEnvioGratis": {
 

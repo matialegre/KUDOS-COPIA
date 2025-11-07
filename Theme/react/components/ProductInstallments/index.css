@@ -1,19 +1,18 @@
 .productInstallmentsContainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 4px;
-  margin-bottom: 6px;
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 4px;
 }
 
-.productInstallmentsText {
-  font-family: "Gotham";
+.productInstallmentsText{
+  display: block;
+  font-family: 'Gotham', sans-serif;
   font-size: 14px;
-  font-weight: 500;
-  line-height: 18px;
-  letter-spacing: 0.1px;
-  color: #008042;
-  margin: 0;
+  font-weight: 600;
+  line-height: 20px;
+  color: #1F9D55;
+  text-align: left;
 }
 
 @media (max-width: 640px) {
@@ -23,7 +22,7 @@
   }
 
   .productInstallmentsText{
-    font-size: 11px;
-    line-height: 14px;
+    font-size: 13px;
+    line-height: 18px;
   }
 }
