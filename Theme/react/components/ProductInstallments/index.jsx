@@ -29,6 +29,7 @@ const getInstallmentValue = installment =>
 const ProductInstallments = ({
   onlyInterestFree = true,
   pickStrategy = 'max', // max | min
+  targetInstallments = null,
 }) => {
   const productContext = useProduct()
   const intl = useIntl()
@@ -51,6 +52,16 @@ const ProductInstallments = ({
       return null
     }
 
+    if (targetInstallments) {
+      const exact = filtered.find(
+        item => getNumberOfInstallments(item) === targetInstallments
+      )
+
+      if (exact) {
+        return exact
+      }
+    }
+
     const sorted = [...filtered].sort((a, b) => {
       const aNumber = getNumberOfInstallments(a)
       const bNumber = getNumberOfInstallments(b)
@@ -59,7 +70,7 @@ const ProductInstallments = ({
     })
 
     return sorted[0] ?? null
-  }, [offer, onlyInterestFree, pickStrategy])
+  }, [offer, onlyInterestFree, pickStrategy, targetInstallments])
 
   if (!selectedInstallment) {
     return null

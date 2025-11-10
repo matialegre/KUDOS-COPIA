@@ -4,10 +4,10 @@
 
 .triggerContainer :global(.vtex-flex-layout-0-x-flexRowContent--container-trigger-promociones-bancarias){
     cursor: pointer;
-    margin-top: 25px;
-    max-width: 194px;
-    height: 16px;
-    gap: 6px;
+    margin-top: 18px;
+    gap: 8px;
+    align-items: center;
+    width: fit-content;
 }
 
 .triggerContainer :global(.vtex-flex-layout-0-x-flexRowContent--container-trigger-promociones-bancarias) :global(.vtex-flex-layout-0-x-stretchChildrenWidth){
@@ -28,11 +28,13 @@
 
 .triggerContainer :global(.vtex-flex-layout-0-x-flexRowContent--container-trigger-promociones-bancarias) :global(.vtex-rich-text-0-x-paragraph--trigger-promociones-bancarias){
     font-family: 'Gotham';
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
-    line-height: 18px;
-    letter-spacing: 0.2px;
+    line-height: 20px;
+    letter-spacing: 0;
     color: #2680EB;
+    text-decoration: underline;
+    white-space: nowrap;
 }
 
 /* MODAL  */

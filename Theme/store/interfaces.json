@@ -95,6 +95,36 @@
     "net-price": {
         "component": "NetPrice",
         "render": "client"
+    },
+
+    "inline-price": {
+        "component": "InlinePrice",
+        "render": "client"
+    },
+
+    "buy-now-button": {
+        "component": "BuyNowButton",
+        "render": "client"
+    },
+
+    "add-to-cart-button-custom": {
+        "component": "AddToCartButton",
+        "render": "client"
+    },
+
+    "size-out-of-stock": {
+        "component": "SizeOutOfStock",
+        "render": "client"
+    },
+
+    "official-store": {
+        "component": "OfficialStore",
+        "render": "client"
+    },
+
+    "shipping-options": {
+        "component": "ShippingOptions",
+        "render": "client"
     }
 
 }

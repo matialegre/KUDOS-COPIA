@@ -13,3 +13,81 @@
 }
 
 /* FIN PRECIO VENTA  */
+
+/* SHIPPING SIMULATOR */
+
+.shippingContainer {
+    margin-top: 24px;
+}
+
+.shippingContainer :global(.vtex-address-form-4-x-postalCodeLabel) {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #6B6B6B;
+    margin-bottom: 8px;
+}
+
+.shippingContainer :global(.vtex-address-form-4-x-postalCodeInput) {
+    width: 100%;
+    max-width: 465px;
+    height: 48px;
+    padding: 12px 16px;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    color: #090A10;
+    margin-bottom: 12px;
+}
+
+.shippingContainer :global(.vtex-button) {
+    width: 100%;
+    max-width: 465px;
+    height: 48px;
+    background-color: #FFFFFF;
+    border: 1px solid #090A10;
+    border-radius: 4px;
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #090A10;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.shippingContainer :global(.vtex-button):hover {
+    background-color: #F5F5F5;
+}
+
+.shippingContainer :global(.vtex-address-form-4-x-postalCodeForgotten) {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #2680EB;
+    text-decoration: none;
+    margin-top: 8px;
+    display: inline-block;
+}
+
+.shippingContainer :global(.vtex-address-form-4-x-postalCodeForgotten):hover {
+    text-decoration: underline;
+}
+
+/* FIN SHIPPING SIMULATOR */
+
+/* SKU SELECTOR - OCULTAR TALLES Y COLORES NO DISPONIBLES */
+
+.skuSelectorItem--unavailable {
+    display: none !important;
+}
+
+.skuSelectorItemImage--unavailable {
+    display: none !important;
+}
+
+/* FIN SKU SELECTOR */

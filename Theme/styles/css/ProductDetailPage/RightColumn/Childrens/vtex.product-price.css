@@ -5,6 +5,63 @@
     line-height: 20px;
     letter-spacing: 0.1px;
     color: #EB5757;
+    display: inline-flex;
+    align-items: baseline;
+}
+
+.savingsPercentage::before{
+    content: '-';
+    margin-right: 4px;
+}
+
+.savings-inline-attempt-a .savingsPercentage{
+    background: rgba(255, 0, 0, 0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.savings-inline-attempt-b .savingsPercentage{
+    font-size: 24px;
+    color: #FF4C4C;
+}
+
+.savings-inline-attempt-c .savingsPercentage{
+    font-size: 18px;
+    color: #B71C1C;
+}
+
+.savings-inline-attempt-d .savingsPercentage{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.savings-inline-attempt-e .savingsPercentage{
+    border-bottom: 2px solid #EB5757;
+    padding-bottom: 1px;
+}
+
+.savings-inline-attempt-f .savingsPercentage{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.savings-inline-attempt-g .savingsPercentage{
+    letter-spacing: 1px;
+}
+
+.savings-inline-attempt-h .savingsPercentage{
+    color: #D70040;
+    font-size: 22px;
+}
+
+.savings-inline-attempt-i .savingsPercentage{
+    color: #C62828;
+    font-style: italic;
+}
+
+.savings-inline-attempt-j .savingsPercentage{
+    color: #FF1744;
+    font-size: 26px;
+    font-weight: 700;
 }
 
 @media (max-width: 640px) {

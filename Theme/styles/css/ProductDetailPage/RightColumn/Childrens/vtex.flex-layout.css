@@ -52,11 +52,12 @@
 
 }
 
+
 .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-price_sellingPrice){
     font-family: 'Gotham';
-    font-size: 22px;
-    font-weight: 500;
-    line-height: normal;
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 39px;
     color: #090A10;
 }
 
@@ -72,9 +73,9 @@
 
     .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-price_sellingPrice){
         font-family: 'Gotham';
-        font-size: 22px;
-        font-weight: 500;
-        line-height: 26.4px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
         color: #090A10;
     }
 
@@ -87,37 +88,18 @@
 /* CONTENEDOR PRECIOS Y CUCARDA  */
 
 .flexRowContent--price-and-discount-pdp{
-    display: grid;
-    grid-template-areas: "a b c";
-    align-items: flex-end;
-    /* display: flex; */
+    display: flex;
+    align-items: baseline;
     flex-wrap: wrap;
-    column-gap: 16px;
-    row-gap: 12px;
+    gap: 12px;
 }
 
 @media (max-width: 640px) {
 
     .flexRowContent--price-and-discount-pdp{
-        display: flex;
-        flex-wrap: unset;
+        gap: 8px;
     }
 
-}
-
-.flexRowContent--price-and-discount-pdp .stretchChildrenWidth:nth-child(0n+1){
-    width: auto !important;
-    grid-area: a;
-}
-
-.flexRowContent--price-and-discount-pdp .stretchChildrenWidth:nth-child(0n+2){
-    width: auto !important;
-    grid-area: b;
-}
-
-.flexRowContent--price-and-discount-pdp .stretchChildrenWidth:nth-child(0n+3){
-    width: auto !important;
-    grid-area: c;
 }
 
 /* PRECIO SIN IMPUESTOS LABEL */
@@ -177,14 +159,26 @@
     .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className){
         margin-top: 16px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 12px;
     }
 
     .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className) :global(.vtex-store-components-3-x-price_listPriceContainer){
         margin: 0;
         padding: 0;
         display: flex;
-        align-items: center;
+        align-items: baseline;
+    }
+
+    .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className) :global(.vtex-store-components-3-x-price_savingsContainer){
+        order: 2;
+        display: flex;
+        align-items: baseline;
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+        gap: 4px;
     }
 
     .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className) :global(.vtex-store-components-3-x-price_listPriceContainer) :global(.vtex-store-components-3-x-price_listPrice){
@@ -198,7 +192,7 @@
         font-family: 'Gotham';
         font-size: 14px;
         font-weight: 500;
-        text-decoration-line: strikethrough;
+        text-decoration-line: line-through;
         color: #3D3F43;
     }
 
@@ -211,6 +205,7 @@
     }
 
     .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className) :global(.vtex-store-components-3-x-price_sellingPriceContainer){
+        order: -1;
         margin: 0;
         padding: 0;
     }

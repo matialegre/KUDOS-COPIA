@@ -16,6 +16,14 @@
     
     },
 
+    "inline-price#pdp": {
+
+      "props": {
+        "label": "inline-price"
+      }
+
+    },
+
     "flex-layout.row#priceAndDiscountPdp": {
 
         "props": {
@@ -25,8 +33,7 @@
           "colSizing": "auto"
         },
         "children": [
-          "vtex.store-components:product-price",
-          "product-price-savings"
+          "inline-price#pdp"
         ]
     
     },
@@ -62,8 +69,8 @@
         "flex-layout.row#priceAndDiscountPdp",
         "net-price",
         "rich-text#tituloCuotas",
-        "product-installments#habituales-max",
         "product-installments#habituales-min",
+        "product-installments#habituales-max",
         // "rich-text#cucardaEnvioGratis",
         "envio-gratis",
         "modal-trigger#example",
@@ -71,9 +78,11 @@
         // "sku-selector",
         // "guia-talles",
         "product-quantity",
-        "add-to-cart-button#comprar-ahora-pdp",
-        "add-to-cart-button#add-to-cart-pdp",
-        "shipping-simulator"
+        "size-out-of-stock",
+        "official-store",
+        "buy-now-button",
+        "add-to-cart-button-custom",
+        "shipping-options"
       ]
 
     },
@@ -88,8 +97,7 @@
       },
     
       "children": [
-        "availability-notify", //VTEX ya no ofrece mantenimiento a esta aplicacion
-        "add-to-cart-button#add-to-cart-pdp"
+        "availability-notify" //VTEX ya no ofrece mantenimiento a esta aplicacion
       ]
 
     },
@@ -117,7 +125,8 @@
 
       "props": {
         "pickStrategy": "min",
-        "onlyInterestFree": true
+        "onlyInterestFree": true,
+        "targetInstallments": 3
       }
 
     },
@@ -281,27 +290,5 @@
         "maxItems": 20
       }
 
-    },
-
-    "add-to-cart-button#comprar-ahora-pdp": {
-
-        "props": {
-            "blockClass": "comprar-ahora-pdp",
-            "isOneClickBuy": true,
-            "text": "COMPRAR AHORA!"
-        }
-
-    },
-
-    "add-to-cart-button#add-to-cart-pdp":{
-
-      "props": {
-        "blockClass": "add-to-cart-pdp",
-        "isOneClickBuy": false,
-        "text": "AÑADIR AL CARRITO",
-        "unavailableText": "AÑADIR AL CARRITO"
-      }
-
     }
-
 }
