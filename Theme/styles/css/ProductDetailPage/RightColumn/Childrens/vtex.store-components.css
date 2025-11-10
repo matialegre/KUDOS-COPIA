@@ -82,11 +82,16 @@
 
 /* SKU SELECTOR - OCULTAR TALLES Y COLORES NO DISPONIBLES */
 
-.skuSelectorItem--unavailable {
+:global(.vtex-store-components-3-x-skuSelectorItem):global(.vtex-store-components-3-x-unavailable) {
     display: none !important;
 }
 
-.skuSelectorItemImage--unavailable {
+:global(.vtex-store-components-3-x-skuSelectorItemImage):global(.vtex-store-components-3-x-unavailable) {
+    display: none !important;
+}
+
+/* Ocultar items de SKU no disponibles en general */
+:global(.vtex-store-components-3-x-unavailable) {
     display: none !important;
 }
 
