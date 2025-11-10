@@ -285,9 +285,10 @@
     "sku-selector": {
 
       "props": {
-        "hideImpossibleCombinations": true,
+        "hideImpossibleCombinations": false,
         "disableUnavailableSelectOptions": true,
-        "maxItems": 20
+        "maxItems": 20,
+        "initialSelection": "empty"
       }
 
     }
