@@ -10,7 +10,7 @@ const BenefitsBar = ({ benefits: customBenefits }) => {
       id: 'pago-blanco',
       image: '/arquivos/pago_blanco_2.png',
       alt: 'Medios de pago - logos en blanco',
-      href: '/institucional/medios-de-pago',
+      href: '/pagos-y-promociones',
       theme: 'dark'
     }
   ]
@@ -182,7 +182,7 @@ BenefitsBar.schema = {
           id: 'pago-blanco',
           image: '/arquivos/pago_blanco_2.png',
           alt: 'Medios de pago - logos en blanco',
-          href: '/institucional/medios-de-pago',
+          href: '/pagos-y-promociones',
           theme: 'dark'
         }
       ]

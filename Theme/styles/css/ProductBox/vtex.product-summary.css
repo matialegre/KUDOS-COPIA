@@ -38,15 +38,29 @@
 }
 /* fin imagen product box PLP */
 
+.imageStackContainer{
+    margin-top: -6px;
+}
+
+@media(min-width: 1025px){
+
+    .imageStackContainer{
+        margin-top: -12px;
+    }
+
+}
+
 .element{
-    padding: 0 0 48px 0;
+    padding: 0 0 58px 0;
     box-sizing: border-box;
     border: 1px solid var(--border-gray);
+    overflow: visible;
 }
 
 @media (max-width: 640px) {
     .element{
-        padding: 0 0 80px 0;
+        /* sin padding inferior: el botón queda pegado al borde blanco */
+        padding: 0 0 0 0;
     }
 }
 
@@ -191,10 +205,9 @@
 
 .price_sellingPriceContainer :global(.vtex-product-price-1-x-currencyDecimal),
 .price_sellingPriceContainer .currencyDecimal{
-    display: inline;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 700;
+    /* ocultamos decimales en el precio principal del product box
+       para que no se vea la coma final luego de los miles */
+    display: none;
 }
 
 .currencyContainer{
@@ -273,6 +286,16 @@
 .price_listPriceContainer .price_listPrice{
     margin: 0;
     padding: 0;
+}
+
+@media (max-width: 640px) {
+
+    /* en PLP mobile ocultamos el precio tachado para que
+       todas las cards queden alineadas y más limpias */
+    :global(.vtex-search-result-3-x-searchResultContainer) .price_listPriceContainer{
+        display: none;
+    }
+
 }
 
 .price_listPriceContainer .price_listPrice .currencyContainer{

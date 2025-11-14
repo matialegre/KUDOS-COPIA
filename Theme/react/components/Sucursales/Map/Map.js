@@ -8,8 +8,8 @@ const Map = ( { latitud, longitud, zoomVal } ) => {
 
   // SIZE MAP
   const containerStyle = {
-    width: '543px',
-    height: '400px'
+    width: '100%',
+    height: '500px'
   };
 
   // MAP POSITION

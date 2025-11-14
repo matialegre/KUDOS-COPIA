@@ -1,0 +1,335 @@
+/* CHECKOUT CART PAGE - MUNDO OUTDOOR */
+
+/* Ocultar elementos innecesarios */
+.cart-template .cart-links-bottom {
+    display: none;
+}
+
+/* Layout principal */
+.cart-template .container-main {
+    max-width: 1200px !important;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Grid de dos columnas */
+.cart-template .row-fluid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 32px;
+}
+
+/* Columna izquierda - productos */
+.cart-template .span8 {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* Columna derecha - resumen */
+.cart-template .span4 {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* Título "Producto" */
+.cart-template .cart-items h2,
+.cart-template .cart-items-title {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    line-height: 32px !important;
+    color: #090A10 !important;
+    margin-bottom: 24px !important;
+}
+
+/* Items del carrito */
+.cart-template .product-item {
+    display: flex !important;
+    gap: 16px !important;
+    padding: 20px 0 !important;
+    border-bottom: 1px solid #E5E5E5 !important;
+    align-items: flex-start !important;
+}
+
+.cart-template .product-item:last-child {
+    border-bottom: none !important;
+}
+
+/* Imagen del producto */
+.cart-template .product-image img {
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: contain !important;
+    border: 1px solid #E5E5E5 !important;
+    border-radius: 4px !important;
+}
+
+/* Nombre del producto */
+.cart-template .product-name,
+.cart-template .product-name a {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 22px !important;
+    color: #090A10 !important;
+    text-decoration: none !important;
+}
+
+/* SKU info */
+.cart-template .product-sku-info {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    color: #6B6B6B !important;
+    margin-top: 8px !important;
+}
+
+/* Precio */
+.cart-template .product-price .price-label {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 18px !important;
+    color: #090A10 !important;
+    display: block !important;
+    margin-bottom: 4px !important;
+}
+
+.cart-template .product-price .old-price {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    color: #6B6B6B !important;
+    text-decoration: line-through !important;
+    margin-right: 8px !important;
+}
+
+.cart-template .product-price .best-price {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: 24px !important;
+    color: #090A10 !important;
+}
+
+.cart-template .product-price .discount-badge {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 18px !important;
+    color: #EB5757 !important;
+    margin-left: 8px !important;
+}
+
+/* Cantidad */
+.cart-template .quantity-label {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 18px !important;
+    color: #090A10 !important;
+    display: block !important;
+    margin-bottom: 4px !important;
+}
+
+.cart-template .quantity-selector-container input {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 20px !important;
+    color: #090A10 !important;
+    border: 1px solid #E5E5E5 !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+}
+
+/* Total del producto */
+.cart-template .product-price .total-label {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 18px !important;
+    color: #090A10 !important;
+    display: block !important;
+    margin-bottom: 4px !important;
+    text-align: right !important;
+}
+
+.cart-template .product-price .total-selling {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: 24px !important;
+    color: #090A10 !important;
+    text-align: right !important;
+}
+
+/* Botón eliminar */
+.cart-template .item-remove {
+    color: #EB5757 !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 8px !important;
+    font-size: 20px !important;
+}
+
+/* Resumen de compra */
+.cart-template .cart-more-options,
+.cart-template #cart-to-orderform {
+    background: #FFFFFF !important;
+    border: 1px solid #E5E5E5 !important;
+    border-radius: 8px !important;
+    padding: 24px !important;
+}
+
+.cart-template .cart-more-options h2,
+.cart-template .summary-template-holder h2 {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    line-height: 28px !important;
+    color: #090A10 !important;
+    margin-bottom: 20px !important;
+}
+
+/* Código de descuento */
+.cart-template .coupon-label {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 18px !important;
+    color: #090A10 !important;
+    display: block !important;
+    margin-bottom: 8px !important;
+}
+
+.cart-template .coupon-fieldset input {
+    flex: 1 !important;
+    height: 48px !important;
+    padding: 12px 16px !important;
+    border: 1px solid #E5E5E5 !important;
+    border-radius: 4px !important;
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 16px !important;
+    color: #090A10 !important;
+}
+
+.cart-template .coupon-fieldset button {
+    height: 48px !important;
+    padding: 0 24px !important;
+    background: #090A10 !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 18px !important;
+    color: #FFFFFF !important;
+    cursor: pointer !important;
+    text-transform: uppercase !important;
+}
+
+/* Totales */
+.cart-template .summary-totalizers {
+    margin-bottom: 20px !important;
+}
+
+.cart-template .summary-totalizers td {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    padding: 8px 0 !important;
+}
+
+.cart-template .summary-totalizers .info {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    color: #6B6B6B !important;
+}
+
+.cart-template .summary-totalizers .monetary {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 18px !important;
+    color: #090A10 !important;
+    text-align: right !important;
+}
+
+.cart-template .summary-totalizers .total .info {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #090A10 !important;
+}
+
+.cart-template .summary-totalizers .total .monetary {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #090A10 !important;
+}
+
+/* Botón COMPRAR AHORA */
+.cart-template .btn-success,
+.cart-template #cart-to-orderform button {
+    width: 100% !important;
+    height: 56px !important;
+    background: #090A10 !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 20px !important;
+    color: #FFFFFF !important;
+    cursor: pointer !important;
+    text-transform: uppercase !important;
+    transition: all 0.2s !important;
+    margin-bottom: 12px !important;
+}
+
+.cart-template .btn-success:hover,
+.cart-template #cart-to-orderform button:hover {
+    background: #2C2D30 !important;
+}
+
+/* Botón CONTINUAR COMPRANDO */
+.cart-template .cart-links a {
+    width: 100% !important;
+    height: 56px !important;
+    background: #FFFFFF !important;
+    border: 1px solid #090A10 !important;
+    border-radius: 4px !important;
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 20px !important;
+    color: #090A10 !important;
+    cursor: pointer !important;
+    text-transform: uppercase !important;
+    transition: all 0.2s !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+}
+
+.cart-template .cart-links a:hover {
+    background: #F5F5F5 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cart-template .row-fluid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    
+    .cart-template .container-main {
+        padding: 20px 16px !important;
+    }
+    
+    .cart-template .product-item {
+        flex-direction: column !important;
+    }
+}

@@ -1,15 +1,179 @@
-.flexRowContent--image-card-container{
-    width: 115px;
+/* Contenedor principal */
+.flexRow--logos-row-pagos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.flexRowContent--image-card-container .stretchChildrenWidth{
-    justify-content: left;
+/* Wrapper interno correcto de VTEX para la fila */
+.flexRowContent--logos-row-pagos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 4px;
+    row-gap: 4px;
 }
 
 @media (max-width: 640px) {
-
-    .flexRowContent--image-card-container{
-        width: 99.76px;
+    .flexRow--logos-row-pagos {
+        gap: 4px;
+        margin-bottom: 28px;
     }
+    .flexRowContent--logos-row-pagos {
+        column-gap: 4px;
+        row-gap: 4px;
+        justify-content: center;
+    }
+}
 
+/* Tarjetas de logos */
+.flexCol--logo-card-pagos {
+    background: #FFFFFF;
+    border: 1px solid #E9EAED;
+    border-radius: 8px;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 150px;
+    max-width: 150px;
+    flex: 0 0 auto;
+}
+
+/* Asegurar que el wrapper del col no estire al 100% */
+.flexColChild--logo-card-pagos {
+    width: auto;
+}
+
+@media (max-width: 640px) {
+    .flexCol--logo-card-pagos {
+        width: 130px;
+        max-width: 130px;
+        padding: 16px 12px;
+    }
+    .flexColChild--logo-card-pagos {
+        width: auto;
+    }
+}
+
+/* Tarjetas pequeñas (Promociones Habituales y Otros medios) */
+.flexCol--logo-card-pagos-small {
+    background: #FFFFFF;
+    border: 1px solid #E9EAED;
+    border-radius: 8px;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 150px;
+    max-width: 150px;
+    flex: 0 0 auto;
+}
+
+.flexColChild--logo-card-pagos-small {
+    width: auto;
+}
+
+@media (max-width: 640px) {
+    .flexCol--logo-card-pagos-small {
+        width: 130px;
+        max-width: 130px;
+        padding: 16px 12px;
+    }
+    .flexColChild--logo-card-pagos-small {
+        width: auto;
+    }
+}
+
+/* Fila de logos pequeños */
+.flexRow--logos-row-pagos-small {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 24px;
+}
+
+.flexRowContent--logos-row-pagos-small {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 4px;
+    row-gap: 4px;
+}
+
+@media (max-width: 640px) {
+    .flexRow--logos-row-pagos-small {
+        gap: 4px;
+    }
+    .flexRowContent--logos-row-pagos-small {
+        column-gap: 4px;
+        row-gap: 4px;
+    }
+}
+
+/* Secciones inferiores (Promociones Habituales y Otros medios) */
+.flexRow--bottom-sections-row-pagos {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 48px;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flexRowContent--bottom-sections-row-pagos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 16px;
+}
+
+@media (max-width: 640px) {
+    .flexRow--bottom-sections-row-pagos {
+        flex-direction: column;
+        gap: 32px;
+        margin-top: 32px;
+    }
+    .flexRowContent--bottom-sections-row-pagos {
+        column-gap: 16px;
+    }
+}
+
+.flexCol--bottom-section-col-pagos {
+    flex: 1;
+}
+
+/* Contenedor compartido de la página (asegura centrado global) */
+.flexRow--shared-container-constitucionales {
+    justify-content: center;
+}
+
+.flexRowContent--shared-container-constitucionales {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flexCol--shared-container-constitucionales-col,
+.flexColChild--shared-container-constitucionales-col {
+    width: 100%;
 }

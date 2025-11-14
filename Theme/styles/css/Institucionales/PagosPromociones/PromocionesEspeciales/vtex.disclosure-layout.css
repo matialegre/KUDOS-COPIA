@@ -1,7 +1,5 @@
 .trigger--triger-dropdown-promociones-especiales{
     padding-right: 10px;
-    max-height: 80px;
-    height: 80px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #E9EAED;
@@ -14,8 +12,6 @@
         grid-template-areas: 
             "a b"
             "c d";
-        max-height: 109px;
-        height: 109px;
     }
 
     .trigger--triger-dropdown-promociones-especiales :global(.vtex-flex-layout-0-x-flexRow--image-card-container){

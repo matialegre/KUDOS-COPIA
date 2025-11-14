@@ -71,6 +71,7 @@ del maximo del contenedor del listado
     justify-content: center;
     min-width: 235px;
     max-width: 235px !important;
+    /* altura fija en desktop para que todas las cards de la fila queden alineadas */
     height: 481px;
 }
 
@@ -79,7 +80,9 @@ del maximo del contenedor del listado
     :global(.vtex-search-result-3-x-galleryItem){
         min-width: 170px;
         max-width: 170px !important;
-        height: 400px;
+        /* en mobile dejamos que la altura se adapte al contenido
+           para que imagen, precios y botón nunca se corten */
+        height: auto;
     }
 
 }

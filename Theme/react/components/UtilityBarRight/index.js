@@ -1,9 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { useOrderForm } from 'vtex.order-manager/OrderForm'
 
 import styles from './index.css'
 
 const UtilityBarRight = ({ items }) => {
+  const { orderForm } = useOrderForm() || {}
+
+  const totalItems = orderForm && Array.isArray(orderForm.items)
+    ? orderForm.items.reduce((sum, item) => sum + (item.quantity || 0), 0)
+    : 0
+
   if (!items || !items.length) {
     return null
   }
@@ -18,12 +25,19 @@ const UtilityBarRight = ({ items }) => {
           aria-label={item.ariaLabel || item.label || undefined}
         >
           {item.icon && (
-            <img
-              src={item.icon}
-              alt=""
-              className={styles.utilityIcon}
-              aria-hidden="true"
-            />
+            <span className={styles.utilityIconWrapper}>
+              <img
+                src={item.icon}
+                alt=""
+                className={styles.utilityIcon}
+                aria-hidden="true"
+              />
+              {item.id === 'cart' && totalItems > 0 && (
+                <span className={styles.cartBadge}>
+                  {totalItems > 99 ? '99+' : totalItems}
+                </span>
+              )}
+            </span>
           )}
           {item.label ? (
             <span className={styles.utilityLabel}>{item.label}</span>

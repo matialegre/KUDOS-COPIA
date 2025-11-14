@@ -1,5 +1,8 @@
 {
   "store.custom#menu-editor": {
     "path": "/menu-editor"
+  },
+  "store.custom#pagos-promociones": {
+    "path": "/pagos-y-promociones"
   }
 }

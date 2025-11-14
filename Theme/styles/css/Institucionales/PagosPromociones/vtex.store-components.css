@@ -1,13 +1,27 @@
-.imageElement--arrow-question-pagos-promociones{
-    margin-left: auto;
-    width: 24px;
-    height: 24px;
+/* Imágenes de logos grandes */
+.imageElement--logo-image-pagos {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
 }
 
 @media (max-width: 640px) {
-
-    .imageElement--arrow-question-pagos-promociones{
-        grid-area: b;
+    .imageElement--logo-image-pagos {
+        max-width: 120px;
     }
+}
 
+/* Imágenes de logos pequeños */
+.imageElement--logo-image-pagos-small {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 640px) {
+    .imageElement--logo-image-pagos-small {
+        max-width: 120px;
+    }
 }

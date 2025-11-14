@@ -1,11 +1,11 @@
 const sucursalesData = [
-
     {
-        "id": "1234",
-        "name": "Mundo Outdoor",
+        "id": "1",
+        "name": "BAHÍA BLANCA",
+        "subtitle": "Alsina 288",
         "description": null,
         "instructions": "",
-        "formatted_address": "undefined",
+        "formatted_address": "Alsina 288, Bahía Blanca",
         "address": {
             "postalCode": "B8000",
             "country": {
@@ -13,7 +13,44 @@ const sucursalesData = [
                 "name": "Argentina"
             },
             "city": "Bahía Blanca",
-            "state": "Provincia de Buenos Aires",
+            "state": "Buenos Aires",
+            "neighborhood": "",
+            "street": "Alsina",
+            "number": "288",
+            "complement": null,
+            "reference": "",
+            "location": {
+                "latitude": -38.7183,
+                "longitude": -62.2663
+            }
+        },
+        "horarios": "Lunes a Sábados de 09:00 a 20:30",
+        "telefono": "",
+        "mainImage": "SUCURSAL-MUNDO-ALSINA-46.jpg",
+        "gallery": [
+            "SUCURSAL-MUNDO-ALSINA-46.jpg",
+            "SUCURSAL-MUNDO-ALSINA-47.jpg",
+            "SUCURSAL-MUNDO-ALSINA-49.jpg",
+            "SUCURSAL-MUNDO-ALSINA-48.jpg"
+        ],
+        "finalImage": "SUCURSAL-MUNDO-ALSINA-49.jpg",
+        "isActive": true
+    },
+    {
+        "id": "2",
+        "name": "BAHÍA BLANCA",
+        "subtitle": "San Martín 126",
+        "description": null,
+        "instructions": "",
+        "formatted_address": "San Martín 126, Bahía Blanca",
+        "address": {
+            "postalCode": "B8000",
+            "country": {
+                "acronym": "54",
+                "name": "Argentina"
+            },
+            "city": "Bahía Blanca",
+            "state": "Buenos Aires",
             "neighborhood": "",
             "street": "San Martín",
             "number": "126",
@@ -26,67 +63,69 @@ const sucursalesData = [
         },
         "horarios": "Lunes a Sábados de 09:00 a 20:30",
         "telefono": "",
-        "isActive": true,
-        "distance": null,
-        "seller": "mundooutdoorar",
-        "_sort": [null],
-        "businessHours": [
-            {
-                "dayOfWeek": 1,
-                "openingTime": "09:00:00",
-                "closingTime": "20:30:00"
-            },
-            {
-                "dayOfWeek": 2,
-                "openingTime": "09:00:00",
-                "closingTime": "20:30:00"
-            },
-            {
-                "dayOfWeek": 3,
-                "openingTime": "09:00:00",
-                "closingTime": "20:30:00"
-            },
-            {
-                "dayOfWeek": 4,
-                "openingTime": "09:00:00",
-                "closingTime": "20:30:00"
-            },
-            {
-                "dayOfWeek": 5,
-                "openingTime": "09:00:00",
-                "closingTime": "20:30:00"
-            },
-            {
-                "dayOfWeek": 6,
-                "openingTime": "09:00:00",
-                "closingTime": "20:30:00"
-            }
+        "mainImage": "SUCURSAL-MUNDO-SAN-AMRTIN-46.jpg",
+        "gallery": [
+            "SUCURSAL-MUNDO-SAN-AMRTIN-46.jpg",
+            "SUCURSAL-MUNDO-SAN-AMRTIN-47.jpg",
+            "SUCURSAL-MUNDO-SAN-AMRTIN-49.jpg",
+            "SUCURSAL-MUNDO-SAN-AMRTIN-48.jpg"
         ],
-        "tagsLabel": [],
-        "pickupHolidays": [],
-        "isThirdPartyPickup": false,
-        "accountOwnerName": "mundooutdoorar",
-        "accountOwnerId": "efb846702f4440d08faac01fcc57850a",
-        "parentAccountName": null,
-        "originalId": null
+        "finalImage": "SUCURSAL-MUNDO-SAN-AMRTIN-49.jpg",
+        "isActive": true
     },
-
     {
-        "id": "12345",
-        "name": "Mundo Outdoor",
+        "id": "3",
+        "name": "BAHÍA BLANCA",
+        "subtitle": "Plaza Shopping",
         "description": null,
         "instructions": "",
-        "formatted_address": "undefined",
+        "formatted_address": "Plaza Shopping, Bahía Blanca",
         "address": {
             "postalCode": "B8000",
             "country": {
                 "acronym": "54",
                 "name": "Argentina"
             },
-            "city": "CABA Palermo hollywood",
-            "state": "Provincia de Buenos Aires",
+            "city": "Bahía Blanca",
+            "state": "Buenos Aires",
             "neighborhood": "",
-            "street": "Santa Fé",
+            "street": "Plaza Shopping",
+            "number": "",
+            "complement": null,
+            "reference": "",
+            "location": {
+                "latitude": -38.7196,
+                "longitude": -62.2694
+            }
+        },
+        "horarios": "Lunes a Sábados de 09:00 a 20:30",
+        "telefono": "",
+        "mainImage": "SUCURSAL-MUNDO-SHOPPING-46.jpg",
+        "gallery": [
+            "SUCURSAL-MUNDO-SHOPPING-46.jpg",
+            "SUCURSAL-MUNDO-SHOPPING-47.jpg",
+            "SUCURSAL-MUNDO-SHOPPING-48.jpg"
+        ],
+        "finalImage": "SUCURSAL-MUNDO-SHOPPING-48.jpg",
+        "isActive": true
+    },
+    {
+        "id": "4",
+        "name": "BUENOS AIRES",
+        "subtitle": "Av. Santa Fé 4830",
+        "description": null,
+        "instructions": "",
+        "formatted_address": "Av. Santa Fé 4830, Buenos Aires",
+        "address": {
+            "postalCode": "C1425",
+            "country": {
+                "acronym": "54",
+                "name": "Argentina"
+            },
+            "city": "Buenos Aires",
+            "state": "CABA",
+            "neighborhood": "Palermo",
+            "street": "Av. Santa Fé",
             "number": "4830",
             "complement": null,
             "reference": "",
@@ -97,51 +136,53 @@ const sucursalesData = [
         },
         "horarios": "Lunes a Sábados de 09:00 a 20:30",
         "telefono": "1158633575",
-        "isActive": true,
-        "distance": null,
-        "seller": "mundooutdoorar",
-        "_sort": [null],
-        "businessHours": [
-            {
-                "dayOfWeek": 1,
-                "openingTime": "09:00:00",
-                "closingTime": "20:30:00"
-            },
-            {
-                "dayOfWeek": 2,
-                "openingTime": "09:00:00",
-                "closingTime": "20:30:00"
-            },
-            {
-                "dayOfWeek": 3,
-                "openingTime": "09:00:00",
-                "closingTime": "20:30:00"
-            },
-            {
-                "dayOfWeek": 4,
-                "openingTime": "09:00:00",
-                "closingTime": "20:30:00"
-            },
-            {
-                "dayOfWeek": 5,
-                "openingTime": "09:00:00",
-                "closingTime": "20:30:00"
-            },
-            {
-                "dayOfWeek": 6,
-                "openingTime": "09:00:00",
-                "closingTime": "20:30:00"
-            }
+        "mainImage": "SUCURSAL-MUNDO-CABA-46.jpg",
+        "gallery": [
+            "SUCURSAL-MUNDO-CABA-46.jpg",
+            "SUCURSAL-MUNDO-CABA-47.jpg",
+            "SUCURSAL-MUNDO-CABA-49.jpg",
+            "SUCURSAL-MUNDO-CABA-48.jpg"
         ],
-        "tagsLabel": [],
-        "pickupHolidays": [],
-        "isThirdPartyPickup": false,
-        "accountOwnerName": "mundooutdoorar",
-        "accountOwnerId": "efb846702f4440d08faac01fcc57850a",
-        "parentAccountName": null,
-        "originalId": null
+        "finalImage": "SUCURSAL-MUNDO-CABA-49.jpg",
+        "isActive": true
+    },
+    {
+        "id": "5",
+        "name": "GENERAL ROCA",
+        "subtitle": "Tucumán 850",
+        "description": null,
+        "instructions": "",
+        "formatted_address": "Tucumán 850, General Roca",
+        "address": {
+            "postalCode": "R8332",
+            "country": {
+                "acronym": "54",
+                "name": "Argentina"
+            },
+            "city": "General Roca",
+            "state": "Río Negro",
+            "neighborhood": "",
+            "street": "Tucumán",
+            "number": "850",
+            "complement": null,
+            "reference": "",
+            "location": {
+                "latitude": -39.0333,
+                "longitude": -67.5833
+            }
+        },
+        "horarios": "Lunes a Sábados de 09:00 a 20:30",
+        "telefono": "",
+        "mainImage": "SUCURSAL-ROCA-46.jpg",
+        "gallery": [
+            "SUCURSAL-ROCA-46.jpg",
+            "SUCURSAL-ROCA-47.jpg",
+            "SUCURSAL-ROCA-50.jpg",
+            "SUCURSAL-ROCA-48.jpg"
+        ],
+        "finalImage": "SUCURSAL-ROCA-50.jpg",
+        "isActive": true
     }
-
 ];
 
 export default sucursalesData;

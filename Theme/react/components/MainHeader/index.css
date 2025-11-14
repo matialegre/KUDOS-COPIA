@@ -196,17 +196,17 @@
 /* Mobile Icons */
 .mobileIcons {
   display: none;
-  gap: 12px;
+  gap: 10px;
   align-items: center;
-  margin-left: auto;
+  margin-left: 0;
 }
 
 .mobileIcon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 34px;
   text-decoration: none;
   transition: opacity 0.2s ease;
   padding: 4px;
@@ -257,33 +257,135 @@
   transition: all 0.3s ease;
 }
 
-/* Mobile Menu */
+/* Mobile Menu (panel desplegable) */
 .mobileMenu {
   display: none;
   flex-direction: column;
   background-color: #000000;
-  padding: 20px 40px;
-  border-top: 1px solid #333333;
+  border-top: 1px solid #222222;
 }
 
-.mobileMenuItem {
+.mobileMenuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.mobileMenuHeaderTitle {
   font-family: 'Gotham', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #FFFFFF;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  padding: 15px 0;
-  border-bottom: 1px solid #333333;
 }
 
-.mobileMenuItem:last-child {
+.mobileMenuHeaderClose {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.mobileMenuSections {
+  background-color: #000000;
+}
+
+.mobileMenuSection {
   border-bottom: none;
 }
 
-.mobileMenuItem:hover {
-  opacity: 0.7;
+.mobileMenuSectionHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background-color: #000000; /* nivel 1: departamentos (HOMBRE, MUJER, etc.) */
+  border: none;
+  cursor: pointer;
+}
+
+.mobileMenuSectionLabel {
+  font-family: 'Gotham', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+
+.mobileMenuSectionIcon {
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.mobileMenuSectionBody {
+  background-color: #FFFFFF; /* contenedor nivel 2: bloque blanco debajo del depto */
+  padding: 8px 16px 8px 16px;
+  border-top: 1px solid #222222; /* una sola línea limpia entre negro y blanco */
+}
+
+.mobileSubsection {
+  border-top: none;
+}
+
+.mobileSubsectionHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  background-color: #FFFFFF; /* fila de subcategoría (Calzado, Indumentaria, etc.) */
+  border: none;
+  cursor: pointer;
+}
+
+.mobileSubsectionLabel {
+  font-family: 'Gotham', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111111;
+  text-align: left;
+}
+
+.mobileSubsectionIconDark {
+  font-size: 18px;
+  font-weight: 600;
+  color: #555555;
+}
+
+.mobileSubsectionItems {
+  padding: 4px 0 8px 12px;
+}
+
+.mobileSubmenuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-family: 'Gotham', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  color: #333333;
+  background-color: #FFFFFF; /* nivel 3: items internos sobre blanco */
+  text-decoration: none;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.mobileSubmenuItem:last-child {
+  border-bottom: none;
+}
+
+.mobileSubmenuItemHighlight {
+  color: #EB5757;
+  font-weight: 600;
+}
+
+.mobileSubmenuItemHighlight:hover {
+  opacity: 0.8;
 }
 
 /* Responsive */
@@ -303,21 +405,19 @@
 
 @media (max-width: 768px) {
   .headerContainer {
-    display: grid;
-    grid-template-columns: 56px 1fr auto;
-    grid-template-rows: 60px;
-    align-items: start;
-    padding: 8px 12px 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
     height: 60px;
-    gap: 4px;
+    position: relative;
+    gap: 0;
   }
 
   .logoLink {
-    grid-column: 2;
-    justify-self: center;
-    align-self: center;
     margin: 0;
-    transform: translateX(20px);
+    position: relative;
+    transform: none;
   }
 
   .logo {
@@ -335,20 +435,23 @@
 
   .mobileIcons {
     display: flex;
-    grid-column: 3;
-    justify-self: end;
-    align-self: center;
-    gap: 10px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 8px;
     margin-left: 0;
+    padding-right: 0;
   }
 
   .mobileMenuToggle {
     display: flex;
-    grid-column: 1;
-    justify-self: start;
-    align-self: center;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
     margin-left: 0;
-    margin-top: -65px;
+    margin-top: 0;
     align-items: center;
     justify-content: center;
     width: 48px;
@@ -357,6 +460,8 @@
 
   .mobileMenu {
     display: flex;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
   }
 }
 

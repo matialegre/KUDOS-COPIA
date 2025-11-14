@@ -64,7 +64,7 @@
             "blockClass": "tendencias-image",
             "src": "/arquivos/tendencias-dc.jpg",
             "link": {
-                "url": "/dc"
+                "url": "/marcas/dc"
             }
         }
 
@@ -76,7 +76,7 @@
             "blockClass": "tendencias-image",
             "src": "/arquivos/imagne_web_roxy_comprimido.jpg",
             "link": {
-                "url": "/roxy"
+                "url": "/marcas/roxy"
             }
         }
 
@@ -88,7 +88,7 @@
             "blockClass": "tendencias-image",
             "src": "/arquivos/tendencias-salomon.jpg",
             "link": {
-                "url": "/salomon"
+                "url": "/marcas/salomon"
             }
         }
 
@@ -122,7 +122,7 @@
             "blockClass": "tendencias-mobile-image",
             "src": "/arquivos/tendencia-12-1221.jpg",
             "link": {
-                "url": "/dc"
+                "url": "/marcas/dc"
             }
         }
     },
@@ -132,7 +132,7 @@
             "blockClass": "tendencias-mobile-image",
             "src": "/arquivos/tendencia-12-1331.jpg",
             "link": {
-                "url": "/roxy"
+                "url": "/marcas/roxy"
             }
         }
     },
@@ -142,7 +142,7 @@
             "blockClass": "tendencias-mobile-image",
             "src": "/arquivos/tendencia-12-14-1441.jpg",
             "link": {
-                "url": "/salomon"
+                "url": "/marcas/salomon"
             }
         }
     }

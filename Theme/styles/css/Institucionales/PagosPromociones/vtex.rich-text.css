@@ -1,57 +1,86 @@
-.span--text-notify-pagos-promociones{
-    color: #EB5757;
+/* Título de sección (Promociones Bancarias, Tarjeta de crédito, etc.) */
+.wrapper--text-section-title-pagos {
+    margin-top: 48px;
+    margin-bottom: 12px;
 }
 
-.outstanding--text-notify-pagos-promociones{
-    color: #EB5757;
+.wrapper--first-section {
+    margin-top: 32px;
 }
 
-.wrapper--text-bold-pagos-promociones{
-    margin-top: 53px;
-}
-
-.wrapper--text-bold-pagos-promociones.wrapper--first-of-type{
-    margin-top: 28px;
-}
-
-.paragraph--text-bold-pagos-promociones{
+.paragraph--text-section-title-pagos {
     font-family: 'Gotham';
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 28px;
-    letter-spacing: -0.08px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
     color: #090A10;
+    text-align: center;
 }
 
 @media (max-width: 640px) {
-
-    .paragraph--text-bold-pagos-promociones{
-        font-size: 18px;
+    .paragraph--text-section-title-pagos {
+        font-size: 20px;
+        line-height: 28px;
     }
-
 }
 
-.paragraph--text-plain-pagos-promociones{
-    margin-top: 9px;
+/* Subtítulo descriptivo */
+.wrapper--text-subtitle-pagos {
+    margin-bottom: 8px;
+}
+
+.paragraph--text-subtitle-pagos {
     font-family: 'GothamBook';
     font-size: 16px;
-    line-height: 25px;
-    color: #090A10;
+    font-weight: 400;
+    line-height: 24px;
+    color: #303030;
+    text-align: center;
 }
 
 @media (max-width: 640px) {
-
-    .paragraph--text-plain-pagos-promociones{
-        font-size: 14.5px;
+    .paragraph--text-subtitle-pagos {
+        font-size: 14px;
+        line-height: 20px;
     }
-
 }
 
-.paragraph--text-notify-pagos-promociones{
-    margin-top: 9px;
+/* Texto bold en tarjetas (Todos los días) */
+.wrapper--logo-text-bold-pagos {
+    margin-top: 12px;
+}
+
+.paragraph--logo-text-bold-pagos {
     font-family: 'Gotham';
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
-    letter-spacing: 0.1px;
+    line-height: 18px;
     color: #090A10;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .paragraph--logo-text-bold-pagos {
+        font-size: 13px;
+    }
+}
+
+/* Texto verde en tarjetas (X cuotas sin interés) */
+.wrapper--logo-text-green-pagos {
+    margin-top: 4px;
+}
+
+.paragraph--logo-text-green-pagos {
+    font-family: 'Gotham';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #27AE60;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .paragraph--logo-text-green-pagos {
+        font-size: 13px;
+    }
 }

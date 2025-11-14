@@ -57,7 +57,9 @@
     "vtex.store-form": "0.x",
     "vtex.order-items": "0.x",
     "vtex.condition-layout": "2.x",
-    "vtex.modal-layout": "0.x"
+    "vtex.modal-layout": "0.x",
+    "vtex.checkout-summary": "0.x",
+    "vtex.order-manager": "0.x"
   },
   "peerDependencies": {
     "vtex.availability-notify": "1.x"

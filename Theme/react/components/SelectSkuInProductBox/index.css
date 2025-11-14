@@ -29,7 +29,8 @@
         position: relative;
         bottom: auto;
         left: auto;
-        margin: 12px auto 0;
+        /* menos espacio entre miniaturas y botón en mobile */
+        margin: 6px auto 0;
     }
 
 }

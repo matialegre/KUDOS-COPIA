@@ -1,0 +1,714 @@
+{
+    "store.custom#pagos-promociones": {
+        "children": [
+            "flex-layout.row#shared-container-pagos-promociones"
+        ]
+    },
+
+    "flex-layout.row#shared-container-pagos-promociones": {
+        "props": {
+            "blockClass": "shared-container-constitucionales",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+        "children": [
+            "flex-layout.col#shared-container-pagos-promociones-col"
+        ]
+    },
+
+    "flex-layout.col#shared-container-pagos-promociones-col": {
+        "props": {
+            "blockClass": "shared-container-constitucionales-col",
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left",
+            "colSizing": "auto"
+        },
+        "children": [
+            "breadcrumb-custom",
+            "rich-text#text-title-pagos-promociones",
+            "rich-text#text-section-promociones-bancarias",
+            "rich-text#text-subtitle-promociones-bancarias",
+            "flex-layout.row#logos-promociones-bancarias",
+            "rich-text#text-section-tarjetas-credito",
+            "flex-layout.row#logos-tarjetas-credito",
+            "rich-text#text-section-tarjetas-debito",
+            "flex-layout.row#logos-tarjetas-debito",
+            "flex-layout.row#promociones-habituales-otros-medios"
+        ]
+    },
+
+    "rich-text#text-title-pagos-promociones": {
+        "props": {
+            "blockClass": "text-title-institucionales",
+            "text": "Pagos y promociones"
+        }
+    },
+
+    "rich-text#text-section-promociones-bancarias": {
+        "props": {
+            "blockClass": ["text-section-title-pagos", "first-section"],
+            "text": "Promociones Bancarias"
+        }
+    },
+
+    "rich-text#text-subtitle-promociones-bancarias": {
+        "props": {
+            "blockClass": "text-subtitle-pagos",
+            "text": "Hacé clic en cada logo para conocer los detalles y vigencia de cada promoción"
+        }
+    },
+
+    "flex-layout.row#logos-promociones-bancarias": {
+        "props": {
+            "blockClass": "logos-row-pagos",
+            "preserveLayoutOnMobile": false,
+            "colGap": 0,
+            "horizontalAlign": "center"
+        },
+        "children": [
+            "flex-layout.col#logo-banco-provincia",
+            "flex-layout.col#logo-credicoop",
+            "flex-layout.col#logo-bbva-modo",
+            "flex-layout.col#logo-naranja-x",
+            "flex-layout.col#logo-coopeplus"
+        ]
+    },
+
+    "flex-layout.col#logo-banco-provincia": {
+        "props": {
+            "blockClass": "logo-card-pagos"
+        },
+        "children": [
+            "image#banco-provincia",
+            "rich-text#banco-provincia-text1",
+            "rich-text#banco-provincia-text2"
+        ]
+    },
+
+    "image#banco-provincia": {
+        "props": {
+            "blockClass": "logo-image-pagos",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-51.png",
+            "maxWidth": "120px"
+        }
+    },
+
+    "rich-text#banco-provincia-text1": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    },
+
+    "rich-text#banco-provincia-text2": {
+        "props": {
+            "blockClass": "logo-text-green-pagos",
+            "text": "6 cuotas sin interés"
+        }
+    },
+
+    "flex-layout.col#logo-credicoop": {
+        "props": {
+            "blockClass": "logo-card-pagos"
+        },
+        "children": [
+            "image#credicoop",
+            "rich-text#credicoop-text1",
+            "rich-text#credicoop-text2"
+        ]
+    },
+
+    "image#credicoop": {
+        "props": {
+            "blockClass": "logo-image-pagos",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-52.png",
+            "maxWidth": "120px"
+        }
+    },
+
+    "rich-text#credicoop-text1": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    },
+
+    "rich-text#credicoop-text2": {
+        "props": {
+            "blockClass": "logo-text-green-pagos",
+            "text": "6 cuotas sin interés"
+        }
+    },
+
+    "flex-layout.col#logo-bbva-modo": {
+        "props": {
+            "blockClass": "logo-card-pagos"
+        },
+        "children": [
+            "image#bbva-modo",
+            "rich-text#bbva-modo-text1",
+            "rich-text#bbva-modo-text2"
+        ]
+    },
+
+    "image#bbva-modo": {
+        "props": {
+            "blockClass": "logo-image-pagos",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-53.png",
+            "maxWidth": "120px"
+        }
+    },
+
+    "rich-text#bbva-modo-text1": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    },
+
+    "rich-text#bbva-modo-text2": {
+        "props": {
+            "blockClass": "logo-text-green-pagos",
+            "text": "6 cuotas sin interés"
+        }
+    },
+
+    "flex-layout.col#logo-naranja-x": {
+        "props": {
+            "blockClass": "logo-card-pagos"
+        },
+        "children": [
+            "image#naranja-x",
+            "rich-text#naranja-x-text1",
+            "rich-text#naranja-x-text2"
+        ]
+    },
+
+    "image#naranja-x": {
+        "props": {
+            "blockClass": "logo-image-pagos",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-54.png",
+            "maxWidth": "120px"
+        }
+    },
+
+    "rich-text#naranja-x-text1": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    },
+
+    "rich-text#naranja-x-text2": {
+        "props": {
+            "blockClass": "logo-text-green-pagos",
+            "text": "6 cuotas sin interés"
+        }
+    },
+
+    "flex-layout.col#logo-coopeplus": {
+        "props": {
+            "blockClass": "logo-card-pagos"
+        },
+        "children": [
+            "image#coopeplus",
+            "rich-text#coopeplus-text1",
+            "rich-text#coopeplus-text2"
+        ]
+    },
+
+    "image#coopeplus": {
+        "props": {
+            "blockClass": "logo-image-pagos",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-55.png",
+            "maxWidth": "120px"
+        }
+    },
+
+    "rich-text#coopeplus-text1": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    },
+
+    "rich-text#coopeplus-text2": {
+        "props": {
+            "blockClass": "logo-text-green-pagos",
+            "text": "6 cuotas sin interés"
+        }
+    },
+
+    "rich-text#text-section-tarjetas-credito": {
+        "props": {
+            "blockClass": "text-section-title-pagos",
+            "text": "Tarjeta de crédito"
+        }
+    },
+
+    "flex-layout.row#logos-tarjetas-credito": {
+        "props": {
+            "blockClass": "logos-row-pagos",
+            "preserveLayoutOnMobile": false,
+            "colGap": 0,
+            "horizontalAlign": "center"
+        },
+        "children": [
+            "flex-layout.col#logo-visa-credito",
+            "flex-layout.col#logo-mastercard-credito",
+            "flex-layout.col#logo-amex-credito",
+            "flex-layout.col#logo-cabal-credito"
+        ]
+    },
+
+    "flex-layout.col#logo-visa-credito": {
+        "props": {
+            "blockClass": "logo-card-pagos"
+        },
+        "children": [
+            "image#visa-credito",
+            "rich-text#visa-credito-text1",
+            "rich-text#visa-credito-text2"
+        ]
+    },
+
+    "image#visa-credito": {
+        "props": {
+            "blockClass": "logo-image-pagos",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-56.png",
+            "maxWidth": "120px"
+        }
+    },
+
+    "rich-text#visa-credito-text1": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    },
+
+    "rich-text#visa-credito-text2": {
+        "props": {
+            "blockClass": "logo-text-green-pagos",
+            "text": "6 cuotas sin interés"
+        }
+    },
+
+    "flex-layout.col#logo-mastercard-credito": {
+        "props": {
+            "blockClass": "logo-card-pagos"
+        },
+        "children": [
+            "image#mastercard-credito",
+            "rich-text#mastercard-credito-text1",
+            "rich-text#mastercard-credito-text2"
+        ]
+    },
+
+    "image#mastercard-credito": {
+        "props": {
+            "blockClass": "logo-image-pagos",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-57.png",
+            "maxWidth": "120px"
+        }
+    },
+
+    "rich-text#mastercard-credito-text1": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    },
+
+    "rich-text#mastercard-credito-text2": {
+        "props": {
+            "blockClass": "logo-text-green-pagos",
+            "text": "6 cuotas sin interés"
+        }
+    },
+
+    "flex-layout.col#logo-amex-credito": {
+        "props": {
+            "blockClass": "logo-card-pagos"
+        },
+        "children": [
+            "image#amex-credito",
+            "rich-text#amex-credito-text1",
+            "rich-text#amex-credito-text2"
+        ]
+    },
+
+    "image#amex-credito": {
+        "props": {
+            "blockClass": "logo-image-pagos",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-58.png",
+            "maxWidth": "120px"
+        }
+    },
+
+    "rich-text#amex-credito-text1": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    },
+
+    "rich-text#amex-credito-text2": {
+        "props": {
+            "blockClass": "logo-text-green-pagos",
+            "text": "6 cuotas sin interés"
+        }
+    },
+
+    "flex-layout.col#logo-cabal-credito": {
+        "props": {
+            "blockClass": "logo-card-pagos"
+        },
+        "children": [
+            "image#cabal-credito",
+            "rich-text#cabal-credito-text1",
+            "rich-text#cabal-credito-text2"
+        ]
+    },
+
+    "image#cabal-credito": {
+        "props": {
+            "blockClass": "logo-image-pagos",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-60.png",
+            "maxWidth": "120px"
+        }
+    },
+
+    "rich-text#cabal-credito-text1": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    },
+
+    "rich-text#cabal-credito-text2": {
+        "props": {
+            "blockClass": "logo-text-green-pagos",
+            "text": "6 cuotas sin interés"
+        }
+    },
+
+    "rich-text#text-section-tarjetas-debito": {
+        "props": {
+            "blockClass": "text-section-title-pagos",
+            "text": "Tarjeta de débito"
+        }
+    },
+
+    "flex-layout.row#logos-tarjetas-debito": {
+        "props": {
+            "blockClass": "logos-row-pagos",
+            "preserveLayoutOnMobile": false,
+            "colGap": 0,
+            "horizontalAlign": "center"
+        },
+        "children": [
+            "flex-layout.col#logo-visa-debito",
+            "flex-layout.col#logo-maestro-debito",
+            "flex-layout.col#logo-cabal-debito"
+        ]
+    },
+
+    "flex-layout.col#logo-visa-debito": {
+        "props": {
+            "blockClass": "logo-card-pagos"
+        },
+        "children": [
+            "image#visa-debito",
+            "rich-text#visa-debito-text1",
+            "rich-text#visa-debito-text2"
+        ]
+    },
+
+    "image#visa-debito": {
+        "props": {
+            "blockClass": "logo-image-pagos",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-61.png",
+            "maxWidth": "120px"
+        }
+    },
+
+    "rich-text#visa-debito-text1": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    },
+
+    "rich-text#visa-debito-text2": {
+        "props": {
+            "blockClass": "logo-text-green-pagos",
+            "text": "6 cuotas sin interés"
+        }
+    },
+
+    "flex-layout.col#logo-maestro-debito": {
+        "props": {
+            "blockClass": "logo-card-pagos"
+        },
+        "children": [
+            "image#maestro-debito",
+            "rich-text#maestro-debito-text1",
+            "rich-text#maestro-debito-text2"
+        ]
+    },
+
+    "image#maestro-debito": {
+        "props": {
+            "blockClass": "logo-image-pagos",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-62.png",
+            "maxWidth": "120px"
+        }
+    },
+
+    "rich-text#maestro-debito-text1": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    },
+
+    "rich-text#maestro-debito-text2": {
+        "props": {
+            "blockClass": "logo-text-green-pagos",
+            "text": "6 cuotas sin interés"
+        }
+    },
+
+    "flex-layout.col#logo-cabal-debito": {
+        "props": {
+            "blockClass": "logo-card-pagos"
+        },
+        "children": [
+            "image#cabal-debito",
+            "rich-text#cabal-debito-text1",
+            "rich-text#cabal-debito-text2"
+        ]
+    },
+
+    "image#cabal-debito": {
+        "props": {
+            "blockClass": "logo-image-pagos",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-63.png",
+            "maxWidth": "120px"
+        }
+    },
+
+    "rich-text#cabal-debito-text1": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    },
+
+    "rich-text#cabal-debito-text2": {
+        "props": {
+            "blockClass": "logo-text-green-pagos",
+            "text": "6 cuotas sin interés"
+        }
+    },
+
+    "flex-layout.row#promociones-habituales-otros-medios": {
+        "props": {
+            "blockClass": "bottom-sections-row-pagos",
+            "preserveLayoutOnMobile": false,
+            "colGap": 0
+        },
+        "children": [
+            "flex-layout.col#promociones-habituales-section",
+            "flex-layout.col#otros-medios-section"
+        ]
+    },
+
+    "flex-layout.col#promociones-habituales-section": {
+        "props": {
+            "blockClass": "bottom-section-col-pagos",
+            "width": "50%"
+        },
+        "children": [
+            "rich-text#text-section-promociones-habituales",
+            "flex-layout.row#logos-promociones-habituales"
+        ]
+    },
+
+    "rich-text#text-section-promociones-habituales": {
+        "props": {
+            "blockClass": "text-section-title-pagos",
+            "text": "Promociones Habituales"
+        }
+    },
+
+    "flex-layout.row#logos-promociones-habituales": {
+        "props": {
+            "blockClass": "logos-row-pagos-small",
+            "preserveLayoutOnMobile": false,
+            "colGap": 0,
+            "horizontalAlign": "center"
+        },
+        "children": [
+            "flex-layout.col#logo-promo-hab-1",
+            "flex-layout.col#logo-promo-hab-2"
+        ]
+    },
+
+    "flex-layout.col#logo-promo-hab-1": {
+        "props": {
+            "blockClass": "logo-card-pagos-small"
+        },
+        "children": [
+            "image#promo-hab-1",
+            "rich-text#promo-hab-1-text1",
+            "rich-text#promo-hab-1-text2"
+        ]
+    },
+
+    "image#promo-hab-1": {
+        "props": {
+            "blockClass": "logo-image-pagos-small",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-64.png",
+            "maxWidth": "80px"
+        }
+    },
+
+    "rich-text#promo-hab-1-text1": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    },
+
+    "rich-text#promo-hab-1-text2": {
+        "props": {
+            "blockClass": "logo-text-green-pagos",
+            "text": "3 cuotas sin interés"
+        }
+    },
+
+    "flex-layout.col#logo-promo-hab-2": {
+        "props": {
+            "blockClass": "logo-card-pagos-small"
+        },
+        "children": [
+            "image#promo-hab-2",
+            "rich-text#promo-hab-2-text1",
+            "rich-text#promo-hab-2-text2"
+        ]
+    },
+
+    "image#promo-hab-2": {
+        "props": {
+            "blockClass": "logo-image-pagos-small",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-65.png",
+            "maxWidth": "80px"
+        }
+    },
+
+    "rich-text#promo-hab-2-text1": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    },
+
+    "rich-text#promo-hab-2-text2": {
+        "props": {
+            "blockClass": "logo-text-green-pagos",
+            "text": "6 cuotas sin interés"
+        }
+    },
+
+    "flex-layout.col#otros-medios-section": {
+        "props": {
+            "blockClass": "bottom-section-col-pagos",
+            "width": "50%"
+        },
+        "children": [
+            "rich-text#text-section-otros-medios",
+            "rich-text#text-subtitle-otros-medios",
+            "flex-layout.row#logos-otros-medios"
+        ]
+    },
+
+    "rich-text#text-section-otros-medios": {
+        "props": {
+            "blockClass": "text-section-title-pagos",
+            "text": "Otros medios de pago"
+        }
+    },
+
+    "rich-text#text-subtitle-otros-medios": {
+        "props": {
+            "blockClass": "text-subtitle-pagos",
+            "text": "Hacé clic en cada logo para conocer las condiciones legales."
+        }
+    },
+
+    "flex-layout.row#logos-otros-medios": {
+        "props": {
+            "blockClass": "logos-row-pagos-small",
+            "preserveLayoutOnMobile": false,
+            "colGap": 0,
+            "horizontalAlign": "center"
+        },
+        "children": [
+            "flex-layout.col#logo-mercado-pago",
+            "flex-layout.col#logo-modo"
+        ]
+    },
+
+    "flex-layout.col#logo-mercado-pago": {
+        "props": {
+            "blockClass": "logo-card-pagos-small"
+        },
+        "children": [
+            "image#mercado-pago",
+            "rich-text#mercado-pago-text"
+        ]
+    },
+
+    "image#mercado-pago": {
+        "props": {
+            "blockClass": "logo-image-pagos-small",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-66.png",
+            "maxWidth": "100px"
+        }
+    },
+
+    "rich-text#mercado-pago-text": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    },
+
+    "flex-layout.col#logo-modo": {
+        "props": {
+            "blockClass": "logo-card-pagos-small"
+        },
+        "children": [
+            "image#modo",
+            "rich-text#modo-text"
+        ]
+    },
+
+    "image#modo": {
+        "props": {
+            "blockClass": "logo-image-pagos-small",
+            "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-66.png",
+            "maxWidth": "100px"
+        }
+    },
+
+    "rich-text#modo-text": {
+        "props": {
+            "blockClass": "logo-text-bold-pagos",
+            "text": "Todos los días"
+        }
+    }
+}

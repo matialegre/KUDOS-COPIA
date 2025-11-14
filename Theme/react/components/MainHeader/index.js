@@ -8,6 +8,8 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
   const [searchQuery, setSearchQuery] = useState('')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
+  const [openMobileDept, setOpenMobileDept] = useState(null)
+  const [openMobileSub, setOpenMobileSub] = useState(null)
   const closeTimeoutRef = useRef(null)
 
   const handleOpenDropdown = (id) => {
@@ -39,9 +41,25 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
 
   const handleSearch = (e) => {
     e.preventDefault()
-    if (searchQuery.trim()) {
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`
-    }
+
+    const trimmed = searchQuery.trim()
+    if (!trimmed) return
+
+    const encoded = encodeURIComponent(trimmed)
+    // Usar el mismo patrón de búsqueda que la tienda productiva:
+    // /termino?_q=termino&map=ft
+    window.location.href = `/${encoded}?_q=${encoded}&map=ft`
+  }
+
+  const handleToggleMobileMenu = () => {
+    setMobileMenuOpen((prevOpen) => {
+      const nextOpen = !prevOpen
+      if (!nextOpen) {
+        setOpenMobileDept(null)
+        setOpenMobileSub(null)
+      }
+      return nextOpen
+    })
   }
 
   return (
@@ -122,6 +140,13 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
 
         {/* Mobile Icons */}
         <div className={styles.mobileIcons}>
+          <a href="/sucursales" className={styles.mobileIcon} aria-label="Sucursales">
+            <img
+              src="https://mundooutdoorar.vtexassets.com/arquivos/iconoblancobubi.png"
+              alt="Icono sucursales"
+              className={styles.mobileIconImage}
+            />
+          </a>
           <a href="/account" className={styles.mobileIcon} aria-label="Mi cuenta">
             <img
               src="https://mundooutdoorar.vtexassets.com/arquivos/usuarioblanco.png"
@@ -141,7 +166,7 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
         {/* Mobile Menu Toggle */}
         <button
           className={styles.mobileMenuToggle}
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onClick={handleToggleMobileMenu}
           aria-label="Toggle menu"
         >
           <span className={styles.hamburger}></span>
@@ -153,16 +178,118 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <nav className={styles.mobileMenu}>
-          {menuData.departments.map((dept) => (
-            <a
-              key={dept.id}
-              href={dept.href}
-              className={styles.mobileMenuItem}
-              onClick={() => setMobileMenuOpen(false)}
+          <div className={styles.mobileMenuHeader}>
+            <span className={styles.mobileMenuHeaderTitle}>Menú</span>
+            <button
+              type="button"
+              className={styles.mobileMenuHeaderClose}
+              onClick={() => {
+                setMobileMenuOpen(false)
+                setOpenMobileDept(null)
+                setOpenMobileSub(null)
+              }}
+              aria-label="Cerrar menú"
             >
-              {dept.label}
-            </a>
-          ))}
+              ×
+            </button>
+          </div>
+
+          <div className={styles.mobileMenuSections}>
+            {menuData.departments.map((dept) => {
+              const isOpen = openMobileDept === dept.id
+              const columns = dept.columns || []
+              const isBrandsDept = dept.id === 'marcas'
+              const brandItems = isBrandsDept
+                ? columns.flatMap((column) => column.items || [])
+                : []
+
+              return (
+                <div key={dept.id} className={styles.mobileMenuSection}>
+                  <button
+                    type="button"
+                    className={styles.mobileMenuSectionHeader}
+                    onClick={() => setOpenMobileDept(isOpen ? null : dept.id)}
+                  >
+                    <span className={styles.mobileMenuSectionLabel}>{dept.label}</span>
+                    <span className={styles.mobileMenuSectionIcon}>
+                      {isOpen ? '−' : '+'}
+                    </span>
+                  </button>
+
+                  {isOpen && columns.length > 0 && (
+                    <div className={styles.mobileMenuSectionBody}>
+                      {isBrandsDept
+                        ? brandItems.map((item, idx) => (
+                            <a
+                              key={idx}
+                              href={item.href}
+                              className={
+                                item.highlight
+                                  ? `${styles.mobileSubmenuItem} ${styles.mobileSubmenuItemHighlight}`
+                                  : styles.mobileSubmenuItem
+                              }
+                              onClick={() => {
+                                setMobileMenuOpen(false)
+                                setOpenMobileDept(null)
+                                setOpenMobileSub(null)
+                              }}
+                            >
+                              {item.label}
+                            </a>
+                          ))
+                        : columns.map((column, columnIdx) => {
+                            const subId = `${dept.id}-${columnIdx}`
+                            const isSubOpen = openMobileSub === subId
+                            const items = column.items || []
+
+                            return (
+                              <div key={subId} className={styles.mobileSubsection}>
+                                <button
+                                  type="button"
+                                  className={styles.mobileSubsectionHeader}
+                                  onClick={() =>
+                                    setOpenMobileSub(isSubOpen ? null : subId)
+                                  }
+                                >
+                                  <span className={styles.mobileSubsectionLabel}>
+                                    {column.title}
+                                  </span>
+                                  <span className={styles.mobileSubsectionIconDark}>
+                                    {isSubOpen ? '−' : '+'}
+                                  </span>
+                                </button>
+
+                                {isSubOpen && items.length > 0 && (
+                                  <div className={styles.mobileSubsectionItems}>
+                                    {items.map((item, idx) => (
+                                      <a
+                                        key={idx}
+                                        href={item.href}
+                                        className={
+                                          item.highlight
+                                            ? `${styles.mobileSubmenuItem} ${styles.mobileSubmenuItemHighlight}`
+                                            : styles.mobileSubmenuItem
+                                        }
+                                        onClick={() => {
+                                          setMobileMenuOpen(false)
+                                          setOpenMobileDept(null)
+                                          setOpenMobileSub(null)
+                                        }}
+                                      >
+                                        {item.label}
+                                      </a>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            )
+                          })}
+                    </div>
+                  )}
+                </div>
+              )
+            })}
+          </div>
         </nav>
       )}
     </header>

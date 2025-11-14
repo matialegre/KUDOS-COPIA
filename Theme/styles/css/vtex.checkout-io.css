@@ -1,0 +1,417 @@
+/* CHECKOUT CART PAGE CUSTOMIZATION */
+
+/* Layout principal - dos columnas */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Columna izquierda - Lista de productos */
+.cart-items {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.cart-items h2 {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #090A10;
+    margin-bottom: 24px;
+}
+
+/* Items del carrito */
+.product-item {
+    display: flex;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.product-item:last-child {
+    border-bottom: none;
+}
+
+.product-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+}
+
+.product-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.product-name {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #090A10;
+}
+
+.product-sku {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #6B6B6B;
+}
+
+/* Precio con descuento inline */
+.product-price-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.product-list-price {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #6B6B6B;
+    text-decoration: line-through;
+}
+
+.product-selling-price {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #090A10;
+}
+
+.product-discount {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #EB5757;
+}
+
+/* Cantidad */
+.product-quantity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.quantity-label {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #090A10;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    background: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #090A10;
+}
+
+.quantity-value {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #090A10;
+    min-width: 24px;
+    text-align: center;
+}
+
+/* Total del producto */
+.product-total {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #090A10;
+    text-align: right;
+}
+
+/* Botón eliminar */
+.remove-button {
+    color: #EB5757;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 20px;
+}
+
+/* Columna derecha - Resumen de compra */
+.cart-summary {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 24px;
+    position: sticky;
+    top: 20px;
+}
+
+.cart-summary h2 {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #090A10;
+    margin-bottom: 20px;
+}
+
+/* Código de descuento */
+.discount-code {
+    margin-bottom: 24px;
+}
+
+.discount-code label {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #090A10;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.discount-code-input {
+    display: flex;
+    gap: 8px;
+}
+
+.discount-code-input input {
+    flex: 1;
+    height: 48px;
+    padding: 12px 16px;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    color: #090A10;
+}
+
+.discount-code-input button {
+    height: 48px;
+    padding: 0 24px;
+    background: #090A10;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Opciones de envío */
+.shipping-options-cart {
+    margin-bottom: 24px;
+}
+
+.shipping-options-cart h3 {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #090A10;
+    margin-bottom: 16px;
+}
+
+.shipping-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.shipping-card {
+    border: 2px solid #E5E5E5;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.shipping-card:hover {
+    border-color: #090A10;
+}
+
+.shipping-card.selected {
+    border-color: #090A10;
+    background: #F5F5F5;
+}
+
+.shipping-card img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+}
+
+.shipping-card-title {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #090A10;
+    margin-bottom: 4px;
+}
+
+.shipping-card-subtitle {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #6B6B6B;
+}
+
+/* Totales */
+.summary-totals {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-label {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #6B6B6B;
+}
+
+.summary-value {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #090A10;
+}
+
+.summary-total {
+    padding-top: 16px;
+    border-top: 1px solid #E5E5E5;
+    margin-top: 8px;
+}
+
+.summary-total .summary-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #090A10;
+}
+
+.summary-total .summary-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #090A10;
+}
+
+/* Nota de impuestos */
+.tax-note {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #6B6B6B;
+    margin-bottom: 20px;
+}
+
+/* Botones de acción */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-primary {
+    width: 100%;
+    height: 56px;
+    background: #090A10;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    background: #2C2D30;
+}
+
+.btn-secondary {
+    width: 100%;
+    height: 56px;
+    background: #FFFFFF;
+    border: 1px solid #090A10;
+    border-radius: 4px;
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #090A10;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #F5F5F5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 16px;
+    }
+    
+    .cart-items,
+    .cart-summary {
+        padding: 16px;
+    }
+    
+    .product-item {
+        flex-direction: column;
+    }
+    
+    .shipping-cards {
+        grid-template-columns: 1fr;
+    }
+}

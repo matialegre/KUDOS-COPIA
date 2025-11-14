@@ -1,0 +1,137 @@
+/* CHECKOUT CART PAGE CUSTOMIZATION - VTEX IO */
+
+/* Ocultar breadcrumb en checkout */
+.vtex-breadcrumb-1-x-container {
+    display: none !important;
+}
+
+/* Layout principal del carrito */
+:global(.vtex-store__template) .cart-template {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Grid de dos columnas para cart */
+.cart-template-holder {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 32px;
+}
+
+/* Estilos para items del carrito usando order-items */
+:global(.vtex-order-items-0-x-productListItem) {
+    display: flex !important;
+    gap: 16px !important;
+    padding: 20px 0 !important;
+    border-bottom: 1px solid #E5E5E5 !important;
+}
+
+:global(.vtex-order-items-0-x-productImageColumn) {
+    width: 120px !important;
+    height: 120px !important;
+}
+
+:global(.vtex-order-items-0-x-productImage) {
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: contain !important;
+    border: 1px solid #E5E5E5 !important;
+    border-radius: 4px !important;
+}
+
+:global(.vtex-order-items-0-x-productName) {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 22px !important;
+    color: #090A10 !important;
+}
+
+:global(.vtex-order-items-0-x-skuName) {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    color: #6B6B6B !important;
+}
+
+/* Precios en el carrito */
+:global(.vtex-order-items-0-x-listPrice) {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    color: #6B6B6B !important;
+    text-decoration: line-through !important;
+}
+
+:global(.vtex-order-items-0-x-sellingPrice) {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: 24px !important;
+    color: #090A10 !important;
+}
+
+/* Resumen de compra */
+:global(.vtex-checkout-summary-0-x-summaryTitle) {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    line-height: 28px !important;
+    color: #090A10 !important;
+}
+
+:global(.vtex-checkout-summary-0-x-summaryItemLabel) {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    color: #6B6B6B !important;
+}
+
+:global(.vtex-checkout-summary-0-x-summaryItemPrice) {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 18px !important;
+    color: #090A10 !important;
+}
+
+/* Total */
+:global(.vtex-checkout-summary-0-x-summaryItemContainer):last-child :global(.vtex-checkout-summary-0-x-summaryItemLabel) {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #090A10 !important;
+}
+
+:global(.vtex-checkout-summary-0-x-summaryItemContainer):last-child :global(.vtex-checkout-summary-0-x-summaryItemPrice) {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #090A10 !important;
+}
+
+/* Botones */
+:global(.vtex-button) {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+}
+
+:global(.vtex-button__label) {
+    font-family: 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cart-template-holder {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    
+    :global(.vtex-store__template) .cart-template {
+        padding: 20px 16px !important;
+    }
+}

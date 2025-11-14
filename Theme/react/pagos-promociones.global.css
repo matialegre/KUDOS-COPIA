@@ -1,0 +1,157 @@
+.pagos-promociones-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.main-title {
+  font-family: 'Gotham', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #090A10;
+  text-align: left;
+  margin-bottom: 48px;
+}
+
+.section {
+  margin-bottom: 56px;
+}
+
+.section-title {
+  font-family: 'Gotham', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #090A10;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-family: 'GothamBook', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #303030;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.logos-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.logo-card {
+  background: #FFFFFF;
+  border: 1px solid #E9EAED;
+  border-radius: 8px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 160px;
+  min-height: 180px;
+  box-sizing: border-box;
+}
+
+.logo-image {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.logo-text-bold {
+  font-family: 'Gotham', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #090A10;
+  margin: 8px 0 4px 0;
+}
+
+.logo-text-green {
+  font-family: 'Gotham', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #27AE60;
+  margin: 0;
+}
+
+/* Sección inferior con dos columnas */
+.bottom-sections {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.half-section {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+  }
+
+  .logos-row {
+    gap: 8px;
+  }
+
+  .logo-card {
+    width: 140px;
+    padding: 16px 12px;
+    min-height: 160px;
+  }
+
+  .logo-image {
+    max-width: 120px;
+  }
+
+  .logo-text-bold,
+  .logo-text-green {
+    font-size: 13px;
+  }
+
+  .bottom-sections {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .half-section {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagos-promociones-container {
+    padding: 24px 16px;
+  }
+
+  .logo-card {
+    width: 130px;
+    padding: 14px 10px;
+  }
+
+  .logos-row {
+    gap: 6px;
+  }
+}

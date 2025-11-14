@@ -1,0 +1,13 @@
+{
+  "vendor": "mundooutdoorar",
+  "name": "checkout-custom",
+  "version": "0.0.1",
+  "title": "Checkout Custom",
+  "description": "Checkout customization for Mundo Outdoor",
+  "builders": {
+    "checkout-ui-custom": "0.x"
+  },
+  "dependencies": {},
+  "scripts": {},
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

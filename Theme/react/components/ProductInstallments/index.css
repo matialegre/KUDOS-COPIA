@@ -3,6 +3,7 @@
   width: 100%;
   margin-top: 8px;
   margin-bottom: 4px;
+  text-align: left;
 }
 
 .productInstallmentsText{
@@ -15,10 +16,20 @@
   text-align: left;
 }
 
+/* PLP (listado): centrar cuotas dentro de las cards tanto en desktop como en mobile */
+:global(.vtex-search-result-3-x-searchResultContainer) .productInstallmentsContainer{
+  text-align: center !important;
+}
+
+:global(.vtex-search-result-3-x-searchResultContainer) .productInstallmentsText{
+  text-align: center !important;
+}
+
 @media (max-width: 640px) {
   .productInstallmentsContainer{
-    margin-top: 6px;
-    margin-bottom: 48px;
+    /* menos espacio vertical en mobile por defecto */
+    margin-top: 2px;
+    margin-bottom: 10px;
   }
 
   .productInstallmentsText{
@@ -26,3 +37,14 @@
     line-height: 18px;
   }
 }
+
+/* Ajuste sólo para PLP mobile: reducir espacio bajo la línea
+   de cuotas para que el botón "Comprar" quede visualmente más cerca
+   y las cards se vean más compactas. */
+@media (max-width: 640px) {
+  :global(.vtex-search-result-3-x-searchResultContainer) .productInstallmentsContainer{
+    margin-bottom: 8px;
+  }
+}
+
+/* PDP usa la alineación base a la izquierda; evitamos selectores globales deprecated */

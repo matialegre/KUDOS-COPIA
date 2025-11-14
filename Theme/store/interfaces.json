@@ -37,7 +37,8 @@
     },
 
     "utility-bar-right": {
-        "component": "UtilityBarRight"
+        "component": "UtilityBarRight",
+        "render": "client"
     },
 
     "main-header": {
@@ -124,6 +125,20 @@
 
     "shipping-options": {
         "component": "ShippingOptions",
+        "render": "client"
+    },
+
+    "custom-cart": {
+        "component": "CustomCart",
+        "render": "client"
+    },
+
+    "pagos-promociones": {
+        "component": "PagosPromociones"
+    },
+
+    "welcome-popup": {
+        "component": "WelcomePopup",
         "render": "client"
     }
 

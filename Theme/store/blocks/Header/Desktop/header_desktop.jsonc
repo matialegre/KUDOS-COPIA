@@ -59,7 +59,7 @@
 
         "props": {
             "blockClass": "utilityLinks",
-            "text": "[Entregas](/) [Cambios](/) [Sucursales](/) [Preguntas frecuentes](/) [Ayuda](/)"
+            "text": "[Entregas](/) [Cambios](/) [Preguntas frecuentes](/) [Ayuda](/)"
         }
 
     },
@@ -74,13 +74,6 @@
                     "href": "/sucursales",
                     "icon": "https://mundooutdoorar.vteximg.com.br/arquivos/icono_ubicacion.png",
                     "ariaLabel": "Ver sucursales"
-                },
-                {
-                    "id": "shipping",
-                    "label": "Envíos",
-                    "href": "/institucional/envios",
-                    "icon": "https://mundooutdoorar.vteximg.com.br/arquivos/icono_camion_negro.png",
-                    "ariaLabel": "Información de envíos"
                 },
                 {
                     "id": "account",

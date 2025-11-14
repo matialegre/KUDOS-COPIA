@@ -28,7 +28,7 @@ const BenefitSliderMobile = ({ benefits }) => {
         {visibleBenefits.map((benefit, index) => (
           <a 
             key={`${currentIndex}-${index}`}
-            href={benefit.link || '/institucional/medios-de-pago'}
+            href={benefit.link || '/pagos-y-promociones'}
             className={styles.slideItem}
           >
             <img 
