@@ -11,6 +11,10 @@
     "netPrice": {
       "path": "/_v/mundo/pricing/net",
       "public": true
+    },
+    "createCoupon": {
+      "path": "/_v/mundo/coupons/create",
+      "public": true
     }
   }
 }

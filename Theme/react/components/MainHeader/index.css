@@ -389,6 +389,35 @@
 }
 
 /* Responsive */
+@media (max-width: 1366px) {
+  .headerContainer {
+    padding: 0 24px;
+  }
+
+  .logoLink {
+    margin-right: 40px;
+    transform: none;
+  }
+
+  .desktopMenu {
+    gap: 32px;
+    transform: none;
+  }
+
+  .menuItem {
+    font-size: 24px;
+    letter-spacing: 1.2px;
+  }
+
+  .searchForm {
+    transform: none;
+  }
+
+  .searchInput {
+    width: 240px;
+  }
+}
+
 @media (max-width: 1024px) {
   .headerContainer {
     padding: 0 30px;

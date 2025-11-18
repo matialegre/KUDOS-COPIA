@@ -92,27 +92,28 @@
 
 .flexRowContent--field-newsletter :global(.vtex-input-prefix__group){
     height: 46px;
-    border-radius: 0px;
     box-sizing: border-box;
-    border-bottom: 1px solid var(--color-white);
+    border-radius: 4px;
+    border: 1px solid var(--color-white);
+    background-color: #ffffff;
 }
 
 .flexRowContent--field-newsletter :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input){
     margin: 0;
-    padding: 0;
+    padding: 0 14px;
     height: 100%;
     border-radius: 0px;
     font-family: 'GothamBook';
     font-size: 14.5px;
     line-height: 21.75px;
     letter-spacing: 0.1px;
-    color: var(--color-white);
-    text-align: center;
+    color: #000000;
+    text-align: left;
     background: transparent;
 }
 
 .flexRowContent--field-newsletter :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input)::placeholder{
-    color: var(--color-white);
+    color: #777777;
 }
 
 .flexRowContent--field-newsletter :global(.vtex-store-form-0-x-formSubmitContainer){

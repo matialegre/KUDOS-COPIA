@@ -1,0 +1,35 @@
+.heroSlide{
+  width: 100%;
+  height: 100%;
+}
+
+.heroSlideLink{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.heroSlideImage,
+.heroSlideVideo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroSlideImageDesktop{
+  display: block;
+}
+
+.heroSlideImageMobile{
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .heroSlideImageDesktop{
+    display: none;
+  }
+
+  .heroSlideImageMobile{
+    display: block;
+  }
+}

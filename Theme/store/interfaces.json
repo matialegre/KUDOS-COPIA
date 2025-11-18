@@ -77,6 +77,10 @@
         "component": "VideoHeroCustom"
     },
 
+    "hero-slide": {
+        "component": "HeroSlide"
+    },
+
     "brands-slider-custom": {
         "component": "BrandsSliderCustom"
     },
@@ -139,6 +143,11 @@
 
     "welcome-popup": {
         "component": "WelcomePopup",
+        "render": "client"
+    },
+
+    "custom-hero-slider": {
+        "component": "CustomHeroSlider",
         "render": "client"
     }
 

@@ -4,6 +4,7 @@ import { Service } from '@vtex/api'
 import { Clients } from './clients'
 import { sum } from './middlewares/sum'
 import { netPrice } from './middlewares/netPrice'
+import { createCoupon } from './middlewares/createCoupon'
 
 const TIMEOUT_MS = 800
 
@@ -30,5 +31,6 @@ export default new Service({
   routes: {
     sum,
     netPrice,
+    createCoupon,
   },
 })

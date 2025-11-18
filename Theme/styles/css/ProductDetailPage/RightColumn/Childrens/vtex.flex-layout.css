@@ -24,12 +24,8 @@
 }
 
 .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-product-identifier-0-x-product-identifier--productReference){
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.1px;
-    color: var(--color-gray-3);
+    /* ocultamos la referencia del producto en PDP */
+    display: none;
 }
 
 .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) .flexCol--column-right-pdp .flexColChild--column-right-pdp:nth-child(0n+4){

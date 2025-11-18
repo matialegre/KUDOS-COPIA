@@ -1,7 +1,7 @@
 {
   "store.home": {
     "blocks": [
-      "list-context.image-list#slider-banner-solo-imagenes",
+      "custom-hero-slider#home-test",
       "flex-layout.row#infoSquareContainer",
       "benefit-slider-mobile#promos",
       "flex-layout.row#tendenciasContainer",
@@ -11,7 +11,8 @@
       "flex-layout.row#productosDestacados",
       "flex-layout.row#product-summary-container-destacados",
       "brands-slider-custom",
-      "flex-layout.row#videoSection"
+      "flex-layout.row#videoSection",
+      "welcome-popup"
     ]
   }
 }

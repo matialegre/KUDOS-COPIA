@@ -39,6 +39,52 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
     }
   }, [])
 
+  useEffect(() => {
+    const fixVerTodosLinks = () => {
+      if (typeof document === 'undefined' || typeof window === 'undefined') {
+        return
+      }
+
+      const links = document.querySelectorAll(
+        '.vtex-store-link-0-x-link--ver-todo-product-slider'
+      )
+
+      links.forEach((link) => {
+        const originalHref = link.getAttribute('href')
+
+        if (!originalHref) {
+          return
+        }
+
+        try {
+          const url = new URL(originalHref, window.location.origin)
+
+          if (url.host !== window.location.host) {
+            const normalizedHref = `${url.pathname}${url.search}${url.hash}`
+
+            link.setAttribute('href', normalizedHref)
+          }
+        } catch (e) {
+          // ignore invalid URLs
+        }
+      })
+    }
+
+    fixVerTodosLinks()
+
+    if (typeof MutationObserver !== 'undefined') {
+      const observer = new MutationObserver(() => {
+        fixVerTodosLinks()
+      })
+
+      observer.observe(document.body, { childList: true, subtree: true })
+
+      return () => observer.disconnect()
+    }
+
+    return undefined
+  }, [])
+
   const handleSearch = (e) => {
     e.preventDefault()
 

@@ -17,3 +17,15 @@
     opacity: 1;
     visibility: visible;
 }
+
+.debugInfoGuiaTalles{
+    margin-top: 4px;
+    font-family: 'Gotham', Arial, sans-serif;
+    font-size: 11px;
+    line-height: 14px;
+    color: #777777;
+}
+
+.debugInfoGuiaTalles p{
+    margin: 0;
+}

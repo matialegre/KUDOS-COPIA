@@ -1,7 +1,7 @@
 {
   "vendor": "mundooutdoorar",
   "name": "pricing-service",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "title": "Pricing Service",
   "description": "Service for calculating net prices and tax-related operations",
   "builders": {

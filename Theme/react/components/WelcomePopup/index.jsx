@@ -16,11 +16,29 @@ const WelcomePopup = ({
   const [message, setMessage] = useState('')
 
   useEffect(() => {
-    // Verificar si el popup ya se mostró antes
-    const hasSeenPopup = localStorage.getItem('mundooutdoor_welcome_popup_seen')
-    
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    const hostname = window.location && window.location.hostname
+    const runtimeWorkspace =
+      window.__RUNTIME__ && window.__RUNTIME__.workspace
+
+    const isDevWorkspace =
+      runtimeWorkspace === 'pandemoniumdev' ||
+      (hostname && hostname.startsWith('pandemoniumdev--'))
+
+    if (isDevWorkspace) {
+      const timer = setTimeout(() => {
+        setIsVisible(true)
+      }, 1000)
+
+      return () => clearTimeout(timer)
+    }
+
+    const hasSeenPopup = window.localStorage.getItem('mundooutdoor_welcome_popup_seen')
+
     if (!hasSeenPopup) {
-      // Mostrar popup después de 1 segundo
       const timer = setTimeout(() => {
         setIsVisible(true)
       }, 1000)
@@ -46,22 +64,56 @@ const WelcomePopup = ({
     setMessage('')
 
     try {
-      // Guardar en Master Data usando la API de VTEX
-      const response = await fetch('/api/dataentities/NS/documents', {
+      // 1) Generar cupón
+      let couponCode = null
+
+      try {
+        const couponResponse = await fetch('/_v/mundo/coupons/create', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: JSON.stringify({
+            email,
+          }),
+        })
+
+        if (couponResponse.ok) {
+          const couponData = await couponResponse.json()
+          couponCode = couponData && couponData.couponCode
+        }
+      } catch (err) {
+        // si falla la creación del cupón, seguimos solo con el alta en NS
+        console.error('Error al generar cupón:', err)
+      }
+
+      // 2) Normalizar cupón: si no se pudo generar uno dinámico, usar uno estático
+      if (!couponCode) {
+        couponCode = 'mundo10'
+      }
+
+      // Guardar en Master Data siempre con email + cupón
+      const mdBody = { email, coupon: couponCode }
+
+      const mdResponse = await fetch('/api/dataentities/NS/documents', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
+          'Accept': 'application/json',
         },
-        body: JSON.stringify({
-          email: email
-        })
+        body: JSON.stringify(mdBody),
       })
 
-      if (response.ok) {
-        setMessage('¡Gracias por suscribirte! Revisá tu email.')
+      if (mdResponse.ok) {
+        if (couponCode) {
+          setMessage(`¡Gracias por suscribirte! Tu cupón es ${couponCode}.`)
+        } else {
+          setMessage('¡Gracias por suscribirte! Revisá tu email.')
+        }
+
         setEmail('')
-        
+
         // Cerrar popup después de 2 segundos
         setTimeout(() => {
           handleClose()

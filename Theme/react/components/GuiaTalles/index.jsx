@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import { useProduct } from 'vtex.product-context';
 
 // COMPONENTS 
@@ -7,6 +8,7 @@ import GetData from './components/ModalTalles/GetData';
 
 // HELPERS 
 import { getProductType } from './helpers/getProductType';
+import { getGuideImageUrl } from './helpers/getGuideImageUrl';
 
 // STYLES 
 import style from './index.css';
@@ -19,8 +21,53 @@ const GuiaTalles = () => {
     const [ openModal, setOpenModal ] = useState( false );
     const productData = useProduct();
     
+    const brandFromProduct = productData?.product?.brand || '';
+    let debugGender = '';
+    let debugType = '';
+
+    const categories = productData?.product?.categories || [];
+
+    if (categories.length > 0) {
+        const genderMap = {
+            HOMBRE: 'Hombre',
+            MUJER: 'Mujer',
+            NIÑOS: 'Niños',
+            NIÑO: 'Niños',
+            NIÑA: 'Niños',
+            UNISEX: 'Unisex'
+        };
+
+        categories.forEach(path => {
+            const segments = path.split('/').filter(Boolean);
+            if (segments.length === 0) return;
+            const first = segments[0].toUpperCase();
+            if (genderMap[first]) {
+                if (!debugGender) {
+                    debugGender = genderMap[first];
+                }
+                const candidateType = segments[segments.length - 1];
+                // Evitar tomar solo la raíz de género como tipo (por ejemplo "/MUJER/")
+                if (segments.length > 1 && candidateType.toUpperCase() !== first) {
+                    debugType = candidateType;
+                }
+            }
+        });
+    }
+
+    const productName = productData?.product?.productName || '';
+
+    const guideImageUrl = getGuideImageUrl({
+        brand: brandFromProduct,
+        gender: debugGender,
+        type: debugType,
+        categories,
+        productName,
+    });
+
     useEffect( () => {
         
+        console.log('GuiaTalles productData', productData?.product);
+
         const containerToTalles = document.querySelector('.vtex-store-components-3-x-skuSelectorSubcontainer--talle .vtex-store-components-3-x-skuSelectorNameContainer');
         
         if ( containerToTalles ) {
@@ -31,7 +78,7 @@ const GuiaTalles = () => {
 
         /////
         let productType;
-        let gener;
+        let gener = 'Unisex';
         let brand;
         
         /**asigno marca */
@@ -56,9 +103,9 @@ const GuiaTalles = () => {
             productData.product.properties?.forEach( item => {
                 
                 /**asigno genero */
-                if( item.name === 'Genero' ) {
+                if( item.name === 'Genero' || item.name === 'Género' ) {
     
-                    if ( item.values[0] ) {
+                    if ( item.values && item.values[0] ) {
                         
                         gener = item.values[0];
 
@@ -70,7 +117,7 @@ const GuiaTalles = () => {
 
         }
         
-        if ( productType && gener && brand ) {
+        if ( productType && brand ) {
 
             setSearchData( [ productType, gener, brand ] )
 
@@ -79,23 +126,44 @@ const GuiaTalles = () => {
 
     }, [ productData ] )
     
-    if ( searchData && searchData.length > 0 && tallesContainer ) {
+    if ( searchData && searchData.length > 0 ) {
+
+        const triggerContent = (
+
+            <>
+                <TriggerTalles setOpenModal={setOpenModal}/>
+                <div className={style.debugInfoGuiaTalles}>
+                    <p>Tipo de artículo: {debugType || '-'}</p>
+                    <p>Sexo: {debugGender || '-'}</p>
+                    <p>Marca: {brandFromProduct || '-'}</p>
+                </div>
+            </>
+
+        )
 
         return (
 
             <>
-    
-                {ReactDOM.createPortal(
+
+                {tallesContainer
+                    ? ReactDOM.createPortal(
             
-                    <TriggerTalles setOpenModal={setOpenModal}/>,
-                    tallesContainer
+                        triggerContent,
+                        tallesContainer
     
-                )}
+                    )
+                    : triggerContent
+                }
 
                 <div className={ openModal ? `${style.modalTalleWrapper} ${style.active}` : `${style.modalTalleWrapper}` }>
 
                     {/* <ModalTalles setOpenModal={setOpenModal} productData={productData}/> */}
-                    <GetData setOpenModal={setOpenModal} productData={productData} searchData={searchData}/>
+                    <GetData
+                        setOpenModal={setOpenModal}
+                        productData={productData}
+                        searchData={searchData}
+                        imageUrl={guideImageUrl}
+                    />
 
                 </div>
     

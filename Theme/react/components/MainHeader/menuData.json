@@ -188,7 +188,7 @@
       "banner": "/arquivos/marcas_mundooutdoor.jpg",
       "columns": [
         {
-          "title": "Marcas A - L",
+          "title": "MARCAS",
           "items": [
             { "label": "DC", "href": "/marcas/dc" },
             { "label": "Roxy", "href": "/marcas/roxy" },
@@ -201,7 +201,7 @@
           ]
         },
         {
-          "title": "Marcas M - Z",
+          "title": "MARCAS",
           "items": [
             { "label": "Salomon", "href": "/marcas/salomon" },
             { "label": "Burton", "href": "/marcas/burton" },

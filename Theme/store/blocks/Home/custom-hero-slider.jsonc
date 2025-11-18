@@ -1,0 +1,31 @@
+{
+  "custom-hero-slider#home-test": {
+    "props": {
+      "slides": [
+        {
+          "type": "image",
+          "desktopImage": "https://mundooutdoorar.vtexassets.com/assets/vtex.file-manager-graphql/images/fe8cf638-716f-4dc7-af8f-61d777709091___6c7899f94f001ade6ba0f90fc9465b9f.png",
+          "mobileImage": "https://mundooutdoorar.vtexassets.com/assets/vtex.file-manager-graphql/images/fe8cf638-716f-4dc7-af8f-61d777709091___6c7899f94f001ade6ba0f90fc9465b9f.png",
+          "duration": 2000
+        },
+        {
+          "type": "image",
+          "desktopImage": "https://mundooutdoorar.vtexassets.com/assets/vtex.file-manager-graphql/images/370d69c1-e1dd-4f96-9670-9e2efa0e5dc5___5c6dc7b09404600ae68c9e5834820a88.png",
+          "mobileImage": "https://mundooutdoorar.vtexassets.com/assets/vtex.file-manager-graphql/images/370d69c1-e1dd-4f96-9670-9e2efa0e5dc5___5c6dc7b09404600ae68c9e5834820a88.png",
+          "duration": 3000
+        },
+        {
+          "type": "video",
+          "videoUrl": "https://res.cloudinary.com/dqeivjlr9/video/upload/v1762285025/video_para_parte_final_5_zassmm.mp4",
+          "duration": 7000
+        },
+        {
+          "type": "image",
+          "desktopImage": "https://mundooutdoorar.vtexassets.com/assets/vtex.file-manager-graphql/images/096591cd-1146-4532-8cb1-e8a5de0f02d1___95906a12edf947a5fad698436a7107e6.png",
+          "mobileImage": "https://mundooutdoorar.vtexassets.com/assets/vtex.file-manager-graphql/images/096591cd-1146-4532-8cb1-e8a5de0f02d1___95906a12edf947a5fad698436a7107e6.png",
+          "duration": 3000
+        }
+      ]
+    }
+  }
+}
