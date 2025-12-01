@@ -14,6 +14,13 @@
         "host": "{{account}}.vtexcommercestable.com.br",
         "path": "/api/*"
       }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.callmebot.com",
+        "path": "/*"
+      }
     }
   ],
   "settingsSchema": {
@@ -37,6 +44,16 @@
         "title": "Seller ID",
         "default": "1",
         "description": "Default seller ID"
+      },
+      "callMeBotPhone": {
+        "type": "string",
+        "title": "CallMeBot Phone",
+        "description": "Phone number registered in CallMeBot (with country code, without +)"
+      },
+      "callMeBotApiKey": {
+        "type": "string",
+        "title": "CallMeBot API Key",
+        "description": "API key provided by CallMeBot for WhatsApp notifications"
       }
     }
   },

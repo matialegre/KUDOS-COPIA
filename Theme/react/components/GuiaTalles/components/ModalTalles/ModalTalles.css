@@ -7,8 +7,9 @@
 
 .modalTalleContainerImage{
     position: relative;
-    width: 643px;
-    max-height: 90vh;
+    width: 100%;
+    max-width: 643px;
+    max-height: 80vh;
     background: #FFFFFF;
     display: flex;
     align-items: center;
@@ -108,10 +109,11 @@
 
 .modalTalleImageWrapper{
     width: 100%;
-    max-height: calc(90vh - 48px);
+    max-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .modalTalleImage{
@@ -119,4 +121,9 @@
     max-height: 100%;
     height: auto;
     display: block;
+    cursor: zoom-in;
+}
+
+.modalTalleImageZoomed{
+    cursor: zoom-out;
 }

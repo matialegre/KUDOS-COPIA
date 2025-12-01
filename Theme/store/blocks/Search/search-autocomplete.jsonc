@@ -1,0 +1,22 @@
+{
+  "autocomplete-result-list.v2": {
+    "blocks": [
+      "product-summary"
+    ],
+    "props": {
+      "maxItems": 6
+    }
+  },
+
+  "search-bar": {
+    "blocks": [
+      "autocomplete-result-list.v2"
+    ],
+    "props": {
+      "placeholder": "Buscar",
+      "displayMode": "search-and-clear-buttons",
+      "autocompleteFullText": true,
+      "openAutocompleteOnFocus": true
+    }
+  }
+}

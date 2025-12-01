@@ -6,15 +6,7 @@ const CustomHeroSlider = ({ slides = [] }) => {
   const timeoutRef = useRef(null)
 
   const currentSlide = slides[currentIndex] || {}
-  const {
-    type = 'image',
-    desktopImage,
-    mobileImage,
-    videoUrl,
-    link,
-    alt,
-    duration = 8000,
-  } = currentSlide
+  const { duration = 8000 } = currentSlide
 
   const goTo = (index) => {
     if (!slides.length) return
@@ -71,40 +63,103 @@ const CustomHeroSlider = ({ slides = [] }) => {
               type: slideType = 'image',
               desktopImage: slideDesktopImage,
               mobileImage: slideMobileImage,
-              videoUrl: slideVideoUrl,
+              videoUrl: slideDesktopVideoUrl,
+              mobileVideoUrl: slideMobileVideoUrl,
               link: slideLink,
               alt: slideAlt,
             } = slide
 
-            const isVideoSlide = slideType === 'video' && slideVideoUrl
+            const hasAnyVideo = slideDesktopVideoUrl || slideMobileVideoUrl
+            const isVideoSlide = slideType === 'video' && hasAnyVideo
 
-            const slideContent = isVideoSlide ? (
-              <video
-                className={styles.sliderMedia}
-                src={slideVideoUrl}
-                autoPlay
-                muted
-                loop
-                playsInline
-              />
-            ) : (
-              <>
-                {slideDesktopImage && (
+            let slideContent
+
+            if (isVideoSlide) {
+              const desktopVideo = slideDesktopVideoUrl || null
+              const mobileVideo = slideMobileVideoUrl || null
+
+              const desktopMedia = desktopVideo ? (
+                <video
+                  className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
+                  src={desktopVideo}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+              ) :
+                slideDesktopImage ? (
                   <img
                     src={slideDesktopImage}
                     alt={slideAlt || ''}
                     className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
                   />
-                )}
-                {slideMobileImage && (
+                ) :
+                  mobileVideo ? (
+                    <video
+                      className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
+                      src={mobileVideo}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    />
+                  ) : null
+
+              const mobileMedia = mobileVideo ? (
+                <video
+                  className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
+                  src={mobileVideo}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+              ) :
+                slideMobileImage ? (
                   <img
                     src={slideMobileImage}
                     alt={slideAlt || ''}
                     className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
                   />
-                )}
-              </>
-            )
+                ) :
+                  desktopVideo ? (
+                    <video
+                      className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
+                      src={desktopVideo}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    />
+                  ) : null
+
+              slideContent = (
+                <>
+                  {desktopMedia}
+                  {mobileMedia}
+                </>
+              )
+            } else {
+              slideContent = (
+                <>
+                  {slideDesktopImage && (
+                    <img
+                      src={slideDesktopImage}
+                      alt={slideAlt || ''}
+                      className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
+                    />
+                  )}
+                  {slideMobileImage && (
+                    <img
+                      src={slideMobileImage}
+                      alt={slideAlt || ''}
+                      className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
+                    />
+                  )}
+                </>
+              )
+            }
 
             const wrappedSlideContent = slideLink ? (
               <a href={slideLink} className={styles.slideLink}>
@@ -178,7 +233,11 @@ CustomHeroSlider.schema = {
             },
           },
           videoUrl: {
-            title: 'URL del video (mp4)',
+            title: 'URL del video desktop (mp4)',
+            type: 'string',
+          },
+          mobileVideoUrl: {
+            title: 'URL del video mobile (mp4)',
             type: 'string',
           },
           link: {

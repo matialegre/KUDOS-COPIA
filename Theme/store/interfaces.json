@@ -146,6 +146,15 @@
         "render": "client"
     },
 
+    "product-reference-info": {
+        "component": "ProductReferenceInfo"
+    },
+
+    "maxi-support-chat": {
+        "component": "MaxiSupportChat",
+        "render": "client"
+    },
+
     "custom-hero-slider": {
         "component": "CustomHeroSlider",
         "render": "client"

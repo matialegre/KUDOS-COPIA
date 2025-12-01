@@ -1,7 +1,7 @@
 {
   "vendor": "mundooutdoorar",
   "name": "theme",
-  "version": "1.0.51",
+  "version": "1.0.59",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
@@ -54,6 +54,7 @@
     "vtex.product-context": "0.x",
     "vtex.product-highlights": "2.x",
     "vtex.product-price": "1.x",
+    "vtex.search": "2.x",
     "vtex.store-form": "0.x",
     "vtex.order-items": "0.x",
     "vtex.condition-layout": "2.x",

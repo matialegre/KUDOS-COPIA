@@ -4,5 +4,8 @@
   },
   "store.custom#pagos-promociones": {
     "path": "/pagos-y-promociones"
+  },
+  "store.custom#preguntas-frecuentes": {
+    "path": "/preguntas-frecuentes"
   }
 }

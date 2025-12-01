@@ -69,9 +69,9 @@
 
     .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-price_sellingPrice){
         font-family: 'Gotham';
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 600;
-        line-height: 29px;
+        line-height: 22px;
         color: #090A10;
     }
 
@@ -94,6 +94,24 @@
 
     .flexRowContent--price-and-discount-pdp{
         gap: 8px;
+    }
+
+}
+
+/* Alinear simbolo "$" y monto en una sola linea en el PDP */
+.flexRowContent--price-and-discount-pdp :global(.vtex-product-price-1-x-currencyContainer){
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+@media (max-width: 640px) {
+
+    /* reducir tamaño del precio principal en PDP mobile */
+    .flexRowContent--price-and-discount-pdp :global(.vtex-product-price-1-x-currencyContainer),
+    .flexRowContent--price-and-discount-pdp :global(.vtex-product-price-1-x-currencyInteger){
+        font-size: 18px;
+        line-height: 22px;
     }
 
 }
@@ -201,6 +219,15 @@
         display: none;
     }
 
+    @media (max-width: 640px) {
+
+        .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className) :global(.vtex-store-components-3-x-price_listPriceContainer) :global(.vtex-store-components-3-x-price_listPrice) :global(.vtex-store-components-3-x-currencyContainer){
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+    }
+
     .flexRowContent--price-and-discount-pdp :global(.vtex-store-components-3-x-price_className) :global(.vtex-store-components-3-x-price_sellingPriceContainer){
         order: -1;
         margin: 0;
@@ -287,6 +314,14 @@
 
     /* menos espacio entre cuotas y talles en mobile */
     .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2) :global(.vtex-store-components-3-x-skuSelectorContainer){
+        margin-top: 16px;
+    }
+
+    /* bajar un poco el label "Talles" para que no quede tapado por Guía de talles */
+    .flexRowContent--columns-pdp-container .stretchChildrenWidth:nth-child(0n+2)
+      :global(.vtex-store-components-3-x-skuSelectorContainer)
+      :global(.vtex-store-components-3-x-skuSelectorSubcontainer--talle)
+      :global(.vtex-store-components-3-x-skuSelectorTextContainer){
         margin-top: 16px;
     }
 
@@ -714,10 +749,6 @@
 
 }
 
-.flexCol--availability-yes .flexColChild--availability-yes:nth-child(0n+7) :global(.vtex-button):hover{
-    
-}
-
 /* FIN BOTON AÑADIR AL CARRITO  */
 
 /* CALCULAR ENVIO  */
@@ -746,10 +777,11 @@
 
 @media (max-width: 640px) {
 
-    /* acercar el link de promociones a las cuotas en mobile */
+    /* posicionar el link de promociones entre cuotas y guía de talles en mobile */
     .triggerContainer :global(.vtex-flex-layout-0-x-flexRowContent--container-trigger-promociones-bancarias){
         cursor: pointer;
-        margin-top: 8px;
+        margin-top: 6px;
+        margin-bottom: 28px;
     }
 
 }

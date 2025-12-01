@@ -18,149 +18,48 @@ const LogoCard: React.FC<LogoCardProps> = ({ imageUrl, text1, text2, alt }) => {
   )
 }
 
-const PagosPromociones: React.FC = () => {
+interface PagosPromocionesProps {
+  imageUrl?: string
+  alt?: string
+}
+
+const PagosPromociones: React.FC<PagosPromocionesProps> = ({ imageUrl, alt }) => {
+  const effectiveImageUrl =
+    imageUrl ||
+    'https://mundooutdoorar.vtexassets.com/arquivos/tarj.debitobien.png'
+
+  const effectiveAlt =
+    alt || 'Promociones bancarias, cuotas y medios de pago'
+
   return (
     <div className="pagos-promociones-container">
-      <h1 className="main-title">Pagos y promociones</h1>
-
-      {/* Promociones Bancarias */}
-      <section className="section">
-        <h2 className="section-title">Promociones Bancarias</h2>
-        <p className="section-subtitle">
-          Hacé clic en cada logo para conocer los detalles y vigencia de cada promoción
-        </p>
-        <div className="logos-row">
-          <LogoCard
-            imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-51.png"
-            text1="Todos los días"
-            text2="6 cuotas sin interés"
-            alt="Banco Provincia"
-          />
-          <LogoCard
-            imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-52.png"
-            text1="Todos los días"
-            text2="6 cuotas sin interés"
-            alt="Credicoop"
-          />
-          <LogoCard
-            imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-53.png"
-            text1="Todos los días"
-            text2="6 cuotas sin interés"
-            alt="BBVA Modo"
-          />
-          <LogoCard
-            imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-54.png"
-            text1="Todos los días"
-            text2="6 cuotas sin interés"
-            alt="Naranja X"
-          />
-          <LogoCard
-            imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-55.png"
-            text1="Todos los días"
-            text2="3 cuotas sin interés"
-            alt="Coopeplus"
-          />
-        </div>
-      </section>
-
-      {/* Tarjeta de crédito */}
-      <section className="section">
-        <h2 className="section-title">Tarjeta de crédito</h2>
-        <div className="logos-row">
-          <LogoCard
-            imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-56.png"
-            text1="Todos los días"
-            text2="6 cuotas sin interés"
-            alt="Visa"
-          />
-          <LogoCard
-            imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-57.png"
-            text1="Todos los días"
-            text2="6 cuotas sin interés"
-            alt="Mastercard"
-          />
-          <LogoCard
-            imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-58.png"
-            text1="Todos los días"
-            text2="6 cuotas sin interés"
-            alt="American Express"
-          />
-          <LogoCard
-            imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-60.png"
-            text1="Todos los días"
-            text2="6 cuotas sin interés"
-            alt="Cabal"
-          />
-        </div>
-      </section>
-
-      {/* Tarjeta de débito */}
-      <section className="section">
-        <h2 className="section-title">Tarjeta de débito</h2>
-        <div className="logos-row">
-          <LogoCard
-            imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-61.png"
-            text1="Todos los días"
-            text2="6 cuotas sin interés"
-            alt="Visa Débito"
-          />
-          <LogoCard
-            imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-62.png"
-            text1="Todos los días"
-            text2="6 cuotas sin interés"
-            alt="Maestro"
-          />
-          <LogoCard
-            imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-60.png"
-            text1="Todos los días"
-            text2="6 cuotas sin interés"
-            alt="Cabal Débito"
-          />
-        </div>
-      </section>
-
-      {/* Sección inferior con dos columnas */}
-      <div className="bottom-sections">
-        {/* Promociones Habituales */}
-        <section className="section half-section">
-          <h2 className="section-title">Promociones Habituales</h2>
-          <div className="logos-row">
-            <LogoCard
-              imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-65.png"
-              text1="Todos los días"
-              text2="3 cuotas sin interés"
-              alt="3 cuotas"
-            />
-            <LogoCard
-              imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-66.png"
-              text1="Todos los días"
-              text2="6 cuotas sin interés"
-              alt="6 cuotas"
-            />
-          </div>
-        </section>
-
-        {/* Otros medios de pago */}
-        <section className="section half-section">
-          <h2 className="section-title">Otros medios de pago</h2>
-          <div className="logos-row">
-            <LogoCard
-              imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-63.png"
-              text1="Todos los días"
-              text2=""
-              alt="Mercado Pago"
-            />
-            <LogoCard
-              imageUrl="https://mundooutdoorar.vtexassets.com/arquivos/tarjetas-64.png"
-              text1="Todos los días"
-              text2=""
-              alt="Modo"
-            />
-          </div>
-        </section>
-      </div>
+      <img
+        src={effectiveImageUrl}
+        alt={effectiveAlt}
+        className="pagos-promociones-full-image"
+      />
     </div>
   )
+}
+
+;(PagosPromociones as any).schema = {
+  title: 'Popup de promociones bancarias',
+  description:
+    'Imagen principal del popup de promociones bancarias / medios de pago en la PDP',
+  type: 'object',
+  properties: {
+    imageUrl: {
+      title: 'URL de la imagen',
+      type: 'string',
+      default:
+        'https://mundooutdoorar.vtexassets.com/arquivos/tarj.debitobien.png',
+    },
+    alt: {
+      title: 'Texto alternativo (alt)',
+      type: 'string',
+      default: 'Promociones bancarias, cuotas y medios de pago',
+    },
+  },
 }
 
 export default PagosPromociones

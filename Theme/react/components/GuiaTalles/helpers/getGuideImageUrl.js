@@ -16,6 +16,11 @@ const BRAND_ALIASES = {
   TREVO: 'trevo',
   OMBAK: 'ombak',
   COLUMBIA: 'columbia',
+  GRIZZLY: 'grizzly',
+  OUS: 'ous',
+  QUIKSILVER: 'quiksilver',
+  RVCA: 'rvca',
+  SOREL: 'sorel',
 }
 
 const IMAGE_MAP = {
@@ -26,12 +31,14 @@ const IMAGE_MAP = {
   'dc|mujer|calzado': 'guia-dc-mujer-calzado.jpg',
   'dc|nino|calzado': 'guia-dc-nino-calzado.jpg',
   'dc|nino|indumentaria': 'guia-dc-nino-indumentaria.jpg',
+  'dc|ninos|indumentaria': 'guia-dc-nino-indumentaria.jpg',
   'dc|hombre|indumentaria-inferior': 'guia-dc-hombre-indumentaria-inferior.jpg',
   'dc|mujer|indumentaria-inferior': 'guia-dc-mujer-indumentaria-inferior.jpg',
   'dc|mujer|snow': 'guia-dc-mujer-snow.jpg',
   'dc|hombre|snow': 'guia-generic-hombre-snow.jpg',
   'dc|hombre|tejido-de-punto-superior': 'guia-dc-hombre-tejido-de-punto-superior.jpg',
   'dc|mujer|tejido-de-punto-superior': 'guia-dc-mujer-tejido-de-punto-superior.jpg',
+  'dc|ninos|tejido-de-punto-superior': 'guia-dc-nino-indumentaria.jpg',
 
   'hi-tec|hombre|calzado': 'guia-hi-tec-hombre-calzado.jpg',
   'hi-tec|mujer|calzado': 'guia-hi-tec-mujer-calzado.jpg',
@@ -58,6 +65,8 @@ const IMAGE_MAP = {
 
   'salomon|hombre|camperas': 'guia-salomon-hombre-camperas.jpg',
   'salomon|hombre|polar': 'guia-salomon-hombre-polar.jpg',
+  'salomon|hombre|indumentaria': 'guia-salomon-mujer-indumentaria.jpg',
+  'salomon|hombre|calzado': 'guia-salomon-mujer-calzado.jpg',
   'salomon|mujer|calzado': 'guia-salomon-mujer-calzado.jpg',
   'salomon|mujer|camperas': 'guia-salomon-mujer-camperas.jpg',
   'salomon|mujer|indumentaria': 'guia-salomon-mujer-indumentaria.jpg',
@@ -68,6 +77,38 @@ const IMAGE_MAP = {
   'trevo|unisex|buzos': 'guia-trevo-unisex-buzos.jpg',
 
   'weiss|unisex|chalecos': 'guia-weiss-unisex-chalecos.jpg',
+
+  'columbia|hombre|indumentaria-inferior': 'guia-columbia-hombre-indumentaria-inferior.jpg',
+  'columbia|hombre|indumentaria-superior': 'guia-columbia-hombre-indumentaria-superior.jpg',
+  'columbia|mujer|indumentaria-inferior': 'guia-columbia-mujer-indumentaria-inferior.jpg',
+  'columbia|mujer|indumentaria-superior': 'guia-columbia-mujer-indumentaria-superior.jpg',
+  'columbia|nino|calzado': 'guia-columbia-nino-calzado.jpg',
+  'columbia|ninos|indumentaria-inferior': 'guia-columbia-ninos-indumentaria-inferior.jpg',
+  'columbia|ninos|indumentaria-superior': 'guia-columbia-ninos-indumentaria-superior.jpg',
+  'columbia|ninos|guantes': 'guia-columbia-ninos-guantes.jpg',
+  'columbia|unisex|calzado': 'guia-columbia-unisex-calzado.jpg',
+  'columbia|unisex|guantes': 'guia-columbia-unisex-guantes.jpg',
+
+  'grizzly|hombre|camperas': 'guia-grizzly-hombre-camperas.jpg',
+  'grizzly|hombre|indumentaria-superior': 'guia-grizzly-hombre-indumentaria-superior.jpg',
+
+  'montagne|unisex|calzado': 'guia-montagne-unisex-calzado.jpg',
+
+  'ous|unisex|calzado': 'guia-ous-unisex-calzado.jpg',
+
+  'quiksilver|hombre|calzado': 'guia-quiksilver-hombre-calzado.jpg',
+  'quiksilver|hombre|indumentaria-inferior': 'guia-quiksilver-hombre-indumentaria-inferior.jpg',
+  'quiksilver|hombre|indumentaria-superior': 'guia-quiksilver-hombre-indumentaria-superior.jpg',
+  'quiksilver|ninos|indumentaria-superior': 'guia-quiksilver-ninos-indumentaria-superior.jpg',
+
+  'rvca|hombre|indumentaria-inferior': 'guia-rvca-hombre-indumentaria-inferior.jpg',
+  'rvca|hombre|indumentaria-superior': 'guia-rvca-hombre-indumentaria-superior.jpg',
+  'rvca|mujer|indumentaria-inferior': 'guia-rvca-mujer-indumentaria-inferior.jpg',
+  'rvca|mujer|indumentaria-superior': 'guia-rvca-mujer-indumentaria-superior.jpg',
+
+  'sorel|hombre|calzado': 'guia-sorel-hombre-calzado.jpg',
+  'sorel|mujer|calzado': 'guia-sorel-mujer-calzado.jpg',
+  'sorel|nino|calzado': 'guia-sorel-nino-calzado.jpg',
 }
 
 const normalizeBrand = (brand) => {
@@ -110,7 +151,11 @@ const normalizeType = (brand, type, categories, productName) => {
     t.includes('sandalia') ||
     t.includes('sandalias') ||
     t.includes('ojotas') ||
-    t.includes('ojota')
+    t.includes('ojota') ||
+    t.includes('medias') ||
+    t.includes('media') ||
+    name.includes('medias') ||
+    name.includes('media ')
   ) {
     return 'calzado'
   }
@@ -121,6 +166,16 @@ const normalizeType = (brand, type, categories, productName) => {
 
   if (hasCategoryMatch(categories, 'running') || t.includes('running')) {
     return 'running'
+  }
+
+  // Accesorios de marcas de indumentaria (ej: Salomon) → usar guía de indumentaria general
+  if (hasCategoryMatch(categories, 'accesorios') || t.includes('accesorios')) {
+    if (brandKey === 'salomon') {
+      return 'indumentaria'
+    }
+
+    // otras marcas podrían tener guías específicas más adelante
+    return 'indumentaria'
   }
 
   if (t.includes('guante')) {
@@ -147,17 +202,65 @@ const normalizeType = (brand, type, categories, productName) => {
   }
 
   if (t.includes('campera') || t.includes('camperas') || t.includes('abrigos')) {
+    if (brandKey === 'dc') {
+      return 'tejido-de-punto-superior'
+    }
+
     return 'camperas'
   }
 
   if (t.includes('buzo') || t.includes('buzos') || t.includes('sudadera')) {
     if (brandKey === 'trevo') return 'buzos'
 
+    if (brandKey === 'dc') {
+      return 'tejido-de-punto-superior'
+    }
+
+    if (
+      brandKey === 'roxy' ||
+      brandKey === 'rvca' ||
+      brandKey === 'quiksilver' ||
+      brandKey === 'columbia' ||
+      brandKey === 'grizzly'
+    ) {
+      return 'indumentaria-superior'
+    }
+
     return 'indumentaria'
   }
 
   if (hasCategoryMatch(categories, 'pantalones') || hasCategoryMatch(categories, 'jeans') || hasCategoryMatch(categories, 'shorts') || hasCategoryMatch(categories, 'bermudas')) {
-    if (brandKey === 'roxy' || brandKey === 'dc') {
+    if (
+      brandKey === 'roxy' ||
+      brandKey === 'dc' ||
+      brandKey === 'quiksilver' ||
+      brandKey === 'rvca' ||
+      brandKey === 'columbia' ||
+      brandKey === 'grizzly'
+    ) {
+      return 'indumentaria-inferior'
+    }
+
+    return 'indumentaria'
+  }
+
+  // Trajes de baño / mallas: tratarlos como prenda inferior para las marcas de indumentaria
+  if (
+    hasCategoryMatch(categories, 'trajes de baño') ||
+    hasCategoryMatch(categories, 'traje de baño') ||
+    t.includes('trajes de baño') ||
+    t.includes('traje de baño') ||
+    t.includes('malla') ||
+    t.includes('mallas')
+  ) {
+    if (
+      brandKey === 'roxy' ||
+      brandKey === 'dc' ||
+      brandKey === 'quiksilver' ||
+      brandKey === 'rvca' ||
+      brandKey === 'columbia' ||
+      brandKey === 'grizzly'
+    ) {
       return 'indumentaria-inferior'
     }
 
@@ -172,7 +275,17 @@ const normalizeType = (brand, type, categories, productName) => {
     hasCategoryMatch(categories, 'rompevientos') ||
     hasCategoryMatch(categories, 'interiores térmicos')
   ) {
-    if (brandKey === 'roxy' || brandKey === 'dc') {
+    if (brandKey === 'dc') {
+      return 'tejido-de-punto-superior'
+    }
+
+    if (
+      brandKey === 'roxy' ||
+      brandKey === 'rvca' ||
+      brandKey === 'quiksilver' ||
+      brandKey === 'columbia' ||
+      brandKey === 'grizzly'
+    ) {
       return 'indumentaria-superior'
     }
 

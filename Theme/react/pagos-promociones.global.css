@@ -1,7 +1,14 @@
 .pagos-promociones-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 0;
+}
+
+.pagos-promociones-full-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: default;
 }
 
 .main-title {

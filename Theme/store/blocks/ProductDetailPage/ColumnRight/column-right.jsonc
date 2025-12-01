@@ -217,10 +217,17 @@
 
       "children": [
         "modal-header#containerHeaderModalPromocionesBancarias",
-        "rich-text#titleModalPromocionesBancarias",
-        "rich-text#subTitleModalPromocionesBancarias",
-        "flex-layout.row#containerMediosPago"
+        "pagos-promociones"
       ]
+
+    },
+
+    "image#promocionesBancariasPopup": {
+
+      "props": {
+        "blockClass": "promociones-bancarias-popup",
+        "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarj.debitobien.png"
+      }
 
     },
 

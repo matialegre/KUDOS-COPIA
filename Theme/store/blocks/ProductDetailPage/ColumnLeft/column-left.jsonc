@@ -13,7 +13,7 @@
         "children": [
           // "cucarda-pdp",
           "product-images",
-          "product-identifier.product",
+          "product-reference-info",
           "especificaciones-pdp"
         ]
     
@@ -45,7 +45,8 @@
           "displayThumbnailsArrows": true,
           "showNavigationArrows": true,
           "showPaginationDots": true,
-          "thumbnailsOrientation": "horizontal"
+          "thumbnailsOrientation": "horizontal",
+          "zoomMode": "in-place-hover"
         }
         
     }

@@ -1,0 +1,255 @@
+.root {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 999;
+  font-family: inherit;
+}
+
+.hint {
+  position: absolute;
+  right: 0;
+  bottom: 72px;
+  max-width: 220px;
+  background: #0F3E99;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 8px 28px 8px 10px;
+  font-size: 13px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.hint::after {
+  content: '';
+  position: absolute;
+  right: 24px;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #0F3E99;
+}
+
+.hintText {
+  display: block;
+}
+
+.hintClose {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.panel {
+  position: absolute;
+  right: 0;
+  bottom: 72px;
+  width: 320px;
+  max-width: 90vw;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #0b2f73;
+  background: #0F3E99;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0F3E99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.headerSubtitle {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.chatBody {
+  display: flex;
+  flex-direction: column;
+  height: 260px;
+  background: #f5f5f5;
+}
+
+.messages {
+  flex: 1;
+  padding: 10px 12px;
+  overflow-y: auto;
+}
+
+.messageRow {
+  display: flex;
+  margin-bottom: 6px;
+}
+
+.fromMaxi {
+  justify-content: flex-start;
+}
+
+.fromUser {
+  justify-content: flex-end;
+}
+
+.messageBubble {
+  padding: 8px 10px;
+  border-radius: 16px;
+  font-size: 13px;
+  line-height: 1.4;
+  max-width: 85%;
+}
+
+.fromMaxi .messageBubble {
+  background: #ffffff;
+  color: #333333;
+  border-radius: 16px 16px 16px 4px;
+}
+
+.fromUser .messageBubble {
+  background: #f71963;
+  color: #ffffff;
+  border-radius: 16px 16px 4px 16px;
+}
+
+.footer {
+  padding: 8px 10px 10px;
+  border-top: 1px solid #eeeeee;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input {
+  border-radius: 6px;
+  border: 1px solid #dddddd;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+.textarea {
+  border-radius: 6px;
+  border: 1px solid #dddddd;
+  padding: 6px 8px;
+  font-size: 12px;
+  resize: vertical;
+  min-height: 48px;
+  max-height: 80px;
+}
+
+.feedback {
+  font-size: 12px;
+  color: #333333;
+  background: #f5f5f5;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+.sendButton {
+  border-radius: 999px;
+  border: none;
+  background: #f71963;
+  color: #ffffff;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.sendButton:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.bubble {
+  display: flex;
+  align-items: center;
+  border-radius: 999px;
+  border: none;
+  background: #0F3E99;
+  color: #ffffff;
+  padding: 8px 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.bubbleAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0F3E99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.bubbleText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bubbleTitle {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.bubbleSubtitle {
+  font-size: 11px;
+}
+
+.footerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+@media (max-width: 640px) {
+  .panel {
+    right: 8px;
+    bottom: 64px;
+  }
+
+  .bubble {
+    right: 8px;
+    bottom: 8px;
+  }
+}

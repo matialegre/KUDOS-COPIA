@@ -15,6 +15,18 @@
     "createCoupon": {
       "path": "/_v/mundo/coupons/create",
       "public": true
+    },
+    "notifySupport": {
+      "path": "/_v/mundo/support/notify",
+      "public": true
+    },
+    "supportCreate": {
+      "path": "/_v/mundo/support/create",
+      "public": true
+    },
+    "supportPending": {
+      "path": "/_v/mundo/support/pending",
+      "public": true
     }
   }
 }

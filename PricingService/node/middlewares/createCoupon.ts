@@ -4,7 +4,7 @@ import type { CouponPayload } from '../clients/promotions'
 const WELCOME_UTM_SOURCE = 'WELCOME10'
 
 function generateCouponCode(email: string) {
-  const normalized = email.trim().toLowerCase()
+  void email
   const random = Math.random().toString(36).substring(2, 8).toUpperCase()
   return `MUNDO10-${random}`
 }

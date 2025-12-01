@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     gap: 4px;
+    color: #2680EB;
 }
 
 .triggerTallesContainer p{
@@ -14,5 +15,20 @@
     font-weight: 500;
     line-height: 16px;
     letter-spacing: 0.2px;
-    color: #2680EB; 
+    color: currentColor; 
+}
+
+.triggerTallesIcon{
+    width: 17px;
+    height: 16px;
+}
+
+.triggerTallesContainerRed{
+    color: #C9190B;
+}
+
+@media (max-width: 640px) {
+    .triggerTallesContainer{
+        top: 0; /* pegado al label "Talles", más lejos del link de promociones */
+    }
 }

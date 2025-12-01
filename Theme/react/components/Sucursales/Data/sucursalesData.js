@@ -149,10 +149,10 @@ const sucursalesData = [
     {
         "id": "5",
         "name": "GENERAL ROCA",
-        "subtitle": "Tucumán 850",
+        "subtitle": "Tucumán 552",
         "description": null,
         "instructions": "",
-        "formatted_address": "Tucumán 850, General Roca",
+        "formatted_address": "Tucumán 552, General Roca",
         "address": {
             "postalCode": "R8332",
             "country": {
@@ -163,7 +163,7 @@ const sucursalesData = [
             "state": "Río Negro",
             "neighborhood": "",
             "street": "Tucumán",
-            "number": "850",
+            "number": "552",
             "complement": null,
             "reference": "",
             "location": {

@@ -10,6 +10,11 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
   const [activeDropdown, setActiveDropdown] = useState(null)
   const [openMobileDept, setOpenMobileDept] = useState(null)
   const [openMobileSub, setOpenMobileSub] = useState(null)
+  const [suggestions, setSuggestions] = useState([])
+  const [categorySuggestions, setCategorySuggestions] = useState([])
+  const [showSuggestions, setShowSuggestions] = useState(false)
+  const [isLoadingSuggestions, setIsLoadingSuggestions] = useState(false)
+  const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false)
   const closeTimeoutRef = useRef(null)
 
   const handleOpenDropdown = (id) => {
@@ -85,6 +90,180 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
     return undefined
   }, [])
 
+  // Autocomplete de búsqueda simple usando la API de catálogo de VTEX
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    const trimmed = (searchQuery || '').trim()
+
+    // Si no hay nada escrito, limpiamos todo y cerramos el panel
+    if (!trimmed) {
+      setSuggestions([])
+      setCategorySuggestions([])
+      setShowSuggestions(false)
+      setIsLoadingSuggestions(false)
+      return
+    }
+
+    // Con menos de 2 letras no llamamos a la API, solo mostramos un mensaje guía
+    if (trimmed.length < 2) {
+      setSuggestions([])
+      setCategorySuggestions([])
+      setIsLoadingSuggestions(false)
+      setShowSuggestions(true)
+      return
+    }
+
+    let cancelled = false
+
+    setIsLoadingSuggestions(true)
+    setShowSuggestions(true)
+
+    const timeoutId = setTimeout(async () => {
+      try {
+        const encoded = encodeURIComponent(trimmed)
+        const response = await fetch(
+          `/api/catalog_system/pub/products/search?ft=${encoded}&_from=0&_to=19`
+        )
+
+        if (!response.ok) {
+          if (!cancelled) {
+            setIsLoadingSuggestions(false)
+            setSuggestions([])
+          }
+
+          return
+        }
+
+        const data = await response.json()
+
+        if (cancelled) return
+
+        let mapped = []
+        const categoryMap = new Map()
+
+        const addSuggestionTerm = (rawTerm) => {
+          const term = (rawTerm || '').trim()
+          if (!term) return
+
+          const key = term.toLowerCase()
+          const current = categoryMap.get(key) || {
+            term,
+            count: 0,
+          }
+
+          current.count += 1
+          categoryMap.set(key, current)
+        }
+
+        if (Array.isArray(data)) {
+          const queryLower = trimmed.toLowerCase()
+
+          mapped = data
+            .map((product) => {
+              const firstSku = product.items && product.items[0]
+              const firstImage =
+                firstSku &&
+                firstSku.images &&
+                firstSku.images[0] &&
+                firstSku.images[0].imageUrl
+
+              const offer =
+                firstSku &&
+                firstSku.sellers &&
+                firstSku.sellers[0] &&
+                firstSku.sellers[0].commertialOffer
+
+              const brand = product.brand || product.brandName || ''
+              const brandLower = brand ? brand.toLowerCase() : ''
+
+              // Tomar la última categoría del árbol para usarla como sugerencia
+              let suggestionName = ''
+
+              if (product.categoryTree && product.categoryTree.length) {
+                const leaf = product.categoryTree[product.categoryTree.length - 1]
+
+                suggestionName =
+                  (leaf && (leaf.name || leaf.Label || leaf.labelValue)) || ''
+              }
+
+              if (!suggestionName && product.categories && product.categories.length) {
+                const lastPath = product.categories[product.categories.length - 1]
+
+                if (typeof lastPath === 'string') {
+                  const parts = lastPath.split('/').filter(Boolean)
+
+                  suggestionName = parts[parts.length - 1] || ''
+                }
+              }
+
+              if (suggestionName) {
+                addSuggestionTerm(suggestionName)
+              }
+
+              // También tomar palabras del nombre del producto que empiecen con el término buscado
+              if (product.productName) {
+                const words = product.productName.split(/\s+/)
+
+                words.forEach((word) => {
+                  const clean = word
+                    .replace(/[^0-9A-Za-zÁÉÍÓÚáéíóúÑñ]/g, '')
+                    .trim()
+
+                  if (!clean || clean.length < 3) return
+
+                  const lower = clean.toLowerCase()
+
+                  if (!lower.startsWith(queryLower)) return
+
+                  if (brandLower && lower === brandLower) return
+
+                  addSuggestionTerm(clean)
+                })
+              }
+
+              return {
+                id: product.productId || product.productId,
+                name: product.productName || '',
+                brand,
+                link: product.linkText
+                  ? `/${product.linkText}/p`
+                  : product.link || '#',
+                image: firstImage,
+                price:
+                  offer && typeof offer.Price === 'number'
+                    ? offer.Price
+                    : null,
+              }
+            })
+            .filter((item) => item.link && item.name)
+        }
+
+        const categorySuggestionsArray = Array.from(categoryMap.values())
+          .sort((a, b) => b.count - a.count)
+          .slice(0, 10)
+
+        setSuggestions(mapped)
+        setCategorySuggestions(categorySuggestionsArray)
+        setIsLoadingSuggestions(false)
+        setShowSuggestions(true)
+      } catch (e) {
+        if (!cancelled) {
+          setIsLoadingSuggestions(false)
+          setSuggestions([])
+          setCategorySuggestions([])
+        }
+      }
+    }, 300)
+
+    return () => {
+      cancelled = true
+      clearTimeout(timeoutId)
+    }
+  }, [searchQuery])
+
   const handleSearch = (e) => {
     e.preventDefault()
 
@@ -94,6 +273,7 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
     const encoded = encodeURIComponent(trimmed)
     // Usar el mismo patrón de búsqueda que la tienda productiva:
     // /termino?_q=termino&map=ft
+    setShowSuggestions(false)
     window.location.href = `/${encoded}?_q=${encoded}&map=ft`
   }
 
@@ -104,13 +284,75 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
         setOpenMobileDept(null)
         setOpenMobileSub(null)
       }
+      if (nextOpen) {
+        setIsMobileSearchOpen(false)
+        setSearchQuery('')
+        setSuggestions([])
+        setCategorySuggestions([])
+        setShowSuggestions(false)
+        setIsLoadingSuggestions(false)
+      }
       return nextOpen
     })
   }
 
+  const handleToggleMobileSearch = () => {
+    setIsMobileSearchOpen((prevOpen) => {
+      const nextOpen = !prevOpen
+
+      if (!nextOpen) {
+        setSearchQuery('')
+        setSuggestions([])
+        setCategorySuggestions([])
+        setShowSuggestions(false)
+        setIsLoadingSuggestions(false)
+      }
+
+      return nextOpen
+    })
+  }
+
+  const formatPrice = (value) => {
+    if (typeof value !== 'number') return null
+
+    try {
+      return value.toLocaleString('es-AR', {
+        style: 'currency',
+        currency: 'ARS',
+        maximumFractionDigits: 0,
+      })
+    } catch (e) {
+      const rounded = Math.round(value)
+      return `$ ${rounded.toLocaleString('es-AR')}`
+    }
+  }
+
+  const trimmedQueryForUrl = (searchQuery || '').trim()
+  const encodedQueryForUrl = trimmedQueryForUrl
+    ? encodeURIComponent(trimmedQueryForUrl)
+    : ''
+
+  const headerClassNames = `${styles.mainHeader} ${
+    isMobileSearchOpen ? styles.mainHeaderMobileSearchOpen : ''
+  }`
+
   return (
-    <header className={styles.mainHeader}>
+    <header className={headerClassNames}>
       <div className={styles.headerContainer}>
+        {/* Botón de búsqueda mobile (lupita) */}
+        <button
+          type="button"
+          className={styles.mobileSearchButton}
+          aria-label="Buscar"
+          onClick={handleToggleMobileSearch}
+        >
+          <img
+            src="https://mundooutdoorar.vtexassets.com/arquivos/LUPABLANCA.PNG"
+            alt="Buscar"
+            className={styles.mobileSearchIconImage}
+          />
+        </button>
+
         {/* Logo */}
         <a href="/" className={styles.logoLink}>
           <img
@@ -220,6 +462,191 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
           <span className={styles.hamburger}></span>
         </button>
       </div>
+
+      {isMobileSearchOpen && (
+        <div className={styles.mobileSearchBar}>
+          <form onSubmit={handleSearch} className={styles.mobileSearchForm}>
+            <input
+              type="text"
+              placeholder={searchPlaceholder || 'Buscar'}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className={styles.mobileSearchInput}
+            />
+          </form>
+        </div>
+      )}
+
+      {/* Sugerencias de búsqueda (desktop) */}
+      {showSuggestions && (
+          <div className={styles.searchSuggestions}>
+            <div className={styles.searchSuggestionsColumns}>
+              {/* Columna izquierda: Sugerencias */}
+              <div className={styles.searchSuggestionsLeft}>
+                <div className={styles.searchSuggestionsSectionHeader}>
+                  <span className={styles.searchSuggestionsSectionTitle}>
+                    Sugerencias
+                  </span>
+                </div>
+
+                {isLoadingSuggestions && (
+                  <div className={styles.searchSuggestionsTermsLoading}>
+                    {[0, 1, 2].map((idx) => (
+                      <div
+                        // eslint-disable-next-line react/no-array-index-key
+                        key={idx}
+                        className={styles.searchSuggestionsLoadingLine}
+                        style={{ width: idx === 0 ? '80%' : '60%' }}
+                      />
+                    ))}
+                  </div>
+                )}
+
+                {!isLoadingSuggestions && categorySuggestions.length > 0 && (
+                  <ul className={styles.searchSuggestionsTermList}>
+                    {categorySuggestions.map((item) => {
+                      const term = item.term || ''
+                      const key = term.toLowerCase()
+
+                      if (!term) {
+                        return null
+                      }
+
+                      const encodedTerm = encodeURIComponent(term)
+
+                      return (
+                        <li
+                          key={key}
+                          className={styles.searchSuggestionsTermItem}
+                        >
+                          <a
+                            href={`/${encodedTerm}?_q=${encodedTerm}&map=ft`}
+                            className={styles.searchSuggestionsTermLink}
+                            onClick={() => setShowSuggestions(false)}
+                          >
+                            <span className={styles.searchSuggestionsTermLabel}>
+                              {term}
+                            </span>
+                            {typeof item.count === 'number' && (
+                              <span className={styles.searchSuggestionsTermCount}>
+                                {item.count}
+                              </span>
+                            )}
+                          </a>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                )}
+
+                {!isLoadingSuggestions &&
+                  categorySuggestions.length === 0 &&
+                  trimmedQueryForUrl && (
+                    <div className={styles.searchSuggestionsEmpty}>
+                      Sin sugerencias para “{trimmedQueryForUrl}”.
+                    </div>
+                  )}
+
+                {!isLoadingSuggestions &&
+                  trimmedQueryForUrl &&
+                  encodedQueryForUrl && (
+                    <a
+                      href={`/${encodedQueryForUrl}?_q=${encodedQueryForUrl}&map=ft`}
+                      className={styles.searchSuggestionsSeeAll}
+                      onClick={() => setShowSuggestions(false)}
+                    >
+                      Ver todos los resultados para{' '}
+                      <span className={styles.searchSuggestionsSeeAllQuery}>
+                        “{trimmedQueryForUrl}”
+                      </span>
+                    </a>
+                  )}
+              </div>
+
+              {/* Columna derecha: Productos */}
+              <div className={styles.searchSuggestionsRight}>
+                <div className={styles.searchSuggestionsSectionHeader}>
+                  <span className={styles.searchSuggestionsSectionTitle}>
+                    Productos
+                  </span>
+                </div>
+
+                {isLoadingSuggestions && (
+                  <div className={styles.searchSuggestionsLoading}>
+                    {[0, 1, 2, 3].map((idx) => (
+                      <div
+                        // eslint-disable-next-line react/no-array-index-key
+                        key={idx}
+                        className={styles.searchSuggestionsLoadingRow}
+                      >
+                        <div
+                          className={styles.searchSuggestionsLoadingThumbnail}
+                        />
+                        <div className={styles.searchSuggestionsLoadingText}>
+                          <div
+                            className={styles.searchSuggestionsLoadingLine}
+                          />
+                          <div
+                            className={styles.searchSuggestionsLoadingLine}
+                            style={{ width: '60%' }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {!isLoadingSuggestions && suggestions.length > 0 && (
+                  <ul className={styles.searchSuggestionsList}>
+                    {suggestions.map((item) => (
+                      <li
+                        key={item.id || item.link}
+                        className={styles.searchSuggestionItem}
+                      >
+                        <a
+                          href={item.link}
+                          className={styles.searchSuggestionLink}
+                          onClick={() => setShowSuggestions(false)}
+                        >
+                          {item.image && (
+                            <img
+                              src={item.image}
+                              alt={item.name}
+                              className={styles.searchSuggestionImage}
+                            />
+                          )}
+                          <div className={styles.searchSuggestionInfo}>
+                            {item.brand && (
+                              <span className={styles.searchSuggestionBrand}>
+                                {item.brand}
+                              </span>
+                            )}
+                            <span className={styles.searchSuggestionName}>
+                              {item.name}
+                            </span>
+                            {item.price != null && (
+                              <span className={styles.searchSuggestionPrice}>
+                                {formatPrice(item.price)}
+                              </span>
+                            )}
+                          </div>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {!isLoadingSuggestions &&
+                  suggestions.length === 0 &&
+                  trimmedQueryForUrl && (
+                    <div className={styles.searchSuggestionsEmpty}>
+                      No encontramos resultados para “{trimmedQueryForUrl}”.
+                    </div>
+                  )}
+              </div>
+            </div>
+          </div>
+        )}
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (

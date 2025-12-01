@@ -1,0 +1,101 @@
+{
+
+  "store.custom#preguntas-frecuentes": {
+  
+    "children": [
+      "flex-layout.row#shared-container-preguntas-frecuentes"
+    ]
+  },
+
+  "flex-layout.row#shared-container-preguntas-frecuentes": {
+
+    "props": {
+      "blockClass": "shared-container-constitucionales",
+      "preserveLayoutOnMobile": true,
+      "horizontalAlign": "left",
+      "colSizing": "auto"
+    },
+  
+    "children": [
+      "flex-layout.col#shared-container-preguntas-frecuentes-col"
+    ]
+  },
+
+  "flex-layout.col#shared-container-preguntas-frecuentes-col": {
+
+    "props": {
+      "blockClass": "shared-container-constitucionales-col",
+      "preserveLayoutOnMobile": true,
+      "horizontalAlign": "left",
+      "colSizing": "auto"
+    },
+  
+    "children": [
+      "breadcrumb-custom",
+      "rich-text#text-title-preguntas-frecuentes",
+      "rich-text#question-faq-1",
+      "rich-text#text-faq-1",
+      "rich-text#question-faq-2",
+      "rich-text#text-faq-2",
+      "rich-text#question-faq-3",
+      "rich-text#text-faq-3"
+    ]
+  },
+
+  "rich-text#text-title-preguntas-frecuentes": {
+
+    "props": {
+      "blockClass": "text-title-institucionales",
+      "text": "Preguntas frecuentes"
+    }
+  },
+
+  "rich-text#question-faq-1": {
+
+    "props": {
+      "blockClass": "question-cambios-devoluciones",
+      "text": "¿Cómo puedo hacer una compra online?"
+    }
+  },
+
+  "rich-text#text-faq-1": {
+
+    "props": {
+      "blockClass": "text-cambios-devoluciones",
+      "text": "Elegí los productos que quieras, agregalos al carrito y seguí los pasos del checkout. Vas a poder completar tus datos, elegir el medio de envío y el medio de pago antes de confirmar la compra."
+    }
+  },
+
+  "rich-text#question-faq-2": {
+
+    "props": {
+      "blockClass": "question-cambios-devoluciones",
+      "text": "¿Cuáles son los medios de pago disponibles?"
+    }
+  },
+
+  "rich-text#text-faq-2": {
+
+    "props": {
+      "blockClass": "text-cambios-devoluciones",
+      "text": "Podés abonar con tarjetas de crédito y débito a través de Mercado Pago y otros medios habilitados en el checkout. Las promociones vigentes se muestran siempre al momento de pagar."
+    }
+  },
+
+  "rich-text#question-faq-3": {
+
+    "props": {
+      "blockClass": "question-cambios-devoluciones",
+      "text": "¿Cuáles son los tiempos y costos de envío?"
+    }
+  },
+
+  "rich-text#text-faq-3": {
+
+    "props": {
+      "blockClass": "text-cambios-devoluciones",
+      "text": "Los tiempos y costos de envío dependen de tu domicilio y del tipo de envío elegido. Podés ver el cálculo exacto ingresando tu código postal en el carrito o en el checkout antes de confirmar la compra."
+    }
+  }
+
+}

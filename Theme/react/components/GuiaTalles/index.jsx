@@ -54,11 +54,23 @@ const GuiaTalles = () => {
         });
     }
 
+    // Fallback de género usando la propiedad "Genero / Género" del producto
+    let genderFromProps = '';
+    const properties = productData?.product?.properties || [];
+
+    properties.forEach((item) => {
+        if (item?.name === 'Genero' || item?.name === 'Género') {
+            if (Array.isArray(item.values) && item.values[0]) {
+                genderFromProps = item.values[0];
+            }
+        }
+    });
+
     const productName = productData?.product?.productName || '';
 
     const guideImageUrl = getGuideImageUrl({
         brand: brandFromProduct,
-        gender: debugGender,
+        gender: debugGender || genderFromProps,
         type: debugType,
         categories,
         productName,
@@ -131,12 +143,8 @@ const GuiaTalles = () => {
         const triggerContent = (
 
             <>
-                <TriggerTalles setOpenModal={setOpenModal}/>
-                <div className={style.debugInfoGuiaTalles}>
-                    <p>Tipo de artículo: {debugType || '-'}</p>
-                    <p>Sexo: {debugGender || '-'}</p>
-                    <p>Marca: {brandFromProduct || '-'}</p>
-                </div>
+
+                <TriggerTalles setOpenModal={setOpenModal} hasImage={!!guideImageUrl} />
             </>
 
         )

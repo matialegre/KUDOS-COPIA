@@ -74,18 +74,19 @@
 
 .paper--cotainer-modal-promociones-bancarias{
     margin: 0;
-    padding: 33px;
-    width: 570px;
-    height: 365px;
+    padding: 0;
+    width: min(900px, 90vw);
+    max-height: 90vh;
     box-sizing: border-box;
     border-radius: 0;
+    overflow: hidden;
 }
 
 @media (max-width: 640px) {
 
     .paper--cotainer-modal-promociones-bancarias{
-        width: 321px;
-        height: 485px;
+        width: 90vw;
+        max-height: 90vh;
     }
 
 }
@@ -138,4 +139,13 @@
 
 .paper--cotainer-modal-promociones-bancarias :global(.vtex-flex-layout-0-x-flexRowContent--container-medios-images-pago){
     column-gap: 21px;
+}
+
+@media (max-width: 640px) {
+
+    .triggerContainer :global(.vtex-flex-layout-0-x-flexRowContent--container-trigger-promociones-bancarias) :global(.vtex-rich-text-0-x-paragraph--trigger-promociones-bancarias){
+        font-size: 14px;
+        line-height: 18px;
+    }
+
 }

@@ -5,6 +5,9 @@ import { Clients } from './clients'
 import { sum } from './middlewares/sum'
 import { netPrice } from './middlewares/netPrice'
 import { createCoupon } from './middlewares/createCoupon'
+import { notifySupport } from './middlewares/notifySupport'
+import { supportCreate } from './middlewares/supportCreate'
+import { supportPending } from './middlewares/supportPending'
 
 const TIMEOUT_MS = 800
 
@@ -32,5 +35,8 @@ export default new Service({
     sum,
     netPrice,
     createCoupon,
+    notifySupport,
+    supportCreate,
+    supportPending,
   },
 })

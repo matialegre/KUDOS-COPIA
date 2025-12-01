@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.css'
 
+const WELCOME_POPUP_ENABLED = true
+
 const WelcomePopup = ({ 
   title, 
   subtitle, 
@@ -16,35 +18,18 @@ const WelcomePopup = ({
   const [message, setMessage] = useState('')
 
   useEffect(() => {
-    if (typeof window === 'undefined') {
+    if (!WELCOME_POPUP_ENABLED) {
       return
     }
 
-    const hostname = window.location && window.location.hostname
-    const runtimeWorkspace =
-      window.__RUNTIME__ && window.__RUNTIME__.workspace
-
-    const isDevWorkspace =
-      runtimeWorkspace === 'pandemoniumdev' ||
-      (hostname && hostname.startsWith('pandemoniumdev--'))
-
-    if (isDevWorkspace) {
-      const timer = setTimeout(() => {
-        setIsVisible(true)
-      }, 1000)
-
-      return () => clearTimeout(timer)
+    if (typeof window === 'undefined') {
+      return
     }
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 1000)
 
-    const hasSeenPopup = window.localStorage.getItem('mundooutdoor_welcome_popup_seen')
-
-    if (!hasSeenPopup) {
-      const timer = setTimeout(() => {
-        setIsVisible(true)
-      }, 1000)
-
-      return () => clearTimeout(timer)
-    }
+    return () => clearTimeout(timer)
   }, [])
 
   const handleClose = () => {
@@ -65,28 +50,7 @@ const WelcomePopup = ({
 
     try {
       // 1) Generar cupón
-      let couponCode = null
-
-      try {
-        const couponResponse = await fetch('/_v/mundo/coupons/create', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-          },
-          body: JSON.stringify({
-            email,
-          }),
-        })
-
-        if (couponResponse.ok) {
-          const couponData = await couponResponse.json()
-          couponCode = couponData && couponData.couponCode
-        }
-      } catch (err) {
-        // si falla la creación del cupón, seguimos solo con el alta en NS
-        console.error('Error al generar cupón:', err)
-      }
+      let couponCode = 'mundo10'
 
       // 2) Normalizar cupón: si no se pudo generar uno dinámico, usar uno estático
       if (!couponCode) {
@@ -94,33 +58,19 @@ const WelcomePopup = ({
       }
 
       // Guardar en Master Data siempre con email + cupón
-      const mdBody = { email, coupon: couponCode }
 
-      const mdResponse = await fetch('/api/dataentities/NS/documents', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-        },
-        body: JSON.stringify(mdBody),
-      })
-
-      if (mdResponse.ok) {
-        if (couponCode) {
-          setMessage(`¡Gracias por suscribirte! Tu cupón es ${couponCode}.`)
-        } else {
-          setMessage('¡Gracias por suscribirte! Revisá tu email.')
-        }
-
-        setEmail('')
-
-        // Cerrar popup después de 2 segundos
-        setTimeout(() => {
-          handleClose()
-        }, 2000)
+      if (couponCode) {
+        setMessage(`¡Gracias por suscribirte! Tu cupón es ${couponCode}.`)
       } else {
-        setMessage('Hubo un error. Intentá de nuevo.')
+        setMessage('¡Gracias por suscribirte! Revisá tu email.')
       }
+
+      setEmail('')
+
+      // Cerrar popup después de 2 segundos
+      setTimeout(() => {
+        handleClose()
+      }, 2000)
     } catch (error) {
       console.error('Error al suscribirse:', error)
       setMessage('Hubo un error. Intentá de nuevo.')
@@ -129,7 +79,7 @@ const WelcomePopup = ({
     }
   }
 
-  if (!isVisible) return null
+  if (!WELCOME_POPUP_ENABLED || !isVisible) return null
 
   return (
     <div className={styles.popupOverlay} onClick={handleClose}>

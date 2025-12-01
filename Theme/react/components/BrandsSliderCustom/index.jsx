@@ -8,7 +8,6 @@ const BrandsSliderCustom = ({ title, linkText, linkUrl, brands: customBrands }) 
     { name: 'Timberland', image: '/arquivos/timberland_mundooutdoor.jpg', href: '/marcas/timberland' },
     { name: 'Roxy', image: '/arquivos/roxy_mundooutdoor.jpg', href: '/marcas/roxy' },
     { name: 'DC', image: '/arquivos/dc_mundooutdoor.jpg', href: '/marcas/dc' },
-    { name: 'Volcom', image: '/arquivos/volcom_mundooutdoor.jpg', href: '/marcas/volcom' },
     { name: 'Montagne', image: '/arquivos/montagne_mundooutdoor.jpg', href: '/marcas/montagne' },
     { name: 'Columbia', image: '/arquivos/columbia_mundooutdoor.jpg', href: '/marcas/columbia' },
     { name: 'Öus', image: '/arquivos/ous_mundooutdoor.jpg', href: '/marcas/ous' },
