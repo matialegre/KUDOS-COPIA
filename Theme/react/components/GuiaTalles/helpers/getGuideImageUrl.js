@@ -50,6 +50,9 @@ const IMAGE_MAP = {
   'montagne|hombre|indumentaria': 'guia-montagne-hombre-indumentaria.jpg',
   'montagne|hombre|running': 'guia-montagne-hombre-running.jpg',
   'montagne|mujer|indumentaria': 'guia-montagne-mujer-indumentaria.jpg',
+  // Camperas Montagne: reutilizar guía general de indumentaria
+  'montagne|hombre|camperas': 'guia-montagne-hombre-indumentaria.jpg',
+  'montagne|mujer|camperas': 'guia-montagne-mujer-indumentaria.jpg',
   'montagne|mujer|trekking': 'guia-montagne-mujer-trekking.jpg',
   'montagne|mujer|guantes': 'guia-montagne-mujer-guantes.jpg',
   'montagne|nino|calzado': 'guia-montagne-nino-calzado.jpg',
@@ -190,7 +193,19 @@ const normalizeType = (brand, type, categories, productName) => {
   }
 
   if (t.includes('chaleco')) {
-    return 'chalecos'
+    if (brandKey === 'weiss') {
+      return 'chalecos'
+    }
+
+    if (brandKey === 'dc') {
+      return 'tejido-de-punto-superior'
+    }
+
+    if (brandKey === 'montagne') {
+      return 'indumentaria'
+    }
+
+    return 'indumentaria'
   }
 
   if (t.includes('polar')) {
