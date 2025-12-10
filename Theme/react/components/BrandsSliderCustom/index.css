@@ -39,21 +39,14 @@
 
 .brandsTrack {
   display: flex;
+  transition: transform 0.4s ease;
+}
+
+.brandsPage {
+  display: flex;
   gap: 16px;
-  animation: scroll 30s linear infinite;
-}
-
-.brandsTrack:hover {
-  animation-play-state: paused;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  flex: 0 0 100%;
+  justify-content: center;
 }
 
 .brandItem {
@@ -90,7 +83,7 @@
   cursor: pointer;
 }
 
-.dot:first-child {
+.dotActive {
   background: #ff4757;
 }
 

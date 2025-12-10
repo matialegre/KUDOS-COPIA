@@ -65,11 +65,17 @@ const CustomHeroSlider = ({ slides = [] }) => {
               mobileImage: slideMobileImage,
               videoUrl: slideDesktopVideoUrl,
               mobileVideoUrl: slideMobileVideoUrl,
+              desktopIframeUrl: slideDesktopIframeUrl,
+              mobileIframeUrl: slideMobileIframeUrl,
               link: slideLink,
               alt: slideAlt,
             } = slide
 
-            const hasAnyVideo = slideDesktopVideoUrl || slideMobileVideoUrl
+            const hasAnyVideo =
+              slideDesktopVideoUrl ||
+              slideMobileVideoUrl ||
+              slideDesktopIframeUrl ||
+              slideMobileIframeUrl
             const isVideoSlide = slideType === 'video' && hasAnyVideo
 
             let slideContent
@@ -77,62 +83,94 @@ const CustomHeroSlider = ({ slides = [] }) => {
             if (isVideoSlide) {
               const desktopVideo = slideDesktopVideoUrl || null
               const mobileVideo = slideMobileVideoUrl || null
+              const desktopIframe = slideDesktopIframeUrl || null
+              const mobileIframe = slideMobileIframeUrl || null
 
-              const desktopMedia = desktopVideo ? (
-                <video
-                  className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
-                  src={desktopVideo}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                />
-              ) :
-                slideDesktopImage ? (
-                  <img
-                    src={slideDesktopImage}
-                    alt={slideAlt || ''}
+              const hasIframe = desktopIframe || mobileIframe
+
+              let desktopMedia
+              let mobileMedia
+
+              if (hasIframe) {
+                const effectiveDesktopIframe = desktopIframe || mobileIframe
+                const effectiveMobileIframe = mobileIframe || desktopIframe
+
+                desktopMedia = effectiveDesktopIframe ? (
+                  <iframe
                     className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
+                    src={effectiveDesktopIframe}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    frameBorder="0"
                   />
-                ) :
-                  mobileVideo ? (
-                    <video
-                      className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
-                      src={mobileVideo}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                    />
-                  ) : null
+                ) : null
 
-              const mobileMedia = mobileVideo ? (
-                <video
-                  className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
-                  src={mobileVideo}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                />
-              ) :
-                slideMobileImage ? (
-                  <img
-                    src={slideMobileImage}
-                    alt={slideAlt || ''}
+                mobileMedia = effectiveMobileIframe ? (
+                  <iframe
                     className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
+                    src={effectiveMobileIframe}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    frameBorder="0"
+                  />
+                ) : null
+              } else {
+                desktopMedia = desktopVideo ? (
+                  <video
+                    className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
+                    src={desktopVideo}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                   />
                 ) :
-                  desktopVideo ? (
-                    <video
-                      className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
-                      src={desktopVideo}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
+                  slideDesktopImage ? (
+                    <img
+                      src={slideDesktopImage}
+                      alt={slideAlt || ''}
+                      className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
                     />
-                  ) : null
+                  ) :
+                    mobileVideo ? (
+                      <video
+                        className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
+                        src={mobileVideo}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                      />
+                    ) : null
+
+                mobileMedia = mobileVideo ? (
+                  <video
+                    className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
+                    src={mobileVideo}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  />
+                ) :
+                  slideMobileImage ? (
+                    <img
+                      src={slideMobileImage}
+                      alt={slideAlt || ''}
+                      className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
+                    />
+                  ) :
+                    desktopVideo ? (
+                      <video
+                        className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
+                        src={desktopVideo}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                      />
+                    ) : null
+              }
 
               slideContent = (
                 <>
@@ -232,12 +270,16 @@ CustomHeroSlider.schema = {
               'ui:widget': 'image-uploader',
             },
           },
-          videoUrl: {
-            title: 'URL del video desktop (mp4)',
+          desktopIframeUrl: {
+            title: 'URL iframe video (escritorio)',
+            description:
+              'Pegá aquí la URL completa del iframe de Cloudflare para escritorio (valor de src).',
             type: 'string',
           },
-          mobileVideoUrl: {
-            title: 'URL del video mobile (mp4)',
+          mobileIframeUrl: {
+            title: 'URL iframe video (celular)',
+            description:
+              'Pegá aquí la URL completa del iframe de Cloudflare para celular (valor de src).',
             type: 'string',
           },
           link: {

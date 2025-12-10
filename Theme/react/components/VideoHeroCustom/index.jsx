@@ -102,13 +102,15 @@ const VideoHeroCustom = ({
 
         {/* Columna derecha - Video */}
         <div className={styles.videoColumn}>
-          <video
-            ref={videoRef}
+          <iframe
             className={styles.videoElement}
-            src={videoUrl || "https://res.cloudinary.com/dqeivjlr9/video/upload/v1762285025/video_para_parte_final_5_zassmm.mp4"}
-            muted
-            loop
-            playsInline
+            src={
+              videoUrl ||
+              "https://customer-4z2czbvhbm9jeqnh.cloudflarestream.com/b6e4ca859e6972af5d17163c9b6931d4/iframe?preload=true&loop=true&autoplay=true&muted=true&controls=false&letterboxColor=transparent&poster=https%3A%2F%2Fcustomer-4z2czbvhbm9jeqnh.cloudflarestream.com%2Fb6e4ca859e6972af5d17163c9b6931d4%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+            }
+            loading="lazy"
+            style={{ border: 'none' }}
+            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
           />
         </div>
       </div>
@@ -131,10 +133,12 @@ VideoHeroCustom.schema = {
       default: 'https://mundooutdoorar.vteximg.com.br/arquivos/suscribitenegro.jpg'
     },
     videoUrl: {
-      title: 'URL del Video',
-      description: 'URL completa del video (962px de ancho)',
+      title: 'URL iframe video (escritorio y celular)',
+      description:
+        'Pegá aquí la URL completa del iframe de Cloudflare (valor de src). Se usa el mismo video para escritorio y celular.',
       type: 'string',
-      default: 'https://res.cloudinary.com/dqeivjlr9/video/upload/v1762285025/video_para_parte_final_5_zassmm.mp4'
+      default:
+        'https://customer-4z2czbvhbm9jeqnh.cloudflarestream.com/b6e4ca859e6972af5d17163c9b6931d4/iframe?preload=true&loop=true&autoplay=true&muted=true&controls=false&letterboxColor=transparent&poster=https%3A%2F%2Fcustomer-4z2czbvhbm9jeqnh.cloudflarestream.com%2Fb6e4ca859e6972af5d17163c9b6931d4%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600'
     },
     inputPlaceholder: {
       title: 'Placeholder del Input',

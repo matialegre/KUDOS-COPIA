@@ -11,15 +11,15 @@
 .videoHeroContent {
   display: flex;
   width: 1492px;
-  height: 660px;
   gap: 0;
   margin: 0 auto;
+  align-items: stretch;
 }
 
 /* Columna izquierda - Imagen */
 .imageColumn {
   width: 530px;
-  height: 660px;
+  height: auto;
   flex-shrink: 0;
   overflow: hidden;
   position: relative;
@@ -27,7 +27,7 @@
 
 .leftImage {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
 }
@@ -123,14 +123,13 @@
   overflow: hidden;
   background: #000;
   width: 962px;
-  height: 660px;
+  height: auto;
   flex-shrink: 0;
 }
 
 .videoElement {
-  width: 962px;
-  height: 660px;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
   display: block;
   border: none;
 }
@@ -272,5 +271,43 @@
     width: 100%;
     height: auto;
     min-height: 280px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .videoHeroContent {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .imageColumn,
+  .videoColumn {
+    width: 100%;
+    height: auto;
+    min-height: 420px;
+  }
+
+  .leftImage,
+  .videoElement {
+    width: 100%;
+    height: auto;
+    min-height: 420px;
+  }
+
+  .formOverlay {
+    bottom: 40px;
+    width: calc(100% - 60px);
+    max-width: 360px;
+  }
+
+  .emailInput {
+    padding: 13px 14px;
+    font-size: 13px;
+  }
+
+  .submitButton {
+    padding: 13px 20px;
+    font-size: 13px;
   }
 }

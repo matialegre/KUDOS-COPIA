@@ -37,6 +37,12 @@
     border: none;
 }
 
+/* hacemos que el contenedor de filtros sea un flex column para poder reordenar */
+.filtersWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 640px) {
 
     .filter__container{
@@ -101,6 +107,75 @@
     
     border-radius: 12px;
     background: #EB5757;
+}
+
+/* --- Estilo especial para filtro de TALLE: grilla de botones --- */
+/* contemplamos posibles variaciones de nombre: TALLE, Talle, talle */
+.filter__container--TALLE .filterContent,
+.filter__container--Talle .filterContent,
+.filter__container--talle .filterContent{
+    max-height: none;
+    overflow-y: visible;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.filter__container--TALLE .filterItem,
+.filter__container--Talle .filterItem,
+.filter__container--talle .filterItem{
+    margin: 0;
+    width: auto;
+    flex: 0 0 auto;
+}
+
+/* ocultamos la cajita del checkbox para TALLE y usamos solo la etiqueta como botón */
+.filter__container--TALLE .filterItem :global(.vtex-checkbox__container),
+.filter__container--Talle .filterItem :global(.vtex-checkbox__container),
+.filter__container--talle .filterItem :global(.vtex-checkbox__container){
+    display: none;
+}
+
+.filter__container--TALLE .filterItem :global(.vtex-checkbox__line-container),
+.filter__container--Talle .filterItem :global(.vtex-checkbox__line-container),
+.filter__container--talle .filterItem :global(.vtex-checkbox__line-container){
+    display: inline-flex;
+}
+
+.filter__container--TALLE .filterItem :global(.vtex-checkbox__label),
+.filter__container--Talle .filterItem :global(.vtex-checkbox__label),
+.filter__container--talle .filterItem :global(.vtex-checkbox__label){
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 26px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #CCD5E0;
+    background: #FFFFFF;
+    font-family: 'Gotham';
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #3D3F43;
+    cursor: pointer;
+}
+
+.filter__container--TALLE .filterItem--selected :global(.vtex-checkbox__label),
+.filter__container--Talle .filterItem--selected :global(.vtex-checkbox__label),
+.filter__container--talle .filterItem--selected :global(.vtex-checkbox__label){
+    background: #090A10;
+    border-color: #090A10;
+    color: #FFFFFF;
+}
+
+/* que el bloque de TALLE se muestre primero en el panel de filtros */
+.filtersWrapper .filter__container--TALLE,
+.filtersWrapper .filter__container--Talle,
+.filtersWrapper .filter__container--talle{
+    order: -1;
 }
 
 /*ocultar opcion sin dato de los filtros "-s/d-" */

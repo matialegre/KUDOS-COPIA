@@ -8,12 +8,13 @@ const BrandBar = ({ brands: customBrands }) => {
     { name: 'Columbia', logo: '/arquivos/banner-menu-columbia.png', href: '/marcas/columbia' },
     { name: 'Quiksilver', logo: '/arquivos/banner-menu-quiksilver.png', href: '/marcas/quiksilver' },
     { name: 'Montagne', logo: '/arquivos/banner-menu-montagne.png', href: '/marcas/montagne' },
-    { name: 'OBKA', logo: '/arquivos/banner-menu-obka.png', href: '/marcas/obka' },
+    { name: 'Ombak', logo: '/arquivos/banner-menu-obka.png', href: '/marcas/ombak' },
     { name: 'Salomon', logo: '/arquivos/banner-menu-salomon.png', href: '/marcas/salomon' },
     { name: 'RVCA', logo: '/arquivos/banner-menu-rvca.png', href: '/marcas/rvca' },
     { name: 'Burton', logo: '/arquivos/banner-menu-burton.png', href: '/marcas/burton' },
     { name: 'Sorel', logo: '/arquivos/banner-menu-sorel.png', href: '/marcas/sorel' },
-    { name: 'Ansilta', logo: '/arquivos/banner-menu-ansilta.png', href: '/marcas/ansilta' }
+    { name: 'Ansilta', logo: '/arquivos/banner-menu-ansilta.png', href: '/marcas/ansilta' },
+    { name: 'National Geographic', logo: 'https://mundooutdoorar.vtexassets.com/arquivos/nationalimagenicono.png', href: '/marcas/national-geographic' }
   ]
 
   const brands = customBrands && customBrands.length > 0 ? customBrands : defaultBrands

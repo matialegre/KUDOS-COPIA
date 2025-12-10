@@ -10,6 +10,7 @@
   justify-content: center;
   z-index: 9999;
   padding: 20px;
+  overflow-y: auto;
   animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -29,6 +30,8 @@
   width: 100%;
   position: relative;
   padding: 60px 40px 50px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   animation: slideUp 0.4s ease-out;
 }
@@ -190,11 +193,40 @@
   color: #000;
   text-align: center;
 }
+ 
+@media (max-width: 1024px) {
+  .popupContainer {
+    max-width: 90%;
+    padding: 50px 32px 40px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+
+  .discount {
+    font-size: 110px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+}
 
 /* Responsive */
 @media (max-width: 640px) {
+  .popupOverlay {
+    align-items: flex-start;
+    padding: 30px 10px;
+  }
+
   .popupContainer {
-    padding: 40px 25px 35px;
+    padding: 32px 20px 28px;
     max-width: 95%;
   }
 

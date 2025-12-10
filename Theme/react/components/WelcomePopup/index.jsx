@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './index.css'
 
 const WELCOME_POPUP_ENABLED = true
+const WELCOME_POPUP_IGNORE_LOCAL_STORAGE = true
 
 const WelcomePopup = ({ 
   title, 
@@ -25,6 +26,17 @@ const WelcomePopup = ({
     if (typeof window === 'undefined') {
       return
     }
+
+    if (!WELCOME_POPUP_IGNORE_LOCAL_STORAGE) {
+      try {
+        const hasSeen = window.localStorage.getItem('mundooutdoor_welcome_popup_seen') === 'true'
+        if (hasSeen) {
+          return
+        }
+      } catch (e) {
+      }
+    }
+
     const timer = setTimeout(() => {
       setIsVisible(true)
     }, 1000)
@@ -34,7 +46,9 @@ const WelcomePopup = ({
 
   const handleClose = () => {
     setIsVisible(false)
-    localStorage.setItem('mundooutdoor_welcome_popup_seen', 'true')
+    if (!WELCOME_POPUP_IGNORE_LOCAL_STORAGE) {
+      localStorage.setItem('mundooutdoor_welcome_popup_seen', 'true')
+    }
   }
 
   const handleSubmit = async (e) => {

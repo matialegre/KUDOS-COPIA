@@ -197,7 +197,8 @@
             { "label": "RVCA", "href": "/marcas/rvca" },
             { "label": "Grizzly", "href": "/marcas/grizzly" },
             { "label": "Ansilta", "href": "/marcas/ansilta" },
-            { "label": "Columbia", "href": "/marcas/columbia" }
+            { "label": "Columbia", "href": "/marcas/columbia" },
+            { "label": "National Geographic", "href": "/marcas/national-geographic" }
           ]
         },
         {
@@ -243,6 +244,7 @@
             { "label": "Colchonetas e Inflables", "href": "/camping/accesorios/colchonetas-e-inflables" },
             { "label": "Toallas", "href": "/camping/accesorios/toallas" },
             { "label": "Gazebos", "href": "/camping/accesorios/gazebos" },
+            { "label": "Vasos", "href": "/camping/accesorios/vasos" },
             { "label": "Ver todo", "href": "/camping/accesorios", "highlight": true }
           ]
         }

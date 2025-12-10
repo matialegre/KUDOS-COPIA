@@ -51,7 +51,7 @@
 }
 
 .element{
-    padding: 0 0 58px 0;
+    padding: 0 0 24px 0;
     box-sizing: border-box;
     border: 1px solid var(--border-gray);
     overflow: visible;
@@ -230,52 +230,15 @@
 }
 
 .clearLink :global(.vtex-button){
-    visibility: visible;
-    opacity: 1;
-    cursor: pointer;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin-bottom: -1px;
-    margin-left: -1px;
-    width: 285px;
-    height: 32px;
-    min-height: auto;
-    max-height: 32px;
-    border: none;
-    border-radius: 0px;
-    background: #CD4F4F;
+    display: none !important;
 }
 
 @media (max-width: 640px) {
 
     .clearLink :global(.vtex-button){
-        position: relative;
-        bottom: auto;
-        left: auto;
-        width: 170px;
-        /* mismo margen que el botón custom para alinear en mobile */
-        margin: 6px auto 0;
+        display: none !important;
     }
 
-}
-
-.clearLink :global(.vtex-button):hover{
-    background: #b54545;
-}
-
-.clearLink :global(.vtex-button) :global(.vtex-button__label){
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.clearLink :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText){
-    font-family: 'Gotham';
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: 0.2px;
-    text-transform: none;
 }
 
 .price_listPriceContainer{

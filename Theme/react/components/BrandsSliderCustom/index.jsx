@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './index.css'
 
 const BrandsSliderCustom = ({ title, linkText, linkUrl, brands: customBrands }) => {
   const defaultBrands = [
+    { name: 'National Geographic', image: 'https://mundooutdoorar.vtexassets.com/arquivos/nationalimagenicono.png', href: '/marcas/national-geographic' },
     { name: 'Salomon', image: '/arquivos/salomon_mundooutdoor.jpg', href: '/marcas/salomon' },
     { name: 'Burton', image: '/arquivos/burton_mundooutdoor.jpg', href: '/marcas/burton' },
     { name: 'Timberland', image: '/arquivos/timberland_mundooutdoor.jpg', href: '/marcas/timberland' },
@@ -20,31 +21,81 @@ const BrandsSliderCustom = ({ title, linkText, linkUrl, brands: customBrands }) 
 
   const brands = customBrands && customBrands.length > 0 ? customBrands : defaultBrands
 
+  const brandsPerPage = 7
+  const totalPages = Math.max(1, Math.ceil(brands.length / brandsPerPage))
+  const [{ position, direction }, setMotion] = useState({ position: 0, direction: 1 })
+
+  useEffect(() => {
+    if (totalPages <= 1) return undefined
+
+    const interval = setInterval(() => {
+      setMotion((prev) => {
+        const speed = 0.01
+        let nextPosition = prev.position + prev.direction * speed
+        let nextDirection = prev.direction
+
+        if (nextPosition >= totalPages - 1) {
+          nextPosition = totalPages - 1
+          nextDirection = -1
+        } else if (nextPosition <= 0) {
+          nextPosition = 0
+          nextDirection = 1
+        }
+
+        return {
+          position: nextPosition,
+          direction: nextDirection,
+        }
+      })
+    }, 120)
+
+    return () => clearInterval(interval)
+  }, [totalPages])
+
+  const currentPage = Math.round(position)
+
+  const pages = []
+  for (let i = 0; i < totalPages; i += 1) {
+    pages.push(brands.slice(i * brandsPerPage, (i + 1) * brandsPerPage))
+  }
+
   return (
     <div className={styles.brandsContainer}>
       <h2 className={styles.brandsTitle}>{title || 'NUESTRAS MARCAS'}</h2>
       <a href={linkUrl || "/marcas"} className={styles.brandsLink}>{linkText || 'Ver todos'} &gt;</a>
       <div className={styles.brandsSlider}>
-        <div className={styles.brandsTrack}>
-          {brands.map((brand, index) => (
-            <a
-              key={index}
-              className={styles.brandItem}
-              href={brand.href}
-              aria-label={`Ver productos de ${brand.name}`}
-            >
-              <img
-                src={brand.image}
-                alt={brand.name}
-                className={styles.brandImage}
-              />
-            </a>
+        <div
+          className={styles.brandsTrack}
+          style={{ transform: `translateX(-${position * 100}%)` }}
+        >
+          {pages.map((page, pageIndex) => (
+            <div key={pageIndex} className={styles.brandsPage}>
+              {page.map((brand, index) => (
+                <a
+                  key={`${brand.name}-${index}`}
+                  className={styles.brandItem}
+                  href={brand.href}
+                  aria-label={`Ver productos de ${brand.name}`}
+                >
+                  <img
+                    src={brand.image}
+                    alt={brand.name}
+                    className={styles.brandImage}
+                  />
+                </a>
+              ))}
+            </div>
           ))}
         </div>
       </div>
       <div className={styles.sliderDots}>
-        <span className={styles.dot}></span>
-        <span className={styles.dot}></span>
+        {Array.from({ length: totalPages }).map((_, index) => (
+          <span
+            key={index}
+            className={`${styles.dot} ${index === currentPage ? styles.dotActive : ''}`}
+            onClick={() => setMotion((prev) => ({ ...prev, position: index }))}
+          />
+        ))}
       </div>
     </div>
   )
