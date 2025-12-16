@@ -12,7 +12,8 @@
       "flex-layout.row#product-summary-container-destacados",
       "brands-slider-custom",
       "flex-layout.row#videoSection",
-      "welcome-popup"
+      "welcome-popup",
+      "support-entry"
     ]
   }
 }

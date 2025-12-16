@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styles from './index.css'
 
-const DISPLAY_INTERVAL = 5000
-const IMAGE_SWAP_DELAY = 180
+const DISPLAY_INTERVAL = 4000
 
-const BenefitsBar = ({ benefits: customBenefits }) => {
+const BenefitsBar = ({ benefits: customBenefits, backgroundColor }) => {
   const defaultBenefits = [
     {
       id: 'pago-blanco',
@@ -16,163 +15,151 @@ const BenefitsBar = ({ benefits: customBenefits }) => {
   ]
 
   const benefits = customBenefits && customBenefits.length > 0 ? customBenefits : defaultBenefits
+  const hasMultiple = benefits.length > 1
 
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [displayIndex, setDisplayIndex] = useState(0)
-  const hasMultiple = benefits.length > 1
+  const [nextIndex, setNextIndex] = useState(0)
+  const [isSliding, setIsSliding] = useState(false)
+  const currentIndexRef = useRef(0)
+  const intervalRef = useRef(null)
+  const timeoutRef = useRef(null)
+
   const themeBenefit = benefits[currentIndex]
-  const displayBenefit = benefits[displayIndex]
-  const timerRef = useRef(null)
-  const imageTimerRef = useRef(null)
+  const useCustomBg = backgroundColor && backgroundColor.trim() !== ''
   const containerClass = `${styles.benefitsBarContainer} ${
-    themeBenefit?.theme === 'light' ? styles.benefitsBarContainerLight : styles.benefitsBarContainerDark
+    useCustomBg ? '' : (themeBenefit?.theme === 'light' ? styles.benefitsBarContainerLight : styles.benefitsBarContainerDark)
   }`
+  const containerStyle = useCustomBg ? { backgroundColor } : {}
 
-  const clearTimer = useCallback(() => {
-    if (timerRef.current) {
-      clearTimeout(timerRef.current)
-      timerRef.current = null
-    }
-  }, [])
+  useEffect(() => {
+    if (!hasMultiple) return
 
-  const scheduleNext = useCallback(() => {
-    if (!hasMultiple) {
-      return
-    }
+    currentIndexRef.current = 0
+    setCurrentIndex(0)
+    setNextIndex(1 % benefits.length)
 
-    clearTimer()
-    timerRef.current = setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % benefits.length)
+    intervalRef.current = setInterval(() => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current)
+        timeoutRef.current = null
+      }
+
+      const incoming = (currentIndexRef.current + 1) % benefits.length
+      setNextIndex(incoming)
+      setIsSliding(true)
+
+      timeoutRef.current = setTimeout(() => {
+        currentIndexRef.current = incoming
+        setCurrentIndex(incoming)
+        setNextIndex((incoming + 1) % benefits.length)
+        setIsSliding(false)
+        timeoutRef.current = null
+      }, 500)
     }, DISPLAY_INTERVAL)
-  }, [benefits.length, hasMultiple, clearTimer])
-
-  useEffect(() => {
-    scheduleNext()
-
-    return clearTimer
-  }, [scheduleNext, clearTimer, currentIndex])
-
-  useEffect(() => {
-    if (!hasMultiple) {
-      setDisplayIndex(currentIndex)
-      return
-    }
-
-    if (displayIndex === currentIndex) {
-      return
-    }
-
-    if (imageTimerRef.current) {
-      clearTimeout(imageTimerRef.current)
-    }
-
-    imageTimerRef.current = setTimeout(() => {
-      setDisplayIndex(currentIndex)
-      imageTimerRef.current = null
-    }, IMAGE_SWAP_DELAY)
 
     return () => {
-      if (imageTimerRef.current) {
-        clearTimeout(imageTimerRef.current)
-        imageTimerRef.current = null
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current)
+        intervalRef.current = null
+      }
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current)
+        timeoutRef.current = null
       }
     }
-  }, [currentIndex, displayIndex, hasMultiple])
+  }, [benefits.length, hasMultiple])
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) => {
-      const nextIndex = (prev - 1 + benefits.length) % benefits.length
-      return nextIndex
-    })
-    scheduleNext()
-  }
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => {
-      const nextIndex = (prev + 1) % benefits.length
-      return nextIndex
-    })
-    scheduleNext()
-  }
+  const currentBenefit = benefits[currentIndex]
+  const incomingBenefit = benefits[nextIndex]
 
   return (
-    <div className={containerClass}>
+    <div className={containerClass} style={containerStyle}>
       <div className={styles.benefitsBar}>
-        {hasMultiple && (
-          <button
-            onClick={handlePrev}
-            className={`${styles.arrowButton} ${styles.arrowButtonLeft}`}
-            aria-label="Anterior"
+        <div className={styles.sliderWrapper}>
+          <a
+            href={currentBenefit.href}
+            className={`${styles.benefitLink} ${styles.slide} ${styles.slideCurrent} ${
+              isSliding ? styles.slideOutLeft : ''
+            }`}
+            aria-label={currentBenefit.alt}
           >
-            ‹
-          </button>
-        )}
+            <img
+              src={currentBenefit.image}
+              alt={currentBenefit.alt}
+              className={styles.benefitImage}
+            />
+          </a>
 
-        <a
-          href={displayBenefit.href}
-          className={styles.benefitLink}
-          aria-label={displayBenefit.alt}
-        >
-          <img
-            src={displayBenefit.image}
-            alt={displayBenefit.alt}
-            className={styles.benefitImage}
-          />
-        </a>
-
-        {hasMultiple && (
-          <button
-            onClick={handleNext}
-            className={`${styles.arrowButton} ${styles.arrowButtonRight}`}
-            aria-label="Siguiente"
-          >
-            ›
-          </button>
-        )}
+          {hasMultiple && (
+            <a
+              href={incomingBenefit.href}
+              className={`${styles.benefitLink} ${styles.slide} ${styles.slideNext} ${
+                isSliding ? styles.slideInCenter : ''
+              }`}
+              aria-label={incomingBenefit.alt}
+            >
+              <img
+                src={incomingBenefit.image}
+                alt={incomingBenefit.alt}
+                className={styles.benefitImage}
+              />
+            </a>
+          )}
+        </div>
       </div>
     </div>
   )
 }
 
 BenefitsBar.schema = {
-  title: 'Benefits Bar',
-  description: 'Barra de beneficios rotativa con imágenes',
+  title: 'Barra de Promociones',
+  description: 'Barra de promociones rotativa - Agregá hasta 4 imágenes de promos',
   type: 'object',
   properties: {
+    backgroundColor: {
+      title: 'Color de Fondo',
+      description: 'Color de fondo personalizado (ej: #000000 para negro, #FFFFFF para blanco). Dejá vacío para usar el tema.',
+      type: 'string',
+      default: '#000000'
+    },
     benefits: {
-      title: 'Beneficios',
-      description: 'Lista de beneficios a mostrar',
+      title: 'Promociones',
+      description: 'Agregá hasta 4 promociones que rotarán automáticamente',
       type: 'array',
+      maxItems: 4,
       items: {
+        title: 'Promoción',
         type: 'object',
         properties: {
           id: {
-            title: 'ID',
+            title: 'ID (opcional)',
             type: 'string'
           },
           image: {
-            title: 'Imagen',
-            description: 'Ruta de la imagen del beneficio',
+            title: 'Imagen de la Promoción',
+            description: 'Subí la imagen de la promoción',
             type: 'string',
             widget: {
               'ui:widget': 'image-uploader'
             }
           },
           alt: {
-            title: 'Texto Alternativo',
-            description: 'Descripción de la imagen',
+            title: 'Descripción',
+            description: 'Descripción de la promoción (para accesibilidad)',
             type: 'string'
           },
           href: {
             title: 'Link',
-            description: 'URL a donde redirige',
-            type: 'string'
+            description: 'URL a donde lleva al hacer clic',
+            type: 'string',
+            default: '/pagos-y-promociones'
           },
           theme: {
-            title: 'Tema',
-            description: 'Tema de fondo (dark o light)',
+            title: 'Tema (si no usás color personalizado)',
+            description: 'Solo aplica si no ponés color de fondo',
             type: 'string',
             enum: ['dark', 'light'],
+            enumNames: ['Oscuro (negro)', 'Claro (blanco)'],
             default: 'dark'
           }
         }

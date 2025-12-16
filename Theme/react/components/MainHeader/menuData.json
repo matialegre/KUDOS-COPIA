@@ -28,7 +28,6 @@
             { "label": "Remeras", "href": "/hombre/indumentaria/remeras" },
             { "label": "Chombas", "href": "/hombre/indumentaria/chombas" },
             { "label": "Musculosas", "href": "/hombre/indumentaria/musculosas" },
-            { "label": "Sudaderas", "href": "/hombre/indumentaria/sudaderas" },
             { "label": "Pantalones", "href": "/hombre/indumentaria/pantalones" },
             { "label": "Jeans", "href": "/hombre/indumentaria/jeans" },
             { "label": "Trajes de Baño", "href": "/hombre/indumentaria/trajes-de-bano" },
@@ -89,7 +88,6 @@
             { "label": "Remeras", "href": "/mujer/indumentaria/remeras" },
             { "label": "Chombas", "href": "/mujer/indumentaria/chombas" },
             { "label": "Musculosas", "href": "/mujer/indumentaria/musculosas" },
-            { "label": "Sudaderas", "href": "/mujer/indumentaria/sudaderas" },
             { "label": "Pantalones", "href": "/mujer/indumentaria/pantalones" },
             { "label": "Jeans", "href": "/mujer/indumentaria/jeans" },
             { "label": "Trajes de Baño", "href": "/mujer/indumentaria/trajes-de-bano" },
@@ -133,7 +131,6 @@
           "items": [
             { "label": "Zapatillas", "href": "/ninos/calzado/zapatillas" },
             { "label": "Botas", "href": "/ninos/calzado/botas" },
-            { "label": "Sandalias", "href": "/ninos/calzado/sandalias" },
             { "label": "Ojotas", "href": "/ninos/calzado/ojotas" },
             { "label": "Ver todo", "href": "/ninos/calzado", "highlight": true }
           ]
@@ -148,7 +145,6 @@
             { "label": "Remeras", "href": "/ninos/ninos-indumentaria/remeras" },
             { "label": "Pantalones", "href": "/ninos/ninos-indumentaria/pantalones" },
             { "label": "Shorts", "href": "/ninos/ninos-indumentaria/shorts" },
-            { "label": "Trajes de Baño", "href": "/ninos/ninos-indumentaria/trajes-de-bano" },
             { "label": "Ver todo", "href": "/ninos/ninos-indumentaria", "highlight": true }
           ]
         },

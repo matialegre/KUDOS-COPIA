@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import styles from './index.css'
 
 const WELCOME_POPUP_ENABLED = true
-const WELCOME_POPUP_IGNORE_LOCAL_STORAGE = true
+const WELCOME_POPUP_IGNORE_LOCAL_STORAGE = false  // Respetar localStorage
+const WELCOME_POPUP_FORCE_STAY = false  // Permitir cerrar con X
 
 const WelcomePopup = ({ 
   title, 
@@ -44,7 +45,11 @@ const WelcomePopup = ({
     return () => clearTimeout(timer)
   }, [])
 
-  const handleClose = () => {
+  const handleClose = (force = false) => {
+    // Si FORCE_STAY está activo, solo se puede cerrar con force=true (después de interactuar)
+    if (WELCOME_POPUP_FORCE_STAY && !force) {
+      return // No permitir cerrar
+    }
     setIsVisible(false)
     if (!WELCOME_POPUP_IGNORE_LOCAL_STORAGE) {
       localStorage.setItem('mundooutdoor_welcome_popup_seen', 'true')
@@ -81,9 +86,9 @@ const WelcomePopup = ({
 
       setEmail('')
 
-      // Cerrar popup después de 2 segundos
+      // Cerrar popup después de 2 segundos (forzado)
       setTimeout(() => {
-        handleClose()
+        handleClose(true)
       }, 2000)
     } catch (error) {
       console.error('Error al suscribirse:', error)
