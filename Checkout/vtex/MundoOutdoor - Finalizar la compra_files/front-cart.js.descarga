@@ -1,0 +1,18 @@
+(function() {
+  var configuration;
+
+  configuration = {
+    paths: {
+      'cart': '//io2.vtex.com/front.cart/v1.7.3/',
+      'flight': '//io2.vtex.com/front-libs/flight/1.1.4-vtex/'
+    },
+    pluginPath: '//io2.vtex.com/front-libs/curl/0.8.10-vtex.2/plugin/'
+  };
+
+  if (vtex.curl.configuration) {
+    _.extend(vtex.curl.configuration.paths, configuration.paths);
+  } else {
+    vtex.curl.configuration = configuration;
+  }
+
+}).call(this);

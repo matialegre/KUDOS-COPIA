@@ -4,7 +4,8 @@
     
         "children":[
             "flex-layout.row#shared-container-venta-corporativa",
-            "flex-layout.row#venta-corporativa-banners-container"
+            "flex-layout.row#venta-corporativa-banners-container",
+            "support-entry"
         ]
 
     },

@@ -1,0 +1,508 @@
+(window["webpackJsonpvtex_shipping_manager_0_13_30"] = window["webpackJsonpvtex_shipping_manager_0_13_30"] || []).push([["selectors"],{
+
+/***/ "../selectors.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module) {if (!!(typeof window !== 'undefined' && window.document) && !window.global) {
+  window.global = window;
+} // compatibility
+
+
+window.__RENDER_7_COMPONENTS__ = window.__RENDER_7_COMPONENTS__ ? window.__RENDER_7_COMPONENTS__ : {};
+window.__RENDER_7_HOT__ = window.__RENDER_7_HOT__ ? window.__RENDER_7_HOT__ : {};
+
+function dep(m) {
+  return m.__esModule ? m.default : m.default || m;
+}
+
+;
+var host = window.__hostname__;
+var assetsPath = '/_v/public/assets/v1/published/';
+
+if (!!(typeof window !== 'undefined' && window.document) && window.__RUNTIME__) {
+  var generatorMetaTag = document.querySelector("meta[name='generator']");
+  var generator = generatorMetaTag && generatorMetaTag.getAttribute('content');
+  var isRenderGenerator = generator && generator.indexOf('vtex.render-server') === 0;
+  var env = __RUNTIME__.publicEndpoint || 'myvtex.com';
+  host = isRenderGenerator ? window.location.hostname : __RUNTIME__.workspace + '--' + __RUNTIME__.account + '.' + env;
+  assetsPath =  false ? undefined : __RUNTIME__.assetServerPublishedPath || '/_v/public/assets/v1/published/';
+}
+
+__webpack_require__.p = 'https://' + host + assetsPath + 'vtex.shipping-manager@0.13.30/public/react/';
+var entry;
+
+try {
+  entry = dep(__webpack_require__("./react/selectors.ts"));
+} catch (error) {
+  throw new Error("An error happened while requiring the app vtex.shipping-manager@0.13.30/selectors, please check your app's code.\n ".concat(error.stack));
+}
+
+if (window.__RENDER_7_RUNTIME__ && window.__RENDER_7_RUNTIME__.withHMR) {
+  window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.13.30/selectors'] = window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.x/selectors'] = window.__RENDER_7_RUNTIME__.withHMR(module, entry);
+} else {
+  window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.13.30/selectors'] = window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.x/selectors'] = entry;
+}
+
+if (false) {}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("../../../../../usr/local/data/service/node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
+/***/ "./react/selectors.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _selectors_account_info_selectors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./react/selectors/account-info-selectors.js");
+/* harmony import */ var _selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/selectors/address-form-selectors.ts");
+/* harmony import */ var _selectors_component_activity_selectors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/selectors/component-activity-selectors.js");
+/* harmony import */ var _selectors_delivery_channels_selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/selectors/delivery-channels-selectors.js");
+/* harmony import */ var _selectors_delivery_selectors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/selectors/delivery-selectors.js");
+/* harmony import */ var _selectors_invoice_address_form_selectors__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./react/selectors/invoice-address-form-selectors.js");
+/* harmony import */ var _selectors_lean_shipping_selectors__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./react/selectors/lean-shipping-selectors.js");
+/* harmony import */ var _selectors_omnishipping_selectors__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./react/selectors/omnishipping-selectors.js");
+/* harmony import */ var _selectors_order_form_selectors__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./react/selectors/order-form-selectors.js");
+/* harmony import */ var _selectors_pickup_selectors__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./react/selectors/pickup-selectors.js");
+/* harmony import */ var _selectors_scheduled_delivery_selectors__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./react/selectors/scheduled-delivery-selectors.js");
+/* harmony import */ var _selectors_slas_selectors__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("./react/selectors/slas-selectors.js");
+/* harmony import */ var _selectors_unavailable_selectors__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__("./react/selectors/unavailable-selectors.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  accountInfoSelectors: _selectors_account_info_selectors__WEBPACK_IMPORTED_MODULE_0__,
+  addressFormSelectors: _selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_1__,
+  componentActivitySelectors: _selectors_component_activity_selectors__WEBPACK_IMPORTED_MODULE_2__,
+  deliveryChannelsSelectors: _selectors_delivery_channels_selectors__WEBPACK_IMPORTED_MODULE_3__,
+  deliverySelectors: _selectors_delivery_selectors__WEBPACK_IMPORTED_MODULE_4__,
+  invoiceAddressFormSelectors: _selectors_invoice_address_form_selectors__WEBPACK_IMPORTED_MODULE_5__,
+  leanShippingSelectors: _selectors_lean_shipping_selectors__WEBPACK_IMPORTED_MODULE_6__,
+  omnishippingSelectors: _selectors_omnishipping_selectors__WEBPACK_IMPORTED_MODULE_7__,
+  orderFormSelectors: _selectors_order_form_selectors__WEBPACK_IMPORTED_MODULE_8__,
+  pickupSelectors: _selectors_pickup_selectors__WEBPACK_IMPORTED_MODULE_9__,
+  scheduledDeliverySelectors: _selectors_scheduled_delivery_selectors__WEBPACK_IMPORTED_MODULE_10__,
+  slasSelectors: _selectors_slas_selectors__WEBPACK_IMPORTED_MODULE_11__,
+  unavailableSelectors: _selectors_unavailable_selectors__WEBPACK_IMPORTED_MODULE_12__
+});
+
+/***/ }),
+
+/***/ "./react/selectors/account-info-selectors.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasGeolocation", function() { return hasGeolocation; });
+/* harmony import */ var reselect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/reselect/es/index.js");
+
+var accountInfoSelector = {
+  geolocation: function geolocation(state) {
+    return state.accountInfo.geolocation;
+  }
+};
+var hasGeolocation = Object(reselect__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(accountInfoSelector.geolocation, function (geolocation) {
+  return geolocation;
+});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  hasGeolocation: hasGeolocation
+});
+
+/***/ }),
+
+/***/ "./react/selectors/delivery-channels-selectors.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isActiveDeliveryChannelDelivery", function() { return isActiveDeliveryChannelDelivery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isActiveDeliveryChannelPickup", function() { return isActiveDeliveryChannelPickup; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isCurrentChannelActive", function() { return isCurrentChannelActive; });
+/* harmony import */ var reselect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/reselect/es/index.js");
+/* harmony import */ var _utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/utils/DeliveryChannelsUtils.js");
+
+
+var componentActivitySelector = {
+  activeDeliveryChannel: function activeDeliveryChannel(state) {
+    return state.componentActivity.activeDeliveryChannel;
+  }
+};
+
+var currentChannelFromProps = function currentChannelFromProps(_, props) {
+  return props.channel;
+};
+
+var isActiveDeliveryChannelDelivery = Object(reselect__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(componentActivitySelector.activeDeliveryChannel, function (deliveryChannel) {
+  return Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_1__["isDelivery"])(deliveryChannel);
+});
+var isActiveDeliveryChannelPickup = Object(reselect__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(componentActivitySelector.activeDeliveryChannel, function (deliveryChannel) {
+  return Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_1__["isPickup"])(deliveryChannel);
+});
+var isCurrentChannelActive = Object(reselect__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(componentActivitySelector.activeDeliveryChannel, currentChannelFromProps, function (deliveryChannel, channel) {
+  return Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_1__["isCurrentChannel"])(deliveryChannel, channel);
+});
+
+/***/ }),
+
+/***/ "./react/selectors/lean-shipping-selectors.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCheapestSlas", function() { return getCheapestSlas; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getFastestSlas", function() { return getFastestSlas; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCombinedSlas", function() { return getCombinedSlas; });
+/* harmony import */ var reselect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/reselect/es/index.js");
+/* harmony import */ var _vtex_estimate_calculator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/@vtex/estimate-calculator/lib/index.umd.js");
+/* harmony import */ var _vtex_estimate_calculator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_vtex_estimate_calculator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_sortBy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/sortBy.js");
+/* harmony import */ var lodash_sortBy__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_sortBy__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _utils_DeliveryPackagesUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/utils/DeliveryPackagesUtils.js");
+/* harmony import */ var _utils_SlasUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/utils/SlasUtils.js");
+/* harmony import */ var _utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./react/utils/DeliveryChannelsUtils.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+var logisticsInfoSelector = function logisticsInfoSelector(logisticsInfo) {
+  return logisticsInfo;
+};
+
+function isDeliveryAndHasSelectedSla(logisticsInfo) {
+  return logisticsInfo.filter(function (li) {
+    return Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isDelivery"])(li) && li.selectedSla;
+  });
+}
+
+function filterSlaNoWindowAndDelivery(logisticsInfoItem) {
+  return logisticsInfoItem.slas.filter(function (sla) {
+    return !Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_4__["hasDeliveryWindows"])(sla) && Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isDelivery"])(sla);
+  });
+}
+
+function getCheapestSla(logisticsInfoItem) {
+  return _vtex_estimate_calculator__WEBPACK_IMPORTED_MODULE_1___default.a.getCheapestSla(filterSlaNoWindowAndDelivery(logisticsInfoItem));
+}
+
+function getCheapestSlaFromDelivery(logisticsInfoItem) {
+  return Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_4__["hasSLAs"])(logisticsInfoItem) && (getCheapestSla(logisticsInfoItem) || logisticsInfoItem.slas.find(function (sla) {
+    return Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isDelivery"])(sla);
+  }));
+}
+
+var getCheapestSlas = Object(reselect__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(logisticsInfoSelector, function (logisticsInfo) {
+  if (!logisticsInfo.find(function (li) {
+    return Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_4__["hasSLAs"])(li);
+  })) return [];
+  var deliveryLIs = isDeliveryAndHasSelectedSla(logisticsInfo);
+  var cheapestFromCombination = deliveryLIs.length > 1 ? Object(_utils_DeliveryPackagesUtils__WEBPACK_IMPORTED_MODULE_3__["getCheapestCombination"])(deliveryLIs) : [];
+  var cheapestSlaFromSingleLI = getCheapestSlaFromDelivery(deliveryLIs[0]);
+  var singleDeliveryLI = [_objectSpread(_objectSpread({}, deliveryLIs[0]), {}, {
+    selectedSla: cheapestSlaFromSingleLI && cheapestSlaFromSingleLI.id
+  })];
+  var cheapestFromCalculator = deliveryLIs.length === 1 ? singleDeliveryLI : [];
+  var newCheapestLogisticsInfo = [].concat(_toConsumableArray(cheapestFromCombination), _toConsumableArray(cheapestFromCalculator), _toConsumableArray(logisticsInfo.filter(function (li) {
+    return !Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isDelivery"])(li);
+  })));
+  return lodash_sortBy__WEBPACK_IMPORTED_MODULE_2___default()(newCheapestLogisticsInfo, 'itemIndex');
+});
+var getFastestSlas = Object(reselect__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(logisticsInfoSelector, function (logisticsInfo) {
+  var fastestLogisticsInfo = logisticsInfo.filter(function (li) {
+    return Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isDelivery"])(li) && li.selectedSla;
+  }).map(function (li) {
+    var selectedSla = _vtex_estimate_calculator__WEBPACK_IMPORTED_MODULE_1___default.a.getFastestSla(li.slas.filter(function (sla) {
+      return Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isDelivery"])(sla) && !Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_4__["hasDeliveryWindows"])(sla);
+    }));
+
+    if (selectedSla && li.slas.length > 1) {
+      return _objectSpread(_objectSpread({}, li), {}, {
+        selectedSla: selectedSla.id
+      });
+    }
+
+    return li;
+  }) || [];
+
+  if (logisticsInfo.find(function (li) {
+    return Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_4__["hasSLAs"])(li);
+  })) {
+    return lodash_sortBy__WEBPACK_IMPORTED_MODULE_2___default()([].concat(_toConsumableArray(fastestLogisticsInfo), _toConsumableArray(logisticsInfo.filter(function (li) {
+      return !Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isDelivery"])(li);
+    }))), 'itemIndex');
+  }
+
+  return [];
+});
+var getCombinedSlas = Object(reselect__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(logisticsInfoSelector, function (logisticsInfo) {
+  if (logisticsInfo.find(function (li) {
+    return Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_4__["hasSLAs"])(li);
+  })) {
+    var deliveryLogisticsInfo = logisticsInfo.filter(function (li) {
+      return Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isDelivery"])(li) && li.selectedSla;
+    });
+    var combinedLogisticsInfo = deliveryLogisticsInfo.length > 0 ? Object(_utils_DeliveryPackagesUtils__WEBPACK_IMPORTED_MODULE_3__["getCostBenefitCombination"])(deliveryLogisticsInfo) : [];
+    return lodash_sortBy__WEBPACK_IMPORTED_MODULE_2___default()([].concat(_toConsumableArray(combinedLogisticsInfo), _toConsumableArray(logisticsInfo.filter(function (li) {
+      return !Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isDelivery"])(li);
+    }))), 'itemIndex');
+  }
+
+  return [];
+});
+
+/***/ }),
+
+/***/ "./react/selectors/pickup-selectors.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUnavailableItemsAmount", function() { return getUnavailableItemsAmount; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPickupPointsById", function() { return getPickupPointsById; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getFilteredPickupOptions", function() { return getFilteredPickupOptions; });
+/* harmony import */ var reselect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/reselect/es/index.js");
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/get.js");
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_uniqBy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/uniqBy.js");
+/* harmony import */ var lodash_uniqBy__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_uniqBy__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash_flatten__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/flatten.js");
+/* harmony import */ var lodash_flatten__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_flatten__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _utils_SellerUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/utils/SellerUtils.js");
+/* harmony import */ var _utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./react/utils/DeliveryChannelsUtils.js");
+/* harmony import */ var _order_form_selectors__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./react/selectors/order-form-selectors.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+var pickupSelector = {
+  activeSellerId: function activeSellerId(state) {
+    return state.pickup.activeSellerId;
+  },
+  pickupPoint: function pickupPoint(state) {
+    return state.pickup.pickupPoint;
+  },
+  pickupOptions: function pickupOptions(state) {
+    return state.pickup.pickupOptions;
+  }
+};
+var orderFormSelector = {
+  items: function items(state) {
+    return lodash_get__WEBPACK_IMPORTED_MODULE_1___default()(state, 'orderForm.items');
+  }
+};
+var SDPath = 'orderForm.shippingData';
+
+var hasLogisticsInfo = function hasLogisticsInfo(state) {
+  return lodash_get__WEBPACK_IMPORTED_MODULE_1___default()(state, "".concat(SDPath, ".logisticsInfo"));
+};
+
+var shippingDataSelector = {
+  logisticsInfo: function logisticsInfo(state) {
+    return hasLogisticsInfo(state) || [];
+  }
+};
+
+var pickupPointSelector = function pickupPointSelector(_, props) {
+  return props.pickupPoint;
+};
+
+var sellerIdSelector = function sellerIdSelector(_, props) {
+  return props.sellerId;
+};
+
+var getUnavailableItemsAmount = Object(reselect__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(orderFormSelector.items, shippingDataSelector.logisticsInfo, pickupPointSelector, sellerIdSelector, function (items, logisticsInfo, pickupPoint, sellerId) {
+  return items.filter(function (item, index) {
+    return item.seller === sellerId && logisticsInfo[index] && !!logisticsInfo[index].deliveryChannels.find(function (channel) {
+      return Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isPickup"])(channel);
+    }) && logisticsInfo[index].slas.find(function (sla) {
+      return sla.id === pickupPoint.id;
+    }) === undefined;
+  }).length;
+});
+
+function getPickupPoints(logisticsInfo, pickupPoint, sellerId, items) {
+  var selectedSla = lodash_uniqBy__WEBPACK_IMPORTED_MODULE_2___default()(logisticsInfo.filter(function (li) {
+    return sellerId ? Object(_utils_SellerUtils__WEBPACK_IMPORTED_MODULE_4__["isFromCurrentSeller"])({
+      items: items,
+      li: li,
+      sellerId: sellerId
+    }) : true;
+  }).map(function (item) {
+    return item.slas.find(function (sla) {
+      return sla.id === pickupPoint.id;
+    });
+  }), 'id').filter(function (item) {
+    return item;
+  }).shift();
+  return selectedSla && _objectSpread(_objectSpread({}, selectedSla), {}, {
+    price: logisticsInfo.filter(function (li) {
+      return sellerId ? Object(_utils_SellerUtils__WEBPACK_IMPORTED_MODULE_4__["isFromCurrentSeller"])({
+        items: items,
+        li: li,
+        sellerId: sellerId
+      }) : true;
+    }).map(function (item) {
+      return item.slas.find(function (sla) {
+        return sla.id === pickupPoint.id;
+      });
+    }).filter(function (item) {
+      return item;
+    }).reduce(function (previousPrice, nextSla) {
+      return nextSla ? previousPrice + nextSla.price : 0;
+    }, 0)
+  });
+}
+
+var getPickupPointsById = Object(reselect__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(shippingDataSelector.logisticsInfo, pickupPointSelector, sellerIdSelector, orderFormSelector.items, getPickupPoints);
+var getFilteredPickupOptions = Object(reselect__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(_order_form_selectors__WEBPACK_IMPORTED_MODULE_6__["deliverySelector"].selectedPackage, orderFormSelector.items, pickupSelector.activeSellerId, function (logisticsInfo, items, sellerId) {
+  var pickupOptions = lodash_uniqBy__WEBPACK_IMPORTED_MODULE_2___default()(lodash_flatten__WEBPACK_IMPORTED_MODULE_3___default()(logisticsInfo.filter(function (li) {
+    return sellerId ? Object(_utils_SellerUtils__WEBPACK_IMPORTED_MODULE_4__["isFromCurrentSeller"])({
+      items: items,
+      li: li,
+      sellerId: sellerId
+    }) : true;
+  }).map(function (li) {
+    return li.slas.filter(function (sla) {
+      return Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isPickup"])(sla);
+    });
+  })), 'id');
+  return pickupOptions.map(function (pickupOption) {
+    var price = logisticsInfo.reduce(function (accPrice, currLi) {
+      var currentPickupPoint = currLi.slas.find(function (sla) {
+        return sla.id === pickupOption.id;
+      });
+      return currentPickupPoint ? accPrice + currentPickupPoint.price : 0;
+    }, 0);
+    return _objectSpread(_objectSpread({}, pickupOption), {}, {
+      price: price
+    });
+  });
+});
+
+/***/ }),
+
+/***/ "./react/selectors/slas-selectors.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSlasList", function() { return getSlasList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDeliverySelectedSla", function() { return getDeliverySelectedSla; });
+/* harmony import */ var _vtex_estimate_calculator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/@vtex/estimate-calculator/lib/index.umd.js");
+/* harmony import */ var _vtex_estimate_calculator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vtex_estimate_calculator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_sortBy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/sortBy.js");
+/* harmony import */ var lodash_sortBy__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_sortBy__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var reselect__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/reselect/es/index.js");
+/* harmony import */ var _delivery_selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/selectors/delivery-selectors.js");
+/* harmony import */ var _utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/utils/DeliveryChannelsUtils.js");
+/* harmony import */ var _utils_SlasUtils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./react/utils/SlasUtils.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+
+
+
+
+
+ // TODO: Mudar o nome desse método para getDeliverySlasList
+
+var getSlasList = Object(reselect__WEBPACK_IMPORTED_MODULE_2__["createSelector"])(_delivery_selectors__WEBPACK_IMPORTED_MODULE_3__["getLogisticsInfo"], function (logisticsInfo) {
+  var slas = logisticsInfo && logisticsInfo.reduce(function (accumulatedSlas, currentLogisticsInfo) {
+    var updatedSlas = _toConsumableArray(accumulatedSlas);
+
+    if (Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_4__["isPickup"])(currentLogisticsInfo)) return updatedSlas;
+    currentLogisticsInfo.slas.forEach(function (sla) {
+      if (Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_4__["isPickup"])(sla)) return;
+      var currentSla = updatedSlas.find(function (accSla) {
+        return accSla.id === sla.id;
+      });
+
+      if (currentSla) {
+        var filteredSlas = updatedSlas.filter(function (sla) {
+          return sla.id !== currentSla.id;
+        });
+
+        var updatedSla = _objectSpread(_objectSpread({}, currentSla), {}, {
+          price: sla.price + currentSla.price
+        });
+
+        updatedSlas = [].concat(_toConsumableArray(filteredSlas), [updatedSla]);
+      } else {
+        updatedSlas.push(sla);
+      }
+    });
+    return updatedSlas;
+  }, []);
+  var deliverySlas = slas && slas.filter(function (sla) {
+    return !Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_5__["hasDeliveryWindows"])(sla);
+  });
+  return lodash_sortBy__WEBPACK_IMPORTED_MODULE_1___default()(deliverySlas, [function (sla) {
+    return _vtex_estimate_calculator__WEBPACK_IMPORTED_MODULE_0___default.a.getShippingEstimateQuantityInSeconds(sla.shippingEstimate);
+  }]);
+});
+var getDeliverySelectedSla = Object(reselect__WEBPACK_IMPORTED_MODULE_2__["createSelector"])(_delivery_selectors__WEBPACK_IMPORTED_MODULE_3__["getLogisticsInfo"], function (logisticsInfo) {
+  var logisticsInfoWithDelivery = logisticsInfo && logisticsInfo.find(function (li) {
+    var selectedSla = Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_5__["getSelectedSlaInSlas"])(li);
+    return selectedSla && !Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_4__["isPickup"])(selectedSla) && !Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_5__["hasDeliveryWindows"])(selectedSla);
+  });
+  var selectedSla = Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_5__["getSelectedSlaInSlas"])(logisticsInfoWithDelivery);
+  return selectedSla && selectedSla.id;
+});
+
+/***/ })
+
+},[["../selectors.js","runtime","common"]]]);
+//# sourceMappingURL=selectors.js.map

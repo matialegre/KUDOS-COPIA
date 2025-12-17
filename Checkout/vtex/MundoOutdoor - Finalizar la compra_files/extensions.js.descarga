@@ -1,0 +1,33 @@
+(function() {
+  var define, require;
+
+  define = vtex.define || window.define;
+
+  require = vtex.curl || window.require;
+
+  define(function() {
+    var Extensions;
+    return Extensions = (function() {
+      /*
+        Translate with interpolation
+        key - key of i18n
+        interpol - object, ex: { x: 1, y: 4 }
+        Usage:
+        {@i18nInterpol key="numberXofY" interpol=interpolObj /}
+      */
+
+      function Extensions() {}
+
+      dust.helpers.i18nInterpol = function(chunk, ctx, bodies, params) {
+        var interpol, key;
+        key = params.key;
+        interpol = params.interpol;
+        return chunk.write(i18n.t(key, interpol));
+      };
+
+      return Extensions;
+
+    })();
+  });
+
+}).call(this);

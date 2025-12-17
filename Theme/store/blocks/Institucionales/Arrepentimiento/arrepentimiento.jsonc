@@ -3,7 +3,8 @@
     "store.custom#arrepentimiento": {
     
         "children":[
-            "flex-layout.row#shared-container-arrepentimiento"
+            "flex-layout.row#shared-container-arrepentimiento",
+            "support-entry"
         ]
 
     },

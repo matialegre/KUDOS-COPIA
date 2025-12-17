@@ -1,7 +1,8 @@
 {
     "store.custom#pagos-promociones": {
         "children": [
-            "pagos-promociones"
+            "pagos-promociones",
+            "support-entry"
         ]
     }
 }

@@ -3,27 +3,149 @@ import PropTypes from 'prop-types'
 import styles from './index.css'
 
 // URL de ngrok - ACTUALIZAR cuando reinicies ngrok
-const PYTHON_ENDPOINT = 'https://b66afbbc99b4.ngrok.app'
+const PYTHON_ENDPOINT = 'https://8b63f309c886.ngrok.app'
+
+// Keys para localStorage
+const STORAGE_KEYS = {
+  TICKET_ID: 'mo_support_ticket_id',
+  IS_OPEN: 'mo_support_is_open',
+  MESSAGES: 'mo_support_messages',
+  LAST_MSG_ID: 'mo_support_last_msg_id'
+}
+
+// Helpers para localStorage
+const storage = {
+  get: (key, defaultValue = null) => {
+    if (typeof window === 'undefined') return defaultValue
+    try {
+      const item = localStorage.getItem(key)
+      return item ? JSON.parse(item) : defaultValue
+    } catch (e) {
+      return defaultValue
+    }
+  },
+  set: (key, value) => {
+    if (typeof window === 'undefined') return
+    try {
+      localStorage.setItem(key, JSON.stringify(value))
+    } catch (e) {}
+  },
+  remove: (key) => {
+    if (typeof window === 'undefined') return
+    try {
+      localStorage.removeItem(key)
+    } catch (e) {}
+  }
+}
 
 const SupportEntry = ({
   welcomeMessage =
     'Hola, soy el asistente de Mundo Outdoor. Contame en qué te puedo ayudar y te respondemos a la brevedad.',
   whatsappUrl = 'https://wa.me/5492914147915',
+  pythonEndpoint = PYTHON_ENDPOINT,
 }) => {
 
-  const [isOpen, setIsOpen] = useState(false)
-  const [ticketId, setTicketId] = useState('')
+  const pythonEndpointBase = useMemo(() => {
+    const raw = String(pythonEndpoint || PYTHON_ENDPOINT || '').trim()
+    return raw.replace(/\/+$/, '')
+  }, [pythonEndpoint])
+
+  // No mostrar en checkout
+  const [isCheckout, setIsCheckout] = useState(false)
+  
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const path = window.location.pathname.toLowerCase()
+      const isCheckoutPage = path.includes('/checkout') || path.includes('/orderform') || path.includes('/cart')
+      setIsCheckout(isCheckoutPage)
+    }
+  }, [])
+
+  // Inicializar estado desde localStorage
+  const [isOpen, setIsOpen] = useState(() => storage.get(STORAGE_KEYS.IS_OPEN, false))
+  const [ticketId, setTicketId] = useState(() => storage.get(STORAGE_KEYS.TICKET_ID, ''))
   const [draft, setDraft] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
-  const [messages, setMessages] = useState([])
-  const [lastMessageId, setLastMessageId] = useState(0)
+  const [messages, setMessages] = useState(() => storage.get(STORAGE_KEYS.MESSAGES, []))
+  const [lastMessageId, setLastMessageId] = useState(() => storage.get(STORAGE_KEYS.LAST_MSG_ID, 0))
+  const [initialized, setInitialized] = useState(false)
 
   const messagesRef = useRef(null)
   const inputRef = useRef(null)
   const pollingRef = useRef(null)
 
   const canSend = useMemo(() => !!draft.trim() && !loading, [draft, loading])
+
+  // Persistir estado en localStorage cuando cambia
+  useEffect(() => {
+    storage.set(STORAGE_KEYS.IS_OPEN, isOpen)
+  }, [isOpen])
+
+  useEffect(() => {
+    if (ticketId) storage.set(STORAGE_KEYS.TICKET_ID, ticketId)
+  }, [ticketId])
+
+  useEffect(() => {
+    if (messages.length > 0) storage.set(STORAGE_KEYS.MESSAGES, messages)
+  }, [messages])
+
+  useEffect(() => {
+    if (lastMessageId > 0) storage.set(STORAGE_KEYS.LAST_MSG_ID, lastMessageId)
+  }, [lastMessageId])
+
+  // Cargar historial del servidor al iniciar si hay ticketId guardado
+  useEffect(() => {
+    if (initialized) return
+    setInitialized(true)
+    
+    const savedTicketId = storage.get(STORAGE_KEYS.TICKET_ID, '')
+    const savedMessages = storage.get(STORAGE_KEYS.MESSAGES, [])
+    const wasOpen = storage.get(STORAGE_KEYS.IS_OPEN, false)
+    
+    if (savedTicketId && savedMessages.length === 0) {
+      // Hay ticket pero no mensajes locales, cargar del servidor
+      loadMessagesFromServer(savedTicketId)
+    } else if (savedMessages.length === 0 && wasOpen) {
+      // Chat abierto pero sin mensajes, agregar bienvenida
+      pushMessage('bot', welcomeMessage)
+    }
+    
+    // Si estaba abierto, hacer focus
+    if (wasOpen) {
+      setTimeout(() => {
+        try { inputRef.current?.focus() } catch (e) {}
+      }, 100)
+    }
+  }, [])
+
+  // Cargar mensajes del servidor
+  const loadMessagesFromServer = async (tId) => {
+    try {
+      console.log(`[CHAT] Loading history for ${tId}`)
+      const res = await fetch(`${pythonEndpointBase}/api/tickets/${tId}/messages?after=0`, {
+        headers: { 'ngrok-skip-browser-warning': 'true' }
+      })
+      const data = await res.json()
+      
+      if (data?.messages?.length > 0) {
+        const loadedMessages = data.messages.map(msg => ({
+          id: `server-${msg.id}`,
+          from: msg.sender === 'agent' ? 'bot' : 'user',
+          text: msg.message
+        }))
+        setMessages(loadedMessages)
+        const maxId = Math.max(...data.messages.map(m => m.id))
+        setLastMessageId(maxId)
+      } else {
+        // No hay mensajes en servidor, agregar bienvenida
+        pushMessage('bot', welcomeMessage)
+      }
+    } catch (e) {
+      console.log('[CHAT] Error loading history:', e.message)
+      pushMessage('bot', welcomeMessage)
+    }
+  }
 
   useEffect(() => {
     if (!isOpen) return
@@ -40,7 +162,7 @@ const SupportEntry = ({
     const pollMessages = async () => {
       try {
         console.log(`[CHAT DEBUG] Polling messages for ${ticketId} after id ${lastMessageId}`)
-        const res = await fetch(`${PYTHON_ENDPOINT}/api/tickets/${ticketId}/messages?after=${lastMessageId}`, {
+        const res = await fetch(`${pythonEndpointBase}/api/tickets/${ticketId}/messages?after=${lastMessageId}`, {
           headers: { 'ngrok-skip-browser-warning': 'true' }
         })
         const data = await res.json()
@@ -81,7 +203,7 @@ const SupportEntry = ({
     console.log(`[CHAT DEBUG] Starting session: ${localTicketId}`)
 
     try {
-      const res = await fetch(`${PYTHON_ENDPOINT}/session`, {
+      const res = await fetch(`${pythonEndpointBase}/session`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -138,7 +260,7 @@ const SupportEntry = ({
 
     try {
       // Enviar directamente a Python (via ngrok)
-      const res = await fetch(`${PYTHON_ENDPOINT}/assist`, {
+      const res = await fetch(`${pythonEndpointBase}/assist`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -181,6 +303,18 @@ const SupportEntry = ({
     setIsOpen(false)
     setDraft('')
     setError('')
+    // Mantener ticketId y messages en localStorage para persistencia
+  }
+
+  // Función para limpiar conversación (nuevo chat)
+  const handleNewChat = () => {
+    storage.remove(STORAGE_KEYS.TICKET_ID)
+    storage.remove(STORAGE_KEYS.MESSAGES)
+    storage.remove(STORAGE_KEYS.LAST_MSG_ID)
+    setTicketId('')
+    setMessages([])
+    setLastMessageId(0)
+    pushMessage('bot', welcomeMessage)
   }
 
   const handleInputKeyDown = (e) => {
@@ -190,6 +324,11 @@ const SupportEntry = ({
     if (canSend) {
       handleSend()
     }
+  }
+
+  // No renderizar en checkout
+  if (isCheckout) {
+    return null
   }
 
   return (
@@ -301,6 +440,7 @@ const SupportEntry = ({
 SupportEntry.propTypes = {
   welcomeMessage: PropTypes.string,
   whatsappUrl: PropTypes.string,
+  pythonEndpoint: PropTypes.string,
 }
 
 SupportEntry.schema = {
@@ -318,6 +458,11 @@ SupportEntry.schema = {
       title: 'URL de WhatsApp',
       type: 'string',
       default: 'https://wa.me/5492914147915',
+    },
+    pythonEndpoint: {
+      title: 'Endpoint Python (ngrok)',
+      type: 'string',
+      default: 'https://8b63f309c886.ngrok.app',
     },
   },
 }

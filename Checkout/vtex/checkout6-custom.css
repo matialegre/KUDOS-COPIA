@@ -113,36 +113,42 @@
 @font-face {
     font-family: Gotham;
     font-weight: 200;
-    src: url(https://mundooutdoorar.myvtex.com/arquivos/Gotham-Thin.otf.css)
+    src: url(/arquivos/Gotham-Thin.otf) format("opentype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: Gotham;
     font-weight: 300;
-    src: url(https://mundooutdoorar.myvtex.com/arquivos/Gotham-Light.otf.css)
+    src: url(/arquivos/Gotham-Light.otf) format("opentype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: Gotham;
     font-weight: 400;
-    src: url(https://mundooutdoorar.myvtex.com/arquivos/Gotham-Regular.otf.css)
+    src: url(/arquivos/Gotham-Regular.otf) format("opentype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: Gotham;
     font-weight: 500;
-    src: url(https://mundooutdoorar.myvtex.com/arquivos/Gotham-Medium.otf.css)
+    src: url(/arquivos/Gotham-Medium.otf) format("opentype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: Gotham;
     font-weight: 700;
-    src: url(https://mundooutdoorar.myvtex.com/arquivos/Gotham-Bold.otf.css)
+    src: url(/arquivos/Gotham-Bold.otf) format("opentype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: GothamBook;
-    src: url(https://mundooutdoorar.myvtex.com/arquivos/GothamBook.ttf.css)
+    src: url(/arquivos/GothamBook.ttf) format("truetype");
+    font-display: swap;
 }
 
 :root {
@@ -496,6 +502,18 @@ p {
     align-self: center;
     display: none;
     width: 100%
+}
+
+.cart-template-holder .cart .cart-items tbody .product-item .product-price .discount-badge {
+    color: #00a650;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+    order: 3;
+    margin-top: 4px;
+    display: block;
+    width: 100%;
+    text-align: center
 }
 
 .cart-template-holder .cart .cart-items tbody .product-item .product-price .discount-question {
@@ -1722,6 +1740,7 @@ p {
     text-transform: uppercase;
     color: #fff
 }
+
 .orderform-template-holder .client-profile-data .client-profile-data .accordion-body .accordion-inner .form-step .submit button:hover {
     background: #1a1a1a
 }
@@ -1744,38 +1763,6 @@ p {
     .orderform-template-holder .client-profile-data .client-profile-data {
         margin: 0 15px;
         padding: 32px 20px
-    }
-
-    #payment-data .accordion-group .accordion-inner .box-step .form-step .steps-view {
-        margin-top: 16px;
-        padding: 16px 20px;
-        background: #fff;
-        border-radius: 4px;
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    #payment-data .accordion-group .accordion-inner .box-step .form-step .steps-view,
-    #payment-data .accordion-group .accordion-inner .box-step .form-step .steps-view p,
-    #payment-data .accordion-group .accordion-inner .box-step .form-step .steps-view span {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-}
-
-.custom201PaymentGroupPaymentGroup .payment-description {
-    margin-top: 12px;
-    padding: 16px 20px;
-    background: #fff;
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--gray-color);
-}
-
-@media (min-width:980px) {
-    .custom201PaymentGroupPaymentGroup .payment-description {
-        font-size: 15px;
     }
 }
 
@@ -2166,9 +2153,9 @@ p {
     border-radius: 4px;
     font-size: 0;
     line-height: normal;
-    margin-top: 24px;
+    margin-top: -68px;
     padding: 16px 20px 12px;
-    width: 100%;
+    width: calc(50% - 12px);
     transition: background-color .2s ease
 }
 

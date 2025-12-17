@@ -11,7 +11,8 @@
 
         "children": [
             "rich-text#textRights",
-            "image#imageDataFiscal"
+            "image#imageDataFiscal",
+            "image#iconWhatsAppFooter"
         ]
     
     },

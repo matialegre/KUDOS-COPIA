@@ -1,27 +1,85 @@
 import React, { useEffect, useState, useRef } from 'react'
 import styles from './index.css'
 
+const MAX_VIDEO_LOOPS = 1
+
 const CustomHeroSlider = ({ slides = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const timeoutRef = useRef(null)
+  const videoLoopCountRef = useRef({})
+  const sliderWrapperRef = useRef(null)
+  const iframeViewCountRef = useRef({})
+  const iframeMountKeyRef = useRef({})
+  const didInitIframeViewRef = useRef(false)
 
   const currentSlide = slides[currentIndex] || {}
   const { duration = 8000 } = currentSlide
 
+  const sanitizeIframeUrl = (rawUrl) => {
+    if (!rawUrl || typeof rawUrl !== 'string') return rawUrl
+    try {
+      const url = new URL(rawUrl)
+      url.searchParams.set('loop', 'false')
+      url.searchParams.set('autoplay', 'true')
+      url.searchParams.set('muted', 'true')
+      return url.toString()
+    } catch (e) {
+      return rawUrl
+    }
+  }
+
+  const getIframePosterUrl = (rawUrl) => {
+    if (!rawUrl || typeof rawUrl !== 'string') return null
+    try {
+      const url = new URL(rawUrl)
+      const poster = url.searchParams.get('poster')
+      if (!poster) return null
+      try {
+        return decodeURIComponent(poster)
+      } catch (e) {
+        return poster
+      }
+    } catch (e) {
+      return null
+    }
+  }
+
+  const markIframeView = (index) => {
+    const slide = slides[index] || {}
+    const hasIframe = slide.desktopIframeUrl || slide.mobileIframeUrl
+    if (!hasIframe) return
+
+    const current = iframeViewCountRef.current[index] || 0
+    if (current >= MAX_VIDEO_LOOPS + 1) return
+
+    const next = current + 1
+    iframeViewCountRef.current[index] = next
+    iframeMountKeyRef.current[index] = next
+  }
+
   const goTo = (index) => {
     if (!slides.length) return
     if (index < 0 || index >= slides.length) return
+    markIframeView(index)
     setCurrentIndex(index)
   }
 
   const goNext = () => {
     if (!slides.length) return
-    setCurrentIndex((prev) => (prev + 1) % slides.length)
+    setCurrentIndex((prev) => {
+      const next = (prev + 1) % slides.length
+      markIframeView(next)
+      return next
+    })
   }
 
   const goPrev = () => {
     if (!slides.length) return
-    setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length)
+    setCurrentIndex((prev) => {
+      const next = (prev - 1 + slides.length) % slides.length
+      markIframeView(next)
+      return next
+    })
   }
 
   useEffect(() => {
@@ -43,12 +101,48 @@ const CustomHeroSlider = ({ slides = [] }) => {
       }
     }
   }, [currentIndex, slides.length, duration])
+
+  useEffect(() => {
+    const root = sliderWrapperRef.current
+    if (!root) return
+
+    const videos = root.querySelectorAll('video')
+    videos.forEach((video) => {
+      try {
+        video.pause()
+      } catch (e) {
+        // noop
+      }
+    })
+
+    const currentSlideNode = root.querySelector(`[data-slide-index="${currentIndex}"]`)
+    if (!currentSlideNode) return
+
+    const currentVideos = currentSlideNode.querySelectorAll('video')
+    currentVideos.forEach((video) => {
+      try {
+        const playPromise = video.play()
+        if (playPromise && typeof playPromise.catch === 'function') {
+          playPromise.catch(() => {})
+        }
+      } catch (e) {
+        // noop
+      }
+    })
+  }, [currentIndex])
+
+  useEffect(() => {
+    if (didInitIframeViewRef.current) return
+    didInitIframeViewRef.current = true
+    markIframeView(currentIndex)
+  }, [currentIndex])
+
   if (!slides.length) {
     return null
   }
 
   return (
-    <div className={styles.sliderWrapper}>
+    <div className={styles.sliderWrapper} ref={sliderWrapperRef}>
       <button className={styles.arrowLeft} onClick={goPrev} aria-label="Anterior">
         &#10094;
       </button>
@@ -88,6 +182,11 @@ const CustomHeroSlider = ({ slides = [] }) => {
 
               const hasIframe = desktopIframe || mobileIframe
 
+              const iframeViews = iframeViewCountRef.current[index] || 0
+              const iframeKey = iframeMountKeyRef.current[index] || 0
+              const allowIframe = iframeViews > 0 && iframeViews <= MAX_VIDEO_LOOPS
+              const isActive = index === currentIndex
+
               let desktopMedia
               let mobileMedia
 
@@ -95,34 +194,93 @@ const CustomHeroSlider = ({ slides = [] }) => {
                 const effectiveDesktopIframe = desktopIframe || mobileIframe
                 const effectiveMobileIframe = mobileIframe || desktopIframe
 
+                const desktopPoster = getIframePosterUrl(effectiveDesktopIframe)
+                const mobilePoster = getIframePosterUrl(effectiveMobileIframe)
+
+                const desktopSrc = sanitizeIframeUrl(effectiveDesktopIframe)
+                const mobileSrc = sanitizeIframeUrl(effectiveMobileIframe)
+
                 desktopMedia = effectiveDesktopIframe ? (
-                  <iframe
-                    className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
-                    src={effectiveDesktopIframe}
-                    loading="lazy"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    frameBorder="0"
-                  />
+                  isActive ? (
+                    allowIframe ? (
+                      <iframe
+                        key={`iframe-desktop-${index}-${iframeKey}`}
+                        className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
+                        src={desktopSrc}
+                        loading="lazy"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        frameBorder="0"
+                      />
+                    ) : (
+                      desktopPoster ? (
+                        <img
+                          src={desktopPoster}
+                          alt={slideAlt || ''}
+                          className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
+                        />
+                      ) : null
+                    )
+                  ) : null
                 ) : null
 
                 mobileMedia = effectiveMobileIframe ? (
-                  <iframe
-                    className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
-                    src={effectiveMobileIframe}
-                    loading="lazy"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    frameBorder="0"
-                  />
+                  isActive ? (
+                    allowIframe ? (
+                      <iframe
+                        key={`iframe-mobile-${index}-${iframeKey}`}
+                        className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
+                        src={mobileSrc}
+                        loading="lazy"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        frameBorder="0"
+                      />
+                    ) : (
+                      mobilePoster ? (
+                        <img
+                          src={mobilePoster}
+                          alt={slideAlt || ''}
+                          className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
+                        />
+                      ) : null
+                    )
+                  ) : null
                 ) : null
               } else {
+                const handleVideoEnded = (e, videoKey) => {
+                  const count = (videoLoopCountRef.current[videoKey] || 0) + 1
+                  videoLoopCountRef.current[videoKey] = count
+                  if (count < MAX_VIDEO_LOOPS) {
+                    try {
+                      e.target.currentTime = 0
+                    } catch (err) {
+                      // noop
+                    }
+
+                    try {
+                      const playPromise = e.target.play()
+                      if (playPromise && typeof playPromise.catch === 'function') {
+                        playPromise.catch(() => {})
+                      }
+                    } catch (err) {
+                      // noop
+                    }
+                  } else {
+                    try {
+                      e.target.pause()
+                    } catch (err) {
+                      // noop
+                    }
+                  }
+                }
+
                 desktopMedia = desktopVideo ? (
                   <video
                     className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
                     src={desktopVideo}
-                    autoPlay
+                    autoPlay={index === currentIndex}
                     muted
-                    loop
                     playsInline
+                    onEnded={(e) => handleVideoEnded(e, `desktop-${index}`)}
                   />
                 ) :
                   slideDesktopImage ? (
@@ -136,10 +294,10 @@ const CustomHeroSlider = ({ slides = [] }) => {
                       <video
                         className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
                         src={mobileVideo}
-                        autoPlay
+                        autoPlay={index === currentIndex}
                         muted
-                        loop
                         playsInline
+                        onEnded={(e) => handleVideoEnded(e, `desktop-fallback-${index}`)}
                       />
                     ) : null
 
@@ -147,10 +305,10 @@ const CustomHeroSlider = ({ slides = [] }) => {
                   <video
                     className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
                     src={mobileVideo}
-                    autoPlay
+                    autoPlay={index === currentIndex}
                     muted
-                    loop
                     playsInline
+                    onEnded={(e) => handleVideoEnded(e, `mobile-${index}`)}
                   />
                 ) :
                   slideMobileImage ? (
@@ -164,10 +322,10 @@ const CustomHeroSlider = ({ slides = [] }) => {
                       <video
                         className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
                         src={desktopVideo}
-                        autoPlay
+                        autoPlay={index === currentIndex}
                         muted
-                        loop
                         playsInline
+                        onEnded={(e) => handleVideoEnded(e, `mobile-fallback-${index}`)}
                       />
                     ) : null
               }
@@ -208,7 +366,7 @@ const CustomHeroSlider = ({ slides = [] }) => {
             )
 
             return (
-              <div key={index} className={styles.slide}>
+              <div key={index} className={styles.slide} data-slide-index={index}>
                 {wrappedSlideContent}
               </div>
             )

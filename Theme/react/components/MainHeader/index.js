@@ -364,12 +364,15 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
 
         {/* Desktop Menu */}
         <nav className={styles.desktopMenu}>
-          {menuData.departments.map((dept) => (
+          {menuData.departments.map((dept) => {
+            const hasDropdown = Array.isArray(dept.columns) && dept.columns.length > 0
+
+            return (
             <div
               key={dept.id}
               className={styles.menuItemWrapper}
-              onMouseEnter={() => handleOpenDropdown(dept.id)}
-              onMouseLeave={handleCloseDropdown}
+              onMouseEnter={hasDropdown ? () => handleOpenDropdown(dept.id) : undefined}
+              onMouseLeave={hasDropdown ? handleCloseDropdown : undefined}
             >
               <a
                 href={dept.href}
@@ -377,7 +380,7 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
               >
                 {dept.label}
               </a>
-              {activeDropdown === dept.id && (
+              {hasDropdown && activeDropdown === dept.id && (
                 <div
                   className={styles.dropdown}
                   onMouseEnter={() => handleOpenDropdown(dept.id)}
@@ -412,7 +415,8 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
                 </div>
               )}
             </div>
-          ))}
+            )
+          })}
         </nav>
 
         {/* Search Bar */}
@@ -671,6 +675,7 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
             {menuData.departments.map((dept) => {
               const isOpen = openMobileDept === dept.id
               const columns = dept.columns || []
+              const hasColumns = columns.length > 0
               const isBrandsDept = dept.id === 'marcas'
               const brandItems = isBrandsDept
                 ? columns.flatMap((column) => column.items || [])
@@ -678,18 +683,32 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
 
               return (
                 <div key={dept.id} className={styles.mobileMenuSection}>
-                  <button
-                    type="button"
-                    className={styles.mobileMenuSectionHeader}
-                    onClick={() => setOpenMobileDept(isOpen ? null : dept.id)}
-                  >
-                    <span className={styles.mobileMenuSectionLabel}>{dept.label}</span>
-                    <span className={styles.mobileMenuSectionIcon}>
-                      {isOpen ? '−' : '+'}
-                    </span>
-                  </button>
+                  {hasColumns ? (
+                    <button
+                      type="button"
+                      className={styles.mobileMenuSectionHeader}
+                      onClick={() => setOpenMobileDept(isOpen ? null : dept.id)}
+                    >
+                      <span className={styles.mobileMenuSectionLabel}>{dept.label}</span>
+                      <span className={styles.mobileMenuSectionIcon}>
+                        {isOpen ? '−' : '+'}
+                      </span>
+                    </button>
+                  ) : (
+                    <a
+                      href={dept.href}
+                      className={styles.mobileMenuSectionLink}
+                      onClick={() => {
+                        setMobileMenuOpen(false)
+                        setOpenMobileDept(null)
+                        setOpenMobileSub(null)
+                      }}
+                    >
+                      <span className={styles.mobileMenuSectionLabel}>{dept.label}</span>
+                    </a>
+                  )}
 
-                  {isOpen && columns.length > 0 && (
+                  {isOpen && hasColumns && (
                     <div className={styles.mobileMenuSectionBody}>
                       {isBrandsDept
                         ? brandItems.map((item, idx) => (

@@ -1,0 +1,16 @@
+{
+  "memory": 256,
+  "timeout": 10,
+  "minReplicas": 1,
+  "maxReplicas": 4,
+  "routes": {
+    "botSession": {
+      "path": "/_v/mundo/bot/session",
+      "public": true
+    },
+    "botMessage": {
+      "path": "/_v/mundo/bot/message",
+      "public": true
+    }
+  }
+}

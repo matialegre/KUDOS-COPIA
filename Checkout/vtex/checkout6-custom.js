@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
   return document.querySelector(selector);
 };
 
-// Calcular y mostrar descuentos en productos
+// Calcular y mostrar descuentos en productos del mini-cart
 isElementLoaded('.cart-items tbody').then(() => {
   const updateDiscounts = () => {
     const productItems = document.querySelectorAll('.product-item');
@@ -60,18 +60,27 @@ isElementLoaded('.cart-items tbody').then(() => {
       const priceContainer = item.querySelector('.product-price');
       
       if (oldPrice && newPrice && priceContainer) {
-        const oldValue = parseFloat(oldPrice.textContent.replace(/[^0-9,]/g, '').replace(',', '.'));
-        const newValue = parseFloat(newPrice.textContent.replace(/[^0-9,]/g, '').replace(',', '.'));
+        const oldText = oldPrice.textContent.replace(/[^0-9,.]/g, '');
+        const newText = newPrice.textContent.replace(/[^0-9,.]/g, '');
+        
+        const oldValue = parseFloat(oldText.replace(/\./g, '').replace(',', '.'));
+        const newValue = parseFloat(newText.replace(/\./g, '').replace(',', '.'));
+        
+        // Eliminar badge anterior si existe
+        const existingBadge = priceContainer.querySelector('.discount-badge');
+        if (existingBadge) {
+          existingBadge.remove();
+        }
         
         if (oldValue > newValue) {
-          const discount = Math.round(((oldValue - newValue) / oldValue) * 100);
-          if (discount > 0) {
-            priceContainer.removeAttribute('data-discount');
-          } else {
-            priceContainer.removeAttribute('data-discount');
-          }
-        } else {
-          priceContainer.removeAttribute('data-discount');
+          const discountAmount = oldValue - newValue;
+          
+          // Crear badge con el monto del descuento en verde
+          const badge = document.createElement('div');
+          badge.className = 'discount-badge';
+          badge.textContent = `-$${discountAmount.toLocaleString('es-AR', {minimumFractionDigits: 0, maximumFractionDigits: 0})}`;
+          
+          priceContainer.appendChild(badge);
         }
       }
     });
@@ -167,40 +176,6 @@ isElementLoaded('.custom201PaymentGroupPaymentGroup .payment-description').then(
     
   });
 
-});
-
-// Mostrar el detalle del medio de pago solo cuando se elige una opción
-isElementLoaded('#payment-data .payment-group').then((paymentGroup) => {
-  const formStep = paymentGroup.closest('.form-step');
-  if (!formStep) return;
-
-  const stepsView = formStep.querySelector('.steps-view');
-  if (!stepsView) return;
-
-  // Forzar que al inicio no haya ningún medio de pago seleccionado visualmente
-  const radios = paymentGroup.querySelectorAll('input[type="radio"]');
-  radios.forEach((radio) => {
-    radio.checked = false;
-    radio.removeAttribute('checked');
-  });
-
-  const activeItems = paymentGroup.querySelectorAll('.payment-group-item.active');
-  activeItems.forEach((item) => item.classList.remove('active'));
-
-  const updateStepsVisibility = () => {
-    const hasSelection = !!paymentGroup.querySelector('input[type="radio"]:checked');
-    stepsView.style.display = hasSelection ? '' : 'none';
-  };
-
-  // Estado inicial (sin selección, no se muestra detalle)
-  updateStepsVisibility();
-
-  // Cuando cambia la selección de medio de pago
-  paymentGroup.addEventListener('change', (event) => {
-    const radio = event.target.closest('input[type="radio"]');
-    if (!radio) return;
-    updateStepsVisibility();
-  });
 });
 
 // Reemplazar enlace del primer logo del footer por WhatsApp

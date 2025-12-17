@@ -1,0 +1,76 @@
+(window["webpackJsonpvtex_lean_shipping_calculator_0_2_20"] = window["webpackJsonpvtex_lean_shipping_calculator_0_2_20"] || []).push([["modules"],{
+
+/***/ "../modules.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module) {if (!!(typeof window !== 'undefined' && window.document) && !window.global) {
+  window.global = window;
+} // compatibility
+
+
+window.__RENDER_7_COMPONENTS__ = window.__RENDER_7_COMPONENTS__ ? window.__RENDER_7_COMPONENTS__ : {};
+window.__RENDER_7_HOT__ = window.__RENDER_7_HOT__ ? window.__RENDER_7_HOT__ : {};
+
+function dep(m) {
+  return m.__esModule ? m.default : m.default || m;
+}
+
+;
+var host = window.__hostname__;
+var assetsPath = '/_v/public/assets/v1/published/';
+
+if (!!(typeof window !== 'undefined' && window.document) && window.__RUNTIME__) {
+  var generatorMetaTag = document.querySelector("meta[name='generator']");
+  var generator = generatorMetaTag && generatorMetaTag.getAttribute('content');
+  var isRenderGenerator = generator && generator.indexOf('vtex.render-server') === 0;
+  var env = __RUNTIME__.publicEndpoint || 'myvtex.com';
+  host = isRenderGenerator ? window.location.hostname : __RUNTIME__.workspace + '--' + __RUNTIME__.account + '.' + env;
+  assetsPath =  false ? undefined : __RUNTIME__.assetServerPublishedPath || '/_v/public/assets/v1/published/';
+}
+
+__webpack_require__.p = 'https://' + host + assetsPath + 'vtex.lean-shipping-calculator@0.2.20/public/react/';
+var entry;
+
+try {
+  entry = dep(__webpack_require__("./react/modules.js"));
+} catch (error) {
+  throw new Error("An error happened while requiring the app vtex.lean-shipping-calculator@0.2.20/modules, please check your app's code.\n ".concat(error.stack));
+}
+
+if (window.__RENDER_7_RUNTIME__ && window.__RENDER_7_RUNTIME__.withHMR) {
+  window.__RENDER_7_COMPONENTS__['vtex.lean-shipping-calculator@0.2.20/modules'] = window.__RENDER_7_COMPONENTS__['vtex.lean-shipping-calculator@0.x/modules'] = window.__RENDER_7_RUNTIME__.withHMR(module, entry);
+} else {
+  window.__RENDER_7_COMPONENTS__['vtex.lean-shipping-calculator@0.2.20/modules'] = window.__RENDER_7_COMPONENTS__['vtex.lean-shipping-calculator@0.x/modules'] = entry;
+}
+
+if (false) {}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("../../../../../usr/local/data/service/node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
+/***/ "./react/modules.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leanShipping__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./react/leanShipping.js");
+/* harmony import */ var _changeActiveSlas__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/changeActiveSlas.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/utils.js");
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  getLeanShippingOptions: _leanShipping__WEBPACK_IMPORTED_MODULE_0__["getLeanShippingOptions"],
+  setSelectedSlaFromSlaOption: _changeActiveSlas__WEBPACK_IMPORTED_MODULE_1__["setSelectedSlaFromSlaOption"],
+  setSelectedDeliveryChannel: _utils__WEBPACK_IMPORTED_MODULE_2__["setSelectedDeliveryChannel"],
+  getOptionsDetails: _leanShipping__WEBPACK_IMPORTED_MODULE_0__["getOptionsDetails"],
+  getSelectedDeliveryOption: _leanShipping__WEBPACK_IMPORTED_MODULE_0__["getSelectedDeliveryOption"],
+  findPickupSla: _utils__WEBPACK_IMPORTED_MODULE_2__["findPickupSla"],
+  changeActiveSlas: _changeActiveSlas__WEBPACK_IMPORTED_MODULE_1__["changeActiveSlas"],
+  findFirstItemWithPickup: _utils__WEBPACK_IMPORTED_MODULE_2__["findFirstItemWithPickup"]
+});
+
+/***/ })
+
+},[["../modules.js","runtime","common"]]]);
+//# sourceMappingURL=modules.js.map

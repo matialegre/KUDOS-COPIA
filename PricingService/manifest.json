@@ -1,7 +1,7 @@
 {
   "vendor": "mundooutdoorar",
   "name": "pricing-service",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "title": "Pricing Service",
   "description": "Service for calculating net prices and tax-related operations",
   "builders": {
@@ -13,13 +13,6 @@
       "attrs": {
         "host": "{{account}}.vtexcommercestable.com.br",
         "path": "/api/*"
-      }
-    },
-    {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "api.callmebot.com",
-        "path": "/*"
       }
     }
   ],
@@ -44,16 +37,6 @@
         "title": "Seller ID",
         "default": "1",
         "description": "Default seller ID"
-      },
-      "callMeBotPhone": {
-        "type": "string",
-        "title": "CallMeBot Phone",
-        "description": "Phone number registered in CallMeBot (with country code, without +)"
-      },
-      "callMeBotApiKey": {
-        "type": "string",
-        "title": "CallMeBot API Key",
-        "description": "API key provided by CallMeBot for WhatsApp notifications"
       }
     }
   },

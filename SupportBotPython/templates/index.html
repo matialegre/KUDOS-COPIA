@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Mundo Outdoor - Dashboard</title>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f5f7fa;
+            color: #1a1a2e;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: #000;
+            color: #fff;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .header .status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #25D366;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .container {
+            display: flex;
+            height: calc(100vh - 60px);
+        }
+        
+        .sidebar {
+            width: 360px;
+            background: #fff;
+            border-right: 1px solid #e5e7eb;
+            overflow-y: auto;
+        }
+        
+        .sidebar-header {
+            padding: 16px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .sidebar-header h2 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .ticket-count {
+            background: #000;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .ticket-list {
+            list-style: none;
+        }
+        
+        .ticket-item {
+            padding: 16px;
+            border-bottom: 1px solid #f3f4f6;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        
+        .ticket-item:hover {
+            background: #f9fafb;
+        }
+        
+        .ticket-item.active {
+            background: #f0f9ff;
+            border-left: 3px solid #000;
+        }
+        
+        .ticket-item.unread {
+            background: #fffbeb;
+        }
+        
+        .ticket-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+        
+        .ticket-id {
+            font-weight: 600;
+            font-size: 13px;
+            color: #111;
+        }
+        
+        .ticket-time {
+            font-size: 11px;
+            color: #9ca3af;
+        }
+        
+        .ticket-preview {
+            font-size: 13px;
+            color: #6b7280;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .ticket-meta {
+            display: flex;
+            gap: 8px;
+            margin-top: 6px;
+        }
+        
+        .ticket-badge {
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        
+        .badge-open {
+            background: #dcfce7;
+            color: #166534;
+        }
+        
+        .badge-closed {
+            background: #f3f4f6;
+            color: #6b7280;
+        }
+        
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+        }
+        
+        .chat-header {
+            padding: 16px 24px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .chat-header-info h3 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .chat-header-info p {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 2px;
+        }
+        
+        .chat-actions {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: all 0.15s;
+        }
+        
+        .btn-primary {
+            background: #000;
+            color: #fff;
+        }
+        
+        .btn-primary:hover {
+            background: #222;
+        }
+        
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+        }
+        
+        .btn-secondary:hover {
+            background: #e5e7eb;
+        }
+        
+        .btn-danger {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+        
+        .btn-danger:hover {
+            background: #fecaca;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            padding: 24px;
+            overflow-y: auto;
+            background: #f9fafb;
+        }
+        
+        .message {
+            max-width: 70%;
+            margin-bottom: 16px;
+            animation: fadeIn 0.2s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .message.user {
+            margin-left: auto;
+        }
+        
+        .message.agent {
+            margin-right: auto;
+        }
+        
+        .message-bubble {
+            padding: 12px 16px;
+            border-radius: 16px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .message.user .message-bubble {
+            background: #000;
+            color: #fff;
+            border-bottom-right-radius: 4px;
+        }
+        
+        .message.agent .message-bubble {
+            background: #fff;
+            color: #111;
+            border: 1px solid #e5e7eb;
+            border-bottom-left-radius: 4px;
+        }
+        
+        .message-time {
+            font-size: 10px;
+            color: #9ca3af;
+            margin-top: 4px;
+            text-align: right;
+        }
+        
+        .message.agent .message-time {
+            text-align: left;
+        }
+        
+        .chat-input {
+            padding: 16px 24px;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            gap: 12px;
+            background: #fff;
+        }
+        
+        .chat-input textarea {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 14px;
+            resize: none;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.15s;
+        }
+        
+        .chat-input textarea:focus {
+            border-color: #000;
+        }
+        
+        .chat-input button {
+            padding: 12px 24px;
+            background: #000;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        
+        .chat-input button:hover {
+            background: #222;
+        }
+        
+        .chat-input button:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+        
+        .empty-state {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .empty-state svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+        
+        .empty-state h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+        
+        .empty-state p {
+            font-size: 14px;
+        }
+        
+        .notification {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #000;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            animation: slideIn 0.3s ease;
+            z-index: 1000;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎿 Soporte Mundo Outdoor</h1>
+        <div class="status">
+            <span class="status-dot"></span>
+            <span>En línea</span>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Conversaciones</h2>
+                <span class="ticket-count" id="ticketCount">0</span>
+            </div>
+            <ul class="ticket-list" id="ticketList"></ul>
+        </div>
+        
+        <div class="main" id="mainContent">
+            <div class="empty-state">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                </svg>
+                <h3>Sin conversación seleccionada</h3>
+                <p>Seleccioná un ticket de la lista para ver los mensajes</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="notifications"></div>
+
+    <script>
+        const socket = io();
+        let tickets = [];
+        let selectedTicketId = null;
+        
+        async function loadTickets() {
+            try {
+                const res = await fetch('/api/tickets');
+                tickets = await res.json();
+                renderTicketList();
+            } catch (e) {
+                console.error('Error loading tickets:', e);
+            }
+        }
+        
+        function renderTicketList() {
+            const list = document.getElementById('ticketList');
+            const count = document.getElementById('ticketCount');
+            
+            const openTickets = tickets.filter(t => t.status === 'open');
+            count.textContent = openTickets.length;
+            
+            list.innerHTML = tickets.map(ticket => `
+                <li class="ticket-item ${ticket.ticket_id === selectedTicketId ? 'active' : ''} ${ticket.status === 'open' ? 'unread' : ''}"
+                    onclick="selectTicket('${ticket.ticket_id}')">
+                    <div class="ticket-header">
+                        <span class="ticket-id">${ticket.ticket_id}</span>
+                        <span class="ticket-time">${formatTime(ticket.updated_at)}</span>
+                    </div>
+                    <div class="ticket-preview">${ticket.last_message || 'Sin mensajes'}</div>
+                    <div class="ticket-meta">
+                        <span class="ticket-badge ${ticket.status === 'open' ? 'badge-open' : 'badge-closed'}">
+                            ${ticket.status === 'open' ? 'Abierto' : 'Cerrado'}
+                        </span>
+                        ${ticket.page ? `<span class="ticket-badge" style="background:#e0e7ff;color:#3730a3;">${ticket.page}</span>` : ''}
+                    </div>
+                </li>
+            `).join('');
+        }
+        
+        async function selectTicket(ticketId) {
+            selectedTicketId = ticketId;
+            renderTicketList();
+            
+            try {
+                const res = await fetch(`/api/tickets/${ticketId}`);
+                const data = await res.json();
+                renderChat(data);
+            } catch (e) {
+                console.error('Error loading ticket:', e);
+            }
+        }
+        
+        function renderChat(data) {
+            const main = document.getElementById('mainContent');
+            const ticket = data.ticket;
+            const messages = data.messages;
+            
+            main.innerHTML = `
+                <div class="chat-header">
+                    <div class="chat-header-info">
+                        <h3>${ticket.ticket_id}</h3>
+                        <p>Desde: ${ticket.page || 'Página desconocida'} · ${formatTime(ticket.created_at)}</p>
+                    </div>
+                    <div class="chat-actions">
+                        ${ticket.status === 'open' ? `
+                            <button class="btn btn-danger" onclick="closeTicket('${ticket.ticket_id}')">
+                                Cerrar ticket
+                            </button>
+                        ` : `
+                            <span class="ticket-badge badge-closed" style="padding:8px 16px;font-size:13px;">Cerrado</span>
+                        `}
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    ${messages.map(m => `
+                        <div class="message ${m.sender}">
+                            <div class="message-bubble">${escapeHtml(m.message)}</div>
+                            <div class="message-time">${formatTime(m.created_at)}</div>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                ${ticket.status === 'open' ? `
+                    <div class="chat-input">
+                        <textarea id="replyInput" placeholder="Escribí tu respuesta..." rows="1" 
+                            onkeydown="handleKeyDown(event)"></textarea>
+                        <button onclick="sendReply()">Enviar</button>
+                    </div>
+                ` : ''}
+            `;
+            
+            const chatMessages = document.getElementById('chatMessages');
+            if (chatMessages) {
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        }
+        
+        async function sendReply() {
+            const input = document.getElementById('replyInput');
+            const message = input.value.trim();
+            
+            if (!message || !selectedTicketId) return;
+            
+            input.disabled = true;
+            
+            try {
+                await fetch(`/api/tickets/${selectedTicketId}/reply`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message })
+                });
+                
+                input.value = '';
+                await selectTicket(selectedTicketId);
+            } catch (e) {
+                console.error('Error sending reply:', e);
+                showNotification('Error al enviar mensaje');
+            } finally {
+                input.disabled = false;
+                input.focus();
+            }
+        }
+        
+        async function closeTicket(ticketId) {
+            if (!confirm('¿Cerrar este ticket?')) return;
+            
+            try {
+                await fetch(`/api/tickets/${ticketId}/close`, { method: 'POST' });
+                await loadTickets();
+                if (selectedTicketId === ticketId) {
+                    await selectTicket(ticketId);
+                }
+            } catch (e) {
+                console.error('Error closing ticket:', e);
+            }
+        }
+        
+        function handleKeyDown(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendReply();
+            }
+        }
+        
+        function formatTime(dateStr) {
+            if (!dateStr) return '';
+            const date = new Date(dateStr);
+            const now = new Date();
+            const diff = now - date;
+            
+            if (diff < 60000) return 'Ahora';
+            if (diff < 3600000) return `${Math.floor(diff/60000)}m`;
+            if (diff < 86400000) return `${Math.floor(diff/3600000)}h`;
+            
+            return date.toLocaleDateString('es-AR', { day: '2-digit', month: '2-digit' });
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        function showNotification(message) {
+            const container = document.getElementById('notifications');
+            const notif = document.createElement('div');
+            notif.className = 'notification';
+            notif.textContent = message;
+            container.appendChild(notif);
+            
+            setTimeout(() => notif.remove(), 4000);
+        }
+        
+        socket.on('new_ticket', (data) => {
+            showNotification(`🔔 Nuevo mensaje: ${data.message?.substring(0, 50) || 'Nueva conversación'}...`);
+            loadTickets();
+            
+            if (selectedTicketId === data.ticket_id) {
+                selectTicket(data.ticket_id);
+            }
+        });
+        
+        socket.on('new_message', (data) => {
+            if (selectedTicketId === data.ticket_id) {
+                selectTicket(data.ticket_id);
+            }
+            loadTickets();
+        });
+        
+        socket.on('ticket_updated', (data) => {
+            loadTickets();
+            if (selectedTicketId === data.ticket_id) {
+                selectTicket(data.ticket_id);
+            }
+        });
+        
+        loadTickets();
+        setInterval(loadTickets, 30000);
+    </script>
+</body>
+</html>

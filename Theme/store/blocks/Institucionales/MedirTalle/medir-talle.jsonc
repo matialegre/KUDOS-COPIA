@@ -3,7 +3,8 @@
     "store.custom#medir-talle": {
     
         "children":[
-            "flex-layout.row#shared-container-medir-talle"
+            "flex-layout.row#shared-container-medir-talle",
+            "support-entry"
         ]
 
     },

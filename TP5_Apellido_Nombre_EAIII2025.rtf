@@ -1,0 +1,84 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0 Times New Roman;}}
+\paperw11907\paperh16840\margl1417\margr1417\margt1417\margb1417
+\fs24\sl360\slmult1\qj
+
+\pard\qc\fs28\b Electr\'f3nica Aplicada III 2025\b0\fs24\par
+\pard\qc\fs24 Profesor: Ing. Eduardo Marcelo Amato\par
+\pard\qc\fs24 Jefe de Trabajos Pr\'e1cticos: Ing. Martin Hugo Amado\par
+\pard\qc\fs24\par
+\pard\qc\fs28\b Trabajo Pr\'e1ctico Nro. 5\b0\fs24\par
+\pard\qc\fs24\par
+\pard\qc\fs24\b Alumno:\b0 Apellido, Nombre\par
+\pard\qc\fs24\b Fecha:\b0 ____/____/2025\par
+\pard\qc\fs24\par
+\pard\qc\fs24\par
+\pard\qc\fs24\par
+\pard\qc\fs24\par
+
+\pard\qj\fs24\b Objetivo\b0\par
+Desarrollarse en el dominio del mezclado de se\'f1ales de RF.\par
+
+\pard\qj\fs24\b 1) Introducci\'f3n\b0\par
+En el presente trabajo pr\'e1ctico se implement\'f3 un mezclador de radiofrecuencia utilizando como base el amplificador de RF desarrollado en el Trabajo Pr\'e1ctico Nro. 2 (144\'a0MHz). Se realizaron las modificaciones necesarias en el esquema provisto para que el circuito opere como mezclador entre una se\'f1al de RF centrada en 144\'a0MHz y una se\'f1al de oscilador local (OL) en 133,300\'a0MHz, obteni\'e9ndose a la salida la se\'f1al de frecuencia intermedia (FI) en 10,7\'a0MHz.\par
+
+\pard\qj\fs24\b 2) Consideraciones para la construcci\'f3n\b0\par
+Para la construcci\'f3n y el montaje del mezclador se tuvieron en cuenta las siguientes consideraciones y recomendaciones:\par
+\pard\qj\fs24 1. La se\'f1al de RF de entrada se consider\'f3 centrada en 144\'a0MHz, aplic\'e1ndose al gate G1 del transistor MOSFET. La entrada se dise\'f1\'f3 para presentar una impedancia de 50\'a0\'f3hm y se desacopl\'f3 de corriente continua.\par
+\pard\qj\fs24 2. La se\'f1al de oscilador local se fij\'f3 en 133,300\'a0MHz, aplic\'e1ndose al gate G2 del transistor MOSFET. Como generador de OL se utiliz\'f3 el HP8640 configurado para entregar una potencia de +3\'a0dBm, con entrada adaptada a 50\'a0\'f3hm y desacoplada de corriente continua.\par
+\pard\qj\fs24 3. En la salida del mezclador se fij\'f3 como condici\'f3n de dise\'f1o una FI de 10,7\'a0MHz, procurando m\'e1xima transferencia de potencia hacia una carga de 50\'a0\'f3hm y con desacople de corriente continua.\par
+\pard\qj\fs24 4. Se utilizaron conectores BNC hembra a chasis en las entradas y salida, montados verticalmente sobre el impreso mediante un orificio aproximado de 10\'a0mm, estandarizando as\'ed los cables de ensayo.\par
+\pard\qj\fs24 5. Se distribuyeron los componentes minimizando el largo de terminales (capacitores, resistencias y conexiones), reduciendo parasitismos a frecuencias de VHF.\par
+\pard\qj\fs24 6. Se reserv\'f3 espacio para una l\'e1mina met\'e1lica de blindaje transversal, montada a la altura del transistor, con el objetivo de reducir acoples no deseados.\par
+\pard\qj\fs24 7. Se tomaron recaudos para que la alimentaci\'f3n de 12\'a0Vcc se encuentre filtrada y regulada. Se recomienda (y/o se implement\'f3) un regulador de tensi\'f3n con un LED indicador a la salida para verificar energizaci\'f3n del circuito.\par
+
+\pard\qj\fs24\b 3) Montaje y descripci\'f3n del circuito\b0\par
+El mezclador se implement\'f3 sobre una placa de circuito impreso, utilizando el transistor MOSFET con excitaci\'f3n independiente en G1 (RF) y G2 (OL). El dise\'f1o incluye redes de acoplamiento y desacople para asegurar condiciones de impedancia y aislamiento de CC en entradas/salida.\par
+\pard\qj\fs24\b Figura 1.\b0 [Insertar foto del mezclador]\par
+\pard\qj\fs24\b Figura 2.\b0 [Insertar foto del esquem\'e1tico / circuito]\par
+
+\pard\qj\fs24\b 4) Realizaci\'f3n de mediciones\b0\par
+Se realizaron mediciones utilizando una se\'f1al de OL con nivel de +3\'a0dBm y una se\'f1al de RF con nivel de -20\'a0dBm. Se determin\'f3 la ganancia de conversi\'f3n del mezclador en dB, verificando el cumplimiento de la condici\'f3n de aprobaci\'f3n (ganancia de conversi\'f3n \u8805? 6\'a0dB).\par
+Adicionalmente, se midieron las tensiones de corriente continua en los terminales G1, G2, S y D del transistor, y se describieron las se\'f1ales presentes a la salida del mezclador (frecuencia y nivel), explorando el espectro desde 10\'a0MHz hasta 450\'a0MHz. Para el c\'e1lculo de productos de intermodulaci\'f3n se utiliz\'f3 el software LOGintermod provisto en el aula virtual.\par
+
+\pard\qj\fs24\b 4.1) Condiciones de ensayo\b0\par
+\pard\qj\fs24 - Frecuencia RF: 144\'a0MHz\par
+\pard\qj\fs24 - Nivel RF: -20\'a0dBm\par
+\pard\qj\fs24 - Frecuencia OL: 133,300\'a0MHz\par
+\pard\qj\fs24 - Nivel OL: +3\'a0dBm\par
+\pard\qj\fs24 - Frecuencia intermedia (FI) esperada: 10,7\'a0MHz\par
+\pard\qj\fs24 - Impedancias: 50\'a0\'f3hm en RF, OL y salida\par
+
+\pard\qj\fs24\b 4.2) Tensiones de CC medidas (completar)\b0\par
+\pard\qj\fs24 - G1: ____ V\par
+\pard\qj\fs24 - G2: ____ V\par
+\pard\qj\fs24 - S: ____ V\par
+\pard\qj\fs24 - D: ____ V\par
+
+\pard\qj\fs24\b 4.3) Ganancia de conversi\'f3n (completar)\b0\par
+\pard\qj\fs24 - Nivel de FI medido a 10,7\'a0MHz: ____ dBm\par
+\pard\qj\fs24 - Ganancia de conversi\'f3n: ____ dB\par
+\pard\qj\fs24\i (Nota: Ganancia de conversi\'f3n = P(FI) - P(RF), considerando el nivel de RF de -20\'a0dBm.)\i0\par
+
+\pard\qj\fs24\b 4.4) Espectro de salida (completar)\b0\par
+A continuaci\'f3n se listan las principales componentes observadas entre 10\'a0MHz y 450\'a0MHz (frecuencia y nivel):\par
+\pard\qj\fs24 - 10,7\'a0MHz (FI): ____ dBm\par
+\pard\qj\fs24 - 133,300\'a0MHz (OL filtrada o fuga): ____ dBm\par
+\pard\qj\fs24 - 144\'a0MHz (RF filtrada o fuga): ____ dBm\par
+\pard\qj\fs24 - Otros productos (sumas/diferencias, arm\'f3nicos e IM): ________________________________\par
+
+\pard\qj\fs24\b 5) Instrumental utilizado\b0\par
+\pard\qj\fs24 a) Generador HP8640B.\par
+\pard\qj\fs24 b) Medidor de potencia HP432A o similar.\par
+\pard\qj\fs24 c) Osciloscopio Tektronik TDS3052.\par
+
+\pard\qj\fs24\b 6) An\'e1lisis y discusi\'f3n (completar)\b0\par
+En base a las mediciones realizadas se analiz\'f3 la conversi\'f3n del mezclador, verificando la presencia de la FI esperada y los productos de intermodulaci\'f3n asociados. Se discute el impacto del montaje (longitud de terminales, desacoples y blindaje) sobre el nivel de fuga de OL/RF y sobre la relaci\'f3n se\'f1al/espurios a la salida.\par
+
+\pard\qj\fs24\b 7) Conclusiones\b0\par
+Se implement\'f3 y ensay\'f3 un mezclador de RF para una se\'f1al de entrada centrada en 144\'a0MHz y un oscilador local de 133,300\'a0MHz, obteniendo una frecuencia intermedia de 10,7\'a0MHz. Con las condiciones de ensayo especificadas, se determin\'f3 la ganancia de conversi\'f3n y se verific\'f3 el cumplimiento (o no) del requisito de aprobaci\'f3n.\par
+
+\pard\qj\fs24\b 8) Anexos\b0\par
+\pard\qj\fs24 - Anexo A: Fotograf\'eda del mezclador (Figura 1).\par
+\pard\qj\fs24 - Anexo B: Esquem\'e1tico del circuito (Figura 2).\par
+}

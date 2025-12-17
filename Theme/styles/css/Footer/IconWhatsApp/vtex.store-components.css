@@ -3,3 +3,10 @@
     max-width: 41px;
     height: 41px;
 }
+
+/* Ocultar icono WhatsApp del footer en mobile (ya hay uno arriba) */
+@media (max-width: 768px) {
+    .imageElementLink--icon-whatsapp-footer {
+        display: none !important;
+    }
+}

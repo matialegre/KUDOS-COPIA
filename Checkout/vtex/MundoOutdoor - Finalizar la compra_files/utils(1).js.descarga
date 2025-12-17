@@ -1,0 +1,612 @@
+(window["webpackJsonpvtex_shipping_manager_0_13_30"] = window["webpackJsonpvtex_shipping_manager_0_13_30"] || []).push([["utils"],{
+
+/***/ "../utils.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module) {if (!!(typeof window !== 'undefined' && window.document) && !window.global) {
+  window.global = window;
+} // compatibility
+
+
+window.__RENDER_7_COMPONENTS__ = window.__RENDER_7_COMPONENTS__ ? window.__RENDER_7_COMPONENTS__ : {};
+window.__RENDER_7_HOT__ = window.__RENDER_7_HOT__ ? window.__RENDER_7_HOT__ : {};
+
+function dep(m) {
+  return m.__esModule ? m.default : m.default || m;
+}
+
+;
+var host = window.__hostname__;
+var assetsPath = '/_v/public/assets/v1/published/';
+
+if (!!(typeof window !== 'undefined' && window.document) && window.__RUNTIME__) {
+  var generatorMetaTag = document.querySelector("meta[name='generator']");
+  var generator = generatorMetaTag && generatorMetaTag.getAttribute('content');
+  var isRenderGenerator = generator && generator.indexOf('vtex.render-server') === 0;
+  var env = __RUNTIME__.publicEndpoint || 'myvtex.com';
+  host = isRenderGenerator ? window.location.hostname : __RUNTIME__.workspace + '--' + __RUNTIME__.account + '.' + env;
+  assetsPath =  false ? undefined : __RUNTIME__.assetServerPublishedPath || '/_v/public/assets/v1/published/';
+}
+
+__webpack_require__.p = 'https://' + host + assetsPath + 'vtex.shipping-manager@0.13.30/public/react/';
+var entry;
+
+try {
+  entry = dep(__webpack_require__("./react/utils.js"));
+} catch (error) {
+  throw new Error("An error happened while requiring the app vtex.shipping-manager@0.13.30/utils, please check your app's code.\n ".concat(error.stack));
+}
+
+if (window.__RENDER_7_RUNTIME__ && window.__RENDER_7_RUNTIME__.withHMR) {
+  window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.13.30/utils'] = window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.x/utils'] = window.__RENDER_7_RUNTIME__.withHMR(module, entry);
+} else {
+  window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.13.30/utils'] = window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.x/utils'] = entry;
+}
+
+if (false) {}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("../../../../../usr/local/data/service/node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
+/***/ "./react/utils.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_AddressRulesUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./react/utils/AddressRulesUtils.js");
+/* harmony import */ var _utils_Address__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/utils/Address.js");
+/* harmony import */ var _utils_Gguid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/utils/Gguid.js");
+/* harmony import */ var _utils_SellerUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/utils/SellerUtils.js");
+/* harmony import */ var _utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/utils/AddressFormUtils.js");
+/* harmony import */ var _utils_Images__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./react/utils/Images.js");
+/* harmony import */ var _utils_SlasUtils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./react/utils/SlasUtils.js");
+/* harmony import */ var _utils_InvoiceAddressUtils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./react/utils/InvoiceAddressUtils.js");
+/* harmony import */ var _utils_StringUtils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./react/utils/StringUtils.js");
+/* harmony import */ var _utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./react/utils/LocalStorageUtils.js");
+/* harmony import */ var _utils_ComponentUtils__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./react/utils/ComponentUtils.js");
+/* harmony import */ var _utils_OrderFormUtils__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("./react/utils/OrderFormUtils.js");
+/* harmony import */ var _utils_checkoutMock__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__("./react/utils/checkoutMock.js");
+/* harmony import */ var _utils_Currency__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__("./react/utils/Currency.js");
+/* harmony import */ var _utils_PickupUtils__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__("./react/utils/PickupUtils.js");
+/* harmony import */ var _utils_i18nUtils__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__("./react/utils/i18nUtils.js");
+/* harmony import */ var _utils_vtex__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__("./react/utils/vtex.js");
+/* harmony import */ var _utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__("./react/utils/DeliveryChannelsUtils.js");
+/* harmony import */ var _utils_Polyfills__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__("./react/utils/Polyfills.js");
+/* harmony import */ var _utils_DeliveryPackagesUtils__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__("./react/utils/DeliveryPackagesUtils.js");
+/* harmony import */ var _utils_ScheduledDeliveryUtils__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__("./react/utils/ScheduledDeliveryUtils.js");
+// This is kept for compatibility reasons. Use addressRulesUtils instead.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  address: _utils_Address__WEBPACK_IMPORTED_MODULE_1__,
+  addressUtils: _utils_Address__WEBPACK_IMPORTED_MODULE_1__,
+  addressFormUtils: _utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_4__,
+  addressRulesUtils: _utils_AddressRulesUtils__WEBPACK_IMPORTED_MODULE_0__,
+  checkoutMock: _utils_checkoutMock__WEBPACK_IMPORTED_MODULE_12__,
+  componentUtils: _utils_ComponentUtils__WEBPACK_IMPORTED_MODULE_10__,
+  currency: _utils_Currency__WEBPACK_IMPORTED_MODULE_13__,
+  deliveryChannelsUtils: _utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_17__,
+  deliveryPackagesUtils: _utils_DeliveryPackagesUtils__WEBPACK_IMPORTED_MODULE_19__,
+  gguid: _utils_Gguid__WEBPACK_IMPORTED_MODULE_2__,
+  i18nUtils: _utils_i18nUtils__WEBPACK_IMPORTED_MODULE_15__,
+  images: _utils_Images__WEBPACK_IMPORTED_MODULE_5__,
+  invoiceAddressUtils: _utils_InvoiceAddressUtils__WEBPACK_IMPORTED_MODULE_7__,
+  isGeolocationRulesOmittingNumber: _utils_AddressRulesUtils__WEBPACK_IMPORTED_MODULE_0__["isGeolocationRulesOmittingNumber"],
+  isNumberFieldHidden: _utils_AddressRulesUtils__WEBPACK_IMPORTED_MODULE_0__["isNumberFieldHidden"],
+  localStorageUtils: _utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_9__,
+  orderFormUtils: _utils_OrderFormUtils__WEBPACK_IMPORTED_MODULE_11__,
+  pickupUtils: _utils_PickupUtils__WEBPACK_IMPORTED_MODULE_14__,
+  polyfills: _utils_Polyfills__WEBPACK_IMPORTED_MODULE_18__,
+  scheduledDeliveryUtils: _utils_ScheduledDeliveryUtils__WEBPACK_IMPORTED_MODULE_20__,
+  sellerUtils: _utils_SellerUtils__WEBPACK_IMPORTED_MODULE_3__,
+  slasUtils: _utils_SlasUtils__WEBPACK_IMPORTED_MODULE_6__,
+  stringUtils: _utils_StringUtils__WEBPACK_IMPORTED_MODULE_8__,
+  vtex: _utils_vtex__WEBPACK_IMPORTED_MODULE_16__
+});
+
+/***/ }),
+
+/***/ "./react/utils/AddressRulesUtils.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNumberFieldHidden", function() { return isNumberFieldHidden; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isGeolocationRulesOmittingNumber", function() { return isGeolocationRulesOmittingNumber; });
+function isNumberFieldHidden(rules) {
+  return rules && !!rules.fields.find(function (field) {
+    return field.name === 'number' && field.hidden;
+  });
+}
+function isGeolocationRulesOmittingNumber(rules) {
+  return rules && rules.geolocation && !rules.geolocation.number;
+}
+
+/***/ }),
+
+/***/ "./react/utils/ComponentUtils.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createKey", function() { return createKey; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isPaymentHash", function() { return isPaymentHash; });
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./react/constants/index.js");
+
+function createKey(somePackage, index) {
+  var _somePackage$firstLog = somePackage.firstLogisticsInfo,
+      itemIndex = _somePackage$firstLog.itemIndex,
+      selectedDeliveryChannel = _somePackage$firstLog.selectedDeliveryChannel,
+      selectedSla = _somePackage$firstLog.selectedSla,
+      addressId = _somePackage$firstLog.addressId;
+  return itemIndex + selectedDeliveryChannel + selectedSla + addressId || index;
+}
+function isPaymentHash() {
+  return window.location.hash === _constants__WEBPACK_IMPORTED_MODULE_0__["PAYMENT_HASH"];
+}
+
+/***/ }),
+
+/***/ "./react/utils/Currency.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatCurrency", function() { return formatCurrency; });
+function formatCurrency(_ref) {
+  var value = _ref.value,
+      storePreferencesData = _ref.storePreferencesData,
+      _ref$options = _ref.options,
+      options = _ref$options === void 0 ? {
+    isInt: true
+  } : _ref$options;
+  var currencySymbol = storePreferencesData.currencySymbol,
+      currencyFormatInfo = storePreferencesData.currencyFormatInfo;
+  var currencyDecimalDigits = currencyFormatInfo.currencyDecimalDigits,
+      currencyDecimalSeparator = currencyFormatInfo.currencyDecimalSeparator,
+      currencyGroupSeparator = currencyFormatInfo.currencyGroupSeparator,
+      startsWithCurrencySymbol = currencyFormatInfo.startsWithCurrencySymbol;
+  value = options.isInt ? value / 100 : value;
+  value = value.toFixed(currencyDecimalDigits);
+  var valueDividedInParts = value.split('.');
+  var decimalPart = valueDividedInParts[1];
+  var wholePart = valueDividedInParts[0];
+  wholePart = wholePart.replace(/\B(?=(\d{3})+(?!\d))/g, currencyGroupSeparator);
+  value = currencyDecimalDigits > 0 ? wholePart + currencyDecimalSeparator + decimalPart : wholePart;
+  return startsWithCurrencySymbol ? "".concat(currencySymbol, " ").concat(value) : "".concat(value, " ").concat(currencySymbol);
+}
+
+/***/ }),
+
+/***/ "./react/utils/Images.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceHttpToRelativeProtocol", function() { return replaceHttpToRelativeProtocol; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fixImageUrl", function() { return fixImageUrl; });
+var DEFAULT_WIDTH = 50;
+var DEFAULT_HEIGHT = 50;
+var DEFAULT_HDF = 1;
+var baseUrlRegex = new RegExp(/.+ids\/(\d+)(?:-(\d+)-(\d+)|)\//);
+var sizeRegex = new RegExp(/-(\d+)-(\d+)/);
+
+function cleanImageUrl(imageUrl) {
+  var resizedImageUrl = imageUrl;
+  var result = baseUrlRegex.exec(imageUrl);
+
+  if (result.length > 0) {
+    if (result.length === 4 && result[2] !== undefined && result[3] !== undefined) {
+      resizedImageUrl = result[0].replace(sizeRegex, '');
+    } else {
+      resizedImageUrl = result[0];
+    }
+
+    return resizedImageUrl;
+  }
+
+  return undefined;
+}
+
+function changeImageUrlSize(imageUrl) {
+  var width = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : DEFAULT_WIDTH;
+  var height = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : DEFAULT_HEIGHT;
+  var highDensityFactor = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : DEFAULT_HDF;
+  // imageUrl example http://omniera.vteximg.com.br/arquivos/ids/155401-135-135/CAN-09-04--1-.jpg
+  if (!imageUrl || !width || !height) return undefined;
+  var widthCalc = width * highDensityFactor;
+  var heightCalc = height * highDensityFactor;
+  var resizedImageUrl = imageUrl.slice(0, -1); // Remove last "/"
+
+  return "".concat(resizedImageUrl, "-").concat(widthCalc, "-").concat(heightCalc);
+}
+
+function replaceHttpToRelativeProtocol(url) {
+  if (!url) {
+    return undefined;
+  }
+
+  return url.replace(/https:\/\/|http:\/\//, '//');
+}
+function fixImageUrl(imageUrl) {
+  return changeImageUrlSize(replaceHttpToRelativeProtocol(cleanImageUrl(imageUrl)));
+}
+
+/***/ }),
+
+/***/ "./react/utils/InvoiceAddressUtils.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getInvoiceAddressFromState", function() { return getInvoiceAddressFromState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getInvoiceAddressActive", function() { return getInvoiceAddressActive; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createInvoiceAddressValidated", function() { return createInvoiceAddressValidated; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deliveryAddressExistsCondition", function() { return deliveryAddressExistsCondition; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "injectSelectedAddressCondition", function() { return injectSelectedAddressCondition; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectedAddressFilterCondition", function() { return selectedAddressFilterCondition; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatInvoiceAddress", function() { return formatInvoiceAddress; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatAddressQuery", function() { return formatAddressQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "invoiceAddressNumberCondition", function() { return invoiceAddressNumberCondition; });
+/* harmony import */ var vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("vtex.address-form/helpers");
+/* harmony import */ var vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _AddressFormUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/utils/AddressFormUtils.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var validateField = vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_0___default.a.validateField,
+    addValidation = vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_0___default.a.addValidation;
+function getInvoiceAddressFromState(state) {
+  return state.invoiceAddressForm && state.invoiceAddressForm.invoiceAddress;
+}
+function getInvoiceAddressActive(state) {
+  return state.invoiceAddressForm && state.invoiceAddressForm.isInvoiceAddressActive;
+}
+function createInvoiceAddressValidated(flags) {
+  var invoiceAddressFormatted = flags.invoiceAddressFormatted,
+      addressQueryFormatted = flags.addressQueryFormatted,
+      numberCondition = flags.numberCondition,
+      stateAddress = flags.stateAddress,
+      invoiceNumberValue = flags.invoiceNumberValue,
+      isGeolocationInput = flags.isGeolocationInput,
+      rules = flags.rules,
+      shouldAddGeolocationAutoCompleted = flags.shouldAddGeolocationAutoCompleted;
+  return _objectSpread(_objectSpread({}, invoiceAddressFormatted), {}, {
+    addressQuery: _objectSpread(_objectSpread({}, invoiceAddressFormatted.addressQuery), {}, {
+      value: addressQueryFormatted
+    }),
+    receiverName: _objectSpread(_objectSpread({}, invoiceAddressFormatted.receiverName), {}, {
+      hidden: true
+    }),
+    number: _objectSpread(_objectSpread(_objectSpread({}, invoiceAddressFormatted.number), invoiceAddressFormatted.number.value && shouldAddGeolocationAutoCompleted ? {
+      geolocationAutoCompleted: true
+    } : {
+      geolocationAutoCompleted: false
+    }), numberCondition ? {
+      value: stateAddress.number.value
+    } : {
+      value: invoiceNumberValue
+    }),
+    postalCode: _objectSpread(_objectSpread({}, invoiceAddressFormatted.postalCode), isGeolocationInput ? {
+      valid: true
+    } : invoiceAddressFormatted.postalCode && validateField(invoiceAddressFormatted.postalCode.value, 'postalCode', invoiceAddressFormatted, rules))
+  });
+}
+function deliveryAddressExistsCondition(flags) {
+  var deliveryAddresses = flags.deliveryAddresses,
+      shouldPassSelectedAddresses = flags.shouldPassSelectedAddresses;
+  return deliveryAddresses.length < 2 && shouldPassSelectedAddresses;
+}
+function injectSelectedAddressCondition(flags) {
+  var deliveryAddresses = flags.deliveryAddresses,
+      shouldPassSelectedAddresses = flags.shouldPassSelectedAddresses,
+      stateAddress = flags.stateAddress;
+  return deliveryAddressExistsCondition({
+    deliveryAddresses: deliveryAddresses,
+    shouldPassSelectedAddresses: shouldPassSelectedAddresses
+  }) && Object.keys(Object(_AddressFormUtils__WEBPACK_IMPORTED_MODULE_1__["addPostalCodeAutoCompleted"])(addValidation(stateAddress))).length > 0;
+}
+function selectedAddressFilterCondition(flags) {
+  var deliveryAddressExists = flags.deliveryAddressExists,
+      stateAddress = flags.stateAddress,
+      invoiceAddress = flags.invoiceAddress,
+      isGeolocationInput = flags.isGeolocationInput;
+  var validatedAddress = addValidation(stateAddress);
+  return deliveryAddressExists ? Object(_AddressFormUtils__WEBPACK_IMPORTED_MODULE_1__["addPostalCodeAutoCompleted"])(validatedAddress, isGeolocationInput) : Object(_AddressFormUtils__WEBPACK_IMPORTED_MODULE_1__["addPostalCodeAutoCompleted"])(invoiceAddress, isGeolocationInput);
+}
+function formatInvoiceAddress(flags) {
+  var injectSelectAddressCondition = flags.injectSelectAddressCondition,
+      selectedAddressesCondition = flags.selectedAddressesCondition,
+      invoiceAddress = flags.invoiceAddress;
+  return injectSelectAddressCondition ? selectedAddressesCondition : invoiceAddress;
+}
+function formatAddressQuery(invoiceAddressFormatted) {
+  var hasValues = invoiceAddressFormatted && invoiceAddressFormatted.street && invoiceAddressFormatted.number && invoiceAddressFormatted.street.value;
+  var numberValue = invoiceAddressFormatted.number.value;
+  var streetValue = invoiceAddressFormatted.street.value;
+  return hasValues ? numberValue ? "".concat(streetValue, " ").concat(numberValue) : streetValue : null;
+}
+function invoiceAddressNumberCondition(flags) {
+  var invoiceAddressFormatted = flags.invoiceAddressFormatted,
+      stateAddress = flags.stateAddress,
+      shouldPassSelectedAddresses = flags.shouldPassSelectedAddresses;
+  return !invoiceAddressFormatted.number.value && invoiceAddressFormatted.addressId.value === stateAddress.addressId.value && shouldPassSelectedAddresses;
+}
+
+/***/ }),
+
+/***/ "./react/utils/Polyfills.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return setPolyfills; });
+/* eslint-disable */
+function polyfillHashChange() {
+  if (!window.HashChangeEvent) {
+    var lastURL = document.URL;
+    window.addEventListener('hashchange', function (event) {
+      Object.defineProperty(event, 'oldURL', {
+        enumerable: true,
+        configurable: true,
+        value: lastURL
+      });
+      Object.defineProperty(event, 'newURL', {
+        enumerable: true,
+        configurable: true,
+        value: document.URL
+      });
+      lastURL = document.URL;
+    });
+  }
+}
+
+function polyfillIncludes() {
+  if (!String.prototype.includes) {
+    String.prototype.includes = function (search, start) {
+      'use strict';
+
+      if (typeof start !== 'number') {
+        start = 0;
+      }
+
+      if (start + search.length > this.length) {
+        return false;
+      } else {
+        return this.indexOf(search, start) !== -1;
+      }
+    };
+  }
+
+  if (!Array.prototype.includes) {
+    Object.defineProperty(Array.prototype, 'includes', {
+      value: function value(searchElement, fromIndex) {
+        if (this == null) {
+          throw new TypeError('"this" is null or not defined');
+        } // 1. Let O be ? ToObject(this value).
+
+
+        var o = Object(this); // 2. Let len be ? ToLength(? Get(O, "length")).
+
+        var len = o.length >>> 0; // 3. If len is 0, return false.
+
+        if (len === 0) {
+          return false;
+        } // 4. Let n be ? ToInteger(fromIndex).
+        //    (If fromIndex is undefined, this step produces the value 0.)
+
+
+        var n = fromIndex | 0; // 5. If n ≥ 0, then
+        //  a. Let k be n.
+        // 6. Else n < 0,
+        //  a. Let k be len + n.
+        //  b. If k < 0, let k be 0.
+
+        var k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
+
+        function sameValueZero(x, y) {
+          return x === y || typeof x === 'number' && typeof y === 'number' && isNaN(x) && isNaN(y);
+        } // 7. Repeat, while k < len
+
+
+        while (k < len) {
+          // a. Let elementK be the result of ? Get(O, ! ToString(k)).
+          // b. If SameValueZero(searchElement, elementK) is true, return true.
+          if (sameValueZero(o[k], searchElement)) {
+            return true;
+          } // c. Increase k by 1.
+
+
+          k++;
+        } // 8. Return false
+
+
+        return false;
+      }
+    });
+  }
+}
+
+function polyfillFind() {
+  if (!Array.prototype.find) {
+    Object.defineProperty(Array.prototype, 'find', {
+      value: function value(predicate) {
+        // 1. Let O be ? ToObject(this value).
+        if (this == null) {
+          throw new TypeError('"this" is null or not defined');
+        }
+
+        var o = Object(this); // 2. Let len be ? ToLength(? Get(O, "length")).
+
+        var len = o.length >>> 0; // 3. If IsCallable(predicate) is false, throw a TypeError exception.
+
+        if (typeof predicate !== 'function') {
+          throw new TypeError('predicate must be a function');
+        } // 4. If thisArg was supplied, let T be thisArg; else let T be undefined.
+
+
+        var thisArg = arguments[1]; // 5. Let k be 0.
+
+        var k = 0; // 6. Repeat, while k < len
+
+        while (k < len) {
+          // a. Let Pk be ! ToString(k).
+          // b. Let kValue be ? Get(O, Pk).
+          // c. Let testResult be ToBoolean(? Call(predicate, T, « kValue, k, O »)).
+          // d. If testResult is true, return kValue.
+          var kValue = o[k];
+
+          if (predicate.call(thisArg, kValue, k, o)) {
+            return kValue;
+          } // e. Increase k by 1.
+
+
+          k++;
+        } // 7. Return undefined.
+
+
+        return undefined;
+      },
+      configurable: true,
+      writable: true
+    });
+  }
+}
+
+function setPolyfills() {
+  polyfillHashChange();
+  polyfillFind();
+  polyfillIncludes();
+}
+
+/***/ }),
+
+/***/ "./react/utils/checkoutMock.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return mockCheckout; });
+/* harmony import */ var _constants_checkout_events__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./react/constants/checkout-events.js");
+
+function mockCheckout() {
+  return getOrderForm().then(addToCart).then(enableShipping);
+}
+
+function getOrderForm() {
+  return window.vtexjs.checkout.getOrderForm();
+}
+
+function enableShipping() {
+  window.$('#shipping-data').trigger('enable.vtex');
+  return Promise.resolve();
+}
+
+function addToCart() {
+  var ADD_URL = '/checkout/cart/add';
+  var isAdd = window.location.pathname.indexOf(ADD_URL) === 0;
+
+  if (isAdd) {
+    var search = new URLSearchParams(window.location.search);
+    return window.vtexjs.checkout.addToCart(transformSearchToItems(search), null, search.getAll('sc')[0]).then(setLocale).then(setUserEmail);
+  }
+
+  return Promise.resolve();
+}
+
+var transformSearchToItems = function transformSearchToItems(search) {
+  var qty = search.getAll('qty');
+  var sku = search.getAll('sku');
+  var seller = search.getAll('seller');
+  return qty.map(function (_, index) {
+    return {
+      id: sku[index],
+      quantity: qty[index],
+      seller: seller[index]
+    };
+  });
+};
+
+function setLocale() {
+  return window.vtexjs.checkout.sendAttachment('clientPreferencesData', {
+    locale: 'pt-BR'
+  });
+}
+
+function setUserEmail() {
+  // eslint-disable-next-line
+  if (Cypress.env('isLogged')) {
+    window.$(window).on(_constants_checkout_events__WEBPACK_IMPORTED_MODULE_0__["AUTHENTICATED_USER"], function () {
+      setTimeout(function () {
+        window.vtexjs.checkout.getOrderForm();
+      }, 2000);
+    });
+    return window.vtexjs.checkout.sendAttachment('clientProfileData', {
+      email: 'nando@mailinator.com'
+    });
+  }
+
+  return window.vtexjs.checkout.sendAttachment('clientProfileData', {
+    email: 'shipping1@mailinator.com'
+  });
+}
+
+/***/ }),
+
+/***/ "./react/utils/i18nUtils.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "translate", function() { return translate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "translateDate", function() { return translateDate; });
+var translate = function translate(intl, id, values) {
+  return intl && intl.formatMessage({
+    id: "omnishipping.".concat(id)
+  }, values);
+};
+var translateDate = function translateDate(intl, value) {
+  return intl.formatDate(value, {
+    weekday: 'long',
+    year: 'numeric',
+    day: 'numeric',
+    month: 'long'
+  });
+};
+
+/***/ }),
+
+/***/ "vtex.address-form/helpers":
+/***/ (function(module, exports) {
+
+module.exports = __RENDER_7_COMPONENTS__['vtex.address-form@3.x/helpers'];
+
+/***/ })
+
+},[["../utils.js","runtime","common"]]]);
+//# sourceMappingURL=utils.js.map

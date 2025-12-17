@@ -2,17 +2,22 @@ import React, { useRef, useEffect, useState } from 'react'
 import { defineMessages } from 'react-intl'
 import styles from './index.css'
 
+const VIDEO_DURATION_MS = 60000
+
 const VideoHeroCustom = ({ 
   videoUrl, 
   leftImage,
   inputPlaceholder,
-  buttonText
+  buttonText,
+  videoDuration = VIDEO_DURATION_MS
 }) => {
-  const videoRef = useRef(null)
   const containerRef = useRef(null)
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [message, setMessage] = useState('')
+  const [showVideo, setShowVideo] = useState(false)
+  const [videoEnded, setVideoEnded] = useState(false)
+  const timerRef = useRef(null)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -38,16 +43,51 @@ const VideoHeroCustom = ({
     }
   }
 
+  const sanitizeIframeUrl = (rawUrl) => {
+    if (!rawUrl || typeof rawUrl !== 'string') return rawUrl
+    try {
+      const url = new URL(rawUrl)
+      url.searchParams.set('loop', 'false')
+      url.searchParams.set('autoplay', 'true')
+      url.searchParams.set('muted', 'true')
+      return url.toString()
+    } catch (e) {
+      return rawUrl
+    }
+  }
+
+  const getIframePosterUrl = (rawUrl) => {
+    if (!rawUrl || typeof rawUrl !== 'string') return null
+    try {
+      const url = new URL(rawUrl)
+      const poster = url.searchParams.get('poster')
+      if (!poster) return null
+      try {
+        return decodeURIComponent(poster)
+      } catch (e) {
+        return poster
+      }
+    } catch (e) {
+      return null
+    }
+  }
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && videoRef.current) {
-            videoRef.current.play()
+          if (entry.isIntersecting && !videoEnded) {
+            setShowVideo(true)
+            if (!timerRef.current) {
+              timerRef.current = setTimeout(() => {
+                setVideoEnded(true)
+                setShowVideo(false)
+              }, videoDuration)
+            }
           }
         })
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     )
 
     if (containerRef.current) {
@@ -58,8 +98,20 @@ const VideoHeroCustom = ({
       if (containerRef.current) {
         observer.unobserve(containerRef.current)
       }
+      if (timerRef.current) {
+        clearTimeout(timerRef.current)
+      }
     }
-  }, [])
+  }, [videoEnded, videoDuration])
+
+  const showIframe = showVideo && !videoEnded
+
+  const effectiveVideoUrl =
+    videoUrl ||
+    "https://customer-4z2czbvhbm9jeqnh.cloudflarestream.com/b6e4ca859e6972af5d17163c9b6931d4/iframe?preload=true&loop=true&autoplay=true&muted=true&controls=false&letterboxColor=transparent&poster=https%3A%2F%2Fcustomer-4z2czbvhbm9jeqnh.cloudflarestream.com%2Fb6e4ca859e6972af5d17163c9b6931d4%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+
+  const sanitizedVideoUrl = sanitizeIframeUrl(effectiveVideoUrl)
+  const posterUrl = getIframePosterUrl(effectiveVideoUrl)
 
   return (
     <div className={styles.videoHeroContainer} ref={containerRef}>
@@ -102,16 +154,23 @@ const VideoHeroCustom = ({
 
         {/* Columna derecha - Video */}
         <div className={styles.videoColumn}>
-          <iframe
-            className={styles.videoElement}
-            src={
-              videoUrl ||
-              "https://customer-4z2czbvhbm9jeqnh.cloudflarestream.com/b6e4ca859e6972af5d17163c9b6931d4/iframe?preload=true&loop=true&autoplay=true&muted=true&controls=false&letterboxColor=transparent&poster=https%3A%2F%2Fcustomer-4z2czbvhbm9jeqnh.cloudflarestream.com%2Fb6e4ca859e6972af5d17163c9b6931d4%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
-            }
-            loading="lazy"
-            style={{ border: 'none' }}
-            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
-          />
+          {showIframe ? (
+            <iframe
+              className={styles.videoElement}
+              src={sanitizedVideoUrl}
+              loading="lazy"
+              style={{ border: 'none' }}
+              allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+            />
+          ) : (
+            posterUrl ? (
+              <img
+                src={posterUrl}
+                alt=""
+                className={styles.videoElement}
+              />
+            ) : null
+          )}
         </div>
       </div>
     </div>

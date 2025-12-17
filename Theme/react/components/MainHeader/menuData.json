@@ -85,6 +85,7 @@
             { "label": "Rompevientos", "href": "/mujer/indumentaria/rompevientos" },
             { "label": "Chalecos", "href": "/mujer/indumentaria/chalecos" },
             { "label": "Camisas", "href": "/mujer/indumentaria/camisas" },
+            { "label": "Vestidos", "href": "/mujer/indumentaria/vestidos" },
             { "label": "Remeras", "href": "/mujer/indumentaria/remeras" },
             { "label": "Chombas", "href": "/mujer/indumentaria/chombas" },
             { "label": "Musculosas", "href": "/mujer/indumentaria/musculosas" },
@@ -194,7 +195,8 @@
             { "label": "Grizzly", "href": "/marcas/grizzly" },
             { "label": "Ansilta", "href": "/marcas/ansilta" },
             { "label": "Columbia", "href": "/marcas/columbia" },
-            { "label": "National Geographic", "href": "/marcas/national-geographic" }
+            { "label": "National Geographic", "href": "/marcas/national-geographic" },
+            { "label": "C1rca", "href": "/marcas/c1rca" }
           ]
         },
         {
@@ -245,6 +247,11 @@
           ]
         }
       ]
+    },
+    {
+      "id": "skate",
+      "label": "SKATE",
+      "href": "/skate"
     }
   ]
 }

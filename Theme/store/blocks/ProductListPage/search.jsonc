@@ -3,7 +3,8 @@
   "store.search": {
 
     "blocks": [
-      "search-result-layout"
+      "search-result-layout",
+      "support-entry"
     ],
 
     "props": {

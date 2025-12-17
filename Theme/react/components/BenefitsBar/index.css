@@ -1,10 +1,14 @@
 
 .benefitsBarContainer {
   width: 100%;
+  min-height: 52px;
+  height: 52px;
   padding: 6px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
 .benefitsBarContainerDark {
@@ -21,76 +25,160 @@
 
 
 .benefitsBar {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+  gap: 40px;
+  padding: 0 60px;
   position: relative;
 }
 
-.sliderWrapper {
-  width: 100%;
-  max-width: 1200px;
-  overflow: hidden;
-  position: relative;
-  height: 40px;
-}
-
-.slide {
+.arrowButton {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #111111;
+  font-size: 32px;
+  font-weight: 400;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  will-change: transform;
+  transition: opacity 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  user-select: none;
 }
 
-.slideCurrent {
-  transform: translateX(0);
+.arrowButtonLeft {
+  left: 10px;
 }
 
-.slideNext {
-  transform: translateX(100%);
+.arrowButtonRight {
+  right: 10px;
 }
 
-.slideOutLeft {
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
+.arrowButton:hover {
+  opacity: 0.85;
+  background: rgba(0, 0, 0, 0.1);
 }
 
-.slideInCenter {
-  transform: translateX(0);
-  transition: transform 0.5s ease-in-out;
+.arrowButton:active {
+  opacity: 0.6;
+}
+
+.benefitsBarContainerDark .arrowButton {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+}
+
+.benefitsBarContainerDark .arrowButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+  opacity: 0.9;
+}
+
+
+.slideWrapper {
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
 }
 
 .benefitLink {
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  opacity: 1;
 }
 
 .benefitLink:hover {
   opacity: 0.8;
 }
 
+.slideIn {
+  animation: slideIn 0.4s ease forwards;
+}
+
+.slideOutLeft {
+  animation: slideOutLeft 0.4s ease forwards;
+}
+
+.slideOutRight {
+  animation: slideOutRight 0.4s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
 .benefitImage {
   max-height: 38px;
-  max-width: 280px;
   width: auto;
   height: auto;
   object-fit: contain;
 }
 
 @media (max-width: 768px) {
-  .sliderWrapper {
+  .benefitsBarContainer {
+    min-height: 48px;
+    height: 48px;
+  }
+
+  .slideWrapper {
     height: 36px;
+  }
+
+  .arrowButton {
+    position: static;
+    transform: none;
+    width: 32px;
+    height: 32px;
+    font-size: 28px;
+    margin: 0 8px;
+    background: rgba(255, 255, 255, 0.12);
   }
 
   .benefitImage {
     max-height: 34px;
-    max-width: 220px;
   }
 }

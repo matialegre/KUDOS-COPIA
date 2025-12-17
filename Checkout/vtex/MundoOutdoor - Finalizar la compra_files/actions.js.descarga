@@ -1,0 +1,2033 @@
+(window["webpackJsonpvtex_shipping_manager_0_13_30"] = window["webpackJsonpvtex_shipping_manager_0_13_30"] || []).push([["actions"],{
+
+/***/ "../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/@vtex/evidence-client-js/dist/index.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(t,n){ true?module.exports=n():undefined}(window,function(){return function(t){var n={};function r(e){if(n[e])return n[e].exports;var o=n[e]={i:e,l:!1,exports:{}};return t[e].call(o.exports,o,o.exports,r),o.l=!0,o.exports}return r.m=t,r.c=n,r.d=function(t,n,e){r.o(t,n)||Object.defineProperty(t,n,{configurable:!1,enumerable:!0,get:e})},r.r=function(t){Object.defineProperty(t,"__esModule",{value:!0})},r.n=function(t){var n=t&&t.__esModule?function(){return t.default}:function(){return t};return r.d(n,"a",n),n},r.o=function(t,n){return Object.prototype.hasOwnProperty.call(t,n)},r.p="",r(r.s=59)}([function(t,n,r){"use strict";var e=r(21);t.exports=function(t,n){var r=t.__data__;return e(n)?r["string"==typeof n?"string":"hash"]:r.map}},function(t,n,r){"use strict";var e=r(27);t.exports=function(t,n){for(var r=t.length;r--;)if(e(t[r][0],n))return r;return-1}},function(t,n,r){"use strict";var e=r(9)(Object,"create");t.exports=e},function(t,n,r){"use strict";var e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},o=r(50),i="object"==("undefined"==typeof self?"undefined":e(self))&&self&&self.Object===Object&&self,u=o||i||Function("return this")();t.exports=u},function(t,n,r){"use strict";var e=r(3).Symbol;t.exports=e},function(t,n,r){"use strict";var e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},o=r(10),i=r(47),u="[object Symbol]";t.exports=function(t){return"symbol"==(void 0===t?"undefined":e(t))||i(t)&&o(t)==u}},function(t,n,r){"use strict";var e=Array.isArray;t.exports=e},function(t,n,r){"use strict";var e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};t.exports=function(t){var n=void 0===t?"undefined":e(t);return null!=t&&("object"==n||"function"==n)}},function(t,n,r){"use strict";var e=r(10),o=r(7),i="[object AsyncFunction]",u="[object Function]",s="[object GeneratorFunction]",c="[object Proxy]";t.exports=function(t){if(!o(t))return!1;var n=e(t);return n==u||n==s||n==i||n==c}},function(t,n,r){"use strict";var e=r(39),o=r(35);t.exports=function(t,n){var r=o(t,n);return e(r)?r:void 0}},function(t,n,r){"use strict";var e=r(4),o=r(49),i=r(48),u="[object Null]",s="[object Undefined]",c=e?e.toStringTag:void 0;t.exports=function(t){return null==t?void 0===t?s:u:c&&c in Object(t)?o(t):i(t)}},function(t,n,r){"use strict";var e={utf8:{stringToBytes:function(t){return e.bin.stringToBytes(unescape(encodeURIComponent(t)))},bytesToString:function(t){return decodeURIComponent(escape(e.bin.bytesToString(t)))}},bin:{stringToBytes:function(t){for(var n=[],r=0;r<t.length;r++)n.push(255&t.charCodeAt(r));return n},bytesToString:function(t){for(var n=[],r=0;r<t.length;r++)n.push(String.fromCharCode(t[r]));return n.join("")}}};t.exports=e},function(t,n,r){"use strict";var e,o="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};e=function(){return this}();try{e=e||Function("return this")()||(0,eval)("this")}catch(t){"object"===("undefined"==typeof window?"undefined":o(window))&&(e=window)}t.exports=e},function(t,n,r){"use strict";function e(t,n){var r=[],e=[];return null==n&&(n=function(t,n){return r[0]===n?"[Circular ~]":"[Circular ~."+e.slice(0,r.indexOf(n)).join(".")+"]"}),function(o,i){if(r.length>0){var u=r.indexOf(this);~u?r.splice(u+1):r.push(this),~u?e.splice(u,1/0,o):e.push(o),~r.indexOf(i)&&(i=n.call(this,o,i))}else r.push(i);return null==t?i:t.call(this,o,i)}}(t.exports=function(t,n,r,o){return JSON.stringify(t,e(n,o),r)}).getSerialize=e},function(t,n,r){"use strict";var e=r(5),o=1/0;t.exports=function(t){if("string"==typeof t||e(t))return t;var n=t+"";return"0"==n&&1/t==-o?"-0":n}},function(t,n,r){"use strict";t.exports=function(t,n){for(var r=-1,e=null==t?0:t.length,o=Array(e);++r<e;)o[r]=n(t[r],r,t);return o}},function(t,n,r){"use strict";var e=r(4),o=r(15),i=r(6),u=r(5),s=1/0,c=e?e.prototype:void 0,f=c?c.toString:void 0;t.exports=function t(n){if("string"==typeof n)return n;if(i(n))return o(n,t)+"";if(u(n))return f?f.call(n):"";var r=n+"";return"0"==r&&1/n==-s?"-0":r}},function(t,n,r){"use strict";var e=r(16);t.exports=function(t){return null==t?"":e(t)}},function(t,n,r){"use strict";var e=r(0);t.exports=function(t,n){var r=e(this,t),o=r.size;return r.set(t,n),this.size+=r.size==o?0:1,this}},function(t,n,r){"use strict";var e=r(0);t.exports=function(t){return e(this,t).has(t)}},function(t,n,r){"use strict";var e=r(0);t.exports=function(t){return e(this,t).get(t)}},function(t,n,r){"use strict";var e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};t.exports=function(t){var n=void 0===t?"undefined":e(t);return"string"==n||"number"==n||"symbol"==n||"boolean"==n?"__proto__"!==t:null===t}},function(t,n,r){"use strict";var e=r(0);t.exports=function(t){var n=e(this,t).delete(t);return this.size-=n?1:0,n}},function(t,n,r){"use strict";var e=r(9)(r(3),"Map");t.exports=e},function(t,n,r){"use strict";var e=r(1);t.exports=function(t,n){var r=this.__data__,o=e(r,t);return o<0?(++this.size,r.push([t,n])):r[o][1]=n,this}},function(t,n,r){"use strict";var e=r(1);t.exports=function(t){return e(this.__data__,t)>-1}},function(t,n,r){"use strict";var e=r(1);t.exports=function(t){var n=this.__data__,r=e(n,t);return r<0?void 0:n[r][1]}},function(t,n,r){"use strict";t.exports=function(t,n){return t===n||t!=t&&n!=n}},function(t,n,r){"use strict";var e=r(1),o=Array.prototype.splice;t.exports=function(t){var n=this.__data__,r=e(n,t);return!(r<0||(r==n.length-1?n.pop():o.call(n,r,1),--this.size,0))}},function(t,n,r){"use strict";t.exports=function(){this.__data__=[],this.size=0}},function(t,n,r){"use strict";var e=r(29),o=r(28),i=r(26),u=r(25),s=r(24);function c(t){var n=-1,r=null==t?0:t.length;for(this.clear();++n<r;){var e=t[n];this.set(e[0],e[1])}}c.prototype.clear=e,c.prototype.delete=o,c.prototype.get=i,c.prototype.has=u,c.prototype.set=s,t.exports=c},function(t,n,r){"use strict";var e=r(2),o="__lodash_hash_undefined__";t.exports=function(t,n){var r=this.__data__;return this.size+=this.has(t)?0:1,r[t]=e&&void 0===n?o:n,this}},function(t,n,r){"use strict";var e=r(2),o=Object.prototype.hasOwnProperty;t.exports=function(t){var n=this.__data__;return e?void 0!==n[t]:o.call(n,t)}},function(t,n,r){"use strict";var e=r(2),o="__lodash_hash_undefined__",i=Object.prototype.hasOwnProperty;t.exports=function(t){var n=this.__data__;if(e){var r=n[t];return r===o?void 0:r}return i.call(n,t)?n[t]:void 0}},function(t,n,r){"use strict";t.exports=function(t){var n=this.has(t)&&delete this.__data__[t];return this.size-=n?1:0,n}},function(t,n,r){"use strict";t.exports=function(t,n){return null==t?void 0:t[n]}},function(t,n,r){"use strict";var e=Function.prototype.toString;t.exports=function(t){if(null!=t){try{return e.call(t)}catch(t){}try{return t+""}catch(t){}}return""}},function(t,n,r){"use strict";var e=r(3)["__core-js_shared__"];t.exports=e},function(t,n,r){"use strict";var e,o=r(37),i=(e=/[^.]+$/.exec(o&&o.keys&&o.keys.IE_PROTO||""))?"Symbol(src)_1."+e:"";t.exports=function(t){return!!i&&i in t}},function(t,n,r){"use strict";var e=r(8),o=r(38),i=r(7),u=r(36),s=/^\[object .+?Constructor\]$/,c=Function.prototype,f=Object.prototype,a=c.toString,p=f.hasOwnProperty,l=RegExp("^"+a.call(p).replace(/[\\^$.*+?()[\]{}|]/g,"\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,"$1.*?")+"$");t.exports=function(t){return!(!i(t)||o(t))&&(e(t)?l:s).test(u(t))}},function(t,n,r){"use strict";var e=r(2);t.exports=function(){this.__data__=e?e(null):{},this.size=0}},function(t,n,r){"use strict";var e=r(40),o=r(34),i=r(33),u=r(32),s=r(31);function c(t){var n=-1,r=null==t?0:t.length;for(this.clear();++n<r;){var e=t[n];this.set(e[0],e[1])}}c.prototype.clear=e,c.prototype.delete=o,c.prototype.get=i,c.prototype.has=u,c.prototype.set=s,t.exports=c},function(t,n,r){"use strict";var e=r(41),o=r(30),i=r(23);t.exports=function(){this.size=0,this.__data__={hash:new e,map:new(i||o),string:new e}}},function(t,n,r){"use strict";var e=r(42),o=r(22),i=r(20),u=r(19),s=r(18);function c(t){var n=-1,r=null==t?0:t.length;for(this.clear();++n<r;){var e=t[n];this.set(e[0],e[1])}}c.prototype.clear=e,c.prototype.delete=o,c.prototype.get=i,c.prototype.has=u,c.prototype.set=s,t.exports=c},function(t,n,r){"use strict";var e=r(43),o="Expected a function";function i(t,n){if("function"!=typeof t||null!=n&&"function"!=typeof n)throw new TypeError(o);var r=function r(){var e=arguments,o=n?n.apply(this,e):e[0],i=r.cache;if(i.has(o))return i.get(o);var u=t.apply(this,e);return r.cache=i.set(o,u)||i,u};return r.cache=new(i.Cache||e),r}i.Cache=e,t.exports=i},function(t,n,r){"use strict";var e=r(44),o=500;t.exports=function(t){var n=e(t,function(t){return r.size===o&&r.clear(),t}),r=n.cache;return n}},function(t,n,r){"use strict";var e=/[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,o=/\\(\\)?/g,i=r(45)(function(t){var n=[];return 46===t.charCodeAt(0)&&n.push(""),t.replace(e,function(t,r,e,i){n.push(e?i.replace(o,"$1"):r||t)}),n});t.exports=i},function(t,n,r){"use strict";var e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};t.exports=function(t){return null!=t&&"object"==(void 0===t?"undefined":e(t))}},function(t,n,r){"use strict";var e=Object.prototype.toString;t.exports=function(t){return e.call(t)}},function(t,n,r){"use strict";var e=r(4),o=Object.prototype,i=o.hasOwnProperty,u=o.toString,s=e?e.toStringTag:void 0;t.exports=function(t){var n=i.call(t,s),r=t[s];try{t[s]=void 0;var e=!0}catch(t){}var o=u.call(t);return e&&(n?t[s]=r:delete t[s]),o}},function(t,n,r){"use strict";(function(n){var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},e="object"==(void 0===n?"undefined":r(n))&&n&&n.Object===Object&&n;t.exports=e}).call(this,r(12))},function(t,n,r){"use strict";var e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},o=r(6),i=r(5),u=/\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,s=/^\w*$/;t.exports=function(t,n){if(o(t))return!1;var r=void 0===t?"undefined":e(t);return!("number"!=r&&"symbol"!=r&&"boolean"!=r&&null!=t&&!i(t))||s.test(t)||!u.test(t)||null!=n&&t in Object(n)}},function(t,n,r){"use strict";var e=r(6),o=r(51),i=r(46),u=r(17);t.exports=function(t,n){return e(t)?t:o(t,n)?[t]:i(u(t))}},function(t,n,r){"use strict";var e=r(52),o=r(14);t.exports=function(t,n){for(var r=0,i=(n=e(n,t)).length;null!=t&&r<i;)t=t[o(n[r++])];return r&&r==i?t:void 0}},function(t,n,r){"use strict";var e=r(53);t.exports=function(t,n,r){var o=null==t?void 0:e(t,n);return void 0===o?r:o}},function(t,n,r){"use strict";t.exports=function(t){return void 0===t}},function(t,n,r){"use strict";function e(t){return!!t.constructor&&"function"==typeof t.constructor.isBuffer&&t.constructor.isBuffer(t)}t.exports=function(t){return null!=t&&(e(t)||function(t){return"function"==typeof t.readFloatLE&&"function"==typeof t.slice&&e(t.slice(0,0))}(t)||!!t._isBuffer)}},function(t,n,r){"use strict";var e,o;e="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",o={rotl:function(t,n){return t<<n|t>>>32-n},rotr:function(t,n){return t<<32-n|t>>>n},endian:function(t){if(t.constructor==Number)return 16711935&o.rotl(t,8)|4278255360&o.rotl(t,24);for(var n=0;n<t.length;n++)t[n]=o.endian(t[n]);return t},randomBytes:function(t){for(var n=[];t>0;t--)n.push(Math.floor(256*Math.random()));return n},bytesToWords:function(t){for(var n=[],r=0,e=0;r<t.length;r++,e+=8)n[e>>>5]|=t[r]<<24-e%32;return n},wordsToBytes:function(t){for(var n=[],r=0;r<32*t.length;r+=8)n.push(t[r>>>5]>>>24-r%32&255);return n},bytesToHex:function(t){for(var n=[],r=0;r<t.length;r++)n.push((t[r]>>>4).toString(16)),n.push((15&t[r]).toString(16));return n.join("")},hexToBytes:function(t){for(var n=[],r=0;r<t.length;r+=2)n.push(parseInt(t.substr(r,2),16));return n},bytesToBase64:function(t){for(var n=[],r=0;r<t.length;r+=3)for(var o=t[r]<<16|t[r+1]<<8|t[r+2],i=0;i<4;i++)8*r+6*i<=8*t.length?n.push(e.charAt(o>>>6*(3-i)&63)):n.push("=");return n.join("")},base64ToBytes:function(t){t=t.replace(/[^A-Z0-9+\/]/gi,"");for(var n=[],r=0,o=0;r<t.length;o=++r%4)0!=o&&n.push((e.indexOf(t.charAt(r-1))&Math.pow(2,-2*o+8)-1)<<2*o|e.indexOf(t.charAt(r))>>>6-2*o);return n}},t.exports=o},function(t,n,r){"use strict";var e,o,i,u,s;e=r(57),o=r(11).utf8,i=r(56),u=r(11).bin,(s=function t(n,r){n.constructor==String?n=r&&"binary"===r.encoding?u.stringToBytes(n):o.stringToBytes(n):i(n)?n=Array.prototype.slice.call(n,0):Array.isArray(n)||(n=n.toString());for(var s=e.bytesToWords(n),c=8*n.length,f=1732584193,a=-271733879,p=-1732584194,l=271733878,y=0;y<s.length;y++)s[y]=16711935&(s[y]<<8|s[y]>>>24)|4278255360&(s[y]<<24|s[y]>>>8);s[c>>>5]|=128<<c%32,s[14+(c+64>>>9<<4)]=c;var h=t._ff,v=t._gg,d=t._hh,b=t._ii;for(y=0;y<s.length;y+=16){var _=f,x=a,m=p,g=l;a=b(a=b(a=b(a=b(a=d(a=d(a=d(a=d(a=v(a=v(a=v(a=v(a=h(a=h(a=h(a=h(a,p=h(p,l=h(l,f=h(f,a,p,l,s[y+0],7,-680876936),a,p,s[y+1],12,-389564586),f,a,s[y+2],17,606105819),l,f,s[y+3],22,-1044525330),p=h(p,l=h(l,f=h(f,a,p,l,s[y+4],7,-176418897),a,p,s[y+5],12,1200080426),f,a,s[y+6],17,-1473231341),l,f,s[y+7],22,-45705983),p=h(p,l=h(l,f=h(f,a,p,l,s[y+8],7,1770035416),a,p,s[y+9],12,-1958414417),f,a,s[y+10],17,-42063),l,f,s[y+11],22,-1990404162),p=h(p,l=h(l,f=h(f,a,p,l,s[y+12],7,1804603682),a,p,s[y+13],12,-40341101),f,a,s[y+14],17,-1502002290),l,f,s[y+15],22,1236535329),p=v(p,l=v(l,f=v(f,a,p,l,s[y+1],5,-165796510),a,p,s[y+6],9,-1069501632),f,a,s[y+11],14,643717713),l,f,s[y+0],20,-373897302),p=v(p,l=v(l,f=v(f,a,p,l,s[y+5],5,-701558691),a,p,s[y+10],9,38016083),f,a,s[y+15],14,-660478335),l,f,s[y+4],20,-405537848),p=v(p,l=v(l,f=v(f,a,p,l,s[y+9],5,568446438),a,p,s[y+14],9,-1019803690),f,a,s[y+3],14,-187363961),l,f,s[y+8],20,1163531501),p=v(p,l=v(l,f=v(f,a,p,l,s[y+13],5,-1444681467),a,p,s[y+2],9,-51403784),f,a,s[y+7],14,1735328473),l,f,s[y+12],20,-1926607734),p=d(p,l=d(l,f=d(f,a,p,l,s[y+5],4,-378558),a,p,s[y+8],11,-2022574463),f,a,s[y+11],16,1839030562),l,f,s[y+14],23,-35309556),p=d(p,l=d(l,f=d(f,a,p,l,s[y+1],4,-1530992060),a,p,s[y+4],11,1272893353),f,a,s[y+7],16,-155497632),l,f,s[y+10],23,-1094730640),p=d(p,l=d(l,f=d(f,a,p,l,s[y+13],4,681279174),a,p,s[y+0],11,-358537222),f,a,s[y+3],16,-722521979),l,f,s[y+6],23,76029189),p=d(p,l=d(l,f=d(f,a,p,l,s[y+9],4,-640364487),a,p,s[y+12],11,-421815835),f,a,s[y+15],16,530742520),l,f,s[y+2],23,-995338651),p=b(p,l=b(l,f=b(f,a,p,l,s[y+0],6,-198630844),a,p,s[y+7],10,1126891415),f,a,s[y+14],15,-1416354905),l,f,s[y+5],21,-57434055),p=b(p,l=b(l,f=b(f,a,p,l,s[y+12],6,1700485571),a,p,s[y+3],10,-1894986606),f,a,s[y+10],15,-1051523),l,f,s[y+1],21,-2054922799),p=b(p,l=b(l,f=b(f,a,p,l,s[y+8],6,1873313359),a,p,s[y+15],10,-30611744),f,a,s[y+6],15,-1560198380),l,f,s[y+13],21,1309151649),p=b(p,l=b(l,f=b(f,a,p,l,s[y+4],6,-145523070),a,p,s[y+11],10,-1120210379),f,a,s[y+2],15,718787259),l,f,s[y+9],21,-343485551),f=f+_>>>0,a=a+x>>>0,p=p+m>>>0,l=l+g>>>0}return e.endian([f,a,p,l])})._ff=function(t,n,r,e,o,i,u){var s=t+(n&r|~n&e)+(o>>>0)+u;return(s<<i|s>>>32-i)+n},s._gg=function(t,n,r,e,o,i,u){var s=t+(n&e|r&~e)+(o>>>0)+u;return(s<<i|s>>>32-i)+n},s._hh=function(t,n,r,e,o,i,u){var s=t+(n^r^e)+(o>>>0)+u;return(s<<i|s>>>32-i)+n},s._ii=function(t,n,r,e,o,i,u){var s=t+(r^(n|~e))+(o>>>0)+u;return(s<<i|s>>>32-i)+n},s._blocksize=16,s._digestsize=16,t.exports=function(t,n){if(void 0===t||null===t)throw new Error("Illegal argument "+t);var r=e.wordsToBytes(s(t,n));return n&&n.asBytes?r:n&&n.asString?u.bytesToString(r):e.bytesToHex(r)}},function(t,n,r){"use strict";(function(t){Object.defineProperty(n,"__esModule",{value:!0});var e=function(){function t(t,n){for(var r=0;r<n.length;r++){var e=n[r];e.enumerable=e.enumerable||!1,e.configurable=!0,"value"in e&&(e.writable=!0),Object.defineProperty(t,e.key,e)}}return function(n,r,e){return r&&t(n.prototype,r),e&&t(n,e),n}}(),o=Object.assign||function(t){for(var n=1;n<arguments.length;n++){var r=arguments[n];for(var e in r)Object.prototype.hasOwnProperty.call(r,e)&&(t[e]=r[e])}return t},i=a(r(58)),u=a(r(55)),s=a(r(54)),c=a(r(8)),f=a(r(13));function a(t){return t&&t.__esModule?t:{default:t}}function p(n){return!(0,u.default)(window)&&!(0,c.default)(window.fetch)||!(0,u.default)(t)&&!(0,c.default)(t.fetch)?(console.error("Evidence Client: Error, using fetchRequest without fetch object"),null):fetch(n.url,o({},n,{body:n.data})).then(function(t){return"json"===n.responseType?t.json():t})}var l=function(){function t(){!function(t,n){if(!(t instanceof n))throw new TypeError("Cannot call a class as a function")}(this,t)}return e(t,[{key:"config",value:function(t){this.request=((0,u.default)(t.request)?this.request:t.request)||p,this.expirationInSeconds=(0,s.default)(t,"expirationInSeconds")}},{key:"sendEvidence",value:function(t,n,r){var e,o="/api/Evidence?application="+t,s=(e=n,(0,i.default)((0,f.default)(e)));o=o+"&hash="+s;var c=!(0,u.default)(this.expirationInSeconds),a={};return!(0,u.default)(r)?a={expirationInSeconds:r}:c&&(a={expirationInSeconds:this.expirationInSeconds}),this.request({url:o,data:(0,f.default)(n),method:"put",timeout:5e3,dataType:"raw",cache:!0,responseType:"text",headers:{"Content-Type":"text/plain"},params:a}),s}}]),t}();n.default=l}).call(this,r(12))}])});
+
+/***/ }),
+
+/***/ "../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/map.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayMap = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/_arrayMap.js"),
+    baseIteratee = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/_baseIteratee.js"),
+    baseMap = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/_baseMap.js"),
+    isArray = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/isArray.js");
+
+/**
+ * Creates an array of values by running each element in `collection` thru
+ * `iteratee`. The iteratee is invoked with three arguments:
+ * (value, index|key, collection).
+ *
+ * Many lodash methods are guarded to work as iteratees for methods like
+ * `_.every`, `_.filter`, `_.map`, `_.mapValues`, `_.reject`, and `_.some`.
+ *
+ * The guarded methods are:
+ * `ary`, `chunk`, `curry`, `curryRight`, `drop`, `dropRight`, `every`,
+ * `fill`, `invert`, `parseInt`, `random`, `range`, `rangeRight`, `repeat`,
+ * `sampleSize`, `slice`, `some`, `sortBy`, `split`, `take`, `takeRight`,
+ * `template`, `trim`, `trimEnd`, `trimStart`, and `words`
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Collection
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} [iteratee=_.identity] The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ * @example
+ *
+ * function square(n) {
+ *   return n * n;
+ * }
+ *
+ * _.map([4, 8], square);
+ * // => [16, 64]
+ *
+ * _.map({ 'a': 4, 'b': 8 }, square);
+ * // => [16, 64] (iteration order is not guaranteed)
+ *
+ * var users = [
+ *   { 'user': 'barney' },
+ *   { 'user': 'fred' }
+ * ];
+ *
+ * // The `_.property` iteratee shorthand.
+ * _.map(users, 'user');
+ * // => ['barney', 'fred']
+ */
+function map(collection, iteratee) {
+  var func = isArray(collection) ? arrayMap : baseMap;
+  return func(collection, baseIteratee(iteratee, 3));
+}
+
+module.exports = map;
+
+
+/***/ }),
+
+/***/ "../actions.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module) {if (!!(typeof window !== 'undefined' && window.document) && !window.global) {
+  window.global = window;
+} // compatibility
+
+
+window.__RENDER_7_COMPONENTS__ = window.__RENDER_7_COMPONENTS__ ? window.__RENDER_7_COMPONENTS__ : {};
+window.__RENDER_7_HOT__ = window.__RENDER_7_HOT__ ? window.__RENDER_7_HOT__ : {};
+
+function dep(m) {
+  return m.__esModule ? m.default : m.default || m;
+}
+
+;
+var host = window.__hostname__;
+var assetsPath = '/_v/public/assets/v1/published/';
+
+if (!!(typeof window !== 'undefined' && window.document) && window.__RUNTIME__) {
+  var generatorMetaTag = document.querySelector("meta[name='generator']");
+  var generator = generatorMetaTag && generatorMetaTag.getAttribute('content');
+  var isRenderGenerator = generator && generator.indexOf('vtex.render-server') === 0;
+  var env = __RUNTIME__.publicEndpoint || 'myvtex.com';
+  host = isRenderGenerator ? window.location.hostname : __RUNTIME__.workspace + '--' + __RUNTIME__.account + '.' + env;
+  assetsPath =  false ? undefined : __RUNTIME__.assetServerPublishedPath || '/_v/public/assets/v1/published/';
+}
+
+__webpack_require__.p = 'https://' + host + assetsPath + 'vtex.shipping-manager@0.13.30/public/react/';
+var entry;
+
+try {
+  entry = dep(__webpack_require__("./react/actions.ts"));
+} catch (error) {
+  throw new Error("An error happened while requiring the app vtex.shipping-manager@0.13.30/actions, please check your app's code.\n ".concat(error.stack));
+}
+
+if (window.__RENDER_7_RUNTIME__ && window.__RENDER_7_RUNTIME__.withHMR) {
+  window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.13.30/actions'] = window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.x/actions'] = window.__RENDER_7_RUNTIME__.withHMR(module, entry);
+} else {
+  window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.13.30/actions'] = window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.x/actions'] = entry;
+}
+
+if (false) {}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("../../../../../usr/local/data/service/node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
+/***/ "./react/actions.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_account_info_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./react/actions/account-info-actions.js");
+/* harmony import */ var _actions_address_form_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/actions/address-form-actions.ts");
+/* harmony import */ var _actions_component_activity_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/actions/component-activity-actions.js");
+/* harmony import */ var _actions_delivery_packages_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/actions/delivery-packages-actions.js");
+/* harmony import */ var _actions_invoice_address_form_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/actions/invoice-address-form-actions.js");
+/* harmony import */ var _actions_metric_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./react/actions/metric-actions.js");
+/* harmony import */ var _actions_order_form_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./react/actions/order-form-actions.js");
+/* harmony import */ var _actions_pickup_actions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./react/actions/pickup-actions.js");
+/* harmony import */ var _actions_shipping_preview_actions__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./react/actions/shipping-preview-actions.js");
+
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  accountInfoActionCreators: _actions_account_info_actions__WEBPACK_IMPORTED_MODULE_0__["actionCreators"],
+  addressFormActionCreators: _actions_address_form_actions__WEBPACK_IMPORTED_MODULE_1__["actionCreators"],
+  componentActivityActionCreators: _actions_component_activity_actions__WEBPACK_IMPORTED_MODULE_2__["actionCreators"],
+  deliveryPackagesActionCreators: _actions_delivery_packages_actions__WEBPACK_IMPORTED_MODULE_3__["actionCreators"],
+  invoiceAddressFormActionCreators: _actions_invoice_address_form_actions__WEBPACK_IMPORTED_MODULE_4__["actionCreators"],
+  metricActionCreators: _actions_metric_actions__WEBPACK_IMPORTED_MODULE_5__["actionCreators"],
+  orderFormActionCreators: _actions_order_form_actions__WEBPACK_IMPORTED_MODULE_6__["actionCreators"],
+  pickupActionCreators: _actions_pickup_actions__WEBPACK_IMPORTED_MODULE_7__["actionCreators"],
+  shippingPreviewActionCreators: _actions_shipping_preview_actions__WEBPACK_IMPORTED_MODULE_8__["actionCreators"]
+});
+
+/***/ }),
+
+/***/ "./react/actions/account-info-actions.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "vtexIdStarted", function() { return vtexIdStarted; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closedVtexId", function() { return closedVtexId; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "startVtexID", function() { return startVtexID; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actionCreators", function() { return actionCreators; });
+/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./react/actions/action-types.js");
+/* harmony import */ var _selectors_order_form_selectors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/selectors/order-form-selectors.js");
+/* harmony import */ var _constants_checkout_events__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/constants/checkout-events.js");
+
+
+
+var _window = window,
+    $ = _window.$;
+var vtexIdStarted = function vtexIdStarted() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["VTEX_ID_STARTED"]
+  };
+};
+var closedVtexId = function closedVtexId() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["VTEX_ID_CLOSED"]
+  };
+};
+var startVtexID = function startVtexID(callback) {
+  return function (dispatch, getState) {
+    var state = getState();
+    dispatch(vtexIdStarted());
+    window.vtexid && window.vtexid.start({
+      returnUrl: window.location.href,
+      accountName: Object(_selectors_order_form_selectors__WEBPACK_IMPORTED_MODULE_1__["getAccountName"])(state) || window.vtex.accountName,
+      locale: Object(_selectors_order_form_selectors__WEBPACK_IMPORTED_MODULE_1__["getLocale"])(state),
+      email: Object(_selectors_order_form_selectors__WEBPACK_IMPORTED_MODULE_1__["getUserEmail"])(state)
+    });
+
+    var authCallback = function authCallback() {
+      return callback && callback(true);
+    };
+
+    if ($) {
+      $(window).one(_constants_checkout_events__WEBPACK_IMPORTED_MODULE_2__["AUTHENTICATED_USER"], authCallback);
+      $(window).one('closed.vtexid', function () {
+        dispatch(closedVtexId());
+        $(window).off(_constants_checkout_events__WEBPACK_IMPORTED_MODULE_2__["AUTHENTICATED_USER"], authCallback);
+      });
+    }
+  };
+};
+var actionCreators = {
+  vtexIdStarted: vtexIdStarted,
+  closedVtexId: closedVtexId,
+  startVtexID: startVtexID
+};
+
+/***/ }),
+
+/***/ "./react/actions/address-form-actions.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateAddressForm", function() { return updateAddressForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validateAddressForm", function() { return validateAddressForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validateAddressFormFields", function() { return validateAddressFormFields; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validatePostalCode", function() { return validatePostalCode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validateNumber", function() { return validateNumber; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addAddressFormAddress", function() { return addAddressFormAddress; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "focusOnInput", function() { return focusOnInput; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addDeliveryAddress", function() { return addDeliveryAddress; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addNewAddresses", function() { return addNewAddresses; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actionCreators", function() { return actionCreators; });
+/* harmony import */ var vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("vtex.address-form/helpers");
+/* harmony import */ var vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/actions/action-types.js");
+/* harmony import */ var _utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/utils/AddressFormUtils.js");
+/* harmony import */ var _selectors_order_form_selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/selectors/order-form-selectors.js");
+/* harmony import */ var _selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/selectors/address-form-selectors.ts");
+/* harmony import */ var _component_activity_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./react/actions/component-activity-actions.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./react/constants/index.js");
+
+
+
+
+
+
+
+var removeValidation = vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_0___default.a.removeValidation;
+var updateAddressForm = function updateAddressForm(_ref) {
+  var address = _ref.address,
+      searchAddress = _ref.searchAddress,
+      channel = _ref.channel,
+      rules = _ref.rules,
+      shouldSubmit = _ref.shouldSubmit;
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_1__["UPDATE_ADDRESS_FORM"],
+    address: address,
+    searchAddress: searchAddress,
+    channel: channel,
+    rules: rules,
+    shouldSubmit: shouldSubmit
+  };
+};
+var validateAddressForm = function validateAddressForm(rules, geolocation) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_1__["VALIDATE_ADDRESS_FORM"],
+    rules: rules,
+    geolocation: geolocation
+  };
+};
+var validateAddressFormFields = function validateAddressFormFields(rules, geolocation) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_1__["VALIDATE_ADDRESS_FORM_FIELDS"],
+    rules: rules,
+    geolocation: geolocation
+  };
+};
+var validatePostalCode = function validatePostalCode(rules, geolocation) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_1__["VALIDATE_POSTAL_CODE"],
+    rules: rules,
+    geolocation: geolocation
+  };
+};
+var validateNumber = function validateNumber(rules, geolocation) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_1__["VALIDATE_NUMBER"],
+    rules: rules,
+    geolocation: geolocation
+  };
+};
+var addAddressFormAddress = function addAddressFormAddress(_ref2) {
+  var address = _ref2.address,
+      searchAddress = _ref2.searchAddress,
+      channel = _ref2.channel;
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_1__["ADD_ADDRESS_FORM_ADDRESS"],
+    address: address,
+    searchAddress: searchAddress,
+    channel: channel
+  };
+};
+var focusOnInput = function focusOnInput(input) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_1__["FOCUS_ON_INPUT"],
+    input: input
+  };
+};
+var addDeliveryAddress = function addDeliveryAddress() {
+  return function (dispatch, getState) {
+    dispatch(Object(_component_activity_actions__WEBPACK_IMPORTED_MODULE_5__["newAddressEvent"])(true));
+    var state = getState();
+    var shipsTo = Object(_selectors_order_form_selectors__WEBPACK_IMPORTED_MODULE_3__["getDefaultShipsTo"])(state);
+    var storeCountryCode = Object(_selectors_order_form_selectors__WEBPACK_IMPORTED_MODULE_3__["getStoreCountryCode"])(state);
+    var channel = state.componentActivity.activeDeliveryChannel;
+    var searchAddress = removeValidation(Object(_selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_4__["getSearchAddress"])(state));
+    var country = shipsTo.indexOf(storeCountryCode) > -1 ? storeCountryCode : shipsTo[0];
+    dispatch(addAddressFormAddress({
+      address: Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_2__["newAddress"])({
+        country: country
+      }),
+      searchAddress: searchAddress,
+      channel: channel
+    }));
+  };
+};
+var addNewAddresses = function addNewAddresses() {
+  return function (dispatch, getState) {
+    var state = getState();
+    var shipsTo = Object(_selectors_order_form_selectors__WEBPACK_IMPORTED_MODULE_3__["getDefaultShipsTo"])(state);
+    var storeCountryCode = Object(_selectors_order_form_selectors__WEBPACK_IMPORTED_MODULE_3__["getStoreCountryCode"])(state);
+    var channel = state.componentActivity.activeDeliveryChannel;
+    var country = shipsTo.indexOf(storeCountryCode) > -1 ? storeCountryCode : shipsTo[0];
+    dispatch(addAddressFormAddress({
+      address: Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_2__["newAddress"])({
+        country: country
+      }),
+      searchAddress: Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_2__["newAddress"])({
+        country: country,
+        addressType: _constants__WEBPACK_IMPORTED_MODULE_6__["SEARCH"]
+      }),
+      channel: channel
+    }));
+  };
+};
+var actionCreators = {
+  addDeliveryAddress: addDeliveryAddress,
+  addAddressFormAddress: addAddressFormAddress,
+  addNewAddresses: addNewAddresses,
+  focusOnInput: focusOnInput,
+  validateAddressForm: validateAddressForm,
+  validateAddressFormFields: validateAddressFormFields,
+  validateNumber: validateNumber,
+  validatePostalCode: validatePostalCode,
+  updateAddressForm: updateAddressForm
+};
+
+/***/ }),
+
+/***/ "./react/actions/component-activity-actions.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectDeliveryChannel", function() { return selectDeliveryChannel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "enableUnavailableGeolocationSla", function() { return enableUnavailableGeolocationSla; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disableUnavailableGeolocationSla", function() { return disableUnavailableGeolocationSla; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "enableOmnishipping", function() { return enableOmnishipping; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disableOmnishipping", function() { return disableOmnishipping; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showAddressList", function() { return showAddressList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showAddress", function() { return showAddress; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showSplit", function() { return showSplit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showOmniShippingCompleted", function() { return showOmniShippingCompleted; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showOmniShipping", function() { return showOmniShipping; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editOmnishipping", function() { return editOmnishipping; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editAddress", function() { return editAddress; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "newAddressEvent", function() { return newAddressEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeActiveDeliveryChannel", function() { return changeActiveDeliveryChannel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "enableCalculateButton", function() { return enableCalculateButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disableCalculateButton", function() { return disableCalculateButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showOmnishippingInitialState", function() { return showOmnishippingInitialState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showGeolocationAddress", function() { return showGeolocationAddress; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setAditionalShippingDataAction", function() { return setAditionalShippingDataAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "completeOmnishippingAction", function() { return completeOmnishippingAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "completeOmnishipping", function() { return completeOmnishipping; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setAditionalShippingData", function() { return setAditionalShippingData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actionCreators", function() { return actionCreators; });
+/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./react/actions/action-types.js");
+/* harmony import */ var _utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/utils/LocalStorageUtils.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/constants/index.js");
+/* harmony import */ var _constants_checkout_events__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/constants/checkout-events.js");
+/* harmony import */ var _order_form_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/actions/order-form-actions.js");
+/* harmony import */ var _utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./react/utils/DeliveryChannelsUtils.js");
+/* harmony import */ var _metric_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./react/actions/metric-actions.js");
+/* harmony import */ var _address_form_actions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./react/actions/address-form-actions.ts");
+/* harmony import */ var _selectors_omnishipping_selectors__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./react/selectors/omnishipping-selectors.js");
+/* harmony import */ var _selectors_delivery_selectors__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./react/selectors/delivery-selectors.js");
+/* harmony import */ var _selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./react/selectors/address-form-selectors.ts");
+
+
+
+
+
+
+
+
+
+
+
+var _window = window,
+    $ = _window.$;
+var selectDeliveryChannel = function selectDeliveryChannel(channel) {
+  return function (dispatch, getState) {
+    var state = getState();
+    var activeDeliveryChannel = state.componentActivity && state.componentActivity.activeDeliveryChannel;
+    if (channel === activeDeliveryChannel) return;
+    dispatch(changeActiveDeliveryChannel(channel));
+    dispatch(setAditionalShippingData({
+      activeTab: channel
+    }));
+    dispatch(Object(_order_form_actions__WEBPACK_IMPORTED_MODULE_4__["changeActiveTab"])({
+      channel: channel,
+      loading: true,
+      shouldUpdate: true
+    }));
+
+    if (Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isPickup"])(channel)) {
+      dispatch(Object(_metric_actions__WEBPACK_IMPORTED_MODULE_6__["selectedPickupEvent"])());
+    }
+  };
+};
+var enableUnavailableGeolocationSla = function enableUnavailableGeolocationSla() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["ENABLE_UNAVAILABLE_GEOLOCATION_SLA"]
+  };
+};
+var disableUnavailableGeolocationSla = function disableUnavailableGeolocationSla() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["DISABLE_UNAVAILABLE_GEOLOCATION_SLA"]
+  };
+};
+var enableOmnishipping = function enableOmnishipping() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["ENABLE_OMNISHIPPING"]
+  };
+};
+var disableOmnishipping = function disableOmnishipping() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["DISABLE_OMNISHIPPING"]
+  };
+};
+var showAddressList = function showAddressList(show) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["SHOW_ADDRESS_LIST"],
+    show: show
+  };
+};
+var showAddress = function showAddress(show) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["SHOW_ADDRESS"],
+    show: show
+  };
+};
+var showSplit = function showSplit(show) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["SHOW_SPLIT"],
+    show: show
+  };
+};
+var showOmniShippingCompleted = function showOmniShippingCompleted(show) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["SHOW_OMNISHIPPING_COMPLETED"],
+    show: show
+  };
+};
+var showOmniShipping = function showOmniShipping(show) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["SHOW_OMNISHIPPING"],
+    show: show
+  };
+};
+var editOmnishipping = function editOmnishipping(edit) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["EDIT_OMNISHIPPING"],
+    edit: edit
+  };
+};
+var editAddress = function editAddress(show, addressId) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["EDIT_ADDRESS"],
+    show: show,
+    addressId: addressId
+  };
+};
+var newAddressEvent = function newAddressEvent(show) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["NEW_ADDRESS"],
+    show: show
+  };
+};
+var changeActiveDeliveryChannel = function changeActiveDeliveryChannel(deliveryChannel) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["CHANGE_ACTIVE_DELIVERY_CHANNEL"],
+    deliveryChannel: deliveryChannel
+  };
+};
+var enableCalculateButton = function enableCalculateButton() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["ENABLE_CALCULATE_BUTTON"]
+  };
+};
+var disableCalculateButton = function disableCalculateButton() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["DISABLE_CALCULATE_BUTTON"]
+  };
+};
+var showOmnishippingInitialState = function showOmnishippingInitialState() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["SHOW_OMNISHIPPING_INITIAL_STATE"]
+  };
+};
+var showGeolocationAddress = function showGeolocationAddress() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["SHOW_GEOLOCATION_ADDRESS"]
+  };
+};
+var setAditionalShippingDataAction = function setAditionalShippingDataAction() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["SET_ADITIONAL_SHIPPING_DATA"]
+  };
+};
+var completeOmnishippingAction = function completeOmnishippingAction() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["COMPLETE_OMNISHIPPING"]
+  };
+};
+var completeOmnishipping = function completeOmnishipping(rules, isGeolocation) {
+  return function (dispatch, getState) {
+    var state = getState();
+    var shouldComplete = Object(_selectors_omnishipping_selectors__WEBPACK_IMPORTED_MODULE_8__["shouldCompleteOmnishipping"])(state);
+    var shippingData = Object(_selectors_delivery_selectors__WEBPACK_IMPORTED_MODULE_9__["getShippingDataWithSelectedDelivery"])(state);
+    dispatch(completeOmnishippingAction());
+
+    if (!Object(_selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_10__["isValidAddress"])(state)) {
+      dispatch(Object(_address_form_actions__WEBPACK_IMPORTED_MODULE_7__["validateAddressFormFields"])(rules, isGeolocation));
+    }
+
+    if (shouldComplete) {
+      dispatch(showOmniShippingCompleted(true));
+      dispatch(editOmnishipping(false));
+      dispatch(Object(_order_form_actions__WEBPACK_IMPORTED_MODULE_4__["updateShippingData"])(shippingData));
+      dispatch(Object(_metric_actions__WEBPACK_IMPORTED_MODULE_6__["shippingStatsEvent"])());
+    }
+  };
+};
+var setAditionalShippingData = function setAditionalShippingData(_ref) {
+  var activeTab = _ref.activeTab,
+      selectedLeanShippingOption = _ref.selectedLeanShippingOption,
+      isScheduledDeliveryActive = _ref.isScheduledDeliveryActive;
+  return function (dispatch, getState) {
+    var state = getState();
+    var localActiveTab = activeTab || state.componentActivity && state.componentActivity.activeDeliveryChannel;
+    var localSelectedLeanShippingOption = selectedLeanShippingOption || state.delivery && state.delivery.activeDeliveryOption;
+    var localIsScheduledDeliveryActive = isScheduledDeliveryActive || state.delivery && state.delivery.isScheduledDeliveryActive;
+    var aditionalShippingData = {
+      activeTab: localActiveTab,
+      selectedLeanShippingOption: localSelectedLeanShippingOption,
+      isScheduledDeliveryActive: localIsScheduledDeliveryActive,
+      originComponent: _constants__WEBPACK_IMPORTED_MODULE_2__["OMNISHIPPING"]
+    };
+    dispatch(setAditionalShippingDataAction(aditionalShippingData));
+    Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_1__["setItem"])('aditionalShippingData', JSON.stringify(aditionalShippingData));
+    $ && $(window).trigger(_constants_checkout_events__WEBPACK_IMPORTED_MODULE_3__["SHIPPING_INFO_UPDATED"]);
+  };
+};
+var actionCreators = {
+  selectDeliveryChannel: selectDeliveryChannel,
+  enableUnavailableGeolocationSla: enableUnavailableGeolocationSla,
+  disableUnavailableGeolocationSla: disableUnavailableGeolocationSla,
+  enableOmnishipping: enableOmnishipping,
+  disableOmnishipping: disableOmnishipping,
+  showAddressList: showAddressList,
+  showAddress: showAddress,
+  showSplit: showSplit,
+  showOmniShippingCompleted: showOmniShippingCompleted,
+  showOmniShipping: showOmniShipping,
+  editOmnishipping: editOmnishipping,
+  editAddress: editAddress,
+  newAddressEvent: newAddressEvent,
+  changeActiveDeliveryChannel: changeActiveDeliveryChannel,
+  enableCalculateButton: enableCalculateButton,
+  disableCalculateButton: disableCalculateButton,
+  showOmnishippingInitialState: showOmnishippingInitialState,
+  showGeolocationAddress: showGeolocationAddress,
+  setAditionalShippingDataAction: setAditionalShippingDataAction,
+  completeOmnishippingAction: completeOmnishippingAction,
+  completeOmnishipping: completeOmnishipping,
+  setAditionalShippingData: setAditionalShippingData
+};
+
+/***/ }),
+
+/***/ "./react/actions/delivery-packages-actions.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateSelectedPackageSlider", function() { return updateSelectedPackageSlider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actionCreators", function() { return actionCreators; });
+/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./react/actions/action-types.js");
+
+var updateSelectedPackageSlider = function updateSelectedPackageSlider(packageIndex) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["UPDATE_SELECTED_PACKAGE_SLIDER"],
+    packageIndex: packageIndex
+  };
+};
+var actionCreators = {
+  updateSelectedPackageSlider: updateSelectedPackageSlider
+};
+
+/***/ }),
+
+/***/ "./react/actions/invoice-address-form-actions.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateInvoiceAddressForm", function() { return updateInvoiceAddressForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "enableInvoiceButton", function() { return enableInvoiceButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createInvoiceAddress", function() { return createInvoiceAddress; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "returnToInvoiceAddressList", function() { return returnToInvoiceAddressList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateInvoiceData", function() { return updateInvoiceData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disableInvoiceButton", function() { return disableInvoiceButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "completeInvoiceAddress", function() { return completeInvoiceAddress; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "invalidateInvoiceAddress", function() { return invalidateInvoiceAddress; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatInvoiceAddress", function() { return formatInvoiceAddress; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actionCreators", function() { return actionCreators; });
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/get.js");
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("vtex.address-form/helpers");
+/* harmony import */ var vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/actions/action-types.js");
+/* harmony import */ var _utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/utils/LocalStorageUtils.js");
+/* harmony import */ var _metric_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/actions/metric-actions.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+
+
+
+
+
+var addValidation = vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_1___default.a.addValidation;
+var _window = window,
+    $ = _window.$;
+var updateInvoiceAddressForm = function updateInvoiceAddressForm(invoiceAddress) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_2__["UPDATE_INVOICE_ADDRESS"],
+    invoiceAddress: invoiceAddress
+  };
+};
+var enableInvoiceButton = function enableInvoiceButton() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_2__["ENABLE_INVOICE_BUTTON"]
+  };
+};
+var createInvoiceAddress = function createInvoiceAddress() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_2__["CREATE_INVOICE_ADDRESS"]
+  };
+};
+var returnToInvoiceAddressList = function returnToInvoiceAddressList() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_2__["RETURN_TO_INVOICE_ADDRESS_LIST"]
+  };
+};
+var updateInvoiceData = function updateInvoiceData() {
+  return function (dispatch, getState) {
+    var state = getState();
+    var invoiceAddress = getState().invoiceAddressForm.invoiceAddress;
+    dispatch(updateInvoiceAddressForm(addValidation(invoiceAddress)));
+    var requestPayload = formatInvoiceAddress(invoiceAddress);
+    return window.vtexjs && window.vtexjs.checkout && window.vtexjs.checkout.sendAttachment('invoiceData', {
+      address: requestPayload
+    }).done(function () {
+      dispatch(updateInvoiceAddressForm(addValidation(invoiceAddress)));
+    }).fail(function (response, status, error) {
+      if (!error || !status || response.statusText === 'abort' || status === 'abort') {
+        return;
+      }
+
+      var errorObj = response.responseText && Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_3__["safelyParseJSON"])(response.responseText);
+      var errorEventObject = {
+        apiMessage: lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(errorObj, 'error.message'),
+        apiRoute: 'sendAttachment',
+        errorMessage: error,
+        errorStatus: status,
+        operationId: errorObj && errorObj.operationId,
+        reduxState: state && JSON.stringify(state),
+        requestPayload: JSON.stringify(requestPayload),
+        url: window.location.href
+      };
+      $(window).trigger('checkout-ui-api-error', errorEventObject);
+      dispatch(Object(_metric_actions__WEBPACK_IMPORTED_MODULE_4__["omnishippingAPIErrorEvent"])(errorEventObject));
+    });
+  };
+};
+var disableInvoiceButton = function disableInvoiceButton() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_2__["DISABLE_INVOICE_BUTTON"]
+  };
+};
+var completeInvoiceAddress = function completeInvoiceAddress() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_2__["COMPLETE_INVOICE_ADDRESS"]
+  };
+};
+var invalidateInvoiceAddress = function invalidateInvoiceAddress() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_2__["INVALIDATE_INVOICE_ADDRESS"]
+  };
+};
+var formatInvoiceAddress = function formatInvoiceAddress(invoiceAddress) {
+  Object.keys(invoiceAddress).forEach(function (key) {
+    if (_typeof(invoiceAddress[key]) === 'object' && !!invoiceAddress[key]) {
+      invoiceAddress[key] = invoiceAddress[key].value;
+    }
+  }, {});
+  return invoiceAddress;
+};
+var actionCreators = {
+  updateInvoiceAddressForm: updateInvoiceAddressForm,
+  enableInvoiceButton: enableInvoiceButton,
+  createInvoiceAddress: createInvoiceAddress,
+  returnToInvoiceAddressList: returnToInvoiceAddressList,
+  updateInvoiceData: updateInvoiceData,
+  disableInvoiceButton: disableInvoiceButton,
+  completeInvoiceAddress: completeInvoiceAddress,
+  invalidateInvoiceAddress: invalidateInvoiceAddress,
+  formatInvoiceAddress: formatInvoiceAddress
+};
+
+/***/ }),
+
+/***/ "./react/actions/metric-actions.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "omnishippingJsError", function() { return omnishippingJsError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "omnishippingAPIError", function() { return omnishippingAPIError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasPickup", function() { return hasPickup; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectedPickupTab", function() { return selectedPickupTab; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "searchedPickupAddress", function() { return searchedPickupAddress; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "omnishippingPageViewEvent", function() { return omnishippingPageViewEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "shippingStats", function() { return shippingStats; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectedPickupEvent", function() { return selectedPickupEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "searchedPickupAddressEvent", function() { return searchedPickupAddressEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "geolocationAddressHasNoSlaEvent", function() { return geolocationAddressHasNoSlaEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "omnishippingJsErrorEvent", function() { return omnishippingJsErrorEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "omnishippingPageView", function() { return omnishippingPageView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "omnishippingAPIErrorEvent", function() { return omnishippingAPIErrorEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "shippingStatsEvent", function() { return shippingStatsEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actionCreators", function() { return actionCreators; });
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/map.js");
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_map__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _vtex_evidence_client_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/@vtex/evidence-client-js/dist/index.js");
+/* harmony import */ var _vtex_evidence_client_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_vtex_evidence_client_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/actions/action-types.js");
+/* harmony import */ var _selectors_delivery_selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/selectors/delivery-selectors.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/constants/index.js");
+/* harmony import */ var _utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./react/utils/DeliveryChannelsUtils.js");
+
+
+
+
+
+
+var evidenceClient = new _vtex_evidence_client_js__WEBPACK_IMPORTED_MODULE_1___default.a();
+evidenceClient.config({});
+
+function isEnv(env) {
+  return window.location.href.indexOf(env) !== -1;
+}
+
+function logSplunk(config) {
+  var _window$logSplunk, _window;
+
+  (_window$logSplunk = (_window = window).logSplunk) === null || _window$logSplunk === void 0 ? void 0 : _window$logSplunk.call(_window, config);
+}
+
+function log(data) {
+  /* istanbul ignore else */
+  if (!isEnv(_constants__WEBPACK_IMPORTED_MODULE_4__["VTEXLOCAL"])) {
+    window.checkoutLogger && window.checkoutLogger(data);
+  } else {
+    console.log('Log', data);
+  }
+}
+
+function getIOAppVersion(_ref) {
+  var appName = _ref.appName,
+      vendor = _ref.vendor;
+  var IOAppName = Object.keys(window.__RENDER_7_COMPONENTS__).find(function (key) {
+    return key.indexOf(appName) > 0 && key.indexOf('.x') === -1;
+  });
+  return IOAppName && IOAppName.replace("".concat(vendor, ".").concat(appName, "@"), '').replace(/\/\w+/, '') || 'not-found';
+}
+
+function getShippingManagerVersion() {
+  return "0.13.30";
+}
+
+function getShippingPreviewVersion() {
+  return getIOAppVersion({
+    appName: 'shipping-preview',
+    vendor: 'vtex'
+  });
+}
+
+function getOmnishippingVersion() {
+  return getIOAppVersion({
+    appName: 'omnishipping',
+    vendor: 'vtex'
+  });
+}
+
+function getPickupPointsModalVersion() {
+  return getIOAppVersion({
+    appName: 'pickup-points-modal',
+    vendor: 'vtex'
+  });
+}
+
+function getAddressFormVersion() {
+  return getIOAppVersion({
+    appName: 'address-form',
+    vendor: 'vtex'
+  });
+}
+
+function sendEvidence() {
+  var evidence = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  return evidenceClient.sendEvidence('checkout-ui', JSON.stringify(evidence));
+}
+
+var omnishippingJsError = function omnishippingJsError(error, componentStack, id) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_2__["OMNISHIPPING_JS_ERROR"],
+    error: error,
+    componentStack: componentStack,
+    id: id
+  };
+};
+var omnishippingAPIError = function omnishippingAPIError(errorMessage, operationId, apiRoute, reduxState, apiMessage, errorStatus, requestPayload, url, id) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_2__["OMNISHIPPING_API_ERROR"],
+    errorMessage: errorMessage,
+    operationId: operationId,
+    apiRoute: apiRoute,
+    reduxState: reduxState,
+    apiMessage: apiMessage,
+    errorStatus: errorStatus,
+    requestPayload: requestPayload,
+    url: url,
+    id: id
+  };
+};
+var hasPickup = function hasPickup() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_2__["HAS_PICKUP_OPTIONS_EVENT"]
+  };
+};
+var selectedPickupTab = function selectedPickupTab() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_2__["SELECTED_PICKUP_TAB_EVENT"]
+  };
+};
+var searchedPickupAddress = function searchedPickupAddress() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_2__["SEARCHED_PICKUP_ADDRESS_EVENT"]
+  };
+};
+var omnishippingPageViewEvent = function omnishippingPageViewEvent(omnishippingVersion) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_2__["OMNISHIPPING_PAGEVIEW_EVENT"],
+    omnishippingVersion: omnishippingVersion
+  };
+};
+var shippingStats = function shippingStats() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_2__["SHIPPING_STATS_EVENT"]
+  };
+};
+var selectedPickupEvent = function selectedPickupEvent() {
+  return function (dispatch, getState) {
+    var accountName = getState().accountInfo.accountName;
+    dispatch(selectedPickupTab());
+    log({
+      name: 'selectedPickupTab',
+      data: {
+        env: isEnv(_constants__WEBPACK_IMPORTED_MODULE_4__["VTEXBETA"]) ? _constants__WEBPACK_IMPORTED_MODULE_4__["VTEXBETA"] : _constants__WEBPACK_IMPORTED_MODULE_4__["VTEXSTABLE"]
+      }
+    });
+    logSplunk({
+      level: _constants__WEBPACK_IMPORTED_MODULE_4__["IMPORTANT"],
+      type: _constants__WEBPACK_IMPORTED_MODULE_4__["INFO"],
+      workflowType: _constants__WEBPACK_IMPORTED_MODULE_4__["SHIPPING"],
+      workflowInstance: 'selected-pickup-tab',
+      account: accountName,
+      event: {
+        version: getShippingManagerVersion()
+      }
+    });
+  };
+};
+var searchedPickupAddressEvent = function searchedPickupAddressEvent() {
+  return function (dispatch, getState) {
+    var accountName = getState().accountInfo.accountName;
+    dispatch(searchedPickupAddress());
+    log({
+      name: 'searchedPickupAddress',
+      data: {
+        env: isEnv(_constants__WEBPACK_IMPORTED_MODULE_4__["VTEXBETA"]) ? _constants__WEBPACK_IMPORTED_MODULE_4__["VTEXBETA"] : _constants__WEBPACK_IMPORTED_MODULE_4__["VTEXSTABLE"]
+      }
+    });
+    logSplunk({
+      level: _constants__WEBPACK_IMPORTED_MODULE_4__["IMPORTANT"],
+      type: _constants__WEBPACK_IMPORTED_MODULE_4__["INFO"],
+      workflowType: _constants__WEBPACK_IMPORTED_MODULE_4__["SHIPPING"],
+      workflowInstance: 'searched-pickup-address',
+      account: accountName,
+      event: {
+        version: getShippingManagerVersion()
+      }
+    });
+  };
+};
+var geolocationAddressHasNoSlaEvent = function geolocationAddressHasNoSlaEvent(_ref2) {
+  var address = _ref2.address,
+      accountName = _ref2.accountName,
+      hasSlas = _ref2.hasSlas;
+  logSplunk({
+    level: _constants__WEBPACK_IMPORTED_MODULE_4__["IMPORTANT"],
+    type: _constants__WEBPACK_IMPORTED_MODULE_4__["INFO"],
+    workflowType: _constants__WEBPACK_IMPORTED_MODULE_4__["SHIPPING"],
+    workflowInstance: 'googlemaps-error',
+    account: accountName,
+    event: {
+      hasSlas: hasSlas,
+      country: address.country.value,
+      addressQuery: address.addressQuery.value,
+      postalCode: address.postalCode.value ? address.postalCode.value : 'null',
+      number: address.number.value,
+      version: getShippingManagerVersion()
+    }
+  });
+};
+var omnishippingJsErrorEvent = function omnishippingJsErrorEvent(_ref3) {
+  var error = _ref3.error,
+      componentStack = _ref3.componentStack,
+      errorId = _ref3.errorId,
+      reduxState = _ref3.reduxState;
+  return function (dispatch, getState) {
+    dispatch(omnishippingJsError(error, componentStack, errorId));
+    var evidenceHash = sendEvidence(reduxState);
+    var accountName = getState().accountInfo.accountName;
+    logSplunk({
+      level: _constants__WEBPACK_IMPORTED_MODULE_4__["CRITICAL"],
+      type: _constants__WEBPACK_IMPORTED_MODULE_4__["ERROR"],
+      workflowType: _constants__WEBPACK_IMPORTED_MODULE_4__["SHIPPING"],
+      workflowInstance: 'js-error',
+      account: accountName,
+      event: {
+        errorMessage: error.message,
+        errorStack: error.stack,
+        componentStack: componentStack,
+        errorId: errorId,
+        evidenceHash: evidenceHash,
+        orderFormId: window.vtexjs && window.vtexjs.checkout && window.vtexjs.checkout.orderForm && window.vtexjs.checkout.orderForm.orderFormId,
+        version: getShippingManagerVersion()
+      }
+    });
+    log({
+      name: 'omnishippingJsError',
+      data: {
+        errorMessage: error.message,
+        errorStack: error.stack,
+        componentStack: componentStack,
+        errorId: errorId,
+        evidenceHash: evidenceHash
+      }
+    });
+  };
+};
+var omnishippingPageView = function omnishippingPageView() {
+  return function (dispatch, getState) {
+    var accountName = getState().accountInfo.accountName;
+    dispatch(omnishippingPageViewEvent(getShippingManagerVersion()));
+    log({
+      name: 'omnishippingVersion',
+      data: {
+        omnishippingVersion: getShippingManagerVersion(),
+        hasShippingPreview: !!getShippingPreviewVersion()
+      }
+    });
+    logSplunk({
+      level: _constants__WEBPACK_IMPORTED_MODULE_4__["IMPORTANT"],
+      type: _constants__WEBPACK_IMPORTED_MODULE_4__["INFO"],
+      workflowType: _constants__WEBPACK_IMPORTED_MODULE_4__["SHIPPING"],
+      workflowInstance: 'omnishipping-pageview',
+      account: accountName,
+      event: {
+        version: getShippingManagerVersion(),
+        omnishippingVersion: getOmnishippingVersion(),
+        shippingPreviewVersion: getShippingPreviewVersion(),
+        addressFormVersion: getAddressFormVersion(),
+        pickupPointsModalVersion: getPickupPointsModalVersion()
+      }
+    });
+  };
+};
+var omnishippingAPIErrorEvent = function omnishippingAPIErrorEvent(_ref4) {
+  var apiMessage = _ref4.apiMessage,
+      apiRoute = _ref4.apiRoute,
+      errorMessage = _ref4.errorMessage,
+      errorStatus = _ref4.errorStatus,
+      operationId = _ref4.operationId,
+      reduxState = _ref4.reduxState,
+      requestPayload = _ref4.requestPayload,
+      url = _ref4.url;
+  return function (dispatch, getState) {
+    dispatch(omnishippingAPIError(apiMessage, apiRoute, errorMessage, errorStatus, operationId, reduxState, requestPayload, url));
+    var evidenceHash = sendEvidence(reduxState);
+    var accountName = getState().accountInfo.accountName;
+    logSplunk({
+      level: _constants__WEBPACK_IMPORTED_MODULE_4__["CRITICAL"],
+      type: _constants__WEBPACK_IMPORTED_MODULE_4__["ERROR"],
+      workflowType: _constants__WEBPACK_IMPORTED_MODULE_4__["SHIPPING"],
+      workflowInstance: 'omnishipping-api-error',
+      account: accountName,
+      event: {
+        apiMessage: apiMessage,
+        apiRoute: apiRoute,
+        errorMessage: errorMessage,
+        errorStatus: errorStatus,
+        operationId: operationId,
+        evidenceHash: evidenceHash,
+        requestPayload: requestPayload,
+        url: url,
+        version: getShippingManagerVersion()
+      }
+    });
+    log({
+      name: 'omnishippingAPIError',
+      data: {
+        apiMessage: apiMessage,
+        apiRoute: apiRoute,
+        errorStatus: errorStatus,
+        errorMessage: errorMessage,
+        operationId: operationId,
+        evidenceHash: evidenceHash,
+        requestPayload: requestPayload,
+        url: url
+      }
+    });
+  };
+};
+var shippingStatsEvent = function shippingStatsEvent() {
+  return function (dispatch, getState) {
+    var state = getState();
+    var accountName = state.accountInfo.accountName;
+    var packages = Object(_selectors_delivery_selectors__WEBPACK_IMPORTED_MODULE_3__["getAllSelectedPackages"])(state);
+    var activeDeliveryOption = state.delivery.activeDeliveryOption;
+    var hasCheapestOption = !!state.delivery[_constants__WEBPACK_IMPORTED_MODULE_4__["CHEAPEST"]];
+    var hasFastestOption = !!state.delivery[_constants__WEBPACK_IMPORTED_MODULE_4__["FASTEST"]];
+    dispatch(shippingStats());
+    lodash_map__WEBPACK_IMPORTED_MODULE_0___default()(packages, function (liPackage) {
+      logSplunk({
+        level: _constants__WEBPACK_IMPORTED_MODULE_4__["IMPORTANT"],
+        type: _constants__WEBPACK_IMPORTED_MODULE_4__["INFO"],
+        workflowType: _constants__WEBPACK_IMPORTED_MODULE_4__["SHIPPING"],
+        workflowInstance: 'shipping-stats',
+        account: accountName,
+        event: {
+          hasPickupAndChosePickup: Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isPickup"])(liPackage),
+          selectedDeliveryChannel: liPackage.deliveryChannel,
+          packages: packages.length,
+          pickupSelectionSource: Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isPickup"])(liPackage) ? 'map' : null,
+          chosenOption: activeDeliveryOption,
+          isSingleOption: !(hasCheapestOption && hasFastestOption),
+          hasChosenScheduledDelivery: liPackage.deliveryWindow !== null,
+          version: getShippingManagerVersion()
+        }
+      });
+      log({
+        name: 'shippingStats',
+        data: {
+          env: isEnv(_constants__WEBPACK_IMPORTED_MODULE_4__["VTEXBETA"]) ? _constants__WEBPACK_IMPORTED_MODULE_4__["VTEXBETA"] : _constants__WEBPACK_IMPORTED_MODULE_4__["VTEXSTABLE"],
+          hasPickupAndChosePickup: Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isPickup"])(liPackage),
+          selectedDeliveryChannel: liPackage.deliveryChannel,
+          packages: packages.length,
+          pickupSelectionSource: Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_5__["isPickup"])(liPackage) ? 'map' : null,
+          chosenOption: activeDeliveryOption,
+          isSingleOption: !(hasCheapestOption && hasFastestOption),
+          hasChosenScheduledDelivery: liPackage.deliveryWindow !== null
+        }
+      });
+    });
+  };
+};
+var actionCreators = {
+  omnishippingJsError: omnishippingJsError,
+  omnishippingAPIError: omnishippingAPIError,
+  hasPickup: hasPickup,
+  selectedPickupTab: selectedPickupTab,
+  searchedPickupAddress: searchedPickupAddress,
+  omnishippingPageViewEvent: omnishippingPageViewEvent,
+  shippingStats: shippingStats,
+  selectedPickupEvent: selectedPickupEvent,
+  searchedPickupAddressEvent: searchedPickupAddressEvent,
+  geolocationAddressHasNoSlaEvent: geolocationAddressHasNoSlaEvent,
+  omnishippingJsErrorEvent: omnishippingJsErrorEvent,
+  omnishippingPageView: omnishippingPageView,
+  omnishippingAPIErrorEvent: omnishippingAPIErrorEvent,
+  shippingStatsEvent: shippingStatsEvent
+};
+
+/***/ }),
+
+/***/ "./react/actions/order-form-actions.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeActiveTabAction", function() { return changeActiveTabAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectScheduledDelivery", function() { return selectScheduledDelivery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeActiveSLAOptionAction", function() { return changeActiveSLAOptionAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeActiveDeliveryPackageAction", function() { return changeActiveDeliveryPackageAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectDeliveryWindowAction", function() { return selectDeliveryWindowAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectDeliveryWindow", function() { return selectDeliveryWindow; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateSimulationOptions", function() { return updateSimulationOptions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectAddressItemAction", function() { return selectAddressItemAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectAddressItem", function() { return selectAddressItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toggleScheduledDelivery", function() { return toggleScheduledDelivery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateShippingDataRequest", function() { return updateShippingDataRequest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateShippingDataFailure", function() { return updateShippingDataFailure; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "simulateShippingDataFailure", function() { return simulateShippingDataFailure; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "simulateShippingDataSuccess", function() { return simulateShippingDataSuccess; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "simulateShippingDataRequest", function() { return simulateShippingDataRequest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeItemsRequest", function() { return removeItemsRequest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateShippingDataAction", function() { return updateShippingDataAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateShippingData", function() { return updateShippingData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeItemsFromCart", function() { return removeItemsFromCart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeActiveTab", function() { return changeActiveTab; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeActiveSLAOption", function() { return changeActiveSLAOption; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeActiveDeliveryPackage", function() { return changeActiveDeliveryPackage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "simulateShippingData", function() { return simulateShippingData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateOrderForm", function() { return updateOrderForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getLogisticsInfoForRequest", function() { return getLogisticsInfoForRequest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actionCreators", function() { return actionCreators; });
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/get.js");
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_isEqual__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/isEqual.js");
+/* harmony import */ var lodash_isEqual__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_isEqual__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/omit.js");
+/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_omit__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("vtex.address-form/helpers");
+/* harmony import */ var vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/actions/action-types.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./react/constants/index.js");
+/* harmony import */ var _utils_OrderFormUtils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./react/utils/OrderFormUtils.js");
+/* harmony import */ var _utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./react/utils/DeliveryChannelsUtils.js");
+/* harmony import */ var _selectors_order_form_selectors__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./react/selectors/order-form-selectors.js");
+/* harmony import */ var _metric_actions__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./react/actions/metric-actions.js");
+/* harmony import */ var _selectors_delivery_selectors__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./react/selectors/delivery-selectors.js");
+/* harmony import */ var _component_activity_actions__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("./react/actions/component-activity-actions.js");
+/* harmony import */ var _address_form_actions__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__("./react/actions/address-form-actions.ts");
+/* harmony import */ var _shipping_preview_actions__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__("./react/actions/shipping-preview-actions.js");
+/* harmony import */ var _selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__("./react/selectors/address-form-selectors.ts");
+/* harmony import */ var _utils_SlasUtils__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__("./react/utils/SlasUtils.js");
+/* harmony import */ var _utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__("./react/utils/LocalStorageUtils.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var removeValidation = vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_3___default.a.removeValidation;
+var _window = window,
+    $ = _window.$; // ACTIONS
+
+var changeActiveTabAction = function changeActiveTabAction(_ref) {
+  var channel = _ref.channel,
+      address = _ref.address,
+      searchAddress = _ref.searchAddress,
+      pickup = _ref.pickup;
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["CHANGE_ACTIVE_TAB"],
+    channel: channel,
+    address: address,
+    searchAddress: searchAddress,
+    pickup: pickup
+  };
+};
+var selectScheduledDelivery = function selectScheduledDelivery(isScheduledDeliveryActive) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["SELECT_SCHEDULED_DELIVERY"],
+    isScheduledDeliveryActive: isScheduledDeliveryActive
+  };
+};
+var changeActiveSLAOptionAction = function changeActiveSLAOptionAction(_ref2) {
+  var slaOption = _ref2.slaOption,
+      logisticsInfoIndex = _ref2.logisticsInfoIndex,
+      sellerId = _ref2.sellerId;
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["CHANGE_ACTIVE_SLA_OPTION"],
+    slaOption: slaOption,
+    logisticsInfoIndex: logisticsInfoIndex,
+    sellerId: sellerId
+  };
+};
+var changeActiveDeliveryPackageAction = function changeActiveDeliveryPackageAction(id) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["CHANGE_ACTIVE_DELIVERY_PACKAGE"],
+    id: id
+  };
+};
+var selectDeliveryWindowAction = function selectDeliveryWindowAction(slaOption, deliveryWindow) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["SELECT_DELIVERY_WINDOW"],
+    slaOption: slaOption,
+    deliveryWindow: deliveryWindow
+  };
+};
+var selectDeliveryWindow = function selectDeliveryWindow(slaOption, deliveryWindow) {
+  return function (dispatch, getState) {
+    dispatch(selectDeliveryWindowAction(slaOption, deliveryWindow));
+    var state = getState();
+
+    var shippingData = _objectSpread(_objectSpread({}, state.orderForm.shippingData), {}, {
+      logisticsInfo: state.delivery[state.delivery.activeDeliveryOption]
+    });
+
+    dispatch(updateShippingData(shippingData, false));
+  };
+};
+
+var updateOrderFormAction = function updateOrderFormAction(_ref3) {
+  var orderForm = _ref3.orderForm,
+      address = _ref3.address,
+      searchAddress = _ref3.searchAddress,
+      selectedRules = _ref3.selectedRules;
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["UPDATE_ORDERFORM"],
+    orderForm: orderForm,
+    address: address,
+    searchAddress: searchAddress,
+    selectedRules: selectedRules
+  };
+};
+
+var updateSimulationOptions = function updateSimulationOptions(_ref4) {
+  var cheapestOption = _ref4.cheapestOption,
+      fastestOption = _ref4.fastestOption,
+      combinedOption = _ref4.combinedOption,
+      selectedOption = _ref4.selectedOption,
+      selectedRules = _ref4.selectedRules;
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["UPDATE_SIMULATION_OPTIONS"],
+    cheapestOption: cheapestOption,
+    fastestOption: fastestOption,
+    combinedOption: combinedOption,
+    selectedOption: selectedOption,
+    selectedRules: selectedRules
+  };
+};
+var selectAddressItemAction = function selectAddressItemAction(selectedAddress) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["SELECT_ADDRESS_ITEM"],
+    selectedAddress: selectedAddress
+  };
+};
+var selectAddressItem = function selectAddressItem(selectedAddress) {
+  var alreadySelected = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  return function (dispatch, getState) {
+    dispatch(selectAddressItemAction(selectedAddress));
+
+    if (alreadySelected) {
+      return;
+    }
+
+    var shippingData = getState().orderForm.shippingData;
+    dispatch(updateShippingData(shippingData));
+  };
+};
+var toggleScheduledDelivery = function toggleScheduledDelivery(status) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["TOGGLE_SCHEDULED_DELIVERY"],
+    status: status
+  };
+};
+var updateShippingDataRequest = function updateShippingDataRequest() {
+  var loading = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+  var shippingData = arguments.length > 1 ? arguments[1] : undefined;
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["UPDATE_SHIPPING_REQUEST"],
+    loading: loading,
+    shippingData: shippingData
+  };
+};
+var updateShippingDataFailure = function updateShippingDataFailure(error) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["UPDATE_SHIPPING_FAILURE"],
+    error: error
+  };
+};
+var simulateShippingDataFailure = function simulateShippingDataFailure(error) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["SIMULATE_SHIPPING_FAILURE"],
+    error: error
+  };
+};
+var simulateShippingDataSuccess = function simulateShippingDataSuccess() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["SIMULATE_SHIPPING_SUCCESS"]
+  };
+};
+var simulateShippingDataRequest = function simulateShippingDataRequest() {
+  var loading = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["SIMULATE_SHIPPING_REQUEST"],
+    loading: loading
+  };
+};
+var removeItemsRequest = function removeItemsRequest() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["REMOVE_ITEMS_REQUEST"]
+  };
+};
+var updateShippingDataAction = function updateShippingDataAction(shippingData) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_4__["UPDATE_SHIPPING_DATA"],
+    shippingData: shippingData
+  };
+}; // THUNKS
+
+var updateShippingData = function updateShippingData(shippingData) {
+  var loading = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  var shouldHaveSelectedAddresses = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+  var isPickupSearch = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+  var addressId = arguments.length > 4 ? arguments[4] : undefined;
+  return function (dispatch, getState) {
+    var _selectedAddresses;
+
+    dispatch(Object(_shipping_preview_actions__WEBPACK_IMPORTED_MODULE_13__["setIsLoadingUpdate"])(loading));
+    var state = getState();
+    var canEditData = state.orderForm && state.orderForm.canEditData;
+    var items = Object(_selectors_order_form_selectors__WEBPACK_IMPORTED_MODULE_8__["getOrderFormItems"])(state);
+    var deliveryAddress = (Object(_selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_14__["getAddresses"])(state) || {})[addressId] || Object(_selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_14__["getAddress"])(state);
+    var searchAddress = Object(_selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_14__["getSearchAddress"])(state);
+    var addressForm = state.addressForm;
+    searchAddress = searchAddress && _objectSpread(_objectSpread({}, searchAddress), {}, {
+      receiverName: canEditData && !!searchAddress ? searchAddress.receiverName : null
+    });
+    var logisticsInfo = isPickupSearch ? shippingData.logisticsInfo && shippingData.logisticsInfo.map(function (li) {
+      if (!li.deliveryChannels.some(function (channel) {
+        return channel.id === _constants__WEBPACK_IMPORTED_MODULE_5__["PICKUP_IN_STORE"];
+      })) {
+        return li;
+      }
+
+      return _objectSpread(_objectSpread({}, li), {}, {
+        addressId: searchAddress && searchAddress.addressId,
+        selectedDeliveryChannel: _constants__WEBPACK_IMPORTED_MODULE_5__["PICKUP_IN_STORE"],
+        selectedSla: null
+      });
+    }) : shippingData.logisticsInfo;
+    var selectedAddresses = Object(_utils_OrderFormUtils__WEBPACK_IMPORTED_MODULE_6__["filterSelectedAddresses"])({
+      canEditData: canEditData,
+      deliveryAddress: deliveryAddress,
+      searchAddress: searchAddress
+    });
+    var logisticsInfoForRequest = getLogisticsInfoForRequest({
+      addressForm: addressForm,
+      deliveryAddress: deliveryAddress,
+      searchAddress: searchAddress,
+      items: items,
+      logisticsInfo: logisticsInfo
+    });
+
+    if (((_selectedAddresses = selectedAddresses) === null || _selectedAddresses === void 0 ? void 0 : _selectedAddresses.length) > 1) {
+      var _someUsedSelectedAddr;
+
+      var someUsedSelectedAddress = selectedAddresses.find(function (item) {
+        return logisticsInfoForRequest.some(function (li) {
+          return li.addressId === item.addressId;
+        });
+      });
+      var countryToKeep = (_someUsedSelectedAddr = someUsedSelectedAddress === null || someUsedSelectedAddress === void 0 ? void 0 : someUsedSelectedAddress.country) !== null && _someUsedSelectedAddr !== void 0 ? _someUsedSelectedAddr : selectedAddresses[0].country;
+      selectedAddresses = selectedAddresses.filter(function (addressItem) {
+        return addressItem.country === countryToKeep;
+      });
+    }
+
+    var requestPayload = _objectSpread({
+      logisticsInfo: logisticsInfoForRequest,
+      clearAddressIfPostalCodeNotFound: false
+    }, shouldHaveSelectedAddresses ? {
+      selectedAddresses: selectedAddresses
+    } : {});
+
+    dispatch(updateShippingDataRequest(loading, requestPayload));
+    return window.vtexjs && window.vtexjs.checkout && window.vtexjs.checkout.sendAttachment('shippingData', requestPayload).done(function (_ref5) {
+      var shippingData = _ref5.shippingData;
+      dispatch(updateShippingDataAction(shippingData));
+    }).fail(function (response, status, error) {
+      dispatch(updateShippingDataFailure(error));
+
+      if (!error || !status || response.statusText === 'abort' || status === 'abort') {
+        return;
+      }
+
+      var errorObj = response.responseText && Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_16__["safelyParseJSON"])(response.responseText);
+      var errorEventObject = {
+        apiMessage: lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(errorObj, 'error.message'),
+        apiRoute: 'sendAttachment',
+        errorMessage: error,
+        errorStatus: status,
+        operationId: errorObj && errorObj.operationId,
+        reduxState: state && JSON.stringify(state),
+        requestPayload: JSON.stringify(requestPayload),
+        url: window.location.href
+      };
+      $(window).trigger('checkout-ui-api-error', errorEventObject);
+      dispatch(Object(_metric_actions__WEBPACK_IMPORTED_MODULE_9__["omnishippingAPIErrorEvent"])(errorEventObject));
+    }).always(function () {
+      return dispatch(Object(_shipping_preview_actions__WEBPACK_IMPORTED_MODULE_13__["setIsLoadingUpdate"])(false));
+    });
+  };
+};
+var removeItemsFromCart = function removeItemsFromCart(_ref6) {
+  var items = _ref6.items;
+  return function (dispatch) {
+    dispatch(removeItemsRequest());
+
+    if (items) {
+      return lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(window, 'vtexjs.checkout') && window.vtexjs.checkout.removeItems(items.map(function (item) {
+        return {
+          index: item.itemIndex,
+          quantity: 0
+        };
+      }));
+    }
+  };
+};
+var changeActiveTab = function changeActiveTab(_ref7) {
+  var channel = _ref7.channel,
+      _ref7$shouldUpdate = _ref7.shouldUpdate,
+      shouldUpdate = _ref7$shouldUpdate === void 0 ? true : _ref7$shouldUpdate,
+      _ref7$loading = _ref7.loading,
+      loading = _ref7$loading === void 0 ? true : _ref7$loading;
+  return function (dispatch, getState) {
+    var state = getState();
+    var address = Object(_selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_14__["getAddress"])(state);
+    var searchAddress = Object(_selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_14__["getSearchAddress"])(state);
+    dispatch(changeActiveTabAction({
+      channel: channel,
+      address: address,
+      searchAddress: searchAddress,
+      pickup: state.pickup
+    }));
+
+    if (shouldUpdate) {
+      dispatch(Object(_shipping_preview_actions__WEBPACK_IMPORTED_MODULE_13__["setIsLoadingTabChange"])(true));
+      state = getState();
+      var activeDeliveryPackage = Object(_selectors_delivery_selectors__WEBPACK_IMPORTED_MODULE_10__["getSelectedLeanOption"])(state);
+      var isDeliveryAddressPostalCodeValid = address && address.postalCode && address.postalCode.valid;
+      var isSearchAddressPostalCodeValid = searchAddress && searchAddress.postalCode && searchAddress.postalCode.value && searchAddress.postalCode.value.length > 0;
+      var isSearchAddressHasGeocoordinates = searchAddress && searchAddress.geoCoordinates && searchAddress.geoCoordinates.value && searchAddress.geoCoordinates.value.length > 0;
+      var shouldHaveShippingData = (Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_7__["isDelivery"])(channel) ? isDeliveryAddressPostalCodeValid : isSearchAddressHasGeocoordinates || isSearchAddressPostalCodeValid) || state.orderForm && !state.orderForm.canEditData;
+      dispatch(updateShippingData(_objectSpread(_objectSpread({}, shouldHaveShippingData ? state.orderForm && state.orderForm.shippingData : {}), {}, {
+        logisticsInfo: activeDeliveryPackage
+      }), loading, shouldHaveShippingData, false, Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_7__["isDelivery"])(channel) ? Object(_selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_14__["getLastResidentialId"])(state) : undefined)).always(function () {
+        return dispatch(Object(_shipping_preview_actions__WEBPACK_IMPORTED_MODULE_13__["setIsLoadingTabChange"])(false));
+      });
+    }
+  };
+};
+var changeActiveSLAOption = function changeActiveSLAOption(_ref8) {
+  var slaOption = _ref8.slaOption,
+      logisticsInfoIndex = _ref8.logisticsInfoIndex,
+      sellerId = _ref8.sellerId;
+  return function (dispatch, getState) {
+    dispatch(changeActiveSLAOptionAction({
+      slaOption: slaOption,
+      logisticsInfoIndex: logisticsInfoIndex,
+      sellerId: sellerId
+    }));
+    var state = getState();
+
+    var shippingData = _objectSpread(_objectSpread({}, state.orderForm.shippingData), {}, {
+      logisticsInfo: Object(_selectors_delivery_selectors__WEBPACK_IMPORTED_MODULE_10__["getSelectedLeanOption"])(state)
+    });
+
+    dispatch(updateShippingData(shippingData, false));
+  };
+};
+var changeActiveDeliveryPackage = function changeActiveDeliveryPackage(id) {
+  return function (dispatch, getState) {
+    dispatch(Object(_component_activity_actions__WEBPACK_IMPORTED_MODULE_11__["setAditionalShippingData"])({
+      selectedLeanShippingOption: id
+    }));
+    dispatch(changeActiveDeliveryPackageAction(id));
+    Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_16__["setItem"])('activeDeliveryOption', id);
+    var state = getState();
+
+    var shippingData = _objectSpread(_objectSpread({}, state.orderForm.shippingData), {}, {
+      logisticsInfo: Object(_selectors_delivery_selectors__WEBPACK_IMPORTED_MODULE_10__["getSelectedLeanOption"])(state)
+    });
+
+    dispatch(updateShippingData(shippingData, false));
+  };
+};
+
+function checkIfAllAddressesOk(addresses) {
+  return addresses.filter(function (address) {
+    return address.postalCode || address.geoCoordinates && address.geoCoordinates.length;
+  }).length === addresses.length;
+}
+
+var simulateShippingData = function simulateShippingData(_ref9) {
+  var logisticsInfo = _ref9.logisticsInfo,
+      loading = _ref9.loading,
+      _ref9$shouldSimulateR = _ref9.shouldSimulateRequest,
+      shouldSimulateRequest = _ref9$shouldSimulateR === void 0 ? true : _ref9$shouldSimulateR,
+      isEqual = _ref9.isEqual;
+  return function (dispatch, getState) {
+    if (!logisticsInfo) return;
+    var state = getState();
+    var deliveryAddress = Object(_selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_14__["getAddress"])(state);
+    var searchAddress = Object(_selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_14__["getSearchAddress"])(state);
+    var items = Object(_selectors_order_form_selectors__WEBPACK_IMPORTED_MODULE_8__["getOrderFormItems"])(state);
+    var hasNoItems = items && items.length === 0;
+    var validAddresses = checkIfAllAddressesOk(state.orderForm.shippingData.selectedAddresses);
+
+    if (state.orderForm.shippingData && !validAddresses || hasNoItems || state.componentActivity.isOmniShippingCompleted && isEqual) {
+      return;
+    }
+
+    if (shouldSimulateRequest) {
+      dispatch(simulateShippingDataRequest(loading));
+    }
+
+    var localLogisticsInfo = getLogisticsInfoForRequest({
+      items: items,
+      logisticsInfo: logisticsInfo,
+      deliveryAddress: deliveryAddress,
+      searchAddress: searchAddress,
+      isSimulation: true
+    });
+    var selectedAddresses = Object(_utils_OrderFormUtils__WEBPACK_IMPORTED_MODULE_6__["filterSelectedAddresses"])({
+      canEditData: state.orderForm && state.orderForm.canEditData,
+      deliveryAddress: deliveryAddress,
+      searchAddress: searchAddress
+    });
+    var dataRequest = {
+      shippingData: _objectSpread({
+        logisticsInfo: logisticsInfo ? localLogisticsInfo : []
+      }, state.orderForm && state.orderForm.canEditData ? {
+        selectedAddresses: selectedAddresses
+      } : {}),
+      allowedOutdatedData: ['paymentData'],
+      orderFormId: state.orderForm.orderFormId
+    };
+    var salesChannel = state.orderForm.salesChannel || '1';
+    return $.ajax({
+      url: "".concat(_constants__WEBPACK_IMPORTED_MODULE_5__["HOST_URL"], "/api/checkout/pub/orderForms/simulation?sc=").concat(salesChannel, "&rnbBehavior=0"),
+      type: 'POST',
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'json',
+      data: JSON.stringify(dataRequest),
+      error: function error(response, status, _error) {
+        if (!_error) return;
+        var errorObj = response.responseText && Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_16__["safelyParseJSON"])(response.responseText);
+        var errorEventObject = {
+          apiMessage: lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(errorObj, 'error.message'),
+          apiRoute: 'simulation',
+          errorMessage: _error,
+          errorStatus: response.status,
+          operationId: errorObj && errorObj.operationId,
+          reduxState: state && JSON.stringify(state),
+          requestPayload: JSON.stringify(dataRequest),
+          url: window.location.href
+        };
+        $(window).trigger('checkout-ui-api-error', errorEventObject);
+        dispatch(Object(_metric_actions__WEBPACK_IMPORTED_MODULE_9__["omnishippingAPIErrorEvent"])(errorEventObject));
+      }
+    });
+  };
+};
+
+function isLogisticsInfoTheSameAsActiveOption(getState, orderForm) {
+  var _getState = getState(),
+      delivery = _getState.delivery;
+
+  var activeOptionLogisticsInfo = delivery[delivery.activeDeliveryOption];
+
+  if (activeOptionLogisticsInfo && activeOptionLogisticsInfo.length > 0) {
+    var activeOptionLogisticsInfoUpdated = activeOptionLogisticsInfo.map(function (option) {
+      return lodash_omit__WEBPACK_IMPORTED_MODULE_2___default()(option, ['quantity']);
+    });
+    return Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_15__["isLogisticsInfoEqual"])(orderForm.shippingData.logisticsInfo, activeOptionLogisticsInfoUpdated);
+  }
+
+  return false;
+}
+
+function changedCanEditData(getState, orderForm) {
+  var _getState2 = getState(),
+      stateOrderForm = _getState2.orderForm;
+
+  return stateOrderForm && orderForm && stateOrderForm.canEditData !== orderForm.canEditData;
+}
+
+function shouldValidatePostalCode(address, state) {
+  return address && lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(address, 'postalCode.value') && !state.componentActivity.isOmnishippingCompleted;
+}
+
+function simulateShippingDataOptions(_ref10) {
+  var state = _ref10.state,
+      dispatch = _ref10.dispatch,
+      loading = _ref10.loading,
+      isEqual = _ref10.isEqual,
+      selectedRules = _ref10.selectedRules;
+  return $.when(state.delivery[_constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"]] && dispatch(simulateShippingData({
+    logisticsInfo: state.delivery[_constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"]],
+    loading: loading,
+    shouldSimulateRequest: true,
+    isEqual: isEqual
+  })), state.delivery[_constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"]] && dispatch(simulateShippingData({
+    logisticsInfo: state.delivery[_constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"]],
+    loading: loading,
+    shouldSimulateRequest: true,
+    isEqual: isEqual
+  })), state.delivery[_constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"]] && dispatch(simulateShippingData({
+    logisticsInfo: state.delivery[_constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"]],
+    loading: loading,
+    shouldSimulateRequest: true,
+    isEqual: isEqual
+  }))).done(function (cheapestData, fastestData, combinedData) {
+    var correctCheapest = cheapestData && cheapestData[0].logisticsInfo;
+    var correctFastest = fastestData && fastestData[0].logisticsInfo;
+    var correctCombined = combinedData && combinedData[0].logisticsInfo;
+    var selectedOption = state.delivery[state.delivery.activeDeliveryOption];
+    dispatch(simulateShippingDataSuccess());
+
+    if (correctCheapest || correctFastest || correctCombined) {
+      dispatch(updateSimulationOptions({
+        cheapestOption: correctCheapest,
+        fastestOption: correctFastest,
+        combinedOption: correctCombined,
+        selectedOption: selectedOption,
+        selectedRules: selectedRules
+      }));
+    }
+  }).fail(function (error) {
+    return dispatch(simulateShippingDataFailure(error));
+  });
+}
+
+var updateOrderForm = function updateOrderForm(_ref11) {
+  var orderForm = _ref11.orderForm;
+  var shouldSimulate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  var rules = arguments.length > 2 ? arguments[2] : undefined;
+  return function (dispatch, getState) {
+    var state = getState();
+    var _state = state,
+        delivery = _state.delivery;
+    var searchAddress = Object(_selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_14__["getSearchAddress"])(state);
+    var address = Object(_selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_14__["getAddress"])(state);
+    var showSlasList = state.delivery.showSlasList;
+    var geolocation = state.accountInfo.geolocation;
+    var clientProfileIsEqual = lodash_isEqual__WEBPACK_IMPORTED_MODULE_1___default()(orderForm.userProfileId, state.orderForm.userProfileId);
+    var isLogisticsInfoEqual = isLogisticsInfoTheSameAsActiveOption(getState, orderForm);
+
+    if (isLogisticsInfoEqual && clientProfileIsEqual) {
+      if (changedCanEditData(getState, orderForm)) {
+        // When login is made to change data, should update orderForm
+        dispatch(updateOrderFormAction({
+          orderForm: orderForm,
+          selectedRules: rules
+        }));
+      }
+
+      dispatch(simulateShippingDataSuccess());
+      dispatch(updateSimulationOptions({
+        cheapestOption: delivery[_constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"]],
+        fastestOption: delivery[_constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"]],
+        combinedOption: delivery[_constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"]],
+        selectedOption: delivery[delivery.activeDeliveryOption],
+        selectedRules: rules
+      }));
+      state = getState();
+      address = Object(_selectors_address_form_selectors__WEBPACK_IMPORTED_MODULE_14__["getAddress"])(state);
+
+      if (shouldValidatePostalCode(address, state)) {
+        dispatch(Object(_address_form_actions__WEBPACK_IMPORTED_MODULE_12__["validatePostalCode"])(rules, geolocation));
+        dispatch(Object(_address_form_actions__WEBPACK_IMPORTED_MODULE_12__["validateAddressForm"])(rules, geolocation));
+      }
+
+      return;
+    }
+
+    dispatch(updateOrderFormAction({
+      orderForm: orderForm,
+      address: address,
+      searchAddress: searchAddress,
+      selectedRules: rules
+    }));
+    var updatedState = getState();
+    var logisticsInfo = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(orderForm, 'shippingData.logisticsInfo');
+    var showSlasListAndSlasEqual = showSlasList && Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_15__["areAllDeliverySlasEqual"])(logisticsInfo);
+    var isSelectedDeliverySLAEqual = Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_15__["isSelectedDeliverySLAFromStateEqualToOrderForm"])(logisticsInfo, updatedState.delivery, updatedState.delivery.activeDeliveryOption);
+
+    if (updatedState.componentActivity.isOmniShippingCompleted && !clientProfileIsEqual || !isSelectedDeliverySLAEqual) {
+      dispatch(updateShippingData(_objectSpread(_objectSpread({}, orderForm.shippingData), {}, {
+        logisticsInfo: updatedState.delivery[updatedState.delivery.activeDeliveryOption]
+      })));
+    }
+
+    if (logisticsInfo && !!logisticsInfo.some(function (li) {
+      return Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_15__["hasSLAs"])(li);
+    }) && shouldSimulate && (!updatedState.componentActivity.isOmniShippingCompleted || !isLogisticsInfoEqual) && !showSlasListAndSlasEqual) {
+      dispatch(Object(_shipping_preview_actions__WEBPACK_IMPORTED_MODULE_13__["setIsLoadingResult"])(true));
+      simulateShippingDataOptions({
+        state: updatedState,
+        dispatch: dispatch,
+        loading: true,
+        isEqual: isLogisticsInfoEqual,
+        selectedRules: rules
+      }).always(function () {
+        return dispatch(Object(_shipping_preview_actions__WEBPACK_IMPORTED_MODULE_13__["setIsLoadingResult"])(false));
+      });
+    } else {
+      var _updatedState$orderFo, _updatedState$orderFo2;
+
+      updatedState = getState();
+      var isActiveDeliveryChannelPickup = updatedState.componentActivity.activeDeliveryChannel === _constants__WEBPACK_IMPORTED_MODULE_5__["PICKUP_IN_STORE"];
+      var remoteLogisticsInfo = (_updatedState$orderFo = updatedState.orderForm) === null || _updatedState$orderFo === void 0 ? void 0 : (_updatedState$orderFo2 = _updatedState$orderFo.shippingData) === null || _updatedState$orderFo2 === void 0 ? void 0 : _updatedState$orderFo2.logisticsInfo;
+      var localLogisticsInfo = updatedState.delivery[_constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"]]; // Check if the logisticsInfo from API is updated with the correct delivery channel
+      // See https://github.com/vtex/shipping-manager/pull/78/
+
+      var selectedOption = isActiveDeliveryChannelPickup && (remoteLogisticsInfo === null || remoteLogisticsInfo === void 0 ? void 0 : remoteLogisticsInfo.some(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_7__["isDelivery"])) && (localLogisticsInfo === null || localLogisticsInfo === void 0 ? void 0 : localLogisticsInfo.every(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_7__["isPickup"])) ? localLogisticsInfo : remoteLogisticsInfo;
+      dispatch(updateSimulationOptions({
+        cheapestOption: selectedOption !== null && selectedOption !== void 0 ? selectedOption : localLogisticsInfo,
+        fastestOption: updatedState.delivery[_constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"]],
+        combinedOption: updatedState.delivery[_constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"]],
+        selectedOption: updatedState.delivery[updatedState.delivery.activeDeliveryOption],
+        selectedRules: rules
+      }));
+    }
+
+    dispatch(Object(_address_form_actions__WEBPACK_IMPORTED_MODULE_12__["validatePostalCode"])(rules, geolocation));
+    dispatch(Object(_address_form_actions__WEBPACK_IMPORTED_MODULE_12__["validateAddressForm"])(rules, geolocation));
+  };
+};
+
+function getAddressIdForRequest(deliveryAddress, searchAddress, logisticsInfo) {
+  if (Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_7__["isPickup"])(logisticsInfo) && (deliveryAddress.geoCoordinates || deliveryAddress.postalCode)) {
+    return searchAddress && searchAddress.addressId;
+  }
+
+  if (Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_7__["isDelivery"])(logisticsInfo) && (deliveryAddress.postalCode || deliveryAddress.geoCoordinates.length > 0)) {
+    return deliveryAddress && deliveryAddress.addressId;
+  }
+
+  return null;
+}
+
+function getLogisticsInfoForRequest(_ref12) {
+  var items = _ref12.items,
+      logisticsInfo = _ref12.logisticsInfo,
+      deliveryAddress = _ref12.deliveryAddress,
+      searchAddress = _ref12.searchAddress,
+      _ref12$isSimulation = _ref12.isSimulation,
+      isSimulation = _ref12$isSimulation === void 0 ? false : _ref12$isSimulation,
+      _ref12$canEditData = _ref12.canEditData,
+      canEditData = _ref12$canEditData === void 0 ? false : _ref12$canEditData;
+  var deliveryAddressWithoutValidation = deliveryAddress && removeValidation(deliveryAddress);
+  var searchAddressWithoutValidation = searchAddress && removeValidation(searchAddress);
+  return items.map(function (_, index) {
+    var logisticsInfoByIndex = !!logisticsInfo && logisticsInfo.find(function (li) {
+      return li.itemIndex === index;
+    });
+    var selectedSlaKey = isSimulation ? 'selectedSLAId' : 'selectedSla';
+
+    if (logisticsInfoByIndex) {
+      var deliveryWindowInfo = {
+        deliveryWindow: logisticsInfoByIndex.deliveryWindow
+      };
+      var addressIdForRequest = getAddressIdForRequest(deliveryAddressWithoutValidation, searchAddressWithoutValidation, logisticsInfoByIndex); // Scenarios where profile has an address saved but
+      // since data is masked we don't have geolocation
+      // and maybe country doesn't have postal code
+
+      var addressIdFromDeliveryAddress = !canEditData && Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_7__["isDelivery"])(logisticsInfoByIndex) && deliveryAddressWithoutValidation && deliveryAddressWithoutValidation.addressId;
+      var addressId = addressIdForRequest || addressIdFromDeliveryAddress || null;
+      return _objectSpread(_objectSpread({}, !isSimulation ? deliveryWindowInfo : {}), {}, _defineProperty({
+        addressId: addressId,
+        itemIndex: logisticsInfoByIndex.itemIndex,
+        selectedDeliveryChannel: logisticsInfoByIndex.selectedSla ? logisticsInfoByIndex.selectedDeliveryChannel : null
+      }, selectedSlaKey, logisticsInfoByIndex.selectedSla));
+    }
+
+    return {
+      addressId: deliveryAddressWithoutValidation && deliveryAddressWithoutValidation.addressId,
+      itemIndex: index
+    };
+  });
+}
+var actionCreators = {
+  changeActiveTabAction: changeActiveTabAction,
+  changeActiveTab: changeActiveTab,
+  changeActiveSLAOption: changeActiveSLAOption,
+  changeActiveDeliveryPackage: changeActiveDeliveryPackage,
+  changeActiveSLAOptionAction: changeActiveSLAOptionAction,
+  changeActiveDeliveryPackageAction: changeActiveDeliveryPackageAction,
+  removeItemsRequest: removeItemsRequest,
+  removeItemsFromCart: removeItemsFromCart,
+  selectDeliveryWindowAction: selectDeliveryWindowAction,
+  selectDeliveryWindow: selectDeliveryWindow,
+  selectAddressItemAction: selectAddressItemAction,
+  selectAddressItem: selectAddressItem,
+  selectScheduledDelivery: selectScheduledDelivery,
+  simulateShippingDataFailure: simulateShippingDataFailure,
+  simulateShippingDataSuccess: simulateShippingDataSuccess,
+  simulateShippingDataRequest: simulateShippingDataRequest,
+  simulateShippingData: simulateShippingData,
+  toggleScheduledDelivery: toggleScheduledDelivery,
+  updateShippingDataRequest: updateShippingDataRequest,
+  updateShippingDataFailure: updateShippingDataFailure,
+  updateShippingData: updateShippingData,
+  updateOrderForm: updateOrderForm,
+  updateSimulationOptions: updateSimulationOptions
+};
+
+/***/ }),
+
+/***/ "./react/actions/pickup-actions.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeActivePickupOptions", function() { return changeActivePickupOptions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeActivePickupDetails", function() { return changeActivePickupDetails; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closePickupModal", function() { return closePickupModal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openPickupModal", function() { return openPickupModal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closePickupDetails", function() { return closePickupDetails; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeActivePickupSeller", function() { return changeActivePickupSeller; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasGeolocation", function() { return hasGeolocation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkIfHasDeniedGeolocation", function() { return checkIfHasDeniedGeolocation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actionCreators", function() { return actionCreators; });
+/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./react/actions/action-types.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/constants/index.js");
+
+
+var changeActivePickupOptions = function changeActivePickupOptions(pickupOptions) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["CHANGE_ACTIVE_PICKUP_OPTIONS"],
+    pickupOptions: pickupOptions
+  };
+};
+var changeActivePickupDetails = function changeActivePickupDetails(_ref) {
+  var pickupPoint = _ref.pickupPoint,
+      activePickupPoint = _ref.activePickupPoint,
+      askForGeolocation = _ref.askForGeolocation;
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["CHANGE_ACTIVE_PICKUP_DETAILS"],
+    pickupPoint: pickupPoint,
+    activePickupPoint: activePickupPoint,
+    askForGeolocation: askForGeolocation
+  };
+};
+var closePickupModal = function closePickupModal(_ref2) {
+  var rules = _ref2.rules,
+      activePickupPoint = _ref2.activePickupPoint;
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["CLOSE_PICKUP_MODAL"],
+    rules: rules,
+    activePickupPoint: activePickupPoint
+  };
+};
+var openPickupModal = function openPickupModal(_ref3) {
+  var askForGeolocation = _ref3.askForGeolocation;
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["OPEN_PICKUP_MODAL"],
+    askForGeolocation: askForGeolocation
+  };
+};
+var closePickupDetails = function closePickupDetails() {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["CLOSE_PICKUP_DETAILS"]
+  };
+};
+var changeActivePickupSeller = function changeActivePickupSeller(sellerId) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["CHANGE_ACTIVE_PICKUP_SELLER"],
+    sellerId: sellerId
+  };
+};
+var hasGeolocation = function hasGeolocation(_hasGeolocation) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["HAS_GEOLOCATION"],
+    hasGeolocation: _hasGeolocation
+  };
+};
+var checkIfHasDeniedGeolocation = function checkIfHasDeniedGeolocation() {
+  return function (dispatch) {
+    if (window.vtex && !window.vtex.googleMapsApiKey) {
+      dispatch(hasGeolocation(false));
+      return;
+    }
+
+    if (!navigator.permissions) {
+      dispatch(hasGeolocation(!!navigator.geolocation));
+    } else {
+      navigator.permissions.query({
+        name: 'geolocation'
+      }).then(function (permission) {
+        return dispatch(hasGeolocation(permission.state !== _constants__WEBPACK_IMPORTED_MODULE_1__["DENIED"] || window.location.host.includes(_constants__WEBPACK_IMPORTED_MODULE_1__["VTEXLOCAL"])));
+      });
+    }
+  };
+};
+var actionCreators = {
+  changeActivePickupDetails: changeActivePickupDetails,
+  changeActivePickupOptions: changeActivePickupOptions,
+  changeActivePickupSeller: changeActivePickupSeller,
+  checkIfHasDeniedGeolocation: checkIfHasDeniedGeolocation,
+  closePickupDetails: closePickupDetails,
+  closePickupModal: closePickupModal,
+  hasGeolocation: hasGeolocation,
+  openPickupModal: openPickupModal
+};
+
+/***/ }),
+
+/***/ "./react/actions/shipping-preview-actions.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setShowShippingPreview", function() { return setShowShippingPreview; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setInitialInputState", function() { return setInitialInputState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setIsLoadingResult", function() { return setIsLoadingResult; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setIsLoadingUpdate", function() { return setIsLoadingUpdate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setIsLoadingTabChange", function() { return setIsLoadingTabChange; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setShippingPreviewPickupModal", function() { return setShippingPreviewPickupModal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actionCreators", function() { return actionCreators; });
+/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./react/actions/action-types.js");
+
+var setShowShippingPreview = function setShowShippingPreview(status) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["SET_SHOW_SHIPPING_PREVIEW"],
+    status: status
+  };
+};
+var setInitialInputState = function setInitialInputState(status) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["SET_INITIAL_INPUT_STATE"],
+    status: status
+  };
+};
+var setIsLoadingResult = function setIsLoadingResult(status) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["SET_IS_LOADING_RESULT"],
+    status: status
+  };
+};
+var setIsLoadingUpdate = function setIsLoadingUpdate(status) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["SET_IS_LOADING_UPDATE"],
+    status: status
+  };
+};
+var setIsLoadingTabChange = function setIsLoadingTabChange(status) {
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["SET_IS_LOADING_TAB_CHANGE"],
+    status: status
+  };
+};
+var setShippingPreviewPickupModal = function setShippingPreviewPickupModal(_ref) {
+  var active = _ref.active,
+      askForGeolocation = _ref.askForGeolocation;
+  return {
+    type: _action_types__WEBPACK_IMPORTED_MODULE_0__["SET_SHIPPING_PREVIEW_PICKUP_MODAL"],
+    askForGeolocation: askForGeolocation,
+    active: active
+  };
+};
+var actionCreators = {
+  setShowShippingPreview: setShowShippingPreview,
+  setInitialInputState: setInitialInputState,
+  setIsLoadingResult: setIsLoadingResult,
+  setIsLoadingUpdate: setIsLoadingUpdate,
+  setIsLoadingTabChange: setIsLoadingTabChange,
+  setShippingPreviewPickupModal: setShippingPreviewPickupModal
+};
+
+/***/ }),
+
+/***/ "vtex.address-form/helpers":
+/***/ (function(module, exports) {
+
+module.exports = __RENDER_7_COMPONENTS__['vtex.address-form@3.x/helpers'];
+
+/***/ })
+
+},[["../actions.js","runtime","common"]]]);
+//# sourceMappingURL=actions.js.map

@@ -1,0 +1,191 @@
+(function() {
+  var define, require;
+
+  define = vtex.define || window.define;
+
+  require = vtex.curl || window.require;
+
+  define(['flight/lib/component', 'cart/script/setup/extensions', 'cart/templates/selectGift'], function(defineComponent, extensions, template) {
+    var SelectGift;
+    SelectGift = function() {
+      this.defaultAttrs({
+        locale: 'en-US',
+        data: {
+          selectableGifts: [],
+          showSelectGift: false
+        },
+        selectGiftSelector: '.select-gift'
+      });
+      this.render = function(data) {
+        var _this = this;
+        if (!data) {
+          data = this.attr.data;
+        }
+        _.each(data.selectableGifts, function(selectableGift) {
+          return _.each(selectableGift.availableGifts, function(availableGift, index) {
+            availableGift.imageUrl = availableGift.imageUrl.replace(/http\:|https:/, '');
+            return availableGift.index = index;
+          });
+        });
+        if (!data.showSelectGift) {
+          return this.$node.html('');
+        } else {
+          return this.requireLocale(this.attr.locale, function(translation, locale) {
+            locale = vtex.i18n.getLocale().indexOf(locale) === 0 ? vtex.i18n.getLocale() : locale;
+            if (window.vtex.i18n[locale]) {
+              window.vtex.i18n[locale] = _.extend(translation, window.vtex.i18n[locale]);
+              i18n.addResourceBundle(locale, 'translation', window.vtex.i18n[locale]);
+            } else {
+              i18n.addResourceBundle(locale, 'translation', translation);
+            }
+            return dust.render('selectGift', data, function(err, output) {
+              var translatedOutput;
+              translatedOutput = $(output).i18n();
+              return _this.$node.html(translatedOutput);
+            });
+          });
+        }
+      };
+      this.requireLocale = function(locale, callback) {
+        var _this = this;
+        return require('cart/script/translation/' + locale, function(translation) {
+          return callback(translation, locale);
+        }, function(err) {
+          var lang;
+          if (locale.indexOf('-') !== -1) {
+            lang = locale.slice(0, 2);
+          }
+          if (lang) {
+            return _this.requireLang(lang, callback);
+          } else {
+            return _this.requireFallbackLocale(callback);
+          }
+        });
+      };
+      this.requireLang = function(lang, callback) {
+        var _this = this;
+        return require('cart/script/translation/' + lang, function(translation) {
+          return callback(translation, lang);
+        }, function(err) {
+          return _this.requireFallbackLocale(callback);
+        });
+      };
+      this.requireFallbackLocale = function(callback) {
+        var _this = this;
+        return require('cart/script/translation/en', function(translation) {
+          return callback(translation, 'en');
+        });
+      };
+      this.updateState = function() {
+        return this.attr.data.selectableGifts = _.map(this.attr.data.selectableGifts, function(sg) {
+          var gift, index, _i, _len, _ref;
+          sg.canChoose = {
+            count: 0
+          };
+          sg.currentGifts = {
+            count: 0
+          };
+          sg.canChoose.count = sg.availableQuantity;
+          sg.selectedGifts = [];
+          _ref = sg.availableGifts;
+          for (index = _i = 0, _len = _ref.length; _i < _len; index = ++_i) {
+            gift = _ref[index];
+            if (gift.isSelected) {
+              sg.selectedGifts.push({
+                id: gift.id,
+                seller: gift.seller,
+                index: index
+              });
+              sg.canChoose.count--;
+            }
+          }
+          sg.currentGifts.count = sg.selectedGifts.length;
+          if (sg.selectedGifts.length === 0) {
+            sg.nothingSelected = true;
+          } else {
+            sg.nothingSelected = false;
+          }
+          return sg;
+        });
+      };
+      this.orderFormUpdate = function(ev, data) {
+        var _ref, _ref1;
+        if (data.items == null) {
+          return;
+        }
+        this.attr.data.selectableGifts = data.selectableGifts;
+        this.updateState();
+        if ((data != null ? (_ref = data.selectableGifts) != null ? _ref.length : void 0 : void 0) > 0) {
+          this.attr.data.showSelectGift = true;
+        }
+        if ((data != null ? (_ref1 = data.clientPreferencesData) != null ? _ref1.locale : void 0 : void 0) != null) {
+          this.attr.locale = data.clientPreferencesData.locale;
+        } else {
+          this.attr.locale = window.vtex.i18n.getLocale();
+        }
+        return this.render();
+      };
+      this.changeItemSelection = function(listId, itemId, sellerId, index) {
+        var doneSomething, gift, sg, _i, _len, _ref;
+        sg = _.find(this.attr.data.selectableGifts, function(sg) {
+          return (sg.id + '') === (listId + '');
+        });
+        if (!sg) {
+          console.warn("Something is wrong with SelectGift component.\nPlease, tell VTEX about it!");
+          return null;
+        }
+        _ref = sg.availableGifts;
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          gift = _ref[_i];
+          if (gift.index === index) {
+            if (gift.isSelected) {
+              doneSomething = true;
+              gift.isSelected = false;
+            } else {
+              if (sg.canChoose.count > 0) {
+                doneSomething = true;
+                gift.isSelected = true;
+              }
+            }
+          }
+        }
+        if (doneSomething) {
+          this.updateState();
+          return sg.selectedGifts;
+        } else {
+          return null;
+        }
+      };
+      this.selectGift = function(ev, data) {
+        var elem, index, itemId, listId, selectedGifts, sellerId;
+        elem = data.el;
+        listId = $(elem).data('gift-list-id');
+        index = $(elem).data('item-index');
+        itemId = $(elem).data('item-id');
+        sellerId = $(elem).data('item-seller');
+        selectedGifts = this.changeItemSelection(listId, itemId, sellerId, index);
+        if (!selectedGifts) {
+          return;
+        }
+        vtexjs.checkout.updateSelectableGifts(listId, selectedGifts);
+        return this.render();
+      };
+      this.localeUpdate = function(ev, locale) {
+        this.attr.locale = locale;
+        return this.render();
+      };
+      return this.after('initialize', function() {
+        if (vtexjs.checkout.orderForm != null) {
+          this.orderFormUpdate(null, vtexjs.checkout.orderForm);
+        }
+        this.on(window, 'localeSelected.vtex', this.localeUpdate);
+        this.on(window, 'orderFormUpdated.vtex', this.orderFormUpdate);
+        this.on('click', {
+          'selectGiftSelector': this.selectGift
+        });
+      });
+    };
+    return defineComponent(SelectGift);
+  });
+
+}).call(this);

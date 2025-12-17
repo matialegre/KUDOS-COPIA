@@ -17,9 +17,8 @@
       "flex-layout.row#columnsPdpContainer",
       "flex-layout.row#containerSpecificationMobile",
       "rich-text#title-slider-pdp",
-      "shelf.relatedProducts"
-      // "flex-layout.row#stickyBuyPdp"
-      
+      "shelf.relatedProducts",
+      "support-entry"
     ]
   },
   "flex-layout.row#mobileData": {

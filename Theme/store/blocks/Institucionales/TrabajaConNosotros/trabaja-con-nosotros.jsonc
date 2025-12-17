@@ -3,7 +3,8 @@
     "store.custom#trabaja-con-nosotros": {
     
         "children":[
-            "flex-layout.row#shared-container-trabaja-con-nosotros"
+            "flex-layout.row#shared-container-trabaja-con-nosotros",
+            "support-entry"
         ]
 
     },

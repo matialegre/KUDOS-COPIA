@@ -3,7 +3,8 @@
   "store.custom#sucursales": {
   
       "children":[
-          "flex-layout.row#shared-container-sucursales"
+          "flex-layout.row#shared-container-sucursales",
+          "support-entry"
       ]
 
   },

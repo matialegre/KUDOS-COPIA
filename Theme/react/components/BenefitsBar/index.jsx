@@ -1,86 +1,94 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import styles from './index.css'
 
-const DISPLAY_INTERVAL = 4000
+const DISPLAY_INTERVAL = 5000
 
-const BenefitsBar = ({ benefits: customBenefits, backgroundColor }) => {
+const BenefitsBar = ({ benefits: customBenefits }) => {
   const defaultBenefits = [
     {
       id: 'pago-blanco',
       image: '/arquivos/pago_blanco_2.png',
       alt: 'Medios de pago - logos en blanco',
       href: '/pagos-y-promociones',
-      theme: 'dark'
+      theme: 'dark',
+      backgroundColor: '#0f0f0f'
     }
   ]
 
   const benefits = customBenefits && customBenefits.length > 0 ? customBenefits : defaultBenefits
-  const hasMultiple = benefits.length > 1
 
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [nextIndex, setNextIndex] = useState(0)
   const [isSliding, setIsSliding] = useState(false)
-  const currentIndexRef = useRef(0)
-  const intervalRef = useRef(null)
-  const timeoutRef = useRef(null)
+  const [slideDirection, setSlideDirection] = useState('left')
+  const hasMultiple = benefits.length > 1
+  const currentBenefit = benefits[currentIndex]
+  const timerRef = useRef(null)
+  
+  // Color de fondo actual
+  const bgColor = currentBenefit?.backgroundColor && currentBenefit.backgroundColor.trim() !== '' 
+    ? currentBenefit.backgroundColor 
+    : (currentBenefit?.theme === 'light' ? '#f5f5f5' : '#0f0f0f')
 
-  const themeBenefit = benefits[currentIndex]
-  const useCustomBg = backgroundColor && backgroundColor.trim() !== ''
-  const containerClass = `${styles.benefitsBarContainer} ${
-    useCustomBg ? '' : (themeBenefit?.theme === 'light' ? styles.benefitsBarContainerLight : styles.benefitsBarContainerDark)
-  }`
-  const containerStyle = useCustomBg ? { backgroundColor } : {}
+  const clearTimer = useCallback(() => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current)
+      timerRef.current = null
+    }
+  }, [])
+
+  const goToSlide = useCallback((newIndex, direction = 'left') => {
+    if (isSliding) return
+    setSlideDirection(direction)
+    setIsSliding(true)
+    
+    setTimeout(() => {
+      setCurrentIndex(newIndex)
+      setIsSliding(false)
+    }, 400)
+  }, [isSliding])
+
+  const scheduleNext = useCallback(() => {
+    if (!hasMultiple) return
+    clearTimer()
+    timerRef.current = setTimeout(() => {
+      const nextIndex = (currentIndex + 1) % benefits.length
+      goToSlide(nextIndex, 'left')
+    }, DISPLAY_INTERVAL)
+  }, [benefits.length, hasMultiple, clearTimer, currentIndex, goToSlide])
 
   useEffect(() => {
-    if (!hasMultiple) return
+    scheduleNext()
+    return clearTimer
+  }, [scheduleNext, clearTimer, currentIndex])
 
-    currentIndexRef.current = 0
-    setCurrentIndex(0)
-    setNextIndex(1 % benefits.length)
+  const handlePrev = () => {
+    clearTimer()
+    const prevIndex = (currentIndex - 1 + benefits.length) % benefits.length
+    goToSlide(prevIndex, 'right')
+    setTimeout(scheduleNext, 500)
+  }
 
-    intervalRef.current = setInterval(() => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current)
-        timeoutRef.current = null
-      }
+  const handleNext = () => {
+    clearTimer()
+    const nextIndex = (currentIndex + 1) % benefits.length
+    goToSlide(nextIndex, 'left')
+    setTimeout(scheduleNext, 500)
+  }
 
-      const incoming = (currentIndexRef.current + 1) % benefits.length
-      setNextIndex(incoming)
-      setIsSliding(true)
-
-      timeoutRef.current = setTimeout(() => {
-        currentIndexRef.current = incoming
-        setCurrentIndex(incoming)
-        setNextIndex((incoming + 1) % benefits.length)
-        setIsSliding(false)
-        timeoutRef.current = null
-      }, 500)
-    }, DISPLAY_INTERVAL)
-
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current)
-        intervalRef.current = null
-      }
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current)
-        timeoutRef.current = null
-      }
-    }
-  }, [benefits.length, hasMultiple])
-
-  const currentBenefit = benefits[currentIndex]
-  const incomingBenefit = benefits[nextIndex]
+  const slideClass = isSliding 
+    ? (slideDirection === 'left' ? styles.slideOutLeft : styles.slideOutRight)
+    : styles.slideIn
 
   return (
-    <div className={containerClass} style={containerStyle}>
+    <div 
+      className={styles.benefitsBarContainer} 
+      style={{ backgroundColor: bgColor, transition: 'background-color 0.4s ease' }}
+    >
       <div className={styles.benefitsBar}>
-        <div className={styles.sliderWrapper}>
+        <div className={styles.slideWrapper}>
           <a
             href={currentBenefit.href}
-            className={`${styles.benefitLink} ${styles.slide} ${styles.slideCurrent} ${
-              isSliding ? styles.slideOutLeft : ''
-            }`}
+            className={`${styles.benefitLink} ${slideClass}`}
             aria-label={currentBenefit.alt}
           >
             <img
@@ -89,22 +97,6 @@ const BenefitsBar = ({ benefits: customBenefits, backgroundColor }) => {
               className={styles.benefitImage}
             />
           </a>
-
-          {hasMultiple && (
-            <a
-              href={incomingBenefit.href}
-              className={`${styles.benefitLink} ${styles.slide} ${styles.slideNext} ${
-                isSliding ? styles.slideInCenter : ''
-              }`}
-              aria-label={incomingBenefit.alt}
-            >
-              <img
-                src={incomingBenefit.image}
-                alt={incomingBenefit.alt}
-                className={styles.benefitImage}
-              />
-            </a>
-          )}
         </div>
       </div>
     </div>
@@ -112,55 +104,51 @@ const BenefitsBar = ({ benefits: customBenefits, backgroundColor }) => {
 }
 
 BenefitsBar.schema = {
-  title: 'Barra de Promociones',
-  description: 'Barra de promociones rotativa - Agregá hasta 4 imágenes de promos',
+  title: 'Benefits Bar',
+  description: 'Barra de beneficios rotativa con imágenes',
   type: 'object',
   properties: {
-    backgroundColor: {
-      title: 'Color de Fondo',
-      description: 'Color de fondo personalizado (ej: #000000 para negro, #FFFFFF para blanco). Dejá vacío para usar el tema.',
-      type: 'string',
-      default: '#000000'
-    },
     benefits: {
-      title: 'Promociones',
-      description: 'Agregá hasta 4 promociones que rotarán automáticamente',
+      title: 'Beneficios',
+      description: 'Lista de beneficios a mostrar',
       type: 'array',
-      maxItems: 4,
       items: {
-        title: 'Promoción',
         type: 'object',
         properties: {
           id: {
-            title: 'ID (opcional)',
+            title: 'ID',
             type: 'string'
           },
           image: {
-            title: 'Imagen de la Promoción',
-            description: 'Subí la imagen de la promoción',
+            title: 'Imagen',
+            description: 'Ruta de la imagen del beneficio',
             type: 'string',
             widget: {
               'ui:widget': 'image-uploader'
             }
           },
           alt: {
-            title: 'Descripción',
-            description: 'Descripción de la promoción (para accesibilidad)',
+            title: 'Texto Alternativo',
+            description: 'Descripción de la imagen',
             type: 'string'
           },
           href: {
             title: 'Link',
-            description: 'URL a donde lleva al hacer clic',
-            type: 'string',
-            default: '/pagos-y-promociones'
+            description: 'URL a donde redirige',
+            type: 'string'
           },
           theme: {
-            title: 'Tema (si no usás color personalizado)',
-            description: 'Solo aplica si no ponés color de fondo',
+            title: 'Tema',
+            description: 'Tema de fondo (dark o light) - se ignora si hay color personalizado',
             type: 'string',
             enum: ['dark', 'light'],
-            enumNames: ['Oscuro (negro)', 'Claro (blanco)'],
             default: 'dark'
+          },
+          backgroundColor: {
+            title: 'Color de Fondo',
+            description: 'Color de fondo personalizado (ej: #0f0f0f, #ff5500). Deja vacío para usar el tema.',
+            type: 'string',
+            default: ''
           }
         }
       },
@@ -170,7 +158,8 @@ BenefitsBar.schema = {
           image: '/arquivos/pago_blanco_2.png',
           alt: 'Medios de pago - logos en blanco',
           href: '/pagos-y-promociones',
-          theme: 'dark'
+          theme: 'dark',
+          backgroundColor: '#0f0f0f'
         }
       ]
     }

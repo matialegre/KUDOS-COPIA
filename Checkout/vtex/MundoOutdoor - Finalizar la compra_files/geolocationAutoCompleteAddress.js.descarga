@@ -1,0 +1,65 @@
+(window["webpackJsonpvtex_address_form_3_41_0"] = window["webpackJsonpvtex_address_form_3_41_0"] || []).push([["geolocationAutoCompleteAddress"],{
+
+/***/ "../geolocationAutoCompleteAddress.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module) {if (!!(typeof window !== 'undefined' && window.document) && !window.global) {
+  window.global = window;
+} // compatibility
+
+
+window.__RENDER_7_COMPONENTS__ = window.__RENDER_7_COMPONENTS__ ? window.__RENDER_7_COMPONENTS__ : {};
+window.__RENDER_7_HOT__ = window.__RENDER_7_HOT__ ? window.__RENDER_7_HOT__ : {};
+
+function dep(m) {
+  return m.__esModule ? m.default : m.default || m;
+}
+
+;
+var host = window.__hostname__;
+var assetsPath = '/_v/public/assets/v1/published/';
+
+if (!!(typeof window !== 'undefined' && window.document) && window.__RUNTIME__) {
+  var generatorMetaTag = document.querySelector("meta[name='generator']");
+  var generator = generatorMetaTag && generatorMetaTag.getAttribute('content');
+  var isRenderGenerator = generator && generator.indexOf('vtex.render-server') === 0;
+  var env = __RUNTIME__.publicEndpoint || 'myvtex.com';
+  host = isRenderGenerator ? window.location.hostname : __RUNTIME__.workspace + '--' + __RUNTIME__.account + '.' + env;
+  assetsPath =  false ? undefined : __RUNTIME__.assetServerPublishedPath || '/_v/public/assets/v1/published/';
+}
+
+__webpack_require__.p = 'https://' + host + assetsPath + 'vtex.address-form@3.41.0/public/react/';
+var entry;
+
+try {
+  entry = dep(__webpack_require__("./react/geolocationAutoCompleteAddress.js"));
+} catch (error) {
+  throw new Error("An error happened while requiring the app vtex.address-form@3.41.0/geolocationAutoCompleteAddress, please check your app's code.\n ".concat(error.stack));
+}
+
+if (window.__RENDER_7_RUNTIME__ && window.__RENDER_7_RUNTIME__.withHMR) {
+  window.__RENDER_7_COMPONENTS__['vtex.address-form@3.41.0/geolocationAutoCompleteAddress'] = window.__RENDER_7_COMPONENTS__['vtex.address-form@3.x/geolocationAutoCompleteAddress'] = window.__RENDER_7_RUNTIME__.withHMR(module, entry);
+} else {
+  window.__RENDER_7_COMPONENTS__['vtex.address-form@3.41.0/geolocationAutoCompleteAddress'] = window.__RENDER_7_COMPONENTS__['vtex.address-form@3.x/geolocationAutoCompleteAddress'] = entry;
+}
+
+if (false) {}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("../../../../../usr/local/data/service/node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
+/***/ "./react/geolocationAutoCompleteAddress.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _geolocation_geolocationAutoCompleteAddress__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./react/geolocation/geolocationAutoCompleteAddress.js");
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  geolocationAutoCompleteAddress: _geolocation_geolocationAutoCompleteAddress__WEBPACK_IMPORTED_MODULE_0__["default"]
+});
+
+/***/ })
+
+},[["../geolocationAutoCompleteAddress.js","runtime","common"]]]);
+//# sourceMappingURL=geolocationAutoCompleteAddress.js.map

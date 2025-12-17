@@ -1,0 +1,65 @@
+{
+  "vendor": "mundooutdoorar",
+  "name": "support-bot",
+  "version": "0.1.0",
+  "title": "Support Bot",
+  "description": "Manejo de mensajes de soporte y puente hacia backend externo (Python)",
+  "builders": {
+    "node": "7.x"
+  },
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "b66afbbc99b4.ngrok.app",
+        "path": "/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "*.ngrok.app",
+        "path": "/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "*.ngrok.io",
+        "path": "/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "*.ngrok-free.app",
+        "path": "/*"
+      }
+    }
+  ],
+  "settingsSchema": {
+    "title": "Support Bot Configuration",
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "title": "Habilitar bot de soporte",
+        "default": false
+      },
+      "pythonEndpoint": {
+        "type": "string",
+        "title": "URL del servicio Python (opcional)",
+        "description": "Endpoint al que se reenviarán los mensajes (POST)",
+        "default": ""
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

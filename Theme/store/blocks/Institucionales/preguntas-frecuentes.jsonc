@@ -3,7 +3,8 @@
   "store.custom#preguntas-frecuentes": {
   
     "children": [
-      "flex-layout.row#shared-container-preguntas-frecuentes"
+      "flex-layout.row#shared-container-preguntas-frecuentes",
+      "support-entry"
     ]
   },
 

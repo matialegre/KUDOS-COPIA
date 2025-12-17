@@ -3,7 +3,8 @@
     "store.custom#cambios-devoluciones": {
     
         "children":[
-            "flex-layout.row#shared-container-cambios-devoluciones"
+            "flex-layout.row#shared-container-cambios-devoluciones",
+            "support-entry"
         ]
 
     },

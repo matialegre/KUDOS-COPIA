@@ -1,0 +1,19 @@
+/**
+ * umd-free-zone is meant to prevent your umd-compatible scripts
+ * from falling for unwanted global AMD and CommonJS shims.
+ * Just add umd-free-zone/start.js before your scripts and umd-free-zone/end.js after them.
+ * This will ensure your scripts register globally.
+ */
+
+// Run only in browsers
+if (window && window.document) {
+  // Restore CommonJS
+  if (__UMD_FREE_ZONE_ORIGINAL_EXPORTS && __UMD_FREE_ZONE_ORIGINAL_MODULE) {
+    window.exports = __UMD_FREE_ZONE_ORIGINAL_EXPORTS
+    window.module = __UMD_FREE_ZONE_ORIGINAL_MODULE
+  }
+  // Restore AMD
+  if (__UMD_FREE_ZONE_ORIGINAL_DEFINE) {
+    window.define = __UMD_FREE_ZONE_ORIGINAL_DEFINE
+  }
+}

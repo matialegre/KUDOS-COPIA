@@ -1,0 +1,602 @@
+(window["webpackJsonpvtex_facebook_checkout_pixel_1_1_0"] = window["webpackJsonpvtex_facebook_checkout_pixel_1_1_0"] || []).push([["index"],{
+
+/***/ "../index.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module) {if (!!(typeof window !== 'undefined' && window.document) && !window.global) {
+  window.global = window;
+} // compatibility
+
+
+window.__RENDER_7_COMPONENTS__ = window.__RENDER_7_COMPONENTS__ ? window.__RENDER_7_COMPONENTS__ : {};
+window.__RENDER_7_HOT__ = window.__RENDER_7_HOT__ ? window.__RENDER_7_HOT__ : {};
+
+function dep(m) {
+  return m.__esModule ? m.default : m.default || m;
+}
+
+;
+var host = window.__hostname__;
+var assetsPath = '/_v/public/assets/v1/published/';
+
+if (!!(typeof window !== 'undefined' && window.document) && window.__RUNTIME__) {
+  var generatorMetaTag = document.querySelector("meta[name='generator']");
+  var generator = generatorMetaTag && generatorMetaTag.getAttribute('content');
+  var isRenderGenerator = generator && generator.indexOf('vtex.render-server') === 0;
+  var env = __RUNTIME__.publicEndpoint || 'myvtex.com';
+  host = isRenderGenerator ? window.location.hostname : __RUNTIME__.workspace + '--' + __RUNTIME__.account + '.' + env;
+  assetsPath =  false ? undefined : __RUNTIME__.assetServerPublishedPath || '/_v/public/assets/v1/published/';
+}
+
+__webpack_require__.p = 'https://' + host + assetsPath + 'vtex.facebook-checkout-pixel@1.1.0/public/react/';
+var entry;
+
+try {
+  entry = dep(__webpack_require__("./react/index.tsx"));
+} catch (error) {
+  throw new Error("An error happened while requiring the app vtex.facebook-checkout-pixel@1.1.0/index, please check your app's code.\n ".concat(error.stack));
+}
+
+if (window.__RENDER_7_RUNTIME__ && window.__RENDER_7_RUNTIME__.withHMR) {
+  window.__RENDER_7_COMPONENTS__['vtex.facebook-checkout-pixel@1.1.0/index'] = window.__RENDER_7_COMPONENTS__['vtex.facebook-checkout-pixel@1.x/index'] = window.__RENDER_7_RUNTIME__.withHMR(module, entry);
+} else {
+  window.__RENDER_7_COMPONENTS__['vtex.facebook-checkout-pixel@1.1.0/index'] = window.__RENDER_7_COMPONENTS__['vtex.facebook-checkout-pixel@1.x/index'] = entry;
+}
+
+if (false) {}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("../../../../../usr/local/data/service/node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
+/***/ "./react/OrderFormUpdateHandler.tsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _clients_notificationClient__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/clients/notificationClient.ts");
+/* harmony import */ var _hooks_useOrderFormMonitor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/hooks/useOrderFormMonitor.tsx");
+/* harmony import */ var _eventHandlers_onEmailChanged__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/eventHandlers/onEmailChanged.ts");
+/* harmony import */ var _hooks_useLoadScript__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/hooks/useLoadScript.tsx");
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./react/utils/constants.ts");
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+
+
+
+
+
+var OrderFormUpdateHandler = function OrderFormUpdateHandler() {
+  var client = Object(_clients_notificationClient__WEBPACK_IMPORTED_MODULE_1__["notificationClient"])();
+  var eventHandler = Object(_hooks_useOrderFormMonitor__WEBPACK_IMPORTED_MODULE_2__["useOrderFormMonitor"])([_eventHandlers_onEmailChanged__WEBPACK_IMPORTED_MODULE_3__["onEmailChanged"]]);
+
+  var handleOrderFormUpdated = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(_, orderForm) {
+      var events;
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return eventHandler(orderForm);
+
+            case 2:
+              events = _context.sent;
+              _context.next = 5;
+              return client.notify(events);
+
+            case 5:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function handleOrderFormUpdated(_x, _x2) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  var fbEventsLoaded = Object(_hooks_useLoadScript__WEBPACK_IMPORTED_MODULE_4__["useLoadScript"])(_utils_constants__WEBPACK_IMPORTED_MODULE_5__["FBE_SCRIPT"]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (fbEventsLoaded) {
+      $(window).on('orderFormUpdated.vtex', handleOrderFormUpdated);
+    }
+
+    return function () {
+      $(window).off('orderFormUpdated.vtex', handleOrderFormUpdated);
+    };
+  }, [eventHandler, fbEventsLoaded]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    window.fbq = function fbq() {
+      var _window$fbq;
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      window.fbq.callMethod ? (_window$fbq = window.fbq).callMethod.apply(_window$fbq, args) : window.fbq.push(args);
+    };
+
+    window.fbq.push = window.fbq;
+    window.fbq.loaded = !0;
+    window.fbq.version = '2.0';
+    window.fbq.queue = [];
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (OrderFormUpdateHandler);
+
+/***/ }),
+
+/***/ "./react/clients/fbeSettingsClient.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fbeSettingsClient", function() { return fbeSettingsClient; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/d9f2cb348355448ffe44946feff9e989d5b312f85d35dd36c6d04bb2ddf6477f/dev/node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+var fbeSettingsClient = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+    var response;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/_v/fbe/pixel');
+
+          case 2:
+            response = _context.sent;
+            return _context.abrupt("return", response.data);
+
+          case 4:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function fbeSettingsClient() {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+/***/ }),
+
+/***/ "./react/clients/notificationClient.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "notificationClient", function() { return notificationClient; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/d9f2cb348355448ffe44946feff9e989d5b312f85d35dd36c6d04bb2ddf6477f/dev/node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+var notificationClient = function notificationClient() {
+  return {
+    notify: function notify(events) {
+      return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/io/_v/facebook-checkout-pixel/notify', {
+        events: events
+      });
+    }
+  };
+};
+
+/***/ }),
+
+/***/ "./react/eventHandlers/onEmailChanged.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onEmailChanged", function() { return onEmailChanged; });
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/d9f2cb348355448ffe44946feff9e989d5b312f85d35dd36c6d04bb2ddf6477f/dev/node_modules/uuid/index.js");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _clients_fbeSettingsClient__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/clients/fbeSettingsClient.ts");
+/* harmony import */ var _utils_hash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/utils/hash.ts");
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var mountPayload = function mountPayload(order) {
+  var value = order.value,
+      currencyCode = order.storePreferencesData.currencyCode,
+      items = order.items;
+  var contents = items.reduce(function (contentsArr, item) {
+    contentsArr.push({
+      id: item === null || item === void 0 ? void 0 : item.id,
+      item_price: (item === null || item === void 0 ? void 0 : item.price) * 0.01,
+      quantity: item === null || item === void 0 ? void 0 : item.quantity
+    });
+    return contentsArr;
+  }, []);
+  var numItems = contents.reduce(function (total, item) {
+    total += item.quantity;
+    return total;
+  }, 0);
+  return {
+    contents: contents,
+    content_ids: contents.map(function (_ref) {
+      var id = _ref.id;
+      return id;
+    }),
+    currency: currencyCode,
+    num_items: numItems,
+    value: Number((value * 0.01).toFixed(2))
+  };
+};
+
+function getCookie(cookieName) {
+  var cookie = {};
+  document.cookie.split(';').forEach(function (el) {
+    var _el$split = el.split('='),
+        _el$split2 = _slicedToArray(_el$split, 2),
+        key = _el$split2[0],
+        value = _el$split2[1];
+
+    cookie[key.trim()] = value;
+  });
+  return cookie[cookieName];
+}
+
+var onEmailChanged = /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(old, updated) {
+    var _a, _b, _c, oldEmail, newEmail, hash, payload, fbeSettings, fbcCookie, fbpCookie, triggered, params;
+
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            oldEmail = (_a = old === null || old === void 0 ? void 0 : old.clientProfileData) === null || _a === void 0 ? void 0 : _a.email;
+            newEmail = (_b = updated === null || updated === void 0 ? void 0 : updated.clientProfileData) === null || _b === void 0 ? void 0 : _b.email;
+            hash = Object(uuid__WEBPACK_IMPORTED_MODULE_0__["v4"])();
+            payload = mountPayload(updated);
+            _context.next = 6;
+            return Object(_clients_fbeSettingsClient__WEBPACK_IMPORTED_MODULE_1__["fbeSettingsClient"])();
+
+          case 6:
+            fbeSettings = _context.sent;
+            fbcCookie = getCookie('_fbc');
+            fbpCookie = getCookie('_fbp');
+            triggered = newEmail && oldEmail !== newEmail && fbeSettings.enablePixelIntegration;
+
+            if (!triggered) {
+              _context.next = 17;
+              break;
+            }
+
+            _context.next = 13;
+            return Object(_utils_hash__WEBPACK_IMPORTED_MODULE_2__["getAdvancedMatchingParameters"])(newEmail.toLowerCase(), ((_c = updated === null || updated === void 0 ? void 0 : updated.clientProfileData) === null || _c === void 0 ? void 0 : _c.userProfileId) || '');
+
+          case 13:
+            params = _context.sent;
+            // Set the email in localStorage to ensure it is available for future Pixel Purchase event
+            //  in a case the user is not logged in and the email is not available in the orderform.clientProfileData
+            localStorage.setItem('fbeEventUserEmail', newEmail.toLowerCase());
+            window.fbq('init', fbeSettings.pixelId, params, {
+              agent: 'vtex'
+            });
+            window.fbq('track', 'InitiateCheckout', payload, {
+              eventID: hash
+            });
+
+          case 17:
+            return _context.abrupt("return", {
+              eventName: 'order-form-initiate-checkout',
+              eventObject: {
+                email: newEmail,
+                orderFormId: updated.orderFormId,
+                payload: payload,
+                eventId: hash,
+                eventSourceURL: window.location.href,
+                fbpCookie: fbpCookie,
+                fbcCookie: fbcCookie
+              },
+              triggered: triggered,
+              userAgent: navigator.userAgent
+            });
+
+          case 18:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function onEmailChanged(_x, _x2) {
+    return _ref2.apply(this, arguments);
+  };
+}();
+
+/***/ }),
+
+/***/ "./react/hooks/useLoadScript.tsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useLoadScript", function() { return useLoadScript; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+var useLoadScript = function useLoadScript(scriptUrl) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      scriptLoaded = _useState2[0],
+      setScriptLoaded = _useState2[1];
+
+  var scriptTag = document === null || document === void 0 ? void 0 : document.createElement('script');
+  scriptTag.src = scriptUrl;
+  scriptTag.addEventListener('load', function () {
+    return setScriptLoaded(true);
+  });
+  document === null || document === void 0 ? void 0 : document.body.appendChild(scriptTag);
+  return scriptLoaded;
+};
+
+/***/ }),
+
+/***/ "./react/hooks/useOrderFormMonitor.tsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useOrderFormMonitor", function() { return useOrderFormMonitor; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+var useOrderFormMonitor = function useOrderFormMonitor(handlers) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])( // This is used to clone the orderForm state and prevent referencing it directly.
+  JSON.parse(JSON.stringify((window === null || window === void 0 ? void 0 : window.vtexjs.checkout.orderForm) || {}))),
+      _useState2 = _slicedToArray(_useState, 2),
+      orderForm = _useState2[0],
+      setOrderForm = _useState2[1];
+
+  var handleOrderFormChange = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])( /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(eventOrderForm) {
+      var changes;
+      return regeneratorRuntime.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return Promise.all(handlers.map( /*#__PURE__*/function () {
+                var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(handler) {
+                  return regeneratorRuntime.wrap(function _callee$(_context) {
+                    while (1) {
+                      switch (_context.prev = _context.next) {
+                        case 0:
+                          return _context.abrupt("return", handler(orderForm, eventOrderForm));
+
+                        case 1:
+                        case "end":
+                          return _context.stop();
+                      }
+                    }
+                  }, _callee);
+                }));
+
+                return function (_x2) {
+                  return _ref2.apply(this, arguments);
+                };
+              }()));
+
+            case 2:
+              changes = _context2.sent;
+              setOrderForm(JSON.parse(JSON.stringify(eventOrderForm || {})));
+              return _context2.abrupt("return", changes);
+
+            case 5:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function (_x) {
+      return _ref.apply(this, arguments);
+    };
+  }(), [orderForm]);
+  return handleOrderFormChange;
+};
+
+/***/ }),
+
+/***/ "./react/index.tsx":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _OrderFormUpdateHandler__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/OrderFormUpdateHandler.tsx");
+
+
+
+var EventListenerTest = function EventListenerTest() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OrderFormUpdateHandler__WEBPACK_IMPORTED_MODULE_1__["default"], null);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (EventListenerTest);
+
+/***/ }),
+
+/***/ "./react/utils/constants.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FBE_SCRIPT", function() { return FBE_SCRIPT; });
+var FBE_SCRIPT = 'https://connect.facebook.net/en_US/fbevents.js';
+
+/***/ }),
+
+/***/ "./react/utils/hash.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAdvancedMatchingParameters", function() { return getAdvancedMatchingParameters; });
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function buf2hex(buffer) {
+  return Array.prototype.map.call(new Uint8Array(buffer), function (x) {
+    return "00".concat(x.toString(16)).slice(-2);
+  }).join('');
+}
+
+function hashSHA256(_x) {
+  return _hashSHA.apply(this, arguments);
+}
+
+function _hashSHA() {
+  _hashSHA = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(value) {
+    var encoder, data, hashedValue;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            encoder = new TextEncoder();
+            data = value ? encoder.encode(value) : undefined;
+
+            if (!data) {
+              _context.next = 10;
+              break;
+            }
+
+            _context.t1 = buf2hex;
+            _context.next = 6;
+            return window.crypto.subtle.digest('SHA-256', data);
+
+          case 6:
+            _context.t2 = _context.sent;
+            _context.t0 = (0, _context.t1)(_context.t2);
+            _context.next = 11;
+            break;
+
+          case 10:
+            _context.t0 = undefined;
+
+          case 11:
+            hashedValue = _context.t0;
+            return _context.abrupt("return", hashedValue);
+
+          case 13:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return _hashSHA.apply(this, arguments);
+}
+
+function getAdvancedMatchingParameters(_x2, _x3) {
+  return _getAdvancedMatchingParameters.apply(this, arguments);
+}
+
+function _getAdvancedMatchingParameters() {
+  _getAdvancedMatchingParameters = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(email, userProfileId) {
+    return regeneratorRuntime.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return hashSHA256(email.toLowerCase());
+
+          case 2:
+            _context2.t0 = _context2.sent;
+            _context2.next = 5;
+            return hashSHA256(userProfileId);
+
+          case 5:
+            _context2.t1 = _context2.sent;
+            return _context2.abrupt("return", {
+              em: _context2.t0,
+              external_id: _context2.t1
+            });
+
+          case 7:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+  return _getAdvancedMatchingParameters.apply(this, arguments);
+}
+
+/***/ }),
+
+/***/ "react":
+/***/ (function(module, exports) {
+
+module.exports = React;
+
+/***/ })
+
+},[["../index.js","runtime","common"]]]);
+//# sourceMappingURL=index.js.map

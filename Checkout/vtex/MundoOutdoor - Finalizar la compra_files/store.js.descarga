@@ -1,0 +1,3211 @@
+(window["webpackJsonpvtex_shipping_manager_0_13_30"] = window["webpackJsonpvtex_shipping_manager_0_13_30"] || []).push([["store"],{
+
+/***/ "../../../../../usr/local/data/service/node_modules/webpack/buildin/harmony-module.js":
+/***/ (function(module, exports) {
+
+module.exports = function(originalModule) {
+	if (!originalModule.webpackPolyfill) {
+		var module = Object.create(originalModule);
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		Object.defineProperty(module, "exports", {
+			enumerable: true
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+
+/***/ "../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/redux-logger/dist/redux-logger.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {!function(e,t){ true?t(exports):undefined}(this,function(e){"use strict";function t(e,t){e.super_=t,e.prototype=Object.create(t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}})}function r(e,t){Object.defineProperty(this,"kind",{value:e,enumerable:!0}),t&&t.length&&Object.defineProperty(this,"path",{value:t,enumerable:!0})}function n(e,t,r){n.super_.call(this,"E",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0}),Object.defineProperty(this,"rhs",{value:r,enumerable:!0})}function o(e,t){o.super_.call(this,"N",e),Object.defineProperty(this,"rhs",{value:t,enumerable:!0})}function i(e,t){i.super_.call(this,"D",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0})}function a(e,t,r){a.super_.call(this,"A",e),Object.defineProperty(this,"index",{value:t,enumerable:!0}),Object.defineProperty(this,"item",{value:r,enumerable:!0})}function f(e,t,r){var n=e.slice((r||t)+1||e.length);return e.length=t<0?e.length+t:t,e.push.apply(e,n),e}function u(e){var t="undefined"==typeof e?"undefined":N(e);return"object"!==t?t:e===Math?"math":null===e?"null":Array.isArray(e)?"array":"[object Date]"===Object.prototype.toString.call(e)?"date":"function"==typeof e.toString&&/^\/.*\//.test(e.toString())?"regexp":"object"}function l(e,t,r,c,s,d,p){s=s||[],p=p||[];var g=s.slice(0);if("undefined"!=typeof d){if(c){if("function"==typeof c&&c(g,d))return;if("object"===("undefined"==typeof c?"undefined":N(c))){if(c.prefilter&&c.prefilter(g,d))return;if(c.normalize){var h=c.normalize(g,d,e,t);h&&(e=h[0],t=h[1])}}}g.push(d)}"regexp"===u(e)&&"regexp"===u(t)&&(e=e.toString(),t=t.toString());var y="undefined"==typeof e?"undefined":N(e),v="undefined"==typeof t?"undefined":N(t),b="undefined"!==y||p&&p[p.length-1].lhs&&p[p.length-1].lhs.hasOwnProperty(d),m="undefined"!==v||p&&p[p.length-1].rhs&&p[p.length-1].rhs.hasOwnProperty(d);if(!b&&m)r(new o(g,t));else if(!m&&b)r(new i(g,e));else if(u(e)!==u(t))r(new n(g,e,t));else if("date"===u(e)&&e-t!==0)r(new n(g,e,t));else if("object"===y&&null!==e&&null!==t)if(p.filter(function(t){return t.lhs===e}).length)e!==t&&r(new n(g,e,t));else{if(p.push({lhs:e,rhs:t}),Array.isArray(e)){var w;e.length;for(w=0;w<e.length;w++)w>=t.length?r(new a(g,w,new i(void 0,e[w]))):l(e[w],t[w],r,c,g,w,p);for(;w<t.length;)r(new a(g,w,new o(void 0,t[w++])))}else{var x=Object.keys(e),S=Object.keys(t);x.forEach(function(n,o){var i=S.indexOf(n);i>=0?(l(e[n],t[n],r,c,g,n,p),S=f(S,i)):l(e[n],void 0,r,c,g,n,p)}),S.forEach(function(e){l(void 0,t[e],r,c,g,e,p)})}p.length=p.length-1}else e!==t&&("number"===y&&isNaN(e)&&isNaN(t)||r(new n(g,e,t)))}function c(e,t,r,n){return n=n||[],l(e,t,function(e){e&&n.push(e)},r),n.length?n:void 0}function s(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":s(o[r.path[n]],r.index,r.item);break;case"D":delete o[r.path[n]];break;case"E":case"N":o[r.path[n]]=r.rhs}}else switch(r.kind){case"A":s(e[t],r.index,r.item);break;case"D":e=f(e,t);break;case"E":case"N":e[t]=r.rhs}return e}function d(e,t,r){if(e&&t&&r&&r.kind){for(var n=e,o=-1,i=r.path?r.path.length-1:0;++o<i;)"undefined"==typeof n[r.path[o]]&&(n[r.path[o]]="number"==typeof r.path[o]?[]:{}),n=n[r.path[o]];switch(r.kind){case"A":s(r.path?n[r.path[o]]:n,r.index,r.item);break;case"D":delete n[r.path[o]];break;case"E":case"N":n[r.path[o]]=r.rhs}}}function p(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":p(o[r.path[n]],r.index,r.item);break;case"D":o[r.path[n]]=r.lhs;break;case"E":o[r.path[n]]=r.lhs;break;case"N":delete o[r.path[n]]}}else switch(r.kind){case"A":p(e[t],r.index,r.item);break;case"D":e[t]=r.lhs;break;case"E":e[t]=r.lhs;break;case"N":e=f(e,t)}return e}function g(e,t,r){if(e&&t&&r&&r.kind){var n,o,i=e;for(o=r.path.length-1,n=0;n<o;n++)"undefined"==typeof i[r.path[n]]&&(i[r.path[n]]={}),i=i[r.path[n]];switch(r.kind){case"A":p(i[r.path[n]],r.index,r.item);break;case"D":i[r.path[n]]=r.lhs;break;case"E":i[r.path[n]]=r.lhs;break;case"N":delete i[r.path[n]]}}}function h(e,t,r){if(e&&t){var n=function(n){r&&!r(e,t,n)||d(e,t,n)};l(e,t,n)}}function y(e){return"color: "+F[e].color+"; font-weight: bold"}function v(e){var t=e.kind,r=e.path,n=e.lhs,o=e.rhs,i=e.index,a=e.item;switch(t){case"E":return[r.join("."),n,"→",o];case"N":return[r.join("."),o];case"D":return[r.join(".")];case"A":return[r.join(".")+"["+i+"]",a];default:return[]}}function b(e,t,r,n){var o=c(e,t);try{n?r.groupCollapsed("diff"):r.group("diff")}catch(e){r.log("diff")}o?o.forEach(function(e){var t=e.kind,n=v(e);r.log.apply(r,["%c "+F[t].text,y(t)].concat(P(n)))}):r.log("—— no diff ——");try{r.groupEnd()}catch(e){r.log("—— diff end —— ")}}function m(e,t,r,n){switch("undefined"==typeof e?"undefined":N(e)){case"object":return"function"==typeof e[n]?e[n].apply(e,P(r)):e[n];case"function":return e(t);default:return e}}function w(e){var t=e.timestamp,r=e.duration;return function(e,n,o){var i=["action"];return i.push("%c"+String(e.type)),t&&i.push("%c@ "+n),r&&i.push("%c(in "+o.toFixed(2)+" ms)"),i.join(" ")}}function x(e,t){var r=t.logger,n=t.actionTransformer,o=t.titleFormatter,i=void 0===o?w(t):o,a=t.collapsed,f=t.colors,u=t.level,l=t.diff,c="undefined"==typeof t.titleFormatter;e.forEach(function(o,s){var d=o.started,p=o.startedTime,g=o.action,h=o.prevState,y=o.error,v=o.took,w=o.nextState,x=e[s+1];x&&(w=x.prevState,v=x.started-d);var S=n(g),k="function"==typeof a?a(function(){return w},g,o):a,j=D(p),E=f.title?"color: "+f.title(S)+";":"",A=["color: gray; font-weight: lighter;"];A.push(E),t.timestamp&&A.push("color: gray; font-weight: lighter;"),t.duration&&A.push("color: gray; font-weight: lighter;");var O=i(S,j,v);try{k?f.title&&c?r.groupCollapsed.apply(r,["%c "+O].concat(A)):r.groupCollapsed(O):f.title&&c?r.group.apply(r,["%c "+O].concat(A)):r.group(O)}catch(e){r.log(O)}var N=m(u,S,[h],"prevState"),P=m(u,S,[S],"action"),C=m(u,S,[y,h],"error"),F=m(u,S,[w],"nextState");if(N)if(f.prevState){var L="color: "+f.prevState(h)+"; font-weight: bold";r[N]("%c prev state",L,h)}else r[N]("prev state",h);if(P)if(f.action){var T="color: "+f.action(S)+"; font-weight: bold";r[P]("%c action    ",T,S)}else r[P]("action    ",S);if(y&&C)if(f.error){var M="color: "+f.error(y,h)+"; font-weight: bold;";r[C]("%c error     ",M,y)}else r[C]("error     ",y);if(F)if(f.nextState){var _="color: "+f.nextState(w)+"; font-weight: bold";r[F]("%c next state",_,w)}else r[F]("next state",w);l&&b(h,w,r,k);try{r.groupEnd()}catch(e){r.log("—— log end ——")}})}function S(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=Object.assign({},L,e),r=t.logger,n=t.stateTransformer,o=t.errorTransformer,i=t.predicate,a=t.logErrors,f=t.diffPredicate;if("undefined"==typeof r)return function(){return function(e){return function(t){return e(t)}}};if(e.getState&&e.dispatch)return console.error("[redux-logger] redux-logger not installed. Make sure to pass logger instance as middleware:\n// Logger with default options\nimport { logger } from 'redux-logger'\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n// Or you can create your own logger with custom options http://bit.ly/redux-logger-options\nimport createLogger from 'redux-logger'\nconst logger = createLogger({\n  // ...options\n});\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n"),function(){return function(e){return function(t){return e(t)}}};var u=[];return function(e){var r=e.getState;return function(e){return function(l){if("function"==typeof i&&!i(r,l))return e(l);var c={};u.push(c),c.started=O.now(),c.startedTime=new Date,c.prevState=n(r()),c.action=l;var s=void 0;if(a)try{s=e(l)}catch(e){c.error=o(e)}else s=e(l);c.took=O.now()-c.started,c.nextState=n(r());var d=t.diff&&"function"==typeof f?f(r,l):t.diff;if(x(u,Object.assign({},t,{diff:d})),u.length=0,c.error)throw c.error;return s}}}}var k,j,E=function(e,t){return new Array(t+1).join(e)},A=function(e,t){return E("0",t-e.toString().length)+e},D=function(e){return A(e.getHours(),2)+":"+A(e.getMinutes(),2)+":"+A(e.getSeconds(),2)+"."+A(e.getMilliseconds(),3)},O="undefined"!=typeof performance&&null!==performance&&"function"==typeof performance.now?performance:Date,N="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},P=function(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)},C=[];k="object"===("undefined"==typeof global?"undefined":N(global))&&global?global:"undefined"!=typeof window?window:{},j=k.DeepDiff,j&&C.push(function(){"undefined"!=typeof j&&k.DeepDiff===c&&(k.DeepDiff=j,j=void 0)}),t(n,r),t(o,r),t(i,r),t(a,r),Object.defineProperties(c,{diff:{value:c,enumerable:!0},observableDiff:{value:l,enumerable:!0},applyDiff:{value:h,enumerable:!0},applyChange:{value:d,enumerable:!0},revertChange:{value:g,enumerable:!0},isConflict:{value:function(){return"undefined"!=typeof j},enumerable:!0},noConflict:{value:function(){return C&&(C.forEach(function(e){e()}),C=null),c},enumerable:!0}});var F={E:{color:"#2196F3",text:"CHANGED:"},N:{color:"#4CAF50",text:"ADDED:"},D:{color:"#F44336",text:"DELETED:"},A:{color:"#2196F3",text:"ARRAY:"}},L={level:"log",logger:console,logErrors:!0,collapsed:void 0,predicate:void 0,duration:!1,timestamp:!0,stateTransformer:function(e){return e},actionTransformer:function(e){return e},errorTransformer:function(e){return e},colors:{title:function(){return"inherit"},prevState:function(){return"#9E9E9E"},action:function(){return"#03A9F4"},nextState:function(){return"#4CAF50"},error:function(){return"#F20404"}},diff:!1,diffPredicate:void 0,transformer:void 0},T=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.dispatch,r=e.getState;return"function"==typeof t||"function"==typeof r?S()({dispatch:t,getState:r}):void console.error("\n[redux-logger v3] BREAKING CHANGE\n[redux-logger v3] Since 3.0.0 redux-logger exports by default logger with default settings.\n[redux-logger v3] Change\n[redux-logger v3] import createLogger from 'redux-logger'\n[redux-logger v3] to\n[redux-logger v3] import { createLogger } from 'redux-logger'\n")};e.defaults=L,e.createLogger=S,e.logger=T,e.default=T,Object.defineProperty(e,"__esModule",{value:!0})});
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("../../../../../usr/local/data/service/node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/redux-thunk/es/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function createThunkMiddleware(extraArgument) {
+  return function (_ref) {
+    var dispatch = _ref.dispatch,
+        getState = _ref.getState;
+    return function (next) {
+      return function (action) {
+        if (typeof action === 'function') {
+          return action(dispatch, getState, extraArgument);
+        }
+
+        return next(action);
+      };
+    };
+  };
+}
+
+var thunk = createThunkMiddleware();
+thunk.withExtraArgument = createThunkMiddleware;
+
+/* harmony default export */ __webpack_exports__["default"] = (thunk);
+
+/***/ }),
+
+/***/ "../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/redux/es/redux.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__DO_NOT_USE__ActionTypes", function() { return ActionTypes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyMiddleware", function() { return applyMiddleware; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bindActionCreators", function() { return bindActionCreators; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return combineReducers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return compose; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return createStore; });
+/* harmony import */ var symbol_observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/symbol-observable/es/index.js");
+
+
+/**
+ * These are private action types reserved by Redux.
+ * For any unknown actions, you must return the current state.
+ * If the current state is undefined, you must return the initial state.
+ * Do not reference these action types directly in your code.
+ */
+var randomString = function randomString() {
+  return Math.random().toString(36).substring(7).split('').join('.');
+};
+
+var ActionTypes = {
+  INIT: "@@redux/INIT" + randomString(),
+  REPLACE: "@@redux/REPLACE" + randomString(),
+  PROBE_UNKNOWN_ACTION: function PROBE_UNKNOWN_ACTION() {
+    return "@@redux/PROBE_UNKNOWN_ACTION" + randomString();
+  }
+};
+
+/**
+ * @param {any} obj The object to inspect.
+ * @returns {boolean} True if the argument appears to be a plain object.
+ */
+function isPlainObject(obj) {
+  if (typeof obj !== 'object' || obj === null) return false;
+  var proto = obj;
+
+  while (Object.getPrototypeOf(proto) !== null) {
+    proto = Object.getPrototypeOf(proto);
+  }
+
+  return Object.getPrototypeOf(obj) === proto;
+}
+
+/**
+ * Creates a Redux store that holds the state tree.
+ * The only way to change the data in the store is to call `dispatch()` on it.
+ *
+ * There should only be a single store in your app. To specify how different
+ * parts of the state tree respond to actions, you may combine several reducers
+ * into a single reducer function by using `combineReducers`.
+ *
+ * @param {Function} reducer A function that returns the next state tree, given
+ * the current state tree and the action to handle.
+ *
+ * @param {any} [preloadedState] The initial state. You may optionally specify it
+ * to hydrate the state from the server in universal apps, or to restore a
+ * previously serialized user session.
+ * If you use `combineReducers` to produce the root reducer function, this must be
+ * an object with the same shape as `combineReducers` keys.
+ *
+ * @param {Function} [enhancer] The store enhancer. You may optionally specify it
+ * to enhance the store with third-party capabilities such as middleware,
+ * time travel, persistence, etc. The only store enhancer that ships with Redux
+ * is `applyMiddleware()`.
+ *
+ * @returns {Store} A Redux store that lets you read the state, dispatch actions
+ * and subscribe to changes.
+ */
+
+function createStore(reducer, preloadedState, enhancer) {
+  var _ref2;
+
+  if (typeof preloadedState === 'function' && typeof enhancer === 'function' || typeof enhancer === 'function' && typeof arguments[3] === 'function') {
+    throw new Error('It looks like you are passing several store enhancers to ' + 'createStore(). This is not supported. Instead, compose them ' + 'together to a single function.');
+  }
+
+  if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
+    enhancer = preloadedState;
+    preloadedState = undefined;
+  }
+
+  if (typeof enhancer !== 'undefined') {
+    if (typeof enhancer !== 'function') {
+      throw new Error('Expected the enhancer to be a function.');
+    }
+
+    return enhancer(createStore)(reducer, preloadedState);
+  }
+
+  if (typeof reducer !== 'function') {
+    throw new Error('Expected the reducer to be a function.');
+  }
+
+  var currentReducer = reducer;
+  var currentState = preloadedState;
+  var currentListeners = [];
+  var nextListeners = currentListeners;
+  var isDispatching = false;
+  /**
+   * This makes a shallow copy of currentListeners so we can use
+   * nextListeners as a temporary list while dispatching.
+   *
+   * This prevents any bugs around consumers calling
+   * subscribe/unsubscribe in the middle of a dispatch.
+   */
+
+  function ensureCanMutateNextListeners() {
+    if (nextListeners === currentListeners) {
+      nextListeners = currentListeners.slice();
+    }
+  }
+  /**
+   * Reads the state tree managed by the store.
+   *
+   * @returns {any} The current state tree of your application.
+   */
+
+
+  function getState() {
+    if (isDispatching) {
+      throw new Error('You may not call store.getState() while the reducer is executing. ' + 'The reducer has already received the state as an argument. ' + 'Pass it down from the top reducer instead of reading it from the store.');
+    }
+
+    return currentState;
+  }
+  /**
+   * Adds a change listener. It will be called any time an action is dispatched,
+   * and some part of the state tree may potentially have changed. You may then
+   * call `getState()` to read the current state tree inside the callback.
+   *
+   * You may call `dispatch()` from a change listener, with the following
+   * caveats:
+   *
+   * 1. The subscriptions are snapshotted just before every `dispatch()` call.
+   * If you subscribe or unsubscribe while the listeners are being invoked, this
+   * will not have any effect on the `dispatch()` that is currently in progress.
+   * However, the next `dispatch()` call, whether nested or not, will use a more
+   * recent snapshot of the subscription list.
+   *
+   * 2. The listener should not expect to see all state changes, as the state
+   * might have been updated multiple times during a nested `dispatch()` before
+   * the listener is called. It is, however, guaranteed that all subscribers
+   * registered before the `dispatch()` started will be called with the latest
+   * state by the time it exits.
+   *
+   * @param {Function} listener A callback to be invoked on every dispatch.
+   * @returns {Function} A function to remove this change listener.
+   */
+
+
+  function subscribe(listener) {
+    if (typeof listener !== 'function') {
+      throw new Error('Expected the listener to be a function.');
+    }
+
+    if (isDispatching) {
+      throw new Error('You may not call store.subscribe() while the reducer is executing. ' + 'If you would like to be notified after the store has been updated, subscribe from a ' + 'component and invoke store.getState() in the callback to access the latest state. ' + 'See https://redux.js.org/api-reference/store#subscribelistener for more details.');
+    }
+
+    var isSubscribed = true;
+    ensureCanMutateNextListeners();
+    nextListeners.push(listener);
+    return function unsubscribe() {
+      if (!isSubscribed) {
+        return;
+      }
+
+      if (isDispatching) {
+        throw new Error('You may not unsubscribe from a store listener while the reducer is executing. ' + 'See https://redux.js.org/api-reference/store#subscribelistener for more details.');
+      }
+
+      isSubscribed = false;
+      ensureCanMutateNextListeners();
+      var index = nextListeners.indexOf(listener);
+      nextListeners.splice(index, 1);
+      currentListeners = null;
+    };
+  }
+  /**
+   * Dispatches an action. It is the only way to trigger a state change.
+   *
+   * The `reducer` function, used to create the store, will be called with the
+   * current state tree and the given `action`. Its return value will
+   * be considered the **next** state of the tree, and the change listeners
+   * will be notified.
+   *
+   * The base implementation only supports plain object actions. If you want to
+   * dispatch a Promise, an Observable, a thunk, or something else, you need to
+   * wrap your store creating function into the corresponding middleware. For
+   * example, see the documentation for the `redux-thunk` package. Even the
+   * middleware will eventually dispatch plain object actions using this method.
+   *
+   * @param {Object} action A plain object representing “what changed”. It is
+   * a good idea to keep actions serializable so you can record and replay user
+   * sessions, or use the time travelling `redux-devtools`. An action must have
+   * a `type` property which may not be `undefined`. It is a good idea to use
+   * string constants for action types.
+   *
+   * @returns {Object} For convenience, the same action object you dispatched.
+   *
+   * Note that, if you use a custom middleware, it may wrap `dispatch()` to
+   * return something else (for example, a Promise you can await).
+   */
+
+
+  function dispatch(action) {
+    if (!isPlainObject(action)) {
+      throw new Error('Actions must be plain objects. ' + 'Use custom middleware for async actions.');
+    }
+
+    if (typeof action.type === 'undefined') {
+      throw new Error('Actions may not have an undefined "type" property. ' + 'Have you misspelled a constant?');
+    }
+
+    if (isDispatching) {
+      throw new Error('Reducers may not dispatch actions.');
+    }
+
+    try {
+      isDispatching = true;
+      currentState = currentReducer(currentState, action);
+    } finally {
+      isDispatching = false;
+    }
+
+    var listeners = currentListeners = nextListeners;
+
+    for (var i = 0; i < listeners.length; i++) {
+      var listener = listeners[i];
+      listener();
+    }
+
+    return action;
+  }
+  /**
+   * Replaces the reducer currently used by the store to calculate the state.
+   *
+   * You might need this if your app implements code splitting and you want to
+   * load some of the reducers dynamically. You might also need this if you
+   * implement a hot reloading mechanism for Redux.
+   *
+   * @param {Function} nextReducer The reducer for the store to use instead.
+   * @returns {void}
+   */
+
+
+  function replaceReducer(nextReducer) {
+    if (typeof nextReducer !== 'function') {
+      throw new Error('Expected the nextReducer to be a function.');
+    }
+
+    currentReducer = nextReducer; // This action has a similiar effect to ActionTypes.INIT.
+    // Any reducers that existed in both the new and old rootReducer
+    // will receive the previous state. This effectively populates
+    // the new state tree with any relevant data from the old one.
+
+    dispatch({
+      type: ActionTypes.REPLACE
+    });
+  }
+  /**
+   * Interoperability point for observable/reactive libraries.
+   * @returns {observable} A minimal observable of state changes.
+   * For more information, see the observable proposal:
+   * https://github.com/tc39/proposal-observable
+   */
+
+
+  function observable() {
+    var _ref;
+
+    var outerSubscribe = subscribe;
+    return _ref = {
+      /**
+       * The minimal observable subscription method.
+       * @param {Object} observer Any object that can be used as an observer.
+       * The observer object should have a `next` method.
+       * @returns {subscription} An object with an `unsubscribe` method that can
+       * be used to unsubscribe the observable from the store, and prevent further
+       * emission of values from the observable.
+       */
+      subscribe: function subscribe(observer) {
+        if (typeof observer !== 'object' || observer === null) {
+          throw new TypeError('Expected the observer to be an object.');
+        }
+
+        function observeState() {
+          if (observer.next) {
+            observer.next(getState());
+          }
+        }
+
+        observeState();
+        var unsubscribe = outerSubscribe(observeState);
+        return {
+          unsubscribe: unsubscribe
+        };
+      }
+    }, _ref[symbol_observable__WEBPACK_IMPORTED_MODULE_0__["default"]] = function () {
+      return this;
+    }, _ref;
+  } // When a store is created, an "INIT" action is dispatched so that every
+  // reducer returns their initial state. This effectively populates
+  // the initial state tree.
+
+
+  dispatch({
+    type: ActionTypes.INIT
+  });
+  return _ref2 = {
+    dispatch: dispatch,
+    subscribe: subscribe,
+    getState: getState,
+    replaceReducer: replaceReducer
+  }, _ref2[symbol_observable__WEBPACK_IMPORTED_MODULE_0__["default"]] = observable, _ref2;
+}
+
+/**
+ * Prints a warning in the console if it exists.
+ *
+ * @param {String} message The warning message.
+ * @returns {void}
+ */
+function warning(message) {
+  /* eslint-disable no-console */
+  if (typeof console !== 'undefined' && typeof console.error === 'function') {
+    console.error(message);
+  }
+  /* eslint-enable no-console */
+
+
+  try {
+    // This error was thrown as a convenience so that if you enable
+    // "break on all exceptions" in your console,
+    // it would pause the execution at this line.
+    throw new Error(message);
+  } catch (e) {} // eslint-disable-line no-empty
+
+}
+
+function getUndefinedStateErrorMessage(key, action) {
+  var actionType = action && action.type;
+  var actionDescription = actionType && "action \"" + String(actionType) + "\"" || 'an action';
+  return "Given " + actionDescription + ", reducer \"" + key + "\" returned undefined. " + "To ignore an action, you must explicitly return the previous state. " + "If you want this reducer to hold no value, you can return null instead of undefined.";
+}
+
+function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
+  var reducerKeys = Object.keys(reducers);
+  var argumentName = action && action.type === ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
+
+  if (reducerKeys.length === 0) {
+    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';
+  }
+
+  if (!isPlainObject(inputState)) {
+    return "The " + argumentName + " has unexpected type of \"" + {}.toString.call(inputState).match(/\s([a-z|A-Z]+)/)[1] + "\". Expected argument to be an object with the following " + ("keys: \"" + reducerKeys.join('", "') + "\"");
+  }
+
+  var unexpectedKeys = Object.keys(inputState).filter(function (key) {
+    return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];
+  });
+  unexpectedKeys.forEach(function (key) {
+    unexpectedKeyCache[key] = true;
+  });
+  if (action && action.type === ActionTypes.REPLACE) return;
+
+  if (unexpectedKeys.length > 0) {
+    return "Unexpected " + (unexpectedKeys.length > 1 ? 'keys' : 'key') + " " + ("\"" + unexpectedKeys.join('", "') + "\" found in " + argumentName + ". ") + "Expected to find one of the known reducer keys instead: " + ("\"" + reducerKeys.join('", "') + "\". Unexpected keys will be ignored.");
+  }
+}
+
+function assertReducerShape(reducers) {
+  Object.keys(reducers).forEach(function (key) {
+    var reducer = reducers[key];
+    var initialState = reducer(undefined, {
+      type: ActionTypes.INIT
+    });
+
+    if (typeof initialState === 'undefined') {
+      throw new Error("Reducer \"" + key + "\" returned undefined during initialization. " + "If the state passed to the reducer is undefined, you must " + "explicitly return the initial state. The initial state may " + "not be undefined. If you don't want to set a value for this reducer, " + "you can use null instead of undefined.");
+    }
+
+    if (typeof reducer(undefined, {
+      type: ActionTypes.PROBE_UNKNOWN_ACTION()
+    }) === 'undefined') {
+      throw new Error("Reducer \"" + key + "\" returned undefined when probed with a random type. " + ("Don't try to handle " + ActionTypes.INIT + " or other actions in \"redux/*\" ") + "namespace. They are considered private. Instead, you must return the " + "current state for any unknown actions, unless it is undefined, " + "in which case you must return the initial state, regardless of the " + "action type. The initial state may not be undefined, but can be null.");
+    }
+  });
+}
+/**
+ * Turns an object whose values are different reducer functions, into a single
+ * reducer function. It will call every child reducer, and gather their results
+ * into a single state object, whose keys correspond to the keys of the passed
+ * reducer functions.
+ *
+ * @param {Object} reducers An object whose values correspond to different
+ * reducer functions that need to be combined into one. One handy way to obtain
+ * it is to use ES6 `import * as reducers` syntax. The reducers may never return
+ * undefined for any action. Instead, they should return their initial state
+ * if the state passed to them was undefined, and the current state for any
+ * unrecognized action.
+ *
+ * @returns {Function} A reducer function that invokes every reducer inside the
+ * passed object, and builds a state object with the same shape.
+ */
+
+
+function combineReducers(reducers) {
+  var reducerKeys = Object.keys(reducers);
+  var finalReducers = {};
+
+  for (var i = 0; i < reducerKeys.length; i++) {
+    var key = reducerKeys[i];
+
+    if (true) {
+      if (typeof reducers[key] === 'undefined') {
+        warning("No reducer provided for key \"" + key + "\"");
+      }
+    }
+
+    if (typeof reducers[key] === 'function') {
+      finalReducers[key] = reducers[key];
+    }
+  }
+
+  var finalReducerKeys = Object.keys(finalReducers); // This is used to make sure we don't warn about the same
+  // keys multiple times.
+
+  var unexpectedKeyCache;
+
+  if (true) {
+    unexpectedKeyCache = {};
+  }
+
+  var shapeAssertionError;
+
+  try {
+    assertReducerShape(finalReducers);
+  } catch (e) {
+    shapeAssertionError = e;
+  }
+
+  return function combination(state, action) {
+    if (state === void 0) {
+      state = {};
+    }
+
+    if (shapeAssertionError) {
+      throw shapeAssertionError;
+    }
+
+    if (true) {
+      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
+
+      if (warningMessage) {
+        warning(warningMessage);
+      }
+    }
+
+    var hasChanged = false;
+    var nextState = {};
+
+    for (var _i = 0; _i < finalReducerKeys.length; _i++) {
+      var _key = finalReducerKeys[_i];
+      var reducer = finalReducers[_key];
+      var previousStateForKey = state[_key];
+      var nextStateForKey = reducer(previousStateForKey, action);
+
+      if (typeof nextStateForKey === 'undefined') {
+        var errorMessage = getUndefinedStateErrorMessage(_key, action);
+        throw new Error(errorMessage);
+      }
+
+      nextState[_key] = nextStateForKey;
+      hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
+    }
+
+    hasChanged = hasChanged || finalReducerKeys.length !== Object.keys(state).length;
+    return hasChanged ? nextState : state;
+  };
+}
+
+function bindActionCreator(actionCreator, dispatch) {
+  return function () {
+    return dispatch(actionCreator.apply(this, arguments));
+  };
+}
+/**
+ * Turns an object whose values are action creators, into an object with the
+ * same keys, but with every function wrapped into a `dispatch` call so they
+ * may be invoked directly. This is just a convenience method, as you can call
+ * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.
+ *
+ * For convenience, you can also pass an action creator as the first argument,
+ * and get a dispatch wrapped function in return.
+ *
+ * @param {Function|Object} actionCreators An object whose values are action
+ * creator functions. One handy way to obtain it is to use ES6 `import * as`
+ * syntax. You may also pass a single function.
+ *
+ * @param {Function} dispatch The `dispatch` function available on your Redux
+ * store.
+ *
+ * @returns {Function|Object} The object mimicking the original object, but with
+ * every action creator wrapped into the `dispatch` call. If you passed a
+ * function as `actionCreators`, the return value will also be a single
+ * function.
+ */
+
+
+function bindActionCreators(actionCreators, dispatch) {
+  if (typeof actionCreators === 'function') {
+    return bindActionCreator(actionCreators, dispatch);
+  }
+
+  if (typeof actionCreators !== 'object' || actionCreators === null) {
+    throw new Error("bindActionCreators expected an object or a function, instead received " + (actionCreators === null ? 'null' : typeof actionCreators) + ". " + "Did you write \"import ActionCreators from\" instead of \"import * as ActionCreators from\"?");
+  }
+
+  var boundActionCreators = {};
+
+  for (var key in actionCreators) {
+    var actionCreator = actionCreators[key];
+
+    if (typeof actionCreator === 'function') {
+      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
+    }
+  }
+
+  return boundActionCreators;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    keys.push.apply(keys, Object.getOwnPropertySymbols(object));
+  }
+
+  if (enumerableOnly) keys = keys.filter(function (sym) {
+    return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+  });
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(source, true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(source).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+/**
+ * Composes single-argument functions from right to left. The rightmost
+ * function can take multiple arguments as it provides the signature for
+ * the resulting composite function.
+ *
+ * @param {...Function} funcs The functions to compose.
+ * @returns {Function} A function obtained by composing the argument functions
+ * from right to left. For example, compose(f, g, h) is identical to doing
+ * (...args) => f(g(h(...args))).
+ */
+function compose() {
+  for (var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++) {
+    funcs[_key] = arguments[_key];
+  }
+
+  if (funcs.length === 0) {
+    return function (arg) {
+      return arg;
+    };
+  }
+
+  if (funcs.length === 1) {
+    return funcs[0];
+  }
+
+  return funcs.reduce(function (a, b) {
+    return function () {
+      return a(b.apply(void 0, arguments));
+    };
+  });
+}
+
+/**
+ * Creates a store enhancer that applies middleware to the dispatch method
+ * of the Redux store. This is handy for a variety of tasks, such as expressing
+ * asynchronous actions in a concise manner, or logging every action payload.
+ *
+ * See `redux-thunk` package as an example of the Redux middleware.
+ *
+ * Because middleware is potentially asynchronous, this should be the first
+ * store enhancer in the composition chain.
+ *
+ * Note that each middleware will be given the `dispatch` and `getState` functions
+ * as named arguments.
+ *
+ * @param {...Function} middlewares The middleware chain to be applied.
+ * @returns {Function} A store enhancer applying the middleware.
+ */
+
+function applyMiddleware() {
+  for (var _len = arguments.length, middlewares = new Array(_len), _key = 0; _key < _len; _key++) {
+    middlewares[_key] = arguments[_key];
+  }
+
+  return function (createStore) {
+    return function () {
+      var store = createStore.apply(void 0, arguments);
+
+      var _dispatch = function dispatch() {
+        throw new Error('Dispatching while constructing your middleware is not allowed. ' + 'Other middleware would not be applied to this dispatch.');
+      };
+
+      var middlewareAPI = {
+        getState: store.getState,
+        dispatch: function dispatch() {
+          return _dispatch.apply(void 0, arguments);
+        }
+      };
+      var chain = middlewares.map(function (middleware) {
+        return middleware(middlewareAPI);
+      });
+      _dispatch = compose.apply(void 0, chain)(store.dispatch);
+      return _objectSpread2({}, store, {
+        dispatch: _dispatch
+      });
+    };
+  };
+}
+
+/*
+ * This is a dummy function to check if the function name has been altered by minification.
+ * If the function has been minified and NODE_ENV !== 'production', warn the user.
+ */
+
+function isCrushed() {}
+
+if ( true && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
+  warning('You are currently using minified code outside of NODE_ENV === "production". ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or setting mode to production in webpack (https://webpack.js.org/concepts/mode/) ' + 'to ensure you have the correct code for your production build.');
+}
+
+
+
+
+/***/ }),
+
+/***/ "../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/symbol-observable/es/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var _ponyfill_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/symbol-observable/es/ponyfill.js");
+/* global window */
+
+
+var root;
+
+if (typeof self !== 'undefined') {
+  root = self;
+} else if (typeof window !== 'undefined') {
+  root = window;
+} else if (typeof global !== 'undefined') {
+  root = global;
+} else if (true) {
+  root = module;
+} else {}
+
+var result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__["default"])(root);
+/* harmony default export */ __webpack_exports__["default"] = (result);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("../../../../../usr/local/data/service/node_modules/webpack/buildin/global.js"), __webpack_require__("../../../../../usr/local/data/service/node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
+/***/ "../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/symbol-observable/es/ponyfill.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return symbolObservablePonyfill; });
+function symbolObservablePonyfill(root) {
+	var result;
+	var Symbol = root.Symbol;
+
+	if (typeof Symbol === 'function') {
+		if (Symbol.observable) {
+			result = Symbol.observable;
+		} else {
+			result = Symbol('observable');
+			Symbol.observable = result;
+		}
+	} else {
+		result = '@@observable';
+	}
+
+	return result;
+};
+
+
+/***/ }),
+
+/***/ "../store.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module) {if (!!(typeof window !== 'undefined' && window.document) && !window.global) {
+  window.global = window;
+} // compatibility
+
+
+window.__RENDER_7_COMPONENTS__ = window.__RENDER_7_COMPONENTS__ ? window.__RENDER_7_COMPONENTS__ : {};
+window.__RENDER_7_HOT__ = window.__RENDER_7_HOT__ ? window.__RENDER_7_HOT__ : {};
+
+function dep(m) {
+  return m.__esModule ? m.default : m.default || m;
+}
+
+;
+var host = window.__hostname__;
+var assetsPath = '/_v/public/assets/v1/published/';
+
+if (!!(typeof window !== 'undefined' && window.document) && window.__RUNTIME__) {
+  var generatorMetaTag = document.querySelector("meta[name='generator']");
+  var generator = generatorMetaTag && generatorMetaTag.getAttribute('content');
+  var isRenderGenerator = generator && generator.indexOf('vtex.render-server') === 0;
+  var env = __RUNTIME__.publicEndpoint || 'myvtex.com';
+  host = isRenderGenerator ? window.location.hostname : __RUNTIME__.workspace + '--' + __RUNTIME__.account + '.' + env;
+  assetsPath =  false ? undefined : __RUNTIME__.assetServerPublishedPath || '/_v/public/assets/v1/published/';
+}
+
+__webpack_require__.p = 'https://' + host + assetsPath + 'vtex.shipping-manager@0.13.30/public/react/';
+var entry;
+
+try {
+  entry = dep(__webpack_require__("./react/store.js"));
+} catch (error) {
+  throw new Error("An error happened while requiring the app vtex.shipping-manager@0.13.30/store, please check your app's code.\n ".concat(error.stack));
+}
+
+if (window.__RENDER_7_RUNTIME__ && window.__RENDER_7_RUNTIME__.withHMR) {
+  window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.13.30/store'] = window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.x/store'] = window.__RENDER_7_RUNTIME__.withHMR(module, entry);
+} else {
+  window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.13.30/store'] = window.__RENDER_7_COMPONENTS__['vtex.shipping-manager@0.x/store'] = entry;
+}
+
+if (false) {}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("../../../../../usr/local/data/service/node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
+/***/ "./react/reducers/account-info-reducer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_vtex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./react/utils/vtex.js");
+
+var defaultState = {
+  loadingAccountInfo: false,
+  acceptSearchKeys: ['postalCode'],
+  googleMapsKey: Object(_utils_vtex__WEBPACK_IMPORTED_MODULE_0__["getGoogleMapsApiKey"])(),
+  geolocation: Object(_utils_vtex__WEBPACK_IMPORTED_MODULE_0__["getGeolocationSettings"])(),
+  accountName: Object(_utils_vtex__WEBPACK_IMPORTED_MODULE_0__["getAccountName"])()
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    default:
+      return state;
+  }
+});
+
+/***/ }),
+
+/***/ "./react/reducers/address-form-reducer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/get.js");
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_isEqual__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/isEqual.js");
+/* harmony import */ var lodash_isEqual__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_isEqual__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("vtex.address-form/helpers");
+/* harmony import */ var vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _utils_vtex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/utils/vtex.js");
+/* harmony import */ var _actions_action_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/actions/action-types.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./react/constants/index.js");
+/* harmony import */ var _utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./react/utils/AddressFormUtils.js");
+/* harmony import */ var _utils_SlasUtils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./react/utils/SlasUtils.js");
+/* harmony import */ var _utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./react/utils/DeliveryChannelsUtils.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+
+var addValidation = vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_2___default.a.addValidation,
+    isValidAddress = vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_2___default.a.isValidAddress,
+    validateField = vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_2___default.a.validateField;
+var defaultState = {
+  addresses: {},
+  valid: null,
+  receiverName: null,
+  alreadyCompletedReceiverName: false,
+  queuedValidations: [],
+  shouldSubmit: false
+};
+
+var filterValidationsQueue = function filterValidationsQueue(queue, validationType) {
+  return queue ? queue.filter(function (validation) {
+    return validation !== validationType;
+  }) : [];
+};
+
+var validateAddress = function validateAddress(address) {
+  var validatedAddress = addValidation(address);
+  validatedAddress.isDisposable = {
+    value: address.isDisposable
+  };
+  return validatedAddress;
+};
+
+var isDisposable = function isDisposable(address) {
+  return address && address.isDisposable && (address.isDisposable === true || address.isDisposable.value === true);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["UPDATE_ORDERFORM"]:
+      {
+        var shippingData = 'orderForm.shippingData';
+        var canEditData = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action.orderForm, 'canEditData');
+
+        var _getActionAddresses = Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["getActionAddresses"])(action),
+            actionResidentialAddress = _getActionAddresses.residentialAddress,
+            actionSearchAddress = _getActionAddresses.searchAddress;
+
+        if (actionResidentialAddress && !actionResidentialAddress.addressType) {
+          actionResidentialAddress.addressType = _constants__WEBPACK_IMPORTED_MODULE_5__["RESIDENTIAL"];
+        }
+
+        var addresses = state.addresses,
+            residentialId = state.residentialId,
+            searchId = state.searchId;
+        var hasSlas = action.orderForm && lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action.orderForm, 'shippingData.logisticsInfo') && action.orderForm.shippingData.logisticsInfo.find(function (li) {
+          return Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_7__["hasSLAs"])(li);
+        });
+        var isSameDeliveryAddress = Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["isActionAddressEqualState"])(actionResidentialAddress, residentialId, addresses);
+        var isSameSearchAddress = Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["isActionAddressEqualState"])(actionSearchAddress, searchId, addresses);
+        var shouldAvoidUpdatingAddresses = !lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action, shippingData) || !lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action, "".concat(shippingData, ".selectedAddresses")) || isSameDeliveryAddress && isSameSearchAddress;
+        var receiverName = Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["getReceiverName"])(state, action, canEditData);
+
+        if (shouldAvoidUpdatingAddresses && canEditData === state.localCanEditData) {
+          var _objectSpread2;
+
+          var updatedAddresses = addresses[residentialId] && _objectSpread(_objectSpread({}, addresses), {}, (_objectSpread2 = {}, _defineProperty(_objectSpread2, residentialId, _objectSpread(_objectSpread({}, addresses[residentialId]), {}, {
+            postalCode: _objectSpread(_objectSpread({}, addresses[residentialId].postalCode), !hasSlas || action.isOmniShippingCompleted || action.showSlasList ? {
+              loading: false
+            } : {})
+          })), _defineProperty(_objectSpread2, searchId, _objectSpread({}, addresses[searchId])), _objectSpread2));
+
+          return _objectSpread(_objectSpread({}, state), {}, {
+            localCanEditData: action.orderForm && action.orderForm.canEditData,
+            addresses: updatedAddresses || addresses
+          });
+        }
+
+        var actionCountryCode = action.orderForm.storePreferencesData.countryCode;
+        var newCopyAddress = Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["newAddress"])(_objectSpread(_objectSpread({}, action.orderForm && action.orderForm.canEditData && actionResidentialAddress && actionResidentialAddress.addressType !== _constants__WEBPACK_IMPORTED_MODULE_5__["GIFT_REGISTRY"] ? actionResidentialAddress : {}), {}, {
+          country: actionResidentialAddress && actionResidentialAddress.country || actionCountryCode,
+          addressId: searchId || undefined,
+          addressType: _constants__WEBPACK_IMPORTED_MODULE_5__["SEARCH"],
+          receiverName: receiverName,
+          addressQuery: ''
+        }));
+        var newResidentialAddress = Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["newAddress"])({
+          country: actionCountryCode,
+          addressId: residentialId || undefined,
+          addressType: _constants__WEBPACK_IMPORTED_MODULE_5__["RESIDENTIAL"],
+          receiverName: receiverName,
+          addressQuery: ''
+        });
+        var newSearchAddressWithValidation = validateAddress(newCopyAddress);
+        var newDeliveryAddressWithValidation = validateAddress(newResidentialAddress);
+
+        if (actionResidentialAddress && actionSearchAddress) {
+          var _objectSpread3;
+
+          var newIds = {
+            residential: actionResidentialAddress.addressId || residentialId,
+            search: actionSearchAddress.addressId || searchId
+          };
+          return _objectSpread(_objectSpread({}, state), {}, {
+            addresses: _objectSpread(_objectSpread({}, addresses), {}, (_objectSpread3 = {}, _defineProperty(_objectSpread3, newIds.search, validateAddress(_objectSpread(_objectSpread({}, actionSearchAddress), {}, {
+              addressId: newIds.search,
+              addressQuery: ''
+            }))), _defineProperty(_objectSpread3, newIds.residential, Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["addPostalCodeAutoCompleted"])(validateAddress(_objectSpread(_objectSpread({}, actionResidentialAddress), {}, {
+              addressId: newIds.residential,
+              addressQuery: ''
+            })), action.geolocation)), _objectSpread3)),
+            localCanEditData: action.orderForm && action.orderForm.canEditData,
+            valid: Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["isGiftRegistry"])(actionResidentialAddress) || state.valid,
+            searchId: newIds.search,
+            residentialId: newIds.residential,
+            receiverName: canEditData ? receiverName : undefined
+          });
+        }
+
+        if (!actionResidentialAddress && actionSearchAddress) {
+          var _objectSpread4;
+
+          var _newIds = {
+            residential: residentialId || newDeliveryAddressWithValidation.addressId.value,
+            search: actionSearchAddress.addressId || searchId
+          };
+          var newSearch = Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["addPostalCodeAutoCompleted"])(Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["unifyAddress"])(state.addresses[state.searchId], validateAddress(_objectSpread(_objectSpread({}, actionSearchAddress), {}, {
+            addressId: _newIds.search,
+            addressQuery: ''
+          }))), action.geolocation);
+          return _objectSpread(_objectSpread({}, state), {}, {
+            addresses: _objectSpread(_objectSpread({}, addresses), {}, (_objectSpread4 = {}, _defineProperty(_objectSpread4, _newIds.residential, Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["unifyAddress"])(newDeliveryAddressWithValidation, state.addresses[_newIds.residential])), _defineProperty(_objectSpread4, _newIds.search, newSearch), _objectSpread4)),
+            localCanEditData: action.orderForm && action.orderForm.canEditData,
+            valid: Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["isGiftRegistry"])(actionResidentialAddress) || state.valid,
+            residentialId: _newIds.residential,
+            searchId: actionSearchAddress.addressId || searchId,
+            receiverName: canEditData ? receiverName : undefined
+          });
+        }
+
+        if (actionResidentialAddress && !actionSearchAddress) {
+          var _objectSpread5;
+
+          var _newIds2 = {
+            residential: actionResidentialAddress.addressId || residentialId,
+            search: searchId || newSearchAddressWithValidation.addressId.value
+          };
+          var newResidential = Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["addPostalCodeAutoCompleted"])(Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["unifyAddress"])(state.addresses[state.residentialId], validateAddress(_objectSpread(_objectSpread({}, actionResidentialAddress), {}, {
+            addressId: _newIds2.residential,
+            addressQuery: ''
+          }))), action.geolocation);
+          return _objectSpread(_objectSpread({}, state), {}, {
+            addresses: _objectSpread(_objectSpread({}, addresses), {}, (_objectSpread5 = {}, _defineProperty(_objectSpread5, _newIds2.residential, newResidential), _defineProperty(_objectSpread5, _newIds2.search, newSearchAddressWithValidation), _objectSpread5)),
+            localCanEditData: action.orderForm && action.orderForm.canEditData,
+            valid: Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["isGiftRegistry"])(actionResidentialAddress) || state.valid,
+            residentialId: _newIds2.residential,
+            searchId: _newIds2.search,
+            receiverName: canEditData ? receiverName : undefined
+          });
+        }
+
+        var hasPostalCode = state.addresses[state.residentialId] && state.addresses[state.residentialId].postalCode.value;
+
+        if (!hasPostalCode && !actionResidentialAddress && !actionSearchAddress) {
+          var _objectSpread6;
+
+          var _newIds3 = {
+            residential: newDeliveryAddressWithValidation.addressId.value,
+            search: newSearchAddressWithValidation.addressId.value
+          };
+          return _objectSpread(_objectSpread({}, state), {}, {
+            addresses: _objectSpread(_objectSpread({}, addresses), {}, (_objectSpread6 = {}, _defineProperty(_objectSpread6, _newIds3.residential, Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["unifyAddress"])(state.addresses[_newIds3.residential], Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["addPostalCodeAutoCompleted"])(newDeliveryAddressWithValidation, action.geolocation))), _defineProperty(_objectSpread6, _newIds3.search, Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["unifyAddress"])(state.addresses[_newIds3.search], newSearchAddressWithValidation)), _objectSpread6)),
+            localCanEditData: action.orderForm && action.orderForm.canEditData,
+            valid: Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["isGiftRegistry"])(newDeliveryAddressWithValidation) || state.valid,
+            residentialId: _newIds3.residential,
+            searchId: _newIds3.search,
+            receiverName: canEditData ? receiverName : undefined
+          });
+        }
+
+        return _objectSpread(_objectSpread({}, state), {}, {
+          localCanEditData: action.orderForm && action.orderForm.canEditData,
+          receiverName: canEditData ? receiverName : undefined
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["CLOSE_PICKUP_MODAL"]:
+      {
+        var _action$rules, _action$activePickupP, _action$activePickupP2;
+
+        var geolocation = Object(_utils_vtex__WEBPACK_IMPORTED_MODULE_3__["getGeolocationSettings"])();
+
+        var _isValidAddress = isValidAddress(state.addresses[state.searchId], geolocation ? action === null || action === void 0 ? void 0 : (_action$rules = action.rules) === null || _action$rules === void 0 ? void 0 : _action$rules.geolocation : action === null || action === void 0 ? void 0 : action.rules),
+            valid = _isValidAddress.valid;
+
+        var selectedPickUpPointAddress = (_action$activePickupP = action.activePickupPoint) === null || _action$activePickupP === void 0 ? void 0 : (_action$activePickupP2 = _action$activePickupP.pickupStoreInfo) === null || _action$activePickupP2 === void 0 ? void 0 : _action$activePickupP2.address;
+
+        if (!valid && selectedPickUpPointAddress) {
+          var _updatedAddresses = _objectSpread(_objectSpread({}, state.addresses), {}, _defineProperty({}, state.searchId, _objectSpread(_objectSpread({}, addValidation(selectedPickUpPointAddress)), {}, {
+            addressType: {
+              value: _constants__WEBPACK_IMPORTED_MODULE_5__["SEARCH"]
+            }
+          })));
+
+          return _objectSpread(_objectSpread({}, state), {}, {
+            addresses: _updatedAddresses || state.addresses
+          });
+        }
+
+        return state;
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["CHANGE_ACTIVE_TAB"]:
+      {
+        var _pickup$activePickupP;
+
+        var address = action.address,
+            _canEditData = action.canEditData,
+            pickup = action.pickup;
+        var shouldUpdate = _canEditData && state.addresses[state.searchId] && state.addresses[state.searchId].geoCoordinates.value.length > 0 && action.pickupOptions.length === 0 && Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_8__["isDelivery"])(action.channel);
+
+        var _updatedAddresses2 = shouldUpdate && _objectSpread(_objectSpread({}, state.addresses), {}, _defineProperty({}, state.searchId, _objectSpread(_objectSpread({}, state.addresses[state.residentialId]), {}, {
+          addressType: {
+            value: _constants__WEBPACK_IMPORTED_MODULE_5__["SEARCH"]
+          },
+          addressId: state.addresses[state.searchId] && state.addresses[state.searchId].addressId
+        })));
+
+        var selectedPickUpPointId = pickup === null || pickup === void 0 ? void 0 : (_pickup$activePickupP = pickup.activePickupPoint) === null || _pickup$activePickupP === void 0 ? void 0 : _pickup$activePickupP.id;
+        var isPickUpPointDeliveryChannel = !Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_8__["isDelivery"])(action.channel);
+
+        if (selectedPickUpPointId && isPickUpPointDeliveryChannel) {
+          var _selectedPickUpPoint$;
+
+          var selectedPickUpPoint = pickup.activePickupPoint;
+
+          var _selectedPickUpPointAddress = selectedPickUpPoint === null || selectedPickUpPoint === void 0 ? void 0 : (_selectedPickUpPoint$ = selectedPickUpPoint.pickupStoreInfo) === null || _selectedPickUpPoint$ === void 0 ? void 0 : _selectedPickUpPoint$.address;
+
+          _updatedAddresses2 = _objectSpread(_objectSpread({}, state.addresses), {}, _defineProperty({}, state.searchId, _objectSpread(_objectSpread({}, addValidation(_selectedPickUpPointAddress)), {}, {
+            addressType: {
+              value: _constants__WEBPACK_IMPORTED_MODULE_5__["SEARCH"]
+            }
+          })));
+        }
+
+        var obj = _objectSpread(_objectSpread({}, state), {}, {
+          addresses: _updatedAddresses2 || state.addresses
+        });
+
+        if (!Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_8__["isDelivery"])(action.channel) && lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(address, 'addressType.value') === 'residential') {
+          obj.lastResidentialId = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(address, 'addressId.value');
+        }
+
+        return obj;
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["SIMULATE_SHIPPING_FAILURE"]: // eslint-disable-next-line no-fallthrough
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["UPDATE_SHIPPING_FAILURE"]: // eslint-disable-next-line no-fallthrough
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["UPDATE_SIMULATION_OPTIONS"]:
+      {
+        var _updatedAddresses3 = state.addresses[state.residentialId] && _objectSpread(_objectSpread({}, state.addresses), {}, _defineProperty({}, state.residentialId, _objectSpread(_objectSpread({}, state.addresses[state.residentialId]), {}, {
+          postalCode: _objectSpread(_objectSpread({}, state.addresses[state.residentialId].postalCode), {}, {
+            loading: false
+          })
+        })));
+
+        return _objectSpread(_objectSpread({}, state), {}, {
+          addresses: _updatedAddresses3 || state.addresses
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["UPDATE_SHIPPING_REQUEST"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          addresses: _objectSpread(_objectSpread({}, state.addresses), {}, _defineProperty({}, state.residentialId, _objectSpread(_objectSpread({}, state.addresses[state.residentialId]), {}, {
+            postalCode: _objectSpread(_objectSpread({}, state.addresses[state.residentialId].postalCode), {}, {
+              loading: action.loading
+            })
+          })))
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["VALIDATE_ADDRESS_FORM"]: // We intentionally fallthrough these two actions since their
+    // code should be almost the same
+    // eslint-disable-next-line no-fallthrough
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["VALIDATE_ADDRESS_FORM_FIELDS"]:
+      {
+        if (!action.rules) {
+          return _objectSpread(_objectSpread({}, state), {}, {
+            queuedValidations: [].concat(_toConsumableArray(state.queuedValidations || []), [action.type])
+          });
+        }
+
+        var _isValidAddress2 = isValidAddress(state.addresses[state.residentialId], action.geolocation ? action.rules.geolocation : action.rules),
+            _valid = _isValidAddress2.valid,
+            _address = _isValidAddress2.address;
+
+        return _objectSpread(_objectSpread({}, state), {}, {
+          addresses: _objectSpread(_objectSpread({}, state.addresses), {}, _defineProperty({}, state.residentialId, // For VALIDATE_ADDRESS_FORM we don't want to update
+          // the address on state with the validated address because
+          // it would override any updates made to the address (such
+          // as removing the `focus` attribute from already focused
+          // fields)
+          action.type === _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["VALIDATE_ADDRESS_FORM"] ? state.addresses[state.residentialId] : Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["unifyAddress"])(state.addresses[state.residentialId], _address))),
+          valid: Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["isGiftRegistry"])(state.addresses[state.residentialId]) || _valid,
+          queuedValidations: filterValidationsQueue(state.queuedValidations, action.type)
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["VALIDATE_POSTAL_CODE"]:
+      {
+        if (!action.rules) {
+          return _objectSpread(_objectSpread({}, state), {}, {
+            queuedValidations: [].concat(_toConsumableArray(state.queuedValidations || []), [action.type])
+          });
+        }
+
+        return _objectSpread(_objectSpread({}, state), {}, {
+          addresses: _objectSpread(_objectSpread({}, state.addresses), {}, _defineProperty({}, state.residentialId, _objectSpread(_objectSpread({}, state.addresses[state.residentialId]), {}, {
+            postalCode: _objectSpread(_objectSpread({}, state.addresses[state.residentialId].postalCode), validateField(state.addresses[state.residentialId].postalCode.value, 'postalCode', state.addresses[state.residentialId], action.geolocation ? action.rules.geolocation : action.rules))
+          }))),
+          queuedValidations: filterValidationsQueue(state.queuedValidations, action.type)
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["VALIDATE_NUMBER"]:
+      {
+        if (!action.rules) {
+          return _objectSpread(_objectSpread({}, state), {}, {
+            queuedValidations: [].concat(_toConsumableArray(state.queuedValidations || []), [action.type])
+          });
+        }
+
+        return _objectSpread(_objectSpread({}, state), {}, {
+          addresses: _objectSpread(_objectSpread({}, state.addresses), {}, _defineProperty({}, state.residentialId, _objectSpread(_objectSpread({}, state.addresses[state.residentialId]), {}, {
+            number: _objectSpread(_objectSpread({}, state.addresses[state.residentialId].number), validateField(state.addresses[state.residentialId].number.value, 'number', state.addresses[state.residentialId], action.rules))
+          }))),
+          queuedValidations: filterValidationsQueue(state.queuedValidations, action.type)
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["UPDATE_ADDRESS_FORM"]:
+      {
+        var _action$address$recei, _action$address$recei2, _action$searchAddress, _action$searchAddress2, _action$address$recei3, _action$address$recei4, _action$address$posta, _action$address$posta2, _action$address$posta3, _action$searchAddress3, _action$address$posta4, _addresses3;
+
+        // TODO: Break this monster up
+        // Sets default values, to allow passing in items which you
+        // don't want to update as `undefined`.
+        // TODO: remove the need for doing this
+        if (!action.address) {
+          action.address = state.addresses[state.residentialId];
+        }
+
+        if (!action.searchAddress) {
+          action.searchAddress = state.addresses[state.searchId];
+        }
+
+        if (!action.address.country || !action.address.country.value) {
+          action.address.country = {
+            value: action.countryCode
+          };
+        }
+
+        if (action.shouldSubmit == null) {
+          action.shouldSubmit = false;
+        }
+
+        var _canEditData2 = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action, 'orderForm.canEditData');
+
+        var _receiverName = state.receiverName; // We compare using "!= null" because we want to include the empty string
+
+        if ((_canEditData2 || !isDisposable(action.address)) && ((_action$address$recei = action.address.receiverName) === null || _action$address$recei === void 0 ? void 0 : _action$address$recei.value) != null && ((_action$address$recei2 = action.address.receiverName) === null || _action$address$recei2 === void 0 ? void 0 : _action$address$recei2.value) !== state.receiverName) {
+          _receiverName = action.address.receiverName.value;
+        } else if (((_action$searchAddress = action.searchAddress.receiverName) === null || _action$searchAddress === void 0 ? void 0 : _action$searchAddress.value) != null && ((_action$searchAddress2 = action.searchAddress.receiverName) === null || _action$searchAddress2 === void 0 ? void 0 : _action$searchAddress2.value) !== state.receiverName) {
+          _receiverName = action.searchAddress.receiverName.value;
+        }
+
+        var disposableName = (_action$address$recei3 = (_action$address$recei4 = action.address.receiverName) === null || _action$address$recei4 === void 0 ? void 0 : _action$address$recei4.value) !== null && _action$address$recei3 !== void 0 ? _action$address$recei3 : '';
+        var currentSearchAddress = state.addresses[state.searchId];
+        var isChangingCountry = action.address.country.value !== currentSearchAddress.country.value; // Updates both residential and search addresses
+        // with the residential address
+
+        if ((lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action, 'searchAddress.geoCoordinates.value') && action.searchAddress.geoCoordinates.value.length === 0 || isChangingCountry) && ((_action$address$posta = action.address.postalCode) === null || _action$address$posta === void 0 ? void 0 : _action$address$posta.valid) && !((_action$address$posta2 = action.address.postalCode) === null || _action$address$posta2 === void 0 ? void 0 : _action$address$posta2.loading) && !lodash_isEqual__WEBPACK_IMPORTED_MODULE_1___default()(action.address, state.addresses[state.residentialId])) {
+          var _addresses;
+
+          return _objectSpread(_objectSpread({}, state), {}, {
+            shouldSubmit: action.shouldSubmit,
+            alreadyCompletedReceiverName: !!state.receiverName,
+            receiverName: _receiverName,
+            addresses: (_addresses = {}, _defineProperty(_addresses, state.residentialId, _objectSpread(_objectSpread({}, action.address), {}, {
+              addressId: state.addresses[state.residentialId].addressId,
+              postalCode: _objectSpread(_objectSpread(_objectSpread({}, state.addresses[state.residentialId].postalCode), action.address.postalCode), {}, {
+                loading: action.isOmniShippingCompleted ? false : action.address.postalCode.loading || state.addresses[state.residentialId].postalCode.loading
+              }),
+              receiverName: _objectSpread(_objectSpread(_objectSpread({}, state.addresses[state.residentialId].receiverName), action.address.receiverName), {}, {
+                value: !_canEditData2 && isDisposable(state.addresses[state.residentialId]) ? disposableName : _receiverName
+              })
+            })), _defineProperty(_addresses, state.searchId, _objectSpread(_objectSpread({}, action.address), {}, {
+              addressType: {
+                value: _constants__WEBPACK_IMPORTED_MODULE_5__["SEARCH"]
+              },
+              receiverName: _objectSpread(_objectSpread(_objectSpread({}, state.addresses[state.searchId].receiverName), action.searchAddress.receiverName), {}, {
+                value: _receiverName
+              }),
+              addressId: state.addresses[state.searchId].addressId
+            })), _addresses)
+          });
+        } // Updates search address
+
+
+        if (((_action$address$posta3 = action.address.postalCode) === null || _action$address$posta3 === void 0 ? void 0 : _action$address$posta3.value) == null && ((_action$searchAddress3 = action.searchAddress.postalCode) === null || _action$searchAddress3 === void 0 ? void 0 : _action$searchAddress3.valid) && !action.searchAddress.postalCode.loading && !lodash_isEqual__WEBPACK_IMPORTED_MODULE_1___default()(action.searchAddress, state.addresses[state.searchId])) {
+          var _addresses2;
+
+          return _objectSpread(_objectSpread({}, state), {}, {
+            shouldSubmit: action.shouldSubmit,
+            alreadyCompletedReceiverName: !!state.receiverName,
+            receiverName: _receiverName,
+            addresses: (_addresses2 = {}, _defineProperty(_addresses2, state.residentialId, _objectSpread(_objectSpread({}, state.addresses[state.residentialId]), {}, {
+              postalCode: _objectSpread(_objectSpread(_objectSpread({}, state.addresses[state.residentialId].postalCode), action.address.postalCode), {}, {
+                loading: action.isOmniShippingCompleted ? false : action.address.postalCode.loading || state.addresses[state.residentialId].postalCode.loading
+              }),
+              receiverName: _objectSpread(_objectSpread(_objectSpread({}, state.addresses[state.residentialId].receiverName), action.address.receiverName), {}, {
+                value: !_canEditData2 && isDisposable(state.addresses[state.residentialId]) ? disposableName : _receiverName
+              })
+            })), _defineProperty(_addresses2, state.searchId, _objectSpread(_objectSpread({}, action.searchAddress), {}, {
+              addressType: {
+                value: _constants__WEBPACK_IMPORTED_MODULE_5__["SEARCH"]
+              },
+              receiverName: _objectSpread(_objectSpread(_objectSpread({}, state.addresses[state.searchId].receiverName), action.searchAddress.receiverName), {}, {
+                value: _receiverName
+              }),
+              addressId: state.addresses[state.searchId].addressId
+            })), _addresses2)
+          });
+        } // Refrain from updating, if addresses are equal with state addresses
+
+
+        if (lodash_isEqual__WEBPACK_IMPORTED_MODULE_1___default()(action.address, state.addresses[state.residentialId]) && lodash_isEqual__WEBPACK_IMPORTED_MODULE_1___default()(action.searchAddress, state.addresses[state.searchId])) {
+          return state;
+        }
+
+        return _objectSpread(_objectSpread({}, state), {}, {
+          shouldSubmit: action.shouldSubmit,
+          alreadyCompletedReceiverName: !!state.receiverName,
+          receiverName: _receiverName,
+          addresses: (_addresses3 = {}, _defineProperty(_addresses3, state.residentialId, _objectSpread(_objectSpread(_objectSpread({}, state.addresses[state.residentialId]), action.address), {}, {
+            postalCode: _objectSpread(_objectSpread(_objectSpread({}, state.addresses[state.residentialId].postalCode), action.address.postalCode), {}, {
+              loading: action.isOmniShippingCompleted ? false : ((_action$address$posta4 = action.address.postalCode) === null || _action$address$posta4 === void 0 ? void 0 : _action$address$posta4.loading) || state.addresses[state.residentialId].postalCode.loading
+            }),
+            addressId: state.addresses[state.residentialId].addressId,
+            receiverName: _objectSpread(_objectSpread(_objectSpread({}, state.addresses[state.residentialId].receiverName), action.address.receiverName), {}, {
+              value: !_canEditData2 && isDisposable(state.addresses[state.residentialId]) ? disposableName : _receiverName
+            })
+          })), _defineProperty(_addresses3, state.searchId, _objectSpread(_objectSpread(_objectSpread({}, state.addresses[state.searchId]), action.searchAddress), {}, {
+            addressType: {
+              value: _constants__WEBPACK_IMPORTED_MODULE_5__["SEARCH"]
+            },
+            receiverName: _objectSpread(_objectSpread(_objectSpread({}, state.addresses[state.searchId].receiverName), action.searchAddress.receiverName), {}, {
+              value: _receiverName
+            }),
+            addressId: state.addresses[state.searchId].addressId
+          })), _addresses3)
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["ADD_ADDRESS_FORM_ADDRESS"]:
+      {
+        var _canEditData3 = action.canEditData;
+
+        if (action.searchAddress) {
+          var _objectSpread15;
+
+          return _objectSpread(_objectSpread({}, state), {}, {
+            addresses: _objectSpread(_objectSpread({}, state.addresses), {}, (_objectSpread15 = {}, _defineProperty(_objectSpread15, action.address.addressId, validateAddress(_objectSpread(_objectSpread({}, action.address), {}, {
+              receiverName: action.address.receiverName || (_canEditData3 ? Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["formatReceiverName"])(action) || state.receiverName : ''),
+              addressQuery: ''
+            }))), _defineProperty(_objectSpread15, action.searchAddress.addressId, validateAddress(_objectSpread(_objectSpread({}, action.searchAddress), {}, {
+              addressType: {
+                value: _constants__WEBPACK_IMPORTED_MODULE_5__["SEARCH"]
+              },
+              receiverName: action.address.receiverName || (_canEditData3 ? Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["formatReceiverName"])(action) || state.receiverName : ''),
+              addressQuery: ''
+            }))), _objectSpread15)),
+            residentialId: action.address.addressId,
+            lastResidentialId: state.residentialId,
+            searchId: action.searchAddress.addressId
+          });
+        }
+
+        return _objectSpread(_objectSpread({}, state), {}, {
+          addresses: _objectSpread(_objectSpread({}, state.addresses), {}, _defineProperty({}, action.address.addressId, validateAddress(_objectSpread(_objectSpread({}, action.address), {}, {
+            addressQuery: ''
+          })))),
+          lastResidentialId: state.residentialId,
+          residentialId: action.address.addressId
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["NEW_ADDRESS"]: // eslint-disable-next-line no-fallthrough
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["EDIT_ADDRESS"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          lastResidentialId: action.addressId || state.residentialId,
+          residentialId: action.addressId || state.residentialId
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["SELECT_ADDRESS_ITEM"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          addresses: _objectSpread(_objectSpread({}, state.addresses), {}, _defineProperty({}, action.selectedAddress.addressId, validateAddress(Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["newAddress"])(_objectSpread(_objectSpread({}, action.selectedAddress), {}, {
+            addressType: action.address && action.address.addressType || _constants__WEBPACK_IMPORTED_MODULE_5__["RESIDENTIAL"],
+            receiverName: action.selectedAddress.receiverName || Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["formatReceiverName"])(action) || state.receiverName
+          }))))),
+          lastResidentialId: state.residentialId,
+          residentialId: action.selectedAddress.addressId
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["FOCUS_ON_INPUT"]:
+      {
+        var inputValue = state.addresses[state.residentialId][action.input.name].value;
+        return _objectSpread(_objectSpread({}, state), {}, {
+          addresses: _objectSpread(_objectSpread({}, state.addresses), {}, _defineProperty({}, state.residentialId, _objectSpread(_objectSpread({}, state.addresses[state.residentialId]), {}, _defineProperty({}, action.input.name, _objectSpread(_objectSpread({}, state.addresses[state.residentialId][action.input.name]), {}, {
+            focus: true,
+            value: action.input.value !== undefined ? action.input.value : inputValue
+          })))))
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["CHANGE_ACTIVE_SLA_OPTION"]:
+      {
+        if (action.slaOption && action.slaOption.pickupStoreInfo && action.slaOption.pickupStoreInfo.isPickupStore) {
+          var pickupAddress = action.slaOption.pickupStoreInfo.address;
+          return _objectSpread(_objectSpread({}, state), {}, {
+            addresses: _objectSpread(_objectSpread({}, state.addresses), {}, _defineProperty({}, state.searchId, validateAddress(Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_6__["newAddress"])(_objectSpread(_objectSpread({}, pickupAddress), {}, {
+              addressId: state.searchId,
+              addressType: _constants__WEBPACK_IMPORTED_MODULE_5__["SEARCH"]
+            })))))
+          });
+        }
+
+        return state;
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_4__["CHANGE_ACTIVE_DELIVERY_CHANNEL"]:
+      {
+        var postalCode = state.addresses[state.residentialId] && state.addresses[state.residentialId].postalCode;
+        var postalCodeValue = postalCode && postalCode.value;
+        var validPostalCode = postalCode && postalCode.valid;
+
+        if (Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_8__["isDelivery"])(action) && postalCodeValue && !validPostalCode && action.canEditData) {
+          return _objectSpread(_objectSpread({}, state), {}, {
+            addresses: _objectSpread(_objectSpread({}, state.addresses), {}, _defineProperty({}, state.residentialId, _objectSpread(_objectSpread({}, state.addresses[state.residentialId]), {}, {
+              postalCode: _objectSpread(_objectSpread({}, state.addresses[state.residentialId].postalCode), {}, {
+                value: ''
+              })
+            })))
+          });
+        }
+
+        return state;
+      }
+
+    default:
+      return state;
+  }
+});
+
+/***/ }),
+
+/***/ "./react/reducers/component-activity-reducer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/get.js");
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("vtex.address-form/helpers");
+/* harmony import */ var vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _actions_action_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/actions/action-types.js");
+/* harmony import */ var _constants_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/constants/index.js");
+/* harmony import */ var _utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/utils/AddressFormUtils.js");
+/* harmony import */ var _utils_SlasUtils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./react/utils/SlasUtils.js");
+/* harmony import */ var _utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./react/utils/LocalStorageUtils.js");
+/* harmony import */ var _utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./react/utils/DeliveryChannelsUtils.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+var addValidation = vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_1___default.a.addValidation,
+    isValidAddress = vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_1___default.a.isValidAddress;
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initiateComponentActivity();
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["UPDATE_SIMULATION_OPTIONS"]: // eslint-disable-next-line no-fallthrough
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["UPDATE_ORDERFORM"]:
+      {
+        var isGeolocationInitialState = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(state, 'isGeolocationInitialState');
+        var isCalculateBttnEnabled = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(state, 'isCalculateBttnEnabled');
+        var availableAddresses = Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_4__["getAvailableAddresses"])(action);
+        var storageOrderFormId = Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_6__["getItem"])('orderFormId');
+        var canEditData = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action, 'orderForm.canEditData');
+        var actionOrderFormId = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action, 'orderForm.orderFormId');
+        var profileCompleteOnLoading = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action, 'orderForm.clientProfileData.profileCompleteOnLoading');
+        var actionLogisticsInfo = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action, 'orderForm.shippingData.logisticsInfo');
+        var hasOrderForm = !!action.orderForm;
+        var isOrderFormIdDifferent = hasOrderForm && storageOrderFormId && storageOrderFormId !== actionOrderFormId;
+        setLocalStorageItems({
+          activeDeliveryChannel: state.activeDeliveryChannel,
+          actionOrderFormId: actionOrderFormId,
+          isOrderFormIdDifferent: isOrderFormIdDifferent,
+          hasPickup: Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_5__["hasPickupSlas"])(action),
+          hasOrderForm: hasOrderForm
+        });
+
+        if (availableAddresses) {
+          var selectedAddresses = Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_4__["getSelectedAddresses"])(action);
+
+          if (selectedAddresses.length > 0) {
+            isGeolocationInitialState = false;
+          }
+
+          var selectedAddress = Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_4__["getSelectedAddress"])(selectedAddresses);
+          var selectedAddressValidation = action.selectedRules && isValidAddress(addValidation(selectedAddress), action.selectedRules);
+          var isAddressActive = shouldSetAddressActive({
+            canEditData: canEditData,
+            profileCompleteOnLoading: profileCompleteOnLoading,
+            hasActiveAddress: state.editAddressActive || state.newAddressActive,
+            selectedAddress: selectedAddress,
+            selectedAddressValidation: selectedAddressValidation
+          });
+          var isAddressListActive = shouldSetAddressListActive({
+            state: state,
+            canEditData: canEditData,
+            selectedAddress: selectedAddress,
+            selectedAddressValidation: selectedAddressValidation,
+            isAddressActive: isAddressActive
+          });
+          var actionAddress = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action, 'orderForm.shippingData.address');
+          var isDisposableAddress = actionAddress && actionAddress.isDisposable && Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_4__["isResidential"])(actionAddress);
+          return _objectSpread(_objectSpread({}, state), {}, {
+            activeDeliveryChannel: actionLogisticsInfo && Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_7__["getActiveDeliveryChannel"])(actionLogisticsInfo) || state.activeDeliveryChannel,
+            hasPickup: Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_6__["getItem"])('hasPickup') || false,
+            isAddressListActive: isAddressListActive,
+            isAddressActive: isAddressActive,
+            isCalculateBttnEnabled: isCalculateBttnEnabled,
+            isGeolocationInitialState: isGeolocationInitialState
+          }, profileCompleteOnLoading ? {
+            editAddressActive: !!isAddressActive || isDisposableAddress && !action.isAddressValid
+          } : {});
+        }
+
+        return state;
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["SHOW_OMNISHIPPING_INITIAL_STATE"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isGeolocationInitialState: true
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["SHOW_GEOLOCATION_ADDRESS"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isGeolocationInitialState: false
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["ENABLE_CALCULATE_BUTTON"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isCalculateBttnEnabled: true
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["DISABLE_CALCULATE_BUTTON"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isCalculateBttnEnabled: false
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["ENABLE_OMNISHIPPING"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          triedCompleteOmnishipping: false,
+          isOmniShippingOpen: true,
+          isEditingOmnishipping: true,
+          isOmniShippingCompleted: false
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["DISABLE_OMNISHIPPING"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          triedCompleteOmnishipping: false,
+          isOmniShippingCompleted: action.shouldCompleteOmnishipping,
+          isOmniShippingOpen: action.shouldCompleteOmnishipping,
+          isEditingOmnishipping: false
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["SHOW_ADDRESS_LIST"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isAddressListActive: action.show
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["SHOW_ADDRESS"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isAddressActive: action.show
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["EDIT_ADDRESS"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          editAddressActive: action.show
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["NEW_ADDRESS"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          newAddressActive: action.show,
+          isGeolocationInitialState: true
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["SHOW_OMNISHIPPING_COMPLETED"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          triedCompleteOmnishipping: false,
+          isSplitActive: action.isAddressValid,
+          isOmniShippingCompleted: action.show,
+          newAddressActive: action.show ? false : state.newAddressActive,
+          editAddressActive: action.show ? false : state.editAddressActive
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["SHOW_SPLIT"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isSplitActive: action.show
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["SHOW_OMNISHIPPING"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isOmniShippingOpen: action.show
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["EDIT_OMNISHIPPING"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isEditingOmnishipping: action.edit
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["CHANGE_ACTIVE_DELIVERY_CHANNEL"]:
+      {
+        Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_6__["setItem"])('activeDeliveryChannel', action.deliveryChannel);
+        return _objectSpread(_objectSpread({}, state), {}, {
+          triedCompleteOmnishipping: false,
+          activeDeliveryChannel: action.deliveryChannel
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["UPDATE_SHIPPING_FROM_SHIPPING_RATE_PREVIEW"]:
+      {
+        var activeTab = action.activeTab;
+        var updatedActiveTab = activeTab === _constants_index__WEBPACK_IMPORTED_MODULE_3__["DELIVERY"] ? _constants_index__WEBPACK_IMPORTED_MODULE_3__["DELIVERY"] : _constants_index__WEBPACK_IMPORTED_MODULE_3__["PICKUP_IN_STORE"];
+        Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_6__["setItem"])('activeDeliveryChannel', updatedActiveTab);
+        return _objectSpread(_objectSpread({}, state), {}, {
+          activeDeliveryChannel: updatedActiveTab
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["COMPLETE_OMNISHIPPING"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          triedCompleteOmnishipping: true
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["CHANGE_ACTIVE_TAB"]: // eslint-disable-next-line no-fallthrough
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["CHANGE_ACTIVE_SLA_OPTION"]: // eslint-disable-next-line no-fallthrough
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["CHANGE_ACTIVE_DELIVERY_PACKAGE"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          triedCompleteOmnishipping: false
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["ENABLE_UNAVAILABLE_GEOLOCATION_SLA"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isUnavailableGeolocation: true
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["DISABLE_UNAVAILABLE_GEOLOCATION_SLA"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isUnavailableGeolocation: false
+        });
+      }
+
+    default:
+      return state;
+  }
+});
+
+function initiateComponentActivity() {
+  var isShippingHash = window.location.hash === '#/shipping';
+  var aditionalShippingData = Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_6__["getItem"])('aditionalShippingData'); // Reseting activeTab here asserts that the initial state will always be in
+  // sync with orderForm. See: CHK-2059
+
+  Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_6__["setItem"])('aditionalShippingData', JSON.stringify(_objectSpread(_objectSpread({}, aditionalShippingData), {}, {
+    activeTab: undefined
+  })));
+  return {
+    isUnavailableGeolocation: false,
+    isGeolocationInitialState: true,
+    isCalculateBttnEnabled: true,
+    isAddressListActive: false,
+    isAddressActive: false,
+    isOmniShippingCompleted: false,
+    isOmniShippingOpen: isShippingHash,
+    activeDeliveryChannel: Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_7__["getDeliveryChannelFromLocalStorage"])(),
+    editAddressActive: false,
+    newAddressActive: false,
+    isEditingOmnishipping: isShippingHash,
+    hasPickup: false,
+    isSplitActive: false,
+    triedCompleteOmnishipping: false
+  };
+}
+
+function shouldSetAddressActive(_ref) {
+  var canEditData = _ref.canEditData,
+      profileCompleteOnLoading = _ref.profileCompleteOnLoading,
+      hasActiveAddress = _ref.hasActiveAddress,
+      selectedAddress = _ref.selectedAddress,
+      selectedAddressValidation = _ref.selectedAddressValidation;
+
+  if (!canEditData) {
+    return selectedAddress && selectedAddress.isDisposable;
+  }
+
+  return !profileCompleteOnLoading || hasActiveAddress || profileCompleteOnLoading && selectedAddress && selectedAddressValidation && !selectedAddressValidation.valid;
+}
+
+function shouldSetAddressListActive(_ref2) {
+  var state = _ref2.state,
+      canEditData = _ref2.canEditData,
+      selectedAddress = _ref2.selectedAddress,
+      selectedAddressValidation = _ref2.selectedAddressValidation,
+      isAddressActive = _ref2.isAddressActive;
+  return !state.editAddressActive && !state.newAddressActive && !isAddressActive || !canEditData && selectedAddress && !selectedAddress.isDisposable && selectedAddressValidation && selectedAddressValidation.valid;
+}
+
+function setLocalStorageItems(_ref3) {
+  var activeDeliveryChannel = _ref3.activeDeliveryChannel,
+      actionOrderFormId = _ref3.actionOrderFormId,
+      isOrderFormIdDifferent = _ref3.isOrderFormIdDifferent,
+      hasPickup = _ref3.hasPickup,
+      hasOrderForm = _ref3.hasOrderForm;
+
+  if (isOrderFormIdDifferent) {
+    Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_6__["removeItem"])('orderFormId');
+    Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_6__["removeItem"])('hasPickup');
+    Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_6__["removeItem"])('aditionalShippingData');
+    Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_6__["setItem"])('activeDeliveryChannel', _constants_index__WEBPACK_IMPORTED_MODULE_3__["DELIVERY"]);
+    Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_6__["setItem"])('orderFormId', actionOrderFormId);
+  } else {
+    Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_6__["setItem"])('activeDeliveryChannel', activeDeliveryChannel);
+  }
+
+  if (hasPickup && hasOrderForm) {
+    Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_6__["setItem"])('hasPickup', true);
+  }
+}
+
+/***/ }),
+
+/***/ "./react/reducers/delivery-reducer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/get.js");
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/omit.js");
+/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_omit__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vtex_lean_shipping_calculator_modules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("vtex.lean-shipping-calculator/modules");
+/* harmony import */ var vtex_lean_shipping_calculator_modules__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vtex_lean_shipping_calculator_modules__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _actions_action_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/actions/action-types.js");
+/* harmony import */ var _selectors_scheduled_delivery_selectors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/selectors/scheduled-delivery-selectors.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./react/constants/index.js");
+/* harmony import */ var _utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./react/utils/DeliveryChannelsUtils.js");
+/* harmony import */ var _utils_OrderFormUtils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./react/utils/OrderFormUtils.js");
+/* harmony import */ var _utils_ScheduledDeliveryUtils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./react/utils/ScheduledDeliveryUtils.js");
+/* harmony import */ var _utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./react/utils/LocalStorageUtils.js");
+/* harmony import */ var _constants_checkout_events__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./react/constants/checkout-events.js");
+/* harmony import */ var _utils_SlasUtils__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("./react/utils/SlasUtils.js");
+var _defaultState;
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+var getLeanShippingOptions = vtex_lean_shipping_calculator_modules__WEBPACK_IMPORTED_MODULE_2___default.a.getLeanShippingOptions,
+    getOptionsDetails = vtex_lean_shipping_calculator_modules__WEBPACK_IMPORTED_MODULE_2___default.a.getOptionsDetails,
+    getSelectedDeliveryOption = vtex_lean_shipping_calculator_modules__WEBPACK_IMPORTED_MODULE_2___default.a.getSelectedDeliveryOption,
+    setSelectedSlaFromSlaOption = vtex_lean_shipping_calculator_modules__WEBPACK_IMPORTED_MODULE_2___default.a.setSelectedSlaFromSlaOption,
+    changeActiveSlas = vtex_lean_shipping_calculator_modules__WEBPACK_IMPORTED_MODULE_2___default.a.changeActiveSlas,
+    findPickupSla = vtex_lean_shipping_calculator_modules__WEBPACK_IMPORTED_MODULE_2___default.a.findPickupSla,
+    findFirstItemWithPickup = vtex_lean_shipping_calculator_modules__WEBPACK_IMPORTED_MODULE_2___default.a.findFirstItemWithPickup;
+var _window = window,
+    $ = _window.$;
+var aditionalShippingData = Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_9__["getItem"])('aditionalShippingData');
+var defaultState = (_defaultState = {}, _defineProperty(_defaultState, _constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"], []), _defineProperty(_defaultState, _constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"], []), _defineProperty(_defaultState, _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"], []), _defineProperty(_defaultState, "logisticsInfo", []), _defineProperty(_defaultState, "activeDeliveryOption", aditionalShippingData && aditionalShippingData.selectedLeanShippingOption || _constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"]), _defineProperty(_defaultState, "showSlasList", Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_11__["shouldShowSlasList"])()), _defineProperty(_defaultState, "simulateRequested", false), _defineProperty(_defaultState, "selectedDeliveryPackageSlider", 0), _defineProperty(_defaultState, "shouldUpdateUi", false), _defineProperty(_defaultState, "shouldDisableToggle", false), _defineProperty(_defaultState, "optionsDetails", null), _defineProperty(_defaultState, "shouldUpdateLeanOptionsState", false), _defineProperty(_defaultState, "isScheduledDeliveryActive", false), _defineProperty(_defaultState, "activeScheduledDelivery", null), _defaultState);
+
+function hasAnySla(logistics) {
+  return logistics && logistics.some(function (item) {
+    return item.slas && item.slas.length > 0;
+  });
+}
+
+function getLogisticsInfoByActiveDeliveryOption(_ref) {
+  var activeDeliveryOption = _ref.activeDeliveryOption,
+      cheapestOption = _ref.cheapestOption,
+      fastestOption = _ref.fastestOption,
+      combinedOption = _ref.combinedOption;
+
+  if (activeDeliveryOption === _constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"]) {
+    return combinedOption;
+  }
+
+  if (activeDeliveryOption === _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"]) {
+    return fastestOption;
+  }
+
+  return cheapestOption;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["UPDATE_ORDERFORM"]:
+      {
+        var _getOptionsDetails;
+
+        var actionLogisticsInfo = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action, 'orderForm.shippingData.logisticsInfo');
+        var items = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action, 'orderForm.items');
+        var firstItemWithPickup = actionLogisticsInfo && findFirstItemWithPickup({
+          logisticsInfo: actionLogisticsInfo,
+          items: items
+        });
+        var firstPickupSla = firstItemWithPickup && findPickupSla(firstItemWithPickup);
+        var firstItemWithSelectedPickupSla = actionLogisticsInfo && Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_6__["findFirstItemWithSelectedPickup"])(actionLogisticsInfo);
+        var firstSelectedPickupSla = firstItemWithSelectedPickupSla && firstItemWithSelectedPickupSla.selectedSla;
+        var slaOption = firstSelectedPickupSla || firstPickupSla && firstPickupSla.id || action.activePickupPoint && action.activePickupPoint.id;
+        var channel = Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_6__["getActiveDeliveryChannel"])(actionLogisticsInfo);
+        var showSlasList = window.hasCheckoutIO || state.showSlasList && Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_11__["areAllDeliverySlasEqual"])(actionLogisticsInfo);
+
+        if (action.activeDeliveryChannel && actionLogisticsInfo && !showSlasList) {
+          actionLogisticsInfo = changeActiveSlas(_objectSpread({
+            items: action.orderForm.items,
+            sellers: action.orderForm.sellers,
+            logisticsInfo: actionLogisticsInfo,
+            action: action,
+            channel: channel,
+            canEditData: action.orderForm.canEditData
+          }, channel === _constants__WEBPACK_IMPORTED_MODULE_5__["PICKUP_IN_STORE"] ? {
+            slaOption: slaOption
+          } : {}));
+        } else if (actionLogisticsInfo) {
+          actionLogisticsInfo = changeActiveSlasNoLean({
+            logisticsInfo: actionLogisticsInfo,
+            channel: channel,
+            slaOption: slaOption,
+            action: action
+          });
+        }
+
+        var cheapestOption = state[_constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"]];
+        var combinedOption = state[_constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"]];
+        var fastestOption = state[_constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"]];
+        var leanShippingOptions = null;
+        var hasMandatorySD = Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_11__["hasMandatoryScheduledDelivery"])(actionLogisticsInfo, channel);
+        var hasScheduledDelivery = Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_11__["hasScheduledDeliveries"])(actionLogisticsInfo);
+        var isScheduledDeliveryActive = hasMandatorySD || hasScheduledDelivery && state.isScheduledDeliveryActive;
+
+        if (actionLogisticsInfo && actionLogisticsInfo.length > 0 && (!state.shouldUpdateLeanOptionsState || !Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_11__["isLogisticsInfoEqual"])(state.logisticsInfo, actionLogisticsInfo))) {
+          leanShippingOptions = !showSlasList && getLeanShippingOptions({
+            logisticsInfo: actionLogisticsInfo,
+            activeChannel: action.activeDeliveryChannel,
+            isScheduledDeliveryActive: isScheduledDeliveryActive
+          });
+          cheapestOption = showSlasList ? actionLogisticsInfo : leanShippingOptions && leanShippingOptions.cheapest;
+          fastestOption = leanShippingOptions && leanShippingOptions.fastest;
+          combinedOption = leanShippingOptions && leanShippingOptions.combined;
+        }
+
+        var optionsDetails = getOptionsDetails((_getOptionsDetails = {}, _defineProperty(_getOptionsDetails, _constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"], cheapestOption), _defineProperty(_getOptionsDetails, _constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"], combinedOption), _defineProperty(_getOptionsDetails, _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"], fastestOption), _getOptionsDetails));
+        var activeDeliveryOption = getSelectedDeliveryOption({
+          optionsDetails: optionsDetails,
+          activeDeliveryOption: state.activeDeliveryOption
+        });
+
+        if (action.isOmniShippingOpen && !isOriginComponentOmnishipping(action.orderFormId)) {
+          $(window).trigger('omniShipping.changedActiveDeliveryOption', activeDeliveryOption);
+        }
+
+        return _objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, state), {}, {
+          activeDeliveryOption: activeDeliveryOption,
+          showSlasList: showSlasList,
+          logisticsInfo: getLogisticsInfoByActiveDeliveryOption({
+            activeDeliveryOption: activeDeliveryOption,
+            cheapestOption: cheapestOption,
+            combinedOption: combinedOption,
+            fastestOption: fastestOption
+          }),
+          isScheduledDeliveryActive: isScheduledDeliveryActive
+        }, cheapestOption ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"], cheapestOption) : _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"], undefined)), combinedOption ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"], combinedOption) : _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"], undefined)), fastestOption ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"], fastestOption) : _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"], undefined)), !hasAnySla(actionLogisticsInfo) ? {
+          shouldDisableToggle: false
+        } : {}), {}, {
+          optionsDetails: optionsDetails
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["UPDATE_SIMULATION_OPTIONS"]:
+      {
+        var newCheapest = action.cheapestOption && _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"], getNewUpdatedLogisticsInfo(action.cheapestOption, state[_constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"]]));
+
+        var newCombined = action.combinedOption && _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"], getNewUpdatedLogisticsInfo(action.combinedOption, state[_constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"]]));
+
+        var newFastest = action.fastestOption && _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"], getNewUpdatedLogisticsInfo(action.fastestOption, state[_constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"]]));
+
+        var newState = _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, state), newCheapest || {}), newCombined || {}), newFastest || {});
+
+        var _optionsDetails = getOptionsDetails(newState);
+
+        var _activeDeliveryOption = getSelectedDeliveryOption({
+          optionsDetails: _optionsDetails,
+          activeDeliveryOption: state.activeDeliveryOption
+        });
+
+        var hasItemWithMandatoryScheduledDelivery = Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_11__["hasMandatoryScheduledDelivery"])(newState[_activeDeliveryOption], action.activeDeliveryChannel);
+
+        var selectedScheduledDeliveryLI = newState[_activeDeliveryOption].find(function (li) {
+          return li.slas.some(function (sla) {
+            return sla.id === li.selectedSla && Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_6__["isCurrentChannel"])(sla, _constants__WEBPACK_IMPORTED_MODULE_5__["DELIVERY"]) && Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_11__["hasDeliveryWindows"])(sla);
+          });
+        });
+
+        var _isScheduledDeliveryActive = hasItemWithMandatoryScheduledDelivery ? true : state.isScheduledDeliveryActive;
+
+        if (newState[_activeDeliveryOption] && action.isOmniShippingOpen) {
+          $(window).trigger(_constants_checkout_events__WEBPACK_IMPORTED_MODULE_10__["DELIVERY_SELECTED"], [newState[_activeDeliveryOption], {
+            skipSendAttachment: true
+          }]);
+          var localAdditionalShippingData = Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_9__["getItem"])('aditionalShippingData');
+          Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_9__["setItem"])('aditionalShippingData', JSON.stringify(_objectSpread(_objectSpread({}, localAdditionalShippingData), {}, {
+            selectedLeanShippingOption: _activeDeliveryOption,
+            isScheduledDeliveryActive: _isScheduledDeliveryActive
+          })));
+        }
+
+        return _objectSpread(_objectSpread({}, newState), {}, {
+          activeScheduledDelivery: selectedScheduledDeliveryLI && selectedScheduledDeliveryLI.selectedSla || state.activeScheduledDelivery,
+          isScheduledDeliveryActive: _isScheduledDeliveryActive,
+          shouldDisableToggle: false,
+          shouldUpdateUi: true,
+          shouldUpdateLeanOptionsState: true,
+          activeDeliveryOption: _activeDeliveryOption,
+          optionsDetails: _optionsDetails
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["EDIT_ADDRESS"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          shouldDisableToggle: false
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["TOGGLE_SCHEDULED_DELIVERY"]:
+      {
+        var _selectedScheduledDeliveryLI = state[state.activeDeliveryOption].find(function (li) {
+          return li.slas.some(function (sla) {
+            return sla.id === li.selectedSla && Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_6__["isCurrentChannel"])(sla, _constants__WEBPACK_IMPORTED_MODULE_5__["DELIVERY"]) && Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_11__["hasDeliveryWindows"])(sla);
+          });
+        });
+
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isScheduledDeliveryActive: !!action.status,
+          activeScheduledDelivery: _selectedScheduledDeliveryLI && _selectedScheduledDeliveryLI.selectedSla
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["CHANGE_ACTIVE_TAB"]:
+      {
+        var updatedLogisticsInfo = [];
+
+        if (state.showSlasList && Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_6__["isPickup"])(action.channel)) {
+          updatedLogisticsInfo = changeActiveSlasNoLean({
+            logisticsInfo: state.logisticsInfo,
+            slaOption: action.activePickupPoint && action.activePickupPoint.id,
+            channel: action.channel,
+            action: action
+          });
+        } else {
+          updatedLogisticsInfo = changeActiveSlas({
+            action: action,
+            logisticsInfo: state.logisticsInfo,
+            items: action.items,
+            sellers: action.sellers,
+            channel: action.channel,
+            canEditData: action.canEditData,
+            slaOption: action.activePickupPoint && action.activePickupPoint.id
+          });
+        }
+
+        var _leanShippingOptions = !state.showSlasList && getLeanShippingOptions({
+          logisticsInfo: updatedLogisticsInfo,
+          activeChannel: action.activeDeliveryChannel
+        });
+
+        var shouldUpdateCheapest = _leanShippingOptions && _leanShippingOptions.cheapest || state.showSlasList;
+        var cheapestState = state.showSlasList ? updatedLogisticsInfo : _leanShippingOptions.cheapest;
+
+        var _newState = _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, state), {}, {
+          logisticsInfo: updatedLogisticsInfo,
+          shouldUpdateLeanOptionsState: false,
+          selectedDeliveryPackageSlider: 0
+        }, shouldUpdateCheapest ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"], cheapestState) : _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"], undefined)), _leanShippingOptions && _leanShippingOptions.combined ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"], _leanShippingOptions.combined) : _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"], undefined)), _leanShippingOptions && _leanShippingOptions.fastest ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"], _leanShippingOptions.fastest) : _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"], undefined));
+
+        var _optionsDetails2 = getOptionsDetails(_newState);
+
+        _newState = _objectSpread(_objectSpread({}, _newState), {}, {
+          optionsDetails: _optionsDetails2,
+          activeDeliveryOption: getSelectedDeliveryOption({
+            optionsDetails: _optionsDetails2,
+            newCombined: _leanShippingOptions && _leanShippingOptions.combined,
+            newFastest: _leanShippingOptions && _leanShippingOptions.fastest,
+            newCheapest: state.showSlasList ? updatedLogisticsInfo : _leanShippingOptions && _leanShippingOptions.cheapest,
+            activeDeliveryOption: state.activeDeliveryOption
+          })
+        });
+        $(window).trigger(_constants_checkout_events__WEBPACK_IMPORTED_MODULE_10__["DELIVERY_SELECTED"], [_newState[_newState.activeDeliveryOption], {
+          skipSendAttachment: true
+        }]);
+        return _objectSpread(_objectSpread({}, _newState), {}, {
+          isScheduledDeliveryActive: Object(_selectors_scheduled_delivery_selectors__WEBPACK_IMPORTED_MODULE_4__["hasLIWithOnlyScheduledDelivery"])({
+            delivery: _newState
+          })
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["CHANGE_ACTIVE_SLA_OPTION"]:
+      {
+        var _updatedLogisticsInfo = [];
+        var optionId = action.slaOption && action.slaOption.id || action.slaOption;
+        var sellers = action.sellers.filter(function (seller) {
+          return action.sellerId ? seller.id === action.sellerId : true;
+        });
+
+        if (state.isScheduledDeliveryActive || state.showSlasList) {
+          _updatedLogisticsInfo = setSelectedSlaFromSlaOption({
+            action: action,
+            logisticsInfo: state.logisticsInfo,
+            items: action.items,
+            sellers: sellers,
+            channel: action.activeDeliveryChannel,
+            canEditData: action.canEditData,
+            slaOption: optionId
+          });
+        } else {
+          _updatedLogisticsInfo = changeActiveSlas({
+            action: action,
+            logisticsInfo: state.logisticsInfo,
+            items: action.items,
+            sellers: sellers,
+            channel: action.activeDeliveryChannel,
+            canEditData: action.canEditData,
+            slaOption: optionId
+          });
+        }
+
+        var _leanShippingOptions2 = !state.showSlasList && getLeanShippingOptions({
+          logisticsInfo: _updatedLogisticsInfo,
+          activeChannel: action.activeDeliveryChannel,
+          isScheduledDeliveryActive: state.isScheduledDeliveryActive
+        });
+
+        var _shouldUpdateCheapest = state.showSlasList || _leanShippingOptions2 && _leanShippingOptions2.cheapest;
+
+        var _cheapestState = state.showSlasList ? _updatedLogisticsInfo : _leanShippingOptions2 && _leanShippingOptions2.cheapest;
+
+        var isSlaOptionScheduled = Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_11__["hasDeliveryWindows"])(Object(_utils_OrderFormUtils__WEBPACK_IMPORTED_MODULE_7__["findSlaOption"])(state.logisticsInfo, action.slaOption));
+
+        var _newState2 = _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, state), {}, {
+          logisticsInfo: _updatedLogisticsInfo,
+          activeScheduledDelivery: state.isScheduledDeliveryActive && isSlaOptionScheduled ? action.slaOption : state.activeScheduledDelivery
+        }, _shouldUpdateCheapest ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"], _cheapestState) : _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"], undefined)), _leanShippingOptions2 && _leanShippingOptions2.combined ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"], _leanShippingOptions2.combined) : _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"], undefined)), _leanShippingOptions2 && _leanShippingOptions2.fastest ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"], _leanShippingOptions2.fastest) : _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"], undefined));
+
+        $(window).trigger(_constants_checkout_events__WEBPACK_IMPORTED_MODULE_10__["DELIVERY_SELECTED"], [_newState2[state.activeDeliveryOption], {
+          skipSendAttachment: true
+        }]);
+
+        var _optionsDetails3 = getOptionsDetails(_newState2);
+
+        return _objectSpread(_objectSpread({}, _newState2), {}, {
+          activeDeliveryOption: getSelectedDeliveryOption({
+            optionsDetails: _optionsDetails3,
+            newCombined: _leanShippingOptions2 && _leanShippingOptions2.combined,
+            newFastest: _leanShippingOptions2 && _leanShippingOptions2.fastest,
+            newCheapest: state.showSlasList ? _updatedLogisticsInfo : _leanShippingOptions2 && _leanShippingOptions2.cheapest,
+            activeDeliveryOption: state.activeDeliveryOption
+          }),
+          optionsDetails: _optionsDetails3
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["SELECT_DELIVERY_WINDOW"]:
+      {
+        var _newState3 = _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, state), state[_constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"]] ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"], Object(_utils_ScheduledDeliveryUtils__WEBPACK_IMPORTED_MODULE_8__["selectDeliveryWindow"])(state[_constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"]], action)) : {}), state[_constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"]] ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"], Object(_utils_ScheduledDeliveryUtils__WEBPACK_IMPORTED_MODULE_8__["selectDeliveryWindow"])(state[_constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"]], action)) : {}), state[_constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"]] ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"], Object(_utils_ScheduledDeliveryUtils__WEBPACK_IMPORTED_MODULE_8__["selectDeliveryWindow"])(state[_constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"]], action)) : {});
+
+        $(window).trigger(_constants_checkout_events__WEBPACK_IMPORTED_MODULE_10__["DELIVERY_SELECTED"], [_newState3[state.activeDeliveryOption], {
+          skipSendAttachment: true
+        }]);
+        return _newState3;
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["UPDATE_SHIPPING_FROM_SHIPPING_RATE_PREVIEW"]:
+      {
+        var shippingOptionsLogisticsInfos = action.shippingOptionsLogisticsInfos,
+            _activeDeliveryOption2 = action.activeDeliveryOption,
+            _isScheduledDeliveryActive2 = action.isScheduledDeliveryActive;
+        var _updatedLogisticsInfo2 = {
+          cheapest: shippingOptionsLogisticsInfos.delivery[_constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"]],
+          fastest: shippingOptionsLogisticsInfos.delivery[_constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"]]
+        };
+        var hasLogisticsInfo = {
+          cheapest: _updatedLogisticsInfo2.cheapest && _updatedLogisticsInfo2.cheapest.length > 0,
+          fastest: _updatedLogisticsInfo2.fastest && _updatedLogisticsInfo2.fastest.length > 0
+        };
+
+        var leanOptions = _objectSpread(_objectSpread({}, hasLogisticsInfo.cheapest ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"], _updatedLogisticsInfo2.cheapest) : {}), hasLogisticsInfo.fastest ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"], _updatedLogisticsInfo2.fastest) : {});
+
+        var _newState4 = _objectSpread(_objectSpread(_objectSpread({}, lodash_omit__WEBPACK_IMPORTED_MODULE_1___default()(state, [_constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"], _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"]])), {}, {
+          activeDeliveryOption: _activeDeliveryOption2
+        }, leanOptions), {}, {
+          isScheduledDeliveryActive: _isScheduledDeliveryActive2
+        });
+
+        return _newState4;
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["SELECT_SCHEDULED_DELIVERY"]:
+      {
+        // This 'if' mitigates bugs with triggering 'deliverySelected.vtex'
+        // too often, which among other things, changes shipping estimates
+        // multiple times after success. To investigate what is causing
+        // that, but this shouldn't hurt either
+        if (state.isScheduledDeliveryActive === action.isScheduledDeliveryActive && !action.isScheduledDeliveryActive) {
+          return state;
+        }
+
+        var scheduledDeliveryState = null;
+
+        if (action.isScheduledDeliveryActive) {
+          scheduledDeliveryState = Object(_utils_ScheduledDeliveryUtils__WEBPACK_IMPORTED_MODULE_8__["selectScheduledDeliveryHelper"])(state, action.items, action.sellers);
+        } else {
+          scheduledDeliveryState = getLogisticsInfoWithSelectedSlas(state, action, action.activeDeliveryChannel);
+        }
+
+        var _newState5 = _objectSpread(_objectSpread(_objectSpread({}, state), scheduledDeliveryState), {}, {
+          isScheduledDeliveryActive: action.isScheduledDeliveryActive
+        });
+
+        $(window).trigger(_constants_checkout_events__WEBPACK_IMPORTED_MODULE_10__["DELIVERY_SELECTED"], [_newState5[state.activeDeliveryOption], {
+          skipSendAttachment: true
+        }]);
+
+        var _optionsDetails4 = getOptionsDetails(_newState5);
+
+        var shippingOptions = getSelectedDeliveryOption({
+          delivery: _newState5,
+          activeDeliveryOption: state.activeDeliveryOption
+        });
+        var isSingleOption = shippingOptions && shippingOptions.length === 1;
+
+        var _activeDeliveryOption3 = isSingleOption ? shippingOptions[0].id : state.activeDeliveryOption;
+
+        return _objectSpread(_objectSpread({}, _newState5), {}, {
+          optionsDetails: _optionsDetails4,
+          activeDeliveryOption: _activeDeliveryOption3
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["UPDATE_SHIPPING_FAILURE"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          shouldUpdateUi: true,
+          shouldDisableToggle: false
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["SIMULATE_SHIPPING_FAILURE"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          optionsDetails: getOptionsDetails(state),
+          shouldUpdateUi: true,
+          shouldDisableToggle: false
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["UPDATE_SHIPPING_REQUEST"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          shouldUpdateUi: false,
+          shouldDisableToggle: action.loading
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["SIMULATE_SHIPPING_REQUEST"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          simulateRequested: true
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["SIMULATE_SHIPPING_SUCCESS"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          simulateRequested: false
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["CHANGE_ACTIVE_DELIVERY_PACKAGE"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          activeDeliveryOption: action.id,
+          selectedDeliveryPackageSlider: 0
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["UPDATE_SELECTED_PACKAGE_SLIDER"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          selectedDeliveryPackageSlider: action.packageIndex
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["SELECT_ADDRESS_ITEM"]:
+      {
+        var _newCheapest = state[_constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"]] && state[_constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"]].map(function (li) {
+          return Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_6__["isDelivery"])(li) ? _objectSpread(_objectSpread({}, li), {}, {
+            addressId: action.selectedAddress.addressId
+          }) : li;
+        });
+
+        var _newCombined = state[_constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"]] && state[_constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"]].map(function (li) {
+          return Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_6__["isDelivery"])(li) ? _objectSpread(_objectSpread({}, li), {}, {
+            addressId: action.selectedAddress.addressId
+          }) : li;
+        });
+
+        var _newFastest = state[_constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"]] && state[_constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"]].map(function (li) {
+          return Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_6__["isDelivery"])(li) ? _objectSpread(_objectSpread({}, li), {}, {
+            addressId: action.selectedAddress.addressId
+          }) : li;
+        });
+
+        return _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, state), _newCheapest ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"], _newCheapest) : {}), _newCombined ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"], _newCombined) : {}), _newFastest ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"], _newFastest) : {});
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_3__["SHOW_OMNISHIPPING_COMPLETED"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          shouldUpdateUi: !action.show ? true : state.shouldDisableToggle,
+          shouldDisableToggle: !action.show ? false : state.shouldDisableToggle
+        });
+      }
+
+    default:
+      return state;
+  }
+});
+
+function changeActiveSlasNoLean(_ref31) {
+  var logisticsInfo = _ref31.logisticsInfo,
+      slaOption = _ref31.slaOption,
+      channel = _ref31.channel,
+      action = _ref31.action;
+  return logisticsInfo.map(function (li) {
+    var hasSelectedPickupSla = li.slas.length > 0 && li.slas.some(function (sla) {
+      return sla.id === slaOption;
+    });
+    var shouldKeepSelectedSla = !Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_6__["isPickup"])(li);
+    var addressId = action.address && action.address && action.address.addressId && action.address.addressId.value;
+    var searchAddressId = action.searchAddress && action.searchAddress && action.searchAddress.addressId && action.searchAddress.addressId.value;
+    var shouldSelectPickup = Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_6__["isPickup"])(channel) && hasSelectedPickupSla;
+    return _objectSpread(_objectSpread({}, li), {}, {
+      addressId: shouldSelectPickup ? searchAddressId : addressId,
+      selectedDeliveryChannel: shouldSelectPickup ? _constants__WEBPACK_IMPORTED_MODULE_5__["PICKUP_IN_STORE"] : shouldKeepSelectedSla ? li.selectedDeliveryChannel : null,
+      selectedSla: shouldSelectPickup ? slaOption : shouldKeepSelectedSla ? li.selectedSla : null
+    });
+  });
+}
+
+function getLogisticsInfoWithSelectedSlas(state, action, channel) {
+  var updatedLogisticsInfo = changeActiveSlas({
+    action: action,
+    logisticsInfo: state.logisticsInfo,
+    items: action.items,
+    sellers: action.sellers,
+    channel: channel,
+    canEditData: action.canEditData,
+    slaOption: action.activePickupPoint && action.activePickupPoint.id
+  });
+  var leanShippingOptions = !state.showSlasList && getLeanShippingOptions({
+    logisticsInfo: updatedLogisticsInfo,
+    activeChannel: channel
+  });
+  var shouldUpdateCheapest = state.showSlasList || leanShippingOptions && leanShippingOptions.cheapest;
+  var cheapestState = state.showSlasList ? updatedLogisticsInfo : leanShippingOptions.cheapest;
+  return _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, state), {}, {
+    logisticsInfo: updatedLogisticsInfo
+  }, shouldUpdateCheapest ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"], cheapestState) : _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["CHEAPEST"], undefined)), leanShippingOptions && leanShippingOptions.combined ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"], leanShippingOptions.combined) : _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["COMBINED"], undefined)), leanShippingOptions && leanShippingOptions.fastest ? _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"], leanShippingOptions.fastest) : _defineProperty({}, _constants__WEBPACK_IMPORTED_MODULE_5__["FASTEST"], undefined));
+}
+
+function getNewUpdatedLogisticsInfo(updatedLogisticsInfo, logisticsInfo) {
+  if (logisticsInfo) {
+    return logisticsInfo.map(function (li) {
+      var currentUpdatedLi = updatedLogisticsInfo.find(function (localLi) {
+        return localLi.itemIndex === li.itemIndex;
+      });
+      return _objectSpread(_objectSpread(_objectSpread({}, li), currentUpdatedLi), {}, {
+        selectedDeliveryChannel: currentUpdatedLi && currentUpdatedLi.selectedSla && currentUpdatedLi.selectedDeliveryChannel || li && li.selectedSla && li.selectedDeliveryChannel,
+        selectedSla: currentUpdatedLi && currentUpdatedLi.selectedSla || li && li.selectedSla,
+        slas: li.slas.map(function (sla) {
+          var currentUpdatedSla = currentUpdatedLi && currentUpdatedLi.slas && currentUpdatedLi.slas.find(function (localSla) {
+            return localSla.id === sla.id;
+          });
+          return _objectSpread(_objectSpread(_objectSpread({}, sla), currentUpdatedSla), {}, {
+            deliveryWindow: sla.deliveryWindow
+          });
+        })
+      });
+    });
+  }
+
+  return [];
+}
+
+function isOriginComponentOmnishipping() {
+  var localAdditionalShippingData = Object(_utils_LocalStorageUtils__WEBPACK_IMPORTED_MODULE_9__["getItem"])('aditionalShippingData');
+  return lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(localAdditionalShippingData, 'originComponent') === 'omnishipping';
+}
+
+/***/ }),
+
+/***/ "./react/reducers/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/get.js");
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils_AddressFormUtils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/utils/AddressFormUtils.js");
+/* harmony import */ var _selectors_delivery_selectors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/selectors/delivery-selectors.js");
+/* harmony import */ var _selectors_omnishipping_selectors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/selectors/omnishipping-selectors.js");
+/* harmony import */ var _constants_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/constants/index.js");
+/* harmony import */ var _utils_LocalStorageUtils_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("./react/utils/LocalStorageUtils.js");
+/* harmony import */ var _account_info_reducer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("./react/reducers/account-info-reducer.js");
+/* harmony import */ var _address_form_reducer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("./react/reducers/address-form-reducer.js");
+/* harmony import */ var _component_activity_reducer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("./react/reducers/component-activity-reducer.js");
+/* harmony import */ var _delivery_reducer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("./react/reducers/delivery-reducer.js");
+/* harmony import */ var _invoice_address_form_reducer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("./react/reducers/invoice-address-form-reducer.js");
+/* harmony import */ var _order_form_reducer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("./react/reducers/order-form-reducer.js");
+/* harmony import */ var _pickup_reducer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__("./react/reducers/pickup-reducer.js");
+/* harmony import */ var _shipping_preview_reducer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__("./react/reducers/shipping-preview-reducer.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var rootReducer = function rootReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  var orderForm = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(state, 'orderForm');
+  var sellers = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(orderForm, 'sellers');
+  var items = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(orderForm, 'items');
+  var canEditData = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(orderForm, 'canEditData');
+  var orderFormId = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(orderForm, 'orderFormId');
+  var selectedDeliveryPackage = state.delivery && Object(_selectors_delivery_selectors__WEBPACK_IMPORTED_MODULE_2__["getSelectedLeanOption"])(state);
+  var isOmniShippingCompleted = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(state, 'componentActivity.isOmniShippingCompleted');
+  var isOmniShippingOpen = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(state, 'componentActivity.isOmniShippingOpen');
+  var showSlasList = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(state, 'delivery.showSlasList');
+  var activeDeliveryChannel = Object(_utils_LocalStorageUtils_js__WEBPACK_IMPORTED_MODULE_5__["getItem"])('activeDeliveryChannel') || _constants_index_js__WEBPACK_IMPORTED_MODULE_4__["DELIVERY"];
+  var pickupOptions = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(state, 'pickup.pickupOptions');
+  var geolocation = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(state, 'accountInfo.geolocation');
+  var addressFormInState = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(state, 'addressForm');
+  var activePickupPoint = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(state, 'pickup.activePickupPoint');
+  var isAddressValid = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(state, 'addressForm.valid');
+  var address = Object(_utils_AddressFormUtils_js__WEBPACK_IMPORTED_MODULE_1__["findAddressByType"])(addressFormInState, _constants_index_js__WEBPACK_IMPORTED_MODULE_4__["RESIDENTIAL"]) || Object(_utils_AddressFormUtils_js__WEBPACK_IMPORTED_MODULE_1__["findAddressByType"])(addressFormInState, _constants_index_js__WEBPACK_IMPORTED_MODULE_4__["COMMERCIAL"]);
+  var searchAddress = Object(_utils_AddressFormUtils_js__WEBPACK_IMPORTED_MODULE_1__["findAddressByType"])(addressFormInState, _constants_index_js__WEBPACK_IMPORTED_MODULE_4__["SEARCH"]);
+  var countryCode = state.orderForm && state.orderForm.storePreferencesData && state.orderForm.storePreferencesData.countryCode;
+  return {
+    orderForm: Object(_order_form_reducer__WEBPACK_IMPORTED_MODULE_11__["default"])(state.orderForm, _objectSpread(_objectSpread({}, action), {}, {
+      selectedDeliveryPackage: selectedDeliveryPackage,
+      address: address,
+      searchAddress: searchAddress
+    })),
+    pickup: Object(_pickup_reducer__WEBPACK_IMPORTED_MODULE_12__["default"])(state.pickup, _objectSpread(_objectSpread({}, action), {}, {
+      showSlasList: showSlasList,
+      activeDeliveryChannel: activeDeliveryChannel
+    })),
+    addressForm: Object(_address_form_reducer__WEBPACK_IMPORTED_MODULE_7__["default"])(state.addressForm, _objectSpread(_objectSpread({}, action), {}, {
+      isOmniShippingCompleted: isOmniShippingCompleted,
+      pickupOptions: pickupOptions,
+      canEditData: canEditData,
+      geolocation: geolocation,
+      showSlasList: showSlasList,
+      countryCode: countryCode
+    })),
+    accountInfo: Object(_account_info_reducer__WEBPACK_IMPORTED_MODULE_6__["default"])(state.accountInfo, action),
+    componentActivity: Object(_component_activity_reducer__WEBPACK_IMPORTED_MODULE_8__["default"])(state.componentActivity, _objectSpread(_objectSpread({}, action), {}, {
+      isAddressValid: isAddressValid,
+      shouldCompleteOmnishipping: state.delivery && state.componentActivity && Object(_selectors_omnishipping_selectors__WEBPACK_IMPORTED_MODULE_3__["shouldCompleteOmnishipping"])(state)
+    }, action.orderForm ? {} : {
+      orderForm: orderForm
+    })),
+    delivery: Object(_delivery_reducer__WEBPACK_IMPORTED_MODULE_9__["default"])(state.delivery, _objectSpread(_objectSpread({}, action), {}, {
+      items: items,
+      sellers: sellers,
+      activeDeliveryChannel: activeDeliveryChannel,
+      canEditData: canEditData,
+      isOmniShippingCompleted: isOmniShippingCompleted,
+      isOmniShippingOpen: isOmniShippingOpen,
+      address: address,
+      searchAddress: searchAddress,
+      orderFormId: orderFormId,
+      activePickupPoint: activePickupPoint
+    })),
+    invoiceAddressForm: Object(_invoice_address_form_reducer__WEBPACK_IMPORTED_MODULE_10__["default"])(state.invoiceAddressForm, _objectSpread(_objectSpread({}, action), {}, {
+      geolocation: geolocation,
+      isOmniShippingCompleted: isOmniShippingCompleted
+    })),
+    shippingPreview: Object(_shipping_preview_reducer__WEBPACK_IMPORTED_MODULE_13__["default"])(state.shippingPreview, _objectSpread(_objectSpread(_objectSpread({}, action), action.orderForm ? {} : {
+      orderForm: orderForm
+    }), {}, {
+      activeDeliveryChannel: activeDeliveryChannel,
+      address: address,
+      searchAddress: searchAddress
+    }))
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (rootReducer);
+
+/***/ }),
+
+/***/ "./react/reducers/invoice-address-form-reducer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("vtex.address-form/helpers");
+/* harmony import */ var vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils_vtex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/utils/vtex.js");
+/* harmony import */ var _actions_action_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/actions/action-types.js");
+/* harmony import */ var _utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/utils/AddressFormUtils.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+var addValidation = vtex_address_form_helpers__WEBPACK_IMPORTED_MODULE_0___default.a.addValidation;
+var invoiceAddressWindow = window && window.vtexjs && window.vtexjs.checkout && window.vtexjs.checkout.orderForm && window.vtexjs.checkout.orderForm.invoiceData;
+var invoiceAddressValidated = invoiceAddressWindow && addValidation(_objectSpread({
+  addressId: '',
+  addressType: 'residential',
+  addressQuery: '',
+  receiverName: ''
+}, invoiceAddressWindow.address));
+
+var invoiceAddressWithPostalCode = invoiceAddressWindow && _objectSpread(_objectSpread({}, invoiceAddressValidated), {}, {
+  postalCode: _objectSpread(_objectSpread({}, invoiceAddressValidated.postalCode), {}, {
+    valid: true,
+    loading: false
+  })
+});
+
+var defaultInvoiceAddress = invoiceAddressWindow ? invoiceAddressWithPostalCode : _objectSpread(_objectSpread({}, addValidation(Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_3__["newAddress"])())), {}, {
+  addressId: {
+    value: ''
+  }
+});
+var defaultState = {
+  invoiceAddress: defaultInvoiceAddress,
+  geolocation: Object(_utils_vtex__WEBPACK_IMPORTED_MODULE_1__["getGeolocationSettings"])(),
+  isInvoiceButtonActive: !defaultInvoiceAddress.postalCode.value,
+  isInvoiceAddressCompleted: false,
+  isInvoiceAddressActive: Object(_utils_vtex__WEBPACK_IMPORTED_MODULE_1__["getInvoiceDataSettings"])(),
+  isCreatingInvoiceAddress: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["UPDATE_INVOICE_ADDRESS"]:
+      {
+        var invoiceAddress = action.invoiceAddress;
+        return _objectSpread(_objectSpread({}, state), {}, {
+          invoiceAddress: invoiceAddress
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["DISABLE_INVOICE_BUTTON"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isInvoiceButtonActive: false
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["ENABLE_INVOICE_BUTTON"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isInvoiceButtonActive: true
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["COMPLETE_INVOICE_ADDRESS"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isInvoiceAddressCompleted: true
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["INVALIDATE_INVOICE_ADDRESS"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isInvoiceAddressCompleted: false
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["CREATE_INVOICE_ADDRESS"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isCreatingInvoiceAddress: true
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_2__["RETURN_TO_INVOICE_ADDRESS_LIST"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isCreatingInvoiceAddress: false
+        });
+      }
+
+    default:
+      return state;
+  }
+});
+
+/***/ }),
+
+/***/ "./react/reducers/order-form-reducer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/get.js");
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _actions_action_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/actions/action-types.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/constants/index.js");
+/* harmony import */ var _utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/utils/AddressFormUtils.js");
+/* harmony import */ var _utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/utils/DeliveryChannelsUtils.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+var getAvailableAddresses = function getAvailableAddresses(action) {
+  if (lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action, 'orderForm.shippingData')) {
+    var _action$orderForm$shi = action.orderForm.shippingData,
+        availableAddresses = _action$orderForm$shi.availableAddresses,
+        selectedAddress = _action$orderForm$shi.selectedAddress;
+    var newAvailableAddresses = {
+      availableAddresses: selectedAddress
+    };
+    var noAddresses = availableAddresses && availableAddresses.length === 0;
+    return noAddresses ? newAvailableAddresses : {};
+  }
+
+  return {};
+};
+
+function findFirstPickupSelected(action) {
+  return lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action, 'orderForm.shippingData.logisticsInfo') && action.orderForm.shippingData.logisticsInfo.find(function (item) {
+    return item.selectedSla && Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_4__["isPickup"])(item);
+  });
+}
+
+function getAddressId(action, item) {
+  return (Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_4__["isDelivery"])(item) ? action.address && action.address.addressId.value : action.searchAddress && action.searchAddress.addressId.value) || item.addressId;
+}
+
+function getNewLogisticsInfo(action) {
+  var firstPickupSelected = findFirstPickupSelected(action);
+  return lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action, 'orderForm.shippingData.logisticsInfo') && action.orderForm.shippingData.logisticsInfo.map(function (item) {
+    var _item$slas;
+
+    var defaultDeliverySla = (_item$slas = item.slas) === null || _item$slas === void 0 ? void 0 : _item$slas.find(function (sla) {
+      return Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_4__["isDelivery"])(sla);
+    });
+
+    if (Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_4__["isPickup"])(item) && item.selectedSla !== firstPickupSelected.selectedSla) {
+      return _objectSpread(_objectSpread({}, item), {}, {
+        selectedSla: defaultDeliverySla ? defaultDeliverySla.id : null,
+        selectedDeliveryChannel: defaultDeliverySla ? _constants__WEBPACK_IMPORTED_MODULE_2__["DELIVERY"] : null
+      });
+    }
+
+    return _objectSpread(_objectSpread({}, item), {}, {
+      addressId: getAddressId(action, item)
+    });
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["UPDATE_ORDERFORM"]:
+      {
+        var logisticsInfo = getNewLogisticsInfo(action);
+
+        if (logisticsInfo) {
+          var _action$orderForm = action.orderForm,
+              canEditData = _action$orderForm.canEditData,
+              clientProfileData = _action$orderForm.clientProfileData,
+              clientPreferencesData = _action$orderForm.clientPreferencesData,
+              giftRegistryData = _action$orderForm.giftRegistryData,
+              items = _action$orderForm.items,
+              loggedIn = _action$orderForm.loggedIn,
+              marketingData = _action$orderForm.marketingData,
+              orderFormId = _action$orderForm.orderFormId,
+              salesChannel = _action$orderForm.salesChannel,
+              sellers = _action$orderForm.sellers,
+              shippingData = _action$orderForm.shippingData,
+              storePreferencesData = _action$orderForm.storePreferencesData,
+              selectableGifts = _action$orderForm.selectableGifts,
+              userProfileId = _action$orderForm.userProfileId;
+          return _objectSpread(_objectSpread({}, state), {}, {
+            giftRegistryData: giftRegistryData,
+            orderFormId: orderFormId,
+            salesChannel: salesChannel,
+            clientProfileData: clientProfileData,
+            clientPreferencesData: clientPreferencesData,
+            storePreferencesData: storePreferencesData,
+            marketingData: marketingData,
+            sellers: sellers,
+            loggedIn: loggedIn,
+            canEditData: canEditData,
+            selectableGifts: selectableGifts,
+            userProfileId: userProfileId,
+            items: items === null ? state.items : items,
+            shippingData: _objectSpread(_objectSpread(_objectSpread({}, shippingData), getAvailableAddresses(action)), {}, {
+              logisticsInfo: logisticsInfo
+            })
+          });
+        }
+
+        return state;
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["UPDATE_SHIPPING_REQUEST"]:
+      {
+        var selectedDeliveryPackage = action.selectedDeliveryPackage;
+        var hasSelectedDeliveryPackage = selectedDeliveryPackage.length > 0;
+        return _objectSpread(_objectSpread({}, state), {}, {
+          shippingData: _objectSpread(_objectSpread({}, state.shippingData), {}, {
+            logisticsInfo: hasSelectedDeliveryPackage ? selectedDeliveryPackage : state.shippingData.logisticsInfo
+          })
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["CHANGE_ACTIVE_TAB"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          shippingData: _objectSpread(_objectSpread({}, state.shippingData), {}, {
+            logisticsInfo: action.selectedDeliveryPackage
+          })
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["UPDATE_ADDRESS_FORM"]:
+      {
+        var _logisticsInfo = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(state, 'shippingData.logisticsInfo') && state.shippingData.logisticsInfo.map(function (li) {
+          return _objectSpread(_objectSpread({}, li), {}, {
+            addressId: Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_4__["isPickup"])(li) ? action.address.addressId.value : action.searchAddress.addressId.value
+          });
+        });
+
+        var newState = _objectSpread(_objectSpread({}, state), {}, {
+          shippingData: _objectSpread(_objectSpread({}, state.shippingData), {}, {
+            logisticsInfo: _logisticsInfo
+          })
+        });
+
+        return newState;
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["UPDATE_SIMULATION_OPTIONS"]:
+      {
+        var updatedOrderForm = _objectSpread(_objectSpread({}, state), {}, {
+          shippingData: _objectSpread(_objectSpread({}, state.shippingData), {}, {
+            logisticsInfo: action.selectedOption
+          })
+        });
+
+        return updatedOrderForm;
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["UPDATE_SHIPPING_FROM_SHIPPING_RATE_PREVIEW"]:
+      {
+        var orderFormLogisticsInfo = action.orderFormLogisticsInfo,
+            shippingOptionsLogisticsInfos = action.shippingOptionsLogisticsInfos,
+            activeTab = action.activeTab,
+            activeDeliveryOption = action.activeDeliveryOption;
+
+        var _logisticsInfo2 = shippingOptionsLogisticsInfos && shippingOptionsLogisticsInfos[activeTab] && shippingOptionsLogisticsInfos[activeTab][activeDeliveryOption] || orderFormLogisticsInfo;
+
+        var _updatedOrderForm = _objectSpread(_objectSpread({}, state), {}, {
+          shippingData: _objectSpread(_objectSpread({}, state.shippingData), {}, {
+            logisticsInfo: _logisticsInfo2
+          })
+        });
+
+        return _updatedOrderForm;
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["SELECT_ADDRESS_ITEM"]:
+      {
+        var selectedAddresses = state.shippingData.selectedAddresses;
+
+        var newSelectedAddresses = _toConsumableArray(selectedAddresses);
+
+        var hasSelectedAddressWithGivenAddressType = selectedAddresses.some(function (address) {
+          return Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_3__["isCurrentAddressType"])(address, action.selectedAddress.addressType);
+        });
+
+        if (hasSelectedAddressWithGivenAddressType) {
+          newSelectedAddresses = selectedAddresses.map(function (address) {
+            return Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_3__["isCurrentAddressType"])(address, action.selectedAddress.addressType) ? action.selectedAddress : address;
+          });
+        } else {
+          newSelectedAddresses.push(action.selectedAddress);
+        }
+
+        return _objectSpread(_objectSpread({}, state), {}, {
+          shippingData: _objectSpread(_objectSpread({}, state.shippingData), {}, {
+            selectedAddresses: newSelectedAddresses
+          })
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["UPDATE_SHIPPING_DATA"]:
+      {
+        var _shippingData = action.shippingData;
+
+        if (!_shippingData) {
+          return state;
+        }
+
+        return _objectSpread(_objectSpread({}, state), {}, {
+          shippingData: _shippingData
+        });
+      }
+
+    default:
+      return state;
+  }
+});
+
+/***/ }),
+
+/***/ "./react/reducers/pickup-reducer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/lodash/get.js");
+/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _actions_action_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/actions/action-types.js");
+/* harmony import */ var _utils_SlasUtils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/utils/SlasUtils.js");
+/* harmony import */ var _utils_PickupUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/utils/PickupUtils.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+var defaultState = {
+  isModalActive: false,
+  isPickupDetailsActive: false,
+  pickupOptions: [],
+  pickupPoint: null,
+  activePickupPoint: null,
+  activeSellerId: '',
+  askForGeolocation: null,
+  isSearching: false,
+  hasGeolocation: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["UPDATE_ORDERFORM"]:
+      {
+        var logisticsInfo = lodash_get__WEBPACK_IMPORTED_MODULE_0___default()(action, 'orderForm.shippingData.logisticsInfo');
+        var items = action.orderForm && action.orderForm.items;
+        var hasSlas = logisticsInfo && logisticsInfo.find(function (li) {
+          return Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_2__["hasSLAs"])(li);
+        });
+
+        if (logisticsInfo && items) {
+          var pickupOptions = Object(_utils_PickupUtils__WEBPACK_IMPORTED_MODULE_3__["getPickupOptions"])(logisticsInfo);
+          return _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, state), !hasSlas || action.showSlasList ? {
+            isSearching: false
+          } : {}), Object(_utils_PickupUtils__WEBPACK_IMPORTED_MODULE_3__["getActivePickupPoint"])({
+            pickupOptions: pickupOptions,
+            logisticsInfo: logisticsInfo,
+            items: items,
+            activeDeliveryChannel: action.activeDeliveryChannel,
+            activePickupPoint: state.activePickupPoint
+          })), {}, {
+            isPickupDetailsActive: false,
+            pickupOptions: pickupOptions
+          });
+        }
+
+        return state;
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["SIMULATE_SHIPPING_FAILURE"]: // eslint-disable-next-line no-fallthrough
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["UPDATE_SHIPPING_FAILURE"]: // eslint-disable-next-line no-fallthrough
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["UPDATE_SIMULATION_OPTIONS"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isSearching: false
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["UPDATE_SHIPPING_REQUEST"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isSearching: true
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["CHANGE_ACTIVE_PICKUP_OPTIONS"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isModalActive: true,
+          askForGeolocation: false,
+          isSearching: false,
+          pickupOptions: action.pickupOptions
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["OPEN_PICKUP_MODAL"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          askForGeolocation: action.askForGeolocation,
+          isModalActive: true
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["CLOSE_PICKUP_MODAL"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isModalActive: false
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["SET_SHIPPING_PREVIEW_PICKUP_MODAL"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          askForGeolocation: action.askForGeolocation || null
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["CHANGE_ACTIVE_PICKUP_DETAILS"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isPickupDetailsActive: !!action.pickupPoint,
+          pickupPoint: action.pickupPoint || null,
+          activePickupPoint: action.pickupPoint || state.activePickupPoint || null,
+          askForGeolocation: action.askForGeolocation || null
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["CLOSE_PICKUP_DETAILS"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isPickupDetailsActive: false
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["HAS_GEOLOCATION"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          hasGeolocation: action.hasGeolocation
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_1__["CHANGE_ACTIVE_PICKUP_SELLER"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          activeSellerId: action.sellerId || '',
+          isModalActive: true
+        });
+      }
+
+    default:
+      return state;
+  }
+});
+
+/***/ }),
+
+/***/ "./react/reducers/shipping-preview-reducer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_action_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./react/actions/action-types.js");
+/* harmony import */ var _utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./react/utils/AddressFormUtils.js");
+/* harmony import */ var _utils_Address__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./react/utils/Address.js");
+/* harmony import */ var _utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/utils/DeliveryChannelsUtils.js");
+/* harmony import */ var _utils_SlasUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/utils/SlasUtils.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+var defaultState = {
+  isInitialInputState: true,
+  isLoadingResult: false,
+  isLoadingUpdate: false,
+  isLoadingTabChange: false,
+  isModalActive: false,
+  showShippingPreview: false
+};
+
+var addressHasValidPostalCodeGeolocation = function addressHasValidPostalCodeGeolocation(action) {
+  return action.address && (Object(_utils_Address__WEBPACK_IMPORTED_MODULE_2__["addressHasValidPostalCode"])(action.address) || Object(_utils_Address__WEBPACK_IMPORTED_MODULE_2__["addressHasValidGeocoordinates"])(action.address));
+};
+
+var searchAddressHasValidPostalCodeGeolocation = function searchAddressHasValidPostalCodeGeolocation(action) {
+  return action.searchAddress && (Object(_utils_Address__WEBPACK_IMPORTED_MODULE_2__["addressHasValidPostalCode"])(action.searchAddress) || Object(_utils_Address__WEBPACK_IMPORTED_MODULE_2__["addressHasValidGeocoordinates"])(action.searchAddress));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_0__["UPDATE_ORDERFORM"]:
+      {
+        var hasLeanShipping = !!Object(_utils_SlasUtils__WEBPACK_IMPORTED_MODULE_4__["getLeanShippingSettings"])();
+        var hasAddress = Object(_utils_AddressFormUtils__WEBPACK_IMPORTED_MODULE_1__["hasSelectedAddress"])(action);
+        return _objectSpread(_objectSpread({}, state), {}, {
+          showShippingPreview: state.showShippingPreview || hasAddress,
+          isInitialInputState: !hasAddress,
+          isLoadingResult: hasLeanShipping ? state.isLoadingResult : false,
+          isLoadingUpdate: hasLeanShipping ? state.isLoadingUpdate : false,
+          isLoadingTabChange: hasLeanShipping ? state.isLoadingTabChange : false
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_0__["SET_SHOW_SHIPPING_PREVIEW"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          showShippingPreview: action.status
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_0__["SET_INITIAL_INPUT_STATE"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isInitialInputState: action.status
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_0__["SET_IS_LOADING_RESULT"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isLoadingResult: action.status
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_0__["SET_IS_LOADING_UPDATE"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isLoadingUpdate: action.status
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_0__["SET_IS_LOADING_TAB_CHANGE"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isLoadingTabChange: action.status
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_0__["CHANGE_ACTIVE_DELIVERY_CHANNEL"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isInitialInputState: Object(_utils_DeliveryChannelsUtils__WEBPACK_IMPORTED_MODULE_3__["isDelivery"])(action.deliveryChannel) ? !addressHasValidPostalCodeGeolocation(action) : !searchAddressHasValidPostalCodeGeolocation(action)
+        });
+      }
+
+    case _actions_action_types__WEBPACK_IMPORTED_MODULE_0__["SET_SHIPPING_PREVIEW_PICKUP_MODAL"]:
+      {
+        return _objectSpread(_objectSpread({}, state), {}, {
+          isModalActive: action.active
+        });
+      }
+
+    default:
+      return state;
+  }
+});
+
+/***/ }),
+
+/***/ "./react/store.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/redux/es/redux.js");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/redux-thunk/es/index.js");
+/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("../../../../modules/a58500f1f1678931d6876e2fddd3a620ec4783668facd0fa62c5c1c3738555ec/dev/node_modules/redux-logger/dist/redux-logger.js");
+/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./react/reducers/index.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./react/constants/index.js");
+
+
+
+
+
+var logger = Object(redux_logger__WEBPACK_IMPORTED_MODULE_2__["createLogger"])({
+  collapsed: true
+});
+var localOrBeta = window.location.host.includes(_constants__WEBPACK_IMPORTED_MODULE_4__["VTEXLOCAL"]) || window.location.host.includes(_constants__WEBPACK_IMPORTED_MODULE_4__["VTEXBETA"]) || window.__RUNTIME__.workspace && window.__RUNTIME__.workspace !== 'master';
+var composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || redux__WEBPACK_IMPORTED_MODULE_0__["compose"];
+
+function configureStore(initialState) {
+  var store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers__WEBPACK_IMPORTED_MODULE_3__["default"], initialState, composeEnhancers(localOrBeta ? Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_1__["default"], logger) : Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_1__["default"])));
+
+  if (false) {}
+
+  return store;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  configureStore: configureStore
+});
+
+/***/ }),
+
+/***/ "vtex.address-form/helpers":
+/***/ (function(module, exports) {
+
+module.exports = __RENDER_7_COMPONENTS__['vtex.address-form@3.x/helpers'];
+
+/***/ }),
+
+/***/ "vtex.lean-shipping-calculator/modules":
+/***/ (function(module, exports) {
+
+module.exports = __RENDER_7_COMPONENTS__['vtex.lean-shipping-calculator@0.x/modules'];
+
+/***/ })
+
+},[["../store.js","runtime","common"]]]);
+//# sourceMappingURL=store.js.map

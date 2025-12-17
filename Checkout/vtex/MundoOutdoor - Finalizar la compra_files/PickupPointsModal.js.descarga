@@ -1,0 +1,115 @@
+(window["webpackJsonpvtex_pickup_points_modal_3_8_3"] = window["webpackJsonpvtex_pickup_points_modal_3_8_3"] || []).push([["PickupPointsModal"],{
+
+/***/ "../PickupPointsModal.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module) {if (!!(typeof window !== 'undefined' && window.document) && !window.global) {
+  window.global = window;
+} // compatibility
+
+
+window.__RENDER_7_COMPONENTS__ = window.__RENDER_7_COMPONENTS__ ? window.__RENDER_7_COMPONENTS__ : {};
+window.__RENDER_7_HOT__ = window.__RENDER_7_HOT__ ? window.__RENDER_7_HOT__ : {};
+
+function dep(m) {
+  return m.__esModule ? m.default : m.default || m;
+}
+
+;
+var host = window.__hostname__;
+var assetsPath = '/_v/public/assets/v1/published/';
+
+if (!!(typeof window !== 'undefined' && window.document) && window.__RUNTIME__) {
+  var generatorMetaTag = document.querySelector("meta[name='generator']");
+  var generator = generatorMetaTag && generatorMetaTag.getAttribute('content');
+  var isRenderGenerator = generator && generator.indexOf('vtex.render-server') === 0;
+  var env = __RUNTIME__.publicEndpoint || 'myvtex.com';
+  host = isRenderGenerator ? window.location.hostname : __RUNTIME__.workspace + '--' + __RUNTIME__.account + '.' + env;
+  assetsPath =  false ? undefined : __RUNTIME__.assetServerPublishedPath || '/_v/public/assets/v1/published/';
+}
+
+__webpack_require__.p = 'https://' + host + assetsPath + 'vtex.pickup-points-modal@3.8.3/public/react/';
+var entry;
+
+try {
+  entry = dep(__webpack_require__("./react/PickupPointsModal.js"));
+} catch (error) {
+  throw new Error("An error happened while requiring the app vtex.pickup-points-modal@3.8.3/PickupPointsModal, please check your app's code.\n ".concat(error.stack));
+}
+
+if (window.__RENDER_7_RUNTIME__ && window.__RENDER_7_RUNTIME__.withHMR) {
+  window.__RENDER_7_COMPONENTS__['vtex.pickup-points-modal@3.8.3/PickupPointsModal'] = window.__RENDER_7_COMPONENTS__['vtex.pickup-points-modal@3.x/PickupPointsModal'] = window.__RENDER_7_RUNTIME__.withHMR(module, entry);
+} else {
+  window.__RENDER_7_COMPONENTS__['vtex.pickup-points-modal@3.8.3/PickupPointsModal'] = window.__RENDER_7_COMPONENTS__['vtex.pickup-points-modal@3.x/PickupPointsModal'] = entry;
+}
+
+if (false) {}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("../../../../../usr/local/data/service/node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
+/***/ "prop-types":
+/***/ (function(module, exports) {
+
+module.exports = PropTypes;
+
+/***/ }),
+
+/***/ "react":
+/***/ (function(module, exports) {
+
+module.exports = React;
+
+/***/ }),
+
+/***/ "react-dom":
+/***/ (function(module, exports) {
+
+module.exports = ReactDOM;
+
+/***/ }),
+
+/***/ "vtex.address-form/components":
+/***/ (function(module, exports) {
+
+module.exports = __RENDER_7_COMPONENTS__['vtex.address-form@3.x/components'];
+
+/***/ }),
+
+/***/ "vtex.address-form/geolocationAutoCompleteAddress":
+/***/ (function(module, exports) {
+
+module.exports = __RENDER_7_COMPONENTS__['vtex.address-form@3.x/geolocationAutoCompleteAddress'];
+
+/***/ }),
+
+/***/ "vtex.address-form/helpers":
+/***/ (function(module, exports) {
+
+module.exports = __RENDER_7_COMPONENTS__['vtex.address-form@3.x/helpers'];
+
+/***/ }),
+
+/***/ "vtex.address-form/inputs":
+/***/ (function(module, exports) {
+
+module.exports = __RENDER_7_COMPONENTS__['vtex.address-form@3.x/inputs'];
+
+/***/ }),
+
+/***/ "vtex.address-form/shapes":
+/***/ (function(module, exports) {
+
+module.exports = __RENDER_7_COMPONENTS__['vtex.address-form@3.x/shapes'];
+
+/***/ }),
+
+/***/ "vtex.shipping-estimate-translator/TranslateEstimate":
+/***/ (function(module, exports) {
+
+module.exports = __RENDER_7_COMPONENTS__['vtex.shipping-estimate-translator@1.x/TranslateEstimate'];
+
+/***/ })
+
+},[["../PickupPointsModal.js","runtime","common"]]]);
+//# sourceMappingURL=PickupPointsModal.js.map

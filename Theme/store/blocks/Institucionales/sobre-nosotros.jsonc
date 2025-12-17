@@ -3,7 +3,8 @@
     "store.custom#sobre-nosotros": {
     
         "children":[
-            "flex-layout.row#shared-container-sobre-nosotros"
+            "flex-layout.row#shared-container-sobre-nosotros",
+            "support-entry"
         ]
 
     },
