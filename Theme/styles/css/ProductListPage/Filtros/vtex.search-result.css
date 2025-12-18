@@ -188,6 +188,16 @@
 }
 /*ocultar opcion sin dato de los filtros "-s/d-" */
 
+/* Ocultar filtro ACTIVIDAD */
+.filter__container--ACTIVIDAD,
+.filter__container--Actividad,
+.filter__container--actividad,
+.filter__container--specificationFilter_actividad,
+.filter__container--specificationFilter_Actividad,
+.filter__container--specificationFilter_ACTIVIDAD {
+    display: none !important;
+}
+
 @media (max-width: 640px) {
 
     .orderByButton .filterPopupArrowIcon{

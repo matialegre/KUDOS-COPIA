@@ -132,8 +132,7 @@
         },
         "children": [
             "rich-text#announcementMessageTruck",
-            "rich-text#announcementMessagePromo1",
-            "rich-text#announcementMessagePromo2"
+            "rich-text#announcementMessagePromo1"
         ]
     },
 
@@ -148,13 +147,6 @@
         "props": {
             "blockClass": "announcement-message",
             "text": "3 Y 6 CUOTAS SIN INTERÉS"
-        }
-    },
-
-    "rich-text#announcementMessagePromo2": {
-        "props": {
-            "blockClass": "announcement-message",
-            "text": "HASTA 50% OFF EN PRODUCTOS SELECCIONADOS"
         }
     },
 

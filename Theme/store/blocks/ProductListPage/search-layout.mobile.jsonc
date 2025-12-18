@@ -13,6 +13,11 @@
 
         "props": {
             "blockClass": "container",
+            "hiddenFacets": {
+                "specificationFilters": {
+                    "hiddenFilters": ["actividad"]
+                }
+            },
             "pagination": "show-more",
             "mobileLayout": {
                 "mode1": "small",
