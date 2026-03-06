@@ -86,7 +86,11 @@
             "rich-text#title-item-2-sucursales-sobre-nosotros",
             "rich-text#text-item-2-sucursales-sobre-nosotros",
             "rich-text#title-item-3-sucursales-sobre-nosotros",
-            "rich-text#text-item-3-sucursales-sobre-nosotros"
+            "rich-text#text-item-3-sucursales-sobre-nosotros",
+            "rich-text#title-item-4-sucursales-sobre-nosotros",
+            "rich-text#text-item-4-sucursales-sobre-nosotros",
+            "rich-text#title-item-5-sucursales-sobre-nosotros",
+            "rich-text#text-item-5-sucursales-sobre-nosotros"
         ]
 
     },
@@ -131,7 +135,7 @@
 
         "props": {
             "blockClass": "title-item-sucursales-sobre-nosotros",
-            "text": "Próximamente:"
+            "text": "MUNDO OUTDOOR"
         }
 
     },
@@ -141,6 +145,42 @@
         "props": {
             "blockClass": "text-item-sucursales-sobre-nosotros",
             "text": "Avenida Santa Fe 4830, Buenos Aires"
+        }
+
+    },
+
+    "rich-text#title-item-4-sucursales-sobre-nosotros": {
+
+        "props": {
+            "blockClass": "title-item-sucursales-sobre-nosotros",
+            "text": "MUNDO OUTDOOR"
+        }
+
+    },
+
+    "rich-text#text-item-4-sucursales-sobre-nosotros": {
+
+        "props": {
+            "blockClass": "text-item-sucursales-sobre-nosotros",
+            "text": "Bahía Plaza Shopping, Bahía Blanca, Provincia de Buenos Aires - 8000"
+        }
+
+    },
+
+    "rich-text#title-item-5-sucursales-sobre-nosotros": {
+
+        "props": {
+            "blockClass": "title-item-sucursales-sobre-nosotros",
+            "text": "MUNDO OUTDOOR"
+        }
+
+    },
+
+    "rich-text#text-item-5-sucursales-sobre-nosotros": {
+
+        "props": {
+            "blockClass": "text-item-sucursales-sobre-nosotros",
+            "text": "Tucumán 552, General Roca, Río Negro"
         }
 
     }

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useCallback } from 'react';
 import { useContext } from "react";
 import { context } from '../ContextSizeColor/SizeColorContext';
 
@@ -9,13 +9,24 @@ import { nextSize } from './SliderEffect/nextSize';
 // STYLES 
 const style = require('./ListaColores.css');
 
-const ListaColores = ( { hints } ) => {
+const ListaColores = ( { productContext, hints } ) => {
 
     const allContextExport = useContext(context);
 
     const contSliderRef = useRef();
     const btnMoveItemLeftRef = useRef();
     const btnMoveItemRightRef = useRef();
+
+    // Función para cambiar la imagen principal del product box al hacer hover/click
+    const handleColorHover = useCallback((imageUrl) => {
+        const productBox = contSliderRef.current?.closest('.vtex-product-summary-2-x-container');
+        if (productBox) {
+            const mainImage = productBox.querySelector('.vtex-product-summary-2-x-imageNormal');
+            if (mainImage && imageUrl) {
+                mainImage.src = imageUrl;
+            }
+        }
+    }, []);
     
     return (
 
@@ -23,7 +34,7 @@ const ListaColores = ( { hints } ) => {
 
             { 
             
-                allContextExport.ShowThisColors.length > 2 ? 
+                allContextExport.ShowThisColors.length > 4 ? 
                 
                     <div className={`${style.btn_move_item_color} ${style.left}`} onClick={ e => { e.preventDefault(); e.stopPropagation(); } }>
                         <div onClick={ e => previousSize( e, contSliderRef.current, btnMoveItemLeftRef.current, btnMoveItemRightRef.current, hints ) } ref={btnMoveItemLeftRef}></div>
@@ -41,24 +52,30 @@ const ListaColores = ( { hints } ) => {
 
                     {
 
-                        allContextExport.ShowThisColors.map( color => {
+                        allContextExport.ShowThisColors.map( (color, index) => {
                             
                             return (
 
                                 color[0] === allContextExport.SizeColorObject[ "colorSelected" ] ?
 
-                                    <div className={`${style.itemColor} ${style.active}`} onClick={ e => allContextExport.clickInColor( e, color[0] ) }>
-
-                                        <img src={ color[1] }/>
-
+                                    <div 
+                                        key={`color-${color[0]}-${index}`} 
+                                        className={`${style.itemColor} ${style.active}`} 
+                                        onClick={ e => { allContextExport.clickInColor( e, color[0], productContext ); handleColorHover(color[1]); } }
+                                        onMouseEnter={ () => handleColorHover(color[1]) }
+                                    >
+                                        <img src={ color[1] } alt={color[0]}/>
                                     </div>
 
                                 :
 
-                                    <div className={style.itemColor} onClick={ e => allContextExport.clickInColor( e, color[0] ) }>
-
-                                        <img src={ color[1] }/>
-
+                                    <div 
+                                        key={`color-${color[0]}-${index}`} 
+                                        className={style.itemColor} 
+                                        onClick={ e => { allContextExport.clickInColor( e, color[0], productContext ); handleColorHover(color[1]); } }
+                                        onMouseEnter={ () => handleColorHover(color[1]) }
+                                    >
+                                        <img src={ color[1] } alt={color[0]}/>
                                     </div>
 
                             )
@@ -73,7 +90,7 @@ const ListaColores = ( { hints } ) => {
 
             { 
             
-                allContextExport.ShowThisColors.length > 2 ? 
+                allContextExport.ShowThisColors.length > 4 ? 
                 
                     <div className={`${style.btn_move_item_color} ${style.right}`} onClick={ e => { e.preventDefault(); e.stopPropagation(); } }>
                         <div onClick={ e => nextSize( e, contSliderRef.current, btnMoveItemLeftRef.current, btnMoveItemRightRef.current, hints ) } ref={btnMoveItemRightRef}></div>

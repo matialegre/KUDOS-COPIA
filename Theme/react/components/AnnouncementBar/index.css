@@ -1,25 +1,57 @@
 .announcementBar {
   width: 100%;
-  padding: 12px 20px;
+  padding: 12px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   box-sizing: border-box;
   min-height: 48px;
+  overflow: hidden;
 }
 
-.announcementContent {
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marqueeTrack {
   display: flex;
   align-items: center;
-  justify-content: center;
+  white-space: nowrap;
+  animation: marqueeScroll 30s linear infinite;
+}
+
+.marqueeItem {
+  display: inline-flex;
+  align-items: center;
   gap: 8px;
-  flex: 1;
+  padding: 0 80px;
+}
+
+.marqueeSeparator {
+  margin-left: 40px;
+  opacity: 0.5;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .announcementIcon {
   font-size: 18px;
   line-height: 1;
+}
+
+.announcementIconImage {
+  width: 45px;
+  height: auto;
+  margin-right: 8px;
 }
 
 .announcementText {
@@ -30,36 +62,6 @@
   margin: 0;
   text-align: center;
   line-height: 1.4;
-}
-
-.announcementDots {
-  position: absolute;
-  right: 20px;
-  display: flex;
-  gap: 6px;
-  align-items: center;
-}
-
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: all 0.3s ease;
-}
-
-.dot:hover {
-  background: rgba(255, 255, 255, 0.6);
-  transform: scale(1.2);
-}
-
-.dotActive {
-  background: #fff;
-  width: 8px;
-  height: 8px;
 }
 
 /* Responsive */

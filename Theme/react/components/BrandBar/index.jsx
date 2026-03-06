@@ -12,9 +12,10 @@ const BrandBar = ({ brands: customBrands }) => {
     { name: 'Salomon', logo: '/arquivos/banner-menu-salomon.png', href: '/marcas/salomon' },
     { name: 'RVCA', logo: '/arquivos/banner-menu-rvca.png', href: '/marcas/rvca' },
     { name: 'Burton', logo: '/arquivos/banner-menu-burton.png', href: '/marcas/burton' },
-    { name: 'Sorel', logo: '/arquivos/banner-menu-sorel.png', href: '/marcas/sorel' },
+    { name: 'Waterdog', logo: '/arquivos/logo-waterdog-49-49-49 (1).png', href: '/marcas/waterdog' },
     { name: 'Ansilta', logo: '/arquivos/banner-menu-ansilta.png', href: '/marcas/ansilta' },
-    { name: 'National Geographic', logo: 'https://mundooutdoorar.vtexassets.com/arquivos/nationalimagenicono.png', href: '/marcas/national-geographic' }
+    { name: 'National Geographic', logo: 'https://mundooutdoorar.vtexassets.com/arquivos/nationalimagenicono.png', href: '/marcas/national-geographic' },
+    { name: 'Weis', logo: '/arquivos/logo_weis.png', href: '/marcas/weis' }
   ]
 
   const brands = customBrands && customBrands.length > 0 ? customBrands : defaultBrands

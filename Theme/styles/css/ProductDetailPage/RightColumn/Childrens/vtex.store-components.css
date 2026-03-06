@@ -80,19 +80,71 @@
 
 /* FIN SHIPPING SIMULATOR */
 
-/* SKU SELECTOR - OCULTAR TALLES Y COLORES NO DISPONIBLES */
+/* SKU SELECTOR - MOSTRAR TALLES Y COLORES NO DISPONIBLES TACHADOS */
 
+/* Talle sin stock - mostrar tachado con X */
 :global(.vtex-store-components-3-x-skuSelectorItem):global(.vtex-store-components-3-x-unavailable) {
-    display: none !important;
+    display: flex !important;
+    position: relative;
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
+:global(.vtex-store-components-3-x-skuSelectorItem):global(.vtex-store-components-3-x-unavailable)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to top right,
+        transparent calc(50% - 1px),
+        #666 calc(50% - 1px),
+        #666 calc(50% + 1px),
+        transparent calc(50% + 1px)
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Color/Imagen sin stock - mostrar tachado con X */
 :global(.vtex-store-components-3-x-skuSelectorItemImage):global(.vtex-store-components-3-x-unavailable) {
-    display: none !important;
+    display: block !important;
+    position: relative;
+    opacity: 0.5;
 }
 
-/* Ocultar items de SKU no disponibles en general */
-:global(.vtex-store-components-3-x-unavailable) {
-    display: none !important;
+:global(.vtex-store-components-3-x-skuSelectorItemImage):global(.vtex-store-components-3-x-unavailable)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(
+            to top right,
+            transparent calc(50% - 1px),
+            #666 calc(50% - 1px),
+            #666 calc(50% + 1px),
+            transparent calc(50% + 1px)
+        ),
+        linear-gradient(
+            to top left,
+            transparent calc(50% - 1px),
+            #666 calc(50% - 1px),
+            #666 calc(50% + 1px),
+            transparent calc(50% + 1px)
+        );
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Frame del item sin stock */
+:global(.vtex-store-components-3-x-frameAround):global(.vtex-store-components-3-x-unavailable) {
+    border-color: #ccc !important;
 }
 
 /* FIN SKU SELECTOR */

@@ -3,8 +3,7 @@
     /* ----- FORM NEWSLETTER ----- */
      "form#newsletter": {
        "props": {
-         "entity": "NS", //Data Entity > Acronym,
-         "schema": "Newsletter_Suscription" //Data Entity > Name
+         "entity": "NS" //Data Entity > Acronym
        },
        "children": [
          "flex-layout.row#field-newsletter"

@@ -2,3 +2,10 @@
     position: relative;
     background: var(--background-footer);
 }
+
+.poweredBy {
+    transform: scale(0.20);
+    transform-origin: center;
+    opacity: 0.8;
+    margin: 0 10px;
+}

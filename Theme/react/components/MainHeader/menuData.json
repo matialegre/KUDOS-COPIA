@@ -116,6 +116,7 @@
             { "label": "Cintos", "href": "/mujer/accesorios/cintos" },
             { "label": "Boxers", "href": "/mujer/accesorios/boxers" },
             { "label": "Billeteras", "href": "/mujer/accesorios/billeteras" },
+            { "label": "Bolsos", "href": "/mujer/accesorios/bolsos" },
             { "label": "Ver todo", "href": "/mujer/accesorios", "highlight": true }
           ]
         }
@@ -167,6 +168,9 @@
           "items": [
             { "label": "Antiparras", "href": "/ninos/accesorios/antiparras" },
             { "label": "Anteojos", "href": "/ninos/accesorios/anteojos" },
+            { "label": "Botellas", "href": "/ninos/accesorios/botellas" },
+            { "label": "Luncheras", "href": "/ninos/accesorios/luncheras" },
+            { "label": "Vasos", "href": "/ninos/accesorios/vasos" },
             { "label": "Guantes", "href": "/ninos/accesorios/guantes" },
             { "label": "Medias", "href": "/ninos/accesorios/medias" },
             { "label": "Gorras", "href": "/ninos/accesorios/gorras" },
@@ -196,7 +200,8 @@
             { "label": "Ansilta", "href": "/marcas/ansilta" },
             { "label": "Columbia", "href": "/marcas/columbia" },
             { "label": "National Geographic", "href": "/marcas/national-geographic" },
-            { "label": "C1rca", "href": "/marcas/c1rca" }
+            { "label": "C1rca", "href": "/marcas/c1rca" },
+            { "label": "Martha", "href": "/marcas/martha" }
           ]
         },
         {
@@ -210,6 +215,8 @@
             { "label": "Nexxt", "href": "/marcas/nexxt" },
             { "label": "Waterdog", "href": "/marcas/waterdog" },
             { "label": "Timberland", "href": "/marcas/timberland" },
+            { "label": "Weis", "href": "/marcas/weis" },
+            { "label": "Mountain", "href": "/marcas/mountain" },
             { "label": "Ver todo", "href": "/marcas", "highlight": true }
           ]
         }
@@ -243,6 +250,7 @@
             { "label": "Toallas", "href": "/camping/accesorios/toallas" },
             { "label": "Gazebos", "href": "/camping/accesorios/gazebos" },
             { "label": "Vasos", "href": "/camping/accesorios/vasos" },
+            { "label": "Hidratación", "href": "/hidratacion" },
             { "label": "Ver todo", "href": "/camping/accesorios", "highlight": true }
           ]
         }

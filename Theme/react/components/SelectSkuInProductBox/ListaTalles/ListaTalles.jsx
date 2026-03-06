@@ -76,17 +76,17 @@ const ListaTalles = ( { productContext, hints } ) => {
 
                     {
 
-                        allContextExport.ShowThisSizes.map( size => {
+                        allContextExport.ShowThisSizes.map( (size, index) => {
                             
                             return (
 
                                 size[0] === allContextExport.SizeColorObject[ "sizeSelected" ] ?
 
-                                    <div className={`${style.item} ${style.active}`} onClick={ e => allContextExport.clickInSize( e, size[0] ) }>{size[0]}</div>
+                                    <div key={`size-${size[0]}-${index}`} className={`${style.item} ${style.active}`} onClick={ e => allContextExport.clickInSize( e, size[0], productContext ) }>{size[0]}</div>
 
                                 :
 
-                                    <div className={style.item} onClick={ e => allContextExport.clickInSize( e, size[0] ) }>{size[0]}</div>
+                                    <div key={`size-${size[0]}-${index}`} className={style.item} onClick={ e => allContextExport.clickInSize( e, size[0], productContext ) }>{size[0]}</div>
 
                             )
 

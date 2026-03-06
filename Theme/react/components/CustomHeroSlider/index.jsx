@@ -184,7 +184,7 @@ const CustomHeroSlider = ({ slides = [] }) => {
 
               const iframeViews = iframeViewCountRef.current[index] || 0
               const iframeKey = iframeMountKeyRef.current[index] || 0
-              const allowIframe = iframeViews > 0 && iframeViews <= MAX_VIDEO_LOOPS
+              const allowIframe = iframeViews <= MAX_VIDEO_LOOPS
               const isActive = index === currentIndex
 
               let desktopMedia
@@ -207,7 +207,7 @@ const CustomHeroSlider = ({ slides = [] }) => {
                         key={`iframe-desktop-${index}-${iframeKey}`}
                         className={`${styles.sliderMedia} ${styles.sliderMediaDesktop}`}
                         src={desktopSrc}
-                        loading="lazy"
+                        loading="eager"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         frameBorder="0"
                       />
@@ -230,7 +230,7 @@ const CustomHeroSlider = ({ slides = [] }) => {
                         key={`iframe-mobile-${index}-${iframeKey}`}
                         className={`${styles.sliderMedia} ${styles.sliderMediaMobile}`}
                         src={mobileSrc}
-                        loading="lazy"
+                        loading="eager"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         frameBorder="0"
                       />

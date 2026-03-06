@@ -24,7 +24,7 @@ const sucursalesData = [
                 "longitude": -62.2663
             }
         },
-        "horarios": "Lunes a Sábados de 09:00 a 20:30",
+        "horarios": "9 a 20:30",
         "telefono": "",
         "mainImage": "SUCURSAL-MUNDO-ALSINA-46.jpg",
         "gallery": [
@@ -61,7 +61,7 @@ const sucursalesData = [
                 "longitude": -62.2632057116433
             }
         },
-        "horarios": "Lunes a Sábados de 09:00 a 20:30",
+        "horarios": "9 a 13:30 y de 17:30 a 20:30",
         "telefono": "",
         "mainImage": "SUCURSAL-MUNDO-SAN-AMRTIN-46.jpg",
         "gallery": [
@@ -98,7 +98,7 @@ const sucursalesData = [
                 "longitude": -62.2694
             }
         },
-        "horarios": "Lunes a Sábados de 09:00 a 20:30",
+        "horarios": "10 a 21",
         "telefono": "",
         "mainImage": "SUCURSAL-MUNDO-SHOPPING-46.jpg",
         "gallery": [
@@ -134,7 +134,7 @@ const sucursalesData = [
                 "longitude": -58.42789134909232
             }
         },
-        "horarios": "Lunes a Sábados de 09:00 a 20:30",
+        "horarios": "9:00 a 21:00",
         "telefono": "1158633575",
         "mainImage": "SUCURSAL-MUNDO-CABA-46.jpg",
         "gallery": [
@@ -171,7 +171,7 @@ const sucursalesData = [
                 "longitude": -67.5833
             }
         },
-        "horarios": "Lunes a Sábados de 09:00 a 20:30",
+        "horarios": "9:00 a 13:00 y de 17:00 a 21:00",
         "telefono": "",
         "mainImage": "SUCURSAL-ROCA-46.jpg",
         "gallery": [

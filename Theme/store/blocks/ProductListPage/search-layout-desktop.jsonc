@@ -12,7 +12,7 @@
                     "hiddenFilters": ["Actividad", "actividad"]
                 }
             },
-            "pagination": "show-more",
+            "pagination": "show-all",
             "preventRouteChange": false,
             "mobileLayout": {
                 "mode1": "small",

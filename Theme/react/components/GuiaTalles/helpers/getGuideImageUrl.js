@@ -74,6 +74,7 @@ const IMAGE_MAP = {
   'salomon|mujer|camperas': 'guia-salomon-mujer-camperas.jpg',
   'salomon|mujer|indumentaria': 'guia-salomon-mujer-indumentaria.jpg',
 
+  'timberland|hombre|calzado': 'guia-timberland-hombre-calzado.jpg',
   'timberland|mujer|calzado': 'guia-timberland-mujer-calzado.jpg',
   'timberland|unisex|calzado': 'guia-timberland-unisex-calzado.jpg',
 

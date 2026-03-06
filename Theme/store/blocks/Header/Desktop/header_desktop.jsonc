@@ -3,8 +3,7 @@
     "header-layout.desktop": {
         "children": [
             "sticky-layout#header-sticky",
-            "brand-bar",
-            "benefits-bar"
+            "brand-bar"
         ]
     },
 
@@ -13,10 +12,29 @@
             "blockClass": "sticky-header"
         },
         "children": [
-            "slider-layout#announcementBar",
+            "announcement-bar#header",
             "flex-layout.row#utilityBar",
             "main-header#desktop"
         ]
+    },
+
+    "announcement-bar#header": {
+        "props": {
+            "backgroundColor": "#000",
+            "textColor": "#fff",
+            "messages": [
+                {
+                    "id": "free-shipping",
+                    "text": "ENVÍO GRATIS EN COMPRAS MAYORES A $120.000",
+                    "iconImage": "https://mundooutdoorar.vteximg.com.br/arquivos/icono_camion_blanco.png"
+                },
+                {
+                    "id": "cuotas",
+                    "text": "3 Y 6 CUOTAS SIN INTERÉS",
+                    "iconImage": "https://mundooutdoorar.vteximg.com.br/arquivos/tarjeta.blanca.arriba.png"
+                }
+            ]
+        }
     },
 
     "main-header#desktop": {
@@ -139,7 +157,7 @@
     "rich-text#announcementMessageTruck": {
         "props": {
             "blockClass": "announcement-message-with-truck",
-            "text": "ENVÍO GRATIS EN COMPRAS MAYORES A $150.000"
+            "text": "ENVÍO GRATIS EN COMPRAS MAYORES A $120.000"
         }
     },
 

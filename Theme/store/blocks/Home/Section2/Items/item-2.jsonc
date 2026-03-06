@@ -18,7 +18,7 @@
     "benefit-card-image#itemSquare2":{
 
         "props": {
-            "srcDesktop": "/arquivos/PROMOS-22.png",
+            "srcDesktop": "/arquivos/enviogratis120.png",
             "srcMobile": "/arquivos/promos%20celu-30%20(1).png",
             "alt": "Promoción 2",
             "link": "/pagos-y-promociones"

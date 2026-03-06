@@ -680,8 +680,9 @@ def mark_answered(ticket_id):
     conn.close()
     return jsonify({'success': True})
 
-@app.route('/api/tickets/<ticket_id>/messages', methods=['GET'])
+@app.route('/api/tickets/<ticket_id>/messages', methods=['GET', 'OPTIONS'])
 def get_ticket_messages(ticket_id):
+    if request.method == 'OPTIONS': return '', 200
     last_id = request.args.get('after', 0, type=int)
     conn = get_db()
     c = conn.cursor()

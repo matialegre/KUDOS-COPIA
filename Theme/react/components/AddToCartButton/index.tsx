@@ -4,12 +4,13 @@ import { useProduct } from 'vtex.product-context'
 const AddToCartButton: React.FC = () => {
   const productContext = useProduct()
   const selectedItem = productContext?.selectedItem
+  const selectedQuantity = productContext?.selectedQuantity || 1
 
   const handleAddToCart = () => {
     if (!selectedItem) return
 
     const skuId = selectedItem.itemId
-    window.location.href = `/checkout/cart/add?sku=${skuId}&qty=1&seller=1&sc=1`
+    window.location.href = `/checkout/cart/add?sku=${skuId}&qty=${selectedQuantity}&seller=1&sc=1`
   }
 
   return (

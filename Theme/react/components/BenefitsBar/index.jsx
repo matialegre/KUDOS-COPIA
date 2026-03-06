@@ -110,11 +110,20 @@ BenefitsBar.schema = {
   properties: {
     benefits: {
       title: 'Beneficios',
-      description: 'Lista de beneficios a mostrar',
+      description: 'Lista de beneficios a mostrar. Hacé clic en cada item para editarlo.',
       type: 'array',
+      minItems: 0,
+      maxItems: 10,
       items: {
+        title: 'Beneficio',
         type: 'object',
         properties: {
+          __editorItemTitle: {
+            title: 'Nombre del beneficio',
+            description: 'Nombre para identificar este beneficio en el editor',
+            type: 'string',
+            default: 'Nuevo beneficio'
+          },
           id: {
             title: 'ID',
             type: 'string'
@@ -142,6 +151,7 @@ BenefitsBar.schema = {
             description: 'Tema de fondo (dark o light) - se ignora si hay color personalizado',
             type: 'string',
             enum: ['dark', 'light'],
+            enumNames: ['Oscuro', 'Claro'],
             default: 'dark'
           },
           backgroundColor: {
@@ -151,17 +161,7 @@ BenefitsBar.schema = {
             default: ''
           }
         }
-      },
-      default: [
-        {
-          id: 'pago-blanco',
-          image: '/arquivos/pago_blanco_2.png',
-          alt: 'Medios de pago - logos en blanco',
-          href: '/pagos-y-promociones',
-          theme: 'dark',
-          backgroundColor: '#0f0f0f'
-        }
-      ]
+      }
     }
   }
 }

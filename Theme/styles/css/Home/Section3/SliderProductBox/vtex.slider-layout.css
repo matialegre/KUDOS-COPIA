@@ -48,8 +48,9 @@
 }
 
 .sliderLayoutContainer--product-summary-slider .sliderTrackContainer--product-summary-slider .sliderTrack--product-summary-slider{
-  max-height: 521px;
-  height: 521px;
+  max-height: 600px;
+  height: auto;
+  overflow-y: auto;
 }
 
 @media (max-width: 640px) {

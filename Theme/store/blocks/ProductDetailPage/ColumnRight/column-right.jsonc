@@ -107,7 +107,7 @@
 
       "props": {
         "blockClass": "titulo-cuotas",
-        "text": "cuotas habituales"
+        "text": ""
       }
 
     },
@@ -222,11 +222,12 @@
 
     },
 
-    "image#promocionesBancariasPopup": {
+    "pagos-promociones#popup": {
 
       "props": {
         "blockClass": "promociones-bancarias-popup",
-        "src": "https://mundooutdoorar.vtexassets.com/arquivos/tarj.debitobien.png"
+        "imageUrl": "https://mundooutdoorar.vtexassets.com/arquivos/promosbancarias-69(3).png",
+        "alt": "Promociones bancarias, cuotas y medios de pago"
       }
 
     },
@@ -269,7 +270,8 @@
     "product-quantity": {
 
       "props": {
-        "selectorType": "dropdown"
+        "selectorType": "dropdown",
+        "showUnit": false
       }
 
     },
@@ -293,9 +295,12 @@
 
       "props": {
         "hideImpossibleCombinations": false,
-        "disableUnavailableSelectOptions": true,
+        "showValueForVariation": "all",
+        "disableUnavailableSelectOptions": false,
         "maxItems": 20,
-        "initialSelection": "empty"
+        "initialSelection": "empty",
+        "variationsSpacing": 7,
+        "showVariationsLabels": true
       }
 
     }

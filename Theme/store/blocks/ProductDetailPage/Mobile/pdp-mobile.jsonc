@@ -7,10 +7,17 @@
         },
 
         "children": [
-            "product-quantity",
+            "product-quantity#mobile",
             "vtex.store-components:buy-button"
         ]
 
+    },
+
+    "product-quantity#mobile": {
+        "props": {
+            "selectorType": "dropdown",
+            "showUnit": false
+        }
     }
 
 }

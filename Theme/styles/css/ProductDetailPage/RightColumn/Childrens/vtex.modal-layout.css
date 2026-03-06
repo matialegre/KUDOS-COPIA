@@ -79,7 +79,7 @@
     max-height: 90vh;
     box-sizing: border-box;
     border-radius: 0;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 @media (max-width: 640px) {

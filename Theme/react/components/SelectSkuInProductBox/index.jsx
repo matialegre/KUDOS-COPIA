@@ -47,7 +47,7 @@ const SelectSkuInProductBox = ( { AddToCartButton } ) => {
     
             {ReactDOM.createPortal(
         
-              <ListaColores hints={hints}/>,
+              <ListaColores productContext={productContext} hints={hints}/>,
               coloresContainer
 
             )}

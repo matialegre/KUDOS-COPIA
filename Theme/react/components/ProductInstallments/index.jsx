@@ -94,7 +94,7 @@ const ProductInstallments = ({
         {intl.formatMessage(
           {
             id: 'store/product-installments.custom-message',
-            defaultMessage: '{installmentsNumber} cuotas sin interés de {installmentValue}',
+            defaultMessage: '{installmentsNumber} Cuotas sin interés de {installmentValue}',
           },
           {
             installmentsNumber,

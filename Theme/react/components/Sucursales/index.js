@@ -125,6 +125,7 @@ const Sucursales = () => {
                 <div className={styles.cardOverlay}>
                   <h2 className={styles.cardTitle}>{sucursal.name}</h2>
                   <p className={styles.cardSubtitle}>{sucursal.subtitle}</p>
+                  {sucursal.horarios && <p className={styles.cardHorarios}>{sucursal.horarios}</p>}
                 </div>
               </div>
 

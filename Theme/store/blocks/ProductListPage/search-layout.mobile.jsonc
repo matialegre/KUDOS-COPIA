@@ -18,7 +18,7 @@
                     "hiddenFilters": ["actividad"]
                 }
             },
-            "pagination": "show-more",
+            "pagination": "show-all",
             "mobileLayout": {
                 "mode1": "small",
                 "mode2": "normal"

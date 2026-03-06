@@ -10,7 +10,7 @@
             "blockClass": "sticky-header-mobile"
         },
         "children": [
-            "slider-layout#announcementBar",
+            "announcement-bar#header",
             "main-header#desktop"
         ]
     }

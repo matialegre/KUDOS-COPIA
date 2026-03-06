@@ -26,7 +26,7 @@ interface PagosPromocionesProps {
 const PagosPromociones: React.FC<PagosPromocionesProps> = ({ imageUrl, alt }) => {
   const effectiveImageUrl =
     imageUrl ||
-    'https://mundooutdoorar.vtexassets.com/arquivos/tarj.debitobien.png'
+    'https://mundooutdoorar.vtexassets.com/arquivos/promosbancarias-69(3).png'
 
   const effectiveAlt =
     alt || 'Promociones bancarias, cuotas y medios de pago'
@@ -52,7 +52,10 @@ const PagosPromociones: React.FC<PagosPromocionesProps> = ({ imageUrl, alt }) =>
       title: 'URL de la imagen',
       type: 'string',
       default:
-        'https://mundooutdoorar.vtexassets.com/arquivos/tarj.debitobien.png',
+        'https://mundooutdoorar.vtexassets.com/arquivos/promosbancarias-69(3).png',
+      widget: {
+        'ui:widget': 'image-uploader'
+      }
     },
     alt: {
       title: 'Texto alternativo (alt)',

@@ -27,7 +27,10 @@
 }
 
 .relatedProducts .shelfContentContainer--related{
-    height: 521px;
+    min-height: 521px;
+    height: auto;
+    max-height: 600px;
+    overflow-y: auto;
 }
 
 @media (max-width: 640px) {

@@ -1,37 +1,35 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styles from './index.css'
 
 const AnnouncementBar = ({ 
   messages = [],
   backgroundColor = '#000',
-  textColor = '#fff',
-  autoRotate = true,
-  rotationInterval = 5000
+  textColor = '#fff'
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0)
 
   const defaultMessages = [
     {
       id: 'free-shipping',
-      text: 'ENVÍO GRATIS EN COMPRAS MAYORES A $150.000',
-      icon: '🚚'
+      text: 'ENVÍO GRATIS EN COMPRAS MAYORES A $120.000',
+      iconImage: 'https://mundooutdoorar.vteximg.com.br/arquivos/icono_camion_blanco.png'
+    },
+    {
+      id: 'cuotas',
+      text: '3 Y 6 CUOTAS SIN INTERÉS',
+      iconImage: 'https://mundooutdoorar.vteximg.com.br/arquivos/tarjeta.blanca.arriba.png'
     }
   ]
 
   const displayMessages = messages && messages.length > 0 ? messages : defaultMessages
-  const hasMultiple = displayMessages.length > 1
 
-  useEffect(() => {
-    if (!autoRotate || !hasMultiple) return
-
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % displayMessages.length)
-    }, rotationInterval)
-
-    return () => clearInterval(timer)
-  }, [autoRotate, hasMultiple, displayMessages.length, rotationInterval])
-
-  const currentMessage = displayMessages[currentIndex]
+  // Crear el contenido del marquee repitiendo los mensajes para efecto continuo
+  const marqueeContent = displayMessages.map((msg, index) => (
+    <span key={`msg-${index}`} className={styles.marqueeItem}>
+      {msg.iconImage && <img src={msg.iconImage} alt="" className={styles.announcementIconImage} />}
+      {msg.icon && !msg.iconImage && <span className={styles.announcementIcon}>{msg.icon}</span>}
+      <span className={styles.announcementText}>{msg.text}</span>
+    </span>
+  ))
 
   return (
     <div 
@@ -41,25 +39,14 @@ const AnnouncementBar = ({
         color: textColor 
       }}
     >
-      <div className={styles.announcementContent}>
-        {currentMessage.icon && (
-          <span className={styles.announcementIcon}>{currentMessage.icon}</span>
-        )}
-        <p className={styles.announcementText}>{currentMessage.text}</p>
-      </div>
-      
-      {hasMultiple && (
-        <div className={styles.announcementDots}>
-          {displayMessages.map((_, index) => (
-            <button
-              key={index}
-              className={`${styles.dot} ${index === currentIndex ? styles.dotActive : ''}`}
-              onClick={() => setCurrentIndex(index)}
-              aria-label={`Ir al mensaje ${index + 1}`}
-            />
-          ))}
+      <div className={styles.marqueeContainer}>
+        <div className={styles.marqueeTrack}>
+          {marqueeContent}
+          {marqueeContent}
+          {marqueeContent}
+          {marqueeContent}
         </div>
-      )}
+      </div>
     </div>
   )
 }

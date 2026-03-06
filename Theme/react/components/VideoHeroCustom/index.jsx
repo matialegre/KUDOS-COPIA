@@ -73,36 +73,22 @@ const VideoHeroCustom = ({
   }
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !videoEnded) {
-            setShowVideo(true)
-            if (!timerRef.current) {
-              timerRef.current = setTimeout(() => {
-                setVideoEnded(true)
-                setShowVideo(false)
-              }, videoDuration)
-            }
-          }
-        })
-      },
-      { threshold: 0.3 }
-    )
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current)
+    // Cargar el video inmediatamente sin esperar a que sea visible
+    setShowVideo(true)
+    
+    if (!timerRef.current) {
+      timerRef.current = setTimeout(() => {
+        setVideoEnded(true)
+        setShowVideo(false)
+      }, videoDuration)
     }
 
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current)
-      }
       if (timerRef.current) {
         clearTimeout(timerRef.current)
       }
     }
-  }, [videoEnded, videoDuration])
+  }, [videoDuration])
 
   const showIframe = showVideo && !videoEnded
 
@@ -158,7 +144,6 @@ const VideoHeroCustom = ({
             <iframe
               className={styles.videoElement}
               src={sanitizedVideoUrl}
-              loading="lazy"
               style={{ border: 'none' }}
               allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
             />

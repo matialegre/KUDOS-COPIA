@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.css'
 
 const WELCOME_POPUP_ENABLED = true
-const WELCOME_POPUP_IGNORE_LOCAL_STORAGE = false  // Respetar localStorage
-const WELCOME_POPUP_FORCE_STAY = false  // Permitir cerrar con X
+const WELCOME_POPUP_IGNORE_LOCAL_STORAGE = false
+const WELCOME_POPUP_FORCE_STAY = false
+const THEME_VERSION = '1.0.170'
 
 const WelcomePopup = ({ 
   title, 
@@ -15,11 +16,14 @@ const WelcomePopup = ({
   inputPlaceholder 
 }) => {
   const [isVisible, setIsVisible] = useState(false)
-  const [email, setEmail] = useState('')
+  const [showSuccess, setShowSuccess] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [message, setMessage] = useState('')
+  // const [debugInfo, setDebugInfo] = useState('')
+  const formRef = useRef(null)
 
   useEffect(() => {
+    console.log(`🎨 Mundo Outdoor Theme v${THEME_VERSION}`)
+    
     if (!WELCOME_POPUP_ENABLED) {
       return
     }
@@ -46,9 +50,8 @@ const WelcomePopup = ({
   }, [])
 
   const handleClose = (force = false) => {
-    // Si FORCE_STAY está activo, solo se puede cerrar con force=true (después de interactuar)
     if (WELCOME_POPUP_FORCE_STAY && !force) {
-      return // No permitir cerrar
+      return
     }
     setIsVisible(false)
     if (!WELCOME_POPUP_IGNORE_LOCAL_STORAGE) {
@@ -56,46 +59,42 @@ const WelcomePopup = ({
     }
   }
 
-  const handleSubmit = async (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault()
+    const formData = new FormData(e.target)
+    const email = formData.get('email')
     
     if (!email || !email.includes('@')) {
-      setMessage('Por favor ingresá un email válido')
       return
     }
 
     setIsSubmitting(true)
-    setMessage('')
-
-    try {
-      // 1) Generar cupón
-      let couponCode = 'mundo10'
-
-      // 2) Normalizar cupón: si no se pudo generar uno dinámico, usar uno estático
-      if (!couponCode) {
-        couponCode = 'mundo10'
+    
+    // Enviar a 6 entidades: NS + 5 de prueba
+    const entities = ['NS', 'TQ', 'TW', 'TE', 'TR', 'TT']
+    
+    for (const entity of entities) {
+      try {
+        const payload = entity === 'NS' 
+          ? { email, isNewsletterOptIn: true, source: 'popup_mundo10' }
+          : { email }
+        
+        const response = await fetch(`/api/dataentities/${entity}/documents`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        })
+        console.log(`${entity}: ${response.status}`)
+      } catch (err) {
+        console.error(`Error ${entity}:`, err)
       }
-
-      // Guardar en Master Data siempre con email + cupón
-
-      if (couponCode) {
-        setMessage(`¡Gracias por suscribirte! Tu cupón es ${couponCode}.`)
-      } else {
-        setMessage('¡Gracias por suscribirte! Revisá tu email.')
-      }
-
-      setEmail('')
-
-      // Cerrar popup después de 2 segundos (forzado)
-      setTimeout(() => {
-        handleClose(true)
-      }, 2000)
-    } catch (error) {
-      console.error('Error al suscribirse:', error)
-      setMessage('Hubo un error. Intentá de nuevo.')
-    } finally {
-      setIsSubmitting(false)
     }
+
+    setShowSuccess(true)
+    setIsSubmitting(false)
   }
 
   if (!WELCOME_POPUP_ENABLED || !isVisible) return null
@@ -130,32 +129,34 @@ const WelcomePopup = ({
             {description || 'PORQUE CADA AVENTURA EMPIEZA MEJOR CON VOS'}
           </p>
 
-          <form onSubmit={handleSubmit} className={styles.form}>
-            <label className={styles.emailLabel}>
-              Ingresa tu e-mail
-            </label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder={inputPlaceholder || 'tu@email.com'}
-              className={styles.emailInput}
-              disabled={isSubmitting}
-              required
-            />
-            
-            <button 
-              type="submit" 
-              className={styles.submitButton}
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? 'ENVIANDO...' : (buttonText || 'SUSCRIBITE')}
-            </button>
-            
-            {message && (
-              <p className={styles.message}>{message}</p>
-            )}
-          </form>
+          {showSuccess ? (
+            <div className={styles.successMessage}>
+              <p>¡Gracias por suscribirte!</p>
+              <p>Tu cupón es: <strong>mundo10</strong></p>
+            </div>
+          ) : (
+            <form ref={formRef} onSubmit={handleFormSubmit} className={styles.form}>
+              <label className={styles.emailLabel}>
+                Ingresa tu e-mail
+              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder={inputPlaceholder || 'tu@email.com'}
+                className={styles.emailInput}
+                required
+              />
+              
+              <button 
+                type="submit" 
+                className={styles.submitButton}
+              >
+                {buttonText || 'SUSCRIBITE'}
+              </button>
+            </form>
+          )}
+
+          
         </div>
       </div>
     </div>

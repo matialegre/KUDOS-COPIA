@@ -51,12 +51,12 @@
   position: absolute;
   top: 15px;
   right: 20px;
-  background: transparent;
+  background: transparent !important;
   border: none;
   font-size: 36px;
   line-height: 1;
   cursor: pointer;
-  color: #000;
+  color: #000 !important;
   padding: 0;
   width: 36px;
   height: 36px;
@@ -64,6 +64,7 @@
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease;
+  z-index: 10;
 }
 
 .closeButton:hover {
