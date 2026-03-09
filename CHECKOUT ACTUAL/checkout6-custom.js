@@ -1551,8 +1551,8 @@ const initPaymentEnhancements = () => {
     setTimeout(updatePaymentTexts, 1000);
     setTimeout(handleMercadoLibreLoading, 500);
     setTimeout(updatePaymentTexts, 2500);
-    // Precargar MP después de que todo esté ordenado
-    setTimeout(preloadMercadoPago, 3500);
+    // Precargar MP deshabilitado - interfiere con descuento por transferencia bancaria
+    // setTimeout(preloadMercadoPago, 3500);
   }
 };
 
