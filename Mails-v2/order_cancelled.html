@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{_accountInfo.TradingName}}</title>
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5;">
+<table cellspacing="0" cellpadding="0" style="width: 100%; max-width: 600px; margin: 0 auto; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #FFFFFF;">
+
+  <!-- ============ HEADER: LOGO ============ -->
+  <tr>
+    <td style="text-align: center; padding: 30px 20px 20px;">
+      <a href="https://mundooutdoor.ar/" target="_blank">
+        <img src="https://mundooutdoorar.myvtex.com/arquivos/logomundo-tr.png" alt="Mundo Outdoor" style="width: 120px; height: auto;">
+      </a>
+    </td>
+  </tr>
+
+  <!-- ============ SALUDO ============ -->
+  <tr>
+    <td style="text-align: center; padding: 10px 20px 5px;">
+      <h1 style="margin: 0; font-size: 28px; font-weight: 900; color: #1D1D1D; text-transform: uppercase; letter-spacing: 0.5px;">
+        HOLA {{clientProfileData.firstName}}
+      </h1>
+    </td>
+  </tr>
+
+  <!-- ============ BADGE ESTADO ============ -->
+  <tr>
+    <td style="text-align: center; padding: 15px 40px;">
+      <table cellpadding="0" cellspacing="0" style="width: 100%;">
+        <tr>
+          <td style="background-color: #1D1D1D; text-align: center; padding: 12px 20px; border-radius: 4px;">
+            <h2 style="margin: 0; font-size: 18px; font-weight: 900; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; font-style: italic;">
+              TU PEDIDO FUE CANCELADO
+            </h2>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ NUMERO DE PEDIDO ============ -->
+  <tr>
+    <td style="text-align: center; padding: 10px 20px 15px;">
+      <p style="margin: 0; font-size: 18px; color: #1D1D1D; font-weight: 400;">
+        N° {{orderId}}
+      </p>
+    </td>
+  </tr>
+
+  <!-- ============ SEPARADOR ============ -->
+  <tr>
+    <td style="padding: 10px 40px;">
+      <table cellpadding="0" cellspacing="0" style="width: 100%;">
+        <tr><td style="border-top: 1px solid #E9EAED;"></td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ TOTAL PRODUCTOS ============ -->
+  <tr>
+    <td style="padding: 20px 40px 30px;">
+      <h3 style="margin: 0 0 16px; font-size: 16px; font-weight: 700; color: #1D1D1D; text-transform: uppercase; letter-spacing: 0.5px;">
+        TOTAL PRODUCTOS
+      </h3>
+      <table cellpadding="0" cellspacing="0" style="width: 100%;">
+        {{#each totals}}
+          {{#eq id "Items"}}
+          <tr>
+            <td style="padding-bottom: 10px; font-size: 15px; color: #1D1D1D;">Subtotal</td>
+            <td style="padding-bottom: 10px; font-size: 15px; color: #1D1D1D; text-align: right;" align="right">
+              ${{formatCurrency value}}
+            </td>
+          </tr>
+          {{/eq}}
+          {{#eq id "Discounts"}}
+          <tr>
+            <td style="padding-bottom: 10px; font-size: 15px; color: #1D1D1D;">Descuentos</td>
+            <td style="padding-bottom: 10px; font-size: 15px; color: #1D1D1D; text-align: right;" align="right">
+              ${{formatCurrency value}}
+            </td>
+          </tr>
+          {{/eq}}
+          {{#eq id "Shipping"}}
+          <tr>
+            <td style="padding-bottom: 10px; font-size: 15px; color: #1D1D1D;">Envíos</td>
+            <td style="padding-bottom: 10px; font-size: 15px; color: #1D1D1D; text-align: right;" align="right">
+              {{#compare value '!=' 0}}
+                ${{formatCurrency value}}
+              {{else}}
+                <span style="color: #02a002; font-weight: 600;">Gratis</span>
+              {{/compare}}
+            </td>
+          </tr>
+          {{/eq}}
+        {{/each}}
+        <tr>
+          <td style="padding-top: 12px; border-top: 1px solid #E0E0E0; font-size: 18px; font-weight: 900; color: #1D1D1D;">
+            TOTAL:
+          </td>
+          <td style="padding-top: 12px; border-top: 1px solid #E0E0E0; font-size: 22px; font-weight: 900; color: #1D1D1D; text-align: right;" align="right">
+            ${{formatCurrency value}}
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ TU PEDIDO (PRODUCTOS) ============ -->
+  <tr>
+    <td style="padding: 15px 40px 5px;">
+      <h3 style="margin: 0; font-size: 16px; font-weight: 700; color: #1D1D1D; text-transform: uppercase; letter-spacing: 0.5px;">
+        TU PEDIDO
+      </h3>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="padding: 0 40px;">
+      <table style="width: 100%; border-top: 1px solid #E0E0E0;" cellpadding="0" cellspacing="0">
+        <tbody>
+          {{#each items}}
+          <tr style="border-bottom: 1px solid #E0E0E0;">
+            <td style="padding: 16px 0; width: 86px; vertical-align: top;">
+              <img src="{{imageUrl}}" alt="" width="86" height="auto" style="border: 1px solid #E2E3E4; display: block;">
+            </td>
+            <td style="padding: 16px 0 16px 16px; vertical-align: top;">
+              <p style="margin: 0 0 6px; font-size: 13px; color: #1D1D1D; line-height: 18px; font-weight: 400; text-transform: uppercase;">{{name}}</p>
+              <p style="margin: 0; font-size: 12px; color: #666666;">COD: {{productRefId}}</p>
+              <p style="margin: 4px 0 0; font-size: 12px; color: #666666;">CANTIDAD: {{quantity}}</p>
+              <p style="margin: 8px 0 0;">
+                {{#compare price '!=' sellingPrice}}
+                  <span style="font-size: 14px; font-weight: 400; color: #999999; text-decoration: line-through;">${{formatCurrency price}}</span><br>
+                {{/compare}}
+                <span style="font-size: 20px; font-weight: 700; color: #1D1D1D;">${{formatCurrency sellingPrice}}</span>
+              </p>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ SEPARADOR ============ -->
+  <tr>
+    <td style="padding: 20px 40px 0;">
+      <table cellpadding="0" cellspacing="0" style="width: 100%;">
+        <tr><td style="border-top: 1px solid #E9EAED;"></td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ BOTON VER PEDIDO ============ -->
+  <tr>
+    <td style="text-align: center; padding: 15px 60px 30px;">
+      <table cellpadding="0" cellspacing="0" style="width: 100%;">
+        <tr>
+          <td style="text-align: center; border: 2px solid #1D1D1D; border-radius: 4px; padding: 14px 20px;">
+            <a href="https://mundooutdoor.ar/account#/orders" target="_blank" style="color: #1D1D1D; text-decoration: none; font-size: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; display: block;">
+              VER PEDIDO
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ BANNER PROMO ============ -->
+  <tr>
+    <td style="padding: 0;">
+      <a href="https://mundooutdoor.ar/" target="_blank" style="display: block;">
+        <img src="https://mundooutdoorar.myvtex.com/arquivos/banner-ya-viste-web.png" alt="¿Ya viste lo que hay en la web?" style="width: 100%; height: auto; display: block;">
+      </a>
+    </td>
+  </tr>
+
+  <!-- ============ ICONOS SOCIALES ============ -->
+  <tr>
+    <td style="text-align: center; padding: 30px 20px 30px;">
+      <table cellpadding="0" cellspacing="0" align="center">
+        <tr>
+          <td style="padding: 0 12px;">
+            <a href="https://www.facebook.com/outdoor.mundo/" target="_blank">
+              <img src="https://mundooutdoorar.myvtex.com/arquivos/iconoface.png" alt="Facebook" style="width: 32px; height: 32px; display: block;">
+            </a>
+          </td>
+          <td style="padding: 0 12px;">
+            <a href="https://www.instagram.com/mundooutdoor.ar/" target="_blank">
+              <img src="https://mundooutdoorar.myvtex.com/arquivos/iconoinsta.png" alt="Instagram" style="width: 32px; height: 32px; display: block;">
+            </a>
+          </td>
+          <td style="padding: 0 12px;">
+            <a href="https://api.whatsapp.com/send/?phone=542914147915&text&type=phone_number&app_absent=0" target="_blank">
+              <img src="https://mundooutdoorar.myvtex.com/arquivos/iconowhat.png" alt="WhatsApp" style="width: 32px; height: 32px; display: block;">
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+</table>
+</body>
+</html>

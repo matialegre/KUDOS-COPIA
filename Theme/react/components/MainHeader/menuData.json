@@ -217,6 +217,7 @@
             { "label": "Timberland", "href": "/marcas/timberland" },
             { "label": "Weis", "href": "/marcas/weis" },
             { "label": "Mountain", "href": "/marcas/mountain" },
+            { "label": "HiTec", "href": "/marcas/hitec" },
             { "label": "Ver todo", "href": "/marcas", "highlight": true }
           ]
         }

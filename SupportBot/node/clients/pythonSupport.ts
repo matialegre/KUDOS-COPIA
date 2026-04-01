@@ -2,15 +2,16 @@ import { ExternalClient, IOContext, InstanceOptions } from '@vtex/api'
 
 export class PythonSupportClient extends ExternalClient {
   constructor(context: IOContext, options?: InstanceOptions) {
-    // TODO: Replace with actual Python service URL when available
-    super('https://PYTHON_SERVICE_URL', context, {
+    super('http://placeholder.local', context, {
       ...options,
-      timeout: 3000,
+      timeout: 5000,
     })
   }
 
-  public notifySupport(payload: any) {
-    return this.http.post('/assist', payload, {
+  public async notifySupport(endpoint: string, payload: any) {
+    const url = `${endpoint.replace(/\/+$/, '')}/assist`
+
+    return this.http.post(url, payload, {
       metric: 'python-support-notify',
     })
   }

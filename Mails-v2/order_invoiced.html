@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{_accountInfo.TradingName}}</title>
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5;">
+<table cellspacing="0" cellpadding="0" style="width: 100%; max-width: 600px; margin: 0 auto; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #FFFFFF;">
+
+  <!-- ============ HEADER: LOGO ============ -->
+  <tr>
+    <td style="text-align: center; padding: 30px 20px 20px;">
+      <a href="https://mundooutdoor.ar/" target="_blank">
+        <img src="https://mundooutdoorar.myvtex.com/arquivos/logomundo-tr.png" alt="Mundo Outdoor" style="width: 120px; height: auto;">
+      </a>
+    </td>
+  </tr>
+
+  <!-- ============ SALUDO ============ -->
+  <tr>
+    <td style="text-align: center; padding: 10px 20px 5px;">
+      <h1 style="margin: 0; font-size: 28px; font-weight: 900; color: #1D1D1D; text-transform: uppercase; letter-spacing: 0.5px;">
+        HOLA {{clientProfileData.firstName}}
+      </h1>
+    </td>
+  </tr>
+
+  <!-- ============ BADGE ESTADO ============ -->
+  <tr>
+    <td style="text-align: center; padding: 15px 40px;">
+      <table cellpadding="0" cellspacing="0" style="width: 100%;">
+        <tr>
+          <td style="background-color: #1D1D1D; text-align: center; padding: 12px 20px; border-radius: 4px;">
+            <h2 style="margin: 0; font-size: 18px; font-weight: 900; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; font-style: italic;">
+              TU PEDIDO ESTA SIENDO PREPARADO
+            </h2>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ NUMERO DE PEDIDO ============ -->
+  <tr>
+    <td style="text-align: center; padding: 10px 20px 5px;">
+      <p style="margin: 0; font-size: 18px; color: #1D1D1D; font-weight: 400;">
+        N° {{orderId}}
+      </p>
+    </td>
+  </tr>
+
+  <!-- ============ MENSAJE INFORMATIVO ============ -->
+  <tr>
+    <td style="text-align: center; padding: 15px 50px 10px;">
+      <p style="margin: 0; font-size: 12px; color: #666666; line-height: 18px; text-transform: uppercase; letter-spacing: 0.3px;">
+        TE ENVIAREMOS UN E-MAIL CUANDO EL MISMO ESTÉ EN CAMINO.<br>
+        POR FAVOR AGUARDA AL PRÓXIMO AVISO.
+      </p>
+    </td>
+  </tr>
+
+  <!-- ============ BARRA DE PROGRESO (PASO 3 ACTIVO) ============ -->
+  <tr>
+    <td style="text-align: center; padding: 20px 30px;">
+      {{#eq shippingData.logisticsInfo.0.selectedDeliveryChannel "delivery"}}
+      <img src="https://mundooutdoorar.myvtex.com/arquivos/barra-progreso-envio-3.png" alt="Paso 3 - En preparación" style="width: 100%; max-width: 480px; height: auto;">
+      {{else}}
+      <img src="https://mundooutdoorar.myvtex.com/arquivos/barra-progreso-entregar-3.png" alt="Paso 3 - En preparación" style="width: 100%; max-width: 480px; height: auto;">
+      {{/eq}}
+    </td>
+  </tr>
+
+  <!-- ============ BOTON VER PEDIDO ============ -->
+  <tr>
+    <td style="text-align: center; padding: 20px 60px 30px;">
+      <table cellpadding="0" cellspacing="0" style="width: 100%;">
+        <tr>
+          <td style="text-align: center; border: 2px solid #1D1D1D; border-radius: 4px; padding: 14px 20px;">
+            <a href="https://mundooutdoor.ar/account#/orders" target="_blank" style="color: #1D1D1D; text-decoration: none; font-size: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; display: block;">
+              VER PEDIDO
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ BANNER PROMO ============ -->
+  <tr>
+    <td style="padding: 0;">
+      <a href="https://mundooutdoor.ar/" target="_blank" style="display: block;">
+        <img src="https://mundooutdoorar.myvtex.com/arquivos/banner-ya-viste-web.png" alt="¿Ya viste lo que hay en la web?" style="width: 100%; height: auto; display: block;">
+      </a>
+    </td>
+  </tr>
+
+  <!-- ============ ICONOS SOCIALES ============ -->
+  <tr>
+    <td style="text-align: center; padding: 30px 20px 30px;">
+      <table cellpadding="0" cellspacing="0" align="center">
+        <tr>
+          <td style="padding: 0 12px;">
+            <a href="https://www.facebook.com/outdoor.mundo/" target="_blank">
+              <img src="https://mundooutdoorar.myvtex.com/arquivos/iconoface.png" alt="Facebook" style="width: 32px; height: 32px; display: block;">
+            </a>
+          </td>
+          <td style="padding: 0 12px;">
+            <a href="https://www.instagram.com/mundooutdoor.ar/" target="_blank">
+              <img src="https://mundooutdoorar.myvtex.com/arquivos/iconoinsta.png" alt="Instagram" style="width: 32px; height: 32px; display: block;">
+            </a>
+          </td>
+          <td style="padding: 0 12px;">
+            <a href="https://api.whatsapp.com/send/?phone=542914147915&text&type=phone_number&app_absent=0" target="_blank">
+              <img src="https://mundooutdoorar.myvtex.com/arquivos/iconowhat.png" alt="WhatsApp" style="width: 32px; height: 32px; display: block;">
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+</table>
+</body>
+</html>

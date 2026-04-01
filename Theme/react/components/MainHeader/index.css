@@ -71,7 +71,8 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   z-index: 9999;
-  min-width: 1120px;
+  min-width: 900px;
+  max-width: 1100px;
   animation: fadeIn 0.2s ease;
 }
 
@@ -88,15 +89,16 @@
 
 .dropdownContent {
   display: flex;
-  padding: 16px 20px;
-  gap: 8px;
+  padding: 20px 30px;
+  gap: 24px;
   align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .dropdownColumns {
   display: flex;
-  gap: 20px;
-  flex: 1;
+  gap: 28px;
+  flex: 0 1 auto;
 }
 
 .dropdownColumn {
@@ -153,12 +155,12 @@
 }
 
 .dropdownBanner {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 8px;
-  margin-left: 12px;
+  margin-left: auto;
 }
 
 .dropdownBanner img {
@@ -167,6 +169,54 @@
   object-fit: cover;
   object-position: left center;
 }
+
+/* ========== Dropdown + Banner por departamento ========== */
+/* Cada departamento tiene distinta cantidad de columnas,       */
+/* así que el ancho del panel y la distancia de la imagen varían */
+
+/* HOMBRE: 3 columnas anchas (Calzado, Indumentaria, Accesorios) */
+.dropdown_hombre {
+  min-width: 880px;
+}
+.dropdownBanner_hombre {
+  margin-left: 24px;
+}
+
+/* MUJER: 3 columnas anchas (Calzado, Indumentaria, Accesorios) */
+.dropdown_mujer {
+  min-width: 880px;
+}
+.dropdownBanner_mujer {
+  margin-left: 24px;
+}
+
+/* NIÑOS: 4 columnas → panel más ancho, imagen más chica */
+.dropdown_ninos {
+  min-width: 1000px;
+}
+.dropdownBanner_ninos {
+  margin-left: 12px;
+  width: 210px;
+  height: 210px;
+}
+
+/* MARCAS: 2 columnas cortas → panel más angosto, imagen cerca */
+.dropdown_marcas {
+  min-width: 680px;
+}
+.dropdownBanner_marcas {
+  margin-left: 32px;
+}
+
+/* CAMPING: 2 columnas (1 corta + 1 larga) → panel mediano */
+.dropdown_camping {
+  min-width: 720px;
+}
+.dropdownBanner_camping {
+  margin-left: 32px;
+}
+
+/* ========== Fin dropdown + banner por departamento ========== */
 
 /* Search Form */
 .searchForm {

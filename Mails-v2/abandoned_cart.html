@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{_accountInfo.TradingName}}</title>
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background-color: #EEEEED;">
+<table cellspacing="0" cellpadding="0" style="width: 100%; max-width: 600px; margin: 0 auto; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #EEEEED;">
+
+  <!-- ============ HEADER: PAPEL RASGADO ARRIBA + LOGO ============ -->
+  <tr>
+    <td style="background: #EEEEED url('https://mundooutdoorar.myvtex.com/arquivos/papel-arriba-2.png') no-repeat center top; background-size: cover; text-align: center; padding: 26px; width: 600px; height: 300px;">
+      <a href="https://mundooutdoor.ar/" target="_blank">
+        <img src="https://mundooutdoorar.myvtex.com/arquivos/logomundo-tr.png" alt="Mundo Outdoor" style="width: 160px; height: auto;">
+      </a>
+    </td>
+  </tr>
+
+  <!-- ============ TITULO PRINCIPAL ============ -->
+  <tr>
+    <td style="text-align: center; background: #EEEEED; padding: 30px 20px;">
+      <h1 style="margin: 0; font-size: 27px; font-weight: 900; color: #1D1D1D; text-transform: uppercase; line-height: 30px;">
+        <span style="display: block;">No dejes pasar</span>
+        <span style="display: block;">esta oportunidad</span>
+      </h1>
+    </td>
+  </tr>
+
+  <!-- ============ SUBTEXTO + BOTON ============ -->
+  <tr>
+    <td style="text-align: center; background: #EEEEED;">
+      <p style="margin: 0 0 10px; font-size: 15px; color: #1D1D1D; font-weight: 400; text-transform: uppercase;">
+        HACÉ CLICK Y COMPLETÁ TU COMPRA
+      </p>
+      <table cellpadding="0" cellspacing="0" style="width: auto; margin: 10px auto 40px;">
+        <tr>
+          <td style="text-align: center; background-color: #000000; border-radius: 4px; padding: 17px 36px;">
+            <a href="http://www.mundooutdoor.ar/checkout/cart/{{addToCartURL}}" target="_blank" style="color: #FFFFFF; text-decoration: none; font-size: 26px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1px; line-height: 26px; display: block;">
+              Finaliza tu compra
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ TU PEDIDO (PRODUCTOS) ============ -->
+  <tr>
+    <td style="padding: 20px 20px 30px; background: #EEEEED;">
+      <h4 style="color: #000; text-transform: uppercase; font-size: 15px; line-height: 22px; font-weight: 400; letter-spacing: .85px; margin: 0 0 12px;">
+        Tu pedido
+      </h4>
+      <table style="border-top: 1px solid #E0E0E0; width: 100%;" cellpadding="0" cellspacing="0">
+        <tbody>
+          {{#each items}}
+          <tr style="border-bottom: 1px solid #E0E0E0;">
+            <td style="padding: 16px 0; border: 1px solid #E2E3E4; background: #FFFFFF; width: 86px; vertical-align: top;">
+              <img src="{{image}}" alt="" width="86" height="auto" style="display: block;">
+            </td>
+            <td style="padding: 16px 16px; background: #FFFFFF; vertical-align: top;">
+              <p style="margin: 0 0 6px; font-size: 10px; color: #1D1D1D; line-height: 14px; font-weight: 400; text-transform: uppercase;">{{productName}}</p>
+              <p style="margin: 6px 0 0; font-size: 10px; color: #4E4E4E;">COD: {{id}}</p>
+              <p style="margin: 6px 0 0; font-size: 10px; color: #4E4E4E;">CANTIDAD: {{quantity}}</p>
+              <p style="margin: 8px 0 0; font-size: 22px; font-weight: 700; color: #1D1D1D; line-height: 24px;">
+                $ {{sellingPrice}}
+              </p>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ============ ICONO CARRITO + TEXTO ============ -->
+  <tr>
+    <td style="text-align: center; background: #EEEEED; padding: 10px 20px 10px;">
+      <a href="http://www.mundooutdoor.ar/checkout/cart/{{addToCartURL}}" target="_blank" style="display: inline-block; margin: 10px 0;">
+        <img src="https://mundooutdoorar.myvtex.com/arquivos/iconocarrito.png" alt="Carrito" style="display: block; border: 0; max-width: 160px; height: auto; margin: 0 auto;">
+      </a>
+      <p style="margin: 6px 0 24px; font-size: 21px; font-weight: 400; color: #1D1D1D;">Tu carrito te espera</p>
+    </td>
+  </tr>
+
+  <!-- ============ BANNER PROMO ============ -->
+  <tr>
+    <td style="padding: 0;">
+      <a href="https://mundooutdoor.ar/" target="_blank" style="display: block;">
+        <img src="https://mundooutdoorar.myvtex.com/arquivos/banner-ya-viste-web.png" alt="¿Ya viste lo que hay en la web?" style="width: 100%; height: auto; display: block;">
+      </a>
+    </td>
+  </tr>
+
+  <!-- ============ PAPEL RASGADO ABAJO + ICONOS SOCIALES ============ -->
+  <tr>
+    <td style="padding: 0; position: relative;">
+      <img src="https://mundooutdoorar.myvtex.com/arquivos/papel-abajo-2.png" alt="" style="display: block; width: 100%; height: auto;">
+      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+        <table cellpadding="0" cellspacing="0" align="center">
+          <tr>
+            <td style="padding: 0 12px;">
+              <a href="https://www.facebook.com/outdoor.mundo/" target="_blank" style="display: inline-block;">
+                <img src="https://mundooutdoorar.myvtex.com/arquivos/iconoface.png" alt="Facebook" style="display: block; border: 0; width: 60px; height: 70px;">
+              </a>
+            </td>
+            <td style="padding: 0 12px;">
+              <a href="https://www.instagram.com/mundooutdoor.ar/" target="_blank" style="display: inline-block;">
+                <img src="https://mundooutdoorar.myvtex.com/arquivos/iconoinsta.png" alt="Instagram" style="display: block; border: 0; width: 60px; height: 70px;">
+              </a>
+            </td>
+            <td style="padding: 0 12px;">
+              <a href="https://api.whatsapp.com/send/?phone=542914147915&text&type=phone_number&app_absent=0" target="_blank" style="display: inline-block;">
+                <img src="https://mundooutdoorar.myvtex.com/arquivos/iconowhat.png" alt="WhatsApp" style="display: block; border: 0; width: 60px; height: 70px;">
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ============ FOOTER ============ -->
+  <tr>
+    <td style="text-align: center; background: #E9EAED; padding: 8px 10px; font-size: 12px; line-height: 20px; letter-spacing: 0.12px; font-weight: 500; color: #090A10;">
+      Mundo Outdoor © 2025  - Todos los derechos reservados
+    </td>
+  </tr>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Outdoor — Revisión de Templates de Email</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #111; color: #EEE; }
+
+    header {
+      background: #000;
+      border-bottom: 3px solid #FFD700;
+      padding: 40px 30px 32px;
+      text-align: center;
+    }
+    header img { height: 48px; margin: 0 auto 20px; display: block; }
+    header h1 { font-size: 13px; font-weight: 700; color: #FFD700; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 8px; }
+    header h2 { font-size: 28px; font-weight: 900; color: #FFF; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+    header p  { font-size: 13px; color: #888; line-height: 1.7; }
+
+    .meta {
+      display: flex; justify-content: center; gap: 40px;
+      margin-top: 28px; flex-wrap: wrap;
+    }
+    .meta-item { text-align: center; }
+    .meta-item span { display: block; font-size: 10px; color: #666; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+    .meta-item strong { font-size: 14px; color: #FFD700; }
+
+    .instructions {
+      max-width: 820px; margin: 36px auto; padding: 24px 30px;
+      background: #1A1A1A; border-left: 4px solid #FFD700; border-radius: 4px;
+    }
+    .instructions h3 { font-size: 11px; color: #FFD700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+    .instructions ol { padding-left: 18px; }
+    .instructions li { font-size: 13px; color: #AAA; line-height: 1.9; }
+    .instructions li strong { color: #FFF; }
+
+    .grid {
+      max-width: 1100px; margin: 0 auto 60px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #1A1A1A;
+      border: 1px solid #2A2A2A;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.15s, border-color 0.15s;
+    }
+    .card:hover { transform: translateY(-3px); border-color: #FFD700; }
+
+    .card-thumb {
+      width: 100%; display: block;
+      border-bottom: 1px solid #2A2A2A;
+      background: #000;
+    }
+
+    .card-body { padding: 18px 20px 22px; }
+    .card-num { font-size: 10px; color: #666; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 4px; }
+    .card-title { font-size: 15px; font-weight: 700; color: #FFF; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+
+    .status-row { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .badge {
+      display: inline-block; padding: 3px 10px; border-radius: 20px;
+      font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    }
+    .badge-ok { background: #0f3d1a; color: #4ADE80; border: 1px solid #4ADE80; }
+    .badge-review { background: #3d2800; color: #FFD700; border: 1px solid #FFD700; }
+    .badge-reject { background: #3d0000; color: #F87171; border: 1px solid #F87171; }
+
+    .notes-label { font-size: 10px; color: #666; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+    .notes-area {
+      width: 100%; min-height: 60px; background: #111; border: 1px solid #333;
+      border-radius: 4px; color: #CCC; font-family: Arial, sans-serif;
+      font-size: 12px; padding: 8px 10px; resize: vertical;
+    }
+
+    .btn-open {
+      display: block; margin-top: 14px; text-align: center;
+      padding: 10px 0; background: #000; color: #FFD700;
+      font-size: 11px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase; text-decoration: none;
+      border: 1px solid #FFD700; border-radius: 4px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .btn-open:hover { background: #FFD700; color: #000; }
+
+    .approval-section {
+      max-width: 820px; margin: 0 auto 60px; padding: 0 20px;
+    }
+    .approval-box {
+      background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 10px;
+      padding: 32px 36px;
+    }
+    .approval-box h3 { font-size: 12px; color: #FFD700; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 24px; }
+    .sig-row { display: flex; gap: 40px; flex-wrap: wrap; }
+    .sig-block { flex: 1; min-width: 200px; }
+    .sig-block label { display: block; font-size: 11px; color: #666; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+    .sig-block input[type=text] {
+      width: 100%; border: none; border-bottom: 1px solid #444;
+      background: transparent; color: #FFF; font-size: 14px;
+      padding: 6px 0; outline: none;
+    }
+    .sig-block input[type=date] {
+      width: 100%; border: none; border-bottom: 1px solid #444;
+      background: transparent; color: #888; font-size: 14px;
+      padding: 6px 0; outline: none;
+    }
+    .approval-note { margin-top: 28px; font-size: 12px; color: #555; line-height: 1.8; }
+    .approval-note strong { color: #888; }
+
+    footer { text-align: center; padding: 30px; font-size: 11px; color: #444; border-top: 1px solid #1E1E1E; }
+    footer strong { color: #666; }
+
+    @media print {
+      body { background: #FFF; color: #000; }
+      header { background: #000; }
+      .card { border: 1px solid #CCC; break-inside: avoid; }
+      .btn-open { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://mundooutdoorar.vtexassets.com/arquivos/logo%20mundo-15.png" alt="Mundo Outdoor">
+  <h1>Revisión &amp; Aprobación</h1>
+  <h2>Templates de Email Transaccional</h2>
+  <p>Este documento contiene los 9 templates de email implementados para VTEX.<br>
+  Cada card muestra la maqueta de diseño original y un enlace al preview real implementado.</p>
+  <div class="meta">
+    <div class="meta-item"><span>Proyecto</span><strong>Mundo Outdoor AR</strong></div>
+    <div class="meta-item"><span>Plataforma</span><strong>VTEX IO</strong></div>
+    <div class="meta-item"><span>Total de templates</span><strong>9 / 9</strong></div>
+    <div class="meta-item"><span>Fecha</span><strong>Marzo 2026</strong></div>
+  </div>
+</header>
+
+<div class="instructions">
+  <h3>Cómo revisar</h3>
+  <ol>
+    <li>Hacé clic en <strong>"ABRIR PREVIEW"</strong> de cada template para verlo en el navegador.</li>
+    <li>Cada preview muestra la <strong>maqueta de referencia arriba</strong> y la implementación real abajo.</li>
+    <li>Usá los botones de estado para indicar si el template está <strong>aprobado, requiere revisión o está rechazado</strong>.</li>
+    <li>Dejá tus comentarios en el campo de notas de cada card.</li>
+    <li>Al terminar, podés imprimir esta página con <strong>Ctrl + P</strong> para archivarla.</li>
+  </ol>
+</div>
+
+<!-- GRID DE TEMPLATES -->
+<div class="grid">
+
+  <!-- 01 -->
+  <div class="card">
+    <img class="card-thumb" src="maqueta web- email-01.jpg (1).jpeg" alt="Maqueta 01">
+    <div class="card-body">
+      <div class="card-num">01 / 09</div>
+      <div class="card-title">Confirmación de Pedido</div>
+      <div class="status-row">
+        <button class="badge badge-ok" onclick="setStatus(this,'ok')">✓ Aprobado</button>
+        <button class="badge badge-review" onclick="setStatus(this,'review')">⚑ Revisión</button>
+        <button class="badge badge-reject" onclick="setStatus(this,'reject')">✗ Rechazado</button>
+      </div>
+      <div class="notes-label">Notas</div>
+      <textarea class="notes-area" placeholder="Escribí tus comentarios acá..."></textarea>
+      <a class="btn-open" href="preview-order-confirmation.html" target="_blank">▶ ABRIR PREVIEW</a>
+    </div>
+  </div>
+
+  <!-- 02 -->
+  <div class="card">
+    <img class="card-thumb" src="maqueta web- email-02.jpg (1).jpeg" alt="Maqueta 02">
+    <div class="card-body">
+      <div class="card-num">02 / 09</div>
+      <div class="card-title">Pago Acreditado</div>
+      <div class="status-row">
+        <button class="badge badge-ok" onclick="setStatus(this,'ok')">✓ Aprobado</button>
+        <button class="badge badge-review" onclick="setStatus(this,'review')">⚑ Revisión</button>
+        <button class="badge badge-reject" onclick="setStatus(this,'reject')">✗ Rechazado</button>
+      </div>
+      <div class="notes-label">Notas</div>
+      <textarea class="notes-area" placeholder="Escribí tus comentarios acá..."></textarea>
+      <a class="btn-open" href="preview-payment-approved.html" target="_blank">▶ ABRIR PREVIEW</a>
+    </div>
+  </div>
+
+  <!-- 03 -->
+  <div class="card">
+    <img class="card-thumb" src="maqueta web- email-03.jpg (1).jpeg" alt="Maqueta 03">
+    <div class="card-body">
+      <div class="card-num">03 / 09</div>
+      <div class="card-title">Pedido en Preparación</div>
+      <div class="status-row">
+        <button class="badge badge-ok" onclick="setStatus(this,'ok')">✓ Aprobado</button>
+        <button class="badge badge-review" onclick="setStatus(this,'review')">⚑ Revisión</button>
+        <button class="badge badge-reject" onclick="setStatus(this,'reject')">✗ Rechazado</button>
+      </div>
+      <div class="notes-label">Notas</div>
+      <textarea class="notes-area" placeholder="Escribí tus comentarios acá..."></textarea>
+      <a class="btn-open" href="preview-order-invoiced.html" target="_blank">▶ ABRIR PREVIEW</a>
+    </div>
+  </div>
+
+  <!-- 04 -->
+  <div class="card">
+    <img class="card-thumb" src="maqueta web- email-04.jpg (1).jpeg" alt="Maqueta 04">
+    <div class="card-body">
+      <div class="card-num">04 / 09</div>
+      <div class="card-title">Pedido en Camino</div>
+      <div class="status-row">
+        <button class="badge badge-ok" onclick="setStatus(this,'ok')">✓ Aprobado</button>
+        <button class="badge badge-review" onclick="setStatus(this,'review')">⚑ Revisión</button>
+        <button class="badge badge-reject" onclick="setStatus(this,'reject')">✗ Rechazado</button>
+      </div>
+      <div class="notes-label">Notas</div>
+      <textarea class="notes-area" placeholder="Escribí tus comentarios acá..."></textarea>
+      <a class="btn-open" href="preview-order-dispatched.html" target="_blank">▶ ABRIR PREVIEW</a>
+    </div>
+  </div>
+
+  <!-- 05 -->
+  <div class="card">
+    <img class="card-thumb" src="maqueta web- email-05.jpg (1).jpeg" alt="Maqueta 05">
+    <div class="card-body">
+      <div class="card-num">05 / 09</div>
+      <div class="card-title">Factura Electrónica</div>
+      <div class="status-row">
+        <button class="badge badge-ok" onclick="setStatus(this,'ok')">✓ Aprobado</button>
+        <button class="badge badge-review" onclick="setStatus(this,'review')">⚑ Revisión</button>
+        <button class="badge badge-reject" onclick="setStatus(this,'reject')">✗ Rechazado</button>
+      </div>
+      <div class="notes-label">Notas</div>
+      <textarea class="notes-area" placeholder="Escribí tus comentarios acá..."></textarea>
+      <a class="btn-open" href="preview-invoice.html" target="_blank">▶ ABRIR PREVIEW</a>
+    </div>
+  </div>
+
+  <!-- 06 -->
+  <div class="card">
+    <img class="card-thumb" src="maqueta web- email-06.jpg (1).jpeg" alt="Maqueta 06">
+    <div class="card-body">
+      <div class="card-num">06 / 09</div>
+      <div class="card-title">Nueva Cuenta / Bienvenida</div>
+      <div class="status-row">
+        <button class="badge badge-ok" onclick="setStatus(this,'ok')">✓ Aprobado</button>
+        <button class="badge badge-review" onclick="setStatus(this,'review')">⚑ Revisión</button>
+        <button class="badge badge-reject" onclick="setStatus(this,'reject')">✗ Rechazado</button>
+      </div>
+      <div class="notes-label">Notas</div>
+      <textarea class="notes-area" placeholder="Escribí tus comentarios acá..."></textarea>
+      <a class="btn-open" href="preview-new-account.html" target="_blank">▶ ABRIR PREVIEW</a>
+    </div>
+  </div>
+
+  <!-- 07 -->
+  <div class="card">
+    <img class="card-thumb" src="maqueta web- email-07.jpg (1).jpeg" alt="Maqueta 07">
+    <div class="card-body">
+      <div class="card-num">07 / 09</div>
+      <div class="card-title">Pedido Cancelado</div>
+      <div class="status-row">
+        <button class="badge badge-ok" onclick="setStatus(this,'ok')">✓ Aprobado</button>
+        <button class="badge badge-review" onclick="setStatus(this,'review')">⚑ Revisión</button>
+        <button class="badge badge-reject" onclick="setStatus(this,'reject')">✗ Rechazado</button>
+      </div>
+      <div class="notes-label">Notas</div>
+      <textarea class="notes-area" placeholder="Escribí tus comentarios acá..."></textarea>
+      <a class="btn-open" href="preview-canceled-order.html" target="_blank">▶ ABRIR PREVIEW</a>
+    </div>
+  </div>
+
+  <!-- 08 -->
+  <div class="card">
+    <img class="card-thumb" src="maqueta web- email-08.jpg (1).jpeg" alt="Maqueta 08">
+    <div class="card-body">
+      <div class="card-num">08 / 09</div>
+      <div class="card-title">Pedido Entregado</div>
+      <div class="status-row">
+        <button class="badge badge-ok" onclick="setStatus(this,'ok')">✓ Aprobado</button>
+        <button class="badge badge-review" onclick="setStatus(this,'review')">⚑ Revisión</button>
+        <button class="badge badge-reject" onclick="setStatus(this,'reject')">✗ Rechazado</button>
+      </div>
+      <div class="notes-label">Notas</div>
+      <textarea class="notes-area" placeholder="Escribí tus comentarios acá..."></textarea>
+      <a class="btn-open" href="preview-order-delivered.html" target="_blank">▶ ABRIR PREVIEW</a>
+    </div>
+  </div>
+
+  <!-- 09 -->
+  <div class="card">
+    <img class="card-thumb" src="maqueta web- email-09.jpg (1).jpeg" alt="Maqueta 09">
+    <div class="card-body">
+      <div class="card-num">09 / 09</div>
+      <div class="card-title">Carrito Abandonado</div>
+      <div class="status-row">
+        <button class="badge badge-ok" onclick="setStatus(this,'ok')">✓ Aprobado</button>
+        <button class="badge badge-review" onclick="setStatus(this,'review')">⚑ Revisión</button>
+        <button class="badge badge-reject" onclick="setStatus(this,'reject')">✗ Rechazado</button>
+      </div>
+      <div class="notes-label">Notas</div>
+      <textarea class="notes-area" placeholder="Escribí tus comentarios acá..."></textarea>
+      <a class="btn-open" href="preview-abandoned-cart.html" target="_blank">▶ ABRIR PREVIEW</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- SECCIÓN DE APROBACIÓN -->
+<div class="approval-section">
+  <div class="approval-box">
+    <h3>Aprobación Final</h3>
+    <div class="sig-row">
+      <div class="sig-block">
+        <label>Nombre del revisora</label>
+        <input type="text" placeholder="Ej: Ana García">
+      </div>
+      <div class="sig-block">
+        <label>Rol</label>
+        <input type="text" placeholder="Ej: Diseñadora UX">
+      </div>
+      <div class="sig-block">
+        <label>Fecha de revisión</label>
+        <input type="date">
+      </div>
+    </div>
+    <div class="sig-row" style="margin-top:24px;">
+      <div class="sig-block">
+        <label>Comentarios generales</label>
+        <textarea class="notes-area" style="min-height:80px;" placeholder="Comentarios generales sobre el conjunto de templates..."></textarea>
+      </div>
+    </div>
+    <p class="approval-note">
+      <strong>Nota:</strong> Este documento es de uso interno. Los templates marcados como "Aprobado" serán subidos al panel de VTEX IO.<br>
+      Los templates con estado "Revisión" o "Rechazado" requerirán correcciones antes de su publicación.
+    </p>
+  </div>
+</div>
+
+<footer>
+  <strong>Mundo Outdoor Argentina</strong> &mdash; Templates de Email Transaccional &mdash; VTEX IO &mdash; Marzo 2026
+</footer>
+
+<script>
+  function setStatus(btn, status) {
+    const row = btn.closest('.status-row');
+    row.querySelectorAll('.badge').forEach(b => {
+      b.style.opacity = '0.35';
+      b.style.transform = 'scale(0.95)';
+    });
+    btn.style.opacity = '1';
+    btn.style.transform = 'scale(1.05)';
+    const card = btn.closest('.card');
+    if (status === 'ok')     card.style.borderColor = '#4ADE80';
+    if (status === 'review') card.style.borderColor = '#FFD700';
+    if (status === 'reject') card.style.borderColor = '#F87171';
+  }
+</script>
+
+</body>
+</html>

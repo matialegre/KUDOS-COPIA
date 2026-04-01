@@ -382,11 +382,11 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
               </a>
               {hasDropdown && activeDropdown === dept.id && (
                 <div
-                  className={styles.dropdown}
+                  className={`${styles.dropdown} ${styles['dropdown_' + dept.id] || ''}`}
                   onMouseEnter={() => handleOpenDropdown(dept.id)}
                   onMouseLeave={handleCloseDropdown}
                 >
-                  <div className={styles.dropdownContent}>
+                  <div className={`${styles.dropdownContent} ${styles['dropdownContent_' + dept.id] || ''}`}>
                     <div className={styles.dropdownColumns}>
                       {dept.columns.map((column, idx) => (
                         <div key={idx} className={styles.dropdownColumn}>
@@ -407,7 +407,7 @@ const MainHeader = ({ logo, searchPlaceholder }) => {
                       ))}
                     </div>
                     {dept.banner && (
-                      <div className={styles.dropdownBanner}>
+                      <div className={`${styles.dropdownBanner} ${styles['dropdownBanner_' + dept.id] || ''}`}>
                         <img src={dept.banner} alt={dept.label} />
                       </div>
                     )}

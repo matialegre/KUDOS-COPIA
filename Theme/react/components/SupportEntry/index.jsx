@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './index.css'
 
 // URL de ngrok - ACTUALIZAR cuando reinicies ngrok
-const PYTHON_ENDPOINT = 'https://8b63f309c886.ngrok.app'
+const PYTHON_ENDPOINT = 'https://8ab3603bd68d.ngrok.app'
 
 // Keys para localStorage
 const STORAGE_KEYS = {
